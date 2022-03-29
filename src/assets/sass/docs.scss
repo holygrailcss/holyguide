@@ -1,0 +1,171 @@
+$headers:/* name:mobile,768,992,1280,line-height,font */
+(
+h1: ( 32px, 32px, 32px, 50px, 1.2, 'light' ), 
+h2: ( 24px, 24px, 24px, 32px, 1.2, 'medium' ), 
+h3: ( 18px, 18px, 18px, 24px, 1.2, 'medium' ), 
+h4: ( 16px, 16px, 16px, 18px, 1.2, 'bold' ),
+h5: ( 16px, 16px, 16px, 16px, 1.2, 'bold' ), 
+h6: ( 12px, 12px, 12px, 14px, 1.2, 'medium' ),
+h7: ( 10px, 10px, 10px, 12px, 1.2, 'medium' ),
+h8: ( 8px, 8px, 8px, 10px, 1.2, 'medium' ), 
+h9: ( 12px, 16px, 16px, 18px, 1.2, 'medium' ), 
+p1: ( 14px, 14px, 14px, 14px, 1.4, 'regular' ), 
+p2: ( 14px, 14px, 16px, 18px, 1.4, 'regular' ), 
+p3: ( 12px, 14px, 14px, 14px, 1.4, 'regular' ), 
+p4: ( 14px, 14px, 16px, 18px, 1.4, 'medium' ) 
+);
+
+
+
+@import "abstract/_setup.scss";
+@import "vendor/_prism.scss";
+@import "vendor/_tags.scss";
+//@import "../../../node_modules/holygrailcss/scss/abstract/0debug.scss";
+@import "../../../node_modules/holygrailcss/scss/style.scss";
+
+
+ // @include debug-divs();
+
+//   @mixin debug-all(){
+//     @include debug-divs();
+//     @include debug-links();
+//     @include debug-forms();
+//     @include debug-fine();
+
+// }
+
+
+
+$primary:red;
+$c-secondary: orange;
+$nav-width: 250px;
+
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: #cccccc;
+    margin: 2px;
+    border: 2px solid #f9f9f9;
+  
+}
+
+
+
+
+nav{
+    position: fixed;
+    width: $nav-width;
+    height: 100vh;
+    overflow: auto;
+    padding: 16px;
+    color: black;
+
+}
+.main-content{
+  margin-left: $nav-width;
+  padding-top: 80px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.doc-menu-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.guide{
+    h1{ margin-bottom: 32px; }
+
+    h1{
+        //clamp(minimum, preferred, maximum);
+        font-size: clamp(30px, 4vw, 3vw);
+        font-weight: 100;
+
+    }
+
+
+    h2{
+        font-size: clamp(20px, 4vw, 2vw);
+        font-weight: 100;
+        }
+
+    h3{
+        font-size: clamp(18px, 4vw, 1.5vw);
+        font-weight: 700;
+    }
+
+    code{
+        width: 100%;
+        float: left;
+        background-color: #f0f0f0;
+        font-size: 85%;
+
+  
+        padding: 16px;
+        margin-bottom: 32px;
+    }
+    pre code{
+        padding: 0px;
+        margin-bottom: 0;
+    }
+
+    a, a:link, a:active {
+     
+        text-decoration: none;
+        border-radius: 2px;
+    }
+
+    ul.list-clear li {
+        list-style: none;
+        margin: 4px 0px;
+    }
+
+
+}
+
+hr {
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid transparent;
+}
+
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    border-collapse: collapse;
+    caption-side: bottom;
+    text-align: left;
+    th:nth-child(1) {
+        width: 150px;
+    }
+    // Cells
+    thead,
+     tbody,
+    tfoot {
+        tr {
+            th,
+            td {
+                padding: 10px;
+                vertical-align: top;
+                border: 1px solid #eaeaea;
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    // Prevent breaking of code (e.g., Grunt tasks list)
+    td:first-child > code {
+        white-space: nowrap;
+    }
+}

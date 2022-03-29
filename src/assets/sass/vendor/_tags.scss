@@ -1,0 +1,47 @@
+
+@import "../../../node_modules/holygrailcss/scss/abstract/setup";
+@import "../../../node_modules/holygrailcss/scss/abstract/animations";
+@import "../../../node_modules/holygrailcss/scss/abstract/breakpoints";
+@import "../../../node_modules/holygrailcss/scss/abstract/mixins";
+@import "../../../node_modules/holygrailcss/scss/abstract/fonts";
+
+//@import "../../../../node_modules/holygrailcss/scss/abstract/all.scss";
+
+
+
+//rellenamos esta array con todas las variables, como queremos llamarla y cuanto es su valor. 
+//despues creamos dos variables, 
+//.var-a-nombre que es el nombre del array
+// var-b-nombre que es el valor del contenido
+
+.guide-colors{
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    width: calc(25% - ((16px * 3) / 4));
+
+
+   .guide-colors-bg{
+width: 100%;
+    aspect-ratio: 1 / 1;
+
+   }
+
+   .guide-colors-text{
+       padding-top: 10px;
+text-align: left;
+width: 100%;
+float: left;
+font-weight: 100;
+span{
+    opacity: .3;
+}
+    
+       }
+   
+
+
+   &:nth-child(4n){
+    margin-right: 0;
+   }
+}

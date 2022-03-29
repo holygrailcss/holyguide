@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %} <div class="main-content guide">
+    <div class="container-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>Empezando</h2>
+                <p class="p1"> Vamos a habilitar los colores de las cajas con el </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12"> {% for item in globals.colors %}
+                 <div class="guide-colors text-center">
+                    <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
+                    </div>
+                    <div class="guide-colors-text">
+                        <div> <span>Class:</span> {{ item.name }}</div>
+                        <div><span>Hex:</span> {{ item.type }}</div>
+                    </div>
+                </div> {% endfor %} 
+                
+                
+                
+                
+                <div class="mini">
+                    <pre class=""><code class="language-css ">
+{% for item in globals.colors %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.containers %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.breakpoints %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+        </code>
+    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> {% endblock %}

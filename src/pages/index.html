@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% block content %} <div class="main-content guide">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hr>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-3">
+                        <div class="text-14-2b"> Introducción</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la
+                            especificación de Holygrail css, desarrollamos una biblioteca de elementos de usuario que
+                            contiene un conjunto de componentes y demostraciones de alta calidad para crear interfaces
+                            de usuario Previas a Desarrollo. </p>
+                        <br>
+                        <h2> Instalación </h2>
+                        <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la
+                            especificación de Holygrail css, desarrollamos una biblioteca de elementos de usuario que
+                            contiene un conjunto de componentes y demostraciones de alta calidad para crear interfaces
+                            de usuario Previas a Desarrollo. </p>
+                        <code>npm i holygrailcss </code>
+                        <h4>Descargar el proyecto</h3>
+                            <br>
+                            <h3> Opción 1: Instalación con NPM package </h3>
+                            <br>
+                            <p class="text-18-r">Recomendamos el uso de npm , a fin de mantener la última versión
+                                estable de holygrail</p>
+                            <pre><code class="language-markup">npm i holygrailcss </code></pre>
+                            <hr class="mb-32 mt-32">
+                            <h3>Opción2: Clonar el repositorio de Github</h3>
+                            <br>
+                            <p class="text-18-r">Holygrail está disponible con github</p>
+                            <code>git clone https://github.com/holygrailcss</code>
+                            <hr class="mb-32 mt-32">
+                            <h3>Opción3: Link directo desde cdn</h3>
+                            <br>
+                            <p class="text-18-r">Holygrail está disponible en jsdelivr</p>
+                            <code>https://cdn.jsdelivr.net/npm/holygrailcss@1.8.8/dist/style.css</code>
+                            <h4>Ejecutar el proyecto</h4>
+                            <p class="text-18-r"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso
+                                de no tenerlo instalarlo.</p>
+                            <h4>0-Comprobar versión de node</h4>
+                            <code>node -v</code>
+                            <h4> 1- Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm </h4>
+                            <code>npm i</code>
+                            <p class="text-18-r"> 2- Compilamos sass con npm</p>
+                            <code>npm build-sass</code>
+                            <p class="text-18-r"> 3- Usamos Gulp para comprimir y lanzar el proyecto</p>
+                            <code>gulp style gulp watch</code>
+                            <p class="text-18-r"> Si no tienes gulp instalado:</p>
+                            <code>npm install --save-dev gulp</code>
+                            <p class="text-18-r"> Si tienes problemas en Mac puede que necesites ejecutar el comando
+                                como administrador</p>
+                            <code>sudo npm install --save-dev gulp</code>
+         
+          
+                    </div>
+                </div>
+                <div class="row pt-64 pb-64">
+                    <div class="col-xs-12 mb-8 ">
+                        <hr>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-3">
+                        <div class="text-14-2b"> Setup</div>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-6">
+                        <pre class=""><code class="language-css ">
+// Colores
+
+{% for item in globals.colors %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+
+// Containers
+
+{% for item in globals.containers %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+
+// Breakpoints
+
+{% for item in globals.breakpoints %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+    </code>
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}
