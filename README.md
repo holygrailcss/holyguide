@@ -1,6 +1,6 @@
-## 🥤Gulp Boilerplate (4)
+## 🥤Massimoguide v2
 
-A basic Gulp 4 boilerplate to get developing locally with a few helpful tools already set up.
+A basic 🥤Massimoguide v2 boilerplate to get developing locally with a few helpful tools already set up.
 
 Tasks included:
 
