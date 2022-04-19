@@ -1,90 +1,109 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="main-content guide">
+<div class="container-fluid">
+    <div class="row p-20">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-3">
+            <div class="text-14-2b"> Introducción</div>
+        </div>
 
-    <div class="container-3">
-        <div class="row">
-            <div class="col-xs-12">
-     
-                <h1 class="h1">Introduccion</h1>
+
+          <div class="col-xs-12 col-sm-8 col-md-6">
+
+            <h1 class="h1">Introducción</h1>
+            <p class="text-18-r"> Esta página es una overview acerca de como diseñar para
+                massimodutti online, debido a las múltiples casuisticas y variaciones es
+                necesario tener una uniformidad a la hora de diseñar. </p>
+
+                <div class="mb-48"></div>
+
+            <h2 class="h1">Nuestro Sistema <br> <b> Design System </b></h2>
+
+            <br>
+            <p class="p3"> Cada día el mundo cambia más rápido y nuestro producto tienen que
+                adaptarse a estos cambios. Definir, diseñar y desarrollar un producto no es
+                tarea fácil si no seguimos ciertas pautas y normas dentro de la organización.
+                Nos hemos encontrado con problemas como:</p>
+
+            <ul class="list-ball p3">
+                <li>“Vamos muy lentos”</li>
+                <li>“Tenemos que sacar las nuevas funcionalidades y no nos da tiempo”</li>
+                <li>“Se incorporan nuevos diseñadores y no tenemos una metodología de trabajo”
+                </li>
+                <li>“¿Dónde están los diseños de estas pantallas?”</li>
+                <li>“Tenemos muchos diseños desactualizados”</li>
+                <li>“Desarrollo nunca sigue pixel perfect los diseños”</li>
+            </ul>
+
+            <div class="mb-48"></div>
+
+
+            <h4 class="h2"> ¿Qué hay detrás de estos problemas?</h4>
+
+
+            <ul class=" list-ball text-14-r">
+                <li>Componentes duplicados: el programador acaba teniendo que desarrollar más de
+                    50 colores grises, 10 tipos de modales, 5 formas diferentes de filtrar una
+                    tabla, 20 botones con estilos parecidos pero diferentes, 40 estilos de
+                    tipografía con 5 fuentes diferentes, etc.</li>
+                <li>Miles y miles de líneas de CSS personalizado para cada componente</li>
+                <li>Desarrolladores bloqueados: los desarrolladores tienen que esperar las
+                    iteraciones nuevas de los diseñadores y, en muchos casos, ante estas
+                    circunstancias, los desarrolladores siguen adelante y acabamos teniendo
+                    experiencias de usuario inconsistentes o fuera de marca.</li>
+                <li>Deuda tecnológica: a medida que pasa el tiempo y el producto se hace más
+                    grande, el costo de los cambios</li> en las características también se hace
+                más grande. El diseño y la deuda tecnológica se acumulan. </li>
+                <li>Otros de los problemas que solemos encontrarnos es que el diseñador, no
+                    reutiliza sus propios componentes, creando componentes una y otra vez,
+                    perdiendo todo tipo de consistencia gráfica, y perdiendo calidad en los
+                    mockups. </li>
+                <li>Al final todo esto desemboca en la disminución de la velocidad,
+                    escalabilidad y consistencia visual.</li>
+                <li>Empiezas a darte cuenta de que necesitas repensar por completo la forma en
+                    que diseñas y construyes los productos, ya no vale con rediseñar, necesitas
+                    un método.</li>
+            </ul>
+
+
+            <h2 class="h2 "> Nestra web es <span class="bold">RESPONSIVE</span></h2>
+            <br> No confundir con ADAPTATIVE  <br>
                 
-                <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la especificación de Holygrail css, desarrollamos
-                    una biblioteca de elementos de usuario que contiene un conjunto de componentes y
-                    demostraciones de alta calidad para crear interfaces de usuario Previas a
-                    Desarrollo. </p>   
-                    
-                    
-                    <h3>
-                        INSTALACIÓN 
-                    </h3>   
-                    
-                                 
-                <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la especificación de Holygrail css, desarrollamos
-                    una biblioteca de elementos de usuario que contiene un conjunto de componentes y
-                    demostraciones de alta calidad para crear interfaces de usuario Previas a
-                    Desarrollo. </p>   
-
-                    <code>npm i holygrailcss </code>
+                
+                ¿Conoces las diferencias entre Adaptive Web
+                Design y Responsive Web Design? Aunque ambos sistemas adaptan las webs a los
+                diferentes dispositivos, no son iguales. </p>
 
 
+            <p class="p3"> Adaptative web design. (Zara, Mango, oysho) </p>
 
+            <div class="mb-48"></div>
 
+    
+            <p class="p3">
+            <div class="h3 mb-16">¿Qué es Responsive Web Design?</div>
+            <p class="text-14-r">Es una técnica de desarrollo de interfaces web. Mediante el uso de
+                media queries en las hojas de estilo dotan de una estructura flexible a los
+                contenidos web adaptándolos a cada tipo de dispositivo. A través del Responsive
+                Web Design se puede mostrar contenidos diferentes de una misma web en diferentes
+                dispositivos, así como escalar a la perfección las imágenes a cada pantalla.</p>
+            </p>
+            <div class="mb-48"></div>
 
-
-                    <h4>Descargar el proyecto</h4>
-
-                    Opción 1: Instalación con NPM package
-                    
-                    <p class="text-18-r">Recomendamos el uso de npm , a fin de mantener la última versión estable de holygrail</p>
-                    
-                    <code>npm i holygrailcss</code>
-
-
-                    Opción2: Clonar el repositorio de Github
-                    
-                    <p class="text-18-r">Holygrail está disponible con github</p>
-                    
-                    <code>git clone https://github.com/holygrailcss</code>
-                    <h4>Opción3: Link directo desde cdn</h4>
-                    
-                    <p class="text-18-r">Holygrail está disponible en jsdelivr</p>
-                    
-                    <code>https://cdn.jsdelivr.net/npm/holygrailcss@1.8.8/dist/style.css</code>
-
-
-                    <h4>Ejecutar el proyecto</h4>
-                    
-                       <p class="text-18-r">    Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no tenerlo instalarlo.</p>
-                    
-                    <h4>Comprobar versión de node</h4>
-                    
-                    <code>node -v</code>
-
-
-                       <p class="text-18-r"> 1- Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm</p>
-                    
-                    <code>npm i</code>
-                       <p class="text-18-r"> 2- Compilamos sass con npm</p>
-                    
-                    <code>npm build-sass</code>
-                       <p class="text-18-r"> 3- Usamos Gulp para comprimir y lanzar el proyecto</p>
-                    
-                    <code>gulp style gulp watch</code>
-                       <p class="text-18-r"> Si no tienes gulp instalado:</p>
-                    
-                    <code>npm install --save-dev gulp</code>
-                       <p class="text-18-r"> Si tienes problemas en Mac puede que necesites ejecutar el comando como administrador</p>
-                    
-                    <code>sudo npm install --save-dev gulp</code>
-
-
-           
-            </div>
+            <h3 class="h1 ">Que no se puede realizar.</h3>
+            <h3 class="h3 mb-16">Cuando diseñamos en responsive Web design.</h3>
+            <ul class=" list-disc text-14-r">
+                <li> Tenemos los mismos elementos en desktop que en mobile, no ocultamos
+                    información </li>
+                <li> Resituamos los elementos , y podemos modificar el tamaño de los elementos
+                </li>
+                <li> En ocasiones podemos "transformar" , de un listado de elementos a tipo
+                    slider. Sólo cuando sea indispensable y nos de un beneficio real </li>
+            </ul>
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}
