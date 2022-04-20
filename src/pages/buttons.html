@@ -493,7 +493,7 @@ btn btn-invert
                                             fill="white" />
                                     </svg> Facebook </button>
                                 <button
-                                    class="btn btn-text btn--medium btn-social-login btn-google-login text-16-r mb-16">
+                                    class="btn btn-text btn--medium btn-social-login btn-outline-login text-16-r mb-16">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -518,55 +518,10 @@ btn btn-invert
 &lt;svg-icon&gt;...
 Facebook
 &lt;/button&gt;
-&lt;button class=&quot;btn btn-text btn--medium btn-social-login btn-google-login text-16-r mb-16&quot;&gt;
+&lt;button class=&quot;btn btn-text btn--medium btn-social-login btn-outline-login text-16-r mb-16&quot;&gt;
 &lt;svg-icon&gt;...													
 Google
 &lt;/button&gt;
-                        </code></pre>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <p>scss para el componente angular</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <pre><code class="language-css">.btn-social-login{
-display: flex;
-align-items: center;
-justify-content: center;
-line-height: 16px;
-font-size: 16px;
-position: relative;
-border-radius: 2px;
-font-family: HelveticaNeueLTPro-Roman,Helvetica Neue,Helvetica,Arial\ ,Lucida Grande,sans-serif;
-font-weight: 600;
-text-transform: capitalize;
-
-    svg{
-    margin-right: 8px;
-    }
-    &amp;.btn-google-login{
-    border: #E3E3E3 solid 1px;
-    }
-    &amp;.disabled{
-    filter: invert(1);
-    background: white;
-    color: black;
-        svg{
-            path{
-            fill: black;
-            }
-            }
-        }
-}
-.is-rtl{
-    .btn-social-login{
-        svg{
-        margin-right: 0px;
-        margin-left: 8px;
-        }
-    }
-}
                         </code></pre>
                         </div>
                     </div>
