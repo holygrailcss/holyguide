@@ -73,5 +73,37 @@ hr{
     font-size: 8px;
 }
 
+.bg-green {
+    background-color: #b5e6c8;
+}
+.bg-red {
+    background-color: #fcd8cd;
+}
+
+.guide code {
+    background-color: #f1f1f1;
+    color: #f40b48;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+
+
+.process{
+    position: relative;
+    &:after{
+        top: 0;
+        right: -10px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        content: '';
+    }
+}
 
 
