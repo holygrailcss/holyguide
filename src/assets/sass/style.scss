@@ -107,3 +107,20 @@ hr{
 }
 
 
+.bg-dark{
+    background-color: $primary;
+}
+
+.guide-header{
+    background-color: $primary;
+
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    padding-left: 50px;
+
+}
+
+
