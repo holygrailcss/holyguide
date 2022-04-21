@@ -123,4 +123,33 @@ hr{
 
 }
 
+// grid icons
+#loopicons{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#loopicons article{
+    width: calc(50% - 8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4px;
+    padding: 16px 8px;
+    border-radius: 4px;
+    background: #0000001a;
+}
+@media (min-width:768px){
+    #loopicons article{
+        width: calc(16% - 8px);
+    }
+}
 
+#loopicons article h2{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 16px;
+    text-align: center;
+}

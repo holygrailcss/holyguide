@@ -33,6 +33,11 @@ function copyHTML(cb) {
     cb();
 }
 
+// copy json a dist
+function copyJSON(cb) {
+    gulp.src("src/assets/icons/*.json").pipe(gulp.dest("dist/icons"));
+    cb();
+}
 // Minify HTML
 function minifyHTML(cb) {
     gulp.src("src/*.html")
@@ -120,7 +125,7 @@ function watch_files() {
 }
 
 // Default 'gulp' command with start local server and watch files for changes.
-exports.default = series(nunjucks, css, js, imageMin, watch_files);
+exports.default = series(nunjucks, css, js, imageMin, copyJSON, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(nunjucks, css, js, imageMin);
+exports.build = parallel(nunjucksMinify, css, js, imageMin, copyJSON);
