@@ -1,0 +1,162 @@
+{% extends "base.html" %} {% block content %} 
+
+
+<div class="row bleed-0">
+    <div class="col-xs-12  has-light">
+        <div class="guide-header">
+            <div class="fluid-100-m"> Layout </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="mb-32 mt-32">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-3"></div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="fluid-50-b"> 
+               Aprende a maquetar desde cero con el sistema holygrail
+            
+            
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section>
+    <div class="row pt-64 pb-64">
+        <div class="col-xs-12 mb-8 ">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-3">
+            <div class="text-14-2b"> Empezando</div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <p class="p1"> Vamos a habilitar los colores de las cajas con el
+            <pre class="language-css">
+    <code> 
+    @include debug-divs();   // debugaremos con colores en las divs
+    @include debug-imgs();   // Analisis de los links (uso de alts vacios  en imagenes)
+    @include debug-links();  // Analisis de los links (uso de alts vacios  en imagenes)
+    @include debug-forms();  // Analisis de los formularios y buenas praxis  (textarea. inputs erroneos)
+    @include debug-headers();// Analisis de los encabezados
+    @include debug-fine();   // depuración de elementos como 
+    @include debug-all();    // depuración de todos a la vez
+    </code>
+    </pre>
+            </p> {% for item in globals.colors %} <div class="guide-colors text-center">
+                <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
+                </div>
+                <div class="guide-colors-text">
+                    <div> <span>Class:</span> {{ item.name }}</div>
+                    <div><span>Hex:</span> {{ item.type }}</div>
+                </div>
+            </div> {% endfor %} <div class="mini">
+                <pre class=""><code class="language-css ">
+{% for item in globals.colors %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.containers %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.breakpoints %}.{{ item.name }}:{{ item.type }};
+{% endfor %}
+</code>
+</pre>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row pt-64 pb-64">
+        <div class="col-xs-12 mb-8 ">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-2 col-md-3">
+            <div class="text-14-2b"> Estructura</div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <h2>Sections</h2> Empezaremos maquetando por la <section> nuestras webs se separarán siempre por sections,
+                muy delimitadas.
+                <pre><code class="language-markup">&lt;section m-48 p-48 bleed-8 has-light&gt;</code></pre>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Seccion base</th>
+                            <th> Márgenes</th>
+                            <th> Paddings</th>
+                            <th> Tipo de reticula </th>
+                            <th> Color de textos</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>
+                                    <&nbsp;section >
+                            </td>
+                            <td> .m-48 </td>
+                            <td> .p-48 </td>
+                            <td> .bleed-8 </td>
+                            <td> .has-light </td>
+                            <td><b> > </b></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> .m-48 </td>
+                            <td> .p-48 </td>
+                            <td> .bleed-0 </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> .m-48 </td>
+                            <td> .p-48 </td>
+                            <td> .bleed-4 </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> .m-48 </td>
+                            <td> .p-48 </td>
+                            <td> </td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <h2>Container</h2>
+            <p>Elegimos el tipo de container usado </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo container</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.container-fluid </td>
+                        <td>Ancho máximo de 100% </td>
+                    </tr> {% for item in globals.containers %} <tr>
+                        <td> .{{ item.name }} </td>
+                        <td>Ancho máximo de {{ item.type }} </td>
+                    </tr> {% endfor %}
+                </tbody>
+            </table>
+            <h2> Row</h2>
+            <p>Colocamos el row , siempre es flex menos en el primer breakpoint sm El orden en el que colocaremos los
+                modificadores será el siguiente.</p>
+            <h2> Columnas</h2>
+            <p>Colocamos el row , siempre es flex menos en el primer breakpoint sm El orden en el que colocaremos los
+                modificadores será el siguiente.</p>
+            <h2> Columnas Anidadas</h2>
+            <p> </p>
+        </div>
+    </div>
+</section> {% endblock %}
