@@ -123,4 +123,4 @@ function watch_files() {
 exports.default = series(nunjucks, css, js, imageMin, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(nunjucksMinify, css, js, imageMin);
+exports.build = parallel(nunjucks, css, js, imageMin);
