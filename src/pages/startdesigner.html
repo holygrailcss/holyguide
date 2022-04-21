@@ -1,120 +1,157 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="container-fluid">
-    <div class="row p-20">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-2 col-md-3">
-            <div class="text-14-2b"> Introducción</div>
-        </div>
-
-
-          <div class="col-xs-12 col-sm-8 col-md-9">
-
-            <h1 class="h1">Introducción</h1>
-            <p class="text-18-r"> Esta página es una overview acerca de como diseñar para
-                massimodutti online, debido a las múltiples casuisticas y variaciones es
-                necesario tener una uniformidad a la hora de diseñar. </p>
-
-                <div class="mb-48"></div>
-
-            <h2 class="h1">Nuestro Sistema <br> <b> Design System </b></h2>
-    
-            <iframe
-            height="450"
-            width="800"
-            src="https://www.figma.com/embed?embed_host=share&amp;&url=
-                 https://www.figma.com/file/a964zjTH63yAgIwWhia2op/MD-DESIGN-SYSTEM?node-id=0%3A1
-                 "
-            allowfullscreen
-          >
-
-</iframe>
-           
-            <br>
-            <p class="p3"> Cada día el mundo cambia más rápido y nuestro producto tienen que
-                adaptarse a estos cambios. Definir, diseñar y desarrollar un producto no es
-                tarea fácil si no seguimos ciertas pautas y normas dentro de la organización.
-                Nos hemos encontrado con problemas como:</p>
-
-            <ul class="list-ball p3">
-                <li>“Vamos muy lentos”</li>
-                <li>“Tenemos que sacar las nuevas funcionalidades y no nos da tiempo”</li>
-                <li>“Se incorporan nuevos diseñadores y no tenemos una metodología de trabajo”
-                </li>
-                <li>“¿Dónde están los diseños de estas pantallas?”</li>
-                <li>“Tenemos muchos diseños desactualizados”</li>
-                <li>“Desarrollo nunca sigue pixel perfect los diseños”</li>
-            </ul>
-
-            <div class="mb-48"></div>
-
-
-            <h4 class="h2"> ¿Qué hay detrás de estos problemas?</h4>
-
-
-            <ul class=" list-ball text-14-r">
-                <li>Componentes duplicados: el programador acaba teniendo que desarrollar más de
-                    50 colores grises, 10 tipos de modales, 5 formas diferentes de filtrar una
-                    tabla, 20 botones con estilos parecidos pero diferentes, 40 estilos de
-                    tipografía con 5 fuentes diferentes, etc.</li>
-                <li>Miles y miles de líneas de CSS personalizado para cada componente</li>
-                <li>Desarrolladores bloqueados: los desarrolladores tienen que esperar las
-                    iteraciones nuevas de los diseñadores y, en muchos casos, ante estas
-                    circunstancias, los desarrolladores siguen adelante y acabamos teniendo
-                    experiencias de usuario inconsistentes o fuera de marca.</li>
-                <li>Deuda tecnológica: a medida que pasa el tiempo y el producto se hace más
-                    grande, el costo de los cambios</li> en las características también se hace
-                más grande. El diseño y la deuda tecnológica se acumulan. </li>
-                <li>Otros de los problemas que solemos encontrarnos es que el diseñador, no
-                    reutiliza sus propios componentes, creando componentes una y otra vez,
-                    perdiendo todo tipo de consistencia gráfica, y perdiendo calidad en los
-                    mockups. </li>
-                <li>Al final todo esto desemboca en la disminución de la velocidad,
-                    escalabilidad y consistencia visual.</li>
-                <li>Empiezas a darte cuenta de que necesitas repensar por completo la forma en
-                    que diseñas y construyes los productos, ya no vale con rediseñar, necesitas
-                    un método.</li>
-            </ul>
-
-
-            <h2 class="h2 "> Nestra web es <span class="bold">RESPONSIVE</span></h2>
-            <br> No confundir con ADAPTATIVE  <br>
-                
-                
-                ¿Conoces las diferencias entre Adaptive Web
-                Design y Responsive Web Design? Aunque ambos sistemas adaptan las webs a los
-                diferentes dispositivos, no son iguales. </p>
-
-
-            <p class="p3"> Adaptative web design. (Zara, Mango, oysho) </p>
-
-            <div class="mb-48"></div>
-
-    
-            <p class="p3">
-            <div class="h3 mb-16">¿Qué es Responsive Web Design?</div>
-            <p class="text-14-r">Es una técnica de desarrollo de interfaces web. Mediante el uso de
-                media queries en las hojas de estilo dotan de una estructura flexible a los
-                contenidos web adaptándolos a cada tipo de dispositivo. A través del Responsive
-                Web Design se puede mostrar contenidos diferentes de una misma web en diferentes
-                dispositivos, así como escalar a la perfección las imágenes a cada pantalla.</p>
-            </p>
-            <div class="mb-48"></div>
-
-            <h3 class="h1 ">Que no se puede realizar.</h3>
-            <h3 class="h3 mb-16">Cuando diseñamos en responsive Web design.</h3>
-            <ul class=" list-disc text-14-r">
-                <li> Tenemos los mismos elementos en desktop que en mobile, no ocultamos
-                    información </li>
-                <li> Resituamos los elementos , y podemos modificar el tamaño de los elementos
-                </li>
-                <li> En ocasiones podemos "transformar" , de un listado de elementos a tipo
-                    slider. Sólo cuando sea indispensable y nos de un beneficio real </li>
-            </ul>
+{% extends "base.html" %} {% block content %} <div class="row bleed-0">
+    <div class="col-xs-12  has-light">
+        <div class="guide-header">
+            <div class="fluid-100-m"> Designer </div>
         </div>
     </div>
 </div>
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3"></div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="fluid-50-b"> Para trabajar todos de manera alineada, coherente y a mayor velocidad, se deben
+                seguir las siguientes pautas. </div>
+        </div>
+    </div>
+</section>
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-14-2b"> Creación de un nuevo proyecto: </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="text-18-b">00. Cover:</div>
+            <p class="p1">Debe llevar un título de proyecto que describa el contenido, si pertenece a Web o Apps y el
+                número de Jira al que está asociado el proyecto.</p>
+            <div class="text-18-b">01. Design:</div>
+            <p class="p1"> En esta página trabajaremos en el diseño/funcionalidades que ocupen el proyecto. Si el
+                proyecto es grande y se quiere dividir en diversas páginas, las crearemos siguiendo la nomenclatura “0x.
+                Design_xxxxxxxx” </p>
+            <div class="text-18-b">02. Refs:</div>
+            <p class="p1">Si queremos trabajar con referencias podemos trabajar con ellas en las páginas “design” pero
+                al finalizar el proyecto limpiaremos las páginas y las ubicaremos aquí para futuras consultas.</p>
+            <div class="text-18-b">03. Old:</div>
+            <p class="p1">Aquí colocaremos versiones alternativas o descartadas de los diseños. Es importante para no
+                confundir a los POs, desarroladores o cualquiera que tenga que entrar al proyecto.</p>
+        </div>
+    </div>
+</section>
+<div class="row ">
+    <div class="col-xs-12">
+        <hr>
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-3">
+        <div class="text-14-2b"> Empezando a trabajar:</div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-6">
+        <p class="fluid-20-b"> Para empezar a trabajar hay unas pocas más directrices a tener en cuenta.</p>
+        <p class="p1">
+        <div class="text-18-b">Cargar el Design System</div>
+        <p class="p1">En realidad cualquier proyecto nuevo que abras tendrá activado por defecto el MD DESING SYSTEM,
+            pero por si acaso, es este:</p>
+        <div class="text-18-b">Crear los frames adecuados.</div> Trabajamos siempre con los mismos 3 formatos para
+        mobile, tablet y desktop. Si un caso particular requiere usar otros formatos, se hará de forma adicional. <div
+            class="text-18-b"> MOBILE: 375 px <br> TABLET: 768 px <br> DESKTOP: 1440 px </div>
+        <div class="text-18-b">Aplicar la grid.</div> Una vez creado un frame, deberemos aplicar la grid correspondiente
+        al formato. </p>
+        <div class="mb-48"></div>
+        <h2 class="h1 mb-32"><b> Design System </b></h2>
+        <iframe height="450" width="800" src="https://www.figma.com/embed?embed_host=share&amp;&url=
+                 https://www.figma.com/file/a964zjTH63yAgIwWhia2op/MD-DESIGN-SYSTEM?node-id=0%3A1
+                 " allowfullscreen>
+        </iframe>
+        <br>
+    </div>
+</div>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-18-b"> Trabajando con estilos </div>
+        </div>
+        <div class="col-xs-12 col-sm-6"> 
+            <div class="fluid-20-b mb-32"> Trabajar con estilos es muy importante, ya que nos hace ganar en coherencia visual
+                y sobretodo nos permite hacer cambios a gran velocidad. </div>
+            
+            
+            
+            <p class="p1">
+                Es muy importante que cada elemento que usemos tenga su estilo de color. Hay que
+                recalcar especialmente esto en las capas de texto. cuando escribimos una capa de texto nueva, esta usará por defecto
+                el color negro puro. Hay que recordar siempre cambiar el estilo al “Black”. <br>
+                
+                <div class="tip">
+                    <div class="text-18-b"> <b> TRUCO: </b> </div>
+                    
+                    Siempre podemos revisar un
+                    diseño al finalizarlo seleccionando todo el frame y viendo la selección de colores y cambiarlos todos de golpe. <br>
+                </div>
+                <div class="text-18-b">Textos:</div>
+                
+                No trabajamos con textos sin estilos. <br> 
+                
+                Actualmente tenemos 16 estilos de texto disponibles con 3 pesos
+                distintos. <br> 
+                
+                Si en el proceso de algún diseño vemos que necesitamos un estilo que no existe en el Design System,
+                acudiremos a Sergio o a Jennifer para hacer la petición y valorarlo. <br>
+                
+                No se puede acabar un proyecto con estilos
+                que no estén reflejados en el Design System.
+            </p>
+
+        </div>
+    </div>
+</section> 
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-18-b"> Los componentes </div>
+        </div>
+        <div class="col-xs-12 col-sm-6"> 
+            <div class="fluid-20-b mb-32"> Los componentes facilitan el trabajo del diseñador.
+                Se han diseñado previamente para ser reutilizados, adaptados y además se van actualizando  habitualmente. </div>
+            
+            
+            
+     
+                <div class="text-18-b">Colores</div>
+                <p class="p1">Es muy importante que cada elemento que usemos tenga su estilo de color. Hay que recalcar especialmente esto en las capas de texto. cuando escribimos una capa de texto nueva, esta usará por defecto el color negro puro. Hay que recordar siempre cambiar el estilo al “Black”.</p>
+                
+                <div class="tip">
+                    <div class="text-18-b"> <b> TRUCO: </b> </div>
+                    <p class="p1">Siempre podemos revisar un diseño al finalizarlo seleccionando todo el frame y viendo la selección de colores y cambiarlos todos de golpe.</p>
+                    
+                </div>
+                <div class="text-18-b">Textos:</div>
+                <p class="p1">
+                    No trabajamos con textos sin estilos.  <br>
+                    
+                    Actualmente tenemos 16 estilos de texto disponibles con 3 pesos distintos.<br>
+                    
+                    Si en el proceso de algún diseño vemos que necesitamos un estilo que no existe en el Design System, acudiremos a Sergio o a Jennifer para hacer la petición y valorarlo.
+                    <br>
+                    No se puede acabar un proyecto con estilos que no estén reflejados en el Design System.<br>
+                </p>
+                
+
+
+        </div>
+    </div>
+</section> 
+
+
+
 {% endblock %}
