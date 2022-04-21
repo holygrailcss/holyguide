@@ -487,17 +487,25 @@ btn btn-invert
                 <div class="row">
                     <div class="col-xs-12">
                         <pre><code class="language-markup"> 
-&lt;button class=&quot;btn btn-default btn--large btn-anim no-focus&quot;&gt;
-&lt;span class=&quot;btn-submit&quot;&gt;Submit&lt;/span&gt;
-&lt;span class=&quot;btn-loading&quot;&gt;
-&lt;svg width=&quot;16&quot; height=&quot;14&quot; viewBox=&quot;0 0 16 14&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-&lt;path d=&quot;M14 5.44709C13.6544 4.15739 12.8885 3.0198 11.8236 2.21442C10.7587 1.40905 9.45549 0.981893 8.12043 1.00059C6.78537 1.01928 5.49468 1.48276 4.45271 2.31764C3.41073 3.15253 2.677 4.31111 2.36768 5.60998&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot;/&gt;
-&lt;path d=&quot;M15 2V6H11&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot;/&gt;
-&lt;path d=&quot;M1 12V8H5&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot;/&gt;
-&lt;path d=&quot;M2.20447 8.55291C2.55004 9.84261 3.31593 10.9802 4.38087 11.7856C5.44582 12.591 6.74898 13.0181 8.08404 12.9994C9.4191 12.9807 10.7098 12.5172 11.7518 11.6824C12.7937 10.8475 13.5275 9.68889 13.8368 8.39002&quot; stroke=&quot;white&quot; stroke-width=&quot;1.5&quot;/&gt;
-&lt;/svg&gt;	
-&lt;/span&gt;
-&lt;/button&gt;
+{{ "
+<button class='btn btn-default btn--large btn-anim no-focus'>
+    <span class='btn-submit'>Submit</span>
+    <span class='btn-loading'>
+        <svg width='16' height='14' viewBox='0 0 16 14' fill='none'
+            xmlns='http://www.w3.org/2000/svg'>
+            <path
+                d='M14 5.44709C13.6544 4.15739 12.8885 3.0198 11.8236 2.21442C10.7587 1.40905 9.45549 0.981893 8.12043 1.00059C6.78537 1.01928 5.49468 1.48276 4.45271 2.31764C3.41073 3.15253 2.677 4.31111 2.36768 5.60998'
+                stroke='white' stroke-width='1.5' />
+            <path d='M15 2V6H11' stroke='white' stroke-width='1.5' />
+            <path d='M1 12V8H5' stroke='white' stroke-width='1.5' />
+            <path
+                d='M2.20447 8.55291C2.55004 9.84261 3.31593 10.9802 4.38087 11.7856C5.44582 12.591 6.74898 13.0181 8.08404 12.9994C9.4191 12.9807 10.7098 12.5172 11.7518 11.6824C12.7937 10.8475 13.5275 9.68889 13.8368 8.39002'
+                stroke='white' stroke-width='1.5' />
+        </svg>
+    </span>
+</button>
+" | escape }}
+
 </code></pre>
                     </div>
                 </div>
