@@ -18,58 +18,63 @@
     </div>
 </section>
 
-<section class="mb-32">
 
-        <div class="row">
+
+<section class="mb-32 mt-32">
+    <div class="row">
             <div class="col-xs-12">
                 <hr>
             </div>
-            <div class="col-xs-12 col-sm-3"> Primarios</div> 
-            <div class="col-xs-12 col-sm-9"> 
-                El color es fundamental para la experiencia del usuario y debe transmitir información de manera accesible para todos nuestros usuarios.
+        <div class="col-xs-12 col-sm-3"> Primarios </div>
+        <div class="col-xs-12 col-sm-6">
 
+
+            <div class="row">
+                <div class="col-xs-12"> {% for item in globals.colors %}
+                     <div class="guide-colors text-center">
+                        <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
+                        </div>
+                        <div class="guide-colors-text">
+                            <div> <span>Class:</span> {{ item.name }}</div>
+                            <div><span>Hex:</span> {{ item.type }}</div>
+                        </div>
+                    </div> {% endfor %} 
+                    
+                    
+
+                </div>
             </div>
         </div>
-
+    </div>
 </section>
 
-
-    <div class="container-3">
-        <div class="row">
+<section class="mb-32 mt-32">
+    <div class="row">
             <div class="col-xs-12">
-                <h2>Empezando</h2>
-                <p class="p1"> Color is critical to the user experience and should convey information in an accessible way for all of our users
-
-                </p>
+                <hr>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12"> {% for item in globals.colors %}
-                 <div class="guide-colors text-center">
-                    <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
-                    </div>
-                    <div class="guide-colors-text">
-                        <div> <span>Class:</span> {{ item.name }}</div>
-                        <div><span>Hex:</span> {{ item.type }}</div>
-                    </div>
-                </div> {% endfor %} 
-                
-                
-                
-                
-                <div class="mini">
-                    <pre class=""><code class="language-css ">
+        <div class="col-xs-12 col-sm-3"> Customization</div>
+        <div class="col-xs-12 col-sm-6">
+
+                                
+                    
+            <div class="mini">
+                <pre class=""><code class="language-css ">
 {% for item in globals.colors %}.{{ item.name }}:{{ item.type }};
 {% endfor %}
 {% for item in globals.containers %}.{{ item.name }}:{{ item.type }};
 {% endfor %}
 {% for item in globals.breakpoints %}.{{ item.name }}:{{ item.type }};
 {% endfor %}
-        </code>
-    </pre>
-                </div>
+    </code>
+</pre>
             </div>
         </div>
     </div>
+</section>
 
-</div> {% endblock %}
+
+
+
+
+{% endblock %}
