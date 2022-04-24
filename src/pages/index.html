@@ -1,4 +1,11 @@
-{% extends "base.html" %} {% block content %} 
+{% extends "base.html" %} 
+{% import "button.html" as button %}
+{% import "figma.html" as figma %}
+
+{% block content %} 
+
+{% call button.bsButton('secondary') %} secondary {% endcall %}
+{{ figma('user') }}
 
 <div class="row bleed-0">
     <div class="col-xs-12  has-light">
@@ -102,13 +109,13 @@
                 <div class="col-xs-12 col-sm-8 col-md-9">
                     <pre class=""><code class="language-css ">
 // Colores
-{% for item in globals.colors %}.{{ item.name }}:{{ item.type }};
+{% for item in globals.colors %}&{{ item.name }}:{{ item.type }};
 {% endfor %}
 // Containers
-{% for item in globals.containers %}.{{ item.name }}:{{ item.type }};
+{% for item in globals.containers %}&{{ item.name }}:{{ item.type }};
 {% endfor %}
 // Breakpoints
-{% for item in globals.breakpoints %}.{{ item.name }}:{{ item.type }};
+{% for item in globals.breakpoints %}&{{ item.name }}:{{ item.type }};
 {% endfor %}
     </code>
 </pre>
