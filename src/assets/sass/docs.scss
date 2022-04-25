@@ -413,3 +413,24 @@ $checkbox-svg-brad: 0;
 
   opacity: 1;
 }
+
+
+.alert {
+    position: relative;
+    background-color: #fd675e;
+    padding: 40px 20px 20px;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 30px;
+    
+    &:after {
+        line-height: 1.5;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        content: "Alert";
+        font-size: 29px;
+        color: #fff;
+        mix-blend-mode: soft-light;
+    }
+}

@@ -1,2 +1,25 @@
 
 @import "../../../node_modules/holygrailcss/scss/style.scss";
+
+
+
+//todo holygrail
+
+.form-input-label{
+    flex-direction: column;
+    display: flex;
+    .info-text {
+        color: #8E8E8E;
+        margin-top: 4px;
+        width: auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .validation-error-messages{
+        min-height: 24px;
+    }
+      .help{
+        position: initial;
+      }
+}
