@@ -1,6 +1,5 @@
-{% macro field(name, value='', type='text') %}
+{% macro figma(name='') %}
 <div class="field">
-  <input type="{{ type }}" name="{{ name }}"
-         value="{{ value | escape }}" />
+  <input  name="{{ name }}" />
 </div>
 {% endmacro %}
