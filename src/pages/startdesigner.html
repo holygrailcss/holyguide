@@ -1,4 +1,8 @@
-{% extends "base.html" %} {% block content %} <div class="row bleed-0">
+{% extends "base.html" %} {% block content %}
+
+
+
+ <div class="row bleed-0">
     <div class="col-xs-12  has-light">
         <div class="guide-header">
             <div class="fluid-100-m"> Designer </div>
@@ -23,17 +27,25 @@
             <div class="text-14-2b"> Creación de un nuevo proyecto: </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="text-18-b">00. Cover:</div>
+
+
+            <div class="h0">00. Cover:</div>
             <p class="p1">Debe llevar un título de proyecto que describa el contenido, si pertenece a Web o Apps y el
                 número de Jira al que está asociado el proyecto.</p>
-            <div class="text-18-b">01. Design:</div>
+
+<br>  <br>
+            <div class="h0">01. Design:</div>
             <p class="p1"> En esta página trabajaremos en el diseño/funcionalidades que ocupen el proyecto. Si el
                 proyecto es grande y se quiere dividir en diversas páginas, las crearemos siguiendo la nomenclatura “0x.
                 Design_xxxxxxxx” </p>
-            <div class="text-18-b">02. Refs:</div>
+                <br>  <br>
+
+            <div class="h0">02. Refs:</div>
             <p class="p1">Si queremos trabajar con referencias podemos trabajar con ellas en las páginas “design” pero
                 al finalizar el proyecto limpiaremos las páginas y las ubicaremos aquí para futuras consultas.</p>
-            <div class="text-18-b">03. Old:</div>
+                <br>  <br>
+
+            <div class="h0">03. Old:</div>
             <p class="p1">Aquí colocaremos versiones alternativas o descartadas de los diseños. Es importante para no
                 confundir a los POs, desarroladores o cualquiera que tenga que entrar al proyecto.</p>
         </div>
@@ -48,21 +60,44 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-6">
         <p class="fluid-20-b"> Para empezar a trabajar hay unas pocas más directrices a tener en cuenta.</p>
+
+<hr class="separator">
+
+
         <p class="p1">
-        <div class="text-18-b">Cargar el Design System</div>
+        <div class="h0">Cargar el Design System</div>
+
+        <br>
         <p class="p1">En realidad cualquier proyecto nuevo que abras tendrá activado por defecto el MD DESING SYSTEM,
             pero por si acaso, es este:</p>
-        <div class="text-18-b">Crear los frames adecuados.</div> Trabajamos siempre con los mismos 3 formatos para
-        mobile, tablet y desktop. Si un caso particular requiere usar otros formatos, se hará de forma adicional. <div
-            class="text-18-b"> MOBILE: 375 px <br> TABLET: 768 px <br> DESKTOP: 1440 px </div>
-        <div class="text-18-b">Aplicar la grid.</div> Una vez creado un frame, deberemos aplicar la grid correspondiente
+
+            <hr class="separator">
+
+        <div class="h0">Crear los frames adecuados.</div>
+        
+        
+        
+        Trabajamos siempre con los mismos 3 formatos para
+        mobile, tablet y desktop. Si un caso particular requiere usar otros formatos, se hará de forma adicional. 
+        
+        <img src="/images/responsive.jpg" alt="">
+        <div
+            class="h0"> MOBILE: 375 px 
+            
+            <br> TABLET: 768 px 
+            
+            <br> DESKTOP: 1440 px </div>
+        <div class="h0">Aplicar la grid.</div> Una vez creado un frame, deberemos aplicar la grid correspondiente
         al formato. </p>
         <div class="mb-48"></div>
         <h2 class="h1 mb-32"><b> Design System </b></h2>
         <iframe height="450" width="800" src="https://www.figma.com/embed?embed_host=share&amp;&url=
-                 https://www.figma.com/file/a964zjTH63yAgIwWhia2op/MD-DESIGN-SYSTEM?node-id=0%3A1
+        https://www.figma.com/file/a964zjTH63yAgIwWhia2op/MD-DESIGN-SYSTEM?node-id=551%3A4738
                  " allowfullscreen>
         </iframe>
+
+
+        
         <br>
     </div>
 </div>
@@ -74,7 +109,7 @@
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-18-b"> Trabajando con estilos </div>
+            <div class="h0"> Trabajando con estilos </div>
         </div>
         <div class="col-xs-12 col-sm-6"> 
             <div class="fluid-20-b mb-32"> Trabajar con estilos es muy importante, ya que nos hace ganar en coherencia visual
@@ -88,12 +123,12 @@
                 el color negro puro. Hay que recordar siempre cambiar el estilo al “Black”. <br>
                 
                 <div class="tip">
-                    <div class="text-18-b"> <b> TRUCO: </b> </div>
+                    <div class="h0"> <b> TRUCO: </b> </div>
                     
                     Siempre podemos revisar un
                     diseño al finalizarlo seleccionando todo el frame y viendo la selección de colores y cambiarlos todos de golpe. <br>
                 </div>
-                <div class="text-18-b">Textos:</div>
+                <div class="h0">Textos:</div>
                 
                 No trabajamos con textos sin estilos. <br> 
                 
@@ -118,7 +153,7 @@
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-18-b"> Los componentes </div>
+            <div class="h0"> Los componentes </div>
         </div>
         <div class="col-xs-12 col-sm-6"> 
             <div class="fluid-20-b mb-32"> Los componentes facilitan el trabajo del diseñador.
@@ -127,15 +162,15 @@
             
             
      
-                <div class="text-18-b">Colores</div>
+                <div class="h0">Colores</div>
                 <p class="p1">Es muy importante que cada elemento que usemos tenga su estilo de color. Hay que recalcar especialmente esto en las capas de texto. cuando escribimos una capa de texto nueva, esta usará por defecto el color negro puro. Hay que recordar siempre cambiar el estilo al “Black”.</p>
                 
                 <div class="tip">
-                    <div class="text-18-b"> <b> TRUCO: </b> </div>
+                    <div class="h0"> <b> TRUCO: </b> </div>
                     <p class="p1">Siempre podemos revisar un diseño al finalizarlo seleccionando todo el frame y viendo la selección de colores y cambiarlos todos de golpe.</p>
                     
                 </div>
-                <div class="text-18-b">Textos:</div>
+                <div class="h0">Textos:</div>
                 <p class="p1">
                     No trabajamos con textos sin estilos.  <br>
                     
