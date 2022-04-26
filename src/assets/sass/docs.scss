@@ -465,3 +465,14 @@ $checkbox-svg-brad: 0;
         mix-blend-mode: soft-light;
     }
 }
+
+
+
+// global styles fot RTL
+.is-rtl{
+    .main-content{
+        margin-right: $nav-width;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+}
