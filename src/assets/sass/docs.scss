@@ -336,6 +336,37 @@ margin-bottom: 32px;
     }
 }
 
+.process-ok{
+    position: relative;
+    &:after{
+        top: 0;
+        right: -10px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: green;
+        content: '';
+    }
+}
+
+
+.process-dan{
+    position: relative;
+    &:after{
+        top: 0;
+        right: -10px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: blue;
+        content: '';
+    }
+}
+
 
 .bg-dark{
     background-color: $primary;
