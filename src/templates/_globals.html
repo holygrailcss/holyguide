@@ -3,18 +3,52 @@
 {% set primary = "#ff0000" %}
 
 
+
 {% set colors = [
-        { name: 'c-black', type: '#292929' },
-        { name: 'c-white', type: '#ffffff' },
-        { name: 'c-error', type: '#f54637' },
-        { name: 'c-dark-grey', type: '#8e8e8e' },
-        { name: 'c-middle-grey', type: '#e3e3e3' },
-        { name: 'c-light-grey', type: '#f0f0f0' },
-        { name: 'c-info', type: '#1a32a4' },
-        { name: 'c-green', type: '#76ae4A' },
-        { name: 'c-yellow', type: '#ffc700' }
-    ]
+    { name: 'c-black', type: '#292929' },
+    { name: 'c-white', type: '#ffffff' },
+    { name: 'c-error', type: '#f54637' },
+    { name: 'c-dark-grey', type: '#8e8e8e' },
+    { name: 'c-middle-grey', type: '#e3e3e3' },
+    { name: 'c-light-grey', type: '#f0f0f0' },
+    { name: 'c-info', type: '#1a32a4' },
+    { name: 'c-green', type: '#76ae4A' },
+    { name: 'c-yellow', type: '#ffc700' }
+]
 %}
+
+
+{% set colorsPrimary = [
+    { name: 'c-primary', type: '#292929' },
+    { name: 'c-dark-grey', type: '#8e8e8e' },
+    { name: 'c-middle-grey', type: '#e3e3e3' },
+    { name: 'c-light-grey', type: '#f0f0f0' }
+]
+%}
+
+{% set colorsSemantic = [
+
+    { name: 'c-error', type: '#f54637' },
+    
+    { name: 'c-info', type: '#1a32a4' },
+    
+    { name: 'c-success', type: '#76ae4A' },
+    
+    { name: 'c-warning', type: '#ffc700' }
+    
+    ]
+    
+    %}
+    {% set colorsGreyscale = [ { name: 'c-white', type: '#ffffff' },
+     { name: 'c-50', type: '#F1F2F3' }, 
+     { name: 'c-100',type: '#E4E4E7' },
+     { name: 'c-200',type: '#C8C9D0' }, 
+    { name: 'c-400', type: '#9293A0' },
+    { name: 'c-600', type:'#f0f0f0' },
+     { name: 'c-800', type: '#9293A0' },
+     { name: 'c-black', type: '#000000'} ] %}
+
+
 {% set containers = [
         { name: 'container', type: '800px' },
         { name: 'container-2', type: '700px' },
