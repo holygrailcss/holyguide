@@ -73,13 +73,16 @@
 %}
 
 {% set heights = [
-    { name: 'height-xs', type: '80px' },
-    { name: 'height-sm', type: '100px' },
-    { name: 'height-md', type: '350px' },
-    { name: 'height-lg', type: '400px' },
-    { name: 'height-xl', type: '450px' },
-    { name: 'height-full', type: '100vh' },
-    { name: 'height-home', type: '100vh - 80px' }
+    { name: 'h-100', type: '100%' },
+    { name: 'height-100', type: '100%' },
+    { name: 'height-xs', type: 'min-height: 80px' },
+    { name: 'height-sm', type: 'min-height: 100px' },
+    { name: 'height-md', type: 'min-height: 350px' },
+    { name: 'height-lg', type: 'min-height: 400px' },
+    { name: 'height-xl', type: 'min-height: 450px' },
+    { name: 'hero-big', type: 'min-height: 300px / sm: min-height: 500px' },
+    { name: 'hero-medium', type: 'min-height: 200px / sm: min-height: 400px' },
+    { name: 'hero-mini', type: 'min-height: 100px / sm: min-height: 300px' }
 ]
 %}
 
