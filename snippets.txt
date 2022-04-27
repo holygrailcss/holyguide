@@ -16,4 +16,14 @@
     "</section>"
   ],
   "description": "section guia 2"
+},
+"text tips": {
+  "prefix": "g2-tip-area",
+  "body": [
+    "<div class=\"tip\">",
+    "    <div class=\"text-18-b\"> <b> TITLE </b> </div>",
+    "    CONTENT",
+    "</div>"
+  ],
+  "description": "text tips"
 }

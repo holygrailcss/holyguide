@@ -11,52 +11,101 @@
 
     </div>
 </div>
-<div class="row pt-64 pb-64">
-    <div class="col-xs-12 mb-8 ">
-        <hr>
-    </div>
-    <div class="col-xs-12 col-sm-2 col-md-3">
-        <div class="text-14-2b"> Icons</div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <p>Para incluir iconos siempre debes usar la siguiente estructura en el html
-                    <code>&lt;svg-icon src=&quot;ICON-NAME&quot;&gt;&lt;/svg-icon&gt; </code>
-                </p>
-                <br>
-                <p>Para invertir el color de los iconos usa la clase <code class="highlighter-rouge">.c-invert</code>
-                </p>
-                <p>
-                    <code>&lt;svg-icon class=&quot;c-invert&quot; src=&quot;ICON-NAME&quot;&gt;&lt;/svg-icon&gt; </code>
-                </p>
-                <br>
 
-                <p>Ejemplo</p>
-                <br>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-14-2b">  </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="fluid-20-b mb-32">
+                En el proyecto contamos con un componente que crea iconos basados en svg llamado <strong><i>svg-icon</i></strong>. Al usar el componente solo hay que asignar el parámetro <strong><i>src</i></strong> con el icono a usar, que a su vez deberá estar en el archivo icons.json en el proyecto.
+            </div>
+            <pre><code class="language-markup">&lt;svg-icon src=&quot;ICON-NAME&quot;&gt;&lt;/svg-icon&gt;</code></pre>
+        </div>
+    </div>
+</section>
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-14-2b"> Invertir iconos </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p class="p1 mb-48">Para invertir el color de los iconos usa la clase <code class="highlighter-rouge">.c-invert</code></p>
+
+            <h3 class="mb-24">Ejemplo</h3>
+            
+            <div class="bg-light p-20">
+                <img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=='
+                    alt=''>
+                <img style="filter: invert(1);"
+                    src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=='
+                    alt=''>
+            </div>
                 <pre><code class="language-markup">&lt;svg-icon src=&quot;alert&quot;&gt;&lt;/svg-icon&gt;
 &lt;svg-icon class=&quot;c-invert&quot; src=&quot;alert&quot;&gt;&lt;/svg-icon&gt;
 									</code></pre>
-                <div class="bg-light p-20">
-                    <img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=='
-                        alt=''>
-                    <img style="filter: invert(1);"
-                        src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=='
-                        alt=''>
-                </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3 mb-24">
+            <div class="text-14-2b"> Inventario de iconos</div>
+            <p class="text-12-r"> | Actualizado con
+                develop 21-04-22</p>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <p class="p1">Inventario de iconos disponibles</p>
+        <div id="loopicons"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="text-14-2b"> Incluir iconos al inventario </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="fluid-20-b mb-32">
+                Cuando necesites incorporar un nuevo icono en la lista sigue atentamente estas recomendaciones:
+            </div>
+            <p class="p1 mb-24">
+                Recuerda que el recurso gráfico SIEMPRE debe ser proveído por art digital o estar en el MD DESING SYSTEM en figma
+            </p>
+            <p class="p1 mb-24">
+                Cuando exportes el SVG, ábrelo en un editor de código y valida que:
+            </p>
+            <ul class=" mb-24">
+                <ol>1 – No tenga etiquetas ID en su estructura</ol>
+                <ol>2 – Debe contener elementos path y no rect, circle...</ol>
+            </ul>
+            
+            <div class="tip">
+                <div class="text-18-b"> <b> truco </b> </div>
+                A la hora de incluirlo en el json, recuerda mantener el orden alfabético para mantener el orden.
             </div>
         </div>
-
-
     </div>
-    <div class="col-xs-12 col-sm-2 col-md-3">
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 mt-48">
-        <p id="titulo" class="text-12-r">Inventario de iconos disponibles <small class="text-8-r"> | Actualizado con
-                develop 21-04-22</small></p>
-        <div id="loopicons"></div>
-    </div>
-</div>
+</section>
 
 <script src="/js/icons-render.js"></script>
 
