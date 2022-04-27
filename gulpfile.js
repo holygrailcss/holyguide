@@ -85,18 +85,34 @@ function nunjucks(cb) {
     gulp.src("src/pages/*.html")
         .pipe(
             nunjucksRender({
-                path: ["src/templates/","src/macros"] // String or Array
+                path: ["src/templates/","src/macros","src/components"] // String or Array
             })
         )
         .pipe(gulp.dest("dist"));
+
+        gulp.src("src/components/*.html")
+
+        .pipe(
+            nunjucksRender({
+                path: ["src/templates/","src/macros","src/pages"] // String or Array
+            })
+        )
+
+
+        .pipe(gulp.dest("dist/components"));
+
+
     cb();
 }
+
+
+
 
 function nunjucksMinify(cb) {
     gulp.src("src/pages/*.html")
         .pipe(
             nunjucksRender({
-                path: ["src/templates/","src/macros"] // String or Array
+                path: ["src/templates/","src/macros","src/components"] // String or Array
             })
         )
         .pipe(
@@ -119,6 +135,7 @@ function watch_files() {
     gulp.watch("src/assets/js/*.js", js).on("change", browserSync.reload);
     gulp.watch("src/pages/*.html", nunjucks).on("change", browserSync.reload);
     gulp.watch("src/macros/*.html", nunjucks).on("change", browserSync.reload);
+    gulp.watch("src/components/*.html", nunjucks).on("change", browserSync.reload);
     gulp.watch("src/templates/*.html", nunjucks).on(
         "change",
         browserSync.reload
