@@ -456,11 +456,9 @@ $checkbox-svg-brad: 0;
 
 // global styles fot RTL
 .is-rtl{
-    .main-content{
-        margin-right: $nav-width;
-        padding-left: 8px;
-        padding-right: 8px;
-      }
+    nav{
+        left: 0px;
+    }
 }
 
 .separator{
