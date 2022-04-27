@@ -49,13 +49,19 @@
         {{ code }}
      {% endset %}
 
+
+
+{% set items =  ['../components', xcode, '.html'] %}
+
+{{ items | join }}
+
+
     <pre>
     <code class="language-markup">
 
 
         {% set standardcode %}
-       {% include xcode %}
-        {
+          {% include items %}
         {% endset %}
 
 

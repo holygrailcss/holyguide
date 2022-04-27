@@ -94,7 +94,7 @@ function nunjucks(cb) {
 
         .pipe(
             nunjucksRender({
-                path: ["src/templates/","src/macros","src/pages"] // String or Array
+                path: ["src/templates/","src/macros","src/pages","src/components"] // String or Array
             })
         )
 
