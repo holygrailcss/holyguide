@@ -63,7 +63,10 @@ subtitle: (14px, 14px, 14px, 14px, 1.4, "regular"),
 p1: (18px, 18px, 18px, 18px, 1.4, "regular"),
 p2: (14px, 14px, 16px, 18px, 1.4, "regular"),
 p3: (14px, 14px, 14px, 14px, 1.3, "regular"),
-p4: (14px, 14px, 16px, 18px, 1.4, "medium" )
+p4: (14px, 14px, 16px, 18px, 1.4, "medium" ),
+
+// todo a holygrail giftcard
+h12: (32px, 32px, 32px, 72px, 1.2, "bold2"   ),
 );
 
 $headersFluids: (
@@ -76,7 +79,23 @@ $headersFluids: (
   50 : (30px, 50px, 1),
   100 : (50px, 200px, 1));
 
+  $mb: "margin-bottom";
+  $margin-bottom: /* name : margen bottom*/
+  (
+  mb-8: (8px, 8px, 8px, 8px),
+  mb-16: (16px, 16px, 16px, 16px),
+  mb-24: (24px, 24px, 24px, 24px),
+  mb-32: (32px, 32px, 32px, 32px),
+  mb-40: (40px, 40px, 40px, 40px),
+  mb-48: (48px, 48px, 48px, 48px) ,
 
+  mb-100: (100px, 100px, 100px, 100px),
+  mbr-50-100: (50px, 50px, 100px, 100px) ,
+
+  //todo giftcard
+  mb-64: (64px, 64px, 64px, 64px) ,
+  mbr-20-40: (20px, 40px, 40px, 40px) 
+  )!default;
 
 $font-family-primary: 'DuttiW-Regular', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 

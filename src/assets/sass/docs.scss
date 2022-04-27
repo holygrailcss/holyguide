@@ -474,6 +474,7 @@ $checkbox-svg-brad: 0;
 
 .resize-container {
     position: relative;
+    overflow: hidden;
     min-height: 400px;
     display: flex;
     padding: 100px 0 50px;
@@ -630,3 +631,71 @@ $checkbox-svg-brad: 0;
       }
   }
 
+
+
+.linex{
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    margin: 0 auto;
+}
+.guide{
+.mbr-50-100{
+    position: relative;
+    &:after{
+        content: "mbr-50-100";
+        font-size: 10px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        height: 50px;
+        bottom: -50px;
+        @media (min-width:768px){
+            height: 100px;
+            bottom: -100px;
+        }
+    }
+}
+.mb-64{
+    position: relative;
+    &:after{
+        content: "mb-64";
+        font-size: 10px;
+        height: 64px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        bottom: -64px;
+    }
+}
+.mb-32{
+    position: relative;
+    &:after{
+        content: "mb-32";
+        font-size: 10px;
+        height: 32px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        right: 0;
+        bottom: -32px;
+    }
+}
+.mb-40{
+    position: relative;
+    &:after{
+        content: "mb-40";
+        font-size: 10px;
+        height: 40px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+    }
+}
+}
