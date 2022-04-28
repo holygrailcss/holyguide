@@ -1,35 +1,23 @@
-
 @import "abstract/_setup.scss";
 @import "vendor/_prism.scss";
 @import "vendor/_tags.scss";
 //@import "../../../node_modules/holygrailcss/scss/abstract/0debug.scss";
 @import "../../../node_modules/holygrailcss/scss/style.scss";
-
-
  // @include debug-divs();
-
 //   @mixin debug-all(){
 //     @include debug-divs();
 //     @include debug-links();
 //     @include debug-forms();
 //     @include debug-fine();
-
 // }
-
 @import "components/giftcard.scss";
-
-
-
-
 $c-secondary: orange;
 $nav-width: 250px;
-
 ::-webkit-scrollbar{
     width: 12px;
     background-color: #F5F5F5;
 }
 ::-webkit-scrollbar-track{
-
     border-radius: 10px;
     background-color: #f9f9f9;
 }
@@ -38,12 +26,7 @@ $nav-width: 250px;
     background-color: #cccccc;
     margin: 2px;
     border: 2px solid #f9f9f9;
-  
 }
-
-
-
-
 nav{
     position: fixed;
     width: $nav-width;
@@ -51,7 +34,6 @@ nav{
     overflow: auto;
     padding: 16px;
     color: black;
-
 }
 .main-content{
   margin-left: $nav-width;
@@ -65,57 +47,40 @@ nav{
 }
 .guide{
     h1{ margin-bottom: 32px; }
-
     h1{
         //clamp(minimum, preferred, maximum);
         font-size: clamp(30px, 4vw, 3vw);
         font-weight: 100;
-
     }
-
-
     h2{
         font-size: clamp(20px, 4vw, 2vw);
         font-weight: 100;
         }
-
     h3{
         font-size: clamp(18px, 4vw, 1.5vw);
         font-weight: 700;
     }
-
     pre code{
-        padding: 0px;
+        padding: 0px 24px;
         margin-bottom: 0;
         width: 100%;
         float: left;
         white-space: pre-wrap;
-   
- 
-
     }
-
     a, a:link, a:active {
-     
         text-decoration: none;
         border-radius: 2px;
     }
-
     ul.list-clear li {
         list-style: none;
         margin: 4px 0px;
     }
-
-
 }
-
 hr {
     width: 100%;
     border-top: 1px solid #000000;
     border-bottom: 1px solid transparent;
 }
-
-
 table {
     width: 100%;
     max-width: 100%;
@@ -148,21 +113,15 @@ table {
         white-space: nowrap;
     }
 }
-
-
-
 .guide-header{
     background-color: $primary;
-
     height: 60vh;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     padding-bottom: 20px;
     padding-left: 50px;
-
 }
-
 // grid icons
 #loopicons{
     display: flex;
@@ -186,14 +145,12 @@ table {
         width: calc(16% - 8px);
     }
 }
-
 #loopicons article h2{
     font-size: 16px;
     font-weight: 400;
     padding-top: 16px;
     text-align: center;
 }
-
 .tip{
     position: relative;
     background-color: #fafafa;
@@ -218,19 +175,13 @@ table {
         margin-bottom: 20px;
     }
 }
-
-
 hr{
 margin-top: 32px;
 margin-bottom: 32px;
 }
-
 .mini{
     clear: both;
-
-
 }
-
 .item-w {
     width: 46px;
     width: 50px;
@@ -285,35 +236,30 @@ margin-bottom: 32px;
     background-color: $primary-guide;
     opacity: 0.3;
 }
-
 .guide .mini-box {
     background: #eaeaea;
     width: 50px;
     color: #757171;
     font-size: 8px;
 }
-
 .bg-green {
     background-color: #b5e6c8;
 }
 .bg-red {
     background-color: #fcd8cd;
 }
-
 .bg-light{
     background-color: #F0F0F0;
 }
-
 .guide code {
-
     padding: 8px 12px;
-    border-radius: 15px;
+    border-radius: 6px;
     font-size: 13px;
     display: inline-block;
+    color: white;
+    background-color: #1e1e20;
+    border: 1px solid #acacacb0;
 }
-
-
-
 .process{
     position: relative;
     &:after{
@@ -328,7 +274,6 @@ margin-bottom: 32px;
         content: '';
     }
 }
-
 .process-ok{
     position: relative;
     &:after{
@@ -343,8 +288,6 @@ margin-bottom: 32px;
         content: '';
     }
 }
-
-
 .process-dan{
     position: relative;
     &:after{
@@ -359,14 +302,9 @@ margin-bottom: 32px;
         content: '';
     }
 }
-
-
 .bg-dark{
     background-color: $primary;
 }
-
-
-
 $checkbox-svg-pd: 20px;
 $checkbox-svg-brad: 0;
 .checkbox-svg {
@@ -374,7 +312,6 @@ $checkbox-svg-brad: 0;
     margin: 0 auto;
     width: 50px ;
   }
-
  &:hover {
     &  .checkbox-svg-label {
       opacity: 1;
@@ -394,7 +331,6 @@ $checkbox-svg-brad: 0;
       transform: scale(1);
     }
   }
-
 }
 //display flex
 .checkbox-svg-label {
@@ -416,7 +352,6 @@ $checkbox-svg-brad: 0;
     width: 8px;
     height: 8px;
     background-color: white;
-  
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -434,11 +369,8 @@ $checkbox-svg-brad: 0;
   outline: 0;
   vertical-align: top;
   margin: 0;
-
   opacity: 1;
 }
-
-
 .alert {
     position: relative;
     background-color: #fd675e;
@@ -446,7 +378,6 @@ $checkbox-svg-brad: 0;
     color: #fff;
     font-size: 13px;
     margin-bottom: 30px;
-    
     &:after {
         line-height: 1.5;
         position: absolute;
@@ -458,25 +389,17 @@ $checkbox-svg-brad: 0;
         mix-blend-mode: soft-light;
     }
 }
-
-
-
 // global styles fot RTL
 .is-rtl{
     nav{
         left: 0px;
     }
 }
-
 .separator{
-
     opacity: .1;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-
-
-
 .resize-container {
     position: relative;
     overflow: hidden;
@@ -507,7 +430,6 @@ $checkbox-svg-brad: 0;
     }
 }
 .resize-bar {
-
     top: 0;
     left: 0;
     width: 100%;
@@ -527,7 +449,6 @@ $checkbox-svg-brad: 0;
     padding: 20px 50px;
     border-right: 1px solid #eaeaea;
 }
-
 .resize-code {
     z-index: 100;
     height: 60px;
@@ -604,7 +525,6 @@ $checkbox-svg-brad: 0;
 .resizable {
     overflow: auto;
     margin: 0 auto;
-
 }
 .resize {
     z-index: 10;
@@ -615,12 +535,7 @@ $checkbox-svg-brad: 0;
     user-select: none;
     margin: 0 auto;
     padding: 50px 0;
-
   }
-
-
-
-
 .guide{
 .mbr-50-100{
     position: relative;
@@ -681,25 +596,33 @@ $checkbox-svg-brad: 0;
     }
 }
 }
-
 .viewcode{
     height: 0px;
     width: 100%;
     transition: .2s ease all;
-  
     overflow-y: auto;
 }
-
-
 .openCode{
-
-
 .viewcode{
     height: 400px;
 }
 }
-
 code{
     background-color: #1e1e20;
     border: 1px solid #272728;
+}
+
+
+.resizable :scrollbar-thumb::-webkit-scrollbar-thumb {
+    border-radius: 1e9em;
+}
+.resizable :scrollbar-thumb::-webkit-scrollbar-thumb {
+    background-color: grey;
+}
+.resizable ::-webkit-scrollbar-thumb {
+    background-color: red;
+}
+
+.resizable :scrollbar::-webkit-scrollbar {
+    border-radius: 1e9em;
 }

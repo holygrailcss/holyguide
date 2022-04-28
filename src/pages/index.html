@@ -63,7 +63,7 @@
                         <br>
                         <p class="text-18-r">Recomendamos el uso de npm , a fin de mantener la última versión estable de
                             holygrail</p>
-                        <pre><code class="language-markup">npm i holygrailcss </code></pre>
+                 <code >npm i holygrailcss </code>
                         <hr class="mb-32 mt-32">
                         <h3>Opción2: Clonar el repositorio de Github</h3>
                         <br>
@@ -73,7 +73,7 @@
                         <h3>Opción3: Link directo desde cdn</h3>
                         <br>
                         <p class="text-18-r">Holygrail está disponible en jsdelivr</p>
-                        <code>https://cdn.jsdelivr.net/npm/holygrailcss@1.8.8/dist/style.css</code>
+                        <code>https://cdn.jsdelivr.net/npm/holygrailcss@{{globals.some_var2 }}/dist/style.css</code>
                         <h4>Ejecutar el proyecto</h4>
                         <p class="text-18-r"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no
                             tenerlo instalarlo.</p>
@@ -111,16 +111,16 @@
                 <div class="col-xs-12 col-sm-2 col-md-3">
                     <div class="text-14-2b"> Setup</div>
                 </div>
-                <div class="col-xs-12 col-sm-8 col-md-9">
+                <div class="col-xs-12 col-sm-8 col-md-6">
                     <pre class=""><code class="language-css ">
 // Colores
-{% for item in globals.colors %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.colors %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 // Containers
-{% for item in globals.containers %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.containers %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 // Breakpoints
-{% for item in globals.breakpoints %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
 {% endfor %}
     </code>
 </pre>
