@@ -16,6 +16,8 @@
 
 // }
 
+@import "components/giftcard.scss";
+
 
 
 
@@ -601,7 +603,8 @@ $checkbox-svg-brad: 0;
 }
 .resizable {
     overflow: auto;
-    margin: 50px auto;
+    margin: 0 auto;
+
 }
 .resize {
     z-index: 10;
@@ -611,51 +614,13 @@ $checkbox-svg-brad: 0;
     position: relative;
     user-select: none;
     margin: 0 auto;
+    padding: 50px 0;
 
-    &.resize-sm {
-      max-width: 300px;
-      height: 300px;
-      .resizable{
-        min-height: 300px;
-      }
-
-    }
-
-    &.resize-md {
-      max-width: 500px;
-      height: 500px;
-      .resizable{
-        min-height: 500px;
-      }
-
-    }
-
-    &.resize-lg {
-      max-width: 900px;
-      height: 500px;
-      .resizable{
-        min-height: 500px;
-      }
-    }
-
-
-    &.resize-xl {
-        max-width: 1300px;
-        height: 500px;
-        .resizable{
-          min-height: 500px;
-        }
-      }
   }
 
 
 
-.linex{
-    height: 100%;
-    width: 1px;
-    background-color: #000;
-    margin: 0 auto;
-}
+
 .guide{
 .mbr-50-100{
     position: relative;
@@ -732,4 +697,9 @@ $checkbox-svg-brad: 0;
 .viewcode{
     height: 400px;
 }
+}
+
+code{
+    background-color: #1e1e20;
+    border: 1px solid #272728;
 }
