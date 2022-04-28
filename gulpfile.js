@@ -94,12 +94,30 @@ function nunjucks(cb) {
 
         .pipe(
             nunjucksRender({
-                path: ["src/templates/","src/macros","src/pages","src/components"] // String or Array
+                path: ["src/templates/","src/macros","src/pages","src/components","src/molecules"] // String or Array
             })
         )
 
 
         .pipe(gulp.dest("dist/components"));
+
+
+        gulp
+					.src("src/molecules/*.html")
+					.pipe(
+						nunjucksRender({
+							path: [
+								"src/templates/",
+								"src/macros",
+								"src/pages",
+								"src/components",
+								"src/molecules",
+							], // String or Array
+						})
+					)
+					.pipe(gulp.dest("dist/molecules"));
+
+
 
 
     cb();

@@ -85,6 +85,13 @@ nav{
     pre code{
         padding: 0px;
         margin-bottom: 0;
+        width: 100%;
+        float: left;
+        white-space: pre-wrap;
+    
+            max-height: 400px;
+ 
+
     }
 
     a, a:link, a:active {
@@ -297,8 +304,7 @@ margin-bottom: 32px;
 }
 
 .guide code {
-    background-color: #f1f1f1;
-    color: #f40b48;
+
     padding: 8px 12px;
     border-radius: 15px;
     font-size: 13px;
@@ -697,3 +703,4 @@ $checkbox-svg-brad: 0;
     }
 }
 }
+
