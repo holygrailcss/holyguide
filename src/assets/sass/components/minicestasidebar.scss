@@ -44,29 +44,35 @@
                 overflow-y: auto;
                 padding: 16px;
 
-                item-product-cart {
-                    .item-mini-cart{
-                        padding-bottom: 16px;
-                        border-bottom: solid 1px #E3E3E3;
-                    }
 
-                    &:last-child {
-                        .item-mini-cart{
-                            border-bottom: none;
-                            border-bottom-color: transparent;
-                        }
-                    }
-                }
 
             }
 
             .mini-shopcart__summary {}
         }
 
-        &.show-sidebar{
+        &.show-sidebar {
             transform: translateX(0px);
             transition: all .4s ease-in-out;
-            }
-        
+        }
+
+    }
+}
+
+
+item-product-cart {
+    .item-mini-cart {
+        padding-bottom: 16px;
+        border-bottom: solid 1px #E3E3E3;
+        .type-inactive{
+            opacity: .5;
+        }
+    }
+
+    &:last-child {
+        .item-mini-cart {
+            border-bottom: none;
+            border-bottom-color: transparent;
+        }
     }
 }

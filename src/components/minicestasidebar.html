@@ -35,13 +35,11 @@
             <!-- contenedor de tarjetas -->
             <div class="mini-shopcart__content">
     
-                <!-- TODo insert dinamc card -->
-                {% call productCard.productCard('class') %} {% endcall %}
-                {% call productCard.productCard('class') %} {% endcall %}
-                {% call productCard.productCard('class') %} {% endcall %}
-                {% call productCard.productCard('class') %} {% endcall %}
-
-                
+                <!-- Listado de componentes -->
+                {% call productCard.productCard('promotion', 'class') %} {% endcall %}
+                {% call productCard.productCard('','outOfStock','clase') %} {% endcall %}
+                {% call productCard.productCardCustom() %} {% endcall %}
+                {% call productCard.productCard() %} {% endcall %}
             </div>
 
 
