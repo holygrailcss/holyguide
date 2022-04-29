@@ -60,8 +60,13 @@ nav{
         font-size: clamp(18px, 4vw, 1.5vw);
         font-weight: 700;
     }
+
+    pre{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
     pre code{
-        padding: 0px 24px;
+        padding: 16px 24px;
         margin-bottom: 0;
         width: 100%;
         float: left;
@@ -69,7 +74,7 @@ nav{
     }
     a, a:link, a:active {
         text-decoration: none;
-        border-radius: 2px;
+
     }
     ul.list-clear li {
         list-style: none;
@@ -570,7 +575,7 @@ float: right;
 .guide{
 .mbr-50-100{
     position: relative;
-    &:after{
+    &:before{
         content: "mbr-50-100";
         font-size: 10px;
         width: auto;
@@ -587,7 +592,7 @@ float: right;
 }
 .mb-64{
     position: relative;
-    &:after{
+    &:before{
         content: "mb-64";
         font-size: 10px;
         height: 64px;
@@ -598,9 +603,39 @@ float: right;
         bottom: -64px;
     }
 }
+.mb-24{
+    position: relative;
+    &:before{
+        content: "mb-24";
+        font-size: 10px;
+        height: 24px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        right: 0;
+        bottom: -24px;
+    }
+}
+
+
+.mb-8{
+    position: relative;
+    &:before{
+        content: "mb-8";
+        font-size: 10px;
+        height: 8px;
+        width: auto;
+        border-left: 1px solid magenta;
+        color: magenta;
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+    }
+}
 .mb-32{
     position: relative;
-    &:after{
+    &:before{
         content: "mb-32";
         font-size: 10px;
         height: 32px;
@@ -614,7 +649,7 @@ float: right;
 }
 .mb-40{
     position: relative;
-    &:after{
+    &:before{
         content: "mb-40";
         font-size: 10px;
         height: 40px;
@@ -703,4 +738,18 @@ p{
 .r3{
     background-color: rgb(244, 191, 80);
     left: 34px;
+}
+
+
+.dummycompo{
+    display: flex;
+    font-size: 12px;
+    color: #fc558d;
+    background: #ffd8e6;
+    border: 1px solid #fc558d;
+    justify-content: center;
+    height: 100px;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
 }
