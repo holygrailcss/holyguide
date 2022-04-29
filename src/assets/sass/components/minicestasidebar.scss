@@ -45,12 +45,16 @@
                 padding: 16px;
 
                 item-product-cart {
-                    padding-bottom: 16px;
-                    border-bottom: solid 1px #E3E3E3;
+                    .item-mini-cart{
+                        padding-bottom: 16px;
+                        border-bottom: solid 1px #E3E3E3;
+                    }
 
                     &:last-child {
-                        border-bottom: none;
-                        border-bottom-color: transparent;
+                        .item-mini-cart{
+                            border-bottom: none;
+                            border-bottom-color: transparent;
+                        }
                     }
                 }
 
