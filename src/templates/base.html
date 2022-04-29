@@ -57,6 +57,7 @@
 				target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px,' + y + 'px)'
 				target.setAttribute('data-x', x)
 				target.setAttribute('data-y', y)
+				
 				target.querySelector('.resize-resolution').textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(
 				  event.rect.height)
 				if (event.rect.width < 786) {

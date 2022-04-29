@@ -418,13 +418,12 @@ $checkbox-svg-brad: 0;
     color: $primary-guide;
     display: table;
     margin: 0 auto;
-    margin-top: -55px;
+float: right;
     font-size: 14px;
     padding: 4px 8px;
-    position: absolute;
     width: 80px;
-    left: 50%;
-    margin-left: -36px;
+
+
     &:empty {
         display: none;
     }
@@ -470,7 +469,7 @@ $checkbox-svg-brad: 0;
 }
 .resize-media {
     width: 40px;
-    margin-left: -100px;
+
     font-weight: bold;
 }
 .resize-left,
@@ -525,7 +524,12 @@ $checkbox-svg-brad: 0;
 .resizable {
     overflow: auto;
     margin: 0 auto;
+
+
+
 }
+
+
 .resize {
     z-index: 10;
     width: 70%;
@@ -534,8 +538,35 @@ $checkbox-svg-brad: 0;
     position: relative;
     user-select: none;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 20px 0 0 ;
+    margin-top: 50px;
+
+    border: 1px solid #eaeaea;
+    border-radius: 6px ;
+
+    padding-top: 100px;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        z-index: 1000;
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 33px;
+        width: 100%;
+        background-color: #eaeaea;
+    }
   }
+.resize-content{
+ margin: 3px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
 .guide{
 .mbr-50-100{
     position: relative;
@@ -625,4 +656,51 @@ code{
 
 .resizable :scrollbar::-webkit-scrollbar {
     border-radius: 1e9em;
+}
+
+
+h4{
+    font-size: 20px;
+    letter-spacing: 0.125em;
+    margin-top: 64px;
+    margin-bottom: 24px;
+}
+
+h3{
+  
+    margin-top: 64px;
+    margin-bottom: 24px;
+}
+
+p{
+    margin-bottom: 16px;
+
+}
+.r1,.r2,.r3{
+    position: absolute;
+    margin: 9px 14px;
+    z-index: 1000;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px;
+    float: left;
+}
+
+
+.r1{
+
+    background-color: rgb(236, 106, 95);
+}
+
+
+.r2{
+    background-color: rgb(97, 196, 84);
+    left: 20px;
+}
+
+.r3{
+    background-color: rgb(244, 191, 80);
+    left: 40px;
 }
