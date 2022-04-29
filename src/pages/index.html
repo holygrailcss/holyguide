@@ -1,131 +1,203 @@
-{% extends "base.html" %} 
-{% import "_button.html" as button %}
-
-
-{% block content %} 
-
-{% call button.bsButton('secondary otra') %} textosecondary {% endcall %}
-
-
-
-
-
-
-
-<div class="row bleed-0">
+{% extends "base.html" %} {% import "_button.html" as button %} {% block content %} {% call button.bsButton('secondary
+otra') %} textosecondary {% endcall %} <div class="row bleed-0">
     <div class="col-xs-12  has-light">
         <div class="guide-header">
             <div class="fluid-100-m"> Start </div>
         </div>
     </div>
 </div>
-
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-    
-            </div>
+        <div class="col-xs-12">
+        </div>
         <div class="col-xs-12 col-sm-3"></div>
         <div class="col-xs-12 col-sm-6">
-            <div class="fluid-50-b">
-                 Aqui veremos como customizar  holygrail de cero siguiendo la especificación de Holygrail css.
-
-            </div>
+            <div class="fluid-50-b"> Aqui veremos como customizar holygrail de cero siguiendo la especificación de
+                Holygrail css. </div>
         </div>
     </div>
 </section>
-
-
-
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-12">
-                    <hr>
-                </div>
-                <div class="col-xs-12 col-sm-2 col-md-3">
-                    <div class="text-14-2b"> Introducción</div>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-9">
-                    <p class="text-18-r"> Desarrollamos una biblioteca de elementos de usuario que contiene un conjunto
-                        de componentes y demostraciones de alta calidad para crear interfaces de usuario Previas a
-                        Desarrollo. </p>
-                    <br>
-                    <h2> Instalación </h2>
-                    <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la especificación
-                        de Holygrail css, desarrollamos una biblioteca de elementos de usuario que contiene un conjunto
-                        de componentes y demostraciones de alta calidad para crear interfaces de usuario Previas a
-                        Desarrollo. </p>
-                    <code>npm i holygrailcss </code>
-                    <h4>Descargar el proyecto</h3>
-                        <br>
-                        <h3> Opción 1: Instalación con NPM package </h3>
-                        <br>
-                        <p class="text-18-r">Recomendamos el uso de npm , a fin de mantener la última versión estable de
-                            holygrail</p>
-                        <pre><code class="language-markup">npm i holygrailcss </code></pre>
-                        <hr class="mb-32 mt-32">
-                        <h3>Opción2: Clonar el repositorio de Github</h3>
-                        <br>
-                        <p class="text-18-r">Holygrail está disponible con github</p>
-                        <code>git clone https://github.com/holygrailcss</code>
-                        <hr class="mb-32 mt-32">
-                        <h3>Opción3: Link directo desde cdn</h3>
-                        <br>
-                        <p class="text-18-r">Holygrail está disponible en jsdelivr</p>
-                        <code>https://cdn.jsdelivr.net/npm/holygrailcss@1.8.8/dist/style.css</code>
-                        <h4>Ejecutar el proyecto</h4>
-                        <p class="text-18-r"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no
-                            tenerlo instalarlo.</p>
-                        <h4>0-Comprobar versión de node</h4>
-                        <code>node -v</code>
-                        <h4> 1- Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm </h4>
-                        <code>npm i</code>
-                        <p class="text-18-r"> 2- Compilamos sass con npm</p>
-                        <code>npm build-sass</code>
-                        <p class="text-18-r"> 3- Usamos Gulp para comprimir y lanzar el proyecto</p>
-                        <code>gulp style gulp watch</code>
-                        <p class="text-18-r"> Si no tienes gulp instalado:</p>
-                        <code>npm install --save-dev gulp</code>
-                        <p class="text-18-r"> Si tienes problemas en Mac puede que necesites ejecutar el comando como
-                            administrador</p>
-                        <code>sudo npm install --save-dev gulp</code>
-                </div>
-            </div>
-
 <div class="row">
-  <div class="col-xs-12"> 
-      <a href="https://snippet-generator.app/"> https://snippet-generator.app/</a>
-  </div>
-</div>
-
-
-<a href="https://codesandbox.io/s/origen-holygrail-ktq12">  https://codesandbox.io/s/origen-holygrail-ktq12</a>
-
-
-
-            <div class="row pt-64 pb-64">
-                <div class="col-xs-12 mb-8 ">
-                    <hr>
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-3">
+                <div class="text-14-2b"> Introducción</div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-6">
+                <p class="text-18-r"> Somos independientes del Framework, esto es una guía para ayudarte a comenzar
+                    rápidamente: </p>
+                <br>
+                <h2 class="h5"> Configuración </h2>
+                <p class="text-18-r"> Aqui veremos como customizar el holygrail de cero siguiendo la especificación de
+                    Holygrail css, desarrollamos una biblioteca de elementos de usuario que contiene un conjunto de
+                    componentes y demostraciones de alta calidad para crear interfaces de usuario Previas a Desarrollo.
+                </p>
+                <h4>ONLINE</h4>
+                <p class="p1"> Vívelo ahora a través de tu plataforma online preferida: </p>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class="text-18-b">Codesandbox</div>
+                                <div class="text-center text-14-r"> Crea un componente o una maqueta con holygrail en la
+                                    nube. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class="text-18-b">Github</div>
+                                <div class="text-center text-14-r"> Crea un entorno de desarrollo desde cero </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class="text-18-b">Boilerplate</div>
+                                <div class="text-center text-14-r"> Crea un proyecto completo con parcel y gulp en tu
+                                    local. </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-2 col-md-3">
-                    <div class="text-14-2b"> Setup</div>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-md-9">
-                    <pre class=""><code class="language-css ">
+                <h4>CDN</h4>
+                <pre><code class='language-html '>
+{{ "<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://cdn.jsdelivr.net/npm/holygrailcss@version/dist/style.css' rel='stylesheet'>
+</head>
+<body>
+    <h1 class='h1'>Hello World</h1>
+</body>
+" | escape }}
+</code>
+</pre>
+                <br> Actualmente la última versión es la <br>
+                <code>https://cdn.jsdelivr.net/npm/holygrailcss@{{globals.some_var2 }}/dist/style.css</code>
+                <h4>INSTALACIÓN</h4>
+                <code>npm i holygrailcss </code>
+                <h4>IMPORTAR </h4>
+                <p class="p1"> Agregar <code>~holygrailcss/scss/style.scss </code>desde node_modules a tu archivo de
+                    entrada de scss: </p>
+                <pre><code class='language-css '>
+    @import "setup.scss";
+    @import '~holygrailcss/scss/style.scss';
+</code>
+</pre>
+                <h4>COMPATIBILIDAD CON NAVEGADOR </h4>
+                <p class="p1"> El autor ha intentado agregar prefijos de proveedores apropiados a algunos estilos, solo
+                    tienes que asegurarse de que las propiedades CSS que estás utilizando actualmente sean compatibles
+                    con la mayoría de los navegadores modernos - <a class="link1" href="https://caniuse.com/"
+                        target="blank"> caniuse.com </a>
+                </p>
+                <h4>INSTALACIÓN MANUAL</h4>
+                <h3> 0. Comprobar node</h3>
+                <p class="text-18-r"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no tenerlo
+                    instalarlo.</p>
+                <code>node -v</code>
+                <p class="p1"> Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm </p>
+                <code>npm i</code>
+                <p class="text-18-r"> Compilamos sass con npm</p>
+                <code>npm build-sass</code>
+                <p class="text-18-r"> Usamos Gulp para comprimir y lanzar el proyecto</p>
+                <code>gulp style gulp watch</code>
+                <p class="text-18-r"> Si no tienes gulp instalado:</p>
+                <code>npm install --save-dev gulp</code>
+                <p class="text-18-r"> Si tienes problemas en Mac puede que necesites ejecutar el comando como
+                    administrador</p>
+                <code>sudo npm install --save-dev gulp</code>
+                <hr class="mb-32 mt-32">
+                <h3> 1. Clonar el repo</h3>
+                <p class="text-18-r">Holygrail está disponible con github</p>
+                <code>git clone https://github.com/holygrailcss</code>
+                <h3> 2. Ejecutar proyecto</h3>
+                <p class="p1">....</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="https://snippet-generator.app/"> https://snippet-generator.app/</a>
+            </div>
+        </div>
+        <a href="https://codesandbox.io/s/origen-holygrail-ktq12"> https://codesandbox.io/s/origen-holygrail-ktq12</a>
+        <div class="row pt-64 pb-64">
+            <div class="col-xs-12 mb-8 ">
+                <hr>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-3">
+                <div class="text-14-2b"> Setup</div>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-6">
+                <h2 class="h5"> Setup </h2>
+                <p class="p1"> Antes de nada customizaremos el proyecto base desde la propia guia. Este es el código que
+                    deberás incluir en el setup. </p>
+                <pre class=""><code class="language-css ">
 // Colores
-{% for item in globals.colors %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.colors %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 // Containers
-{% for item in globals.containers %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.containers %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 // Breakpoints
-{% for item in globals.breakpoints %}&{{ item.name }}:{{ item.type }};
+{% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
 {% endfor %}
     </code>
 </pre>
-                </div>
             </div>
         </div>
     </div>
-{% endblock %}
+</div> {% endblock %}
