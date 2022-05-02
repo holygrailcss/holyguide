@@ -1,6 +1,16 @@
 {% import "_product-card.html" as productCard %}
 {% block content %}
 
-    {% call productCard.productCard('class') %} {% endcall %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% call productCard.productCard('class') %} {% endcall %}
+            </div>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
