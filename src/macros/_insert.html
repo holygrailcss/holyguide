@@ -72,3 +72,28 @@
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 
  {% endmacro %} 
+
+
+
+ {% macro list(listClass='', explicacion='') %} 
+ <h3>{{ listClass  }}</h3>
+<p class="p1">
+  {{ explicacion  }}
+</p>
+<ul class="{{ listClass  }}">
+  <li><a href="">{{ listClass  }}</a></li>
+  <li><a href="">{{ listClass  }}</a></li>
+  <li><a href="">{{ listClass  }}</a></li>
+  <li><a href="">{{ listClass  }}</a></li>
+</ul>
+  {% set standardcode %}
+  <ul class="{{ listClass  }}">
+    <li><a href="">{{ listClass  }}</a></li>
+    <li><a href="">{{ listClass  }}</a></li>
+    <li><a href="">{{ listClass  }}</a></li>
+    <li><a href="">{{ listClass  }}</a></li>
+  </ul>
+  {% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+ {% endmacro %} 

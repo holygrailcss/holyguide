@@ -9,8 +9,6 @@
     <div class="row">
         <div class="col-xs-12 col-sm-3">
             <div class="text-14-2b"> 00. Boilerplate </div>
-
-
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="fluid-50-b mb-32"> Aprende a maquetar desde cero con el sistema holygrail </div>
@@ -35,7 +33,8 @@
                                 </svg>
                             </div>
                             <div class="text-18-b">Codesandbox</div>
-                            <div class="text-center text-14-r"> Crea un componente o una maqueta con holygrail en la nube. </div>
+                            <div class="text-center text-14-r"> Crea un componente o una maqueta con holygrail en la
+                                nube. </div>
                         </div>
                     </div>
                 </div>
@@ -59,7 +58,7 @@
                                 </svg>
                             </div>
                             <div class="text-18-b">Github</div>
-                            <div class="text-center text-14-r"> Crea un entorno de desarrollo desde cero  </div>
+                            <div class="text-center text-14-r"> Crea un entorno de desarrollo desde cero </div>
                         </div>
                     </div>
                 </div>
@@ -83,16 +82,15 @@
                                 </svg>
                             </div>
                             <div class="text-18-b">Boilerplate</div>
-                            <div class="text-center text-14-r"> Crea un proyecto completo con parcel y gulp en tu local. </div>
+                            <div class="text-center text-14-r"> Crea un proyecto completo con parcel y gulp en tu local.
+                            </div>
                         </div>
                     </div>
                 </div>
-     
             </div>
         </div>
     </div>
 </section>
-
 <section>
     <div class="row pt-64 pb-64">
         <div class="col-xs-12 mb-8 ">
@@ -103,9 +101,11 @@
         </div>
         <div class="col-xs-12 col-sm-8 col-md-6">
             <p class="p1"> Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debugear mientras
-                maquetamos.
-            <pre class="language-css">
-    <code> 
+                maquetamos. </p>
+
+
+            <pre>
+    <code class="language-css"> 
     @include debug-divs();   // debugaremos con colores en las divs
     @include debug-imgs();   // Analisis de los links (uso de alts vacios  en imagenes)
     @include debug-links();  // Analisis de los links (uso de alts vacios  en imagenes)
@@ -115,29 +115,18 @@
     @include debug-all();    // depuración de todos a la vez
     </code>
     </pre>
-            </p> 
-            
 
-
+    
             <div class="row">
-                <div class="col-xs-12"> {% for item in globals.colors %}
-                     <div class="guide-colors text-center">
+                <div class="col-xs-12"> {% for item in globals.colors %} <div class="guide-colors text-center">
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
                             <div> <span>Class:</span> {{ item.name }}</div>
                             <div><span>Hex:</span> {{ item.type }}</div>
                         </div>
-                    </div> {% endfor %} 
-                    
-                    
-
-                </div>
+                    </div> {% endfor %} </div>
             </div>
-            
-            
-            
-            
             <div class="mini">
                 <pre class=""><code class="language-css ">
 {% for item in globals.colors %}${{ item.name }}:{{ item.type }};
@@ -161,13 +150,9 @@
             <div class="text-14-2b"> 02. Creando la estructura </div>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-6">
-
-            <div class="fluid-20-b mb-32"> Como si se tratase de una construcción, empezaremos por los cimientos y la estructura responsive donde más adelante insertaremos los componentes flexibles. </div>
-
-
-
-
-            <h2>Sections</h2> Empezaremos maquetando por la <section> nuestras webs se separarán siempre por sections,
+            <div class="fluid-20-b mb-32"> Como si se tratase de una construcción, empezaremos por los cimientos y la
+                estructura responsive donde más adelante insertaremos los componentes flexibles. </div>
+            <h3>Sections</h3> Empezaremos maquetando por la <section> nuestras webs se separarán siempre por sections,
                 muy delimitadas.
                 <pre><code class="language-markup">&lt;section m-48 p-48 bleed-8 has-light&gt;</code></pre>
                 <table>
@@ -219,7 +204,7 @@
                     </tbody>
                 </table>
             </section>
-            <h2>Container</h2>
+            <h3>Container</h3>
             <p>Elegimos el tipo de container usado </p>
             <table>
                 <thead>
@@ -238,13 +223,13 @@
                     </tr> {% endfor %}
                 </tbody>
             </table>
-            <h2> Row</h2>
+            <h3> Row</h3>
             <p>Colocamos el row , siempre es flex menos en el primer breakpoint sm El orden en el que colocaremos los
                 modificadores será el siguiente.</p>
-            <h2> Columnas</h2>
+            <h3> Columnas</h3>
             <p>Colocamos el row , siempre es flex menos en el primer breakpoint sm El orden en el que colocaremos los
                 modificadores será el siguiente.</p>
-            <h2> Columnas Anidadas</h2>
+            <h3> Columnas Anidadas</h3>
             <p> </p>
         </div>
     </div>
