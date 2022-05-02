@@ -801,3 +801,49 @@ pre{
     }
 
   }
+
+  .mini-box{
+      float: left;
+      overflow: initial!important; 
+      position: relative;
+      font-size: 18px;
+      margin: 20px;
+  }
+  .ancho{
+
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    text-align: center;
+
+
+  }
+
+  .alto{
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 16px;
+
+
+    position: absolute;
+
+    left: -20px;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    text-align: center;
+
+
+
+  }
