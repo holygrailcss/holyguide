@@ -245,10 +245,64 @@ margin-bottom: 32px;
 }
 .guide .mini-box {
     background: #eaeaea;
-    width: 50px;
     color: #757171;
     font-size: 8px;
+    width: calc(33.333% - 14px);
+    float: left;
+    overflow: initial !important;
+    position: relative;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f0f;
+
+
+   &:nth-child(3n){
+
+       margin-right: 0;
+
+   }
+    .rat-content{
+        display: flex;
+        font-size: 14px;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include font-2-bold;
+        color: #f0f;
+        .text-12-r{
+            position: absolute;
+            right: 4px;
+            bottom: 4px;
+            opacity: .5;
+        }
+    }
+    
 }
+
+.guide .masonry{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.guide-list{
+    border-bottom: 1px solid #eaeaea;
+ 
+    padding: 10px 0;
+
+}
+
+.mini-box-text{
+    position: absolute;
+    bottom: -20px;
+    left:0;
+    font-size: 12px;
+    color: #f0f;
+}
+
 .bg-green {
     background-color: #b5e6c8;
 }
@@ -803,47 +857,16 @@ pre{
   }
 
   .mini-box{
-      float: left;
-      overflow: initial!important; 
-      position: relative;
-      font-size: 18px;
-      margin: 20px;
-  }
-  .ancho{
-
-
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid;
-    text-align: center;
-
 
   }
 
-  .alto{
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform:translateY(-50%);
-    font-size: 16px;
-
-
-    position: absolute;
-
-    left: -20px;
-    top: 50%;
-    transform:translateY(-50%);
-    font-size: 16px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid;
-    text-align: center;
 
 
 
-  }
+.bg-light .btn-trans{
+    width: max-content;
+    padding: 14px 48px;
+}
+
+
+
