@@ -1,33 +1,199 @@
-{% extends "base.html" %} {% block content %}
-
-<div class="row bleed-0">
+{% extends "base.html" %} {% block content %} <div class="row bleed-0">
     <div class="col-xs-12  has-light">
-
         <div class="guide-header">
-            <div class="fluid-100-m">
-                Select
-            </div>
+            <div class="fluid-100-m"> Select </div>
         </div>
-
     </div>
 </div>
 <div class="row pt-64 pb-64">
     <div class="col-xs-12 mb-8 ">
         <hr>
     </div>
-    
     <div class="col-xs-12 col-sm-2 col-md-3">
-        <div class="text-14-2b"> Espaciado</div>
+        <div class="text-14-2b"> Selects</div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9"> 
-
-
-
+    <div class="col-xs-12 col-sm-8 col-md-6">
+        <section>
+            <div class="container-fluid">
+                <div class="mb-48">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-title mb-16">
+                                <strong> Select </strong>Nativos <p> Texto interior </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-show">
+                                <div class="select">
+                                    <select>
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 ">
+                            <div class="pre-show">
+                                <div class="select">
+                                    <select>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="l">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <pre><code class="language-markup"> 
+{{"
+<div class='select'>
+    <select>
+        <option value='S'>S</option>
+        <option value='M'>M</option>
+        <option value='l'>L</option>
+        <option value='XL'>XL</option>
+    </select>
 </div>
-
+"| escape }}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid">
+                <div class="mb-48">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-title mb-16">
+                                <strong> Select </strong>flat <p> Estilo de selector sin linea al rededor del input </p>
+                                <span class="warning-context">Uso restringido a casos especiales</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-3">
+                            <div class="pre-show">
+                                <div class="select select-flat">
+                                    <select>
+                                        <option>Cualquiera</option>
+                                        <option>Mañanas</option>
+                                        <option>tardes</option>
+                                        <option>24h</option>
+                                        <option>Fines de semana</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <pre><code class="language-markup">
+{{"
+<div class='select select-flat'>
+    <select>
+        <option>Cualquiera</option>
+        <option>Mañanas</option>
+        <option>tardes</option>
+        <option>24h</option>
+        <option>Fines de semana</option>
+        </select>
 </div>
-
-
-
-
-{% endblock %}
+"| escape }}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid">
+                <div class="mb-48">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-title mb-16">
+                                <strong> Label in </strong> Select <p> Texto interior </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-show">
+                                <div class="select select-label">
+                                    <label>Nombre </label>
+                                    <select>
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <pre><code class="language-markup"> 
+{{"
+<div class='select select-label'>
+    <label>Nombre </label>
+    <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+    </select>
+</div>
+"| escape }}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid">
+                <div class="mb-48">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-title mb-16">
+                                <strong> Box </strong> Select <p> Selector usado en contextos pequeños como por ejemplo
+                                    el selector de talla y cantidad en la tarjeta de items en la cesta. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <div class="pre-show">
+                                <div class="select select-box">
+                                    <select>
+                                        <option label="43" value="43" selected="selected">43</option>
+                                        <option label="54" value="54">54</option>
+                                        <option label="64" value="64">64</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 ">
+                            <pre><code class="language-markup">
+{{"<div class='select select-box'>
+    <select>
+        <option label='43' value='43' selected='selected'>43</option>
+        <option label='54' value='54'>54</option>
+        <option label='64' value='64'>64</option>
+    </select>
+</div> "| escape }}</code></pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 mb-16">
+                            <p class="p3">Snipet de uso rápido</p>
+                            <code>xselector-box</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div> {% endblock %}
