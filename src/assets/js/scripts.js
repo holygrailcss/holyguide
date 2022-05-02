@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	
 	$(".resize-code").on("click", function () {
 		$(this.parentNode.parentNode.parentNode).toggleClass("openCode");
 		e.preventDefault();
