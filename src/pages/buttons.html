@@ -34,12 +34,11 @@
             <div class="text-14-2b"> Cómo se usa </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="p1 mb-16"> Primeramente pondremos la clase de definición<code>.btn</code> después su
-                modificador de tipo <code>.link-btn</code> y por último su tamaño si lo tiene
-                <code>.btn-xs</code>.
-            </p>
-            <div class="h4 code"> <code>Qué és?</code>+<code>Tipo</code> + <code>Tamaño</code>
+            <p class="p1 mb-16"> Para definir que este elemento usará todos los estilos de botón, lo primero es identificarlo con la clase <code>.btn</code></p>
+            <p class="p1">después su modificador de tipo, por ejemplo <code>.link-btn</code> y por último su tamaño si lo tiene, por ejemplo <code>.btn-xs</code>.</p>
+            <div class="h4 code mt-32"> <code>Qué és?</code>+<code>Tipo</code> + <code>Tamaño</code>
             </div>
+            <pre><code class="language-markup">&lt;button class=&quot;btn link-btn btn-xs&quot;&gt;btn&lt;/button&gt;</code></pre>
             </p>
         </div>
     </div>
@@ -54,6 +53,7 @@
             <div class="text-14-2b"> Reset del botón </div>
         </div>
         <div class="col-xs-12 col-sm-6">
+            <p class="p1">Este es el aspecto de un botón solo con la clase <code>.btn</code> que lo prepara para obtener todas las clases de los botones de la guía</p>
             <button class="btn ">btn</button>
 
             <div class="row">
@@ -72,12 +72,12 @@
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong> Botones </strong>Tipos
+            <div class="text-14-2b"> Tipos de botón
             </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <div class="col-xs-10 bg-light">
-                <p class="text-16-r mb-32"> 2a parte del botón </p>
+            <p class="p1 text-16-r mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color de fuente, apariencia en los diferentes estados del botón... </p>
+            <div class="col-xs-10 bg-light p-16">
                 <div class="btn btn-primary">btn-primary</div> <br> <br>
                 <div class="btn btn-default">btn-default</div> <br> <br>
                 <div class="btn btn-phantom">btn-phantom</div> <br> <br>
@@ -89,6 +89,18 @@
                 <div class="btn btn-blue">btn-blue</div> <br> <br>
                 <div class="btn btn-circle">btn-circle</div> <br> <br>
             </div>
+            <pre class="mt-48 mb-16">
+                <code class="language-markup">&lt;div class=&quot;btn btn-primary&quot;&gt;btn-primary&lt;/div&gt;
+&lt;div class=&quot;btn btn-default&quot;&gt;btn-default&lt;/div&gt;
+&lt;div class=&quot;btn btn-phantom&quot;&gt;btn-phantom&lt;/div&gt;
+&lt;div class=&quot;btn btn-text&quot;&gt;btn-text&lt;/div&gt;
+&lt;div class=&quot;btn btn-link&quot;&gt;btn-link&lt;/div&gt;
+&lt;div class=&quot;btn btn-invert&quot;&gt;btn-invert&lt;/div&gt;
+&lt;div class=&quot;btn btn-invert-light&quot;&gt;btn-invert-light&lt;/div&gt;
+&lt;div class=&quot;btn btn-trans&quot;&gt;btn-trans &lt;/div&gt;
+&lt;div class=&quot;btn btn-blue&quot;&gt;btn-blue&lt;/div&gt;
+&lt;div class=&quot;btn btn-circle&quot;&gt;btn-circle&lt;/div&gt;
+                </code></pre>
         </div>
     </div>
 </section>
@@ -99,10 +111,10 @@
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong> Botones </strong>tamaños </div>
+            <div class="text-14-2b"> Tamaños </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> 3a Parte </p>
+            <p class="text-16-r mb-32"> La tercera parte a definir en un botón es el tamaño. </p>
             <div class="pre-show">
                 <div class="btn btn-primary btn--mini">btn--mini</div> <br> <br>
                 <div class="btn btn-primary btn--small">btn--small</div> <br> <br>
@@ -136,7 +148,7 @@
     </div>
 </section>
 
-<section class="mb-32 mt-32">
+<!-- <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
             <hr>
@@ -179,18 +191,21 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
+<!-- Botones iconos -->
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong> Icons </strong>Buttons </div>
+            <div class="text-14-2b"> Botones con iconos </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> Botón con icono , al principio y al final </p>
+            <div class="fluid-20-b mb-32">En algunos casos los botones pueden ir acompañados de un icono. </div>
+            <p class="text-16-r mb-32"> Usa las siguientes clases para posicionar el icono a la derecha o a la izquierda </p>
+
             <div class="row mb-16">
                 <div class="col-xs-12">
                     <h3 class="h6 mb-16">Active</h3>
@@ -257,7 +272,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-16">
+
+            <!-- <div class="row mb-16">
                 <div class="col-xs-12 ">
                     <h3 class="h6 mb-16">Hover</h3>
                     <div class="btn btn-invert btn--small  guide-hover"> btn-invert </div>
@@ -278,31 +294,74 @@
                         </svg> Action
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-xs-12">
-                    <pre><code class="language-markup"> 
-        &lt;div class=&quot;btn btn-primary btn--small &quot;&gt; No icon &lt;/div&gt;
-        &lt;div class=&quot;btn btn-primary btn--small ico-pre &quot;&gt; ico-pre &lt;/div&gt;
-        &lt;div class=&quot;btn btn-primary btn--small ico-post &quot;&gt;ico-post &lt;/div&gt;
+                    <pre><code class="language-markup">&lt;div class=&quot;btn btn-primary  btn--small&quot;&gt; Action &lt;/div&gt;
+&lt;div class=&quot;btn btn-primary  btn--small  has-ico-pre&quot;&gt;
+    &lt;svg-icon src=&quot;ICON_NAME&quot;&gt;&lt;/svg-icon&gt;
+    ico-pre
+&lt;/div&gt;
+&lt;div class=&quot;btn btn-primary  btn--small  has-ico-post&quot;&gt;
+    ico-post
+    &lt;svg-icon src=&quot;ICON_NAME&quot;&gt;&lt;/svg-icon&gt;
+&lt;/div&gt;
         </code></pre>
                 </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12"> 
+                  <h2>Contenido a los extremos</h2>
+                  <p class="p1">Si el icono tiene que ir al final del botón usa la clase separate para distribuir los elementos a cada extremo</p>
+                  <div class="pre-show">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-invert btn--medium btn-separate">
+                                <span>Entrar</span>
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwLjM4NDYgMTNMMTUgOE0xNSA4TDEwLjM4NDYgM00xNSA4TDEuMTkyMDllLTA3IDgiIHN0cm9rZT0iYmxhY2siLz4KPC9zdmc+"
+                                    alt="">
+                            </button>
+                        </div>
+                        <div class="col-xs-12 mt-16">
+                            <button class="btn btn-primary btn--small btn-separate">
+                                <span>Entrar</span>
+                                <img class="ml-8"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwLjM4NDYgMTNMMTUgOE0xNSA4TDEwLjM4NDYgM00xNSA4TDEuMTkyMDllLTA3IDgiIHN0cm9rZT0id2hpdGUiLz4KPC9zdmc+"
+                                    alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <pre><code class="language-markup">
+&lt;button class=&quot;btn btn-invert btn--medium btn-separate&quot;&gt;
+    &lt;span&gt;Entrar&lt;/span&gt;
+    &lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn btn-primary btn--small btn-separate&quot;&gt;
+    &lt;span&gt;Entrar&lt;/span&gt;
+    &lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;
+&lt;/button&gt;
+                    </code></pre>
+              </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- grupos de botones -->
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong> Boton </strong>grupal </div>
+            <div class="text-14-2b"> Grupos de botones </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> Contenedor para agrupar botones conservando su aspecto
-                <code>.btn-group-inline</code>.</p>
+            <div class="fluid-20-b mb-32">Cuando existen varios botones formando un grupo, estos se pueden distribuir de diferentes maneras, dando control al grupo y a cada uno de sus botones.</div>
+            <h2>Grupo de botones alineados</h2>
+            <p class="text-16-r mb-32"> Contenedor para agrupar botones conservando su aspecto <code>.btn-group-inline</code>.</p>
             <div class="row mb-48">
                 <div class="col-xs-12">
                     <div class="pre-show">
@@ -316,206 +375,52 @@
             <div class="row">
                 <div class="col-xs-12">
                     <pre><code class="language-markup"> 
-            &lt;div class=&quot;btn-group-inline&quot;&gt;
-            &lt;div class=&quot;btn btn-invert btn--medium &quot;&gt;Boton 1&lt;/div&gt;
-            &lt;div class=&quot;btn btn-invert btn--medium &quot;&gt;Boton 2 &lt;/div&gt;
-            &lt;/div&gt;
+&lt;div class=&quot;btn-group-inline&quot;&gt;
+    &lt;div class=&quot;btn btn-invert btn--medium &quot;&gt;Boton 1&lt;/div&gt;
+    &lt;div class=&quot;btn btn-invert btn--medium &quot;&gt;Boton 2 &lt;/div&gt;
+&lt;/div&gt;
             </code></pre>
                 </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12"> 
+                  <h2>agrupación conjunta</h2>
+                  <p class="p1">Una en un solo elemento, un grupo de botones, que a su vez pueden tener clases que transformen su aspecto.</p>
+                  <p><code>.btn-group</code></p>
+
+                  <div class="pre-show">
+                    <div class="btn-group">
+                        <button class="btn btn-invert btn--mini"> mini</button>
+                        <button class="btn btn-invert btn--medium"> medium</button>
+                        <button class="btn btn-invert btn--large"> large</button>
+                    </div>
+                </div>
+                <pre><code class="language-markup">
+&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn btn-invert btn--mini&quot;&gt; mini&lt;/button&gt;
+    &lt;button class=&quot;btn btn-invert btn--medium&quot;&gt; medium&lt;/button&gt;
+    &lt;button class=&quot;btn btn-invert btn--large&quot;&gt; large&lt;/button&gt;
+&lt;/div&gt;
+                    </code></pre>
+              </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Animación loader -->
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
             <hr>
         </div>
         <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong>Separate </strong>Button</div>
+            <div class="text-14-2b"> <strong>Botón </strong>   </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> Botón con icono distribuido a los extremos <code>.btn-separate</code></p>
-
-            <div class="row mb-48">
-                <div class="col-xs-12">
-                    <div class="pre-show">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button class="btn btn-invert btn--medium btn-separate">
-                                    <span>Entrar</span>
-                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwLjM4NDYgMTNMMTUgOE0xNSA4TDEwLjM4NDYgM00xNSA4TDEuMTkyMDllLTA3IDgiIHN0cm9rZT0iYmxhY2siLz4KPC9zdmc+"
-                                        alt="">
-                                </button>
-                            </div>
-                            <div class="col-xs-12 mt-16">
-                                <button class="btn btn-primary btn--small btn-separate">
-                                    <span>Entrar</span>
-                                    <img class="ml-8"
-                                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KPHBhdGggZD0iTTEwLjM4NDYgMTNMMTUgOE0xNSA4TDEwLjM4NDYgM00xNSA4TDEuMTkyMDllLTA3IDgiIHN0cm9rZT0id2hpdGUiLz4KPC9zdmc+"
-                                        alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <pre><code class="language-markup">
-            &lt;button
-            class=&quot;btn btn-invert btn--medium btn-separate&quot;&gt;
-            &lt;span&gt;Entrar&lt;/span&gt;
-            &lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;
-            &lt;/button&gt;
-            &lt;button
-            class=&quot;btn btn-primary btn--small btn-separate&quot;&gt;
-            &lt;span&gt;Entrar&lt;/span&gt;
-            &lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;
-            &lt;/button&gt;
-            </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b">
-                <strong>Grupal </strong>Button
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> grupal extensible. Compatible con tamaños y tipos de botones</p>
-            <div class="row mb-48">
-                <div class="col-xs-12">
-                    <div class="pre-show">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="btns">
-                                    <div class="btn btn-primary "> boton largo </div>
-                                    <div class="btn btn-invert "> btn btn-invert </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <pre><code class="language-markup">										
-            &lt;div class=&quot;btns&quot;&gt;
-            &lt;div class=&quot;btn btn-primary &quot;&gt;
-            boton largo
-            &lt;/div&gt;
-            &lt;div class=&quot;btn btn-invert &quot;&gt;
-            btn btn-invert
-            &lt;/div&gt;
-            &lt;/div&gt;
-            </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> 
-                <strong> Inline </strong>Button </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> Sin espacios </p>
-            <div class="row mb-48">
-                <div class="col-xs-12">
-                    <div class="pre-show">
-                        <div class="btn-group">
-                            <button class="btn btn-invert btn--mini"> mini</button>
-                            <button class="btn btn-invert btn--medium"> medium</button>
-                            <button class="btn btn-invert btn--large"> large</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <pre><code class="language-markup">
-            &lt;div class=&quot;btn-group&quot;&gt;
-            &lt;button class=&quot;btn btn-invert btn--mini&quot;&gt; mini&lt;/button&gt;
-            &lt;button class=&quot;btn btn-invert btn--medium&quot;&gt; medium&lt;/button&gt;
-            &lt;button class=&quot;btn btn-invert btn--large&quot;&gt; large&lt;/button&gt;
-            &lt;/div&gt;
-            </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> 
-                <strong>underline </strong> btn </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> btn-link </p>
-            <div class="row mb-48">
-                <div class="col-xs-12">
-                    <div class="pre-show">
-                        <a class="btn btn-underline" href="">boton link</a>
-                        <div class="has-light guide-dark-bg">
-                            <a class="btn btn-underline" href="">boton link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="pre-show">
-                        <a class="btn btn-underline" href="">boton link</a>
-                        <a class="btn btn-underline" href="">boton link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <pre><code class="language-markup"> 
-            &lt;a class=&quot;btn btn-underline&quot;href=&quot;&quot;&gt;boton link&lt;/a&gt; 
-            &lt;div class=&quot;has-light guide-dark-bg&quot;&gt;
-            &lt;a class=&quot;btn btn-underline&quot;href=&quot;&quot;&gt;boton link&lt;/a&gt; 
-            &lt;/div&gt;
-                        </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> <strong>Botón </strong> .btn-anim  </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32"> Botón animado con loading cuando haces clic.</p>
-            <p class="text-16-r mb-32">Añadiremos la clase btn-anim y no-focus para fixear error cuando hagamos clic</p>
+            <p class="fluid-20-b mb-32"> Botón animado con loading cuando haces clic.</p>
+            <p class="p1 mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error cuando hagamos clic</p>
+          
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pre-show">
@@ -541,24 +446,12 @@
             <div class="row">
                 <div class="col-xs-12">
                     <pre><code class="language-markup"> 
-            {{ "
-            <button class='btn btn-default btn--large btn-anim no-focus'>
-            <span class='btn-submit'>Submit</span>
-            <span class='btn-loading'>
-            <svg width='16' height='14' viewBox='0 0 16 14' fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
-            <path
-                d='M14 5.44709C13.6544 4.15739 12.8885 3.0198 11.8236 2.21442C10.7587 1.40905 9.45549 0.981893 8.12043 1.00059C6.78537 1.01928 5.49468 1.48276 4.45271 2.31764C3.41073 3.15253 2.677 4.31111 2.36768 5.60998'
-                stroke='white' stroke-width='1.5' />
-            <path d='M15 2V6H11' stroke='white' stroke-width='1.5' />
-            <path d='M1 12V8H5' stroke='white' stroke-width='1.5' />
-            <path
-                d='M2.20447 8.55291C2.55004 9.84261 3.31593 10.9802 4.38087 11.7856C5.44582 12.591 6.74898 13.0181 8.08404 12.9994C9.4191 12.9807 10.7098 12.5172 11.7518 11.6824C12.7937 10.8475 13.5275 9.68889 13.8368 8.39002'
-                stroke='white' stroke-width='1.5' />
-            </svg>
-            </span>
-            </button>
-            " | escape }}
+{{ "<button class='btn btn-default btn--large btn-anim no-focus'>
+    <span class='btn-submit'>Submit</span>
+    <span class='btn-loading'>
+    <svg>...</svg>
+    </span>
+</button>" | escape }}
             
             </code></pre>
                 </div>
@@ -567,6 +460,7 @@
     </div>
 </section>
 
+<!-- Botones sociales -->
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
@@ -577,7 +471,7 @@
                 <strong>Botón </strong> social </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-            <p class="text-16-r mb-32">Ejemplo de botonos sociales</p>
+            <p class="p1 mb-32">Botones especiales para redes sociales o acciones acompañadas por logos de otras marcas</p>
             <div class="row mb-48">
                 <div class="col-xs-12">
                     <div class="container-4 align-center">
@@ -594,14 +488,14 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 mt-30">
-                    <pre><code class="language-markup">&lt;button class=&quot;btn btn-facebook btn--medium btn-social-login&quot;&gt;
-            &lt;svg-icon&gt;...
-            Facebook
-            &lt;/button&gt;
-            &lt;button class=&quot;btn btn-text btn--medium btn-social-login btn-outline-login&quot;&gt;
-            &lt;svg-icon&gt;...													
-            Google
-            &lt;/button&gt;
+                    <pre><code class="language-markup">
+{{ "
+<button class='btn btn-facebook btn--medium btn-social-login text-16-r mb-16'>
+    <svg-icon src='LOGO'></svg-icon> Facebook
+</button>
+<button class='btn btn-text btn--medium btn-social-login btn-outline-login text-16-r mb-16'>
+    <svg-icon src='LOGO'></svg-icon> Google
+</button>" | escape }}       
                     </code></pre>
                 </div>
             </div>
