@@ -96,4 +96,64 @@
   {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 
- {% endmacro %} 
+ {% endmacro %}
+  
+
+  {% macro checkbox(checkboxClass='', explicacion='') %}
+ <h3>{{ checkboxClass  }}</h3>
+<p class="p1">
+  {{ explicacion  }}
+</p>
+
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+
+<div class='{{ checkboxClass  }}'>
+  <div class='checkbox-item'>
+      <input id='checkbox_{{randomNumber}}' type='checkbox' />
+      <label for='checkbox_{{randomNumber}}'>
+          <i class='icon '>
+              <svg width='16' height='16' viewBox='0 0 16 16'>
+                  <g stroke-width='1' fill='#000000' stroke='#000000'>
+                      <polyline fill='none' stroke='#000000' stroke-linecap='round'
+                          stroke-linejoin='round' stroke-miterlimit='10'
+                          points='1,9 5,13 15,3 '>
+                      </polyline>
+                  </g>
+              </svg>
+            </i>
+            {% if (checkboxClass == 'checkbox-item') or (checkboxClass == 'checkbox-item is-error') %}
+            <span class='text-14-r '>{{ checkboxClass }} <a href="#">legal text</a></span>
+            {% endif %}
+      </label>
+    </div>
+    {% if checkboxClass == 'checkbox-item-text' %}
+    <span class='text-14-r '>{{ checkboxClass }} </span>
+    {% endif %}
+</div>
+
+  {% set standardcode %}<div class='{{ checkboxClass  }}'>
+    <div class='checkbox-item'>
+        <input id='checkbox_{{randomNumber}}' type='checkbox' />
+        <label for='checkbox_{{randomNumber}}'>
+            <i class='icon '>
+                <svg width='16' height='16' viewBox='0 0 16 16'>
+                    <g stroke-width='1' fill='#000000' stroke='#000000'>
+                        <polyline fill='none' stroke='#000000' stroke-linecap='round'
+                            stroke-linejoin='round' stroke-miterlimit='10'
+                            points='1,9 5,13 15,3 '>
+                        </polyline>
+                    </g>
+                </svg>
+              </i>
+              {% if (checkboxClass == 'checkbox-item') or (checkboxClass == 'checkbox-item is-error') %}
+              <span class='text-14-r '>{{ checkboxClass }} <a href="#">legal text</a></span>
+              {% endif %}
+        </label>
+      </div>
+      {% if checkboxClass == 'checkbox-item-text' %}
+      <span class='text-14-r '>{{ checkboxClass }} </span>
+      {% endif %}
+  </div>{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
+
+
