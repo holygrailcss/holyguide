@@ -29,6 +29,6 @@
         "node-sass": "^6.0.1",
         "sass": "~1.32.12",
         "set-value": "^4.0.1",
-        "holygrailcss": "^1.8.42"
+        "holygrailcss": "^1.8.45"
     }
 }
