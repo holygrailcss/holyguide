@@ -44,6 +44,8 @@
     </div>
 </section>
 
+
+
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
@@ -77,31 +79,27 @@
         </div>
         <div class="col-xs-12 col-sm-6">
             <p class="p1 text-16-r mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color de fuente, apariencia en los diferentes estados del botón... </p>
-            <div class="col-xs-10 bg-light p-16">
-                <div class="btn btn-primary">btn-primary</div> <br> <br>
-                <div class="btn btn-default">btn-default</div> <br> <br>
-                <div class="btn btn-phantom">btn-phantom</div> <br> <br>
-                <div class="btn btn-text">btn-text</div> <br> <br>
-                <div class="btn btn-link">btn-link</div> <br> <br>
-                <div class="btn btn-invert">btn-invert</div> <br> <br>
-                <div class="btn btn-invert-light">btn-invert-light</div> <br> <br>
-                <div class="btn btn-trans">btn-trans </div> <br> <br>
-                <div class="btn btn-blue">btn-blue</div> <br> <br>
-                <div class="btn btn-circle">btn-circle</div> <br> <br>
-            </div>
 
 
-            <pre ><code class="language-markup">{{ "<div class='btn btn-primary'>btn-primary</div> 
-<div class='btn btn-default'>btn-default</div> 
-<div class='btn btn-phantom'>btn-phantom</div> 
-<div class='btn btn-text'>btn-text</div> 
-<div class='btn btn-link'>btn-link</div> 
-<div class='btn btn-invert'>btn-invert</div> 
-<div class='btn btn-invert-light'>btn-invert-light</div> 
-<div class='btn btn-trans'>btn-trans </div> 
-<div class='btn btn-blue'>btn-blue</div> 
-<div class='btn btn-circle'>btn-circle</div>" | escape}}
-</code></pre>
+
+            {% call button.simple('Primary','btn-primary description') %}  {% endcall %}
+            {% call button.simple('Secondary','btn-secondary description') %}  {% endcall %}
+
+
+            {% call button.simple('default','btn-default description') %}  {% endcall %}
+
+            {% call button.simple('phantom','btn-default description') %}  {% endcall %}
+            {% call button.simple('text','btn-default description') %}  {% endcall %}
+            {% call button.simple('link','btn-default description') %}  {% endcall %}
+            {% call button.simple('invert','btn-default description') %}  {% endcall %}
+            {% call button.simple('invert-light','btn-default description') %}  {% endcall %}
+            {% call button.simple('trans','btn-default description') %}  {% endcall %}
+            {% call button.simple('blue','btn-default description') %}  {% endcall %}
+            <div class="btn btn-circle">btn-circle</div> <br> <br>
+            {% call button.simple('circle','btn-default description') %}  {% endcall %}
+       
+
+
         </div>
     </div>
 </section>

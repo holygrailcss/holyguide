@@ -1,19 +1,16 @@
-{% macro bsButton(type='primary', disabled=false, classes='') %}
-    {% if disabled %}
-    <button type="button" class="btn btn-{{ type }} {{ classes }}" disabled>{{ caller() }}</button>
-    {% else %}
-    <button type="button" class="btn btn-{{ type }} {{ classes }}">{{ caller() }}</button>
-    {% endif %}
-{% endmacro %}
 
-{% macro bsButtonGroup(label='', classes='') %}
-    <div class="btn-group {{ classes }}" role="group" aria-label="{{ label }}">
-    {{ caller() }}
-    </div>
-{% endmacro %}
+ {% macro simple(buttonName='', explicacion='') %} 
 
-{% macro bsButtonToolbar(label='', classes='') %}
-    <div class="btn-toolbar {{ classes }}" role="toolbar" aria-label="{{ label }}">
-    {{ caller() }}
-    </div>
-{% endmacro %}
+
+ <h3>{{ buttonName | capitalize  }} </h3>
+
+ <button class=" btn-{{buttonName }} btn btn--large">.btn-{{buttonName }}</button> 
+
+<p class="p1">
+    btn-{{buttonName  }} : {{ explicacion  }}
+</p>
+
+  {% set standardcode %}<button class='btn-{{buttonName }}'>btn-{{buttonName }} </button>{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+ {% endmacro %} 
