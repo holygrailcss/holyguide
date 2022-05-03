@@ -8,6 +8,13 @@ $(document).ready(function () {
         console.log("esto no funciona")
 		$(this.parentNode.parentNode).toggleClass("openRules");
 	});
+
+		$('.btn-anim').click(function () {
+			$(this).toggleClass('is-loading');
+		});
+
+
+
 });
 
 
@@ -176,3 +183,5 @@ $(document).ready(function () {
             document.querySelector(".bubble-extralight").style.opacity = "0", document.querySelector(".bubble-extralight").style.top = "0"
         }))
     }));
+
+

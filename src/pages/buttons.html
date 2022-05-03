@@ -89,18 +89,19 @@
                 <div class="btn btn-blue">btn-blue</div> <br> <br>
                 <div class="btn btn-circle">btn-circle</div> <br> <br>
             </div>
-            <pre class="mt-48 mb-16">
-                <code class="language-markup">&lt;div class=&quot;btn btn-primary&quot;&gt;btn-primary&lt;/div&gt;
-&lt;div class=&quot;btn btn-default&quot;&gt;btn-default&lt;/div&gt;
-&lt;div class=&quot;btn btn-phantom&quot;&gt;btn-phantom&lt;/div&gt;
-&lt;div class=&quot;btn btn-text&quot;&gt;btn-text&lt;/div&gt;
-&lt;div class=&quot;btn btn-link&quot;&gt;btn-link&lt;/div&gt;
-&lt;div class=&quot;btn btn-invert&quot;&gt;btn-invert&lt;/div&gt;
-&lt;div class=&quot;btn btn-invert-light&quot;&gt;btn-invert-light&lt;/div&gt;
-&lt;div class=&quot;btn btn-trans&quot;&gt;btn-trans &lt;/div&gt;
-&lt;div class=&quot;btn btn-blue&quot;&gt;btn-blue&lt;/div&gt;
-&lt;div class=&quot;btn btn-circle&quot;&gt;btn-circle&lt;/div&gt;
-                </code></pre>
+
+
+            <pre ><code class="language-markup">{{ "<div class='btn btn-primary'>btn-primary</div> 
+<div class='btn btn-default'>btn-default</div> 
+<div class='btn btn-phantom'>btn-phantom</div> 
+<div class='btn btn-text'>btn-text</div> 
+<div class='btn btn-link'>btn-link</div> 
+<div class='btn btn-invert'>btn-invert</div> 
+<div class='btn btn-invert-light'>btn-invert-light</div> 
+<div class='btn btn-trans'>btn-trans </div> 
+<div class='btn btn-blue'>btn-blue</div> 
+<div class='btn btn-circle'>btn-circle</div>" | escape}}
+</code></pre>
         </div>
     </div>
 </section>
@@ -122,27 +123,12 @@
                 <div class="btn btn-primary btn--large">btn--large</div> <br> <br>
                 <div class="btn btn-primary btn--xlarge">btn--xlarge</div> <br> <br>
                 <div class="btn btn-primary btn--full">btn--full</div> <br> <br>
-                <pre class="mt-48 mb-16">
-    <code class="language-markup">
-    &lt;div class=&quot;btn btn-primary btn--mini&quot;&gt;
-    btn--mini
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-primary btn--small&quot;&gt;
-    btn--small
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-primary btn--medium&quot;&gt;
-    btn--medium
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-primary btn--large&quot;&gt;
-    btn--large
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-primary btn--xlarge&quot;&gt;
-    btn--xlarge
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-primary btn--full&quot;&gt;
-    btn--full
-    &lt;/div&gt;
-    </code></pre>
+<pre ><code class="language-markup">{{ "<div class='btn btn-primary btn--mini'>btn--mini xx</div>
+<div class='btn btn-primary btn--small'>btn--small</div>
+<div class='btn btn-primary btn--medium'>btn--medium</div>
+<div class='btn btn-primary btn--large'>btn--large</div>
+<div class='btn btn-primary btn--xlarge'>btn--xlarge</div>
+<div class='btn btn-primary btn--full'>btn--full</div>" | escape}}</code></pre>
             </div>
         </div>
     </div>
@@ -209,22 +195,22 @@
             <div class="row mb-16">
                 <div class="col-xs-12">
                     <h3 class='h6 mb-16'>Active Buttons</h3>
-                    <div class='btn btn-primary  btn--small  '> Action </div>
+                    <button class='btn btn-primary  btn--small  '> Action </button>
 
 
 
 
-                    <pre><code class='language-markup'>{{"<div class='btn btn-primary  btn--small  '> Action </div> " | escape }}</code></pre>
+                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--small  '> Action </button> " | escape }}</code></pre>
 
 
-                    <div class='btn btn-primary  btn--small  has-ico-pre '>
+                    <button class='btn btn-primary  btn--small  has-ico-pre '>
                         <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
                             <g transform='translate(0, 0)'>
                                 <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
                                 </circle>
                             </g>
                         </svg> ico-pre
-                    </div>
+                    </button>
 
 
 
@@ -232,53 +218,53 @@
 
 
 
-<pre><code class='language-markup'>{{"<div class='btn btn-primary  btn--large  has-ico-pre '>
+<pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-pre '>
     <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
         <g transform='translate(0, 0)'>
             <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
             </circle>
         </g>
     </svg> .has-ico-pre
-</div> " | escape }}</code></pre>
+</button> " | escape }}</code></pre>
 
 
-                    <div class='btn btn-primary  btn--small  has-ico-post'>
+                    <button class='btn btn-primary  btn--small  has-ico-post'>
                         <svg class='ico-post' width='16px' height='16px' viewBox='0 0 16 16'>
                             <g transform='translate(0, 0)'>
                                 <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
                                 </circle>
                             </g>
                         </svg> ico-post
-                    </div>
+                    </button>
 
 
-                    <pre><code class='language-markup'>{{"<div class='btn btn-primary  btn--large  has-ico-post '>
-                        <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
-                            <g transform='translate(0, 0)'>
-                                <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-                                </circle>
-                            </g>
-                        </svg> .has-ico-post
-                    </div> " | escape }}</code></pre>
+<pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-post '>
+    <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
+        <g transform='translate(0, 0)'>
+            <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
+            </circle>
+        </g>
+    </svg> .has-ico-post
+</button> " | escape }}</code></pre>
 
 
-                    <div class='btn btn-primary  btn--large  has-ico-center '>
+                    <button class='btn btn-primary  btn--large  has-ico-center '>
                         <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
                             <g transform='translate(0, 0)'>
                                 <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
                                 </circle>
                             </g>
                         </svg> .has-ico-center
-                    </div>
+                    </button>
 
-                    <pre><code class='language-markup'>{{"<div class='btn btn-primary  btn--large  has-ico-center '>
+<pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-center '>
     <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
         <g transform='translate(0, 0)'>
-            <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-            </circle>
+        <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
+        </circle>
         </g>
     </svg> .has-ico-center
-</div> " | escape }}</code></pre>
+</button> " | escape }}</code></pre>
 
 
 
@@ -431,11 +417,14 @@
                     </div>
                 </div>
                 <pre><code class="language-markup">
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn-invert btn--mini&quot;&gt; mini&lt;/button&gt;
-    &lt;button class=&quot;btn btn-invert btn--medium&quot;&gt; medium&lt;/button&gt;
-    &lt;button class=&quot;btn btn-invert btn--large&quot;&gt; large&lt;/button&gt;
-&lt;/div&gt;
+
+
+{{"<div class='btn-group'>
+                        <button class='btn btn-invert btn--mini'> mini</button>
+                        <button class='btn btn-invert btn--medium'> medium</button>
+                        <button class='btn btn-invert btn--large'> large</button>
+                    </div>"| escape }}
+
                     </code></pre>
               </div>
             </div>
@@ -453,6 +442,8 @@
             <div class="text-14-2b"> <strong>Botón </strong>   </div>
         </div>
         <div class="col-xs-12 col-sm-6">
+
+
             <p class="fluid-20-b mb-32"> Botón animado con loading cuando haces clic.</p>
             <p class="p1 mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error cuando hagamos clic</p>
           
@@ -462,16 +453,11 @@
                         <button class="btn btn-default btn--large btn-anim no-focus">
                             <span class="btn-submit">Submit</span>
                             <span class="btn-loading">
-                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 5.44709C13.6544 4.15739 12.8885 3.0198 11.8236 2.21442C10.7587 1.40905 9.45549 0.981893 8.12043 1.00059C6.78537 1.01928 5.49468 1.48276 4.45271 2.31764C3.41073 3.15253 2.677 4.31111 2.36768 5.60998"
-                                        stroke="white" stroke-width="1.5" />
-                                    <path d="M15 2V6H11" stroke="white" stroke-width="1.5" />
-                                    <path d="M1 12V8H5" stroke="white" stroke-width="1.5" />
-                                    <path
-                                        d="M2.20447 8.55291C2.55004 9.84261 3.31593 10.9802 4.38087 11.7856C5.44582 12.591 6.74898 13.0181 8.08404 12.9994C9.4191 12.9807 10.7098 12.5172 11.7518 11.6824C12.7937 10.8475 13.5275 9.68889 13.8368 8.39002"
-                                        stroke="white" stroke-width="1.5" />
+                                <svg  width='16px' height='16px' viewBox='0 0 16 16'>
+                                    <g transform='translate(0, 0)'>
+                                        <circle fill="none" stroke="#ffffff" cx="8" cy="8" r="6">
+                                        </circle>
+                                    </g>
                                 </svg>
                             </span>
                         </button>
@@ -480,17 +466,57 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <pre><code class="language-markup"> 
-{{ "<button class='btn btn-default btn--large btn-anim no-focus'>
+                    <pre><code class="language-markup">{{ "<button class='btn btn-default btn--large btn-anim no-focus'>
     <span class='btn-submit'>Submit</span>
     <span class='btn-loading'>
     <svg>...</svg>
     </span>
-</button>" | escape }}
-            
-            </code></pre>
+</button>" | escape }}</code></pre>
                 </div>
             </div>
+
+
+
+
+
+<!-- Botón de añadir a la cesta -->
+<button id="btnAddToCart" class="btn btn--full btn-anim mb-16 btn-invert btn-default no-focus ">
+
+
+    <div class="btn-submit has-ico-center ">
+        <svg-icon>
+            <svg width='16px' height='16px' viewBox='0 0 16 16'>
+                <g transform='translate(0, 0)'>
+                    <circle fill="none" stroke="#ffffff" cx="8" cy="8" r="6">
+                    </circle>
+                </g>
+            </svg>
+        </svg-icon> PRE-ORDERX
+    </div>
+    <div class="btn-loading">
+        <svg width='16px' height='16px' viewBox='0 0 16 16'>
+            <g transform='translate(0, 0)'>
+                <circle fill="none" stroke="#ffffff" cx="8" cy="8" r="6">
+                </circle>
+            </g>
+        </svg>
+    </div>
+</button>
+
+
+<pre><code class='language-markup'>{{"<button class='btn-loading has-ico-center'>
+    <svg-icon>
+        <svg  width='16px' height='16px' viewBox='0 0 16 16'>
+            <g transform='translate(0, 0)'>
+                <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'>
+                </circle>
+            </g>
+        </svg>
+    </svg-icon>
+    PRE- ORDER</button> " | escape }}</code></pre>
+
+
+
         </div>
     </div>
 </section>
@@ -523,15 +549,13 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 mt-30">
-                    <pre><code class="language-markup">
-{{ "
-<button class='btn btn-facebook btn--medium btn-social-login text-16-r mb-16'>
+                    <pre><code class="language-markup">{{ "<button class='btn btn-facebook btn--medium btn-social-login text-16-r mb-16'>
     <svg-icon src='LOGO'></svg-icon> Facebook
 </button>
+
 <button class='btn btn-text btn--medium btn-social-login btn-outline-login text-16-r mb-16'>
     <svg-icon src='LOGO'></svg-icon> Google
-</button>" | escape }}       
-                    </code></pre>
+</button>" | escape }}</code></pre>
                 </div>
             </div>
             <div class="row">
