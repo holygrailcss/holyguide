@@ -72,7 +72,7 @@ nav{
         margin-bottom: 0;
         width: 100%;
         float: left;
-        white-space: pre-wrap;
+        black-space: pre-wrap;
     }
     a, a:link, a:active {
         text-decoration: none;
@@ -117,7 +117,7 @@ table {
     }
     // Prevent breaking of code (e.g., Grunt tasks list)
     td:first-child > code {
-        white-space: nowrap;
+        black-space: nowrap;
     }
 }
 .guide-header{
@@ -313,7 +313,7 @@ margin-bottom: 32px;
     background-color: #F0F0F0;
 }
 .guide code {
-    padding: 8px 12px;
+    padding: 4px 12px;
     border-radius: 6px;
     font-size: 13px;
     display: inline-block;
@@ -412,7 +412,7 @@ $checkbox-svg-brad: 0;
     left: 7px;
     width: 8px;
     height: 8px;
-    background-color: white;
+    background-color: black;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -867,6 +867,117 @@ pre{
     width: max-content;
     padding: 14px 48px;
 }
+
+.o-layout_item {
+    display: inline-block;
+    font-size: .875rem;
+    padding-left: 0;
+    vertical-align: top;
+    width: 100%;
+    overflow: hidden;
+}
+
+.c-pesos_text {
+    color: black;
+    padding-bottom: 300px;
+    position: relative;
+    text-align: center
+}
+
+.c-pesos_text .c-pesos_item svg {
+    height: 950px;
+    margin: -210px auto 0
+}
+
+.c-pesos_text .c-pesos_item svg .peso-bold:hover,.c-pesos_text .c-pesos_item svg .peso-extrabold:hover,.c-pesos_text .c-pesos_item svg .peso-extralight:hover,.c-pesos_text .c-pesos_item svg .peso-light:hover,.c-pesos_text .c-pesos_item svg .peso-medium:hover,.c-pesos_text .c-pesos_item svg .peso-regular:hover,.c-pesos_text .c-pesos_item svg .peso-semibold:hover {
+    fill: #0500ff;
+    cursor: pointer;
+    opacity: .8
+}
+.peso-wide{
+    width: 100%;
+}
+.c-pesos_text .c-pesos_item svg path {
+    fill: black;
+}
+
+html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
+    margin-top: -290px
+}
+
+.c-familia_pesos_button {
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: 300;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 30px
+}
+
+.c-familia_pesos_button-active,.c-familia_pesos_button:hover {
+    background-color: var(--theme-button-hover-background-color);
+    border: 1px solid var(--theme-button-hover-text-color);
+    color: var(--theme-button-hover-text-color)
+}
+
+.c-familia_pesos_button:focus {
+    color: var(--theme-bg-color)
+}
+
+
+
+.peso-bubbles-container {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: -280px;
+    z-index: 9999;
+}
+
+.bubble {
+    position: absolute;
+    background: #0400ff;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 41px;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 77px;
+    padding: 0px;
+    margin-bottom: 20px;
+    opacity:0;
+    -webkit-box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.6);
+
+}
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 20px 19px 0 0;
+    border-color: #0400ff transparent transparent transparent;
+    bottom: -20px;
+    left: 21%;
+    margin-left: -9.5px;
+}
+
+
+
+
+.peso-condensed,.peso-compressed,.peso-wide,.peso-extended,.peso-daily-italic,.peso-condensed-italic,.peso-compressed-italic{
+    display:none;
+    opacity:0;
+}
+
+
+
+
 
 
 
