@@ -504,16 +504,30 @@
 </button>
 
 
-<pre><code class='language-markup'>{{"<button class='btn-loading has-ico-center'>
-    <svg-icon>
-        <svg  width='16px' height='16px' viewBox='0 0 16 16'>
-            <g transform='translate(0, 0)'>
-                <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'>
-                </circle>
-            </g>
-        </svg>
-    </svg-icon>
-    PRE- ORDER</button> " | escape }}</code></pre>
+<pre><code class='language-markup'>{{"
+    
+    <button id='btnAddToCart' class='btn btn--full btn-anim mb-16 btn-invert btn-default no-focus '>
+
+
+        <div class='btn-submit has-ico-center '>
+            <svg-icon>
+                <svg width='16px' height='16px' viewBox='0 0 16 16'>
+                    <g transform='translate(0, 0)'>
+                        <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'>
+                        </circle>
+                    </g>
+                </svg>
+            </svg-icon> PRE-ORDERX
+        </div>
+        <div class='btn-loading'>
+            <svg width='16px' height='16px' viewBox='0 0 16 16'>
+                <g transform='translate(0, 0)'>
+                    <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'>
+                    </circle>
+                </g>
+            </svg>
+        </div>
+    </button>  " | escape }}</code></pre>
 
 
 
