@@ -166,7 +166,8 @@
 </p>
 
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
-
+<div class="resize-mini">
+ <div class="resize-mini-content {{dark  }} ">
 <div class='{{ checkboxClass  }}'>
   <div class='checkbox-item'>
       <input id='checkbox_{{randomNumber}}' type='checkbox' />
@@ -190,7 +191,7 @@
     <span class='text-14-r '>{{ checkboxClass }} </span>
     {% endif %}
 </div>
-
+</div>
   {% set standardcode %}<div class='{{ checkboxClass  }}'>
     <div class='checkbox-item'>
         <input id='checkbox_{{randomNumber}}' type='checkbox' />
@@ -214,7 +215,11 @@
       <span class='text-14-r '>{{ checkboxClass }} </span>
       {% endif %}
   </div>{% endset %}
-<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>{% endmacro %} 
+
+
+
 
 
 
@@ -226,7 +231,8 @@
 </p>
 
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
-
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
 <div class='{{ checkboxClass  }}'>
   <div class=''>
       <input id='checkbox{{randomNumber}}' name='checkbox{{randomNumber}}' type='checkbox' class='ng-valid ' />
@@ -235,6 +241,7 @@
           <span class='theta '>{{ checkboxClass  }}</span>
       </label>
   </div>
+</div>
 </div>
 
  {% set standardcode %}<div class='{{ checkboxClass  }}'>
@@ -246,7 +253,8 @@
       </label>
   </div>
 </div>{% endset %}
-<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>{% endmacro %} 
 
 
 {% macro checkboxRadio(checkboxClass='', explicacion='') %}
@@ -256,7 +264,8 @@
 </p>
 
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
-
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
 <div class='{{ checkboxClass  }}'>
   <input id='{{randomNumber}}' name='gender' type='radio' value='F'>
   <label for='{{randomNumber}}'>
@@ -267,7 +276,7 @@
     </span>
   </label>
 </div>
-
+</div>
  {% set standardcode %}<div class='{{ checkboxClass  }}'>
   <input id='{{randomNumber}}' name='gender' type='radio' value='F'>
   <label for='{{randomNumber}}'>
@@ -278,4 +287,5 @@
     </span>
   </label>
 </div>{% endset %}
-<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>{% endmacro %} 
