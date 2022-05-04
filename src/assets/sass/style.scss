@@ -34,3 +34,21 @@
       }
   }
 }
+
+.is-error {
+  .checkbox-item {
+    a {
+      color: #f54637;
+    }
+
+    svg {
+      g {
+        fill: #f54637;
+        polyline{
+          stroke: #f54637;
+        }
+      }
+    }
+
+  }
+}

@@ -217,3 +217,65 @@
 <pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
 
 
+
+
+{% macro checkboxSide(checkboxClass='', explicacion='') %}
+<h3>{{ checkboxClass  }}</h3>
+<p class="p1">
+ {{ explicacion  }}
+</p>
+
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+
+<div class='{{ checkboxClass  }}'>
+  <div class=''>
+      <input id='checkbox{{randomNumber}}' name='checkbox{{randomNumber}}' type='checkbox' class='ng-valid ' />
+      <label for='checkbox{{randomNumber}}'>
+          <div class='checkbox-circle'></div>
+          <span class='theta '>{{ checkboxClass  }}</span>
+      </label>
+  </div>
+</div>
+
+ {% set standardcode %}<div class='{{ checkboxClass  }}'>
+  <div class=''>
+      <input id='checkbox{{randomNumber}}' name='checkbox{{randomNumber}}' type='checkbox' class='ng-valid ' />
+      <label for='checkbox{{randomNumber}}'>
+          <div class='checkbox-circle'></div>
+          <span class='theta '>{{ checkboxClass  }}</span>
+      </label>
+  </div>
+</div>{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
+
+
+{% macro checkboxRadio(checkboxClass='', explicacion='') %}
+<h3>{{ checkboxClass  }}</h3>
+<p class="p1">
+ {{ explicacion  }}
+</p>
+
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+
+<div class='{{ checkboxClass  }}'>
+  <input id='{{randomNumber}}' name='gender' type='radio' value='F'>
+  <label for='{{randomNumber}}'>
+    <i class=' ico-radio'></i>
+    <span class='text-14-m'>{{ checkboxClass  }} </span>
+    <span>
+      <div class='mb-10'> {{ checkboxClass  }}</div>
+    </span>
+  </label>
+</div>
+
+ {% set standardcode %}<div class='{{ checkboxClass  }}'>
+  <input id='{{randomNumber}}' name='gender' type='radio' value='F'>
+  <label for='{{randomNumber}}'>
+    <i class=' ico-radio'></i>
+    <span class='text-14-m'>{{ checkboxClass  }} </span>
+    <span>
+      <div class='mb-10'> {{ checkboxClass  }}</div>
+    </span>
+  </label>
+</div>{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>{% endmacro %} 
