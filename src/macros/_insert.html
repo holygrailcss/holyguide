@@ -97,3 +97,62 @@
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 
  {% endmacro %} 
+
+
+ {% macro input(inputName='', explicacion='',dark='') %} 
+<h3>{{ inputName | capitalize }} </h3>
+
+<p class="p1"> {{inputName }} : {{ explicacion }} </p>
+
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
+
+    <div class="form-input-label">
+      <input type="email" id="{{inputName }}" class="input  {{inputName }}" placeholder="{{inputName }}" required="">
+      <label for="{{inputName }}">{{inputName }}</label>
+  </div>
+
+
+  </div> {% set standardcode %}
+  <div class='form-input-label'>
+    <input type='email' id='{{inputName }}' class='input {{inputName }}' placeholder='{{inputName }}' required=''>
+    <label for='{{inputName }}'>{{inputName }}</label>
+</div>{% endset %}<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+ {% endmacro %}
+
+
+
+ {% macro select(selectName='', explicacion='',dark='') %} 
+ <h3>{{ selectName | capitalize }} </h3>
+ 
+ <p class="p1"> {{selectName }} : {{ explicacion }} </p>
+ 
+ <div class="resize-mini">
+   <div class="resize-mini-content {{dark  }} ">
+ 
+
+
+    <div class='select {{selectName }}'>
+      <select>
+          <option value='S'>S</option>
+          <option value='M'>M</option>
+          <option value='l'>L</option>
+          <option value='XL'>XL</option>
+      </select>
+  </div>
+
+
+ 
+ 
+   </div> {% set standardcode %}<div class='select {{selectName }}'>
+<select>
+    <option value='S'>S</option>
+    <option value='M'>M</option>
+    <option value='l'>L</option>
+    <option value='XL'>XL</option>
+</select>
+</div>{% endset %}<pre><code class="language-markup">{{standardcode}} </code></pre>
+ </div>
+  {% endmacro %}
+
