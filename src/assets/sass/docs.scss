@@ -84,12 +84,24 @@ nav{
         list-style: none;
         margin: 4px 0px;
     }
+
+    .bold{
+        color: $c-guide !important;
+    }
+    .p4,.guide-list{
+        font-size: 14px;
+        @include font-regular;
+    }
+    
+
+    hr {
+        width: 100%;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid transparent;
+    }
+
 }
-hr {
-    width: 100%;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid transparent;
-}
+
 table {
     width: 100%;
     max-width: 100%;
@@ -1000,14 +1012,6 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 .guide-box{
     border: 1px solid $c-guide;
     padding: 24px;
-}
-
-.bold{
-    color: $c-guide !important;
-}
-.p4{
-    font-size: 14px;
-    @include font-regular;
 }
 
 
