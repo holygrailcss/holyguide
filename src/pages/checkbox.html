@@ -10,10 +10,16 @@
         <hr>
     </div>
     <div class='col-xs-12 col-sm-2 col-md-3'>
-        <div class='text-14-2b'> Espaciado</div>
+        <div class='text-14-2b'> Checkbox </div>
     </div>
     <div class='col-xs-12 col-sm-8 col-md-9'>
-        <section class=' title-zone mb-32'>
+        {% call insert.checkbox('checkbox-item-box','Input tipo checkbox individual. ') %} {% endcall %}
+        {% call insert.checkbox('checkbox-item-text','Input tipo checkbox con texto que no es enlace. ') %} {% endcall %}
+        {% call insert.checkbox('checkbox-item','Input tipo checkbox con texto que funciona como enlace al input. ') %} {% endcall %}
+        {% call insert.checkbox('checkbox-item is-error','Estado error en el input. ') %} {% endcall %}
+
+
+        <!-- <section class=' title-zone mb-32'>
             <div class='container-fluid'>
                 <div class='row'>
                     <div class='col-xs-12'>
@@ -25,11 +31,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section>
             <div class='container-fluid'>
                 <div class=''>
-                    <div class='row'>
+                    <!-- <div class='row'>
                         <div class='col-xs-12'>
                             <div class='pre-title mb-16'>
                                 <strong> Animate </strong>Checkbox <p> Checkbox con tic escalable </p>
@@ -196,8 +202,8 @@
 </div>"| escape}}
     </code></pre>
                         </div>
-                    </div>
-                    <div class='row'>
+                    </div> -->
+                    <!-- <div class='row'>
                         <div class='col-xs-12'>
                             <div class='pre-title mb-16'>
                                 <strong> .is-error </strong>Checkbox <p> Checkbox tactil con error </p>
@@ -240,7 +246,7 @@
 "| escape}}
 </code></pre>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class='container-fluid'>
