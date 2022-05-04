@@ -1003,9 +1003,12 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 }
 
 .bold{
-    color: $c-guide;
+    color: $c-guide !important;
 }
-
+.p4{
+    font-size: 14px;
+    @include font-regular;
+}
 
 
 

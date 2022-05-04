@@ -1,7 +1,7 @@
 {% macro simple(buttonName='', explicacion='',dark='') %} 
 <h3>{{ buttonName | capitalize }} </h3>
 
-<p class="p1"> btn-{{buttonName }} : {{ explicacion }} </p>
+<p class="p4"> <span class="bold mr-8">   .btn-{{buttonName }}  </span>   {{ explicacion | capitalize }} </p>
 
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
@@ -19,7 +19,7 @@
  {% macro svg(buttonName='', explicacion='',dark='') %} 
 <h3>{{ buttonName | capitalize }} </h3>
 
-<p class="p1"> btn-{{buttonName }} : {{ explicacion }} </p>
+<p class="p4"> btn-{{buttonName }} : {{ explicacion }} </p>
 
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
