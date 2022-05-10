@@ -10,7 +10,9 @@
 //     @include debug-forms();
 //     @include debug-fine();
 // }
-@import "components/giftcard.scss";
+
+// reubicamos los componentes
+@import "../../components/giftcard.scss";
 @import "components/minicestasidebar.scss";
 $c-secondary: orange;
 $nav-width: 250px;
@@ -67,10 +69,14 @@ nav{
     pre{
         margin-top: 40px;
         margin-bottom: 40px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        position: relative;
     }
     pre code{
         font-size: 12px;
-        padding: 16px 24px;
+        padding: 23px 24px 16px;
         margin-bottom: 0;
         width: 100%;
         float: left;
@@ -214,7 +220,7 @@ margin-bottom: 32px;
     min-width: 20%;
     min-height: 20%;
     display: block;
-    border: 1px solid #fff;
+    border: 1px solid $c-white;
     box-sizing: border-box;
 }
 .item-i:nth-child(1) {
@@ -450,7 +456,7 @@ $checkbox-svg-brad: 0;
     position: relative;
     background-color: #fd675e;
     padding: 40px 20px 20px;
-    color: #fff;
+    color: $c-white;
     font-size: 13px;
     margin-bottom: 30px;
     &:after {
@@ -460,7 +466,7 @@ $checkbox-svg-brad: 0;
         left: 20px;
         content: "Alert";
         font-size: 29px;
-        color: #fff;
+        color: $c-white;
         mix-blend-mode: soft-light;
     }
 }
@@ -603,9 +609,46 @@ float: right;
 
 
 }
+
+.resize-large{
+    border: 1px solid #eaeaea;
+    border-radius: 6px ;
+
+    position: relative;
+
+    &::after{
+        padding: 4px;
+        font-size: 12px;
+        top: 0;
+        left: 0;
+        border-radius: 0 0 4px 0 ;
+        opacity: .6;
+        position: absolute;
+        content: 'sass';
+        z-index:100;
+        background-color: #eaeaea;
+        color: #000000;
+    }
+  pre {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 0 0 6px 6px;
+   
+
+        code{
+            border-radius: 0 0 6px 6px;
+            overflow: auto;
+            max-height: 400px;
+        }
+    }
+}
+
+
+
 .resize-mini{
     border: 1px solid #eaeaea;
     border-radius: 6px ;
+
   pre {
         margin-top: 0px;
         margin-bottom: 0px;
@@ -972,7 +1015,7 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 .bubble {
     position: absolute;
     background: #0400ff;
-    color: #FFFFFF;
+    color: $c-white;
     font-size: 12px;
     line-height: 41px;
     text-align: center;
@@ -1012,6 +1055,17 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 .guide-box{
     border: 1px solid $c-guide;
     padding: 24px;
+}
+
+.btncode{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border-radius: 0 0 0 4px;
+
 }
 
 

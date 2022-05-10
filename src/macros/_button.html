@@ -7,7 +7,14 @@
   <div class="resize-mini-content {{dark  }} ">
     <button class=" btn-{{buttonName }} btn btn--small">.btn-{{buttonName }}</button>
   </div> {% set standardcode %}<button class='btn-{{buttonName }}'>btn-{{buttonName }} </button>{% endset %}
-  <pre><code class="language-markup">{{standardcode}} </code></pre>
+
+  <pre>
+    <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+      <img src="./images/clippy.svg" width="13" alt="Copy to clipboard">
+  </button >
+    <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+
+
 </div>
  {% endmacro %}
 
@@ -41,5 +48,8 @@
     
     btn-{{buttonName }} </button>{% endset %}
   <pre><code class="language-markup">{{standardcode}} </code></pre>
+
+
+
 </div>
  {% endmacro %}

@@ -2,6 +2,8 @@
 <iframe height="450" width="100%" src="https://www.figma.com/embed?embed_host=share&amp;&url={{ url }}
     " allowfullscreen>
 </iframe> {% endmacro %} 
+
+
 {% macro component(component='',size='',componentfigma="") %} <section class="mb-32 mt-32">
   <div class="resize-container">
     <div class="resize-bar">
@@ -56,6 +58,23 @@
          </code>
      </pre>
  {% endmacro %}
+
+
+
+{% macro sass(sass='') %}
+
+<div class="resize-large">
+
+<pre>
+  <button class="btn btncode" data-clipboard-target="#id{{sass}}">
+    <img src="./images/clippy.svg" width="13" alt="Copy to clipboard">
+</button >
+  <code id="id{{sass}}" class="language-css">
+{% set standardcode %}{% include sass+'.scss' %}  {# esto si funciona #}{% endset %}{{standardcode}}
+</code></pre> 
+</div>
+
+{% endmacro %}
 
 
 
