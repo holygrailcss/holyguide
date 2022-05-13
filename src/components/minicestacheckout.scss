@@ -1,0 +1,23 @@
+.mini-shopcart__summary{
+    position: sticky;
+    top: 16px;
+}
+
+
+@media (max-width:769px){
+    .mini-shopcart__summary{
+        position: fixed;
+        bottom: 0px;
+        background: white;
+        width: 100%;
+        left: 0px;
+        z-index: 3;
+        top: auto;
+        max-width: 800px;
+        margin: auto;
+        right: 0;
+    }
+    .mini-shopcart__content{
+        padding-bottom: 200px;
+    }
+}
