@@ -46,7 +46,11 @@ nav{
   margin-left: $nav-width;
   padding-right: 8px;
   padding-left: 8px;
+  &.is-rtl{
+      direction: rtl;
+  }
 }
+
 .doc-menu-title{
     display: flex;
     align-items: center;
