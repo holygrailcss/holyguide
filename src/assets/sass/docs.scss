@@ -1069,7 +1069,22 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 }
 
 
+.key-wrap{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
 
+.key{
+    padding: 10px 20px;
+    border: 1px solid black ;
+    border-radius: 10px;
+}
+
+.key-plus{
+    padding: 10px;
+}
 
 
 
