@@ -31,8 +31,13 @@
             </div>
         <div class="col-xs-12 col-sm-3"></div>
         <div class="col-xs-12 col-sm-6">
+<div class="alert">
+    Los links no deberian tener margins 0....
+
+</div>
 
             {% call insert.links('link1','') %}  {% endcall %}
+            
 
             {% call insert.links('link2','') %}  {% endcall %}
             
@@ -73,42 +78,39 @@
             <span class="warning-context"> Solo soporta link7 - pendiente soporte HG </span>
             <div class="row mt-32">
                 <div class="col-xs-12 ">
-                    <div class="pre-show mb-32">
-                        <span class="link7 ico ico-r text-14-m">
-                            <a href="">Guía de tallas</a>
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo="
-                                alt="">
-                        </span>
-                    </div>
-                    <div class="pre-show">
-                        <span class="link7 ico ico-r text-14-m">
-                            <span>Guía de tallas</span>
-                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo="
-                                alt="">
-                        </span>
-                    </div>
+
+
+
+
+                    <span class="link7 ico ico-r text-14-m ">
+                        <a href="">Guía de tallas</a>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo="
+                            alt="">
+                    </span>
+                    <br> <br>
+                    <span class="link7 ico ico-l text-14-m">
+                        <span class="mr-4">Guía de tallas</span>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo="
+                            alt="">
+                    </span>
+                    <br> <br>
+
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
 
-                    <pre><code class="language-markup">
-&lt;span class=&quot;link7 ico ico-l text-14-m&quot;&gt;
-&lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;&lt;/svg-icon&gt;
-&lt;a href=&quot;&quot;&gt;Gu&iacute;a de tallas&lt;/a&gt;
-&lt;/span&gt;
-
-&lt;span class=&quot;link7 ico ico-r text-14-m&quot;&gt;
-&lt;a href=&quot;&quot;&gt;Gu&iacute;a de tallas&lt;/a&gt;
-&lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;&lt;/svg-icon&gt;
-&lt;/span&gt;
-
-
-&lt;span class=&quot;link7 ico ico-r text-14-m&quot;&gt;
-&lt;span&gt;Gu&iacute;a de tallas&lt;/span&gt;
-&lt;svg-icon src=&quot;YOUR_ICON&quot;&gt;&lt;/svg-icon&gt;
-&lt;/span&gt;
-                    </code></pre>
+                    <pre><code class="language-markup">{{"<span class='link7 ico ico-r text-14-m'>
+    <a href=''>Guía de tallas</a>
+    <img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo='
+        alt=''>
+</span>
+<span class='link7 ico ico-l text-14-m'>
+    <span>Guía de tallas</span>
+    <img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTEzMDQgMy4yMzgxSDcuMDg2OTZMNS4yNjA4NyAySDIuODI2MDlMMSAzLjIzODFWNi45NTIzOEg0LjA0MzQ4VjE1SDExLjk1NjVWNi45NTIzOEgxNVYzLjIzODFMMTMuNzgyNiAySDEwLjEzMDRMOC45MTMwNCAzLjIzODFaIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo='
+        alt=''>
+</span>"| escape }}</code></pre>
                 </div>
 
             </div>
@@ -116,29 +118,5 @@
     </div>
 </section>
 
-
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-            <div class="text-14-2b"> #TITLE </div>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-            <span class="link1">link1</span><br><br>
-<span class="link2">link2</span><br><br>
-<span class="link3">link3</span><br><br>
-<span class="link4">link4</span><br><br>
-<span class="link5">link5</span><br><br>
-<span class="link6">link6</span><br><br>
-<span class="link7">link7</span><br><br>
-<span class="link8">link8</span><br><br>
-<span class="link9">link9</span><br><br>
-<span class="link10">link10</span>
-
-        </div>
-    </div>
-</section>
 
 {% endblock %}

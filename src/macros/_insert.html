@@ -84,10 +84,13 @@
 <p class="p1">
   {{ explicacion  }}
 </p>
+<br>
 
-<a class= "{{ links  }}" href=''> {{ links  }} </a>
+<a class= "mb-16  {{ links  }}" href=''> {{ links  }} </a>
+<br> <br>
 
-  {% set standardcode %}<a class= "{{ links  }}" href=''> {{ links  }} </a>{% endset %}
+
+  {% set standardcode %}<a class= "{{ links  }}" href=''> {{ links  }} </a> <br> {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 
  {% endmacro %} 
