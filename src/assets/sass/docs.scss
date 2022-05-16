@@ -13,7 +13,8 @@
 
 // reubicamos los componentes
 @import "../../components/giftcard.scss";
-@import "components/minicestasidebar.scss";
+@import "../../components/minicestasidebar.scss";
+@import "../../components/minicestacheckout.scss";
 $c-secondary: orange;
 $nav-width: 250px;
 
@@ -39,6 +40,7 @@ nav{
     overflow: auto;
     padding: 16px;
     color: black;
+    border-right: 1px solid #e3e3e3;
 }
 .main-content{
   margin-left: $nav-width;
@@ -49,6 +51,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 }
 .guide{
     h1{ margin-bottom: 32px; }
@@ -86,10 +89,30 @@ nav{
         text-decoration: none;
 
     }
-    ul.list-clear li {
-        list-style: none;
-        margin: 4px 0px;
+    ul{
+        &.list-clear{
+            li {
+                list-style: none;
+                margin: 4px 0px;
+            }
+
+            .body{
+                display: none;
+            }
+
+            svg{
+                transform: rotate(0deg);
+                transition: all .2s ease-in-out;
+            }
+            &.active{
+                svg{
+                    transform: rotate(45deg);
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
     }
+
 
     .bold{
         color: $c-guide !important;

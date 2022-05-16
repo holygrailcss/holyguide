@@ -24,6 +24,7 @@
       }
 }
 
+// TODO HG borde redondeado en grupo de botones
 .btn-group {
   .btn{
       &:first-child {
@@ -35,6 +36,7 @@
   }
 }
 
+// TODO HG elementos que no están en rojo en el error del checkbox
 .is-error {
   .checkbox-item {
     a {
@@ -50,5 +52,22 @@
       }
     }
 
+  }
+}
+
+// TODO HG nueva distribución tabs tipo around
+.tabs {
+  &.is-around {
+      ul {
+          justify-content: space-around;
+
+          li {
+              flex: 1;
+
+              span {
+                  border-bottom-width: 1px;
+              }
+          }
+      }
   }
 }
