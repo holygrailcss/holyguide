@@ -11,4 +11,9 @@ $(document).ready(function () {
                 $(this).siblings(".body").slideDown();
             }
         });
+
+
+        $(".toggle-menu").click(function () {
+            $("nav").toggleClass("open-menu");
+        });
     });

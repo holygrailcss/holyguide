@@ -14,6 +14,8 @@
         <div class="logo-guide pt-16 pb-16">
             <div class="container">
                 <img src="./images/logomenu.png" alt="">
+                <br>
+                <span class="text-12-2b"> v.{{globals.holygrailcssv }}</span>
             </div>
         </div>
         <section>
@@ -23,10 +25,16 @@
                         <div class="fluid-150-b mb-48"> Intelligent <br> Layouts faster <br> than you </div>
                         <h3 class="h3 mb-48"> We shape and design digital ideas and bring wonderful <br> experiences to
                             life. </h3>
+
+                        
+
+
                         <a class=" only-desktop " href=" ./startdev.html">
                             <button class="btn btn-primary btn--xlarge mr-8 ">Get Started </button> </a>
                         <a class=" only-mobile " href=" ./started.html">
                             <button class="btn  btn-primary mr-8 ">Holy Cheatsheet </button> </a>
+
+                         
                 
                     </div>
                 </div>
@@ -83,7 +91,7 @@
                         <div class="coding-box rat-16-9">
                             <div class="coding-box-header"></div>
                             <div class="content m-medium">
-                                <div class="p3 yellow"> > npm install holygrailcss </div>
+                                <div id="app" class="p3 yellow"> > npm install holygrailcss </div>
                             </div>
                         </div>
                     </div>
@@ -133,4 +141,27 @@
             </div>
         </div>
     </div>
-</section> {% endblock %}
+</section> 
+
+<script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+
+<script>
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+    loop: true
+});
+
+typewriter.typeString('npm i holygrailcss')
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString('gulp style ')
+    .pauseFor(2500)
+    .deleteChars(7)
+    .typeString('<strong>Enjoy!</strong>')
+    .pauseFor(2500)
+    .start();
+
+</script>
+
+{% endblock %}
