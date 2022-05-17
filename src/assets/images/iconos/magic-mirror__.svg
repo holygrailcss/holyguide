@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="17px" viewBox="0 0 13 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Elements / Icons / Award</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.5,4 C18.7761424,4 19,4.22385763 19,4.5 L19,4.5 L19,20.5 C19,20.7761424 18.7761424,21 18.5,21 L18.5,21 L6.5,21 C6.22385763,21 6,20.7761424 6,20.5 L6,20.5 L6,4.5 C6,4.22385763 6.22385763,4 6.5,4 L6.5,4 Z M18,5 L7,5 L7,20 L18,20 L18,5 Z M12.5,9.8 C12.7454599,9.8 12.9496084,9.97687516 12.9919443,10.2101244 L13,10.3 L13,12 L14.7,12 C14.9761424,12 15.2,12.2238576 15.2,12.5 C15.2,12.7454599 15.0231248,12.9496084 14.7898756,12.9919443 L14.7,13 L13,13 L13,14.7 C13,14.9761424 12.7761424,15.2 12.5,15.2 C12.2545401,15.2 12.0503916,15.0231248 12.0080557,14.7898756 L12,14.7 L12,13 L10.3,13 C10.0238576,13 9.8,12.7761424 9.8,12.5 C9.8,12.2545401 9.97687516,12.0503916 10.2101244,12.0080557 L10.3,12 L12,12 L12,10.3 C12,10.0238576 12.2238576,9.8 12.5,9.8 Z M8.7,5.7 C9.08659932,5.7 9.4,6.01340068 9.4,6.4 C9.4,6.78659932 9.08659932,7.1 8.7,7.1 C8.31340068,7.1 8,6.78659932 8,6.4 C8,6.01340068 8.31340068,5.7 8.7,5.7 Z M10.9,5.7 C11.2865993,5.7 11.6,6.01340068 11.6,6.4 C11.6,6.78659932 11.2865993,7.1 10.9,7.1 C10.5134007,7.1 10.2,6.78659932 10.2,6.4 C10.2,6.01340068 10.5134007,5.7 10.9,5.7 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="store-page_01_mobile_320_03_store-page" transform="translate(-38.000000, -672.000000)">
+            <g id="Elements--/-List-/-Mobile-/-01-With-Icon-/-Regular" transform="translate(16.000000, 656.000000)">
+                <g id="Item" transform="translate(15.400000, 12.000000)">
+                    <g id="Content">
+                        <g id="01-Base-/-03-Icons-/-Magic-Mirror" transform="translate(0.600000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                            <g id="01-Base-/-05-Colors-/-Black" mask="url(#mask-2)" fill="#000000" fill-rule="evenodd">
+                                <rect id="Black" x="0" y="0" width="24" height="24"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

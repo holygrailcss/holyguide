@@ -1081,7 +1081,7 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 
 
 .guide-box{
-    border: 1px solid $c-guide;
+
     padding: 24px;
 }
 
@@ -1114,5 +1114,95 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
     padding: 10px;
 }
 
+a.opac{
+    opacity: 1;
+}
+
+.guide .guide-bg {
+    overflow: hidden;
+    background-color: #0d0c0d;
+}
+
+.holycup {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    top: 50px;
+    @media (min-width: $break-sm) {
+        width: 40%;
+        top: 50px;
+    }
+}
+
+.coding-box {
+    position: relative;
+    border-radius: 20px;
+    .coding-box-header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 30px;
+        background-color: #323235;
+        &:after {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            top: 7px;
+            right: 10px;
+            background-color: #242426;
+            border-radius: 50%;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            top: 7px;
+            right: 35px;
+            background-color: #242426;
+            border-radius: 50%;
+        }
+    }
+    width: 100%;
+    background-color: #091116;
+}
+
+.guide .m-medium {
+    margin: 80px;
+}
+
+.guide .yellow {
+    color: #fdc305;
+}
+
+.guide .hero-bg {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.33;
+}
 
 
+.guide .hero{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .video{
+        width: 100%;
+
+    }
+}
+
+.guide-title {
+    z-index: 10;
+}

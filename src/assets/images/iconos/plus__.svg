@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>plus</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Base-/-Icons-/-Add" transform="translate(-7.000000, -7.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="plus-small" transform="translate(7.000000, 7.000000)">
+                <path d="M5,0.5 C5.24545989,0.5 5.44960837,0.676875161 5.49194433,0.910124368 L5.5,1 L5.5,4.5 L9,4.5 C9.27614237,4.5 9.5,4.72385763 9.5,5 C9.5,5.24545989 9.32312484,5.44960837 9.08987563,5.49194433 L9,5.5 L5.5,5.5 L5.5,9 C5.5,9.27614237 5.27614237,9.5 5,9.5 C4.75454011,9.5 4.55039163,9.32312484 4.50805567,9.08987563 L4.5,9 L4.5,5.5 L1,5.5 C0.723857625,5.5 0.5,5.27614237 0.5,5 C0.5,4.75454011 0.676875161,4.55039163 0.910124368,4.50805567 L1,4.5 L4.5,4.5 L4.5,1 C4.5,0.723857625 4.72385763,0.5 5,0.5 Z" id="plus"></path>
+            </g>
+        </g>
+    </g>
+</svg>
