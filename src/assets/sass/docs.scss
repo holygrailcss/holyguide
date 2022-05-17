@@ -893,7 +893,6 @@ $checkbox-svg-brad: 0;
         }
     }
 
-
     .guide {
         .mbr-50-100 {
             position: relative;
@@ -1119,6 +1118,10 @@ pre {
     &:hover {
         opacity: .5;
         cursor: pointer;
+    }
+
+    &.rtl-inspect{
+        left: 70px;
     }
 
 }
