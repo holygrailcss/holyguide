@@ -45,59 +45,70 @@ nav {
     color: black;
     background-color: #FFFFFF;
     border-right: 1px solid #E3E3E3;
-    z-index: 1;
+    z-index: 11;
+    overflow: auto;
 
-    .menu-lateral {
-        overflow-y: auto;
-    }
+    
 
-    .toggle-menu {
-        display: none;
+    .menu-lateral{
+        padding-bottom: 32px;
     }
 
     @media (max-width:769px) {
         transform: translateX(-250px);
         transition: all ease-in-out .4s;
 
-        .toggle-menu {
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            top: 0;
-            right: -40px;
-            background-color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-right: 1px solid #E3E3E3;
-            border-bottom: 1px solid #E3E3E3;
-
-            &::after {
-                content: "";
-                background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2.81885H14M2 8.31885H14M2 14.3188H14' stroke='%23292929' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 16px;
-                height: 16px;
-                transition: all ease-in-out .4s;
-            }
-        }
-
         &.open-menu {
             transform: translateX(0px);
             transition: all ease-in-out .4s;
-
-            .toggle-menu {
-                &::after {
-
-                    transition: all ease-in-out .4s;
-                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4.81885L4 12.8188M12 12.8188L4 4.81885' stroke='%23292929' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E%0A");
-                }
-            }
         }
     }
 }
+
+.toggle-menu {
+    display: none;
+    transform: translateX(0px);
+    transition: all ease-in-out .4s;
+
+    @media (max-width:769px) {
+
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top: 0;
+        left: -1px;
+        z-index: 1;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #E3E3E3;
+        border-bottom: 1px solid #E3E3E3;
+
+        &::after {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2.81885H14M2 8.31885H14M2 14.3188H14' stroke='%23292929' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 16px;
+            height: 16px;
+            transition: all ease-in-out .4s;
+        }
+
+        &.open-menu {
+            transform: translateX(250px);
+            transition: all ease-in-out .4s;
+
+            &::after {
+                transition: all ease-in-out .4s;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4.81885L4 12.8188M12 12.8188L4 4.81885' stroke='%23292929' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+            }
+
+        }
+    }
+}
+
 
 .main-content {
     margin-left: $nav-width;
@@ -169,10 +180,6 @@ nav {
             li {
                 list-style: none;
                 margin: 4px 0px;
-            }
-
-            .body {
-                display: none;
             }
 
             svg {
@@ -1387,6 +1394,16 @@ a.opac{
 }
 
 .nav-bottom{
-    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    position: fixed;
     bottom: 0;
+    background-color: #FFFFFF;
+    padding: 8px;
+    border-right: 1px solid #E3E3E3;
+    @media (max-width:769px) {
+        position: relative;
+        border-right: none;
+    }
 }
