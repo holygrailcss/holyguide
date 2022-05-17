@@ -60,6 +60,19 @@
  {% endmacro %}
 
 
+ {% macro title(titular='', descripcion='') %} 
+
+ <div class="col-xs-12">
+  <div class="text-18-2b">   {{titular}}</div>
+  <div class="p1">   {{descripcion}}</div>
+  <hr class="mt-16 mb-40">
+</div>
+
+
+{% endmacro %}
+
+
+
 
 {% macro sass(sass='') %}
 
