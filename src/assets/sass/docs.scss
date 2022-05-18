@@ -827,6 +827,7 @@ $checkbox-svg-brad: 0;
 .resize-mini {
     border: 1px solid #eaeaea;
     border-radius: 6px;
+    overflow: hidden;
 
     pre {
         margin-top: 0px;
@@ -1398,7 +1399,6 @@ a.opac{
 }
 
 .nav-bottom{
-
     left: 0px;
     bottom: 0px;
     position: fixed;
