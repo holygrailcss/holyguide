@@ -27,6 +27,12 @@ function imageMin(cb) {
     cb();
 }
 
+function fonts(cb) {
+    gulp.src("src/assets/fonts/duttiw/*")
+        .pipe(gulp.dest("dist/fonts/duttiw"));
+    cb();
+}
+
 // Copy all HTML files to Dist
 function copyHTML(cb) {
     gulp.src("src/*.html").pipe(gulp.dest("dist"));
@@ -162,7 +168,7 @@ function watch_files() {
 }
 
 // Default 'gulp' command with start local server and watch files for changes.
-exports.default = series(nunjucks, css, js, imageMin, copyJSON, watch_files);
+exports.default = series(nunjucks, css, js, imageMin, fonts,copyJSON, watch_files);
 
 // 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(nunjucks, css, js, imageMin, copyJSON);
+exports.build = parallel(nunjucks, css, js, imageMin,fonts, copyJSON);
