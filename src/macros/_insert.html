@@ -164,6 +164,7 @@
 
 
     <div class='select {{selectName }}'>
+        {% if selectName == 'select-label' %}<label>{{selectName }} </label>{% endif %}
       <select>
           <option value='S'>S</option>
           <option value='M'>M</option>
@@ -173,15 +174,18 @@
   </div>
 
 
+
+
  
  
    </div> {% set standardcode %}<div class='select {{selectName }}'>
-<select>
-    <option value='S'>S</option>
-    <option value='M'>M</option>
-    <option value='l'>L</option>
-    <option value='XL'>XL</option>
-</select>
+    {% if selectName == 'select-label' %}<label>{{selectName }}</label>{% endif %}
+  <select>
+      <option value='S'>S</option>
+      <option value='M'>M</option>
+      <option value='l'>L</option>
+      <option value='XL'>XL</option>
+  </select>
 </div>{% endset %}<pre><code class="language-markup">{{standardcode}} </code></pre>
  </div>
   {% endmacro %}

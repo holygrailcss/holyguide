@@ -1,17 +1,18 @@
 {% extends "base.html" %} {% block content %}
 <div class="row bleed-0">
     <div class="col-xs-12  has-light">
-             <div class="hero">
+        <div class="hero">
             <div class="hero-bg">
                 <video autoplay="" loop="" muted="" id="myVideo" class="video" preload="true" playsinline="">
-                    <source src="https://sulmara.com/wp-content/themes/sulmara_theme/assets/video/bg.mp4" type="video/mp4">
+                    <source src="https://sulmara.com/wp-content/themes/sulmara_theme/assets/video/bg.mp4"
+                        type="video/mp4">
                 </video>
             </div>
         </div>
 
 
         <div class="guide-header">
-             <div class=" guide-title fluid-100-m"> Colores </div>
+            <div class=" guide-title fluid-100-m"> Colores </div>
         </div>
     </div>
 </div>
@@ -31,16 +32,17 @@
 
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-                <hr>
-            </div>
-        <div class="col-xs-12 col-md-3"><div class="text-14-2b"> Su uso</div>  </div>
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="text-14-2b"> Su uso</div>
+        </div>
         <div class="col-xs-12 col-md-6">
-     <p class="p1">
-        Para poder usar los colores usaremos las siguientes variables importando los abstract en el documento sass. 
-     </p>
-
-      <div class="c-primary">dfoijfdifdji</div>
+            <p class="p1">
+                Para poder usar los colores usaremos las siguientes variables importando los abstract en el documento
+                sass.
+            </p>
 
         </div>
     </div>
@@ -50,25 +52,27 @@
 
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-                <hr>
-            </div>
-        <div class="col-xs-12 col-md-3">  <div class="text-14-2b">  Primarios  </div>  </div>
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="text-14-2b"> Primarios </div>
+        </div>
         <div class="col-xs-12 col-md-6">
 
 
             <div class="row">
                 <div class="col-xs-12"> {% for item in globals.colorsPrimary %}
-                     <div class="guide-colors text-center">
+                    <div class="guide-colors text-center">
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
                             <div> <span>Variable:</span> ${{ item.name }}</div>
                             <div><span>Hex:</span> {{ item.type }}</div>
                         </div>
-                    </div> {% endfor %} 
-                    
-                    
+                    </div> {% endfor %}
+
+
 
                 </div>
             </div>
@@ -78,25 +82,27 @@
 
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-                <hr>
-            </div>
-        <div class="col-xs-12 col-md-3">   <div class="text-14-2b">  Semanticos  </div>   </div>
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="text-14-2b"> Semanticos </div>
+        </div>
         <div class="col-xs-12 col-md-6">
 
 
             <div class="row">
                 <div class="col-xs-12"> {% for item in globals.colorsSemantic %}
-                     <div class="guide-colors text-center">
+                    <div class="guide-colors text-center">
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
                             <div> <span>Variable:</span> ${{ item.name }}</div>
                             <div><span>Hex:</span> {{ item.type }}</div>
                         </div>
-                    </div> {% endfor %} 
-                    
-                    
+                    </div> {% endfor %}
+
+
 
                 </div>
             </div>
@@ -108,25 +114,27 @@
 
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-                <hr>
-            </div>
-        <div class="col-xs-12 col-md-3">   <div class="text-14-2b">   Escala de grises  </div> </div>
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="text-14-2b"> Escala de grises </div>
+        </div>
         <div class="col-xs-12 col-md-6">
 
 
             <div class="row">
                 <div class="col-xs-12"> {% for item in globals.colorsGreyscale %}
-                     <div class="guide-colors text-center">
+                    <div class="guide-colors text-center">
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
                             <div> <span>Variable:</span> ${{ item.name }}</div>
                             <div><span>Hex:</span> {{ item.type }}</div>
                         </div>
-                    </div> {% endfor %} 
-                    
-                    
+                    </div> {% endfor %}
+
+
 
                 </div>
             </div>
@@ -142,14 +150,16 @@
 
 <section class="mb-32 mt-32">
     <div class="row">
-            <div class="col-xs-12">
-                <hr>
-            </div>
-        <div class="col-xs-12 col-md-3">  <div class="text-14-2b">   Customización </div></div>
+        <div class="col-xs-12">
+            <hr>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <div class="text-14-2b"> Customización </div>
+        </div>
         <div class="col-xs-12 col-md-6">
 
-                                
-                    
+
+
             <div class="mini">
                 <pre class=""><code class="language-css ">
 //Primarios
