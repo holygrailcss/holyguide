@@ -71,3 +71,117 @@
       }
   }
 }
+
+
+// TODO HG error rtl en inputs checkbox y radiobutton
+
+.checkbox-item{
+  position: relative;
+}
+
+.checkbox-radio{
+  position: relative;
+}
+
+.is-rtl .checkbox-item [type=checkbox]:not(:checked),
+.is-rtl .checkbox-item [type=checkbox]:checked{
+  position: absolute;
+}
+
+.is-rtl .checkbox-radio [type=radio]:not(:checked),
+.is-rtl .checkbox-radio [type=radio]:checked{
+  position: absolute;
+}
+
+// TODO HG posición del texto span en checkbox son link
+
+.checkbox-item-text span{
+  position: relative !important;
+}
+
+.is-rtl .checkbox-item-text span{
+  margin-left: 0px;
+  margin-right: 40px;
+}
+//TODO hg el rtl se rompe al no tener un display
+
+.link1 {
+  display: inline-block;
+}
+
+.link7 {
+  display: inline-block;
+}
+
+.ico.ico-l {
+  display: inline-block !important;
+}
+
+
+//TODO hg el rtl se desmonta
+
+.is-rtl ul.list-disc li:after {
+  right: 0px;
+}
+
+
+//TODO hg el rtl que faltan en algunos selects
+
+
+.is-rtl {
+  .select select:not([multiple]) {
+    padding-right: 16px;
+    padding-left: 45px;
+  }
+
+  .select:not(.is-multiple):not(.is-loading)::after {
+    right: inherit;
+    left: 20px;
+  }
+
+  .select.select-label select {
+    padding-right: 100px;
+  }
+
+  .select.select-label label {
+    left: inherit;
+    right: 16px;
+  }
+
+
+  .select:not(.is-multiple):not(.is-loading).select-box::after {
+    left: 8px;
+  }
+}
+
+//TODO hg el rtl todos los marg y padd deberían tener su inverso el RTL
+
+.is-rtl {
+
+  .pr-30 {
+    padding-right: 0px;
+    padding-left: 30px;
+  }
+
+  .mr-8 {
+    margin-right: 0px;
+    margin-left: 8px;
+  }
+
+  .ml-16 {
+    margin-left: 0px;
+    margin-right: 16px;
+  }
+
+  .pr-16 {
+    padding-right: 0px;
+    padding-left: 16px;
+  }
+}
+
+
+//TODO hg o componente 
+.is-rtl .color-wrap button {
+  margin-right: 0px;
+  margin-left: 8px;
+}
