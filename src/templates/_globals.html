@@ -21,21 +21,22 @@
 ]
 %}
 {% set colorsSemantic = [
-    { name: 'c-error', type: '#f54637' },
+    { name: 'c-error (deprecated a unificar)', type: '#f54637' },
     { name: 'c-info', type: '#1a32a4' },
     { name: 'c-sale', type: '#B40016' },
     { name: 'c-success', type: '#76ae4A' },
     { name: 'c-warning', type: '#ffc700' }
 ]
 %}
-{% set colorsGreyscale = [ { name: 'c-white', type: '#ffffff' },
-    { name: 'c-50', type: '#F1F2F3' }, 
-    { name: 'c-100',type: '#E4E4E7' },
-    { name: 'c-200',type: '#C8C9D0' }, 
-    { name: 'c-400', type: '#9293A0' },
-    { name: 'c-600', type:'#f0f0f0' },
-    { name: 'c-800', type: '#9293A0' },
-    { name: 'c-black', type: '#000000'} 
+{% set colorsGreyscale = [ { 
+     name: 'c-white - > ', type: '#ffffff' },
+    { name: 'c-50 ->  light-grey', type: '#F1F2F3' }, 
+    { name: 'c-100 -> light-grey',type: '#E4E4E7' },
+    { name: 'c-200 -> middle-grey ',type: '#C8C9D0' }, 
+    { name: 'c-400 -> dark-grey', type: '#9293A0' },
+    { name: 'c-600 -> light-grey', type:'#f0f0f0' },
+    { name: 'c-800 -> dark-grey', type: '#9293A0' },
+    { name: 'c-black -> primary', type: '#000000'} 
 ] %}
 {% set containers = [
     { name: 'container', type: '800px' },

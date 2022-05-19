@@ -5,18 +5,130 @@
 
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
-    <button class=" btn-{{buttonName }} btn btn--small">.btn-{{buttonName }}</button>
-  </div> {% set standardcode %}<button class='btn-{{buttonName }}'>btn-{{buttonName }} </button>{% endset %}
+    <div class="container-6">
+      <div class="row">
+        <div class="col-xs-12 mb-16">
+          <button class=" btn-{{buttonName }} btn btn--full"> Enabled</button>
 
-  <pre>
-    <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
-      <img src="./images/clippy.svg" width="13" alt="Copy to clipboard">
-  </button >
-    <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+        </div>
+        <div class="col-xs-12 mb-16">
+          <button class=" btn-{{buttonName }} btn btn--full hover">Hover</button>
+
+        </div>
+        <div class="col-xs-12 mb-16">
+          <button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div> {% set standardcode %}<button class='btn btn-{{buttonName }} btn-full'>btn-{{buttonName }} </button>{% endset %}
+
+  <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 
 
 </div>
  {% endmacro %}
+
+
+{% macro animation(buttonName='', explicacion='',dark='') %} <h3>{{ buttonName | capitalize }} </h3>
+<p class="p4"> <span class="bold mr-8"> .btn-{{buttonName }} </span> {{ explicacion | capitalize }} </p>
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
+    <div class="container-6">
+      <div class="row">
+        <div class="col-xs-12 mb-16">
+          <button  class="btn  btn-primary btn--full btn-anim  ">
+            <span class="btn-submit  ">
+    {{buttonName }}
+            </span>
+            <span class="btn-loading">
+              <svg-icon>
+                <div> <svg width='16px' height='16px' viewBox='0 0 16 16'>
+                    <g transform='translate(0, 0)'>
+                      <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle>
+                    </g>
+                  </svg> </div>
+              </svg-icon>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> {% set standardcode %} <button  class="btn  btn-primary btn--full btn-anim  ">
+    <span class="btn-submit  ">
+{{buttonName }}
+    </span>
+    <span class="btn-loading">
+      <svg-icon>
+        <div> <svg width='16px' height='16px' viewBox='0 0 16 16'>
+            <g transform='translate(0, 0)'>
+              <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle>
+            </g>
+          </svg> </div>
+      </svg-icon>
+    </span>
+  </button>
+  {% endset %}
+  <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+</div> {% endmacro %}
+
+
+
+
+{% macro animationsvg(buttonName='', explicacion='',dark='') %} <h3>{{ buttonName | capitalize }} </h3>
+<p class="p4"> <span class="bold mr-8"> .btn-{{buttonName }} </span> {{ explicacion | capitalize }} </p>
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
+    <div class="container-6">
+      <div class="row">
+        <div class="col-xs-12 mb-16">
+          <button  class="btn  btn-primary btn--full btn-anim  ">
+            <span class="btn-submit has-ico-center ">
+  Submit
+            </span>
+            <span class="btn-loading">
+              <svg-icon>
+                <div> <svg width='16px' height='16px' viewBox='0 0 16 16'>
+                    <g transform='translate(0, 0)'>
+                      <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle>
+                    </g>
+                  </svg> </div>
+              </svg-icon>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> {% set standardcode %}<button id='btnAddToCart'
+    class='btn  btn-primary btn--full btn-anim  '>
+    <span class='btn-submit has-ico-center '>
+      <svg-icon>
+        <div>
+          <svg width='16px' height='16px' viewBox='0 0 16 16'>
+            <g transform='translate(0, 0)'>
+              <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle>
+            </g>
+          </svg>
+        </div>
+      </svg-icon> Submit
+    </span>
+    <span class='btn-loading'>
+      <svg-icon>
+        <div> <svg width='16px' height='16px' viewBox='0 0 16 16'>
+            <g transform='translate(0, 0)'>
+              <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle>
+            </g>
+          </svg> </div>
+      </svg-icon>
+    </span>
+  </button>{% endset %}
+  <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+</div> {% endmacro %}
+ 
+
+
 
 
 

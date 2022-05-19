@@ -90,18 +90,37 @@
             <p class="p1 text-16-r mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color de fuente, apariencia en los diferentes estados del botón... </p>
 
 
+            <span class="todo"> ( TODO falta Focus )  </span>
 
-            {% call button.simple('primary','btn-primary description','') %}  {% endcall %}
+            {% call button.simple('primary','Es nuestro botón base ','') %}  {% endcall %}
+
+
+         
+
             {% call button.simple('secondary','btn-secondary description') %}  {% endcall %}
 
 
             {% call button.simple('default','btn-default description') %}  {% endcall %}
+   
 
             {% call button.simple('phantom','btn-default description','bg-dark') %}  {% endcall %}
+            <span class="todo"> ( TODO phantom pasa a ser btn-secondary-invert )  </span>
 
+
+     
             {% call button.simple('invert','btn-default description') %}  {% endcall %}
+            <span class="todo"> ( TODO invert pasa a ser secondary  )  </span>
+
             {% call button.simple('invert-light','btn-default description') %}  {% endcall %}
+            <span class="todo"> ( TODO invert light pasa a ser invert )  </span>
+
             {% call button.simple('trans','btn-default description','bg-dark') %}  {% endcall %}
+            <span class="todo"> ( TODO eliminar , pasa a ser un boton )  </span>
+
+            {% call button.simple('Terciario','blanco con fondo gris, hay que realizarlo','bg-dark') %}  {% endcall %}
+            <span class="todo"> ( TODO eliminar , pasa a ser un boton )  </span>
+
+
             {% call button.simple('blue','btn-default description') %}  {% endcall %}
             <div class="btn btn-circle">btn-circle</div> <br> <br>
             {% call button.simple('circle','btn-default description') %}  {% endcall %}
@@ -126,16 +145,30 @@
         <div class="col-xs-12 col-md-6">
             <p class="text-16-r mb-32"> La tercera parte a definir en un botón es el tamaño. </p>
             <div class="pre-show">
-                <div class="btn btn-primary btn--mini">btn--mini</div> <br> <br>
+                {% call insert.title('Tamaños Alto','Tenemos dos tipos extra de tamaños ') %} {% endcall %}
+
+
+                <div class="btn btn-primary btn--mini">btn--mini</div> <br><br>
+                <div class="btn btn-primary btn--xlarge">btn--xlarge</div>
+      
+<pre><code class="language-markup">{{ "<div class='btn btn-primary btn--mini'>btn--mini xx</div>
+<div class='btn btn-primary btn--xlarge'>btn--xlarge</div> " | escape}}</code></pre>
+
+{% call insert.title('Tamaños Largos','Vamos a unificar todos al btn--full') %} {% endcall %}
+
+
+                <span class="todo">TODO unificar en btn--full </span> <br>
                 <div class="btn btn-primary btn--small">btn--small</div> <br> <br>
                 <div class="btn btn-primary btn--medium">btn--medium</div> <br> <br>
                 <div class="btn btn-primary btn--large">btn--large</div> <br> <br>
-                <div class="btn btn-primary btn--xlarge">btn--xlarge</div> <br> <br>
+             
                 <div class="btn btn-primary btn--full">btn--full</div> <br> <br>
-<pre ><code class="language-markup">{{ "<div class='btn btn-primary btn--mini'>btn--mini xx</div>
+
+
+
+<pre ><code class="language-markup">{{ "
 <div class='btn btn-primary btn--small'>btn--small</div>
 <div class='btn btn-primary btn--medium'>btn--medium</div>
-<div class='btn btn-primary btn--large'>btn--large</div>
 <div class='btn btn-primary btn--xlarge'>btn--xlarge</div>
 <div class='btn btn-primary btn--full'>btn--full</div>" | escape}}</code></pre>
             </div>
@@ -143,50 +176,6 @@
     </div>
 </section>
 
-<!-- <section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-md-3">
-            <div class="text-14-2b">
-                <strong> Invert </strong>Button
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <p class="text-16-r mb-36"> boton invertido <code>.btn-invert</code> </p>
-
-            <div class="pre-show">
-                <div class="btn btn-invert btn--mini">btn--mini</div> <br> <br>
-                <div class="btn btn-invert btn--small">btn--small</div> <br> <br>
-                <div class="btn btn-invert btn--medium">btn--medium</div> <br> <br>
-                <div class="btn btn-invert btn--large">btn--large</div> <br> <br>
-                <div class="btn btn-invert btn--xlarge">btn--xlarge</div> <br> <br>
-                <div class="btn btn-invert  btn--full">btn--full</div> <br> <br>
-                <pre class="mt-16 mb-16">  <code class="language-markup">
-    &lt;div class=&quot;btn btn-invert btn--mini&quot;&gt;
-    btn--mini
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-invert btn--small&quot;&gt;
-    btn--small
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-invert btn--medium&quot;&gt;
-    btn--medium
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-invert btn--large&quot;&gt;
-    btn--large
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-invert btn--xlarge&quot;&gt;
-    btn--xlarge
-    &lt;/div&gt;
-    &lt;div class=&quot;btn btn-invert btn--full&quot;&gt;
-    btn--full
-    &lt;/div&gt;
-                        </code></pre>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <!-- Botones iconos -->
 <section class="mb-32 mt-32">
@@ -436,16 +425,11 @@
                         <button class="btn btn-invert btn--large"> large</button>
                     </div>
                 </div>
-                <pre><code class="language-markup">
-
-
-{{"<div class='btn-group'>
-                        <button class='btn btn-invert btn--mini'> mini</button>
-                        <button class='btn btn-invert btn--medium'> medium</button>
-                        <button class='btn btn-invert btn--large'> large</button>
-                    </div>"| escape }}
-
-                    </code></pre>
+                <pre><code class="language-markup">{{"<div class='btn-group'>
+    <button class='btn btn-invert btn--mini'> mini</button>
+    <button class='btn btn-invert btn--medium'> medium</button>
+    <button class='btn btn-invert btn--large'> large</button>
+</div>"| escape }}</code></pre>
               </div>
             </div>
         </div>
@@ -467,89 +451,16 @@
             <p class="fluid-20-b mb-32"> Botón animado con loading cuando haces clic.</p>
             <p class="p1 mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error cuando hagamos clic</p>
           
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="pre-show mb-32">
 
 
-                        <button class="btn btn-default btn--large btn-anim no-focus">
-                            <span class="btn-submit">Submit</span>
-                            <span class="btn-loading">
-                                <svg-icon>
-                                    <div>  
-                                    <svg width='16px' height='16px' viewBox='0 0 16 16'> <g transform='translate(0, 0)'> <circle fill="none" stroke="#ffffff" cx="8" cy="8" r="6"> </circle> </g> </svg>
-                                </div>
-                                </svg-icon> 
-                            </span>
-                        </button>
+{% call button.animation('Btn-anim','btn animado description') %}  {% endcall %}
 
 
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-32">
-                <div class="col-xs-12">
-                    <pre><code class="language-markup">{{ "<button class='btn btn-default btn--large btn-anim no-focus'>
-    <span class='btn-submit'>Submit</span>
-    <span class='btn-loading'>
-        <svg-icon>
-            <div>  
-            <svg width='16px' height='16px' viewBox='0 0 16 16'> <g transform='translate(0, 0)'> <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle> </g> </svg>
-        </div>
-        </svg-icon> 
-    </span>
-</button>" | escape }}</code></pre>
-                </div>
-            </div>
+{% call button.animationsvg('Btn-anim','btn-anim con svg-icon ') %}  {% endcall %}
 
 
 
 
-
-<!-- Botón de añadir a la cesta -->
-<button id="btnAddToCart" class="btn btn--full btn-anim mb-16 btn-invert btn-default no-focus ">
-    <span class="btn-submit has-ico-center ">
-        <svg-icon>
-            <div>  
-            <svg width='16px' height='16px' viewBox='0 0 16 16'>
-                <g transform='translate(0, 0)'>
-                    <circle fill="none" stroke="#ffffff" cx="8" cy="8" r="6">
-                    </circle>
-                </g>
-            </svg>
-        </div>
-        </svg-icon> PRE-ORDERX
-    </span>
-    <span class="btn-loading">
-        <svg-icon>
-            <div>
-                <svg width='16px' height='16px' viewBox='0 0 16 16'>
-                    <g transform='translate(0, 0)'>
-                        <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'>
-                        </circle>
-                    </g>
-               
-                </svg>
-            </div>
-            </svg-icon>
-        </span>
-</button>
-
-<pre><code class='language-markup'>{{"<button id='btnAddToCart' class='btn btn--full btn-anim mb-16 btn-invert btn-default no-focus '>
-<span class='btn-submit has-ico-center '>
-    <svg-icon>
-        <div>
-            <svg width='16px' height='16px' viewBox='0 0 16 16'> <g transform='translate(0, 0)'> <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle> </g> </svg>
-        </div>
-    </svg-icon> PRE-ORDERX
-</span>
-<span class='btn-loading'>
-    <svg-icon>
-        <div>
-            <svg width='16px' height='16px' viewBox='0 0 16 16'> <g transform='translate(0, 0)'> <circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'> </circle> </g> </svg>
-        </div>
-    </svg-icon>
-</span></button>" | escape }}</code></pre>
         </div>
     </div>
 </section>

@@ -200,6 +200,16 @@ nav {
     .bold {
         color: $c-guide  !important;
     }
+    .todo {
+        display: inline-block;
+        background-color: #da1370 !important;
+        color: #fff;
+        padding: 4px 8px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 12px;
+        font-weight: 800;
+    }
 
     .p4,
     .guide-list {
