@@ -71,3 +71,35 @@
       }
   }
 }
+
+
+// TODO HG error rtl en inputs checkbox y radiobutton
+
+.checkbox-item{
+  position: relative;
+}
+
+.checkbox-radio{
+  position: relative;
+}
+
+.is-rtl .checkbox-item [type=checkbox]:not(:checked),
+.is-rtl .checkbox-item [type=checkbox]:checked{
+  position: absolute;
+}
+
+.is-rtl .checkbox-radio [type=radio]:not(:checked),
+.is-rtl .checkbox-radio [type=radio]:checked{
+  position: absolute;
+}
+
+// TODO HG posición del texto span en checkbox son link
+
+.checkbox-item-text span{
+  position: relative !important;
+}
+
+.is-rtl .checkbox-item-text span{
+  margin-left: 0px;
+  margin-right: 40px;
+}
