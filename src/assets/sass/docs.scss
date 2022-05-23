@@ -1421,3 +1421,46 @@ a.opac{
         border-right: none;
     }
 }
+
+
+
+.tabguide{
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+
+}
+
+.tabguide-content{
+
+    padding: 20px;
+ 
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.tabguide-head {
+
+    border-bottom: 1px solid green;
+    li{
+        padding: 10px 0!important;
+        border-bottom: 2px solid white;
+    }
+    li{
+    
+        &:after.active{
+            content: '';
+            height:2px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: purple;
+        }
+
+    }
+
+}
