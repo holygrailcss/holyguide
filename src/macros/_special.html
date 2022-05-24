@@ -1,0 +1,15 @@
+
+
+{% macro key(descripcion='', x='',y='', z='', w='') %}
+{% if descripcion %} 
+
+
+<div class="h3 mb-16 mt-16"> {{ descripcion }}</div> {% endif %}
+<div class="key-wrap">
+{% if x %}<div class="key"> {{ x }}</div> {% endif %} 
+{% if y %}<div class="key-plus"> +</div> <div class="key"> {{ y }}</div> {% endif %} 
+{% if z %}<div class="key-plus"> + </div> <div class="key"> {{ z }}</div> {% endif %} 
+{% if w %}<div class="key-plus"> + </div> <div class="key"> {{ w }}</div> {% endif %} 
+</div>
+{% endmacro %}
+
