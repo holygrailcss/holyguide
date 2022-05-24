@@ -1328,7 +1328,11 @@ article svg-icon div svg{
 }
 
 // grid icons
-#loopicons {
+#loopicons,
+#loopicons2,
+#loopicons3,
+#loopicons4
+ {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
@@ -1358,6 +1362,21 @@ article svg-icon div svg{
                 width: calc(16% - 8px);
             }
         }
+}
+
+.has-error{
+    svg-icon{
+        path{
+            stroke: $c-error;
+        }
+    }
+}
+.has-success{
+    svg-icon{
+        path{
+            stroke: $c-success;
+        }
+    }
 }
 
 .has-light{

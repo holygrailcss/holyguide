@@ -1,8 +1,8 @@
 
     const loopprint = document.getElementById('loopicons');
-    // const loopprint2 = document.getElementById('loopicons2');
-    // const loopprint3 = document.getElementById('loopicons3');
-    // const loopprint4 = document.getElementById('loopicons4');
+    const loopprint2 = document.getElementById('loopicons2');
+    const loopprint3 = document.getElementById('loopicons3');
+    const loopprint4 = document.getElementById('loopicons4');
 
 
     let requestURL = '/icons/icons.json';
@@ -37,9 +37,57 @@
                 imageIcon.appendChild(imageDiv);
 
                 loopprint.appendChild(myArticle);
-                // loopprint2.appendChild(myArticle);
-                // loopprint3.appendChild(myArticle);
-                // loopprint4.appendChild(myArticle);
+            }
+            for (let key in o) {
+
+                const myArticle = document.createElement('article');
+                const myspan = document.createElement('span');
+                const imageIcon = document.createElement('svg-icon');
+                const imageDiv = document.createElement('div');
+
+
+                myspan.textContent = key;
+                imageDiv.innerHTML = atob(o[key]);
+
+                myArticle.appendChild(imageIcon);
+                myArticle.appendChild(myspan);
+                imageIcon.appendChild(imageDiv);
+
+                loopprint2.appendChild(myArticle);
+            }
+            for (let key in o) {
+
+                const myArticle = document.createElement('article');
+                const myspan = document.createElement('span');
+                const imageIcon = document.createElement('svg-icon');
+                const imageDiv = document.createElement('div');
+
+
+                myspan.textContent = key;
+                imageDiv.innerHTML = atob(o[key]);
+
+                myArticle.appendChild(imageIcon);
+                myArticle.appendChild(myspan);
+                imageIcon.appendChild(imageDiv);
+
+                loopprint3.appendChild(myArticle);
+            }
+            for (let key in o) {
+
+                const myArticle = document.createElement('article');
+                const myspan = document.createElement('span');
+                const imageIcon = document.createElement('svg-icon');
+                const imageDiv = document.createElement('div');
+
+
+                myspan.textContent = key;
+                imageDiv.innerHTML = atob(o[key]);
+
+                myArticle.appendChild(imageIcon);
+                myArticle.appendChild(myspan);
+                imageIcon.appendChild(imageDiv);
+
+                loopprint4.appendChild(myArticle);
             }
         }
 
