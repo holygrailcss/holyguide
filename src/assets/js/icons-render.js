@@ -21,19 +21,19 @@
 
                 const myArticle = document.createElement('article');
                 const myH2 = document.createElement('h2');
-                const imageIcon = document.createElement('img');
+                const imageIcon = document.createElement('svg-icon');
+                const imageDiv = document.createElement('div');
+
 
                 myH2.textContent = key;
-                imageIcon.textContent = o[key];
-                imageIcon.src = "data:image/svg+xml;base64, " + o[key];
+                imageDiv.innerHTML = atob(o[key]);
 
                 myArticle.appendChild(imageIcon);
                 myArticle.appendChild(myH2);
+                imageIcon.appendChild(imageDiv);
                 loopprint.appendChild(myArticle);
             }
         }
 
         tipos(jsonObj);
     }
-
-
