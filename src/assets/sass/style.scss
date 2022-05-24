@@ -185,3 +185,20 @@
   margin-right: 0px;
   margin-left: 8px;
 }
+
+
+//TODO invert automático para botones con fondo negro
+
+.btn{
+  &.btn-primary,
+  &.btn-default,
+  &.btn-phantom,
+  &.btn-trans,
+  &.btn-blue
+  {
+    svg{
+      filter: invert(1);
+    }
+
+  }
+}
