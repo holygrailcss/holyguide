@@ -644,6 +644,27 @@ $checkbox-svg-brad: 0;
     }
 }
 
+
+.inprocess {
+    position: relative;
+    background-color: #4147fd;
+    padding: 40px 20px 20px;
+    color: $c-white;
+    font-size: 13px;
+    margin-bottom: 30px;
+
+    &:after {
+        line-height: 1.5;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        content: "In process";
+        font-size: 29px;
+        color: $c-white;
+        mix-blend-mode: soft-light;
+    }
+}
+
 // global styles fot RTL
 .is-rtl {
     nav {
