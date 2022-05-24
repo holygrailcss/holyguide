@@ -51,20 +51,18 @@
             <div class="height-xs">
 
 
+                {% call insert.links('link-raw' ,'Link básico','','') %}  {% endcall %}
+                {% call insert.links('link-line','Link con línea','','') %}  {% endcall %}
+                {% call insert.links('link-svg-pre','Link con icono svg-icon al inicio','pre','') %}  {% endcall %}
+                {% call insert.links('link-svg-post','Link con icono svg-icon al final','post','') %}  {% endcall %}
 
-                {% call insert.links('link-raw','','') %}  {% endcall %}
-                {% call insert.links('link-line','','') %}  {% endcall %}
-
-                {% call insert.links('link-svg-pre','','pre') %}  {% endcall %}
-                  {% call insert.links('link-svg-post','','post') %}  {% endcall %}
-
-<div class="has-light  ">
+<div class=" ">
 
 
-    {% call insert.links('link-raw' ,'explicacion','','bg-dark') %}  {% endcall %}
-    {% call insert.links('link-line','Explicacion','','bg-dark') %}  {% endcall %}
-    {% call insert.links('link-svg-pre','Explicacion','pre','bg-dark') %}  {% endcall %}
-    {% call insert.links('link-svg-post','Explicacion','post','bg-dark') %}  {% endcall %}
+    {% call insert.links('link-raw' ,'Con has-light y bg-dark tendremos fondo oscuro y textos invertidos. ','','bg-dark has-light ') %}  {% endcall %}
+    {% call insert.links('link-line','Con has-light y bg-dark tendremos fondo oscuro y textos invertidos.','','bg-dark has-light ') %}  {% endcall %}
+    {% call insert.links('link-svg-pre','Con has-light y bg-dark tendremos fondo oscuro y textos invertidos.','pre','bg-dark has-light ') %}  {% endcall %}
+    {% call insert.links('link-svg-post','Con has-light y bg-dark tendremos fondo oscuro y textos invertidos.','post','bg-dark has-light ') %}  {% endcall %}
     </div>
 
 
@@ -82,39 +80,6 @@
 
             </div>
 
-
-<div class="alert">
-
-
-
-
-<div class="h2">
-    Pasan a ser link-line
-</div>
-
-<div class="link1">link1</div>
-
-<div class="link3">link3</div>
-<div class="link4">link4</div>
-<div class="link6">link6</div>
-<div class="link7">link7</div>
-<div class="link8">link8</div>
-
-<span class="link10">link10</span>
-
-
-<div class="h2">
-    Pasan a ser link-raw
-</div>
-
-
-<div class="link2">link2</div>
-<div class="link9">link9</div>
-<div class="link5">link5</div>
-
-
-
-</div>
 
 
 

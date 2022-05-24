@@ -88,7 +88,7 @@
 
 {% macro links(links='', explicacion='',svg='' ,dark='' ) %}
 
-<p class="text-14-2b"> {{ explicacion }} </p>
+<p class="text-14-r mt-32"> {{ explicacion }} </p>
 
 {% if svg == '' %}
 
@@ -116,7 +116,6 @@
 
 
 {% elif svg =='post' %}
-
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <div class="container-6">
@@ -143,7 +142,6 @@
 
 
  {% else %} 
-
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <div class="container-6">
