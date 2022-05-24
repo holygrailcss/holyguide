@@ -1445,14 +1445,17 @@ a.opac{
 }
 .tabguide-head {
 
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid #eaeaea;
+    a{
+        padding: 0 16px ;
+        font-size: 12px;
+
+    }
     li{
         padding: 10px 0!important;
         border-bottom: 2px solid white;
-    }
-    li{
     
-        &:after.active{
+       .active{
             content: '';
             height:2px;
             width: 100%;
@@ -1464,3 +1467,116 @@ a.opac{
     }
 
 }
+
+
+.link-line {
+    @include font-medium();
+
+    display: initial;
+    position: relative;
+    border: 0;
+    transform: none;
+    cursor: pointer;
+    background: initial;
+    &:hover {
+        opacity: $opacity-links;
+    }
+    &:after {
+        content: '';
+        background-color: $primary;
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 1px;
+    }
+
+}
+
+
+.link-raw {
+    @include font-medium();
+
+    display: initial;
+    position: relative;
+    border: 0;
+    transform: none;
+    cursor: pointer;
+    background: initial;
+    padding: 0;
+    &:hover {
+        opacity: $opacity-links;
+    }
+
+}
+
+
+
+.link-svg-pre{
+    padding-left: 20px;
+
+    svg-icon{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    background-color: magenta;
+    width: 16px;
+    height: 16px;
+    }
+    &:after {
+
+        width: calc(100% - 20px);
+
+        left: 20px;
+      
+    
+    }
+}
+
+.link-svg-post{
+    padding-right: 20px;
+
+    svg-icon{
+    position: absolute;
+    right: 0;
+    bottom: 4px;
+    background-color: magenta;
+    width: 16px;
+    height: 16px;
+    }
+    &:after {
+        width: calc(100% - 20px);
+        right: 20px;
+    }
+}
+
+.has-light{
+    .link-raw {
+        color: white;
+    }
+
+    .link-line {
+        color: white;
+
+        &:after {
+            background-color: #fff;
+            }
+    }
+    .link-svg-post{
+        color: white;
+        &:after {
+        background-color: #fff;
+        }
+        svg-icon{
+
+        }
+    }
+    .link-svg-pre{
+        color: white;
+        &:after {
+        background-color: #fff;
+        }
+    }
+}
+
+
