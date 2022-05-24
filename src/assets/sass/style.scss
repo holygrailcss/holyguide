@@ -113,10 +113,6 @@
   display: inline-block;
 }
 
-.ico.ico-l {
-  display: inline-block !important;
-}
-
 
 //TODO hg el rtl se desmonta
 
@@ -200,5 +196,45 @@
       filter: invert(1);
     }
 
+  }
+}
+
+//TODO ico-l y ico-r con link7 y svgicon está mal
+.link7 {
+  &.ico {
+
+    &.ico-l,
+    &.ico-r {
+
+      span,
+      svg-icon {
+        display: inline-block;
+      }
+    }
+
+    &.ico-r {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      svg-icon {
+        margin-left: 8px;
+        svg{
+          margin: 0px;
+          left: 0px;
+          right: 0px;
+        }
+      }
+    }
+
+    &.ico-l {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      svg-icon {
+        margin-right: 8px;
+      }
+    }
   }
 }

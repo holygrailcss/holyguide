@@ -1519,7 +1519,6 @@ a.opac{
     position: absolute;
     left: 0;
     bottom: 4px;
-    background-color: magenta;
     width: 16px;
     height: 16px;
     }
@@ -1540,7 +1539,6 @@ a.opac{
     position: absolute;
     right: 0;
     bottom: 4px;
-    background-color: magenta;
     width: 16px;
     height: 16px;
     }
@@ -1553,10 +1551,16 @@ a.opac{
 .has-light{
     .link-raw {
         color: white;
+        svg-icon{
+            filter: invert(1);
+        }
     }
 
     .link-line {
         color: white;
+        svg-icon{
+            filter: invert(1);
+        }
 
         &:after {
             background-color: #fff;
@@ -1568,13 +1572,16 @@ a.opac{
         background-color: #fff;
         }
         svg-icon{
-
+            filter: invert(1);
         }
     }
     .link-svg-pre{
         color: white;
         &:after {
         background-color: #fff;
+        }
+        svg-icon{
+            filter: invert(1);
         }
     }
 }
