@@ -230,35 +230,7 @@ table {
         padding-left: 50px;
     }
 }
-// grid icons
-#loopicons {
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-#loopicons article {
-    width: calc(50% - 8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 4px;
-    padding: 16px 8px;
-    border-radius: 4px;
-    background: #0000001a;
-}
-@media (min-width:768px) {
-    #loopicons article {
-        width: calc(16% - 8px);
-    }
-}
-#loopicons article h2 {
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 16px;
-    text-align: center;
-}
+
 .tip {
     position: relative;
     background-color: #fafafa;
@@ -283,6 +255,8 @@ table {
         margin-bottom: 20px;
     }
 }
+
+
 hr {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -1351,4 +1325,56 @@ a.opac{
 
 article svg-icon div svg{
     max-width: 100%;
+}
+
+// grid icons
+#loopicons {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+  article {
+        width: calc(50% - 8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 4px;
+        padding:  8px;
+        border-radius: 4px;
+     
+
+    .myspan {
+            font-size: 12px;
+            padding-top: 16px;
+            text-align: center;
+        }
+
+
+    }
+    @media (min-width:768px) {
+        article {
+                width: calc(16% - 8px);
+            }
+        }
+}
+
+.has-light{
+   article {
+        background: transparent;
+    }
+
+    svg-icon{
+        stroke:#ffffff;
+        rect,circle,path{
+            stroke:#ffffff;
+
+        }
+        line{
+            stroke:#ffffff;
+
+        }
+    }
+
 }

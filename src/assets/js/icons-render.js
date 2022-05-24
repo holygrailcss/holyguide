@@ -1,5 +1,9 @@
 
     const loopprint = document.getElementById('loopicons');
+    // const loopprint2 = document.getElementById('loopicons2');
+    // const loopprint3 = document.getElementById('loopicons3');
+    // const loopprint4 = document.getElementById('loopicons4');
+
 
     let requestURL = '/icons/icons.json';
     let request = new XMLHttpRequest();
@@ -20,18 +24,22 @@
             for (let key in o) {
 
                 const myArticle = document.createElement('article');
-                const myH2 = document.createElement('h2');
+                const myspan = document.createElement('span');
                 const imageIcon = document.createElement('svg-icon');
                 const imageDiv = document.createElement('div');
 
 
-                myH2.textContent = key;
+                myspan.textContent = key;
                 imageDiv.innerHTML = atob(o[key]);
 
                 myArticle.appendChild(imageIcon);
-                myArticle.appendChild(myH2);
+                myArticle.appendChild(myspan);
                 imageIcon.appendChild(imageDiv);
+
                 loopprint.appendChild(myArticle);
+                // loopprint2.appendChild(myArticle);
+                // loopprint3.appendChild(myArticle);
+                // loopprint4.appendChild(myArticle);
             }
         }
 
