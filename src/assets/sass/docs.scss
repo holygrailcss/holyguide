@@ -1367,14 +1367,14 @@ article svg-icon div svg{
 .has-error{
     svg-icon{
         path{
-            stroke: $c-error;
+            fill: $c-error;
         }
     }
 }
 .has-success{
     svg-icon{
         path{
-            stroke: $c-success;
+            fill: $c-success;
         }
     }
 }
@@ -1385,13 +1385,8 @@ article svg-icon div svg{
     }
 
     svg-icon{
-        stroke:#ffffff;
-        rect,circle,path{
-            stroke:#ffffff;
-
-        }
-        line{
-            stroke:#ffffff;
+        path{
+            fill: $c-white;
 
         }
     }
