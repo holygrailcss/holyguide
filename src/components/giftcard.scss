@@ -17,29 +17,7 @@
     align-items: center;
     flex-direction: column;
 }
-.link10 {
-    @include font-bold;
-    position: relative;
-    display: inline-block;
-    border: 0;
-    transform: none;
-    font-size: 14px;
-    line-height: 14px;
-    padding: 0;
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 3;
-        width: 100%;
-        height: 1px;
-        background: $primary;
-    }
-    &:hover {
-        opacity: $opacity-links;
-    }
-}
+
 .giftcard-tag {
     margin: 16px 8px 0 8px;
     width: 40px;

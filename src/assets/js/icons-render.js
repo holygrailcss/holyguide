@@ -24,7 +24,7 @@
             for (let key in o) {
 
                 const myArticle = document.createElement('article');
-                const myspan = document.createElement('span');
+                const myspan = document.createElement('div');
                 const imageIcon = document.createElement('svg-icon');
                 const imageDiv = document.createElement('div');
 
@@ -41,7 +41,7 @@
             for (let key in o) {
 
                 const myArticle = document.createElement('article');
-                const myspan = document.createElement('span');
+                const myspan = document.createElement('div');
                 const imageIcon = document.createElement('svg-icon');
                 const imageDiv = document.createElement('div');
 
@@ -58,7 +58,7 @@
             for (let key in o) {
 
                 const myArticle = document.createElement('article');
-                const myspan = document.createElement('span');
+                const myspan = document.createElement('div');
                 const imageIcon = document.createElement('svg-icon');
                 const imageDiv = document.createElement('div');
 
@@ -75,7 +75,7 @@
             for (let key in o) {
 
                 const myArticle = document.createElement('article');
-                const myspan = document.createElement('span');
+                const myspan = document.createElement('div');
                 const imageIcon = document.createElement('svg-icon');
                 const imageDiv = document.createElement('div');
 

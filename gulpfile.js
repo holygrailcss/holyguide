@@ -21,10 +21,17 @@ const babel = require('gulp-babel');
 
 // Optimise Images
 function imageMin(cb) {
-    gulp.src("src/assets/images/*")
-        .pipe(imagemin())
-        .pipe(gulp.dest("dist/images"));
-    cb();
+	gulp
+		.src("src/assets/images/*")
+		.pipe(imagemin())
+		.pipe(gulp.dest("dist/images"));
+
+	gulp
+		.src("src/assets/images/components/*")
+		.pipe(imagemin())
+		.pipe(gulp.dest("dist/images/components"));
+
+	cb();
 }
 
 function fonts(cb) {

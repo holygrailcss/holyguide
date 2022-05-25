@@ -339,4 +339,11 @@ explicacion='',dark='') %} <h3>{{ inputName | capitalize }} </h3>
 
 
 
-
+{% macro minicomponent(titulo='' ) %} <a href="./{{titulo}}.html">
+  <div class="p16 resize-mini">
+    <div class="p-16 text-center">
+      <div class="text-16-b pb-8"> {{titulo}} </div>
+      <img src="images/components/{{titulo}}.jpg" alt="">
+    </div>
+  </div>
+</a> {% endmacro %}
