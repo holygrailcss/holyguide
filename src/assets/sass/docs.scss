@@ -1392,3 +1392,10 @@ article svg-icon div svg{
     }
 
 }
+
+
+.sticky-top{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
