@@ -24,74 +24,14 @@
       }
 }
 
-// TODO HG borde redondeado en grupo de botones
-.btn-group {
-  .btn{
-      &:first-child {
-          border-radius: 8px 0 0 8px;        
-      }
-      &:last-child {
-          border-radius: 0 8px 8px 0;        
-      }
-  }
-}
-
-// TODO HG elementos que no están en rojo en el error del checkbox
-.is-error {
-  .checkbox-item {
-    a {
-      color: #f54637;
-    }
-
-    svg {
-      g {
-        fill: #f54637;
-        polyline{
-          stroke: #f54637;
-        }
-      }
-    }
-
-  }
-}
-
-// TODO HG nueva distribución tabs tipo around
-.tabs {
-  &.is-around {
-      ul {
-          justify-content: space-around;
-
-          li {
-              flex: 1;
-
-              span {
-                  border-bottom-width: 1px;
-              }
-          }
-      }
-  }
-}
 
 
-// TODO HG error rtl en inputs checkbox y radiobutton
 
-.checkbox-item{
-  position: relative;
-}
 
-.checkbox-radio{
-  position: relative;
-}
 
-.is-rtl .checkbox-item [type=checkbox]:not(:checked),
-.is-rtl .checkbox-item [type=checkbox]:checked{
-  position: absolute;
-}
 
-.is-rtl .checkbox-radio [type=radio]:not(:checked),
-.is-rtl .checkbox-radio [type=radio]:checked{
-  position: absolute;
-}
+
+
 
 // TODO HG posición del texto span en checkbox son link
 
@@ -99,10 +39,7 @@
   position: relative !important;
 }
 
-.is-rtl .checkbox-item-text span{
-  margin-left: 0px;
-  margin-right: 40px;
-}
+
 //TODO hg el rtl se rompe al no tener un display
 
 .link1 {
@@ -111,13 +48,6 @@
 
 .link7 {
   display: inline-block;
-}
-
-
-//TODO hg el rtl se desmonta
-
-.is-rtl ul.list-disc li:after {
-  right: 0px;
 }
 
 
@@ -176,14 +106,10 @@
 }
 
 
-//TODO hg o componente 
-.is-rtl .color-wrap button {
-  margin-right: 0px;
-  margin-left: 8px;
-}
 
 
 //TODO invert automático para botones con fondo negro
+// PROCESS Esto se actualiza despues de tener todos los iconos de pro actualizados
 
 .btn{
   &.btn-primary,
@@ -239,10 +165,7 @@
   }
 }
 
-// todo HG espaciado en inpot de telefono
-.is-rtl{
-  .form-input-prefix .input-prefix{
-    margin-right: 0px;
-    margin-left: 8px;
-  }
+
+.is-rtl .form-input-label .info-text{
+  left: 0;
 }
