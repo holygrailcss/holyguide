@@ -81,10 +81,16 @@
             </div>
 
 
+<button class="btn-underline"> btn-underline</button>
+
+<button class="btn btn-underlined"> btn-underlined</button>
+
+<button class="btn link-underlined"> link-underlined</button>
 
 
-
-
+            {% call insert.links('btn-underline','') %}  {% endcall %}
+            {% call insert.links('btn-underlined','') %}  {% endcall %}
+            {% call insert.links('link-underlined','') %}  {% endcall %}
 
 
             {% call insert.links('link1','') %}  {% endcall %}
