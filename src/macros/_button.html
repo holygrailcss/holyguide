@@ -143,21 +143,26 @@
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <button class=" {{buttonName }} btn btn-primary  btn--small">
-      <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
-        <g transform='translate(0, 0)'>
-            <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-            </circle>
-        </g>
-    </svg> 
-      .btn-{{buttonName }}</button>
+      <svg-icon class="{% if buttonName=='has-ico-pre' %} ico-pre {% else %} ico-post {% endif %}">
+        <div>
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                    fill="#292929" />
+            </svg>
+        </div>
+      </svg-icon>
+      .btn .{{buttonName }}</button>
   </div> {% set standardcode %}<button class='btn btn-primary {{buttonName }}'>
-    <svg class='' width='16px' height='16px' viewBox='0 0 16 16'>
-      <g transform='translate(0, 0)'>
-          <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-          </circle>
-      </g>
-  </svg> 
-    
+    <svg-icon class="{% if buttonName=='has-ico-pre' %}ico-pre{% else %}ico-post{% endif %}">
+      <div>
+          <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                  fill="#292929" />
+          </svg>
+      </div>
+    </svg-icon>    
     btn-{{buttonName }} </button>{% endset %}
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 
