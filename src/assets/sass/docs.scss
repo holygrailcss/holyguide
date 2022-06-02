@@ -1,6 +1,7 @@
 @import "abstract/_setup.scss";
 @import "vendor/_prism.scss";
 @import "vendor/_tags.scss";
+
 //@import "../../../node_modules/holygrailcss/scss/abstract/0debug.scss";
 @import "../../../node_modules/holygrailcss/scss/style.scss";
 // @include debug-divs();
@@ -17,6 +18,9 @@
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
+
+@import "vendor/_toolsguide.scss";
+
 ::-webkit-scrollbar {
     width: 12px;
     background-color: #f5f5f5;
@@ -745,106 +749,7 @@ $checkbox-svg-brad: 0;
     top: 0;
     z-index: 1000;
 }
-.openRules {
-    .resize-rules {
-        svg {
-            g {
-                fill: $c-guide;
-                stroke: $c-guide;
-            }
-            rect {
-                stroke: $c-guide;
-            }
-        }
-    }
-    .guide {
-        .mbr-50-100 {
-            position: relative;
-            &:before {
-                content: "mbr-50-100";
-                font-size: 10px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                height: 50px;
-                bottom: -50px;
-                @media (min-width: 768px) {
-                    height: 100px;
-                    bottom: -100px;
-                }
-            }
-        }
-        $a: 1;
-        @for $i from 2 through 8 {
-            $a: $a * 2;
-            .mb-#{$a} {
-                position: relative;
-                &:before {
-                    content: "mb-#{$a}";
-                    font-size: 10px;
-                    height: #{$a}px;
-                    width: auto;
-                    border-left: 1px solid $c-guide;
-                    color: $c-guide;
-                    position: absolute;
-                    bottom: -#{$a}px;
-                }
-            }
-        }
-        $marginsFamily: (4, 8, 16, 24, 32, 48, 64, 100);
-        @each $name in $marginsFamily {
-            $typeFluid0: $name; //funcion del fipografia
-            .mb-#{$typeFluid0} {
-                position: relative;
-                &:before {
-                    content: "mb-#{$typeFluid0}";
-                    font-size: 10px;
-                    height: #{$typeFluid0}px;
-                    padding-left: 4px;
-                    width: auto;
-                    border-left: 1px solid $c-guide;
-                    color: $c-guide;
-                    position: absolute;
-                    bottom: -#{$typeFluid0}px;
-                    display: flex;
-                    align-items: center;
-                }
-                &:after {
-                    position: absolute;
-                    bottom: -#{$typeFluid0}px;
-                    height: #{$typeFluid0}px;
-                    left: -4px;
-                    content: "";
-                    border-bottom: 1px solid $c-guide;
-                    border-top: 1px solid $c-guide;
-                    width: 8px;
-                }
-            }
-        }
-        &.is-rtl {
-            @each $name in $marginsFamily {
-                $typeFluid0: $name; //funcion del fipografia
-                .mb-#{$typeFluid0} {
-                    &:before {
-                        padding-right: 4px;
-                        width: auto;
-                        border-left: none;
-                        border-right: 1px solid $c-guide;
-                        bottom: -#{$typeFluid0}px;
-                    }
-                    &:after {
-                        bottom: -#{$typeFluid0}px;
-                        left: auto;
-                        right: -4px;
-                        border-bottom: 1px solid $c-guide;
-                        border-top: 1px solid $c-guide;
-                    }
-                }
-            }
-        }
-    }
-}
+
 .viewcode {
     height: 0px;
     width: 100%;
