@@ -19,7 +19,7 @@ $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 ::-webkit-scrollbar-track {
     border-radius: 10px;
@@ -37,39 +37,39 @@ nav {
     height: 100vh;
     padding: 16px;
     color: black;
-    background-color: #FFFFFF;
-    border-right: 1px solid #E3E3E3;
+    background-color: #ffffff;
+    border-right: 1px solid #e3e3e3;
     z-index: 11;
     overflow: auto;
-    .menu-lateral{
+    .menu-lateral {
         padding-bottom: 32px;
     }
-    @media (max-width:769px) {
+    @media (max-width: 769px) {
         transform: translateX(-250px);
-        transition: all ease-in-out .4s;
+        transition: all ease-in-out 0.4s;
         &.open-menu {
             transform: translateX(0px);
-            transition: all ease-in-out .4s;
+            transition: all ease-in-out 0.4s;
         }
     }
 }
 .toggle-menu {
     display: none;
     transform: translateX(0px);
-    transition: all ease-in-out .4s;
-    @media (max-width:769px) {
+    transition: all ease-in-out 0.4s;
+    @media (max-width: 769px) {
         width: 40px;
         height: 40px;
         position: fixed;
         top: 0;
         left: -1px;
         z-index: 1;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-right: 1px solid #E3E3E3;
-        border-bottom: 1px solid #E3E3E3;
+        border-right: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
         &::after {
             content: "";
             background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2.81885H14M2 8.31885H14M2 14.3188H14' stroke='%23292929' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -78,13 +78,13 @@ nav {
             background-size: contain;
             width: 16px;
             height: 16px;
-            transition: all ease-in-out .4s;
+            transition: all ease-in-out 0.4s;
         }
         &.open-menu {
             transform: translateX(250px);
-            transition: all ease-in-out .4s;
+            transition: all ease-in-out 0.4s;
             &::after {
-                transition: all ease-in-out .4s;
+                transition: all ease-in-out 0.4s;
                 background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 4.81885L4 12.8188M12 12.8188L4 4.81885' stroke='%23292929' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E%0A");
             }
         }
@@ -97,7 +97,7 @@ nav {
     &.is-rtl {
         direction: rtl;
     }
-    @media (max-width:769px) {
+    @media (max-width: 769px) {
         margin-left: 0px;
         overflow-x: hidden;
     }
@@ -125,13 +125,13 @@ nav {
         font-size: clamp(18px, 4vw, 1.5vw);
         font-weight: 700;
     }
-    pre{
+    pre {
         margin-top: 30px;
         margin-bottom: 40px;
         padding: 0;
         display: flex;
         position: relative;
-        code{
+        code {
             font-size: 12px;
             padding: 23px 24px 16px;
             margin-bottom: 0;
@@ -140,7 +140,9 @@ nav {
             black-space: pre-wrap;
         }
     }
-    a, a:link, a:active {
+    a,
+    a:link,
+    a:active {
         text-decoration: none;
     }
     ul {
@@ -151,18 +153,18 @@ nav {
             }
             svg {
                 transform: rotate(0deg);
-                transition: all .2s ease-in-out;
+                transition: all 0.2s ease-in-out;
             }
             &.active {
                 svg {
                     transform: rotate(45deg);
-                    transition: all .2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
                 }
             }
         }
     }
     .bold {
-        color: $c-guide  !important;
+        color: $c-guide !important;
     }
     .todo {
         display: inline-block;
@@ -213,7 +215,7 @@ table {
         }
     }
     // Prevent breaking of code (e.g., Grunt tasks list)
-    td:first-child>code {
+    td:first-child > code {
         black-space: nowrap;
     }
 }
@@ -225,12 +227,11 @@ table {
     justify-content: flex-start;
     padding-bottom: 20px;
     padding-left: 20px;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         height: 60vh;
         padding-left: 50px;
     }
 }
-
 .tip {
     position: relative;
     background-color: #fafafa;
@@ -247,7 +248,7 @@ table {
         bottom: 0;
         right: 0;
         line-height: 1;
-        opacity: .1;
+        opacity: 0.1;
         font-family: arial;
     }
     b {
@@ -255,8 +256,6 @@ table {
         margin-bottom: 20px;
     }
 }
-
-
 hr {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -346,7 +345,7 @@ hr {
             position: absolute;
             right: 4px;
             bottom: 4px;
-            opacity: .5;
+            opacity: 0.5;
         }
     }
 }
@@ -374,7 +373,7 @@ hr {
     background-color: #fcd8cd;
 }
 .bg-light {
-    background-color: #F0F0F0;
+    background-color: #f0f0f0;
 }
 .guide code {
     padding: 4px 12px;
@@ -396,7 +395,7 @@ hr {
         width: 6px;
         height: 6px;
         background-color: red;
-        content: '';
+        content: "";
     }
 }
 .process-ok {
@@ -410,7 +409,7 @@ hr {
         width: 6px;
         height: 6px;
         background-color: green;
-        content: '';
+        content: "";
     }
 }
 .process-dan {
@@ -424,7 +423,7 @@ hr {
         width: 6px;
         height: 6px;
         background-color: blue;
-        content: '';
+        content: "";
     }
 }
 .bg-dark {
@@ -539,7 +538,7 @@ $checkbox-svg-brad: 0;
     }
 }
 .separator {
-    opacity: .1;
+    opacity: 0.1;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -623,7 +622,8 @@ $checkbox-svg-brad: 0;
     visibility: hidden;
     opacity: 0;
     &:before {
-        background: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211%22%20height%3D%2217%22%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%205%2020%22%20enable-background%3D%22new%200%200%205%2020%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22%22%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%222.5%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%2210%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%2217.5%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3C%2Fsvg%3E) center/contain no-repeat;
+        background: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2211%22%20height%3D%2217%22%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%205%2020%22%20enable-background%3D%22new%200%200%205%2020%22%20xml%3Aspace%3D%22preserve%22%20style%3D%22%22%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%222.5%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%2210%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3Ccircle%20cx%3D%222.5%22%20cy%3D%2217.5%22%20fill%3D%22rgb%28153%2C153%2C153%29%22%20r%3D%222%22%2F%3E%20%3C%2Fsvg%3E)
+            center/contain no-repeat;
         position: absolute;
         top: 50%;
         content: "";
@@ -674,16 +674,16 @@ $checkbox-svg-brad: 0;
         top: 0;
         left: 0;
         border-radius: 0 0 4px 0;
-        opacity: .6;
+        opacity: 0.6;
         position: absolute;
-        content: 'sass';
+        content: "sass";
         z-index: 100;
         background-color: #eaeaea;
         color: #000000;
     }
-  pre {
-        margin-top: 30px ;
-        margin-bottom: 30px ;
+    pre {
+        margin-top: 30px;
+        margin-bottom: 30px;
         border-radius: 0 0 6px 6px;
         code {
             border-radius: 0 0 6px 6px;
@@ -729,7 +729,7 @@ $checkbox-svg-brad: 0;
     &::before {
         position: absolute;
         z-index: 1000;
-        content: '';
+        content: "";
         top: 0;
         right: 0;
         left: 0;
@@ -769,94 +769,78 @@ $checkbox-svg-brad: 0;
                 position: absolute;
                 height: 50px;
                 bottom: -50px;
-                @media (min-width:768px) {
+                @media (min-width: 768px) {
                     height: 100px;
                     bottom: -100px;
                 }
             }
         }
-        .mb-64 {
-            position: relative;
-            &:before {
-                content: "mb-64";
-                font-size: 10px;
-                height: 64px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                bottom: -64px;
+        $a: 1;
+        @for $i from 2 through 8 {
+            $a: $a * 2;
+            .mb-#{$a} {
+                position: relative;
+                &:before {
+                    content: "mb-#{$a}";
+                    font-size: 10px;
+                    height: #{$a}px;
+                    width: auto;
+                    border-left: 1px solid $c-guide;
+                    color: $c-guide;
+                    position: absolute;
+                    bottom: -#{$a}px;
+                }
             }
         }
-        .mb-24 {
-            position: relative;
-            &:before {
-                content: "mb-24";
-                font-size: 10px;
-                height: 24px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                right: 0;
-                bottom: -24px;
+        $marginsFamily: (4, 8, 16, 24, 32, 48, 64, 100);
+        @each $name in $marginsFamily {
+            $typeFluid0: $name; //funcion del fipografia
+            .mb-#{$typeFluid0} {
+                position: relative;
+                &:before {
+                    content: "mb-#{$typeFluid0}";
+                    font-size: 10px;
+                    height: #{$typeFluid0}px;
+                    padding-left: 4px;
+                    width: auto;
+                    border-left: 1px solid $c-guide;
+                    color: $c-guide;
+                    position: absolute;
+                    bottom: -#{$typeFluid0}px;
+                    display: flex;
+                    align-items: center;
+                }
+                &:after {
+                    position: absolute;
+                    bottom: -#{$typeFluid0}px;
+                    height: #{$typeFluid0}px;
+                    left: -4px;
+                    content: "";
+                    border-bottom: 1px solid $c-guide;
+                    border-top: 1px solid $c-guide;
+                    width: 8px;
+                }
             }
         }
-
-        .mb-16 {
-            position: relative;
-            &:before {
-                content: "mb-16";
-                font-size: 10px;
-                height: 16px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                right: 0;
-                bottom: -16px;
-            }
-        }
-        .mb-8 {
-            position: relative;
-            &:before {
-                content: "mb-8";
-                font-size: 10px;
-                height: 8px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                right: 0;
-                bottom: -8px;
-            }
-        }
-        .mb-32 {
-            position: relative;
-            &:before {
-                content: "mb-32";
-                font-size: 10px;
-                height: 32px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                right: 0;
-                bottom: -32px;
-            }
-        }
-        .mb-40 {
-            position: relative;
-            &:before {
-                content: "mb-40";
-                font-size: 10px;
-                height: 40px;
-                width: auto;
-                border-left: 1px solid $c-guide;
-                color: $c-guide;
-                position: absolute;
-                right: 0;
-                bottom: -40px;
+        &.is-rtl {
+            @each $name in $marginsFamily {
+                $typeFluid0: $name; //funcion del fipografia
+                .mb-#{$typeFluid0} {
+                    &:before {
+                        padding-right: 4px;
+                        width: auto;
+                        border-left: none;
+                        border-right: 1px solid $c-guide;
+                        bottom: -#{$typeFluid0}px;
+                    }
+                    &:after {
+                        bottom: -#{$typeFluid0}px;
+                        left: auto;
+                        right: -4px;
+                        border-bottom: 1px solid $c-guide;
+                        border-top: 1px solid $c-guide;
+                    }
+                }
             }
         }
     }
@@ -864,7 +848,7 @@ $checkbox-svg-brad: 0;
 .viewcode {
     height: 0px;
     width: 100%;
-    transition: .2s ease all;
+    transition: 0.2s ease all;
     overflow-y: auto;
 }
 .openCode {
@@ -954,21 +938,22 @@ pre {
     border: 1px solid #eaeaea;
     box-shadow: 6px 6px 17px 0 rgba(74, 111, 110, 0.1);
     &:hover {
-        opacity: .5;
+        opacity: 0.5;
         cursor: pointer;
     }
-    &.rtl-inspect{
+    &.rtl-inspect {
         left: 70px;
     }
 }
-.mini-box {}
+.mini-box {
+}
 .bg-light .btn-trans {
     width: max-content;
     padding: 14px 48px;
 }
 .o-layout_item {
     display: inline-block;
-    font-size: .875rem;
+    font-size: 0.875rem;
     padding-left: 0;
     vertical-align: top;
     width: 100%;
@@ -978,11 +963,11 @@ pre {
     color: black;
     padding-bottom: 300px;
     position: relative;
-    text-align: center
+    text-align: center;
 }
 .c-pesos_text .c-pesos_item svg {
     height: 950px;
-    margin: -210px auto 0
+    margin: -210px auto 0;
 }
 .c-pesos_text .c-pesos_item svg .peso-bold:hover,
 .c-pesos_text .c-pesos_item svg .peso-extrabold:hover,
@@ -993,7 +978,7 @@ pre {
 .c-pesos_text .c-pesos_item svg .peso-semibold:hover {
     fill: #0500ff;
     cursor: pointer;
-    opacity: .8
+    opacity: 0.8;
 }
 .peso-wide {
     width: 100%;
@@ -1001,28 +986,28 @@ pre {
 .c-pesos_text .c-pesos_item svg path {
     fill: black;
 }
-html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
-    margin-top: -290px
+html[data-family="massimo"] .c-pesos_text .c-pesos_item svg {
+    margin-top: -290px;
 }
 .c-familia_pesos_button {
     border: 1px solid black;
     border-radius: 20px;
     color: black;
     display: inline-block;
-    font-size: .875rem;
+    font-size: 0.875rem;
     font-weight: 300;
     margin-left: 10px;
     margin-right: 10px;
-    padding: 10px 30px
+    padding: 10px 30px;
 }
 .c-familia_pesos_button-active,
 .c-familia_pesos_button:hover {
     background-color: var(--theme-button-hover-background-color);
     border: 1px solid var(--theme-button-hover-text-color);
-    color: var(--theme-button-hover-text-color)
+    color: var(--theme-button-hover-text-color);
 }
 .c-familia_pesos_button:focus {
-    color: var(--theme-bg-color)
+    color: var(--theme-bg-color);
 }
 .peso-bubbles-container {
     position: absolute;
@@ -1047,7 +1032,7 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
     box-shadow: 5px 5px 15px -3px rgba(0, 0, 0, 0.6);
 }
 .bubble:after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 0;
@@ -1095,7 +1080,7 @@ html[data-family=massimo] .c-pesos_text .c-pesos_item svg {
 .key-plus {
     padding: 10px;
 }
-a.opac{
+a.opac {
     opacity: 1;
 }
 .guide .guide-bg {
@@ -1160,7 +1145,7 @@ a.opac{
     bottom: 0;
     opacity: 0.33;
 }
-.guide .hero{
+.guide .hero {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1168,30 +1153,30 @@ a.opac{
     position: absolute;
     width: 100%;
     height: 100%;
-    .video{
+    .video {
         width: 100%;
     }
 }
 .guide-title {
     z-index: 10;
 }
-.nav-bottom{
+.nav-bottom {
     left: 0px;
     bottom: 0px;
     position: fixed;
     bottom: 0;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 8px;
-    @media (max-width:769px) {
+    @media (max-width: 769px) {
         position: relative;
         border-right: none;
     }
 }
-.tabguide{
+.tabguide {
     border-radius: 6px;
     border: 1px solid #eaeaea;
 }
-.tabguide-content{
+.tabguide-content {
     padding: 20px;
     overflow: hidden;
     min-height: 300px;
@@ -1203,16 +1188,16 @@ a.opac{
 }
 .tabguide-head {
     border-bottom: 1px solid #eaeaea;
-    a{
-        padding: 0 16px ;
+    a {
+        padding: 0 16px;
         font-size: 12px;
     }
-    li{
-        padding: 10px 0!important;
-       position: relative;
-      a:after{
-            content: '';
-            height:2px;
+    li {
+        padding: 10px 0 !important;
+        position: relative;
+        a:after {
+            content: "";
+            height: 2px;
             width: 100%;
             position: absolute;
             bottom: -1px;
@@ -1220,107 +1205,85 @@ a.opac{
             background-color: transparent;
         }
     }
-        li.active{
-        a:after{
-            content: '';
-            height:2px;
+    li.active {
+        a:after {
+            content: "";
+            height: 2px;
             width: 100%;
             position: absolute;
             bottom: -1px;
             background-color: $primary;
+        }
     }
-   }
 }
-
-
-
-.tabguide{
+.tabguide {
     transition: box-shadow 150ms linear;
     border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .tabguide:hover {
     box-shadow: 0 0 8px 0 rgb(0 0 0 / 8%), 0 0 15px 0 rgb(0 0 0 / 2%), 0 0 20px 4px rgb(0 0 0 / 6%);
 }
-
-
-article svg-icon div svg{
+article svg-icon div svg {
     max-width: 100%;
 }
-
-
-
-
 // grid icons
 #loopicons,
 #loopicons2,
 #loopicons3,
-#loopicons4
- {
+#loopicons4 {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
     flex-wrap: wrap;
-
-  article {
+    article {
         width: calc(50% - 8px);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         margin: 4px;
-        padding:  8px;
+        padding: 8px;
         border-radius: 4px;
-        span{
+        span {
             text-align: center;
         }
-     
-
-    .myspan {
+        .myspan {
             font-size: 12px;
             padding-top: 16px;
             text-align: center;
         }
-
-
     }
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         article {
-                width: calc(16% - 8px);
-            }
+            width: calc(16% - 8px);
         }
+    }
 }
-
-.has-error{
-    svg-icon{
-        path{
+.has-error {
+    svg-icon {
+        path {
             fill: $c-error;
         }
     }
 }
-.has-success{
-    svg-icon{
-        path{
+.has-success {
+    svg-icon {
+        path {
             fill: $c-success;
         }
     }
 }
-
-.has-light{
-   article {
+.has-light {
+    article {
         background: transparent;
     }
-
-    svg-icon{
-        path{
+    svg-icon {
+        path {
             fill: $c-white;
-
         }
     }
-
 }
-
-
-.sticky-top{
+.sticky-top {
     position: sticky;
     top: 0;
     z-index: 1;
