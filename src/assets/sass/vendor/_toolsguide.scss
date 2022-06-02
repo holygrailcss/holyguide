@@ -54,6 +54,7 @@
                 }
             }
         }
+        
         $marginsFamily: (4, 8, 16, 24, 32, 48, 64, 100);
         @each $name in $marginsFamily {
             $typeFluid0: $name; //funcion del fipografia
