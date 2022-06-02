@@ -119,53 +119,27 @@
   &.btn-blue
   {
     svg{
-      filter: invert(1);
+      //Mata el invert que hay ahora en holygrail
+      filter: invert(0) !important; 
+      path{
+        fill: white;
+      }
     }
-
+    
   }
-}
-
-//TODO ico-l y ico-r con link7 y svgicon está mal
-.link7 {
-  &.ico {
-
-    &.ico-l,
-    &.ico-r {
-
-      span,
-      svg-icon {
-        display: inline-block;
-      }
+  &.btn-trans{
+    svg{
+      stroke: none;
     }
-
-    &.ico-r {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-
-      svg-icon {
-        margin-left: 8px;
-        svg{
-          margin: 0px;
-          left: 0px;
-          right: 0px;
-        }
-      }
-    }
-
-    &.ico-l {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
-
-      svg-icon {
-        margin-right: 8px;
-      }
-    }
+  }
+  //  Corrige la opacidad del ico post
+  .ico-post{
+    opacity: 1;
   }
 }
 
 
+//RTL para el contador. TODO validar que la estructura de estos contadores es la misma en Angular
 .is-rtl .form-input-label .info-text{
   left: 0;
 }
