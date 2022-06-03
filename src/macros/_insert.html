@@ -358,3 +358,14 @@ explicacion='',dark='') %} <h3>{{ inputName | capitalize }} </h3>
       </svg>
   </div>
 </svg-icon> {% endmacro %}
+
+
+
+{% macro element(element='' ) %} 
+
+{{element | safe }}
+
+<pre><code class="language-markup">{{element}}</code></pre>
+
+
+{% endmacro %}
