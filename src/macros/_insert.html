@@ -361,11 +361,19 @@ explicacion='',dark='') %} <h3>{{ inputName | capitalize }} </h3>
 
 
 
-{% macro element(element='' ) %} 
+{% macro element(title='',element='' ) %} 
 
-{{element | safe }}
-
-<pre><code class="language-markup">{{element}}</code></pre>
+<h3>{{title}}</h3>
 
 
-{% endmacro %}
+<div class="resize-mini">
+  <div class="resize-mini-content">
+
+    {{element | safe }}
+
+
+  </div>
+  <pre><code class="language-markup">{{element}}</code></pre>
+</div>
+
+ {% endmacro %}
