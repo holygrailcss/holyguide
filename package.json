@@ -14,7 +14,7 @@
     "devDependencies": {
         "@babel/core": "^7.11.0",
         "@babel/preset-env": "^7.11.0",
-        "browser-sync": "^2.26.14",
+        "browser-sync": "^2.27.10",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
         "gulp-babel": "^8.0.0",
@@ -25,12 +25,12 @@
         "gulp-sass": "^5.0.0",
         "gulp-uglify": "^3.0.2",
         "gulp-watch": "^5.0.1",
+        "holygrailcss": "^1.8.68",
         "lodash": "^4.17.21",
         "lodash.mergewith": ">=4.6.2",
         "mixin-deep": "^2.0.1",
         "node-sass": "^6.0.1",
         "sass": "~1.32.12",
-        "set-value": "^4.0.1",
-        "holygrailcss": "^1.8.67"
+        "set-value": "^4.0.1"
     }
 }
