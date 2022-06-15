@@ -1302,5 +1302,19 @@ article svg-icon div svg {
 }
 
 
+.deprecated{
+    border-radius: 10px 0px;
+    background: #fd675e;
+    color: white;
+    padding: 0px 10px;
+    font-size: .6em;    
+}
 
+.deprecated-description{
+    color: #fd675e;
+    code{
+        background-color: #fd675e;
+        border: none;
+    }
+}
 
