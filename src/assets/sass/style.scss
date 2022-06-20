@@ -1,145 +1,101 @@
-
 @import "../../../node_modules/holygrailcss/scss/style.scss";
-
-
-
 //todo holygrail error de los infotexts
-
-.form-input-label{
-    flex-direction: column;
-    display: flex;
-    .info-text {
-        color: #8E8E8E;
-        margin-top: 4px;
-        width: auto;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
-      .validation-error-messages{
-        min-height: 24px;
-    }
-      .help{
-        position: initial;
-      }
+.form-input-label {
+  flex-direction: column;
+  display: flex;
+  .info-text {
+    color: #8e8e8e;
+    margin-top: 4px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .validation-error-messages {
+    min-height: 24px;
+  }
+  .help {
+    position: initial;
+  }
 }
-
-
-
-
-
-
-
-
-
-
 // TODO HG posición del texto span en checkbox son link
-
-.checkbox-item-text span{
+.checkbox-item-text span {
   position: relative !important;
 }
-
-
 //TODO hg el rtl se rompe al no tener un display
-
 .link1 {
   display: inline-block;
 }
-
 .link7 {
   display: inline-block;
 }
-
-
 //TODO hg el rtl que faltan en algunos selects
-
-
 .is-rtl {
   .select select:not([multiple]) {
     padding-right: 16px;
     padding-left: 45px;
   }
-
   .select:not(.is-multiple):not(.is-loading)::after {
     right: inherit;
     left: 20px;
   }
-
   .select.select-label select {
     padding-right: 100px;
   }
-
   .select.select-label label {
     left: inherit;
     right: 16px;
   }
-
-
   .select:not(.is-multiple):not(.is-loading).select-box::after {
     left: 8px;
   }
 }
-
 //TODO hg el rtl todos los marg y padd deberían tener su inverso el RTL
-
 .is-rtl {
-
   .pr-30 {
     padding-right: 0px;
     padding-left: 30px;
   }
-
   .mr-8 {
     margin-right: 0px;
     margin-left: 8px;
   }
-
   .ml-16 {
     margin-left: 0px;
     margin-right: 16px;
   }
-
   .pr-16 {
     padding-right: 0px;
     padding-left: 16px;
   }
 }
-
-
-
-
 //TODO invert automático para botones con fondo negro
 // PROCESS Esto se actualiza despues de tener todos los iconos de pro actualizados
-
-.btn{
+.btn {
   &.btn-primary,
   &.btn-default,
   &.btn-phantom,
   &.btn-trans,
-  &.btn-blue
-  {
-    svg{
+  &.btn-blue {
+    svg {
       //Mata el invert que hay ahora en holygrail
-      filter: invert(0) !important; 
-      path{
+      filter: invert(0) !important;
+      path {
         fill: white;
       }
     }
-    
   }
-  &.btn-trans{
-    svg{
+  &.btn-trans {
+    svg {
       stroke: none;
     }
   }
   //  Corrige la opacidad del ico post
-  .ico-post{
+  .ico-post {
     opacity: 1;
   }
 }
-
-
 //RTL para el contador. TODO validar que la estructura de estos contadores es la misma en Angular
-.is-rtl .form-input-label .info-text{
+.is-rtl .form-input-label .info-text {
   left: 0;
 }
