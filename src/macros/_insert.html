@@ -341,8 +341,12 @@ explicacion='',dark='') %} <h3>{{ inputName | capitalize }} </h3>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12"> {% if type == 'head' %} <div contenteditable="true"
-        style="font-size:{{size2}}; font-family:{{familia}}; line-height: {{line2}}"> Women's Collection </div> {% else
+    <div class="col-xs-12"> {% if type == 'head' %}
+      
+      <div contenteditable="true"
+        style="font-size:{{size2}}; font-family:{{familia}}; line-height: {{line2}}"> Women's Collection </div>
+        
+        {% else
       %} <div contenteditable="true" style="font-size:{{size2}}; font-family:{{familia}}; line-height: {{line2}}">
         Women's Collection Spring Summer 22 </div> {% endif %} </div>
   </div>

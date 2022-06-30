@@ -69,6 +69,21 @@ p4: (14px, 14px, 16px, 18px, 1.4, "medium" ),
 
 // todo a holygrail giftcard
 h12: (32px, 32px, 32px, 72px, 1.2, "bold2"   ),
+
+//a actualizar
+head-l:(56px,56px, 96px,96px, 1.1, "bold2"   ),
+head-m:(42px,42px, 64px,64px, 1.1, "bold2"  ),
+head-s:(32px,32px, 56px ,56px, 1.1, "bold2"  ),
+
+tit-l:(24px,24px, 48px,48px, 1.1, "bold2"   ),
+tit-m:(20px,20px, 32px,32px, 1.1, "bold2"  ),
+tit-s:(16px,16px, 20px ,20px, 1.1, "bold"  ),
+
+
+p-m:(12px,12px, 14px ,14px, 1.1, "regular"  ),
+p-s:(14px,14px, 16px,16px, 1.1, "regular"   ),
+
+
 );
 
 $headersFluids: (
@@ -80,7 +95,9 @@ $headersFluids: (
   20 : (20px, 40px, 1),
   50 : (30px, 50px, 1),
   100 : (50px, 200px, 1),
-  150 : (50px, 120px, .9)
+  150 : (50px, 120px, .9),
+
+
   
   );
 
