@@ -1196,7 +1196,7 @@ article svg-icon div svg {
     z-index: 1;
 }
 
-
+// TODO HG 
 .btn-social{
     height: 48px;
     cursor: pointer;
@@ -1217,7 +1217,6 @@ article svg-icon div svg {
         align-content: center;
         justify-content: center;
         align-items: center;
-
         border-radius: 8px;
         background-color: #ffffff;
         position: absolute;
@@ -1233,31 +1232,57 @@ article svg-icon div svg {
     &:hover{
         opacity: .6;
     }
+    &:disabled,
+    &[disabled],
+    &.disabled {
+        background-color: #E3E3E3;
+        svg-icon {
+            background-color: transparent;
+            path {
+                fill: #FFFFFF;
+            }
+        }
+    }
 }
 
 
-
-.btn-google{
-   
+// TODO HG pasar a la guia en botones
+.btn-google {
     background-color: #4285f4;
     color: #fff;
     padding-left: 54px;
-    svg-icon  {
+    svg-icon {
         background-color: #ffffff;
+        border: 1px solid #4285F4;
     }
-    &:hover{
-        opacity: .6;
+    &:hover {
+        background-color: #3367D6;
+        opacity: 1;
+    }
+    &:disabled,
+    &[disabled],
+    &.disabled {
+        background-color: #E3E3E3;
+        svg-icon {
+            border: 1px solid #F0F0F0;
+            background-color: #FFFFFF;
+            path {
+                fill: #E3E3E3;
+            }
+        }
     }
 }
 
-.btn-facebook{
-   
+.btn-facebook {
     background-color: #1977F3;
     color: #fff;
-    svg-icon  {
-        background-color: #1977F3;
+    svg-icon {
+        background-color: transparent;
+        path {
+            fill: #FFFFFF;
+        }
     }
-    &:hover{
+    &:hover {
         opacity: .6;
     }
 }
