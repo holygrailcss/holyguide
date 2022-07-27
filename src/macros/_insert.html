@@ -661,3 +661,25 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 	<hr class="line2" />
 </div>
 {% endmacro %}
+
+{% macro tags(tagClass='', title='') %}
+<h3>{{title}}</h3>
+<div class="resize-mini">
+	<div class="resize-mini-content {{dark  }} ">
+		<div class="container-6">
+			<div class="row">
+				<div class="col-xs-12 mb-16 text-center">
+					<span class="{{ tagClass }}">{{ tagClass }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% set standardcode %}<span class="{{ tagClass }}">{{ tagClass }}</span>{% endset%}
+	<pre>
+      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+         </code>
+    </pre>
+</div>
+{% endmacro %}
+
+
