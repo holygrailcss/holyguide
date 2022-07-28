@@ -51,6 +51,8 @@
             {% call lists.lists('Crear css para nuevos elementos sin testear, y <b>sin pasar por UX</b> ','Usaremos los css que ya están testeados <b>en la guia</b> directamente en el html ') %} {% endcall %} 
             {% call lists.lists('Si no existe el componente <b>lo creo</b> . ','El equipo de ux crea el componente, y lo introduce en el <b>ds system </b>de art digital') %} {% endcall %} 
 
+            {% call lists.lists(' Usar<b> :host</b> para usar las clases de forma global . ',':host, no funciona en la web. Debemos trabajar el <b>encapsulation: ViewEncapsulation.None</b>') %} {% endcall %} 
+
         </div>
     </div>
 </section> {% endblock %}
