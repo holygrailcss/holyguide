@@ -31,3 +31,14 @@ The live reload task should then initiate the project on http://localhost:3000. 
 To build assets without starting a local server with live reload, use the build command:
 
     gulp build
+
+
+## creación de páginas.
+
+Crearemos una pagina page con el 0X_nombre.html
+
+Crearemos una molecula page con el _nombreX.html
+
+Luego crearemos los componentes independientes con sus sass
+giftcard1.html
+giftcard.scss
