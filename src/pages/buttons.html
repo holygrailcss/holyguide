@@ -267,6 +267,8 @@
         </code></pre>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Contenido a los extremos</h3>
@@ -300,9 +302,39 @@
                     </code></pre>
                 </div>
             </div>
+
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>Contenido a los extremos</h3>
+                    <p class="p1">Si el icono tiene que ir al final del botón usa la clase separate para distribuir los
+                        elementos a cada extremo</p>
+                    <div class="pre-show">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn--large btn-special-worldwide">
+                                    <span>{% call insert.svgIconname('globe') %} {% endcall %} Entrar</span>
+                                    {% call insert.svgIconname('arrow-right') %} {% endcall %}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>
+                        <code class="language-markup">{{"<button class='btn btn--large btn-special-worldwide'>
+    <span><svg-ico src='globe'></svg-ico> Entrar</span>
+    <svg-ico src='arrow-right'></svg-ico>
+</button>"| escape }}</code></pre>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </section>
+
+
+
 <!-- grupos de botones -->
 <section class="mb-32 mt-32">
     <div class="row">
