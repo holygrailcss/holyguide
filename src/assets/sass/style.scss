@@ -125,3 +125,11 @@
     background-color: rgba(#292929 , .8);
   }
 }
+
+.is-rtl{
+  .btn.btn-special-worldwide {
+    svg{
+      transform:  rotateY(180deg);
+    }
+  } 
+}
