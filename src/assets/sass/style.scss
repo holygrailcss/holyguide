@@ -99,37 +99,3 @@
 .is-rtl .form-input-label .info-text {
   left: 0;
 }
-
-.btn.btn-special-worldwide {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  border: none;
-  background-color: rgba(#292929 , .4);
-  color: #FFFFFF;
-  transition: all .4s ease-in-out;
-  
-  svg{
-    path{
-      fill:#ffffff;
-    }
-  }
-  span{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    
-  }
-  &:hover{
-    background-color: rgba(#292929 , .8);
-  }
-}
-
-.is-rtl{
-  .btn.btn-special-worldwide {
-    svg{
-      transform:  rotateY(180deg);
-    }
-  } 
-}
