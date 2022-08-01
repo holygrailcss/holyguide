@@ -44,6 +44,22 @@ $(document).ready(function () {
             }
         });
 
+});
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+let container = document.querySelector(".md-scroll-wrap");
+
+gsap.to(".md-scroll-wrap", {
+  x: () =>
+	-(container.scrollWidth - document.documentElement.clientWidth) + "px",
+  ease: "none",
+  scrollTrigger: {
+	trigger: ".md-scroll",
+	invalidateOnRefresh: true,
+	pin: true,
+	scrub: 1,
+	end: () => "+=" + container.offsetWidth
+  }
 });

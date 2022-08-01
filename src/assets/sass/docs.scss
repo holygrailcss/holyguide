@@ -18,6 +18,7 @@
 @import "../../components/modal.scss";
 @import "../../components/worldwide.scss";
 @import "../../components/menu.scss";
+@import "../../components/limited.scss";
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
@@ -1215,4 +1216,9 @@ article svg-icon div svg {
     border-top: 1px solid #eaeaea;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+img {
+    max-width: initial;
+
 }
