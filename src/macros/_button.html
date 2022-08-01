@@ -1,3 +1,5 @@
+{% import "_insert.html" as insert %}
+
 {% macro simple(buttonName='', explicacion='',dark='') %} 
 <h3>{{ buttonName | capitalize }} </h3>
 
@@ -239,3 +241,55 @@
 
 </div>
  {% endmacro %}
+
+
+
+ {% macro btnDistribution(buttonName='', explicacion='',dark='') %} 
+ <h3>{{ buttonName | capitalize }} </h3>
+ 
+
+
+ <p class="p4"> btn-{{buttonName }} : {{ explicacion }} </p>
+ 
+ {% if buttonName == 'btn-separate'%}
+ <div class="resize-mini">
+   <div class="resize-mini-content {{dark  }} ">
+        <button class="btn btn-primary btn--medium {{buttonName }}">
+          <span>{{buttonName }}</span>
+          {% call insert.svgIcon() %} {% endcall %}
+      </button>
+  
+
+
+
+   </div> {% set standardcode %}<button class="btn btn-primary btn--medium {{buttonName }}">
+    <span>{{buttonName }}</span>
+    <svg-icon src="YOUR_ICON"></svg-icon>
+</button>
+{% endset %}
+   <pre><code class="language-markup">{{standardcode}} </code></pre>
+ </div>
+
+ {% endif %}
+ 
+ {% if buttonName == 'btn-world'%}
+ <div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
+
+ <button class="btn btn--large {{buttonName }}">
+  <span>{% call insert.svgIconname('globe') %} {% endcall %} {{buttonName }}</span>
+  {% call insert.svgIconname('arrow-right') %} {% endcall %}
+</button>
+
+
+
+  </div> {% set standardcode %}<button class="btn btn--large {{buttonName }}">
+    <span><svg-icon src="YOUR_ICON"></svg-icon> {{buttonName }}</span>
+    <svg-icon src="YOUR_ICON"></svg-icon>
+  </button>{% endset %}
+  <pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+ {% endif %}
+ 
+
+  {% endmacro %}
