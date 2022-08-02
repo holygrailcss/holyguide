@@ -29,7 +29,6 @@
 .md-scroll-btn{
     opacity: 0;
     position: absolute;
-    width: 100px;
     height: 46px;
     background-color: white;
     color: black;
@@ -42,6 +41,7 @@
     right: 16px;
     transition: all ease .3s;
     z-index: 100;
+    padding: 16px;
  
     
 }
