@@ -144,9 +144,14 @@
     </div>
   </div>
 </section>
-<div class="modal-container" id="modal-container">
+
+
+{% call modal.modalContent() %} {% endcall %}
+<!-- <div class="modal-container" id="modal-container">
   <div class="modal-close" onclick="openModalEjemplo()">CERRAR</div>
-</div>
+</div> -->
+
+
 <script>
   function openModalEjemplo() {
     document.getElementById("modal-container").classList.toggle("modal-open");

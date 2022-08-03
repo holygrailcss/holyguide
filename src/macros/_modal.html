@@ -5,10 +5,62 @@
 {% set functionModal %}openModal{{modalsize}}(){% endset%}
 
 <h3>{{ modalsize | capitalize }}</h3>
+
 <p class="p4">
 	<span class="bold mr-8"> {{modalsize }} </span> {{ explicacion | capitalize }}
 </p>
+
 <button class="btn btn-primary {{margin }} " onclick='{{functionModal}}'>
 	Modal {{modalsize}} {{margin}}
 </button>
+
+{% endmacro %}
+
+
+{% macro modalContent() %}
+<div class="cdk-overlay-container modal-container">
+    <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
+    <div dir="ltr">
+        <div class="cdk-overlay-pane">
+
+            <component>
+                <div class="modalx">
+                    <div class="modalx-dialog modalx-40 modalx-fullmobile modalx-md">
+                        <div class="modalx-content">
+                            <div class="modalx-close">
+                                <button class="closex">
+                                    <svg-icon src="close" _nghost-nds-c30=""
+                                        ng-reflect-src="close">
+                                        <div _ngcontent-nds-c30=""><svg width="18" height="18" viewBox="0 0 18 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z"
+                                                    fill="#292929"></path>
+                                            </svg>
+                                        </div>
+                                    </svg-icon>
+                                </button>
+                                <!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->
+                            </div>
+                            
+                            <div class="modalx-body">
+                                <div class="text-center mb-24 mt-24">
+                                    <h4 class="text-18-b">Modal </h4>
+                                </div>
+                                <p class="p1 mb-16">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit? Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem.
+                                </p>
+                                <p class="p1 mb-16">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit? Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </component>
+        </div>
+    </div>
+</div>
 {% endmacro %}
