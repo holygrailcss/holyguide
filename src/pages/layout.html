@@ -138,12 +138,46 @@
             </div>
             <div class="mini">
                 <pre class=""><code class="language-css ">
+
+{% for item in globals.fonts %}$font-family-{{ item.name }}:{{ item.family }};
+{% endfor %}
+
 {% for item in globals.colors %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 {% for item in globals.containers %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 {% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
 {% endfor %}
+{% for item in globals.heights %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+
+{% for item in globals.ModalSizes %}${{ item.class }}:{{ item.size }};
+{% endfor %}
+
+ $headers: (
+/*headerssss*/ 
+{% for item in globals.TypeHeaders %} 
+    {{ item.name }}:({{ item.xs }},{{ item.sm }},{{ item.md }},{{ item.lg }},{{ item.line }},{{ item.weight }}),{% endfor %}
+);
+
+$font-weight-light: {{globals.fontweight}};
+$font-weight-regular: {{globals.fontweight}};
+$font-weight-medium: {{globals.fontweight}};
+$font-weight-bold: {{globals.fontweight}};
+
+$font-family-form-placeholder: 'DuttiW-Regular';
+$font-family-form: 'DuttiW-Regular';
+
+
+ $headersFixers: (
+    /*name :  fontsize, lineheight */ 
+{% for item in globals.fixes %}    {{ item.name }}: ({{ item.name }}px ,{{ item.line }}),
+{% endfor %}
+);
+
+
+
+
 </code>
 </pre>
             </div>

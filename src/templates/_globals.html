@@ -62,14 +62,19 @@
 {% set heights = [
     { name: 'h-100', type: '100%' },
     { name: 'height-100', type: '100%' },
-    { name: 'height-xs', type: 'min-height: 80px' },
-    { name: 'height-sm', type: 'min-height: 100px' },
-    { name: 'height-md', type: 'min-height: 350px' },
-    { name: 'height-lg', type: 'min-height: 400px' },
-    { name: 'height-xl', type: 'min-height: 450px' },
-    { name: 'hero-big', type: 'min-height: 300px / sm: min-height: 500px' },
-    { name: 'hero-medium', type: 'min-height: 200px / sm: min-height: 400px' },
-    { name: 'hero-mini', type: 'min-height: 100px / sm: min-height: 300px' }
+    { name: 'height-xs', type:  '80px' },
+    { name: 'height-sm', type:  '100px' },
+    { name: 'height-md', type:  '350px' },
+    { name: 'height-lg', type:  '400px' },
+    { name: 'height-xl', type:  '450px' },
+
+    { name: 'hero-big', type: ' 300px ' },
+    { name: 'hero-medium', type: '200px ' },
+    { name: 'hero-mini', type: ' 100px ' },
+
+    { name: 'hero-big-sm', type: '500px //falta implementar' },
+    { name: 'hero-medium-sm', type: '400px  //falta implementar' },
+    { name: 'hero-mini-sm', type: ' 300px  //falta implementar' }
 ]
 %}
 {% set fluid = [
@@ -82,6 +87,67 @@
     { name: 'fluid-100', from: '40px',to:'100px',line:'0.9' }
 ]
 %}
+
+{% set fixes = [
+    { name: '14', line: '1.5'},
+    { name: '16',  line: '1.5'},
+    { name: '18', line: '1.5' },
+    { name: '20', line: '1.5'},
+    { name: '24', line: '1.5'},
+    { name: '32', line: '1.5'},
+    { name: '40', line: '1.5'}
+]
+%}
+
+{% set fontweight = "inherit" %}
+
+
+{% set fonts = [
+   
+{name: 'light',family:'"DuttiW-Light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'regular',family:'"DuttiW-Regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'medium',family:'"DuttiW-Medium",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'bold',family:'"DuttiW-Bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'black',family:'"DuttiW-Black",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-regular',family:'"DuttiWExtended-Regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-medium',family:'"DuttiWExtended-Medium",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-bold',family:'"DuttiWExtended-Bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-black',family:'"DuttiWExtended-ExtraBold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'}
+
+]
+%}
+
+
+{% set TypeHeaders = [
+
+   {name: 'h1',   xs: ' 32px'    ,sm:' 32px',     md:'32px',   lg:' 40px ',line:' 1.2',weight: 'medium' },
+   {name: 'h2',   xs: ' 24px'    ,sm:' 24px',     md:'24px',   lg:' 32px ',line:' 1.2',weight: 'medium' },
+   {name: 'h3',   xs: ' 18px'    ,sm:' 18px',     md:'18px',   lg:' 24px ',line:' 1.2',weight: 'medium' },
+   {name: 'h4',   xs: ' 16px'    ,sm:' 16px',     md:'16px',   lg:' 18px ',line:' 1.2',weight: 'bold' },
+   {name: 'h5',   xs: ' 16px'    ,sm:' 16px',     md:'16px',   lg:' 16px ',line:' 1.2',weight: 'bold' },
+   {name: 'h6',   xs: ' 12px'    ,sm:' 12px',     md:'12px',   lg:' 14px ',line:' 1.2',weight: 'medium' },
+   {name: 'h7',   xs: ' 10px'    ,sm:' 10px',     md:'10px',   lg:' 12px ',line:' 1.2',weight: 'medium' }, 
+   {name: 'h8',   xs: ' 8px'     ,sm:'8px' ,       md:' 8px',  lg:' 10px ',line:' 1.2',weight: 'medium' },
+   {name: 'h9',   xs: ' 12px'    ,sm:' 16px',      md:'16px',  lg:' 18px ',line:' 1.2',weight: 'medium' },
+ 
+   {name: 'p1',   xs: ' 14px'    ,sm:'14px' ,      md:' 14px', lg:' 14px ',line:' 1.2',weight: 'regular' },
+   {name: 'p2',   xs: ' 14px'    ,sm:' 14px',      md:'16px',  lg:' 18px ',line:' 1.4',weight: 'regular' },
+   {name: 'p3',   xs: ' 12px'    ,sm:'14px' ,      md:' 14px', lg:' 14px ',line:' 1.2',weight: 'regular' },
+   {name: 'p4',   xs: ' 14px'    ,sm:' 14px',      md:'16px',  lg:' 18px ',line:' 1.4',weight: 'medium' },
+
+    {name:'display1' ,  xs:'32px'  , sm:'32px', md:'32px', lg:'48px', line:'1.2', weight:'bold' }, 
+    {name:'prod  '   ,   xs:'12px' , sm:'12px', md:'14px', lg:'14px', line:'1.2', weight:'medium' }, 
+    {name:'display2' ,   xs:'20px' , sm:'20px', md:'20px', lg:'40px', line:'1.2', weight:'bold' }, 
+    {name:'display3' ,   xs:'16px' , sm:'16px', md:'16px', lg:'24px', line:'1.5', weight:'medium' }, 
+    {name:'display4' ,   xs:'14px' , sm:'14px', md:'14px', lg:'24px', line:'1.5', weight:'medium' }, 
+    {name:'display5' ,   xs:'14px' , sm:'14px', md:'14px', lg:'18px', line:'1.5', weight:'regular' }, 
+    {name:'display6' ,   xs:'12px' , sm:'12px', md:'12px', lg:'18px', line:'1.5', weight:'regular' }, 
+    {name:'display7'  ,  xs:'14px' , sm:'14px', md:'14px', lg:'18px', line:'1.5', weight:'medium' }, 
+    {name:'subtitle'  ,  xs:'14px' , sm:'14px', md:'14px', lg:'14px', line:'1.4', weight:'regular' }
+]
+%}
+
+
 {% set ratios = [
     { ancho : '2', alto: '3' },
     { ancho: '2', alto: '3' },
@@ -162,12 +228,12 @@
 
 
 
-{% set modalsize = [
-    { name: 'SIZE_XS', class: 'modalx-xs' , explicacion:'Tamaño max. 295px'},
-    { name: 'SIZE_S', class: 'modalx-sm' , explicacion:'Tamaño max. 445px'},
-    { name: 'SIZE_M', class: 'modalx-md', explicacion:'Tamaño max. 595px' },
-    { name: 'SIZE_L', class: 'modalx-lg' , explicacion:'Tamaño max. 899px'},
-    { name: 'SIZE_XL', class: 'modalx-xl' , explicacion:' <span class="todo"> FALTA </span> Tamaño max. 950px'}
+{% set ModalSizes = [
+    { name: 'SIZE_XS', class: 'modalx-xs' ,size:'295px', explicacion:'Tamaño max. 295px'},
+    { name: 'SIZE_S', class: 'modalx-sm' ,size:'445px', explicacion:'Tamaño max. 445px'},
+    { name: 'SIZE_M', class: 'modalx-md',size:'595px',explicacion:'Tamaño max. 595px' },
+    { name: 'SIZE_L', class: 'modalx-lg' ,size:'899px',explicacion:'Tamaño max. 899px'},
+    { name: 'SIZE_XL', class: 'modalx-xl' ,size:'995px' ,explicacion:' <span class="todo"> FALTA </span> Tamaño max. 950px'}
 
     ]
 %}
