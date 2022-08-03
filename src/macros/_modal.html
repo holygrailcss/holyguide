@@ -1,13 +1,10 @@
-{% import "_insert.html" as insert %}
-
-{% macro modalxl(modalsize='',margin='', explicacion='') %} 
-<h3>{{ modalsize | capitalize }} </h3>
-
-<p class="p4"> <span class="bold mr-8">  {{modalsize }}  </span>   {{ explicacion | capitalize }} </p>
-
-
-<button class="btn btn-primary {{margin }} " onclick="openModalEjemplo()">Modal ejemplo</button>
-
- {% endmacro %}
-
-
+{% import "_insert.html" as insert %} {% macro modalxl(modalsize='',margin='',
+explicacion='') %}
+<h3>{{ modalsize | capitalize }}</h3>
+<p class="p4">
+	<span class="bold mr-8"> {{modalsize }} </span> {{ explicacion | capitalize }}
+</p>
+<button class="btn btn-primary {{margin }} " onclick="openModalEjemplo()">
+	Modal ejemplo
+</button>
+{% endmacro %}
