@@ -99,7 +99,9 @@
 ]
 %}
 
-{% set fontweight = "inherit" %}
+{% set fontweight = 'inherit' %}
+
+{% set fontdefault = '"DuttiW-Regular",Helvetica,"Arial","LucidaGrande",sans-serif' %}
 
 
 {% set fonts = [
@@ -120,39 +122,37 @@
 
 {% set TypeHeaders = [
 
-   {name: 'h1',   xs: ' 32px'    ,sm:' 32px',     md:'32px',   lg:' 40px ',line:' 1.2',weight: 'medium' },
-   {name: 'h2',   xs: ' 24px'    ,sm:' 24px',     md:'24px',   lg:' 32px ',line:' 1.2',weight: 'medium' },
-   {name: 'h3',   xs: ' 18px'    ,sm:' 18px',     md:'18px',   lg:' 24px ',line:' 1.2',weight: 'medium' },
-   {name: 'h4',   xs: ' 16px'    ,sm:' 16px',     md:'16px',   lg:' 18px ',line:' 1.2',weight: 'bold' },
-   {name: 'h5',   xs: ' 16px'    ,sm:' 16px',     md:'16px',   lg:' 16px ',line:' 1.2',weight: 'bold' },
-   {name: 'h6',   xs: ' 12px'    ,sm:' 12px',     md:'12px',   lg:' 14px ',line:' 1.2',weight: 'medium' },
-   {name: 'h7',   xs: ' 10px'    ,sm:' 10px',     md:'10px',   lg:' 12px ',line:' 1.2',weight: 'medium' }, 
-   {name: 'h8',   xs: ' 8px'     ,sm:'8px' ,       md:' 8px',  lg:' 10px ',line:' 1.2',weight: 'medium' },
-   {name: 'h9',   xs: ' 12px'    ,sm:' 16px',      md:'16px',  lg:' 18px ',line:' 1.2',weight: 'medium' },
- 
-   {name: 'p1',   xs: ' 14px'    ,sm:'14px' ,      md:' 14px', lg:' 14px ',line:' 1.2',weight: 'regular' },
-   {name: 'p2',   xs: ' 14px'    ,sm:' 14px',      md:'16px',  lg:' 18px ',line:' 1.4',weight: 'regular' },
-   {name: 'p3',   xs: ' 12px'    ,sm:'14px' ,      md:' 14px', lg:' 14px ',line:' 1.2',weight: 'regular' },
-   {name: 'p4',   xs: ' 14px'    ,sm:' 14px',      md:'16px',  lg:' 18px ',line:' 1.4',weight: 'medium' },
-
-    {name:'display1' ,  xs:'32px'  , sm:'32px', md:'32px', lg:'48px', line:'1.2', weight:'bold' }, 
-    {name:'prod  '   ,   xs:'12px' , sm:'12px', md:'14px', lg:'14px', line:'1.2', weight:'medium' }, 
-    {name:'display2' ,   xs:'20px' , sm:'20px', md:'20px', lg:'40px', line:'1.2', weight:'bold' }, 
-    {name:'display3' ,   xs:'16px' , sm:'16px', md:'16px', lg:'24px', line:'1.5', weight:'medium' }, 
-    {name:'display4' ,   xs:'14px' , sm:'14px', md:'14px', lg:'24px', line:'1.5', weight:'medium' }, 
-    {name:'display5' ,   xs:'14px' , sm:'14px', md:'14px', lg:'18px', line:'1.5', weight:'regular' }, 
-    {name:'display6' ,   xs:'12px' , sm:'12px', md:'12px', lg:'18px', line:'1.5', weight:'regular' }, 
-    {name:'display7'  ,  xs:'14px' , sm:'14px', md:'14px', lg:'18px', line:'1.5', weight:'medium' }, 
-    {name:'subtitle'  ,  xs:'14px' , sm:'14px', md:'14px', lg:'14px', line:'1.4', weight:'regular' }
+{name:'h1',xs:'32px',sm:'32px',md:'32px',lg:'40px',line:'1.2',weight:'medium'}
+,{name:'h2',xs:'24px',sm:' 24px',md:'24px',lg:'32px',line:'1.2',weight:'medium'}
+,{name:'h3',xs:'18px',sm:'18px',md:'18px',lg:'24px ',line:'1.2',weight:'medium'}
+,{name:'h4',xs:'16px',sm:'16px',md:'16px',lg:'18px',line:'1.2',weight:'bold' }
+,{name:'h5',xs:'16px',sm:'16px',md:'16px',lg:'16px',line:'1.2',weight:'bold'}
+,{name:'h6',xs:'12px' ,sm:'12px',md:'12px',lg:'14px',line:'1.2',weight:'medium'}
+,{name:'h7',xs:'10px',sm:'10px',md:'10px',lg:' 12px',line:'1.2',weight:'medium'}
+,{name:'h8',xs:'8px',sm:'8px',md:'8px',lg:'10px',line:'1.2',weight: 'medium'}
+,{name:'h9',xs:'12px',sm:'16px',md:'16px',lg:'18px',line:'1.2',weight:'medium'}
+,{name:'p1',xs:' 14px',sm:'14px',md:'14px',lg:'14px',line:'1.2',weight:'regular'}
+,{name:'p2',xs:'14px',sm:' 14px',md:'16px',lg:'18px',line:'1.4',weight:'regular'}
+,{name:'p3',xs:'12px',sm:'14px',md:'14px',lg:'14px ',line:'1.2',weight:'regular'}
+,{name:'p4',xs:'14px',sm:'14px',md:'16px',lg:'18px',line:'1.4',weight: 'medium'}
+,{name:'display1',xs:'32px',sm:'32px',md:'32px',lg:'48px',line:'1.2',weight:'bold'}
+,{name:'prod ',xs:'12px',sm:'12px',md:'14px',lg:'14px',line:'1.2',weight:'medium'}
+,{name:'display2',xs:'20px',sm:'20px', md:'20px',lg:'40px',line:'1.2',weight:'bold'}
+,{name:'display3',xs:'16px',sm:'16px',md:'16px',lg:'24px', line:'1.5',weight:'medium'}
+,{name:'display4',xs:'14px',sm:'14px',md:'14px',lg:'24px',line:'1.5', weight:'medium'}
+,{name:'display5',xs:'14px',sm:'14px',md:'14px',lg:'18px',line:'1.5',weight:'regular'},
+{name:'display6',xs:'12px',sm:'12px',md:'12px',lg:'18px',line:'1.5',weight:'regular'}
+,{name:'display7', xs:'14px',sm:'14px',md:'14px',lg:'18px',line:'1.5',weight:'medium'}
+,{name:'subtitle',xs:'14px',sm:'14px', md:'14px',lg:'14px',line:'1.4',weight:'regular'}
 ]
 %}
 
 
 {% set ratios = [
-    { ancho : '2', alto: '3' },
-    { ancho: '2', alto: '3' },
-    { ancho: '3', alto: '4' },
-    { ancho: '1', alto: '1' },
+ { ancho : '2', alto: '3' },
+ { ancho: '2', alto: '3' },
+ { ancho: '3', alto: '4' },
+ { ancho: '1', alto: '1' },
     { ancho: '4', alto: '3' },
     { ancho: '3', alto: '2' },
     { ancho: '16', alto: '9' },
