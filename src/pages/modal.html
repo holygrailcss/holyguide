@@ -46,7 +46,7 @@
             <tbody> {% for item in globals.modalsize %} <tr>
                 <td class="bold"> {{ item.name }}: </td>
                 <td> .{{ item.class }}</td>
-                <td> {{ item.explicacion }} </td>
+                <td> {{ item.explicacion | safe }} </td>
               </tr> {% endfor %} </tbody>
           </table>
         </div>
@@ -77,7 +77,7 @@
             <tbody> {% for item in globals.ModalMargins %} <tr>
                 <td class="bold"> {{ item.name }}: </td>
                 <td> .{{ item.class }} </td>
-                <td> {{ item.explicacion }} </td>
+                <td> {{ item.explicacion | safe  }} </td>
               </tr> {% endfor %} </tbody>
           </table>
         </div>
@@ -110,7 +110,7 @@
             <tbody> {% for item in globals.ModalOptions %} <tr>
                 <td class="bold"> {{ item.name }}: </td>
                 <td> .{{ item.class }} </td>
-                <td> {{ item.explicacion }} </td>
+                <td> {{ item.explicacion | safe  }} </td>
               </tr> {% endfor %} </tbody>
           </table>
         </div>
