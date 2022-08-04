@@ -136,48 +136,6 @@
   </div>
 </section>
 
-
-<section class="mb-32 mt-32">
-  <div class="row">
-    <div class="col-xs-12">
-      <hr>
-    </div>
-    <div class="col-xs-12 col-sm-3">
-      <div class="text-14-2b"> Como llamarlos</div>
-    </div>
-    <div class="col-xs-12 col-sm-9">
-      <h3 class="mb-24 mt-8">llamar los modales en Angular</h3>
-      <p class="p1"> Para llamar a los modales usa la siguente estructuraen el .ts del componente donde se realiza el llamado. <b>Siempre debes definit ModalSizes
-        ModalMargins para darle estilo al modal que contendrá al componente llamado. </b></p>
-
-
-{% set tsmodaldcode %}
-public openModalPacking(clicked): void {
-this.modalService.openModalFromComponent(
-    'legacy.giftTicket.title',
-    ShopCartPackaginComponent,
-    { clicked },
-    ModalSizes.SIZE_M,
-    ModalMargins.MARGIN_16_16
-).afterClosed$.pipe(
-    withLatestFrom(this.giftPacking$.pipe(first())),
-    tap(([{ data }, giftPacking]) => {
-        if (data === null && !giftPacking) {
-            (document.getElementById('gift') as any).checked = false;
-        }
-    })
-).subscribe();
-}
-{% endset %}
-      <pre>
-        <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">
-          {{tsmodaldcode}}
-        </code></pre>
-    </div>
-  </div>
-</section>
-
-
 {% call modal.modalContent() %} {% endcall %}
 
 
