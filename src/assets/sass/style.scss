@@ -184,9 +184,30 @@
       display: block;
     }
     .content-options{
+      overflow: auto;
+      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 16px;
+      padding: 8px;
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 5px;
+        background: transparent;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba($c-white, .2);
+
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px !important;
+        background: $c-white !important;
+    }
     }
     @media (max-width:769px){
     height: auto;
@@ -194,7 +215,6 @@
     padding: 16px 0px 0px;
     .content-options{
       flex-direction: row;
-      overflow: auto;
   }
     }
 

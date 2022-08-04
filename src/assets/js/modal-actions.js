@@ -61,8 +61,7 @@ function openModal(size, margin) {
     document.getElementById("modal-container").classList.toggle("modal-open");
 
   };
-
-
+  
   function modalHideX(){
     $(".modalx-close").toggleClass("hidden");
     
@@ -101,3 +100,43 @@ function openModal(size, margin) {
     $(".sidebar-options").toggleClass("visible");
   }
 
+
+  function modalSizeChange(margin){
+
+    $(".modalx-dialog")
+    .removeClass("modalx-0")
+    .removeClass("modalx-16")
+    .removeClass("modalx-24")
+    .removeClass("modalx-32")
+    .removeClass("modalx-40")
+    .removeClass("modalx-0-24")
+    ;
+
+    
+    if(margin === "MARGIN_0"){
+      $(".modalx-dialog").addClass("modalx-0");
+    }
+    else if(margin === "MARGIN_16") {
+      $(".modalx-dialog").addClass("modalx-16");
+    }
+    else if(margin === "MARGIN_24") {
+      $(".modalx-dialog").addClass("modalx-24");
+    }
+    else if(margin === "MARGIN_32") {
+      $(".modalx-dialog").addClass("modalx-32");
+    }
+    else if(margin === "MARGIN_40") {
+      $(".modalx-dialog").addClass("modalx-40");
+    }
+    else if(margin === "MARGIN_0_24") {
+      $(".modalx-dialog").addClass("modalx-0-24");
+    }
+  }
+
+
+
+  $(".btn-size-change").click(function () {
+    $(".btn-size-change").removeClass("disabled");
+    $(this).addClass("disabled");
+});
+  
