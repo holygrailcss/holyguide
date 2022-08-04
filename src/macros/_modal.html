@@ -10,11 +10,8 @@
 </p>
 
 <button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')">
-	Modal {{modalsize}} {{margin}}
+	Modal {{modalsize | capitalize}} - {{margin | capitalize}}
   </button>
-
-
-
 {% endmacro %}
 
 
