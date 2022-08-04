@@ -9,9 +9,40 @@
 	{{ explicacion | capitalize }}
 </p>
 
-<button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')">
-	Modal {{modalsize | capitalize}} - {{margin | capitalize}}
-  </button>
+  <div class="resize-mini">
+    <div class="resize-mini-content {{dark  }} ">
+      <div class="container-6">
+        <div class="row">
+          <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
+            <button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')">
+                Modal {{modalsize}} {{margin}}
+              </button>
+  
+          </div>
+
+  
+        </div>
+      </div>
+  
+    </div> {% set standardcode %}
+    public launchModalName(): void {
+        this.modalService.openModalFromComponent(
+            null,
+            MyAccountFeelStyleAdvisorCancelModalComponent,
+            null,
+            ModalSizes.{{modalsize}} ,
+            ModalMargins.{{margin}} ,
+            [ModalOptions.HIDE_TITLE]
+        );
+    }
+{% endset %}
+  
+    <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> 
+    </button ><code id="{{buttonName}}" class="language-javascript  ">{{standardcode}}   </code></pre>
+  
+  
+  </div>
+
 {% endmacro %}
 
 
@@ -38,9 +69,9 @@
                                         </div>
                                     </svg-icon>
                                 </button>
-                                <!--bindings={
-  "ng-reflect-ng-if": "true"
-}-->
+
+
+
                             </div>
                             
                             <div class="modalx-body">
