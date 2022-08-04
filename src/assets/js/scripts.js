@@ -48,18 +48,36 @@ $(document).ready(function () {
 
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.saveStyles(".mobile, .desktop");
 
 let container = document.querySelector(".md-scroll-wrap");
 
-gsap.to(".md-scroll-wrap", {
-  x: () =>
-	-(container.scrollWidth - document.documentElement.clientWidth) + "px",
-  ease: "none",
-  scrollTrigger: {
-	trigger: ".md-scroll",
-	invalidateOnRefresh: true,
-	pin: true,
-	scrub: 1,
-	end: () => "+=" + container.offsetWidth
-  }
+	ScrollTrigger.matchMedia({
+		"(min-width: 768px)": function () {
+			gsap.to(".md-scroll-wrap", {
+				x: () =>
+					-(container.scrollWidth - document.documentElement.clientWidth) + "px",
+				ease: "none",
+				scrollTrigger: {
+					trigger: ".md-scroll",
+					invalidateOnRefresh: true,
+					pin: true,
+					scrub: 1,
+					end: () => "+=" + container.offsetWidth,
+				},
+			});
+		},
+	});
+
+
+	// Script
+lastScroll = 0;
+$(window).on('scroll',function() {    
+    var scroll = $(window).scrollTop();
+    if(lastScroll - scroll > 0) {
+        $("body").addClass("scrollUp");
+    } else {
+        $("body").removeClass("scrollUp");
+    }
+    lastScroll = scroll;
 });
