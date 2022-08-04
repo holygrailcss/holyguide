@@ -12,7 +12,14 @@ function openModal(size, margin) {
     .removeClass("modalx-32")
     .removeClass("modalx-40")
     .removeClass("modalx-0-24")
+    .removeClass("modalx-fullmobile")
+    .removeClass("modalx-fullviewport")
+    .removeClass("feel-bg")
     ;
+
+
+    $(".modalx-close, .modal-title").removeClass("hidden");
+    $(".modalx-backdrop").removeClass("bg-transparent");
     
     if(size === "SIZE_XS"){
       $(".modalx-dialog").addClass("modalx-xs");
@@ -54,3 +61,43 @@ function openModal(size, margin) {
     document.getElementById("modal-container").classList.toggle("modal-open");
 
   };
+
+
+  function modalHideX(){
+    $(".modalx-close").toggleClass("hidden");
+    
+    setTimeout(() => {
+      $(".modalx-close").removeClass("hidden");
+    }, 5000);
+  }
+
+  function modalHideTittle(){
+    $(".modal-title").toggleClass("hidden");
+  }
+
+  function modalXfullM(){
+    $(".modalx-dialog").toggleClass("modalx-fullmobile");
+  }
+  
+  function modalFullWp(){
+    $(".modalx-dialog").toggleClass("modalx-fullviewport");
+  }
+  
+  function modalFeelBg(){
+    $(".modalx-dialog").toggleClass("feel-bg");
+  }
+  
+  // function modalCloseBc(){
+  //   $(".modalx-dialog").toggleClass("");
+  // }
+  
+  function modalBgtransparent(){
+    $(".modalx-backdrop").toggleClass("bg-transparent");
+  }
+  
+  
+  function modalOptionsToggle(){
+    $(".start-options").toggleClass("hidden");
+    $(".sidebar-options").toggleClass("visible");
+  }
+

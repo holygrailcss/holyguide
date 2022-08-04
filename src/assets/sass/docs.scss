@@ -849,6 +849,7 @@ pre {
     }
     &.rtl-inspect {
         left: 70px;
+        color: #eaeaea;
     }
 }
 .mini-box {
@@ -1221,4 +1222,8 @@ article svg-icon div svg {
 img {
     max-width: initial;
 
+}
+
+.img-responsive{
+    width: 100%;
 }

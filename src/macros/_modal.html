@@ -9,8 +9,6 @@
 	{{ explicacion | capitalize }}
 </p>
 
-
-
   <div class="resize-mini">
     <div class="resize-mini-content {{dark  }} ">
       <div class="container-6">
@@ -50,6 +48,21 @@
 
 {% macro modalContent() %}
 <div class="cdk-overlay-container modal-container" id="modal-container">
+    <button class="start-options btn btn-secundary m-16" onclick="modalOptionsToggle()">Mostrar opciones adicionales</button>
+    <div class="sidebar-options">
+        <div class="content-options">
+            <button class="btn btn-primary" onclick="modalHideTittle()">HIDE_TITLE</button>
+            <button class="btn btn-primary" onclick="modalHideX()">HIDE_X</button>
+            <button class="btn btn-primary" onclick="modalXfullM()">FULL_MOBILE</button>
+            <button class="btn btn-primary" onclick="modalFullWp()">FULL_VIEWPORT</button>
+            <button class="btn btn-primary" onclick="modalFeelBg()">FEEL_BG</button>
+            <!-- <button class="btn btn-primary" onclick="modalCloseBc()">CLOSE_ON_BACKDROP_CLICK</button> -->
+            <button class="btn btn-primary" onclick="modalBgtransparent()">TRANSPARENT_BACKGROUND</button>
+            <hr>
+            <button class="btn btn-secundary" onclick="modalOptionsToggle()">Ocultar opciones</button>
+        </div>
+    </div>
+
     <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
     <div class="modal-content" dir="ltr">
         <div class="cdk-overlay-pane">
@@ -70,15 +83,11 @@
                                             </svg>
                                         </div>
                                     </svg-icon>
-                                </button>
-
-
-
-                            </div>
+                                </button> </div>
                             
                             <div class="modalx-body">
-                                <div class="text-center mb-24">
-                                    <p class="text-18-b">Modal </p>
+                                <div class="modal-title text-center mb-24">
+                                    <p class="text-18-b">Modal</p>
                                 </div>
                                 <p class="p1 mb-16">
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit? Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem.
