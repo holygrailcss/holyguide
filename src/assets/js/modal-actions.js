@@ -20,6 +20,9 @@ function openModal(size, margin) {
 
     $(".modalx-close, .modal-title").removeClass("hidden");
     $(".modalx-backdrop").removeClass("bg-transparent");
+
+    $(".start-options").removeClass("hidden");
+    $(".sidebar-options").removeClass("visible");
     
     if(size === "SIZE_XS"){
       $(".modalx-dialog").addClass("modalx-xs");
