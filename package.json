@@ -25,7 +25,11 @@
         "gulp-sass": "^5.0.0",
         "gulp-uglify": "^3.0.2",
         "gulp-watch": "^5.0.1",
+<<<<<<< HEAD
         "holygrailcss": "^1.8.91",
+=======
+        "holygrailcss": "^1.8.83",
+>>>>>>> 4508f8287e74804482b8cf75efaf500c76e415d9
         "lodash": "^4.17.21",
         "lodash.mergewith": ">=4.6.2",
         "mixin-deep": "^2.0.1",
