@@ -13,7 +13,7 @@
                 <div class="col-xs-12 has-light">
                   <div class="mb-16"> Selecciona otro mercado: </div>
 
-                  <button class="btn btn--large btn-world" id="btnLocale">
+                  <button class="btn btn--large btn-world" onclick="openSidebar()">
                     <div class="btn-world-left">
                       <svg-icon>
                         <div>
@@ -67,7 +67,7 @@
     </div>
     <div class="sidenav-worldwide">
       <div class="sidebar-close">
-        <button class="btn btn-clear" id="closeSidebar">
+        <button class="btn btn-clear" onclick="closeSidebar(0)">
           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M4.00001 4.11174L8.00001 8.11174L12 4.11174L12.7071 4.81885L8.70712 8.81885L12.7071 12.8188L12 13.526L8.00001 9.52595L4.00001 13.526L3.29291 12.8188L7.29291 8.81885L3.29291 4.81885L4.00001 4.11174Z"
@@ -166,7 +166,7 @@
             </div>
           </svg-icon>
         </div>
-        <div class="list-button list-tertiary list-icons">
+        <div class="list-button list-tertiary list-icons" onclick="closeSidebar(1000)">
           <svg-icon>
             <div>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,10 +176,10 @@
           </svg-icon>
           <span>Español</span>
         </div>
-        <div class="list-button list-tertiary list-icons">
+        <div class="list-button list-tertiary list-icons" onclick="closeSidebar(1000)">
           <span>Català</span>
         </div>
-        <div class="list-button list-tertiary list-icons">
+        <div class="list-button list-tertiary list-icons" onclick="closeSidebar(1000)">
           <span>Galego</span>
         </div>
 
@@ -191,17 +191,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-  $(document).ready(function () {
 
-    console.log("funciona");
 
-    $("#btnLocale").click(function () {
+    function openSidebar(){
       $(".sidenav-worldwide").addClass("active");
-    });
-    $("#closeSidebar").click(function () {
-      $(".sidenav-worldwide").removeClass("active");
-    });
-  });
+    }
+
+    function closeSidebar(time){
+      setTimeout(() => {
+        $(".sidenav-worldwide").removeClass("active");
+      }, time);
+    }
+
 
 
 </script>

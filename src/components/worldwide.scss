@@ -1,14 +1,14 @@
 .sidenav-worldwide{
     background-color: white;
-    width: 30%;
+    width: 100%;
+    min-width: 320px;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
     opacity: 0;
-    transform: translateX(30vw);
+    transform: translateX(100vw);
     transition: all .4s ease-in;
-    transition-delay: 1s;
     overflow: auto;
     &.active{
         opacity: 1;
@@ -25,4 +25,10 @@
     .sidebar-content{
         padding:100px 40px 40px;
     }
+    
+    @media (min-width:768px){
+        width: 30%;
+        
+    } 
+
 }
