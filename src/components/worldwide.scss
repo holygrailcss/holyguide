@@ -1,0 +1,28 @@
+.sidenav-worldwide{
+    background-color: white;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(30vw);
+    transition: all .4s ease-in;
+    transition-delay: 1s;
+    overflow: auto;
+    &.active{
+        opacity: 1;
+    transform: translateX(0vw);
+    transition: all .4s ease-out;
+    }
+    
+    .sidebar-close{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    
+    }
+    .sidebar-content{
+        padding:100px 40px 40px;
+    }
+}

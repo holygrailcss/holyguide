@@ -35,4 +35,63 @@
       call insert.list('list-inline','Lista limpia horizontal. ') %} {% endcall %} {% call
       insert.list('list-disc','Lista con puntos iniciales . ') %} {% endcall %} </div>
   </div>
-</section> {% endblock %}
+</section>
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+    </div>
+    <div class="col-xs-12 col-md-3 text-14-2b"> Listas con estilos</div>
+    <div class="col-xs-12 col-md-6"> 
+      
+    <div class="list-button">
+      <span>list button</span>
+    </div>
+    <div class="list-button">
+      <span>list button</span>
+    </div>
+    <div class="list-button list-secundary">
+      <span>list secundary</span>
+    </div>
+    <div class="list-button list-tertiary mb-32">
+      <span>list tertiary</span>
+    </div>
+    
+    <div class="list-button list-icons">
+      <span>list button</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+    <div class="list-button list-secundary list-icons">
+      <span>list secundary</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+    <div class="list-button list-tertiary list-icons mb-32">
+      <span>list tertiary</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+    
+    <div class="list-button list-icons">
+      {% call insert.svgIconname('globe') %} {% endcall %} 
+      <span>list button</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+    <div class="list-button list-secundary list-icons">
+      {% call insert.svgIconname('globe') %} {% endcall %} 
+      <span>list secundary</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+    <div class="list-button list-tertiary list-icons">
+      {% call insert.svgIconname('globe') %} {% endcall %} 
+      <span>list tertiary</span>
+      {% call insert.svgIconname('plus') %} {% endcall %} 
+    </div>
+
+    
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
