@@ -357,7 +357,9 @@
 </ul>
 {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
-{% endmacro %} {% macro input(inputName='', explicacion='',dark='') %}
+{% endmacro %}
+
+{% macro input(inputName='', explicacion='',dark='') %}
 <h3>{{ inputName | capitalize }}</h3>
 <p class="p1">{{inputName }} : {{ explicacion }}</p>
 <div class="resize-mini">
@@ -722,5 +724,78 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
     </pre>
 </div>
 {% endmacro %}
+
+
+
+{% macro listButton(listClass='', explicacion='') %}
+<h3>{{ listClass | capitalize }}</h3>
+<p class="p1">{{ explicacion }}</p>
+<div class="resize-mini">
+	
+	{% if listClass === "list-button list-icons" %}
+	
+	
+	<div class="p-16">
+		<div class="{{listClass}}">
+			{% call svgIconname('globe') %} {% endcall %} 
+			<span>{{listClass}}</span>
+			{% call svgIconname('plus') %} {% endcall %} 
+	  	</div>
+		<div class="{{listClass}} list-secundary">
+			{% call svgIconname('globe') %} {% endcall %} 
+			<span>{{listClass}}</span>
+			{% call svgIconname('plus') %} {% endcall %} 
+		</div>
+		<div class="{{listClass}} list-tertiary">
+			{% call svgIconname('globe') %} {% endcall %} 
+			<span>{{listClass}}</span>
+			{% call svgIconname('plus') %} {% endcall %} 
+		</div>
+	</div>
+	{% set standardcode %}<div class="{{listClass}}">
+		<svg-icon src="YOUR_ICON"></svg-icon>
+		<span>{{listClass}}</span>
+		<svg-icon src="YOUR_ICON"></svg-icon>
+	  </div>
+	<div class="{{listClass}} list-secundary">
+		<svg-icon src="YOUR_ICON"></svg-icon>
+		<span>{{listClass}}</span>
+		<svg-icon src="YOUR_ICON"></svg-icon>
+	</div>
+	<div class="{{listClass}} list-tertiary">
+		<svg-icon src="YOUR_ICON"></svg-icon>
+		<span>{{listClass}}</span>
+		<svg-icon src="YOUR_ICON"></svg-icon>
+	</div>{% endset %}
+
+
+	  {% else %}
+	  <div class="p-16">
+		<div class="{{listClass}}">
+				<span>{{listClass}}</span>
+		</div>
+		<div class="{{listClass}} list-secundary">
+				<span>{{listClass}}</span>
+		</div>
+		<div class="{{listClass}} list-tertiary">
+				<span>{{listClass}}</span>
+		</div>
+	  </div>
+	{% set standardcode %}<div class="{{listClass}}">
+		<span>{{listClass}}</span>
+	  </div>{% endset %}
+
+
+	  {% endif %}
+
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+
+{% endmacro %}
+
+
+
+
+
 
 
