@@ -35,10 +35,15 @@ To build assets without starting a local server with live reload, use the build 
 
 ## creación de páginas.
 
+en pages/
 Crearemos una pagina page con el 0X_nombre.html
 
+en molecules/
 Crearemos una molecula page con el _nombreX.html
 
 Luego crearemos los componentes independientes con sus sass
 giftcard1.html
 giftcard.scss
+
+
+## creación de componentes.
