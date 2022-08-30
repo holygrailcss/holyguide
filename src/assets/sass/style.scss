@@ -225,6 +225,13 @@
 
 // temporal pasa pasar a HG
 
+.modalx-xxs {
+  max-width: 320px;  
+  @media (min-width: 768px) {
+      max-width: 445px;
+  }
+}
+
 .modalx-xs {
   max-width: 295px;
 }
@@ -389,11 +396,20 @@
     color: inherit;
   }
 }
-.banner-cookies{
-display: flex;
-flex-direction: column;
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
+
+
+.container-10{
+  max-width:140px;
+  margin: auto;
+  @media (min-width: $break-sm) {
+    max-width: 200px;
+  }
 }
+
+.has-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
