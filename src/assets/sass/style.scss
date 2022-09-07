@@ -413,3 +413,51 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+.list-selection{
+  a{
+    padding: 8px;
+    background: $c-white;
+  }
+
+  a:hover,.is-active{
+    padding: 8px;
+    background: $c-light-grey;
+  }
+
+}
+
+
+.bg-dark-grey{
+  background-color:  $c-dark-grey
+}
+.bg-middle-grey{
+  background-color: $c-middle-grey
+}
+.bg-light-grey{
+  background-color: $c-light-grey;
+}
+.bg-primary{
+  background-color: $c-primary;
+}
+.bg-error{
+  background-color: $c-error;
+}
+.bg-info{
+  background-color: $c-info;
+  color:$c-white;
+}
+.bg-success{
+  background-color: $c-success;
+  color:$c-white;
+}
+.bg-warning{
+  background-color: $c-warning;
+}
+.bg-feel{
+  background-color: $c-feel;
+}
+.bg-dark{
+  background-color: $c-black;
+  color:$c-white;
+}

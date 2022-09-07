@@ -335,6 +335,9 @@ hr {
 	margin-right: 20px;
 	margin-bottom: 20px;
 	border: 1px solid #f0f;
+	img{
+		width: 100%;
+	}
 	&:nth-child(3n) {
 		margin-right: 0;
 	}
@@ -994,6 +997,7 @@ a.opac {
 	background-color: #0d0c0d;
 }
 .holycup {
+	overflow: hidden;
 	position: absolute;
 	right: 0;
 	width: 80%;

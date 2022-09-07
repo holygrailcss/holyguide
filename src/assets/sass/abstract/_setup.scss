@@ -75,7 +75,7 @@ h12: (32px, 32px, 32px, 72px, 1.2, "bold2"   ),
 tit-l: (24px, 24px, 48px, 48px, 1.1, "bold2"),
 tit-m: (20px, 20px, 32px, 32px, 1.1, "bold2"),
 tit-s: (16px, 16px, 20px,20px, 1.1, "bold"),
-tit-xs:(16px, 16px, 20px,20px, 1.1, "bold"),
+tit-xs:(14px, 14px, 14px,14px, 1.1, "bold"),
 
 
 head-l:(56px, 56px, 96px, 96px, 1.1, "bold2"),
@@ -149,3 +149,23 @@ $font-weight-bold: inherit;
 
 $font-family-form-placeholder: 'DuttiW-Regular';
 $font-family-form: 'DuttiW-Regular';
+
+
+$btn-radius: 8px;
+
+// massimodutti color MD 2022
+$c-white: #FFFFFF;
+$c-black: #000000;
+
+$c-dark-grey: #8E8E8E;
+$c-middle-grey: #E3E3E3;
+$c-light-grey: #F0F0F0;
+
+$c-primary: #292929;
+$c-error: #B40016;
+$c-info: #1A32A4;
+
+$c-success: #76AE4A;
+$c-warning: #ffc700;
+$c-feel: #fb9962;
+// fin massimodutti color MD 2022

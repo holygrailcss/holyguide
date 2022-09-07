@@ -96,7 +96,7 @@
 			"        </div>",
 			"    </section>"
 		],
-		"description": "video mas video centrado"
+		"description": "video más video centrado"
 	},
 	"container-half": {
 		"prefix": "xcontainerhalf",
