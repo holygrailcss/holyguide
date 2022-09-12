@@ -97,3 +97,39 @@
     transform: translateY(100px);
   }
 }
+
+.limited-submenu {
+	display: flex;
+	margin: 0 -8px;
+}
+
+.limited-submenu-selection {}
+
+.limited-submenu-nav {
+	display: flex;
+
+	flex-basis: calc(100% - 200px);
+	justify-content: center;
+
+	@media (min-width: 992px) {
+		flex-basis: calc(100% - 400px);
+	   }
+
+
+	a{
+		white-space: nowrap;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	border: 1px solid green;
+}
+
+.limited-submenu-selection {
+
+	min-width: 140px;
+    border: 1px solid red;
+    display: flex;
+    flex-basis: 1;
+    white-space: nowrap;
+
+}

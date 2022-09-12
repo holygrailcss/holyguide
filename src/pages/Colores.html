@@ -67,8 +67,10 @@
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
-                            <div> <span>Variable:</span> ${{ item.name }}</div>
-                            <div><span>Hex:</span> {{ item.type }}</div>
+                            <div class="text-12-r"> <span>Hex:</span> {{ item.type }}</div>
+                            <div class="text-12-r"> <span>Color:</span> ${{ item.name }}</div>
+                        
+                            <div class="text-12-r"> <span >Background:</span> {{ item.class }}</div>
                         </div>
                     </div> {% endfor %}
 
@@ -97,8 +99,10 @@
                         <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
                         </div>
                         <div class="guide-colors-text">
-                            <div> <span>Variable:</span> ${{ item.name }}</div>
-                            <div><span>Hex:</span> {{ item.type }}</div>
+                            <div class="text-12-r"> <span>Hex:</span> {{ item.type }}</div>
+                            <div class="text-12-r"><span>Color:</span> ${{ item.name }}</div>
+                            <div class="text-12-r"><span>Background:</span> {{ item.class }} </div>
+                     
                         </div>
                     </div> {% endfor %}
 

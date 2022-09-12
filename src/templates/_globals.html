@@ -2,32 +2,34 @@
 {% set holygrailcssv = "1.8.65" %}
 {% set primary = "#ff0000" %}
 {% set colors = [
-    { name: 'c-black', type: '#292929' },
-    { name: 'c-white', type: '#ffffff' },
-    { name: 'c-error', type: '#B40016' },
-    { name: 'c-dark-grey', type: '#8e8e8e' },
-    { name: 'c-middle-grey', type: '#e3e3e3' },
-    { name: 'c-light-grey', type: '#f0f0f0' },
-    { name: 'c-info', type: '#1a32a4' },
-    { name: 'c-green', type: '#76ae4A' },
-    { name: 'c-yellow', type: '#ffc700' }
+    { name: 'c-black', type: '#292929' ,class: '.bg-black' },
+    { name: 'c-white', type: '#ffffff' ,class: '.bg-black'},
+    { name: 'c-error', type: '#B40016',class: '.bg-black' },
+    { name: 'c-dark-grey', type: '#8e8e8e',class: '.bg-black' },
+    { name: 'c-middle-grey', type: '#e3e3e3',class: '.bg-black' },
+    { name: 'c-light-grey', type: '#f0f0f0' ,class: '.bg-black'},
+    { name: 'c-info', type: '#1a32a4',class: '.bg-black' },
+    { name: 'c-green', type: '#76ae4A',class: '.bg-black' },
+    { name: 'c-yellow', type: '#ffc700' ,class: '.bg-black'}
 ]
 %}
 {% set colorsPrimary = [
-    { name: 'c-primary', type: '#292929' },
-    { name: 'c-dark-grey', type: '#8e8e8e' },
-    { name: 'c-middle-grey', type: '#e3e3e3' },
-    { name: 'c-light-grey', type: '#f0f0f0' }
+    { name: 'c-black', type: '#000000' ,class: '.bg-black'},
+    { name: 'c-primary', type: '#292929' ,class: '.bg-primary'},
+    { name: 'c-dark-grey', type: '#8e8e8e',class: '.bg-dark-grey' },
+    { name: 'c-middle-grey', type: '#e3e3e3' ,class: '.bg-middle-grey'},
+    { name: 'c-light-grey', type: '#f0f0f0' ,class: '.bg-light-grey'},
+    { name: 'c-white', type: '#ffffff' ,class: '.bg-white'}
 ]
 %}
 {% set colorsSemantic = [
-    { name: 'c-error', type: '#B40016' },
-    { name: 'c-sale', type: '#B40016' },
-    { name: 'c-info', type: '#1a32a4' },
+    { name: 'c-error', type: '#B40016',class: '.bg-error' },
+    { name: 'c-sale', type: '#B40016',class: '.bg-sale' },
+    { name: 'c-info', type: '#1a32a4' ,class: '.bg-info'},
 
-    { name: 'c-success', type: '#76ae4A' },
-    { name: 'c-warning', type: '#ffc700' },
-    { name: 'c-feel', type: '#fb9962' }
+    { name: 'c-success', type: '#76ae4A',class: '.bg-success' },
+    { name: 'c-warning', type: '#ffc700' ,class: '.bg-warning'},
+    { name: 'c-feel', type: '#fb9962',class: '.bg-feel' }
 ]
 %}
 {% set colorsGreyscale = [ { 
