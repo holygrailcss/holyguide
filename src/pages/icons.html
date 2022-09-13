@@ -176,9 +176,9 @@
             <div class="tabguide">
                 <ul id="tabguide-nav" class="tabguide-head list-inline sticky-top bg-white">
                   <li><a href="#tabguide1">Normal</a></li>
-                  <li><a href="#tabguide2">white</a></li>
-                  <li><a href="#tabguide3">success</a></li>
-                  <li><a href="#tabguide4">error</a></li>
+                  <li><a href="#tabguide2">white <code>ico-white</code></a></li>
+                  <li><a href="#tabguide3">success <code>ico-success</code></a></li>
+                  <li><a href="#tabguide4">error <code>ico-error</code></a></li>
                 </ul> <!-- END tabguideguide-nav -->
                 <div id="tabguide-content">
                     <div id="tabguide1" class="tabguide-content">
@@ -200,6 +200,71 @@
     </div>
 </section>
 
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+        <div class="col-xs-12 col-sm-3"><div class="text-14-2b"> Ejemplos de elemetos con iconos</div>  </div>
+        <div class="col-xs-12 col-sm-6">
+            
+            <h2 class="">Botones con iconos, puedes ver mas ejemplos en <a href="/buttons.html" class="link-line">Buttons</a>.</h2>
+            {% call button.svg('has-ico-pre btn-primary','') %} {% endcall %}
+
+            <h2 class="mt-24">links con inconos, ver mas ejemplos en <a href="/links.html" class="link-lime">Links</a></h2>
+            {% call insert.links('link-svg-pre','Link con icono svg-icon al inicio','pre','') %}  {% endcall %}
+            
+            
+            <h2 class="mt-24">listados con iconos </h2>
+            {% call insert.listButton('list-button list-icons','') %} {% endcall %}
+        </div>
+    </div>
+</section>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+            <div class="col-xs-12">
+                <hr>
+            </div>
+        <div class="col-xs-12 col-sm-3"><div class="text-14-2b"> Integrar iconos a una maqueta</div>  </div>
+        <div class="col-xs-12 col-sm-6">
+            <h2 class="mb-24">Si lo que necesitas es integrar un icono a una maqueta simple puedes meterlo en un contenedor y ordenar con flexbox su apariencia, por ejemplo: </h2>
+
+
+            <div class="resize-mini">
+                <div class="resize-mini-content">
+                    <div class="container-6">
+                        <div class="row">
+                            <div class="col-xs-12 mb-16 text-center">
+                                
+                                <div class="is-flex">
+                                    {% call insert.svgIconname('plus') %} {% endcall %}
+                                    <p class="p1 pl-16">texto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% set standardcode %}<div class="is-flex">
+    <svg-icon src="plus"></svg-icon>
+    <p class="p1 pl-16">texto</p>
+</div>{% endset%}
+                <pre>
+                <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+                  <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
+                  <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+                     </code>
+                </pre>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
 
 
 <section class="mb-32 mt-32">
