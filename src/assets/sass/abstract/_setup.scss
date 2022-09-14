@@ -115,12 +115,18 @@ $headersFluids: (
   mb-32: (32px, 32px, 32px, 32px),
   mb-40: (40px, 40px, 40px, 40px),
   mb-48: (48px, 48px, 48px, 48px) ,
-
+  mb-64: (64px, 64px, 64px, 64px) ,
+  mb-82: (82px, 82px, 82px, 82px) ,
   mb-100: (100px, 100px, 100px, 100px),
   mbr-50-100: (50px, 50px, 100px, 100px) ,
 
+
+  mbr-24: (16px, 24px, 24px, 24px) ,
+  mbr-32: (24px, 32px, 32px, 32px) ,
+  mbr-128: (64px, 128px, 128px, 128px) ,
+
   //todo giftcard
-  mb-64: (64px, 64px, 64px, 64px) ,
+
   mbr-20-40: (20px, 40px, 40px, 40px) 
   )!default;
 
