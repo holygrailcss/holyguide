@@ -479,49 +479,57 @@
   color: $c-feel;
 }
 
-.progressbar{
-  width: 100%;
-  height: 8px;
-  border-radius: 8px;
-  background-color: $c-middle-grey;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow: hidden;
-  .progressbar-status{
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    background-color: $c-primary;
-  }
-}
+// .progressbar{
+//   width: 100%;
+//   height: 8px;
+//   border-radius: 8px;
+//   background-color: $c-middle-grey;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+//   overflow: hidden;
+//   .progressbar-status{
+//     width: 8px;
+//     height: 8px;
+//     border-radius: 8px;
+//     background-color: $c-primary;
+//   }
+// }
 
 .bg-feel{
   background-color: $c-feel !important;
 }
 
-.btn{
-  &.btn-feel {
-    color: $c-primary;
-    background-color: $c-feel;
-    border: 1px solid $c-feel;
-    svg {
-        g {
-            fill: $c-primary;
-            stroke: $c-primary;
-        }
-        circle {
-            stroke: $c-primary;
-        }
-    }
-    &:focus,
-    &.focus,
-    &:hover,
-    &.hover,
-    &:active,
-    &.active {
-        color: $c-primary;
-        opacity: 0.6;
-    }
-}
-}
+// .btn{
+//   &.btn-feel {
+//     color: $c-primary;
+//     background-color: $c-feel;
+//     // border: 1px solid $c-feel;
+//     svg {
+//         g {
+//             fill: $c-primary;
+//             stroke: $c-primary;
+//         }
+//         circle {
+//             stroke: $c-primary;
+//         }
+//     }
+//     &:focus,
+//     &.focus,
+//     &:hover,
+//     &.hover,
+//     &:active,
+//     &.active {
+//         color: $c-primary;
+//         opacity: 1;
+//         background-color: rgba($c-feel, .5);
+//     }
+//     &:disabled,
+//     &.disabled {
+//         opacity: 1;
+//         background-color: $c-light-grey;
+//         color: $c-dark-grey;
+//         cursor: default;
+//     }
+// }
+// }
