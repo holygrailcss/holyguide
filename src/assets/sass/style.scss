@@ -462,18 +462,18 @@
   color:$c-white;
 }
 
-.pill {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-family: $font-family-bold;
-  font-weight: 600;
-  &.pill-feel {
-    background-color: $c-feel;
-    color: $c-white;
-    border-radius: 40px;
-  }
-}
+// .pill {
+//   display: inline-block;
+//   padding: 8px 16px;
+//   font-size: 12px;
+//   font-family: $font-family-bold;
+//   font-weight: 600;
+//   &.pill-feel {
+//     background-color: $c-feel;
+//     color: $c-white;
+//     border-radius: 40px;
+//   }
+// }
 
 .c-feel{
   color: $c-feel;
@@ -494,4 +494,8 @@
     border-radius: 8px;
     background-color: $c-primary;
   }
+}
+
+.bg-feel{
+  background-color: $c-feel !important;
 }
