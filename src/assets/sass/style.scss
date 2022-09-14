@@ -499,3 +499,29 @@
 .bg-feel{
   background-color: $c-feel !important;
 }
+
+.btn{
+  &.btn-feel {
+    color: $c-primary;
+    background-color: $c-feel;
+    border: 1px solid $c-feel;
+    svg {
+        g {
+            fill: $c-primary;
+            stroke: $c-primary;
+        }
+        circle {
+            stroke: $c-primary;
+        }
+    }
+    &:focus,
+    &.focus,
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        color: $c-primary;
+        opacity: 0.6;
+    }
+}
+}
