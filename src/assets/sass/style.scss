@@ -428,70 +428,74 @@
 }
 
 
-.bg-dark-grey{
-  background-color:  $c-dark-grey
-}
-.bg-middle-grey{
-  background-color: $c-middle-grey
-}
-.bg-light-grey{
-  background-color: $c-light-grey;
-}
-.bg-primary{
-  background-color: $c-primary;
-}
-.bg-error{
-  background-color: $c-error;
-}
-.bg-info{
-  background-color: $c-info;
-  color:$c-white;
-}
-.bg-success{
-  background-color: $c-success;
-  color:$c-white;
-}
-.bg-warning{
-  background-color: $c-warning;
-}
+// .bg-dark-grey{
+//   background-color:  $c-dark-grey
+// }
+// .bg-middle-grey{
+//   background-color: $c-middle-grey
+// }
+// .bg-light-grey{
+//   background-color: $c-light-grey;
+// }
+// .bg-primary{
+//   background-color: $c-primary;
+// }
+// .bg-error{
+//   background-color: $c-error;
+// }
+// .bg-info{
+//   background-color: $c-info;
+//   color:$c-white;
+// }
+// .bg-success{
+//   background-color: $c-success;
+//   color:$c-white;
+// }
+// .bg-warning{
+//   background-color: $c-warning;
+// }
+// .bg-feel{
+//   background-color: $c-feel;
+// }
+// .bg-dark{
+//   background-color: $c-black;
+//   color:$c-white;
+// }
+
 .bg-feel{
-  background-color: $c-feel;
-}
-.bg-dark{
-  background-color: $c-black;
-  color:$c-white;
+  background-color: $c-feel !important;
 }
 
-.pill {
-  display: inline-block;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-family: $font-family-bold;
-  font-weight: 600;
-  &.pill-feel {
-    background-color: $c-feel;
-    color: $c-white;
-    border-radius: 40px;
-  }
+.btn{
+  &.btn-feel-invert {
+    color: $c-primary;
+    background-color: transparent;
+    border: 1px solid $c-feel;
+    svg {
+        g {
+            fill: $c-primary;
+            stroke: $c-primary;
+        }
+        circle {
+            stroke: $c-primary;
+        }
+    }
+    &:focus,
+    &.focus,
+    &:hover,
+    &.hover,
+    &:active,
+    &.active {
+        color: $c-primary;
+        opacity: 1;
+        border-color: rgba($c-feel, .5);
+    }
+    &:disabled,
+    &.disabled {
+        opacity: 1;
+        border-color: $c-light-grey;
+        color: $c-dark-grey;
+        cursor: default;
+    }
 }
-
-.c-feel{
-  color: $c-feel;
-}
-
-.progressbar{
-  width: 100%;
-  height: 8px;
-  border-radius: 8px;
-  background-color: $c-middle-grey;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow: hidden;
-  .progressbar-status{
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    background-color: $c-primary;
-  }
 }

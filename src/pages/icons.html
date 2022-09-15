@@ -260,7 +260,50 @@
                 </pre>
             </div>
 
-
+            <div class="resize-mini mt-32">
+                <div class="resize-mini-content">
+                    <div class="container-6">
+                        <div class="row">
+                            <div class="col-xs-12 mb-16 text-center">
+                                <div class="is-flex">
+                                    <div class="is-flex align-multi-center px-16">
+                                        {% call insert.svgIconname('globe') %} {% endcall %}
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 text-left">
+                                            <span class="text-16-b">Entrega 1</span>
+                                            <span>- 12343232123</span>
+                                        </div>
+                                        <div class="col-xs-12 text-left">
+                                            <p>Entregado</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% set standardcode %} <div class="is-flex">
+    <div class="is-flex align-multi-center px-16">
+        <svg-icon src="globe"></svg-icon>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-left">
+            <span class="text-16-r">Entrega 1</span>
+            <span>- 12343232123</span>
+        </div>
+        <div class="col-xs-12 text-left">
+            <p>Entregado</p>
+        </div>
+    </div>
+</div>{% endset%}
+                <pre>
+                <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+                  <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
+                  <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+                     </code>
+                </pre>
+            </div>
 
         </div>
     </div>
