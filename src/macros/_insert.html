@@ -405,7 +405,10 @@
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
-{% endmacro %} {% macro checkbox(checkboxClass='', explicacion='') %}
+{% endmacro %} 
+
+
+{% macro checkbox(checkboxClass='', explicacion='',dark='') %}
 <h3>{{ checkboxClass }}</h3>
 <p class="p1">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
@@ -468,7 +471,11 @@
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
-{% endmacro %} {% macro checkboxSide(checkboxClass='', explicacion='') %}
+{% endmacro %}
+
+
+
+{% macro checkboxSide(checkboxClass='', explicacion='') %}
 <h3>{{ checkboxClass }}</h3>
 <p class="p1">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
