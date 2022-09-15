@@ -666,13 +666,30 @@ descripcion %}
 		</svg>
 	</div>
 </svg-icon>
-{% endif %} {% endmacro %} {% macro element(title='',element='' ) %}
+{% endif %} {% endmacro %} 
+
+{% macro element(title='',element='' ) %}
 <h3>{{title}}</h3>
 <div class="resize-mini">
-	<div class="resize-mini-content">{{element | safe }}</div>
+	<div class="resize-mini-content">
+
+<div class="container-3">
+	<div class="row">
+		<div class="col-xs-6 pt-16"> {{element | safe }} </div>
+	
+		<div class="col-xs-6 has-light bg-primary pt-16"> {{element | safe }} </div>
+	</div>
+	
+</div>
+
+	</div>
 	<pre><code class="language-markup">{{element}}</code></pre>
 </div>
-{% endmacro %} {% macro
+{% endmacro %}
+
+
+
+{% macro
 tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 <div class="mb-40">
 	<div class="row">

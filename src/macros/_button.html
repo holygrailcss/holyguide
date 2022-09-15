@@ -7,23 +7,37 @@
 
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
-    <div class="container-6">
+
+<div class="container-3">
+  <div class="row">
+    <div class="col-xs-6">
       <div class="row">
-        <div class="col-xs-12 mb-16">
-          <button class=" btn-{{buttonName }} btn btn--full"> Enabled</button>
-
-        </div>
-        <div class="col-xs-12 mb-16">
-          <button class=" btn-{{buttonName }} btn btn--full hover">Hover</button>
-
-        </div>
-        <div class="col-xs-12 mb-16">
-          <button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button>
-
-        </div>
-
+        <div class="col-xs-12 mb-16 mt-16"><button class=" btn-{{buttonName }} btn btn--full"> Enabled</button></div>
+        <div class="col-xs-12 mb-16"><button class=" btn-{{buttonName }} btn btn--full hover">Hover</button></div>
+        <div class="col-xs-12 mb-16"><button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button></div>
       </div>
     </div>
+    <div class="col-xs-6 has-light bg-primary">
+
+      <div class="row">
+        <div class="col-xs-12 mb-16 mt-16"><button class=" btn-{{buttonName }} btn btn--full"> Enabled</button></div>
+
+
+        <div class="col-xs-12 mb-16"><button class=" btn-{{buttonName }} btn btn--full hover">Hover</button></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 mb-16"><button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
 
   </div> {% set standardcode %}<button class='btn btn-{{buttonName }} btn--full'>btn-{{buttonName }} </button>{% endset %}
 
@@ -326,25 +340,41 @@
 
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
-    <div class="container-6">
+    <div class="container-3">
       <div class="row">
-        <div class="col-xs-12 mb-16">
-          <button class=" btn--{{buttonName }} btn btn--full"> Enabled</button>
-
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-12 mb-16 mt-16"><button class=" btn--{{buttonName }} btn btn--full"> Enabled</button></div>
+            <div class="col-xs-12 mb-16"><button class=" btn--{{buttonName }} btn btn--full hover">Hover</button></div>
+            <div class="col-xs-12 mb-16"><button disabled class=" btn--{{buttonName }} btn btn--full">Disabled</button></div>
+          </div>
         </div>
-        <div class="col-xs-12 mb-16">
-          <button class=" btn--{{buttonName }} btn btn--full hover">Hover</button>
-
+    
+        <div class="col-xs-6 has-light bg-primary">
+          <div class="row">
+            <div class="col-xs-12 mb-16 mt-16"><button class=" btn--{{buttonName }} btn btn--full"> Enabled</button></div>
+            <div class="col-xs-12 mb-16"><button class=" btn--{{buttonName }} btn btn--full hover">Hover</button></div>
+            <div class="col-xs-12 mb-16"><button disabled class=" btn--{{buttonName }} btn btn--full">Disabled</button>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 mb-16">
-          <button disabled class=" btn--{{buttonName }} btn btn--full">Disabled</button>
+      </div> 
 
-        </div>
-
-      </div>
     </div>
 
-  </div> {% set standardcode %}<button class='btn btn--{{buttonName }} btn--full'>btn--{{buttonName }} </button>{% endset %}
+
+
+
+
+
+
+
+    
+
+  </div> 
+  
+  
+  {% set standardcode %}<button class='btn btn--{{buttonName }} btn--full'>btn--{{buttonName }} </button>{% endset %}
 
   <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 
