@@ -499,4 +499,60 @@
     }
 }
 }
+.has-light {
+  .checkbox-item-2 {
 
+    [type="checkbox"]:not(:checked)+label:before,
+    [type="checkbox"]:checked+label:before {
+      border: 1px solid $c-white;
+    }
+
+    .checkbox-circle {
+      background: $c-white;
+    }
+
+    [type="checkbox"]:not(:checked)+label .checkbox-circle,
+    [type="checkbox"]:checked+label .checkbox-circle {
+      color: $c-white;
+    }
+  }
+
+
+  .checkbox-radio {
+
+    [type="radio"]:not(:checked)+label:before,
+    [type="radio"]:checked+label:before {
+      border: 1px solid $c-white;
+    }
+
+    [type="radio"]:not(:checked)+label .ico-radio,
+    [type="radio"]:checked+label .ico-radio {
+      background-color: $c-white;
+    }
+  }
+
+  .is-error {
+
+    
+    .checkbox-item {
+      [type=checkbox]:checked+label:before, 
+      [type=checkbox]:not(:checked)+label:before {
+      border: 1px solid $c-error;
+    }
+      a {
+        color: $c-error;
+      }
+  
+      svg {
+        g {
+          fill: $c-error;
+          polyline{
+            stroke: $c-error;
+          }
+        }
+      }
+  
+    }
+  }
+
+}
