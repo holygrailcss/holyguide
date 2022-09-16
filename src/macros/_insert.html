@@ -757,8 +757,25 @@ descripcion %}
 </svg-icon>
 {% endif %} {% endmacro %} 
 
-{% macro element(title='',element='' ) %}
+{% macro element(title='',element='', contentNarrow='' ) %}
 <h3>{{title}}</h3>
+{% if contentNarrow === 'narrow' %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow">
+
+<div class="container-3">
+	<div class="row">
+		<div class="col-xs-6 is-flex content-center py-48"> {{element | safe }} </div>
+	
+		<div class="col-xs-6 is-flex content-center py-48 has-light bg-primary"> {{element | safe }} </div>
+	</div>
+	
+</div>
+
+	</div>
+	<pre><code class="language-markup">{{element}}</code></pre>
+</div>
+{% else %}
 <div class="resize-mini">
 	<div class="resize-mini-content">
 
@@ -774,6 +791,8 @@ descripcion %}
 	</div>
 	<pre><code class="language-markup">{{element}}</code></pre>
 </div>
+{% endif %}
+
 {% endmacro %}
 
 

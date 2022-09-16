@@ -532,8 +532,6 @@
   }
 
   .is-error {
-
-    
     .checkbox-item {
       [type=checkbox]:checked+label:before, 
       [type=checkbox]:not(:checked)+label:before {
@@ -555,4 +553,26 @@
     }
   }
 
+
+  .form-input-label {
+    & > label {
+        color: $c-white;
+    }
+    input:placeholder-shown {
+        padding-top: calc(#{$input-padding-y} + #{$input-padding-y} * (2 / 3));
+        padding-bottom: calc(#{$input-padding-y} / 3 + 3px);
+    }
+    input:placeholder-shown + label {
+        padding-top: calc(#{$input-padding-y} / 3 + 1px);
+        padding-bottom: calc(#{$input-padding-y} / 3);
+        font-size: 12px;
+    }
+}
+
+}
+
+.input,
+.textarea,
+.select select {
+    background-color: transparent !important;
 }
