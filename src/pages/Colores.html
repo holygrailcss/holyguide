@@ -116,41 +116,6 @@
 
 
 
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12">
-            <hr>
-        </div>
-        <div class="col-xs-12 col-md-3">
-            <div class="text-14-2b"> Escala de grises </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-
-
-            <div class="row">
-                <div class="col-xs-12"> {% for item in globals.colorsGreyscale %}
-                    <div class="guide-colors text-center">
-                        <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
-                        </div>
-                        <div class="guide-colors-text">
-                            <div> <span>Variable:</span> ${{ item.name }}</div>
-                            <div><span>Hex:</span> {{ item.type }}</div>
-                        </div>
-                    </div> {% endfor %}
-
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
 
 <section class="mb-32 mt-32">
     <div class="row">
