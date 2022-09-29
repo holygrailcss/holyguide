@@ -638,3 +638,14 @@
 
 
 
+.flex-grow-0{
+  flex-grow: 0 !important;
+}
+
+svg-icon{
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
