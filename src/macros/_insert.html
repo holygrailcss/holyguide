@@ -993,45 +993,45 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 <h3>{{title}}</h3>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-4">
+		<div class="container-8">
 			<div class="row">
 
 				{% if bannerClass === "link-line" %}
 				<div class=" bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
-					<div>
-						<span class="tit-xs">
+					<div class="is-flex flex-column">
+						<span class="tit-xs mb-8">
 							Recoge tu pedido en Gran Via de les Corts Catalanes
 						</span>
-						<p class="p-xs">Pulsa aquí para cambiar de tienda</p>
+						<p class="p-xs link-raw">Pulsa aquí para cambiar de tienda</p>
 					</div>
-					<div class="flex-grow-0">
+					<div class="flex-grow-0 ml-16">
 						<span class="link-line">
 							Cancelar
 						</span>
 					</div>
 				</div>
 				{% set standardcode %}<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
-					<div>
-						<span class="tit-xs">
-							Recoge tu pedido en Gran Via de les Corts Catalanes
-						</span>
-						<p class="p-xs">Pulsa aquí para cambiar de tienda</p>
-					</div>
-					<div class="flex-grow-0">
-						<span class="link-line">
-							Cancelar
-						</span>
-					</div>
-				</div>{% endset %}
+	<div class="is-flex flex-column">
+		<span class="tit-xs mb-8">
+			¡Recoge tu pedido en solo X horas!
+		</span>
+		<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+	</div>
+	<div class="flex-grow-0 ml-16">
+		<span class="link-line">
+			Cancelar
+		</span>
+	</div>
+</div>{% endset %}
 				{% elif bannerClass === "ico-link" %}
 				<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
-					<div>
-					  <span class="tit-xs">
-						Recoge tu pedido en Gran Via de les Corts Catalanes
+					<div class="is-flex flex-column">
+					  <span class="tit-xs mb-8">
+						¡Recoge tu pedido en solo X horas!
 					  </span>
-					  <p class="p-xs">Pulsa aquí para cambiar de tienda</p>
+					  <p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
 					</div>
-					<div class="flex-grow-0">
+					<div class="flex-grow-0 ml-16">
 					  <button class='btn btn-clear'>
 						{% call svgIconname('arrow-right') %} {% endcall %}
 					  </button>
@@ -1039,41 +1039,39 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 				  </div>
 				  
 				{% set standardcode %}<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
-					<div>
-					  <span class="tit-xs">
-						Recoge tu pedido en Gran Via de les Corts Catalanes
-					  </span>
-					  <p class="p-xs">Pulsa aquí para cambiar de tienda</p>
-					</div>
-					<div class="flex-grow-0">
-					  <button class='btn btn-clear'>
-						<svg-icon src="arrow-right"></svg-icon>
-					  </button>
-					</div>
-				  </div>{% endset %}
+	<div class="is-flex flex-column">
+		<span class="tit-xs mb-8">
+		Recoge tu pedido en Gran Via de les Corts Catalanes
+		</span>
+		<p class="p-xs link-raw">Pulsa aquí para cambiar de tienda</p>
+	</div>
+	<div class="flex-grow-0 ml-16">
+		<button class='btn btn-clear'>
+		<svg-icon src="arrow-right"></svg-icon>
+		</button>
+	</div>
+</div>{% endset %}
 				{% elif bannerClass === "ico-context" %}
 				<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
-					<div class="flex-grow-0">
+					<div class="flex-grow-0 pr-16">
 						{% call svgIconname('globe') %} {% endcall %}
 					</div>
-					<div>
-					  <span class="tit-xs">
-						Recoge tu pedido en Gran Via de les Corts Catalanes
-					  </span>
-					  <p class="p-xs">Pulsa aquí para cambiar de tienda</p>
+					<div class="is-flex flex-column">
+						<p class="p-m">
+							Los artículos no disponibles han sido guardados en “Comprar más tarde”.
+						  </p>
 					</div>
 				  </div>
 				  {% set standardcode %}<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
-					<div class="flex-grow-0">
-						<svg-icon src="arrow-right"></svg-icon>
-					</div>
-					<div>
-					  <span class="tit-xs">
-						Recoge tu pedido en Gran Via de les Corts Catalanes
-					  </span>
-					  <p class="p-xs">Pulsa aquí para cambiar de tienda</p>
-					</div>
-				  </div>{% endset %}
+	<div class="flex-grow-0 pr-16">
+		<svg-icon src="arrow-right"></svg-icon>
+	</div>
+	<div class="is-flex flex-column">
+		<p class="p-m">
+		Los artículos no disponibles han sido guardados en “Comprar más tarde”.
+		</p>
+	</div>
+</div>{% endset %}
 				  
 				  {%endif%}
 
