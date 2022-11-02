@@ -19,7 +19,18 @@
 		{% include "navtop.html" %}
 		
 		{% include "nav.html" %}
-		<div id="guideContainer" class="main-content guide">{% block content %}{% endblock %}</div>
+		<div id="guideContainer" class="guide">
+
+			<div class="main-widthsidebar">
+				<div class="main-title">
+					{% block title %}{% endblock %}
+				</div>
+				
+				
+				<div class="main-content">{% block content %}{% endblock %}</div>
+			</div>
+		
+		</div>
 		
 		
 		<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
