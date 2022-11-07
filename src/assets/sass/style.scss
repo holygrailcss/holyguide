@@ -654,3 +654,16 @@ svg-icon{
   width: 100%;
   max-width: 850px;
 }
+
+.activeflex{
+  border: 1px solid red;
+}
+
+
+.container-flexbox{
+  .item-w{
+    width: 150px;
+    height: 150px;
+
+  }
+}
