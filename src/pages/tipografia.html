@@ -1,384 +1,41 @@
-{% extends "base2.html" %} 
-  {% import "_button.html" as button %} 
-  {% block title %} 
-    {% call special.titledoc('Tipografía','desc','actualizado') %} {% endcall %} 
-  {% endblock %} 
-{% block content %}
-
-
-
-
-<div class="fluid-50-b"> Familia tipográfica y jerarquías que debemos usar con sus ejemplos y variantes. </div>
-Paragraph
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} {% call
+special.titledoc('Tipografía','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} <div
+    class="fluid-50-b"> Familia tipográfica y jerarquías que debemos usar con sus ejemplos y variantes. </div> Paragraph
 <div class="col-xs-12 ">
-
     <div class="bg-info p-16 c-white is-flex mb-24">
-        <p>Estas son las tipografías que estarán definidas en los archivos de diseño y las que deberias usar siempre.</p>
-    </div>
-
-
-    {% call insert.tipos('p','l','DuttiW-Regular','18px ','24px ','20px ','26px ') %} {% endcall%}
-    {% call insert.tipos('p','m','DuttiW-Regular','14px ','20px ','16px ','22px ') %} {% endcall%}
-    {% call insert.tipos('p','s','DuttiW-Regular','12px ','18px ','14px ','20px ') %} {% endcall%}
-    {% call insert.tipos('p','xs','DuttiW-Regular','10px ','16px ','12px ','18px ') %} {% endcall%}
-
-
-
+        <p>Estas son las tipografías que estarán definidas en los archivos de diseño y las que deberias usar siempre.
+        </p>
+    </div> {% call insert.tipos('p','l','DuttiW-Regular','18px ','24px ','20px ','26px ') %} {% endcall%} {% call
+    insert.tipos('p','m','DuttiW-Regular','14px ','20px ','16px ','22px ') %} {% endcall%} {% call
+    insert.tipos('p','s','DuttiW-Regular','12px ','18px ','14px ','20px ') %} {% endcall%} {% call
+    insert.tipos('p','xs','DuttiW-Regular','10px ','16px ','12px ','18px ') %} {% endcall%}
 </div>
-
-<div class="col-xs-12 ">
-
-    {% call insert.tipos('tit','l','DuttiWExtended-Bold','24px ','30px ','48px ','64px ') %} {% endcall%}
-    {% call insert.tipos('tit','m','DuttiWExtended-Bold','20px ','26px ','32px ','38px ') %} {% endcall%}
-
-
-    {% call insert.tipos('tit','s','DuttiW-Bold','16px ','22px ','20px ','26px ') %} {% endcall%}
-    {% call insert.tipos('tit','xs','DuttiW-Bold','14px ','20px ','14px ','20px ') %} {% endcall%}
-</div>
-
-
-
+<div class="col-xs-12 "> {% call insert.tipos('tit','l','DuttiWExtended-Bold','24px ','30px ','48px ','64px ') %} {%
+    endcall%} {% call insert.tipos('tit','m','DuttiWExtended-Bold','20px ','26px ','32px ','38px ') %} {% endcall%} {%
+    call insert.tipos('tit','s','DuttiW-Bold','16px ','22px ','20px ','26px ') %} {% endcall%} {% call
+    insert.tipos('tit','xs','DuttiW-Bold','14px ','20px ','14px ','20px ') %} {% endcall%} </div>
 <section class="mb-32 mt-32">
     <div class="row">
-
-
-        <div class="col-xs-12 ">
-            {% call insert.tipos('head','l','DuttiWExtended-Bold','56px ','62px ','96px ','102px ') %} {% endcall%}
-            {% call insert.tipos('head','m','DuttiWExtended-Bold','42px ','48px ','64px ','70px ') %} {% endcall%}
-            {% call insert.tipos('head','s','DuttiWExtended-Bold','32px ','38px ','56px ','62px ') %} {% endcall%}
-        </div>
+        <div class="col-xs-12 "> {% call insert.tipos('head','l','DuttiWExtended-Bold','56px ','62px ','96px ','102px ')
+            %} {% endcall%} {% call insert.tipos('head','m','DuttiWExtended-Bold','42px ','48px ','64px ','70px ') %} {%
+            endcall%} {% call insert.tipos('head','s','DuttiWExtended-Bold','32px ','38px ','56px ','62px ') %} {%
+            endcall%} </div>
     </div>
 </section>
-
 <div class="row pt-64 pb-64">
-
     <div class="col-xs-12 ">
         <div class="text-14-2b"> Tipografia </div>
     </div>
-    <div class="col-xs-12 col-sm-8 col-md-9">
-        
+    <div class="col-xs-12">
         <section>
-            <div class="container-fluid">
-                <div class="mb-48">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="alert">
-                                <p>No se deben definir font-size, line-height, o cualquier otra modificación de fuentes
-                                    en los SCSS de los componentes para no alterar las definiciones del a guía</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-
-                            {% call insert.title('Tipografia','Fuentes responsive ') %} {% endcall%}
-
-
-
-
-                 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-show">
-                                <table class="demo">
-                                    <thead>
-                                        <tr>
-                                            <th>Clases</th>
-                                            <th>Propiedades</th>
-                                            <th>Propiedades</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>h1</td>
-                                            <th class="text-14-m" >h1: (32px, 32px, 32px, 40px, 1.2, "medium" ),</th>
-                                            <td class="h1" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h2</td>
-                                            <th class="text-14-m" >  h2: (24px, 24px, 24px, 32px, 1.2, "medium" ),
-                                            </th>
-
-                                            <td class="h2" contenteditable>Be creative every day<br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>h3</td>
-                                            <th class="text-14-m" >h3: (18px, 18px, 18px, 24px, 1.2, "medium" ),
-
-                                            </th>
-                                            <td class="h3" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h4</td>
-                                            <th class="text-14-m" >     h4: (16px, 16px, 16px, 18px, 1.2, "medium" ),   </th>
-
-                                            <td class="h4" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h5</td>
-                                            <th class="text-14-b" >    h5: (16px, 16px, 16px, 16px, 1.2, "bold" ),   </th>
-
-                                            <td class="h5" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h6</td>
-                                            <th class="text-14-m" >     h6: (12px, 12px, 12px, 14px, 1.2, "medium" ),   </th>
-
-                                            <td class="h6" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h7</td>
-                                            <th class="text-14-m" >     h7: (10px, 10px, 10px, 12px, 1.2, "medium" ),   </th>
-
-                                            <td class="h7" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h8</td>
-                                            <th class="text-14-m" >     h8: (8px,   8px,  8px, 10px, 1.2, "medium" ),   </th>
-
-                                            <td class="h8" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h9</td>
-                                            <td class="h9" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>h10</td>
-                                            <th class="text-14-2b" >     h10: ( 24px, 24px, 50px, 50px, 1, 'bold2' ),    </th>
-
-                                            <td class="h10" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display1</td>
-                                            <th class="text-14-b" >      display1: (32px, 32px, 32px, 48px, 1.2, "bold"   ),/* PROMOTIONS BANNER */   </th>
-
-                                            <td class="display1" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display2</td>
-                                            <th class="text-14-b" >     display2: (20px, 20px, 20px, 40px, 1.2, "bold"   ),/* SALES */   </th>
-
-                                            <td class="display2" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display3</td>
-                                            <th class="text-14-m" >      display3: (16px, 16px, 16px, 24px, 1.5, "medium" ),/* BLACK FRIDAY */   </th>
-
-                                            <td class="display3" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display4</td>
-                                            <th class="text-14-m" >     display4: (14px, 14px, 14px, 24px, 1.5, "medium" ),/* SALES */   </th>
-
-                                            <td class="display4" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display5</td>
-                                            <th class="text-14-r" >      display5: (14px, 14px, 14px, 18px, 1.5, "regular"),/* BLACK FRIDAY */   </th>
-
-                                            <td class="display5" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display6</td>
-                                            <th class="text-14-r" >      display6: (12px, 12px, 12px, 18px, 1.5, "regular"),/* SALES */   </th>
-
-                                            <td class="display6" contenteditable>Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>display7</td>
-                                            <th class="text-14-m" >     display7: (14px, 14px, 14px, 18px, 1.5, "medium" ),/* SALES + BLACK FRIDAY */   </th>
-
-                                            <td class="display7" contenteditable>Be creative every day</td>
-                                        </tr>
-                                    </tbody>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid">
-                <div class="mb-48">
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-title mb-16">
-                                <strong> Párrafos </strong>titulo 2 <p> Creamos un nuevo array de elementos y los
-                                    incluimos, p. ej: </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-show">
-                                <table class="demo">
-                                    <thead>
-                                        <tr>
-                                            <th>Class</th>
-                                            <th>Properties</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>p1</td>
-                                            <td class="p3">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p2</td>
-                                            <td class="p2">Be creative every day<br></td>
-                                        </tr>
-                                        <tr>
-                                            <td>p3</td>
-                                            <td class="p3">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p4</td>
-                                            <td class="p4">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p5</td>
-                                            <td class="p5">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p6</td>
-                                            <td class="p6">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p7</td>
-                                            <td class="p7">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p8</td>
-                                            <td class="p8">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p9</td>
-                                            <td class="p9">Be creative every day</td>
-                                        </tr>
-                                        <tr>
-                                            <td>p10</td>
-                                            <td class="p10">Be creative every day</td>
-                                        </tr>
-                                    <tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="container-fluid">
-                <div class="mb-48">
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-title mb-16">
-                                <strong> Tipografias </strong>fijas <p> Creamos un nuevo array de elementos y los
-                                    incluimos, esto nos generará sus tres versiones, <code> -r regular </code>
-                                    ,<code> -m medium </code>, <code> -b bold </code> , p. ej:</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-show">
-                                <table class="demo">
-                                    <thead>
-                                        <tr>
-                                            <th>Class</th>
-                                            <th>Properties</th>
-
-                                            <th>Cambio a</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>.text-12-r</td>
-                                            <td class="text-12-r"> <b>89  </b>   Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-12-m</td>
-                                            <td class="text-12-m">    <b>47  </b> Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-12-b</td>
-                                            <td class="text-12-b"> <b>31  </b> Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-14-r</td>
-                                            <td class="text-14-r">  <b>98  </b> Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-14-m</td>
-                                            <td class="text-14-m">  <b>50  </b>   Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-14-b</td>
-                                            <td class="text-14-b" >  <b>98  </b> Be creative every day</td>
-                                            <td class="p-s">.p-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-16-r</td>
-                                            <td class="text-16-r">  <b>16  </b>  Be creative every day</td>
-                                            <td class="p-m">.p-m</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-16-m</td>
-                                            <td class="text-16-m">   <b>33  </b>   Be creative every day</td>
-                                            <td class="p-m">.p-m</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-16-b</td>
-                                            <td class="text-16-b">  <b>33  </b>   Be creative every day</td>
-                                            <td class="p-m">.p-m Esto puede que necesitamos bold</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-18-r</td>
-                                            <td class="text-18-r"> <b>9  </b> Be creative every day</td>
-                                            <td class="tit-s">.tit-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-18-m</td>
-                                            <td class="text-18-m">  <b>36  </b> Be creative every day</td>
-                                            <td class="tit-s">.tit-s</td>
-                                        </tr>
-                                        <tr>
-                                            <td>.text-18-b</td>
-                                            <td class="text-18-b">  <b>42  </b>  Be creative every day</td>
-                                            <td class="tit-s">.tit-s</td>
-                                        </tr>
-                                    <tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section>
-
-
             <div class="row">
                 <div class="col-xs-12 ">
                     <div class="pre-title mb-16">
-                        <strong> Tipografias </strong>Fluidas <p> Creamos un nuevo array de elementos fluidos, cuidado con ponerlos dentro de modales . </p>
+                        <strong> Tipografias </strong>Fluidas <p> Creamos un nuevo array de elementos fluidos, cuidado
+                            con ponerlos dentro de modales . </p>
                     </div>
                 </div>
             </div>
-
             <div class="pre-show fluid-box">
                 <table class="demo">
                     <thead>
@@ -414,16 +71,13 @@ Paragraph
                 <div class="mb-48">
                     <h1 class="h1 is-through">BE CREATIVE EVERY DAY</h1>
                     <h7 class="h7 is-through">BE CREATIVE EVERY DAY</h7>
-
                     <div class="row">
                         <div class="col-xs-12 ">
                             <pre><code class="language-markup">
-
 {{"<h1 class='h1 is-through'>BE CREATIVE EVERY DAY</h1>
 <h7 class='h7 is-through'>BE CREATIVE EVERY DAY</h7>
 <h10 class='h10 is-through'>BE CREATIVE EVERY DAY</h10>
 <div class='fluid-12-r is-through' contenteditable> Texto fluido 12-r </div>" | escape}}
-
     </code></pre>
                         </div>
                     </div>
@@ -432,11 +86,4 @@ Paragraph
         </section>
     </div>
 </div>
-
-
-
-
-
 <script src="../js/scripts_type.js"></script> {% endblock %}
-
-
