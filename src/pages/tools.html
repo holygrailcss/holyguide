@@ -1,4 +1,9 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Tools','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+{% block content %}
 
 <section class="mb-32 mt-32">
     <div class="row">

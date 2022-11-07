@@ -1,22 +1,12 @@
-{% extends "base.html" %} {% import "_button.html" as button %} {% block content %} <div class="row bleed-0">
-    <div class="col-xs-12  has-light">
-        <div class="hero">
-            <div class="hero-bg">
-                <video autoplay="" loop="" muted="" id="myVideo" class="video" preload="true" playsinline="">
-                    <source src="https://sulmara.com/wp-content/themes/sulmara_theme/assets/video/bg.mp4"
-                        type="video/mp4">
-                </video>
-            </div>
-        </div>
-        <div class="guide-header flex-column">
-            <div class="  tit-l"> Tailor  <br>
-                Design System </div>
-            <div class=" text-12-r"> Actualizado hace 3 dias </div>
-            <div class=" text-14-r"> El nuevo Sistema de Diseño de Massimo Dutti nos ayuda 
-                a construir una experiencia de usuario sólida al mismo tiempo que reduce los errores y aumenta la velocidad de producción en todas las áreas. </div>
-        </div>
-    </div>
-</div>
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Stardev','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+{% block content %}
+
+
+
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
