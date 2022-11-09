@@ -99,3 +99,10 @@ function isFlexAlignMultiStretch() {
 	$(".flexbox-demo").toggleClass("align-multi-stretch");
 	$(".flexbox-demo-is-align-multi-stretch").toggleClass("hidden ");
 }
+
+
+function param() {
+	$(".flexbox-demo").toggleClass("is-flex");
+	$(".flexbox-demo-is-flex").toggleClass("hidden ");
+  $(this).addClass("activeflex ");
+}

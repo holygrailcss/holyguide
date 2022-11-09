@@ -1,7 +1,7 @@
 {% extends "basefull.html" %} 
 
 {% block title %} 
-{% call special.titledoc('Limited','desc','actualizado') %} {% endcall %} 
+{% call special.titledoc('GiftCard','desc','actualizado') %} {% endcall %} 
 {% endblock %} 
 
 {% block content %} 
@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-xs-12 "></div>
         <div class="col-xs-12">
-            <div class="fluid-50-b mb-40"> Tarjeta regalo </div> {% call
+        {% call
             insert.figma('https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2084')
             %} {% endcall %}
         </div>
@@ -29,6 +29,10 @@
         {% call insert.component('giftcard3','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2201') %}{% endcall %}
         {% call insert.component('giftcard4','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2815') %}{% endcall %}
         {% call insert.component('giftcard5','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2312') %}{% endcall %} 
-        {% call insert.component('giftcard6','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2656') %}{% endcall %} </div>
+        {% call insert.component('giftcard6','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2656') %}{% endcall %}
+
+        {% call insert.component('giftcard7','800px','https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2656') %}{% endcall %}
+
+     </div>
     </div>
 </section> {% endblock %}

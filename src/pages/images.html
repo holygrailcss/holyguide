@@ -1,71 +1,36 @@
-{% extends "base2.html" %} 
-  {% import "_button.html" as button %} 
-  {% block title %} 
-    {% call special.titledoc('Images','desc','actualizado') %} {% endcall %} 
-  {% endblock %} 
-{% block content %}
-
-
-
-
-
-<section class="mb-32 mt-32">
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} {% call
+special.titledoc('Images','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} <section
+    class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12 "></div>
         <div class="col-xs-12 ">
-            <div class="fluid-50-b"> Recursos de imagen para maquetar con mayor fidelidad. </div>
+            <div class="tit-s c-gray "> Recursos de imagen para maquetar con mayor fidelidad. </div>
         </div>
     </div>
 </section>
-
-
 <section class="mb-32 mt-32">
     <div class="row">
-
         <div class="col-xs-12 ">
-           <div class="text-14-2b"> Placeholders</div>
+            <div class="text-14-2b"> Placeholders</div>
         </div>
         <div class="col-xs-12">
-            <span class="todo"> ( TODO falta prosa)  </span>
-<p class="p1">
-
-    En ocasiones necesitaremos posicionar imágenes para ver las futuras maquetas, para ello usaremos esta colección de placeholders. 
-</p>
-
-
+            <span class="todo"> ( TODO falta prosa) </span>
+            <p class="p1"> En ocasiones necesitaremos posicionar imágenes para ver las futuras maquetas, para ello
+                usaremos esta colección de placeholders. </p>
             <p> La ruta para incorporar imagenes placeholders
-                <code>https://holygrailcss.github.io/assets/placeholder/2-3.jpg</code> 
+                <code>https://holygrailcss.github.io/assets/placeholder/2-3.jpg</code>
             </p>
         </div>
     </div>
 </section>
-
-
 <section class="mb-32 mt-32">
     <div class="row">
-
         <div class="col-xs-12 "></div>
         <div class="col-xs-12">
-
-<div class="masonry"> {% for item in globals.placeholders %} 
-    <div class="mini-box"> 
-        <img
-            src="  https://holygrailcss.github.io/assets/placeholder/{{item.ratio}}.jpg" alt="">
-        <div class="mini-box-text"> {{item.ratio}}.jpg </div>
-    </div> {% endfor %}
-
-        </div>
-
-
-
-          
-
-
+            <div class="masonry"> {% for item in globals.placeholders %} <div class="mini-box">
+                    <img src="  https://holygrailcss.github.io/assets/placeholder/{{item.ratio}}.jpg" alt="">
+                    <div class="mini-box-text tit-m"> {{item.ratio}}.jpg </div>
+                </div> {% endfor %} </div>
         </div>
     </div>
-</section>
-
-
-
-
-{% endblock %}
+</section> {% endblock %}
