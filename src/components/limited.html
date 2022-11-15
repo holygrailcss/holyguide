@@ -74,4 +74,35 @@
       <span class="text-18-2b"> Footer zone</span>
     </div>
   </div>
-</div> {% endblock %}
+</div> 
+
+<script>
+
+$(document).ready(function () {
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.saveStyles(".mobile, .desktop");
+
+let container = document.querySelector(".md-scroll-wrap");
+
+	ScrollTrigger.matchMedia({
+		"(min-width: 768px)": function () {
+			gsap.to(".md-scroll-wrap", {
+				x: () =>
+					-(container.scrollWidth - document.documentElement.clientWidth) + "px",
+				ease: "none",
+				scrollTrigger: {
+					trigger: ".md-scroll",
+					invalidateOnRefresh: true,
+					pin: true,
+					scrub: 1,
+					end: () => "+=" + container.offsetWidth,
+				},
+			});
+		},
+	});
+
+} );
+
+</script>
+
+{% endblock %}

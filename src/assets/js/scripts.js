@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 	$(".resize-code").on("click", function () {
 		$(this.parentNode.parentNode.parentNode).toggleClass("openCode");
@@ -10,6 +11,7 @@ $(document).ready(function () {
 	$(".btn-anim").click(function () {
 		$(this).toggleClass("is-loading");
 	});
+
 	var clipboard = new ClipboardJS(".btncode");
 	clipboard.on("success", function (e) {
 		console.info("Action:", e.action);
