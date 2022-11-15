@@ -1,53 +1,22 @@
-{% import "_insert.html" as insert %}
-
-{% macro modal(modalsize='',margin='', explicacion='') %}
-
-
-<h3>{{ modalsize | capitalize }} + {{ margin | capitalize }}</h3>
+{% import "_insert.html" as insert %} {% macro modal(modalsize='',margin='', explicacion='') %} <h3>{{ modalsize |
+    capitalize }} + {{ margin | capitalize }}</h3>
 <hr>
-<p class="p4">
-    {{ explicacion | capitalize }}
-</p>
-
+<p class="p4"> {{ explicacion | capitalize }} </p>
 <div class="resize-mini">
     <div class="resize-mini-content {{dark  }} ">
-
-            <div class="row">
-                <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
-                    <button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')">
-                        Modal {{modalsize}} {{margin}}
-                    </button>
-
-                </div>
-
-
+        <div class="row">
+            <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
+                <button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')"> Modal {{modalsize}}
+                    {{margin}} </button>
             </div>
-
-
-    </div> {% set standardcode %}
-    public launchModalName(): void {
-    this.modalService.openModalFromComponent(
-    null,
-    MyAccountFeelStyleAdvisorCancelModalComponent,
-    null,
-    ModalSizes.{{modalsize}} ,
-    ModalMargins.{{margin}} ,
-    [ModalOptions.HIDE_TITLE]
-    );
-    }
-    {% endset %}
-
+        </div>
+    </div> {% set standardcode %} public launchModalName(): void { this.modalService.openModalFromComponent( null,
+    MyAccountFeelStyleAdvisorCancelModalComponent, null, ModalSizes.{{modalsize}} , ModalMargins.{{margin}} ,
+    [ModalOptions.HIDE_TITLE] ); } {% endset %}
     <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> 
     </button ><code id="{{buttonName}}" class="language-javascript  ">{{standardcode}}   </code></pre>
-
-
-</div>
-
-{% endmacro %}
-
-
-{% macro modalContent() %}
-<div class="cdk-overlay-container modal-container" id="modal-container">
+</div> {% endmacro %} {% macro modalContent() %} <div class="cdk-overlay-container modal-container"
+    id="modal-container">
     <button class="start-options btn btn-secundary m-16" onclick="modalOptionsToggle()">Mostrar opciones
         adicionales</button>
     <div class="sidebar-options">
@@ -74,25 +43,19 @@
             <button class="btn btn--mini btn-primary" onclick="modalFeelBg()">FEEL_BG</button>
             <!-- <button class="btn btn-primary" onclick="modalCloseBc()">CLOSE_ON_BACKDROP_CLICK</button> -->
             <button class="btn btn--mini btn-primary" onclick="modalBgtransparent()">TRANSPARENT_BACKGROUND</button>
-
-
         </div>
     </div>
-
     <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
     <div class="modal-content" dir="ltr">
         <div class="cdk-overlay-pane">
-
             <component>
                 <div class="modalx" id="modalx">
                     <div class="modalx-dialog" id="modalx-dialog">
                         <div class="modalx-content">
-
                             <div class="margin-a"></div>
                             <div class="margin-b"></div>
                             <div class="margin-c"></div>
                             <div class="margin-d"></div>
-
                             <div class="modalx-close">
                                 <button class="closex" onclick="openModal()">
                                     <svg-icon src="close" _nghost-nds-c30="" ng-reflect-src="close">
@@ -106,22 +69,16 @@
                                     </svg-icon>
                                 </button>
                             </div>
-
                             <div class="modalx-body">
                                 <div class="modal-title text-center mb-24">
                                     <p class="text-18-b">Modal</p>
                                 </div>
-                                <p class="p1 mb-16">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit sint earum
-                                    iste repudiandae saepe reprehenderit voluptates assumenda suscipit? Repudiandae
-                                    natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem.
-                                </p>
-                                <p class="p1 mb-16">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit sint earum
-                                    iste repudiandae saepe reprehenderit voluptates assumenda suscipit? Repudiandae
-                                    natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem.
-                                </p>
-
+                                <p class="p1 mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                    fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
+                                    Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
+                                <p class="p1 mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                    fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
+                                    Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
                             </div>
                         </div>
                     </div>
@@ -130,68 +87,32 @@
         </component>
     </div>
 </div>
-</div>
-{% endmacro %}
-
-
-
-{% macro modalShopLook(modalname='', explicacion='') %}
-
-
-<h3>{{ modalname | capitalize }}</h3>
+</div> {% endmacro %} {% macro modalShopLook(modalname='', explicacion='') %} <h3>{{ modalname | capitalize }}</h3>
 <hr>
-<p class="p4">
-    {{ explicacion | capitalize }}
-</p>
-
+<p class="p4"> {{ explicacion | capitalize }} </p>
 <div class="resize-mini">
     <div class="resize-mini-content {{dark  }} ">
         <div class="container-6">
             <div class="row">
                 <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
-                    <button class="btn btn-primary" onclick="openModalShopLook()">
-                        {{modalname}}
-                    </button>
-
+                    <button class="btn btn-primary" onclick="openModalShopLook()"> {{modalname}} </button>
                 </div>
-
-
             </div>
         </div>
-
     </div> {% set standardcode %}public openShopTheLookModal(_productId: string) {
-    this.modalService.openModalFromComponent(
-    null,
-    ShopTheLookComponent,
-    {
-    productId: _productId,
-    },
-    ModalSizes.SIZE_XXS,
-    ModalMargins.MARGIN_0,
-    [ModalOptions.HIDE_TITLE]
-    );
-    }{% endset %}
-
+    this.modalService.openModalFromComponent( null, ShopTheLookComponent, { productId: _productId, },
+    ModalSizes.SIZE_XXS, ModalMargins.MARGIN_0, [ModalOptions.HIDE_TITLE] ); }{% endset %}
     <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> 
     </button ><code id="{{buttonName}}" class="language-javascript  ">{{standardcode}}   </code></pre>
-
-
-</div>
-
-{% endmacro %}
-
-
-{% macro modalContentShopLook() %}
-<div class="cdk-overlay-container modal-container" id="modal-container-shoplook">
+</div> {% endmacro %} {% macro modalContentShopLook() %} <div class="cdk-overlay-container modal-container"
+    id="modal-container-shoplook">
     <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
     <div class="modal-content" dir="ltr">
         <div class="cdk-overlay-pane">
-
             <component>
                 <div class="modalx" id="modalx-backdrop">
                     <div class="modalx-dialog" id="modalx-dialog">
                         <div class="modalx-content">
-
                             <div class="modalx-close">
                                 <button class="closex" onclick="openModalShopLook()">
                                     <svg-icon src="close" _nghost-nds-c30="" ng-reflect-src="close">
@@ -205,11 +126,11 @@
                                     </svg-icon>
                                 </button>
                             </div>
-
                             <div class="modalx-body">
                                 <div class="container-10 mt-40">
                                     <img src="https://placeimg.com/600/800/people/grayscale" alt="" class="w-100 mb-16">
-                                    <h2 class="text-16-m mb-16 text-center has-ellipsis-3">TOP DE PUNTO RAYAS HOMBROS</h2>
+                                    <h2 class="text-16-m mb-16 text-center has-ellipsis-3">TOP DE PUNTO RAYAS HOMBROS
+                                    </h2>
                                     <p class="text-16-m mb-16 text-center">49,95 €</p>
                                     <div class="is-flex flex-column w-100 mb-16">
                                         <button class="btn btn-secondary mb-16"> Label</button>
@@ -232,5 +153,4 @@
         </component>
     </div>
 </div>
-</div>
-{% endmacro %}
+</div> {% endmacro %}

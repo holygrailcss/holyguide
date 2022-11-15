@@ -1,0 +1,30 @@
+{% extends "basefull.html" %} 
+
+{% block title %} 
+{% call special.titledoc('Modals','desc','actualizado') %} {% endcall %} 
+{% endblock %} 
+
+{% block content %}
+
+    <section class="mb-32 mt-32">
+        <div class="row">
+
+            <div class="col-xs-12">
+                {% call insert.component('modal1', '300px','https://www.figma.com/file/H0I5z2GEHzSeQBAoTstA0T/P%C3%A1gina-de-Corte?node-id=2%3A9') %}  {% endcall %}
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mb-32 mt-32">
+        <div class="row">
+
+            <div class="col-xs-12">
+                {% call insert.component('modal2', '500px','https://www.figma.com/file/H0I5z2GEHzSeQBAoTstA0T/P%C3%A1gina-de-Corte?node-id=2%3A9') %}  {% endcall %}
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
