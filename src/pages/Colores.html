@@ -98,42 +98,36 @@
 
 
 
-
 <section class="mb-32 mt-32">
     <div class="row">
     
         <div class="col-xs-12 ">
-            <div class="text-14-2b"> Customización </div>
+            <div class="text-14-2b"> Semanticos </div>
         </div>
         <div class="col-xs-12">
 
 
-
-            <div class="mini">
-                <pre class=""><code class="language-css ">
-//Primarios
-{% for item in globals.colorsPrimary %}${{ item.name }}:{{ item.type }};
-{% endfor %}
-
-//Semanticos
-{% for item in globals.colorsSemantic %}${{ item.name }}:{{ item.type }};
-{% endfor %}
-
-// Escala de grises
-{% for item in globals.colorsGreyscale %}${{ item.name }}:{{ item.type }};
-{% endfor %}
+            <div class="row">
+                <div class="col-xs-12"> {% for item in globals.colorsFeel %}
+                    <div class="guide-colors text-center">
+                        <div class="guide-colors-bg text-center" style="background-color:{{ item.type }};">
+                        </div>
+                        <div class="guide-colors-text">
+                            <div class="text-12-r"> <span>Hex:</span> {{ item.type }}</div>
+                            <div class="text-12-r"><span>Color:</span> ${{ item.name }}</div>
+                            <div class="text-12-r"><span>Background:</span> {{ item.class }} </div>
+                     
+                        </div>
+                    </div> {% endfor %}
 
 
-{% for item in globals.containers %}${{ item.name }}:{{ item.type }};
-{% endfor %}
-{% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
-{% endfor %}
-    </code>
-</pre>
+
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
