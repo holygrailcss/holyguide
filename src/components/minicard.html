@@ -1,34 +1,37 @@
-{% block minicard %}<pickup-selected-address  >
-    <div  class="pickup-selected p-16">
-        <list-item  >
-            <div class="row">  
-                    <label class="col-xs-12" for="12007">
-                        <div class="box3 p-16 border-1 ">
-                            <div class="box3-content">
-                                <div class="text-16-b">PLAZA RIO 2</div>
-                                <div class="text-14-m is-info">Mañana, 26.05.22 - lunes, 30.05.22 </div>
-                                <div class="text-12-m">ANTONIO LOPEZ, 109</div>
-                                <div class="text-12-m">MADRID</div>
-                                <div class="text-14-m">
-                                    <div class="text-14-m c-gray">
-                                        <div class="is-flex align-multi-bottom"> Domingo <div>&nbsp;- Sábado</div>
-                                            <div>:&nbsp;10:00 - 22:00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-14-m mt-8">
-                                    <div class="store-state">
-                                        <div><span class="todo"> si no hay estado , tiene que desaparecer ya que generan espacios   </span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box3-price text-14-m text-right">
-                                <div class="text-12-b is-info">Gratis</div>
-                                <div class="text-12-r c-gray">2.1 km</div>
-                            </div>
+{% block minicard %}
+
+
+<div  class="pb-64" contenteditable="true" >
+    <div class="checkbox-radio check-center check-bleed "> <input type="radio" id="12008" value="12008">
+        <label for="12008">
+            <div class="is-flex bg-line  pl-32 pb-8">
+                <div class="col-xs-6">
+                    <div class="text-16-b">Goya</div>
+                    <div class="text-14-m is-info">Mañana, 26.05.22 - lunes, 30.05.22 </div>
+                    <div class="text-12-m">Calle de Goya, 85, Madrid</div>
+                    <div class="text-12-m is-info mb-16">+34 91 4323900</div>
+                    <div class="text-12-r is-info"> Massimo Dutti Studio </div>
+                    <div class="text-14-m c-gray">
+                        <div class="is-flex align-multi-bottom"> Domingo <div>&nbsp;- Sábado</div>
+                            <div>:&nbsp;10:00 - 22:00</div>
                         </div>
-                    </label>
+                    </div>
+             
+                </div>
+                <div class="col-xs-6 is-flex flex-column content-sp-between text-right">
+                    <div >
+                        <div class="text-12-b is-info">Gratis</div>
+                        <div class="text-12-r c-gray">2.1 km</div>
+                    </div>
+                    <div >
+                        <div class="text-12-r c-gray">ICON</div>
+                    </div>
+                </div>
             </div>
-        </list-item>
+            <i class="ico-radio"></i>
+        </label>
     </div>
-</pickup-selected-address> {% endblock %}
+    
+    </div> 
+    
+    {% endblock %}

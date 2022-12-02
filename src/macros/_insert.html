@@ -26,7 +26,7 @@
 {% endmacro %} 
 
 {% macro component(component='',size='',componentfigma="" ,descripcion='') %}
-<section class="mb-32 mt-32">
+<section class="mb-32 mt-32 ">
 	<div class="resize-container">
 		<div class="resize-bar">
 			<div class="resize-name">
@@ -78,6 +78,7 @@
 				height="{{ size }}"
 				frameborder="0"
 				seamless
+				
 			></iframe>
 		</div>
 	</div>
@@ -587,7 +588,10 @@ descripcion %}
 		</svg>
 	</div>
 </svg-icon>
-{% endmacro %} {% macro svgIconname(icoName='') %} {% if icoName == 'globe' %}
+{% endmacro %} 
+
+
+{% macro svgIconname(icoName='') %} {% if icoName == 'globe' %}
 <svg-icon>
 	<div>
 		<svg

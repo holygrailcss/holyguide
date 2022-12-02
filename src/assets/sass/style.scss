@@ -68,6 +68,21 @@
     padding-right: 0px;
     padding-left: 16px;
   }
+    .pl-32{
+      padding-left: initial;
+    padding-right: 32px;
+    }
+    .check-center.check-bleed.checkbox-radio [type=radio]:checked+label:before,
+    .check-center.check-bleed.checkbox-radio [type=radio]:not(:checked)+label:before {
+      left:initial;
+    right: 0px;
+}
+
+ .check-center.check-bleed.checkbox-radio [type=radio]:checked+label .ico-radio, 
+ .check-center.check-bleed.checkbox-radio [type=radio]:not(:checked)+label .ico-radio {
+    left: initial;
+    right: 7px;
+  }
 }
 //TODO invert automático para botones con fondo negro
 // PROCESS Esto se actualiza despues de tener todos los iconos de pro actualizados
@@ -667,3 +682,22 @@ svg-icon{
 
   }
 }
+
+
+
+.storeloc {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "storeloc-search storeloc-search storeloc-map storeloc-map"
+    "storeloc-list storeloc-list storeloc-map storeloc-map"
+    "storeloc-list storeloc-list storeloc-map storeloc-map";
+}
+
+.storeloc-search { grid-area: storeloc-search; }
+
+.storeloc-list { grid-area: storeloc-list; }
+
+.storeloc-map { grid-area: storeloc-map; }
