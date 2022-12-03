@@ -1,4 +1,4 @@
-{% extends "base2.html" %} 
+{% extends "basefull.html" %} 
   {% import "_button.html" as button %} 
   {% block title %} 
     {% call special.titledoc('Componentes','desc','actualizado') %} {% endcall %} 
@@ -11,6 +11,11 @@
 
         <div class="col-xs-6 col-md-3 "> 
             {% call insert.minicomponent('minicard','') %} {% endcall %}
+
+        </div>
+
+        <div class="col-xs-6 col-md-3 "> 
+            {% call insert.minicomponent('minicard-product1','') %} {% endcall %}
 
         </div>
         <div class="col-xs-6 col-md-3 "> 
