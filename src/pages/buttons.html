@@ -21,7 +21,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <p class="p1">Este es el aspecto de un botón solo con la clase <code>.btn</code> que lo prepara para obtener
                 todas las clases de los botones de la guía</p> {% call button.simple('btn','Reseteamos el botón','') %}
             {% endcall %}
-        </div>
+        </div> 
     </div>
 </section>
 <section class="mb-32 mt-32">
@@ -29,22 +29,42 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
         <div class="col-xs-12">
             <p class="p1 text-16-r mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color
                 de fuente, apariencia en los diferentes estados del botón... </p>
-            <span class="todo"> ( TODO falta Focus ) </span> {% call button.simple('primary','Es nuestro botón base
-            ','') %} {% endcall %} {% call button.simple('secondary','btn-secondary description') %} {% endcall %} {%
-            call button.simple('default','btn-default description') %} {% endcall %} {% call
-            button.simple('phantom','btn-default description','bg-dark') %} {% endcall %} {% call
-            button.simple('phantom','btn-default description','bg-dark') %} {% endcall %} <span class="todo"> ( TODO
-                phantom pasa a ser btn-secondary-invert ) </span> {% call button.simple('invert','btn-default
-            description') %} {% endcall %} <span class="todo"> ( TODO invert pasa a ser secondary ) </span> {% call
-            button.simple('invert-light','btn-default description') %} {% endcall %} <span class="todo"> ( TODO invert
-                light pasa a ser invert ) </span> {% call button.simple('trans','btn-default description','bg-dark') %}
-            {% endcall %} <span class="todo"> ( TODO eliminar , pasa a ser un boton ) </span> {% call
-            button.simple('Terciario','blanco con fondo gris, hay que realizarlo','bg-dark') %} {% endcall %} <span
-                class="todo"> ( TODO eliminar , pasa a ser un boton ) </span> {% call button.simple('blue','btn-default
-            description') %} {% endcall %} <div class="btn btn-circle">btn-circle</div> <br> <br> {% call
-            button.simple('circle','btn-default description') %} {% endcall %} {% call button.simple('text','btn-default
-            description') %} {% endcall %} {% call button.simple('link','btn-default description') %} {% endcall %} {%
-            call button.iconClear('btn-clear','Usado para iconos') %} {% endcall %}
+            <span class="todo"> ( TODO falta Focus ) </span> 
+            {% call button.simple('primary','Es nuestro botón base','') %} {% endcall %} 
+            {% call button.simple('secondary','btn-secondary description') %} {% endcall %} 
+            {% call button.simple('default','btn-default description') %} {% endcall %}
+            {% call button.simple('phantom','btn-phantom description','bg-dark') %} {% endcall %} 
+            {% call button.simple('feel','Botón de feel','') %} {% endcall %} 
+
+            {% call button.simple('feel-invert','Botón invertido Feel','') %} {% endcall %} 
+
+            
+            
+            
+            
+            
+<span class="todo"> ( TODO phantom pasa a ser btn-secondary-invert ) </span> 
+{% call button.simple('invert','btn-default description') %} {% endcall %}
+
+<span class="todo"> ( TODO invert pasa a ser secondary ) </span> 
+{% call button.simple('invert-light','btn-default description') %} {% endcall %}
+
+<span class="todo"> ( TODO invert light pasa a ser invert ) </span> 
+{% call button.simple('trans','btn-default description','bg-dark') %} {% endcall %}
+
+<span class="todo"> ( TODO eliminar , pasa a ser un boton ) </span> 
+{% call button.simple('Terciario','blanco con fondo gris, hay que realizarlo','bg-dark') %} {% endcall %}
+
+<span class="todo"> ( TODO eliminar , pasa a ser un boton ) </span> 
+{% call button.simple('blue','btn-default description') %} {% endcall %}
+
+<div class="btn btn-circle">btn-circle</div> <br> <br> 
+{% call button.simple('circle','btn-default description') %} {% endcall %}
+{% call button.simple('text','btn-default description') %} {% endcall %}
+{% call button.simple('link','btn-default description') %} {% endcall %}
+{% call button.iconClear('btn-clear','Usado para iconos') %} {% endcall %}
+
+
         </div>
     </div>
 </section>
