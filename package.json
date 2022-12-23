@@ -12,6 +12,7 @@
         "clipboard": "^2.0.11"
     },
     "devDependencies": {
+        "holygrailcss": "^2.0.12",
         "@babel/core": "^7.11.0",
         "@babel/preset-env": "^7.11.0",
         "browser-sync": "^2.27.10",
@@ -25,7 +26,6 @@
         "gulp-sass": "^5.0.0",
         "gulp-uglify": "^3.0.2",
         "gulp-watch": "^5.0.1",
-        "holygrailcss": "^2.0.10",
         "lodash": "^4.17.21",
         "lodash.mergewith": ">=4.6.2",
         "mixin-deep": "^2.0.1",

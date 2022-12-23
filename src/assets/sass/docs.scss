@@ -1255,7 +1255,24 @@ article svg-icon div svg {
 		path {
 			fill: $c-white;
 		}
+		 circle {
+			stroke: $c-white;
+		}
 	}
+
+//todo holygrail
+	input:focus {
+		outline: none;
+		border: 1px solid $c-white;
+	}
+
+	.input, .textarea, .select select {
+
+		color: $c-white;
+
+	}
+
+
 }
 .sticky-top {
 	position: sticky;
