@@ -1,115 +1,43 @@
-{% extends "base2.html" %} 
-  {% import "_button.html" as button %} 
-  {% block title %} 
-    {% call special.titledoc('Input','desc','actualizado') %} {% endcall %} 
-  {% endblock %} 
-{% block content %}
-
-
-<section class="mb-32 mt-32">
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} {% call
+special.titledoc('Input','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} <section
+    class="mb-32 mt-32">
     <div class="row">
-        <div class="col-xs-12 "></div>
         <div class="col-xs-12 ">
-            <div class="tit-s c-gray "> Campos que permiten la recolección limpia de información del usuario en toda la
-                interfaz. </div>
-        </div>
-    </div>
-</section>
-<section class="mb-32 mt-32">
-    <div class="row">
-    
-        <div class="col-xs-12 "></div>
-        <div class="col-xs-12">
-            <div class="tabguide">
-                <ul id="tabguide-nav" class="tabguide-head list-inline">
-                    <li><a href="#tabguide1">Simple</a></li>
-                    <li><a href="#tabguide2">Error</a></li>
-                    <li><a href="#tabguide3">contador</a></li>
-                    <li><a href="#tabguide4">icono</a></li>
-                </ul> <!-- END tabguideguide-nav -->
-                <div id="tabguide-content">
-                    <div id="tabguide1" class="tabguide-content">
-                        <div class='form-input-label'>
-                            <input type='email' id='Input animado' class='input Input animado'
-                                placeholder='Input animado' required=''>
-                            <label for='Input animado'>Input animado</label>
-                        </div>
-                    </div>
-                    <div id="tabguide2" class="tabguide-content">
-                        <div class="form-input-label is-error">
-                            <input type="email" id="10" class="input" placeholder="Email address" required="">
-                            <label for="10">Email address</label>
-                            <div class="validation-error-messages">
-                                <p class="help p-14">Mensaje extra</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tabguide3" class="tabguide-content">
-                        <div class="form-input-label is-error">
-                            <input type="email" id="10" class="input" placeholder="Email address" required="">
-                            <label for="10">Email address</label>
-                            <div class="info-text p-14 text-right">0/3</div>
-                            <div class="validation-error-messages">
-                                <p class="help p-14">Mensaje extra</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tabguide4" class="tabguide-content">
-                        <div class='form-input-label has-ico-pre'>
-                            <input type='email' id='dos' class='input' placeholder='Email address' required='' />
-                            <label for='dos'>Email dos</label>
-                            <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
-                                <g transform='translate(0, 0)'>
-                                    <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-                                    </circle>
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
-                </div> <!-- END tabguideguide-content -->
-            </div> <!-- END tabguideguide --> {% call insert.input('Input animado','Requieren de un label') %} {%
-            endcall %} {% call insert.input('input-notouch','Requieren de un label') %} {% endcall %}
-        </div>
-    </div>
-</section>
-<section class="mb-32 mt-32">
-    <div class="row">
-    
-        <div class="col-xs-12 ">
-            <div class="text-14-2b"> Nuevos inputs animados <br> con placeholders en labels </div>
+            <div class="tit-m"> Types <br> en inputs </div>
         </div>
         <div class="col-xs-12">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pre-title mb-16">
-                        <strong> Fase 1 </strong>en inputs <p>
-                            <br> Primeramente dependiendo del type, sacaremos un teclado o otro en mobile. Si ponemos
-                            tipo mail, mostraremos la @, si ponemos tipo tel, aplicaremos el teclado numérico.
-                        </p>
+                        <br>
+                        <p> El atributo type en un elemento input especifica el tipo de entrada que se espera del
+                            usuario. Esto determina el tipo de teclado virtual o de entrada que se mostrará en
+                            dispositivos móviles y puede cambiar la forma en que se procesan los datos introducidos por
+                            el usuario. Algunos de los tipos más comunes de input son: </p>
                     </div>
                     <p class="p-s">
                     <div class="language-markup">
                         <pre>
 <code >  
+&lt;input type=&quot;text&quot;&gt; (default value) <br> //para entrada de texto
+&lt;input type=&quot;number&quot;&gt; <br> // entrada numérica
+&lt;input type=&quot;email&quot;&gt; <br> //para entrada de direcciones de correo electrónico @
+&lt;input type=&quot;password&quot;&gt; <br>  //para entrada de contraseña
+&lt;input type=&quot;date&quot;&gt; <br> // entrada de fechas
+&lt;input type=&quot;radio&quot;&gt; <br> //para seleccionar una opción única de un conjunto de opciones
+&lt;input type=&quot;checkbox&quot;&gt; //para seleccionar varias opciones de un conjunto de opciones
 &lt;input type=&quot;button&quot;&gt;  <br>
-&lt;input type=&quot;checkbox&quot;&gt;
 &lt;input type=&quot;color&quot;&gt; <br>
-&lt;input type=&quot;date&quot;&gt; <br>
 &lt;input type=&quot;datetime-local&quot;&gt; <br>
-&lt;input type=&quot;email&quot;&gt; <br>
 &lt;input type=&quot;file&quot;&gt; <br>
 &lt;input type=&quot;hidden&quot;&gt; <br>
 &lt;input type=&quot;image&quot;&gt; <br>
 &lt;input type=&quot;month&quot;&gt; <br>
-&lt;input type=&quot;number&quot;&gt; <br>
-&lt;input type=&quot;password&quot;&gt; <br>
-&lt;input type=&quot;radio&quot;&gt; <br>
 &lt;input type=&quot;range&quot;&gt; <br>
 &lt;input type=&quot;reset&quot;&gt; <br>
 &lt;input type=&quot;search&quot;&gt; <br>
 &lt;input type=&quot;submit&quot;&gt; <br>
 &lt;input type=&quot;tel&quot;&gt; <br>
-&lt;input type=&quot;text&quot;&gt; (default value) <br>
 &lt;input type=&quot;time&quot;&gt; <br>
 &lt;input type=&quot;url&quot;&gt; <br>
 &lt;input type=&quot;week&quot;&gt; <br>
@@ -123,273 +51,174 @@
 </section>
 <section class="mb-32 mt-32">
     <div class="row">
-    
+        <div class="col-xs-12 "></div>
         <div class="col-xs-12 ">
-            <div class="text-14-2b"> Inputs Animados <br> Requieren de un label </div>
+            <div class="tit-s c-gray "> Debemos cambiar todos los inputs a la siguiente estructura <b>Form input label
+                    2</b> </div>
         </div>
-        <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="row">
-                        <div class="col">
-
-                            <div class="form-input-label">
-                                <input type="email" id="uno" class="input" placeholder="Email address" required="" />
-                                <!-- autofocus=""  si es necesario-->
-                                <label for="uno">Email address</label>
-                            </div>
-                            <div class="form-input-label has-ico-pre">
-                                <input type="email" id="dos" class="input" placeholder="Email address" required="" />
-                                <label for="dos">Email dos</label>
-                                <svg class="ico-pre" width="16px" height="16px" viewBox="0 0 16 16">
-                                    <g transform="translate(0, 0)">
-                                        <circle fill="none" stroke="#000000" cx="8" cy="8" r="6">
-                                        </circle>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="form-input-label has-ico-post">
-                                <input type="email" id="tres" class="input" placeholder="Email address" required="" />
-                                <label for="tres">Email tres</label>
-                                <svg class="ico-post" width="16px" height="16px" viewBox="0 0 16 16">
-                                    <g transform="translate(0, 0)">
-                                        <circle fill="none" stroke="#000000" cx="8" cy="8" r="6">
-                                        </circle>
-                                    </g>
-                                </svg>
-                            </div>
-
-
-
-                            <div class="has-light bg-primary p-16">
-                                <div class="form-input-label has-light">
-                                    <input type="email" id="dark" class="input" placeholder="Email address" required="" />
-                                    <!-- autofocus=""  si es necesario-->
-                                    <label for="dark">Has-light </label>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <pre><code class="language-markup">
-{{ "
-<div class='form-input-label'>
-    <input type='email' id='uno' class='input'
-        placeholder='Email address' required='' />
-    <!-- autofocus=''  si es necesario-->
-    <label for='uno'>Email address</label>
-</div>
-<div class='form-input-label has-ico-pre'>
-    <input type='email' id='dos' class='input'
-        placeholder='Email address' required='' />
-    <label for='dos'>Email dos</label>
-    <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
-        <g transform='translate(0, 0)'>
-            <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-            </circle>
-        </g>
-    </svg>
-</div>
-<div class='form-input-label has-ico-post'>
-    <input type='email' id='tres' class='input'
-        placeholder='Email address' required='' />
-    <label for='tres'>Email tres</label>
-    <svg class='ico-post' width='16px' height='16px'
-        viewBox='0 0 16 16'>
-        <g transform='translate(0, 0)'>
-            <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
-            </circle>
-        </g>
-    </svg>
-</div>
-
-
-<div class='has-light bg-primary p-16'>
-    <div class='form-input-label has-light'>
-        <input type='email' id='dark' class='input' placeholder='Email address' required='' />
-        <!-- autofocus=''  si es necesario-->
-        <label for='dark'>Has-light </label>
     </div>
-</div>
-
-
-
-" | escape }}
-
-</code></pre>
-                    <br>
-                    <pre><code class="language-markup">
-<h2 class="tit-m">Zen coding</h2>
-
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <hr> {% call insert.element("Form input label 2"," <div class='form-input-label-2 is-error'>
+                <input type='email' id='bb' class='input' placeholder='Email address' required='' />
+                <label for='bb'>form input label 2</label>
+                <div class='info-text text-14-r text-right'>0/3</div>
+                <div class='validation-error-messages'>
+                    <div class='input-text p-xs'> Mensaje de info </div>
+                    <div class='help p-14'>
+                        <svg-icon src='warning' class='pr-8' _nghost-oww-c46=''>
+                            <div _ngcontent-oww-c46=''><svg width='16' height='16' viewBox='0 0 16 16' fill='none'
+                                    xmlns='http://www.w3.org/2000/svg'>
+                                    <path
+                                        d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z'
+                                        fill='black'></path>
+                                </svg> </div>
+                        </svg-icon>Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+                        siguiente Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+                        siguiente Mensaje de error nuevo , empuja el siguiente
+                    </div>
+                </div>
+            </div> ") %} {% endcall %}
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row mb-24">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16"> Input normal </div>
+            <div class='form-input-label-2  '>
+                <input type='email' id='t1' class='input' placeholder='Email address' required='' />
+                <label for='t1'>form input label 2</label>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-24">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16"> Input error </div>
+            <div class='form-input-label-2 is-error '>
+                <input type='email' id='t2' class='input' placeholder='Email address' required='' />
+                <label for='t2'>form input label 2</label>
+                <div class='validation-error-messages'>
+                    <div class='help p-14'>
+                        <svg-icon src='warning' class='pr-8' _nghost-oww-c46=''>
+                            <div _ngcontent-oww-c46=''><svg width='16' height='16' viewBox='0 0 16 16' fill='none'
+                                    xmlns='http://www.w3.org/2000/svg'>
+                                    <path
+                                        d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z'
+                                        fill='black'></path>
+                                </svg> </div>
+                        </svg-icon>Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+                        siguiente Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+                        siguiente Mensaje de error nuevo , empuja el siguiente
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-24">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16"> Input has-ico-pre </div>
+            <div class='form-input-label-2 has-ico-pre  '>
+                <input type='email' id='t3' class='input' placeholder='Email address' required='' />
+                <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
+                    <g transform='translate(0, 0)'>
+                        <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
+                        </circle>
+                    </g>
+                </svg>
+                <label for='t3'>form input label 2</label>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-24">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16"> Input has-ico-post </div>
+            <div class='form-input-label-2 has-ico-post  '>
+                <input type='text' id='t4' class='input' placeholder='Email address' />
+                <label for='t4'>form input label 2</label>
+                <svg class='ico-post' width='16px' height='16px' viewBox='0 0 16 16'>
+                    <g transform='translate(0, 0)'>
+                        <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
+                        </circle>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-24">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16"> Input Password</div>
+            <div class='form-input-label-2  form-input-pass has-ico-post  '>
+                <input type='password' id='t5' class='input' placeholder='Password' required='' />
+                <label for='t5'>Input Password</label>
+                <svg class='ico-post' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
+                    <g transform="translate(0, 0)">
+                        <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            d="M0.5,8 c0,0,3-5.5,7.5-5.5S15.5,8,15.5,8s-3,5.5-7.5,5.5S0.5,8,0.5,8z">
+                        </path>
+                        <path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" d="M5,8 c0-1.657,1.343-3,3-3"></path>
+                        <path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" d=" M11,8c0,1.657-1.343,3-3,3">
+                        </path>
+                        <line data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="15" x2="15" y2="1"></line>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-6">
+            <ul class=" list-mini p-xs">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <ul class=" list-mini p-xs">
+                <li class="is-missing">lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="tit-m mb-16">Zen coding </div>
+            <pre><code class="language-markup">
 .form-input-label>input.input+label <br> 
 .form-input-label.has-ico-pre>input.input+label+svg.ico-pre <br>
 .form-input-label.has-ico-post>input.input+label+svg.ico-post
-</code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="mb-32 mt-32">
-    <div class="row">
-    
-        <div class="col-xs-12 ">
-            <div class="text-14-2b"> Input Password Input con icono y control de palabras </div>
-        </div>
-        <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-input-label form-input-pass icon-right">
-                        <input type="email" id="uno" class="input " placeholder="Password" required="" />
-                        <label for="uno">Password</label>
-                        <div class="form-text text-14-m text-right">
-                            <div class="form-text-svg">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
-                                    <g transform="translate(0, 0)">
-                                        <path fill="none" stroke="#000000" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-miterlimit="10"
-                                            d="M0.5,8 c0,0,3-5.5,7.5-5.5S15.5,8,15.5,8s-3,5.5-7.5,5.5S0.5,8,0.5,8z">
-                                        </path>
-                                        <path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-miterlimit="10"
-                                            d="M5,8 c0-1.657,1.343-3,3-3"></path>
-                                        <path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-miterlimit="10"
-                                            d=" M11,8c0,1.657-1.343,3-3,3">
-                                        </path>
-                                        <line data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round"
-                                            stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="15" x2="15"
-                                            y2="1"></line>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="row ">
-                            <div class="col-xs-6">
-                                <ul class=" list-mini p-xs">
-                                    <li>lorem</li>
-                                    <li>lorem</li>
-                                    <li>lorem</li>
-                                    <li>lorem</li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-6">
-                                <ul class=" list-mini p-xs">
-                                    <li class="is-missing">lorem</li>
-                                    <li>lorem</li>
-                                    <li>lorem</li>
-                                    <li>lorem</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <pre><code class="language-markup">
-&lt;div class=&quot;form-input-label form-input-pass icon-right&quot;&gt;
-    &lt;input type=&quot;email&quot; id=&quot;uno&quot; class=&quot;input &quot; placeholder=&quot;Password&quot; required=&quot;&quot; /&gt;
-    &lt;label for=&quot;uno&quot;&gt;Password&lt;/label&gt;
-
-    &lt;div class=&quot;form-text text-14-m text-right&quot;&gt;
-    &lt;div class=&quot;form-text-svg&quot;&gt;
-
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;16px&quot; height=&quot;16px&quot; viewBox=&quot;0 0 16 16&quot;&gt; &lt;g transform=&quot;translate(0, 0)&quot;&gt; &lt;path fill=&quot;none&quot; stroke=&quot;#000000&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M0.5,8 c0,0,3-5.5,7.5-5.5S15.5,8,15.5,8s-3,5.5-7.5,5.5S0.5,8,0.5,8z&quot;&gt;&lt;/path&gt; &lt;path data-color=&quot;color-2&quot; fill=&quot;none&quot; stroke=&quot;#000000&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; d=&quot;M5,8 c0-1.657,1.343-3,3-3&quot;&gt;&lt;/path&gt; &lt;path data-color=&quot;color-2&quot; fill=&quot;none&quot; stroke=&quot;#000000&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; d=&quot; M11,8c0,1.657-1.343,3-3,3&quot;&gt;&lt;/path&gt; &lt;line data-color=&quot;color-2&quot; fill=&quot;none&quot; stroke=&quot;#000000&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; x1=&quot;1&quot; y1=&quot;15&quot; x2=&quot;15&quot; y2=&quot;1&quot;&gt;&lt;/line&gt; &lt;/g&gt; &lt;/svg&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;row &quot;&gt;
-        &lt;div class=&quot;col-xs-6&quot;&gt;
-            &lt;ul class=&quot; list-mini p-xs&quot;&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;col-xs-6&quot;&gt;
-            &lt;ul class=&quot; list-mini p-xs&quot;&gt;
-                &lt;li class=&quot;is-missing&quot;&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-                &lt;li&gt;lorem&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
                 </code></pre>
         </div>
     </div>
-</section>
-<section class="mb-32 mt-32">
     <div class="row">
-    
-        <div class="col-xs-12 ">
-            <div class="text-14-2b"> Dos inputs en la misma linea </div>
-        </div>
         <div class="col-xs-12">
-            <div class="row">
+            <div class="row mb-24">
                 <div class="col-xs-12">
-                    <div class="form-input-label">
-                        <input type="email" id="uno" class="input" placeholder="Email address" required="" />
-                        <label for="uno">Email address</label>
+                    <div class="tit-m mb-16"> Input Disabled </div>
+                    <div class='form-input-label-2  '>
+                        <input type='email' id='t1' class='input input-notouch' placeholder='Email address'
+                            required='' />
+                        <label for='t1'>form input label 2</label>
                     </div>
                 </div>
-                <div class="col-xs-12">
-                    <div class="form-input-label">
-                        <input type="email" id="2" class="input" placeholder="Email address" required="" />
-                        <label for="2">Email address</label>
-                    </div>
-                </div>
-            </div>
-            <pre><code class="language-markup">
-            &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;col-xs-12&quot;&gt;
-            &lt;div class=&quot;form-input-label&quot;&gt;
-            &lt;input type=&quot;email&quot; id=&quot;uno&quot; class=&quot;input&quot; placeholder=&quot;Email address&quot; required=&quot;&quot; /&gt;
-            &lt;label for=&quot;uno&quot;&gt;Email address&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;col-xs-12&quot;&gt;
-            &lt;div class=&quot;form-input-label&quot;&gt;
-            &lt;input type=&quot;email&quot; id=&quot;2&quot; class=&quot;input&quot; placeholder=&quot;Email address&quot; required=&quot;&quot; /&gt;
-            &lt;label for=&quot;2&quot;&gt;Email address&lt;/label&gt;
-            &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;/div&gt;
-            </code></pre>
-        </div>
-    </div>
-</section>
-<section class="mb-32 mt-32">
-    <div class="row">
-    
-        <div class="col-xs-12 ">
-            <strong> Inputs </strong>con botón <p> Dos elementos en la misma linea </p>
-        </div>
-        <div class="col-xs-12">
-            <div class="row is-flex">
-                 {% call insert.element("input con boton "," <div class='col'>
-                        <div class='form-input-label'>
-                            <input type='email' id='uno' class='input' placeholder='Email address' />
-                            <label for='uno'>Email address </label>
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class='form-input-label'>
-                            <div class='btn btn-primary btn--full'>btn-primary</div>
-                        </div>
-                    </div> ") %} {% endcall %}
-                
             </div>
         </div>
     </div>
 </section>
 <section class="mb-32 mt-32">
     <div class="row">
-    
         <div class="col-xs-12 ">
-            <div class="text-14-2b"> Inputs no touch inputs no modificables </div>
+            <div class="tit-m"> Inputs no touch inputs no modificables </div>
         </div>
         <div class="col-xs-12"> {% call insert.element("input no modificable"," <div class='form-input-label'>
                 <input type='email' id='cuatro' class='input input-notouch' placeholder='' required='' />
@@ -399,9 +228,8 @@
 </section>
 <section class="mb-32 mt-32">
     <div class="row">
-    
         <div class="col-xs-12 ">
-            <div class="text-14-2b"> Inputs con prefijos inputs con prefijo </div>
+            <div class="tit-m"> Inputs con prefijos inputs con prefijo </div>
         </div>
         <div class="col-xs-12"> {% call insert.element("prefix form input"," <div class='form-input-prefix'>
                 <div class='input-prefix'>
@@ -418,9 +246,8 @@
 </section>
 <section class="mb-32 mt-32">
     <div class="row">
-    
         <div class="col-xs-12 ">
-            <div class="text-14-2b">Inputs básicos sin animación</div>
+            <div class="tit-m">Inputs básicos sin animación</div>
         </div>
         <div class="col-xs-12">
             <div class="row">
@@ -467,40 +294,7 @@
         <input type='text' placeholder='text' class='input' />
     </div>
 </div>"| escape }}
-
 </code></pre>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="mb-32 mt-32">
-    <div class="row">
-    
-        <div class="col-xs-12 ">
-            <div class="text-14-2b">Inputs con error</div>
-        </div>
-        <div class="col-xs-12">
-            <div class="row">
-                <div class="col-xs-12">
-                    <strong>Inputs</strong>                    
-                    <br> Inputs con error <div class="alert"> (Debemos cambiar los absolute de los help, en la web
-                        tenemos una div con un min height validation-error) </div>
-                    <hr> {% call insert.element("Form input label 2","<div class='form-input-label-2 is-error'>
-                        <input type='email' id='bb' class='input' placeholder='Email address' required='' />
-                        <label for='bb'>form input label 2</label>
-                        <div class='info-text text-14-r text-right'>0/3</div>
-                        <div class='validation-error-messages'>
-                            <div class='input-text p-xs'> Mensaje de info </div>
-                            <div class='help p-14'><svg-icon src='warning' class='pr-8' _nghost-oww-c46=''><div _ngcontent-oww-c46=''><svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                                <path d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z' fill='black'></path>
-                                </svg>
-                                </div>
-                            </svg-icon>Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo ,
-                                empuja el siguiente Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo
-                                , empuja el siguiente Mensaje de error nuevo , empuja el siguiente </div>
-                        </div>
-                    </div> ") %} {% endcall %}
                 </div>
             </div>
         </div>

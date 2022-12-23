@@ -46,4 +46,65 @@ giftcard1.html
 giftcard.scss
 
 
-## creación de componentes.
+## TAblas tabulares
+
+
+```
+            <div class="tabguide">
+                <ul id="tabguide-nav" class="tabguide-head list-inline">
+                    <li><a href="#tabguide1">Simple</a></li>
+                    <li><a href="#tabguide2">Error</a></li>
+                    <li><a href="#tabguide3">contador</a></li>
+                    <li><a href="#tabguide4">icono</a></li>
+                </ul> <!-- END tabguideguide-nav -->
+                <div id="tabguide-content">
+                    <div id="tabguide1" class="tabguide-content">
+                        <div class='form-input-label'>
+                            <input type='email' id='Input animado' class='input Input animado'
+                                placeholder='Input animado' required=''>
+                            <label for='Input animado'>Input animado</label>
+                        </div>
+                    </div>
+                    <div id="tabguide2" class="tabguide-content">
+                        <div class="form-input-label is-error">
+                            <input type="email" id="10" class="input" placeholder="Email address" required="">
+                            <label for="10">Email address</label>
+                            <div class="validation-error-messages">
+                                <p class="help p-14">Mensaje extra</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabguide3" class="tabguide-content">
+                        <div class="form-input-label is-error">
+                            <input type="email" id="10" class="input" placeholder="Email address" required="">
+                            <label for="10">Email address</label>
+                            <div class="info-text p-14 text-right">0/3</div>
+                            <div class="validation-error-messages">
+                                <p class="help p-14">Mensaje extra</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabguide4" class="tabguide-content">
+                        <div class='form-input-label has-ico-pre'>
+                            <input type='email' id='dos' class='input' placeholder='Email address' required='' />
+                            <label for='dos'>Email dos</label>
+                            <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
+                                <g transform='translate(0, 0)'>
+                                    <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
+                                    </circle>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div> <!-- END tabguideguide-content -->
+            </div> 
+```
+
+
+
+## insertar codigo escapado
+
+````
+{"  codigo " | escape }}
+
+```
