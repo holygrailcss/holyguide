@@ -1,6 +1,6 @@
 {% macro template(templateClass='', explicacion='',dark='') %}
 <h3>{{ templateClass }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -39,7 +39,7 @@
 			</div>
 			<div class="resize-snip">
 				<a
-					class="text-12-r"
+					class="p-xs"
 					target="_blank"
 					href="molecules/_{{ component }}.html"
 				>
@@ -47,7 +47,7 @@
 				</a>
 			</div>
 			<div class="resize-code">
-				<div class="seecode text-12-r">
+				<div class="seecode p-xs">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <title>window-dev</title> <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" transform="translate(0.5 0.5)" fill="#000000" stroke="#000000"> <polyline fill="none" stroke-miterlimit="10" points=" 8,12 6,14 8,16 "></polyline> <polyline fill="none" stroke-miterlimit="10" points=" 16,12 18,14 16,16 "></polyline> <line fill="none" stroke-miterlimit="10" x1="11" y1="18" x2="13" y2="10"></line> <rect x="1" y="2" fill="none" stroke="#000000" stroke-miterlimit="10" width="22" height="20"></rect> <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1" y1="6" x2="23" y2="6"></line> <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6" y1="2" x2="6" y2="6"></line> </g> </svg>
 				</div>
 			</div>
@@ -99,7 +99,7 @@
 {% endmacro %} {% macro title(titular='', descripcion='') %}
 <div class="col-xs-12">
 	<div class="text-18-2b">{{titular}}</div>
-	<div class="p1">{{descripcion}}</div>
+	<div class="p-14">{{descripcion}}</div>
 	<hr class="mt-16 mb-40" />
 </div>
 {% endmacro %} 
@@ -266,7 +266,7 @@
 {% endif %} {% endmacro %} 
 {% macro list(listClass='', explicacion='') %}
 <h3>{{ listClass }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 <ul class="{{ listClass  }}">
 	<li><a href="">{{ listClass }}</a></li>
 	<li><a href="">{{ listClass }}</a></li>
@@ -284,7 +284,7 @@
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 {% endmacro %} {% macro input(inputName='', explicacion='',dark='') %}
 <h3>{{ inputName | capitalize }}</h3>
-<p class="p1">{{inputName }} : {{ explicacion }}</p>
+<p class="p-14">{{inputName }} : {{ explicacion }}</p>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
 		<div class="form-input-label">
@@ -314,7 +314,7 @@
 </div>
 {% endmacro %} {% macro select(selectName='', explicacion='',dark='') %}
 <h3>{{ selectName | capitalize }}</h3>
-<p class="p1">{{selectName }} : {{ explicacion }}</p>
+<p class="p-14">{{selectName }} : {{ explicacion }}</p>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
 		<div class="select {{selectName }}">
@@ -345,7 +345,7 @@
 {% endmacro %} 
 {% macro checkbox(checkboxClass='', explicacion='',dark='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -443,7 +443,7 @@
 {% endmacro %}
 {% macro checkboxSide(checkboxClass='', explicacion='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -497,7 +497,7 @@
 {% endmacro %} 
 {% macro checkboxRadio(checkboxClass='', explicacion='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -544,7 +544,7 @@
 {% endmacro %} 
 {% macro key(descripcion='', x='',y='', z='', w='') %} {% if
 descripcion %}
-<div class="h3 mb-16 mt-16">{{ descripcion }}</div>
+<div class="tit-s mb-16 mt-16">{{ descripcion }}</div>
 {% endif %}
 <div class="key-wrap">
 	{% if x %}
@@ -562,9 +562,9 @@ descripcion %}
 </div>
 {% endmacro %} {% macro minicomponent(titulo='' ) %}
 <a href="./{{titulo}}.html">
-	<div class="p16 resize-mini">
+	<div class="p-146 resize-mini">
 		<div class="p-16 text-center">
-			<div class="text-16-b pb-8">{{titulo}}</div>
+			<div class="p-m-b pb-8">{{titulo}}</div>
 			<img src="images/components/{{titulo}}.jpg" alt="" />
 		</div>
 	</div>
@@ -856,7 +856,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 {% endmacro %} 
 {% macro listButton(listClass='', explicacion='') %}
 <h3>{{ listClass | capitalize }}</h3>
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 <div class="resize-mini">
 	{% if listClass === "list-button list-icons" %}
 	<div class="p-16">
@@ -1078,7 +1078,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 {% macro checkboxcard(checkboxcard='', explicacion='',dark='') %}
 <h3>{{ checkboxcard }}</h3>
 
-<p class="p1">{{ explicacion }}</p>
+<p class="p-14">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -1177,7 +1177,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 			</div>
 			<div class="resize-snip">
 				<a
-					class="text-12-r"
+					class="p-xs"
 					target="_blank"
 					href="molecules/_{{ component }}.html"
 				>
@@ -1185,7 +1185,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 				</a>
 			</div>
 			<div class="resize-code">
-				<div class="seecode text-12-r">
+				<div class="seecode p-xs">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <title>window-dev</title> <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" transform="translate(0.5 0.5)" fill="#000000" stroke="#000000"> <polyline fill="none" stroke-miterlimit="10" points=" 8,12 6,14 8,16 "></polyline> <polyline fill="none" stroke-miterlimit="10" points=" 16,12 18,14 16,16 "></polyline> <line fill="none" stroke-miterlimit="10" x1="11" y1="18" x2="13" y2="10"></line> <rect x="1" y="2" fill="none" stroke="#000000" stroke-miterlimit="10" width="22" height="20"></rect> <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1" y1="6" x2="23" y2="6"></line> <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6" y1="2" x2="6" y2="6"></line> </g> </svg>
 				</div>
 			</div>

@@ -4,7 +4,7 @@
 {% if descripcion %} 
 
 
-<div class="h3 mb-16 mt-16"> {{ descripcion }} </div> {% endif %}
+<div class="tit-s mb-16 mt-16"> {{ descripcion }} </div> {% endif %}
 <div class="key-wrap">
 {% if x %}<div class="key"> {{ x }}</div> {% endif %} 
 {% if y %}<div class="key-plus"> +</div> <div class="key"> {{ y }}</div> {% endif %} 
@@ -23,14 +23,13 @@
         <div class="hero">
             <div class="hero-bg">
                 <video autoplay="" loop="" muted="" id="myVideo" class="video" preload="true" playsinline="">
-                    <source src="https://sulmara.com/wp-content/themes/sulmara_theme/assets/video/bg.mp4"
-                        type="video/mp4">
+                    <source src="/assets/images/bg.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
         <div class="guide-header flex-column">
             <div class="head-m"> {{ titulo }}</div>
-            <div class=" text-12-r"> {{ actualizado }} </div>
+            <div class=" p-xs"> {{ actualizado }} </div>
             <div class=" text-14-r"> {{ descripcion }} </div>
         </div>
     </div>
