@@ -34,6 +34,13 @@ $(document).ready(function () {
 	});
 
 
+	$(".opencode").click(function () {
+	
+		$(this.parentNode).toggleClass("active");
+
+
+		return false;
+	});
 
 
 
