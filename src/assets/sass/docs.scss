@@ -232,7 +232,7 @@ nav {
 		color: #fff;
 		padding: 4px 8px;
 		border-radius: 8px;
-		margin-bottom: 20px;
+
 		font-size: 12px;
 		font-weight: 800;
 	}
@@ -1425,11 +1425,10 @@ img {
 
 .opencode{
     border: 1px solid #eaeaea;
-    width: calc(100% - 16px);
-    height: 32px;
-    overflow: hidden;
-    position: absolute;
-    z-index: 100;
+    width: calc(100% );
+
+
+	z-index: 100;
     background: #fff;
     font-size: 12px;
     text-align: right;
@@ -1437,11 +1436,17 @@ img {
     cursor: pointer;
     padding: 8px;
     margin-top: -1px;
+	cursor:pointer;
+	&:hover{
+		svg{
+			opacity: .5;
+		}
+
+	}
 }
 
 .opencode-wrap{
 	pre{
-		padding-top: 16px;
 		display:none;
 	}
 
