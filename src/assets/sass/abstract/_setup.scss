@@ -1,44 +1,77 @@
 
   @font-face {
-    font-family: 'DuttiW-Light' ;
-    src: url('../fonts/duttiw/DuttiW-Light.woff2') format('woff2'), url('../fonts/duttiw/DuttiW-Light.woff') format('woff');
+    font-family: 'dutti-daily-light' ;
+    src: url('../fonts/dutti-daily/dutti-daily-light.woff2') format('woff2'), 
+    url('../fonts/dutti-daily/dutti-daily-light.woff') format('woff');
 }
 @font-face {
-    font-family: 'DuttiW-Regular';
-    src: url('../fonts/duttiw/DuttiW-Regular.woff2') format('woff2'), url('../fonts/duttiw/DuttiW-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'DuttiW-Medium';
-    src: url('../fonts/duttiw/DuttiW-Medium.woff2') format('woff2'), url('../fonts/duttiw/DuttiW-Medium.woff') format('woff');
+    font-family: 'dutti-daily-regular';
+    src: url('../fonts/dutti-daily/dutti-daily-regular.woff2') format('woff2'), 
+    url('../fonts/dutti-daily/dutti-daily-regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'DuttiW-SemiBold';
-    src: url('../fonts/duttiw/DuttiW-SemiBold.woff2') format('woff2'), url('../fonts/duttiw/DuttiW-SemiBold.woff') format('woff');
+    font-family: 'dutti-daily-bold';
+    src: url('../fonts/dutti-daily/dutti-daily-bold.woff2') format('woff2'),
+         url('../fonts/dutti-daily/dutti-daily-bold.woff') format('woff');
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'dutti-extended-regular';
+    src: url('../fonts/dutti-daily/dutti-extended-regular.woff2') format('woff2'), 
+         url('../fonts/dutti-daily/dutti-extended-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'dutti-extended-bold';
+    src: url('../fonts/dutti-daily/dutti-extended-bold.woff2') format('woff2'),
+         url('../fonts/dutti-daily/dutti-extended-bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'dutti-extended-extrabold' ;
+    src: url('../fonts/dutti-daily/dutti-extended-extrabold.woff2') format('woff2'), 
+    url('../fonts/dutti-daily/dutti-extended-extrabold.woff') format('woff');
 }
 
 
 @font-face {
-    font-family: 'DuttiW-Bold';
-    src: url('../fonts/duttiw/DuttiW-Bold.woff2') format('woff2'), url('../fonts/duttiw/DuttiW-Bold.woff') format('woff');
+    font-family: 'massimo-daily-light';
+    src: url('../fonts/dutti-daily/massimo-daily-light.woff2') format('woff2'),
+         url('../fonts/dutti-daily/massimo-daily-light.woff') format('woff');
 }
 
 
 @font-face {
-    font-family: 'DuttiWExtended-Bold';
-    src: url('../fonts/duttiw/DuttiWExtended-Bold.woff2') format('woff2'), url('../fonts/duttiw/DuttiWExtended-Bold.woff') format('woff');
+    font-family: 'massimo-daily-regular';
+    src: url('../fonts/dutti-daily/massimo-daily-regular.woff2') format('woff2'),
+         url('../fonts/dutti-daily/massimo-daily-regular.woff') format('woff');
 }
 
 
 @font-face {
-    font-family: 'DuttiWExtended-ExtraBold';
-    src: url('../fonts/duttiw/DuttiWExtended-ExtraBold.woff2') format('woff2'), url('../fonts/duttiw/DuttiWExtended-ExtraBold.woff') format('woff');
+    font-family: 'massimo-daily-bold';
+    src: url('../fonts/dutti-daily/massimo-daily-bold.woff2') format('woff2'),
+         url('../fonts/dutti-daily/massimo-daily-bold.woff') format('woff');
 }
         
 
 $headers:/* name:mobile,768,992,1280,line-height,font */
    (
+
+
+   sub-l: (24px, 24px, 42px, 42px, 1.2, "bold3"),
+   sub-m: (20px, 20px, 32px, 32px, 1.2, "bold3"),
+   sub-s: (16px, 16px, 20px,20px, 1.2, "medium3"),
+   sub-xs:(14px, 14px, 14px,14px, 1.2, "regular3"),
+
+
+
     tit-l: (24px, 24px, 42px, 42px, 1.2, "bold2"),
     tit-m: (20px, 20px, 32px, 32px, 1.2, "bold2"),
     tit-s: (16px, 16px, 20px,20px, 1.2, "bold"),
@@ -99,9 +132,10 @@ $headersFluids: (
   mbr-20-40: (20px, 40px, 40px, 40px) 
   )!default;
 
-$font-family-primary: 'DuttiW-Regular', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
+/* 
+$font-family-primary: 'duttiW-Regular', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 
-$font-family-light:   'DuttiW-Light', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
+$font-family-light:   'duttiW-Light', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 $font-family-regular: 'DuttiW-Regular', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 $font-family-medium:   'DuttiW-Medium', 'Helvetica Neue', Helvetica, 'Arial Narrow', 'Lucida Grande', sans-serif;
 $font-family-bold:     'DuttiW-SemiBold', 'Helvetica Neue', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
@@ -116,6 +150,25 @@ $font-family-boldcn: 'Helvetica Neue', Helvetica, 'Arial Narrow', 'Lucida Grande
 $font-family-2-regular: 'DuttiWExtended-Regular', 'Helvetica Neue', Helvetica, 'Arial Narrow', 'Lucida Grande', sans-serif;
 $font-family-2-medium:  'Helvetica Neue', Helvetica, 'Arial Narrow', 'Lucida Grande', sans-serif;
 $font-family-2-bold: 'DuttiWExtended-Bold', 'Helvetica Neue', Helvetica, 'Arial Narrow', 'Lucida Grande', sans-serif;
+
+ */
+
+
+$font-family-a-r: 'dutti-daily-regular', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
+$font-family-a-m: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
+$font-family-a-b:'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
+
+$font-family-b-r: 'dutti-extended-regular', Arial, sans-serif;
+$font-family-b-m: 'dutti-extended-bold','Arial', sans-serif;
+$font-family-b-b: 'dutti-extended-extrabold', Helvetica, 'arial black', sans-serif;
+
+
+$font-family-c-r: 'massimo-daily-light', 'ms-serif',serif;
+$font-family-c-m: 'massimo-daily-regular', 'ms-serif',serif;
+$font-family-c-b: 'massimo-daily-bold', 'ms-serif',serif;
+
+
+
 
 $font-weight-light: inherit;
 $font-weight-regular: inherit;

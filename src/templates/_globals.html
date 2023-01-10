@@ -101,20 +101,22 @@
 
 {% set fontweight = 'inherit' %}
 
-{% set fontdefault = '"DuttiW-Regular",Helvetica,"Arial","LucidaGrande",sans-serif' %}
+{% set fontdefault = '"dutti-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif' %}
 
 
 {% set fonts = [
    
-{name: 'light',family:'"DuttiW-Light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'regular',family:'"DuttiW-Regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'medium',family:'"DuttiW-Medium",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'bold',family:'"DuttiW-Bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'black',family:'"DuttiW-Black",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-regular',family:'"DuttiWExtended-Regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-medium',family:'"DuttiWExtended-Medium",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-bold',family:'"DuttiWExtended-Bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-black',family:'"DuttiWExtended-ExtraBold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'}
+{name:'regular',var: '$font-family-a-r',family:'"dutti-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'medium',var: '$font-family-a-m',family:'"dutti-daily-light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'bold',var: '$font-family-a-b',family:'"dutti-daily-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+
+{name:'2-regular',var: '$font-family-b-r',family:'"dutti-extended-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-medium',var: '$font-family-b-m',family:'"dutti-extended-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'2-bold',var: '$font-family-b-b',family:'"dutti-extended-extrabold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+
+{name:'3-regular',var: '$font-family-c-r',family:'"massimo-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'3-medium',var: '$font-family-c-m',family:'"massimo-daily-light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
+{name:'3-bold',var: '$font-family-c-b',family:'"massimo-daily-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'}
 
 ]
 %}

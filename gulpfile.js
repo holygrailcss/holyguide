@@ -35,8 +35,8 @@ function imageMin(cb) {
 }
 
 function fonts(cb) {
-    gulp.src("src/assets/fonts/duttiw/*")
-        .pipe(gulp.dest("dist/fonts/duttiw"));
+    gulp.src("src/assets/fonts/dutti-daily/*")
+        .pipe(gulp.dest("dist/fonts/dutti-daily"));
     cb();
 }
 
