@@ -701,3 +701,12 @@ svg-icon{
 .storeloc-list { grid-area: storeloc-list; }
 
 .storeloc-map { grid-area: storeloc-map; }
+
+
+.contenteditable:focus-visible {
+ 
+
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-color: #80868b;
+
+}

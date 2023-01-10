@@ -1,10 +1,11 @@
-{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} {% call
-special.titledoc('Tipografía','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} <div
-    class="tit-s c-gray "> Familia tipográfica y jerarquías que debemos usar con sus ejemplos y variantes. </div>
-Paragraph 
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} 
+
+{% call special.titledoc('Tipografía','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} 
+
+<div class="tit-s c-gray  mb-64  "> Familia tipográfica y jerarquías que debemos usar con sus ejemplos y variantes. </div>
 
 
-<div class="col-xs-12 ">
+<div class="col-xs-12 mb-64 ">
     <div class="bg-info p-16 c-white is-flex mb-24">
         <p>Estas son las tipografías que estarán definidas en los archivos de diseño y las que deberias usar siempre.
         </p>
@@ -12,11 +13,50 @@ Paragraph
 
         
     </div> 
-    {% call insert.tipos('p','l','dutti-daily-regular','18px ','24px ','20px ','26px ') %} {% endcall%} 
-    {% call insert.tipos('p','m','dutti-daily-regular','14px ','20px ','16px ','22px ') %} {% endcall%} 
-    {% call insert.tipos('p','s','dutti-daily-regular','12px ','18px ','14px ','20px ') %} {% endcall%} 
-    {% call insert.tipos('p','xs','dutti-daily-regular','10px ','16px ','12px ','18px ') %} {% endcall%}
+
+
+
+    <div class="row  p-m-b mb-16">
+        <div class="col-xs-2">Nombre </div>
+        <div class="col-xs-1">  </div>
+        <div class="col-xs-1"> XS </div>
+        <div class="col-xs-1"> SM </div>
+        <div class="col-xs-1">MD </div>
+        <div class="col-xs-1"> LG </div>
+        <div class="col-xs-1"> </div>
+        <div class="col-xs-2">WEIGHT </div>
+
+        <div class="col-xs-2">LINE </div>
+        <hr class="m-0">
+    </div> 
+
+    {% for item in globals.TypeHeaders %} 
+    <div class="row mb-8">
+        <div class="col-xs-2   p-m-b">.{{item.name}} </div>
+        <div class="col-xs-1"> </div>
+        <div class="col-xs-1 p-s"> {{item.xs}} </div>
+        <div class="col-xs-1 p-s"> {{item.sm}} </div>
+        <div class="col-xs-1 p-s">{{item.md}} </div>
+        <div class="col-xs-1 p-s"> {{item.lg}} </div>
+        <div class="col-xs-1"> </div>
+        <div class="col-xs-2  p-s">{{item.weight}} </div>
+
+        <div class="col-xs-1  p-s">{{item.line}} </div>
+    </div>
+
+    {% endfor %}
+
 </div>
+
+<hr>
+
+    <div class="col-xs-12">
+        {% call insert.tipos('p','l','dutti-daily-regular','18px ','24px ','20px ','26px ') %} {% endcall%}
+        {% call insert.tipos('p','m','dutti-daily-regular','14px ','20px ','16px ','22px ') %} {% endcall%}
+        {% call insert.tipos('p','s','dutti-daily-regular','12px ','18px ','14px ','20px ') %} {% endcall%}
+        {% call insert.tipos('p','xs','dutti-daily-regular','10px ','16px ','12px ','18px ') %} {% endcall%}
+    </div>
+
 <div class="col-xs-12 "> 
     {% call insert.tipos('tit','l','dutti-extended-bold','24px ','30px ','48px ','64px ') %} {% endcall%} 
     {% call insert.tipos('tit','m','dutti-extended-bold','20px ','26px ','32px ','38px ') %} {% endcall%} 
@@ -45,18 +85,18 @@ Paragraph
 </section>
 <div class="row pt-64 pb-64">
     <div class="col-xs-12 ">
-        <div class="tit-m"> Tipografia </div>
+        <div class="tit-m mb-16" > Tipografia Fluida </div>
+
+
+        <div class="pre-title mb-16">
+            <p> Creamos un nuevo array de elementos fluidos, cuidado con ponerlos dentro de modales . ya que se basa en el ancho
+                de pantalla. Cada fuente fluida tiene tres variantes. <strong>Fluid-12-r, fluid-12-m, fluid-12-b</strong> </p>
+        </div>
+
+
     </div>
     <div class="col-xs-12">
         <section>
-            <div class="row">
-                <div class="col-xs-12 ">
-                    <div class="pre-title mb-16">
-                        <strong> Tipografias </strong>Fluidas <p> Creamos un nuevo array de elementos fluidos, cuidado
-                            con ponerlos dentro de modales . </p>
-                    </div>
-                </div>
-            </div>
             <div class="pre-show fluid-box">
                 <table class="demo">
                     <thead>
