@@ -70,16 +70,15 @@ $headers:/* name:mobile,768,992,1280,line-height,font */
    sub-s: (16px, 16px, 20px,20px, 1.2, "medium3"),
    sub-xs:(14px, 14px, 14px,14px, 1.2, "regular3"),
 
+    head-l:(56px, 56px, 96px, 96px, 1.1, "bold2"),
+    head-m:(42px, 42px, 64px, 64px, 1.1, "bold2"),
+    head-s:(32px, 32px, 56px ,56px, 1.1, "bold2"),
 
 
     tit-l: (24px, 24px, 42px, 42px, 1.2, "bold2"),
     tit-m: (20px, 20px, 32px, 32px, 1.2, "bold2"),
     tit-s: (16px, 16px, 20px,20px, 1.2, "bold"),
     tit-xs:(14px, 14px, 14px,14px, 1.2, "bold"),
-
-    head-l:(56px, 56px, 96px, 96px, 1.1, "bold2"),
-    head-m:(42px, 42px, 64px, 64px, 1.1, "bold2"),
-    head-s:(32px, 32px, 56px ,56px, 1.1, "bold2"),
 
     p-14: ( 14px, 14px, 14px, 14px, 1.3, 'regular' ), 
     p-l: (16px, 16px, 18px ,18px, 1.3, "regular"),
@@ -158,13 +157,12 @@ $font-family-a-r: 'dutti-daily-regular', Helvetica, 'Arial ', 'Lucida Grande', s
 $font-family-a-m: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 $font-family-a-b:'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 
-$font-family-b-r: 'dutti-extended-regular', Arial, sans-serif;
-$font-family-b-m: 'dutti-extended-bold','Arial', sans-serif;
+$font-family-b-r: 'dutti-extended-regular', Helvetica, Arial, sans-serif;
+$font-family-b-m: 'dutti-extended-bold', Helvetica,'Arial', sans-serif;
 $font-family-b-b: 'dutti-extended-extrabold', Helvetica, 'arial black', sans-serif;
 
-
-$font-family-c-r: 'massimo-daily-light', 'ms-serif',serif;
-$font-family-c-m: 'massimo-daily-regular', 'ms-serif',serif;
+$font-family-c-r: 'massimo-daily-regular', 'ms-serif',serif;
+$font-family-c-m: 'massimo-daily-light', 'ms-serif',serif;
 $font-family-c-b: 'massimo-daily-bold', 'ms-serif',serif;
 
 
