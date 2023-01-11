@@ -1,172 +1,183 @@
-{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} 
-
-{% call special.titledoc('Tipografía','desc','actualizado') %} {% endcall %} {% endblock %} {% block content %} 
-
-<div class="tit-s c-gray  mb-64  "> Familia tipográfica y jerarquías que debemos usar con sus ejemplos y variantes. </div>
-
-
-<div class="col-xs-12 mb-64 ">
-    <div class="bg-info p-16 c-white is-flex mb-24">
-        <p>Estas son las tipografías que estarán definidas en los archivos de diseño y las que deberias usar siempre. </p>
-    </div>
-
-
-
-    <div class="row  p-m-b mb-16">
-        <div class="col-xs-2">Nombre </div>
-        <div class="col-xs-1">  </div>
-        <div class="col-xs-1"> XS </div>
-        <div class="col-xs-1"> SM </div>
-        <div class="col-xs-1">MD </div>
-        <div class="col-xs-1"> LG </div>
-        <div class="col-xs-1"> </div>
-        <div class="col-xs-2">FAMILY </div>
-
-        <div class="col-xs-2">LINE </div>
-        <hr class="m-0">
-    </div> 
-
-    {% for item in globals.TypeHeaders %} 
-    <div class="row mb-8">
-        <div class="col-xs-2   p-m-b">.{{item.name}} </div>
-        <div class="col-xs-1"> </div>
-        <div class="col-xs-1 p-s"> {{item.xs}} </div>
-        <div class="col-xs-1 p-s"> {{item.sm}} </div>
-        <div class="col-xs-1 p-s">{{item.md}} </div>
-        <div class="col-xs-1 p-s"> {{item.lg}} </div>
-        <div class="col-xs-1"> </div>
-        <div class="col-xs-2  p-s">{{item.weight}} </div>
-
-        <div class="col-xs-1  p-s">{{item.line}} </div>
-    </div>
-
-    {% endfor %}
-
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title
+%} {% call special.titledoc('Tipografía','desc','actualizado') %} {% endcall %}
+{% endblock %} {% block content %}
+<div class="tit-s c-gray mb-64">
+	Familia tipográfica y jerarquías que debemos usar con sus ejemplos y
+	variantes.
 </div>
-
-
+<div class="col-xs-12 mb-64">
+	<div class="bg-info p-16 c-white is-flex mb-24">
+		<p>
+			Estas son las tipografías que estarán definidas en los archivos de diseño
+			y las que deberias usar siempre.
+		</p>
+	</div>
+	<div class="row p-m-b mb-16">
+		<div class="col-xs-2">Nombre</div>
+		<div class="col-xs-1"></div>
+		<div class="col-xs-1">XS</div>
+		<div class="col-xs-1">SM</div>
+		<div class="col-xs-1">MD</div>
+		<div class="col-xs-1">LG</div>
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2">FAMILY</div>
+		<div class="col-xs-2">LINE</div>
+		<hr class="m-0" />
+	</div>
+	{% for item in globals.TypeHeaders %}
+	<div class="row mb-8">
+		<div class="col-xs-2 p-m-b">.{{item.name}}</div>
+		<div class="col-xs-1"></div>
+		<div class="col-xs-1 p-s">{{item.xs}}</div>
+		<div class="col-xs-1 p-s">{{item.sm}}</div>
+		<div class="col-xs-1 p-s">{{item.md}}</div>
+		<div class="col-xs-1 p-s">{{item.lg}}</div>
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 p-s">{{item.weight}}</div>
+		<div class="col-xs-1 p-s">{{item.line}}</div>
+	</div>
+	{% endfor %}
+</div>
 <div class="row">
-    <div class="col-xs-12">
-        <p class="tit-m mb-16">Actualmente tenemos las siguientes Familias tipográficas:</p>
-        <p class="p-m mb-16">Las familias tipograficas que van después de la fuente primaria son las llamadas
-            <strong>"fallbacks"</strong>, estás fuentes son las primeras en cargar.</p>
-        <div class="tit-s mb-16 mt-32">Familia dutti-daily</div>
-        <p><strong>regular</strong>:'dutti-daily-regular', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;</p>
-        <p><strong>medium</strong>: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;</p>
-        <p><strong>bold</strong>: 'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;</p>
-        <div class="tit-s mb-16 mt-32">Familia dutti-extended</div>
-        <p><strong>regular2</strong>: 'dutti-extended-regular', Helvetica, Arial, sans-serif;</p>
-        <p><strong>medium2</strong>: 'dutti-extended-bold', Helvetica,'Arial', sans-serif;</p>
-        <p><strong>bold2</strong>: 'dutti-extended-extrabold', Helvetica, 'arial black', sans-serif;</p>
-        <div class="tit-s mb-16 mt-32">Familia massimo-daily</div>
-        <p><strong>regular3</strong>: 'massimo-daily-regular', 'ms-serif',serif; </p>
-        <p><strong>medium3</strong>: 'massimo-daily-light', 'ms-serif',serif;</p>
-        <p><strong>bold3</strong>: 'massimo-daily-bold', 'ms-serif',serif;</p>
-    </div>
+	<div class="col-xs-12">
+		<p class="tit-m mb-16">
+			Actualmente tenemos las siguientes Familias tipográficas:
+		</p>
+		<p class="p-m mb-16">
+			Las familias tipograficas que van después de la fuente primaria son las
+			llamadas <strong>"fallbacks"</strong>, estás fuentes son las primeras en
+			cargar.
+		</p>
+		<div class="tit-s mb-16 mt-32">Familia dutti-daily</div>
+		<p>
+			<strong>regular</strong>:'dutti-daily-regular', Helvetica, 'Arial ',
+			'Lucida Grande', sans-serif;
+		</p>
+		<p>
+			<strong>medium</strong>: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida
+			Grande', sans-serif;
+		</p>
+		<p>
+			<strong>bold</strong>: 'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida
+			Grande', sans-serif;
+		</p>
+		<div class="tit-s mb-16 mt-32">Familia dutti-extended</div>
+		<p>
+			<strong>regular2</strong>: 'dutti-extended-regular', Helvetica, Arial,
+			sans-serif;
+		</p>
+		<p>
+			<strong>medium2</strong>: 'dutti-extended-bold', Helvetica,'Arial',
+			sans-serif;
+		</p>
+		<p>
+			<strong>bold2</strong>: 'dutti-extended-extrabold', Helvetica, 'arial
+			black', sans-serif;
+		</p>
+		<div class="tit-s mb-16 mt-32">Familia massimo-daily</div>
+		<p><strong>regular3</strong>: 'massimo-daily-regular', 'ms-serif',serif;</p>
+		<p><strong>medium3</strong>: 'massimo-daily-light', 'ms-serif',serif;</p>
+		<p><strong>bold3</strong>: 'massimo-daily-bold', 'ms-serif',serif;</p>
+	</div>
 </div>
-
-<hr>
-
-    <div class="col-xs-12">
-        {% call insert.tipos('p','l','dutti-daily-regular','18px ','24px ','20px ','26px ') %} {% endcall%}
-        {% call insert.tipos('p','m','dutti-daily-regular','14px ','20px ','16px ','22px ') %} {% endcall%}
-        {% call insert.tipos('p','s','dutti-daily-regular','12px ','18px ','14px ','20px ') %} {% endcall%}
-        {% call insert.tipos('p','xs','dutti-daily-regular','10px ','16px ','12px ','18px ') %} {% endcall%}
-    </div>
-
-<div class="col-xs-12 "> 
-    {% call insert.tipos('tit','l','dutti-extended-bold','24px ','30px ','48px ','64px ') %} {% endcall%} 
-    {% call insert.tipos('tit','m','dutti-extended-bold','20px ','26px ','32px ','38px ') %} {% endcall%} 
-    {% call insert.tipos('tit','s','dutti-daily-bold','16px ','22px ','20px ','26px ') %} {% endcall%}
-     {% call insert.tipos('tit','xs','dutti-daily-bold','14px ','20px ','14px ','20px ') %} {% endcall%} </div>
+<hr />
+<div class="col-xs-12">
+            {% call insert.tipos('p','l','dutti-daily-regular','18px ','24px ','20px ','26px ') %} {% endcall%} 
+            {% call insert.tipos('p','m','dutti-daily-regular','14px ','20px ','16px ','22px ') %} {% endcall%} 
+            {% call insert.tipos('p','s','dutti-daily-regular','12px ','18px ','14px ','20px ') %} {% endcall%} 
+            {% call insert.tipos('p','xs','dutti-daily-regular','10px ','16px ','12px ','18px ') %} {% endcall%}
+</div>
+<div class="col-xs-12">
+            {% call insert.tipos('tit','l','dutti-extended-bold','24px ','30px ','48px ','64px ') %} {% endcall%} 
+            {% call insert.tipos('tit','m','dutti-extended-bold','20px ','26px ','32px ','38px ') %} {% endcall%}
+            {% call insert.tipos('tit','s','dutti-daily-bold','16px ','22px ','20px ','26px ') %} {% endcall%} 
+            {% call insert.tipos('tit','xs','dutti-daily-bold','14px ','20px ','14px ','20px ') %} {% endcall%}
+</div>
 <section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12 "> 
+	<div class="row">
+		<div class="col-xs-12">
             {% call insert.tipos('head','l','dutti-extended-bold','56px ','62px ','96px ','102px ') %} {% endcall%} 
             {% call insert.tipos('head','m','dutti-extended-bold','42px ','48px ','64px ','70px ') %} {% endcall%} 
-            {% call insert.tipos('head','s','dutti-extended-bold','32px ','38px ','56px ','62px ') %} {% endcall%} 
-        </div>
-    </div>
+            {% call insert.tipos('head','s','dutti-extended-bold','32px ','38px ','56px ','62px ') %} {% endcall%}
+		</div>
+	</div>
 </section>
-
-
 <section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12 "> 
+	<div class="row">
+		<div class="col-xs-12">
             {% call insert.tipos('sub','l','massimo-daily-bold','56px ','56px ','96px ','96px ') %} {% endcall%} 
-            {% call insert.tipos('sub','m','massimo-daily-bold','42px ','42px ','64px ','64px ') %} {% endcall%} 
+            {% call insert.tipos('sub','m','massimo-daily-bold','42px ','42px ','64px ','64px ') %} {% endcall%}
             {% call insert.tipos('sub','s','massimo-daily-medium','32px ','32px ','56px ','56px ') %} {% endcall%}
-
-
-
-
-
-
-        </div>
-    </div>
+		</div>
+	</div>
 </section>
 <div class="row pt-64 pb-64">
-    <div class="col-xs-12 ">
-        <div class="tit-m mb-16" > Tipografia Fluida </div>
-
-
-        <div class="pre-title mb-16">
-            <p> Creamos un nuevo array de elementos fluidos, cuidado con ponerlos dentro de modales . ya que se basa en el ancho
-                de pantalla. Cada fuente fluida tiene tres variantes. <strong>Fluid-12-r, fluid-12-m, fluid-12-b</strong> </p>
-        </div>
-
-
-    </div>
-    <div class="col-xs-12">
-        <section>
-            <div class="pre-show fluid-box">
-                <table class="demo">
-                    <thead>
-                        <tr>
-                            <th>Clases</th>
-                            <th>from</th>
-                            <th>to</th>
-                            <th>line</th>
-                        </tr>
-                    </thead>
-                    <tbody> {% for item in globals.fluid %} <tr>
-                            <td>{{ item.name }}</td>
-                            <td>{{ item.from }}</td>
-                            <td>{{ item.to }}</td>
-                            <td>{{ item.line }}</td>
-                        </tr> {% endfor %} </tbody>
-                </table>
-            </div>
-        </section>
-        <!-- Opción para subrayar textos -->
-        <section>
-            <div class="container-fluid">
-                <div class="pre-code">
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <div class="pre-title mb-16">
-                                <strong> text </strong>through <p> Usado para agregar tachado a cualquier tipo de texto.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mb-48">
-                    <h1 class="tit-s is-through">BE CREATIVE EVERY DAY</h1>
-                    <h7 class="p-xs is-through">BE CREATIVE EVERY DAY</h7>
-                    <div class="row">
-                        <div class="col-xs-12 ">
-                            <pre><code class="language-markup">
+	<div class="col-xs-12">
+		<div class="tit-m mb-16">Tipografia Fluida</div>
+		<div class="pre-title mb-16">
+			<p>
+				Creamos un nuevo array de elementos fluidos, cuidado con ponerlos dentro
+				de modales . ya que se basa en el ancho de pantalla. Cada fuente fluida
+				tiene tres variantes.
+				<strong>Fluid-12-r, fluid-12-m, fluid-12-b</strong>
+			</p>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<section>
+			<div class="pre-show fluid-box">
+				<table class="demo">
+					<thead>
+						<tr>
+							<th>Clases</th>
+							<th>from</th>
+							<th>to</th>
+							<th>line</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in globals.fluid %}
+						<tr>
+							<td>{{ item.name }}</td>
+							<td>{{ item.from }}</td>
+							<td>{{ item.to }}</td>
+							<td>{{ item.line }}</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- Opción para subrayar textos -->
+		<section>
+			<div class="container-fluid">
+				<div class="pre-code">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="pre-title mb-16">
+								<strong> text </strong>through
+								<p>Usado para agregar tachado a cualquier tipo de texto.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mb-48">
+					<h1 class="tit-s is-through">BE CREATIVE EVERY DAY</h1>
+					<h7 class="p-xs is-through">BE CREATIVE EVERY DAY</h7>
+					<div class="row">
+						<div class="col-xs-12">
+							<pre><code class="language-markup">
 {{"<h1 class='h1 is-through'>BE CREATIVE EVERY DAY</h1>
 <h6 class='p-xs is-through'>BE CREATIVE EVERY DAY</h6>
 <p-l class='p-l is-through'>BE CREATIVE EVERY DAY</p-l>
 <div class='fluid-12-r is-through' contenteditable> Texto fluido 12-r </div>" | escape}}
     </code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
-<script src="../js/scripts_type.js"></script> {% endblock %}
+<script src="../js/scripts_type.js"></script>
+{% endblock %}
