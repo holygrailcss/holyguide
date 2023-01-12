@@ -1,4 +1,4 @@
-## 🥤Massimoguide v2
+## 🥤Holyguide v2
 
 A basic 🥤Massimoguide v2 boilerplate to get developing locally with a few helpful tools already set up.
 
