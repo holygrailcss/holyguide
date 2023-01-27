@@ -139,6 +139,15 @@
                 <pre class=""><code class="language-css ">
 {% for item in globals.fonts %}$font-family-{{ item.name }}:{{ item.family }};
 {% endfor %}
+$font-weight-light: {{globals.fontweight}};
+$font-weight-regular: {{globals.fontweight}};
+$font-weight-medium: {{globals.fontweight}};
+$font-weight-bold: {{globals.fontweight}};
+$font-family-form-placeholder: {{globals.fontdefault}};
+$font-family-form: {{globals.fontdefault}};
+
+{% for item in globals.Generic %}${{ item.name }}:{{ item.value }};
+{% endfor %}
 {% for item in globals.colors %}${{ item.name }}:{{ item.type }};
 {% endfor %}
 {% for item in globals.containers %}${{ item.name }}:{{ item.type }};
@@ -149,22 +158,19 @@
 {% endfor %}
 {% for item in globals.ModalSizes %}${{ item.class }}:{{ item.size }};
 {% endfor %}
- $headers: (
-/*headerssss*/ 
+
+$headers: (
 {% for item in globals.TypeHeaders %} 
-    {{ item.name }}:({{ item.xs }},{{ item.sm }},{{ item.md }},{{ item.lg }},{{ item.line }},{{ item.weight }}),{% endfor %}
+{{ item.name }}:({{ item.xs }},{{ item.sm }},{{ item.md }},{{ item.lg }},{{ item.line }},{{ item.weight }}),{% endfor %}
 );
-$font-weight-light: {{globals.fontweight}};
-$font-weight-regular: {{globals.fontweight}};
-$font-weight-medium: {{globals.fontweight}};
-$font-weight-bold: {{globals.fontweight}};
-$font-family-form-placeholder: {{globals.fontdefault}};
-$font-family-form: {{globals.fontdefault}};
+
  $headersFixers: (
-    /*name :  fontsize, lineheight */ 
-{% for item in globals.fixes %}    {{ item.name }}: ({{ item.name }}px ,{{ item.line }}),
-{% endfor %}
-);
+{% for item in globals.fixes %}{{ item.name }}: ({{ item.name }}px ,{{ item.line }}),
+{% endfor %} );
+
+$headersFluids: (
+{% for item in globals.fluid %} {{ item.name }}: ({{ item.from }} ,{{ item.to }} ,{{ item.line }}),
+{% endfor %} );
 </code>
 </pre>
             </div>
@@ -241,10 +247,7 @@ $font-family-form: {{globals.fontdefault}};
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>.container-fluid </td>
-                        <td>Ancho máximo de 100% </td>
-                    </tr> {% for item in globals.containers %} <tr>
+  {% for item in globals.containers %} <tr>
                         <td> .{{ item.name }} </td>
                         <td>Ancho máximo de {{ item.type }} </td>
                     </tr> {% endfor %}

@@ -2,296 +2,282 @@
 {% set holygrailcssv = "1.8.65" %}
 {% set primary = "#ff0000" %}
 
-{% set colorsPrimary = [
-    { name: 'c-primary', type: '#292929' ,class: '.bg-primary'},
-    { name: 'c-black', type: '#000000' ,class: '.bg-black'},
-    { name: 'c-dark-grey', type: '#8e8e8e',class: '.bg-dark-grey' },
-    { name: 'c-middle-grey', type: '#e3e3e3' ,class: '.bg-middle-grey'},
-    { name: 'c-light-grey', type: '#f0f0f0' ,class: '.bg-light-grey'},
-    { name: 'c-white', type: '#ffffff' ,class: '.bg-white'}
-]
-%}
-{% set colorsSemantic = [
-    { name: 'c-error', type: '#B40016',class: '.bg-error' },
-    { name: 'c-sale', type: '#B40016',class: '.bg-sale' },
-    { name: 'c-info', type: '#1a32a4' ,class: '.bg-info'},
-
-    { name: 'c-success', type: '#76ae4A',class: '.bg-success' },
-    { name: 'c-warning', type: '#ffc700' ,class: '.bg-warning'},
-    { name: 'c-feel', type: '#fb9962',class: '.bg-success' }
-]
-%}
-
-{% set colorsFeel = [
-    { name: 'c-feel', type: '#fb9962',class: '.bg-feel' },
-    { name: 'c-feel-dark', type: '#C94C07',class: '.bg-feel-dark' }
-]
-%}
-{% set colorsGreyscale = [ { 
-     name: 'c-white - > ', type: '#ffffff' },
-    { name: 'c-50 ->  light-grey', type: '#F1F2F3' }, 
-    { name: 'c-100 -> light-grey',type: '#E4E4E7' },
-    { name: 'c-200 -> middle-grey ',type: '#C8C9D0' }, 
-    { name: 'c-400 -> dark-grey', type: '#9293A0' },
-    { name: 'c-600 -> light-grey', type:'#f0f0f0' },
-    { name: 'c-800 -> dark-grey', type: '#9293A0' },
-    { name: 'c-black -> primary', type: '#000000'} 
-] %}
-{% set containers = [
-    { name: 'container-full', type: '800px' },
-    { name: 'container-fluid', type: 'full' },
-    { name: 'container', type: '800px' },
-    { name: 'container-2', type: '700px' },
-    { name: 'container-3', type: '900px' },
-    { name: 'container-4', type: '356px' },
-    { name: 'container-5', type: '400px' },
-    { name: 'container-6', type: '442px' },
-    { name: 'container-7', type: '595px' },
-    { name: 'container-8', type: '395px' },
-    { name: 'container-9', type: '798px' },
-    { name: 'container-10', type: '432px' }
-]
-%}
-{% set breakpoints = [
-    { name: 'break-xs', type: '1px' },
-    { name: 'break-sm', type: '768px' },
-    { name: 'break-md', type: '992px' },
-    { name: 'break-lg', type: '1280px' },
-    { name: 'break-xl', type: '1500px' }
-]
-%}
-{% set heights = [
-    { name: 'h-100', type: '100%' },
-    { name: 'height-100', type: '100%' },
-    { name: 'height-xs', type:  '80px' },
-    { name: 'height-sm', type:  '100px' },
-    { name: 'height-md', type:  '350px' },
-    { name: 'height-lg', type:  '400px' },
-    { name: 'height-xl', type:  '450px' },
-
-    { name: 'hero-big', type: ' 300px ' },
-    { name: 'hero-medium', type: '200px ' },
-    { name: 'hero-mini', type: ' 100px ' },
-
-    { name: 'hero-big-sm', type: '500px //falta implementar' },
-    { name: 'hero-medium-sm', type: '400px  //falta implementar' },
-    { name: 'hero-mini-sm', type: ' 300px  //falta implementar' }
-]
-%}
-{% set fluid = [
-    { name: 'fluid-12', from: '12px',to:'12px',line:'0.9' },
-    { name: 'fluid-14', from: '14px',to:'14px',line:'0.9' },
-    { name: 'fluid-16', from: '16px',to:'16px',line:'2' },
-    { name: 'fluid-18', from: '18px',to:'18px',line:'2' },
-    { name: 'fluid-20', from: '20px',to:'40px',line:'1' },
-    { name: 'fluid-50', from: '30px',to:'50px',line:'1' },
-    { name: 'fluid-100', from: '50px',to:'200px',line:'1' },
-    { name: 'fluid-150', from: '50px',to:'120px',line:'0.9' }
-]
-%}
-
-{% set fixes = [
-    { name: '14', line: '1.5'},
-    { name: '16',  line: '1.5'},
-    { name: '18', line: '1.5' },
-    { name: '20', line: '1.5'},
-    { name: '24', line: '1.5'},
-    { name: '32', line: '1.5'},
-    { name: '40', line: '1.5'}
-]
-%}
-
-{% set fontweight = 'inherit' %}
-
-{% set fontdefault = '"dutti-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif' %}
-
-
 {% set fonts = [
-   
-{name:'regular',var: '$font-family-a-r',family:'"dutti-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'medium',var: '$font-family-a-m',family:'"dutti-daily-light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'bold',var: '$font-family-a-b',family:'"dutti-daily-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-
-{name:'2-regular',var: '$font-family-b-r',family:'"dutti-extended-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-medium',var: '$font-family-b-m',family:'"dutti-extended-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'2-bold',var: '$font-family-b-b',family:'"dutti-extended-extrabold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-
-{name:'3-regular',var: '$font-family-c-r',family:'"massimo-daily-regular",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'3-medium',var: '$font-family-c-m',family:'"massimo-daily-light",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'},
-{name:'3-bold',var: '$font-family-c-b',family:'"massimo-daily-bold",Helvetica,"Arial","LucidaGrande",sans-serif',line:'1.5'}
-
+{name:'regular',var: '$font-family-a-r',family:'"dutti-daily-regular",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'medium',var: '$font-family-a-m',family:'"dutti-daily-light",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'bold',var: '$font-family-a-b',family:'"dutti-daily-bold",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'2-regular',var: '$font-family-b-r',family:'"dutti-extended-regular",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'2-medium',var: '$font-family-b-m',family:'"dutti-extended-bold",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'2-bold',var: '$font-family-b-b',family:'"dutti-extended-extrabold",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'3-regular',var: '$font-family-c-r',family:'"massimo-daily-regular",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'3-medium',var: '$font-family-c-m',family:'"massimo-daily-light",Helvetica,"Arial",sans-serif',line:'1.5'},
+{name:'3-bold',var: '$font-family-c-b',family:'"massimo-daily-bold",Helvetica,"Arial",sans-serif',line:'1.5'}
 ]
 %}
 
+{% set Generic = [
+{ name: 'totalCols', value: '12px'},
+{ name: 'padding-global', value: '8px'},
+{ name: 'padding-mobile', value: '24px'},
+{ name: 'padding-desktop', value: '40px'},
+{ name: 'padding-button', value: '8px'},
+{ name: 'padding-btn', value: '16px'},
+{ name: 'height-inputs', value: '48px'},
+{ name: 'btn-radius', value: '8px'}
+]
+%}
+
+{% set containers = [
+{ name: 'container-full', type: '800px' },
+{ name: 'container-fluid', type: 'full' },
+{ name: 'container', type: '800px' },
+{ name: 'container-2', type: '700px' },
+{ name: 'container-3', type: '900px' },
+{ name: 'container-4', type: '356px' },
+{ name: 'container-5', type: '400px' },
+{ name: 'container-6', type: '442px' },
+{ name: 'container-7', type: '595px' },
+{ name: 'container-8', type: '395px' },
+{ name: 'container-9', type: '798px' },
+{ name: 'container-10', type: '432px' },
+{ name: 'container-11', type: '1080px' }
+]
+%}
+
+{% set breakpoints = [
+{ name: 'break-xs', type: '1px' },
+{ name: 'break-sm', type: '768px' },
+{ name: 'break-md', type: '992px' },
+{ name: 'break-lg', type: '1280px' },
+{ name: 'break-xl', type: '1500px' }
+]
+%}
 
 {% set TypeHeaders = [
-
 {name:'sub-l',xs:'56px', sm:'56px', md:'96px', lg:'96px',  line:' 1.1',weight:'bold3'},
 {name:'sub-m',xs:'42px', sm:'42px', md:'64px', lg:'64px',  line:' 1.1',weight:'bold3'},
 {name:'sub-s',xs:'32px', sm:'32px', md:'56px',lg:'56px',   line:' 1.1',weight:'bold3'},
-
- {name:'head-l',xs:'56px', sm:'56px', md:'96px', lg:'96px',  line:' 1.1',weight:'bold2'},
- {name:'head-m',xs:'42px', sm:'42px', md:'64px', lg:'64px',  line:' 1.1',weight:'bold2'},
- {name:'head-s',xs:'32px', sm:'32px', md:'56px',lg:'56px',   line:' 1.1',weight:'bold2'},
-
- {name:'tit-l',xs:'24px',  sm:'24px', md:'42px',lg:' 42px', line:' 1.2 ' ,weight:'bold2'},
- {name:'tit-m',xs:'20px',  sm:'20px', md:'32px', lg:'32px',  line:' 1.2',weight:'bold2'},
- {name:'tit-s',xs:'16px',  sm:'16px', md:'20px',lg:'20px',   line:' 1.2',weight:'bold'},
- {name:'tit-xs', xs:'14px',  sm:'14px', md:'14px',lg:'14px', line:' 1.2',weight:'bold'},
-
-
+{name:'head-l',xs:'56px', sm:'56px', md:'96px', lg:'96px',  line:' 1.1',weight:'bold2'},
+{name:'head-m',xs:'42px', sm:'42px', md:'64px', lg:'64px',  line:' 1.1',weight:'bold2'},
+{name:'head-s',xs:'32px', sm:'32px', md:'56px',lg:'56px',   line:' 1.1',weight:'bold2'},
+{name:'tit-l',xs:'24px',  sm:'24px', md:'42px',lg:' 42px', line:' 1.2 ' ,weight:'bold2'},
+{name:'tit-m',xs:'20px',  sm:'20px', md:'32px', lg:'32px',  line:' 1.2',weight:'bold2'},
+{name:'tit-s',xs:'16px',  sm:'16px', md:'20px',lg:'20px',   line:' 1.2',weight:'bold'},
+{name:'tit-xs', xs:'14px',  sm:'14px', md:'14px',lg:'14px', line:' 1.2',weight:'bold'},
+{name:'p-14',xs:'14px',   sm:'14px',  md:'14px' ,lg:'14px',  line:' 1.3',weight:'regular'},
+{name:'p-14-b',xs:'14px',   sm:'14px',  md:'14px' ,lg:'14px',  line:' 1.3',weight:'bold'},
 {name:'p-l',xs:'18px',   sm:'18px',  md:'20px' ,lg:'20px',  line:' 1.3',weight:'regular'},
 {name:'p-m',xs:'14px',   sm:' 14px', md:'16px' ,lg:'16px',  line:' 1.3',weight:'regular'},
 {name:'p-m-b',xs:'14px', sm:' 14px', md:'16px ',lg:'16px',  line:' 1.3',weight:'bold'} ,
 {name:'p-s', xs:'12px',   sm:' 12px', md:'14px ',lg:'14px', line:' 1.3',weight:'regular'},
 {name:'p-xs',xs:'10px',  sm:' 10px', md:'12px' ,lg:'12px',  line:' 1.3',weight:'regular'},
 {name:'p-xs-b',xs:'10px', sm:'10px', md:'12px ',lg:'12px',  line:' 1.3',weight:'bold'} 
-
-
-
-
 ]
 %}
 
+{% set colorsPrimary = [
+{ name: 'c-primary', type: '#292929' ,class: '.bg-primary'},
+{ name: 'c-black', type: '#000000' ,class: '.bg-black'},
+{ name: 'c-dark-grey', type: '#8e8e8e',class: '.bg-dark-grey' },
+{ name: 'c-middle-grey', type: '#e3e3e3' ,class: '.bg-middle-grey'},
+{ name: 'c-light-grey', type: '#f0f0f0' ,class: '.bg-light-grey'},
+{ name: 'c-white', type: '#ffffff' ,class: '.bg-white'}
+]
+%}
 
+{% set colorsSemantic = [
+{ name: 'c-error', type: '#B40016',class: '.bg-error' },
+{ name: 'c-sale', type: '#B40016',class: '.bg-sale' },
+{ name: 'c-info', type: '#1a32a4' ,class: '.bg-info'},
+{ name: 'c-success', type: '#76ae4A',class: '.bg-success' },
+{ name: 'c-warning', type: '#ffc700' ,class: '.bg-warning'},
+{ name: 'c-feel', type: '#fb9962',class: '.bg-success' }
+]
+%}
+
+{% set colorsFeel = [
+{ name: 'c-feel', type: '#fb9962',class: '.bg-feel' },
+{ name: 'c-feel-dark', type: '#C94C07',class: '.bg-feel-dark' }
+]
+%}
+
+{% set colorsGreyscale = [ { 
+name: 'c-white - > ', type: '#ffffff' },
+{ name: 'c-50 ->  light-grey', type: '#F1F2F3' }, 
+{ name: 'c-100 -> light-grey',type: '#E4E4E7' },
+{ name: 'c-200 -> middle-grey ',type: '#C8C9D0' }, 
+{ name: 'c-400 -> dark-grey', type: '#9293A0' },
+{ name: 'c-600 -> light-grey', type:'#f0f0f0' },
+{ name: 'c-800 -> dark-grey', type: '#9293A0' },
+{ name: 'c-black -> primary', type: '#000000'} 
+] %}
+
+{% set heights = [
+{ name: 'h-100', type: '100%' },
+{ name: 'height-100', type: '100%' },
+{ name: 'height-xs', type:  '80px' },
+{ name: 'height-sm', type:  '100px' },
+{ name: 'height-md', type:  '350px' },
+{ name: 'height-lg', type:  '400px' },
+{ name: 'height-xl', type:  '450px' },
+{ name: 'hero-big', type: ' 300px ' },
+{ name: 'hero-medium', type: '200px ' },
+{ name: 'hero-mini', type: ' 100px ' },
+{ name: 'hero-big-sm', type: '500px //falta implementar' },
+{ name: 'hero-medium-sm', type: '400px  //falta implementar' },
+{ name: 'hero-mini-sm', type: ' 300px  //falta implementar' }
+]
+%}
+
+{% set fluid = [
+{ name: '12', from: '12px',to:'12px',line:'0.9' },
+{ name: '14', from: '14px',to:'14px',line:'0.9' },
+{ name: '16', from: '16px',to:'16px',line:'2' },
+{ name: '18', from: '18px',to:'18px',line:'2' },
+{ name: '20', from: '20px',to:'40px',line:'1' },
+{ name: '50', from: '30px',to:'50px',line:'1' },
+{ name: '100', from: '50px',to:'200px',line:'1' },
+{ name: '150', from: '50px',to:'120px',line:'0.9' }
+]
+%}
+
+{% set fixes = [
+{ name: '14', line: '1.5'},
+{ name: '16',  line: '1.5'},
+{ name: '18', line: '1.5' },
+{ name: '20', line: '1.5'},
+{ name: '24', line: '1.5'},
+{ name: '32', line: '1.5'},
+{ name: '40', line: '1.5'}
+]
+%}
+
+{% set fontweight = 'inherit' %}
+{% set fontdefault = '"dutti-daily-regular",Helvetica,"Arial",sans-serif' %}
 {% set ratios = [
- { ancho : '2', alto: '3' },
- { ancho: '2', alto: '3' },
- { ancho: '3', alto: '4' },
- { ancho: '1', alto: '1' },
-    { ancho: '4', alto: '3' },
-    { ancho: '3', alto: '2' },
-    { ancho: '16', alto: '9' },
-    { ancho: '2', alto: '1' },
-    { ancho: '21', alto: '9' }
+{ ancho : '2', alto: '3' },
+{ ancho: '2', alto: '3' },
+{ ancho: '3', alto: '4' },
+{ ancho: '1', alto: '1' },
+{ ancho: '4', alto: '3' },
+{ ancho: '3', alto: '2' },
+{ ancho: '16', alto: '9' },
+{ ancho: '2', alto: '1' },
+{ ancho: '21', alto: '9' }
 ]
 %}
-
 
 {% set skeletons = [
-    { number : '1'},
-    { number: '2'},
-    { number: '3'},
-    { number: '4'},
-       { number: '5'},
-       { number: '6'},
-       { number: '7'},
-       { number: '8'}
-   ]
-   %}
-
+{ number : '1'},
+{ number: '2'},
+{ number: '3'},
+{ number: '4'},
+{ number: '5'},
+{ number: '6'},
+{ number: '7'},
+{ number: '8'}
+]
+%}
 
 {% set placeholders = [
-    { ratio : '2-3' },
-    { ratio : '3-4' },
-    { ratio : '1-1' },
-    { ratio : '2-1' },
-    { ratio : '3-2' },
-    { ratio : '4-2' },
-    { ratio : '4-3' },
-    { ratio : '16-9' },
-    { ratio : '21-9' },
-    { ratio : '30' },
-    { ratio : '33' },
-    { ratio : '66' },
-    { ratio : '105' },
-    { ratio : 'bg-light' },
-    { ratio : 'AR_SOCIAL_4' },
-    { ratio : 'AR_SOCIAL_6' }
+{ ratio : '2-3' },
+{ ratio : '3-4' },
+{ ratio : '1-1' },
+{ ratio : '2-1' },
+{ ratio : '3-2' },
+{ ratio : '4-2' },
+{ ratio : '4-3' },
+{ ratio : '16-9' },
+{ ratio : '21-9' },
+{ ratio : '30' },
+{ ratio : '33' },
+{ ratio : '66' },
+{ ratio : '105' },
+{ ratio : 'bg-light' },
+{ ratio : 'AR_SOCIAL_4' },
+{ ratio : 'AR_SOCIAL_6' }
 ]
 %}
+
 {% set helpers = [
-    { helper : '.ov-scroll', descripcion: ' scroll con touch' },
-    { helper: '.scrollbar', descripcion: 'cambiamos el background' },
-    { helper: '.ov-custom', descripcion: 'scroll personalizable' },
-    { helper: '.cursor-pointer', descripcion: 'Un cursor' },
-    { helper: '.svg-iflex', descripcion: 'descripcion' },
-    { helper: '.svg-inline', descripcion: 'descripcion' },
-    { helper: 'hr', descripcion: 'línea normal' },
-    { helper: '.only-mobile', descripcion: 'Visible Solo en móbile visible hasta el sm' },
-    { helper: '.only-desktop', descripcion: 'Visible Sólo en  desktop a partir de sm' },
-    { helper: '.only-mobile-flex', descripcion: 'Flex en mobile hasta sm' },
-    { helper: '.only-desktop-flex', descripcion: 'Flex en desktop a partir de sm' },
-    { helper: '.ttu', descripcion: 'Transformación a mayúsculas en aquellos paises que sea posible' },
-    { helper: '.video-cover', descripcion: 'Posicionamiento mediante absolutes 50%' },
-    { helper: '.bg-dark-grey', descripcion: 'Color de fondo dark-grey' },
-    { helper: '.bg-middle-grey', descripcion: 'Color de fondo middle-grey' },
-    { helper: '.bg-light-grey', descripcion: 'Color de fondo light-grey' },
-    { helper: '.bg-primary', descripcion: 'Color de fondo primary' },
-    { helper: '.bg-error', descripcion: 'Color de fondo error' },
-    { helper: '.bg-info', descripcion: 'Color de fondo info' },
-    { helper: '.bg-success', descripcion: 'Color de fondo success' },
-    { helper: '.bg-warning', descripcion: 'Color de fondo warning' },
-    { helper: '.bg-feel', descripcion: 'Color de fondo feel' },
-    { helper: '.bg-dark', descripcion: 'Color de fondo dark' }
+{ helper : '.ov-scroll', descripcion: ' scroll con touch' },
+{ helper: '.scrollbar', descripcion: 'cambiamos el background' },
+{ helper: '.ov-custom', descripcion: 'scroll personalizable' },
+{ helper: '.cursor-pointer', descripcion: 'Un cursor' },
+{ helper: '.svg-iflex', descripcion: 'descripcion' },
+{ helper: '.svg-inline', descripcion: 'descripcion' },
+{ helper: 'hr', descripcion: 'línea normal' },
+{ helper: '.only-mobile', descripcion: 'Visible Solo en móbile visible hasta el sm' },
+{ helper: '.only-desktop', descripcion: 'Visible Sólo en  desktop a partir de sm' },
+{ helper: '.only-mobile-flex', descripcion: 'Flex en mobile hasta sm' },
+{ helper: '.only-desktop-flex', descripcion: 'Flex en desktop a partir de sm' },
+{ helper: '.ttu', descripcion: 'Transformación a mayúsculas en aquellos paises que sea posible' },
+{ helper: '.video-cover', descripcion: 'Posicionamiento mediante absolutes 50%' },
+{ helper: '.bg-dark-grey', descripcion: 'Color de fondo dark-grey' },
+{ helper: '.bg-middle-grey', descripcion: 'Color de fondo middle-grey' },
+{ helper: '.bg-light-grey', descripcion: 'Color de fondo light-grey' },
+{ helper: '.bg-primary', descripcion: 'Color de fondo primary' },
+{ helper: '.bg-error', descripcion: 'Color de fondo error' },
+{ helper: '.bg-info', descripcion: 'Color de fondo info' },
+{ helper: '.bg-success', descripcion: 'Color de fondo success' },
+{ helper: '.bg-warning', descripcion: 'Color de fondo warning' },
+{ helper: '.bg-feel', descripcion: 'Color de fondo feel' },
+{ helper: '.bg-dark', descripcion: 'Color de fondo dark' }
 ]
 %}
-
-
-
 {% set headers = [
-    { helper : '.ov-scroll', descripcion: ' scroll con touch' },
-    { helper: '.scrollbar', descripcion: 'cambiamos el background' },
-    { helper: '.ov-custom', descripcion: 'scroll personalizable' },
-    { helper: '.cursor-pointer', descripcion: 'Un cursor' },
-    { helper: '.svg-iflex', descripcion: 'descripcion' },
-    { helper: '.svg-inline', descripcion: 'descripcion' },
-    { helper: 'hr', descripcion: 'línea normal' },
-    { helper: '.only-mobile', descripcion: 'Visible Solo en móbile visible hasta el sm' },
-    { helper: '.only-desktop', descripcion: 'Visible Sólo en  desktop a partir de sm' },
-    { helper: '.only-mobile-flex', descripcion: 'Flex en mobile hasta sm' },
-    { helper: '.only-desktop-flex', descripcion: 'Flex en desktop a partir de sm' },
-    { helper: '.ttu', descripcion: 'Transformación a mayúsculas en aquellos paises que sea posible' },
-    { helper: '.video-cover', descripcion: 'Posicionamiento mediante absolutes 50%' }
+{ helper : '.ov-scroll', descripcion: ' scroll con touch' },
+{ helper: '.scrollbar', descripcion: 'cambiamos el background' },
+{ helper: '.ov-custom', descripcion: 'scroll personalizable' },
+{ helper: '.cursor-pointer', descripcion: 'Un cursor' },
+{ helper: '.svg-iflex', descripcion: 'descripcion' },
+{ helper: '.svg-inline', descripcion: 'descripcion' },
+{ helper: 'hr', descripcion: 'línea normal' },
+{ helper: '.only-mobile', descripcion: 'Visible Solo en móbile visible hasta el sm' },
+{ helper: '.only-desktop', descripcion: 'Visible Sólo en  desktop a partir de sm' },
+{ helper: '.only-mobile-flex', descripcion: 'Flex en mobile hasta sm' },
+{ helper: '.only-desktop-flex', descripcion: 'Flex en desktop a partir de sm' },
+{ helper: '.ttu', descripcion: 'Transformación a mayúsculas en aquellos paises que sea posible' },
+{ helper: '.video-cover', descripcion: 'Posicionamiento mediante absolutes 50%' }
 ]
 %}
-
 
 {% set margenhasta = [
-    { name: '.mdmax:mb-16', type: '$break-md -1' },
-    { name: '.mdmax:mb-20 **', type: 'break-md -1'},
-    { name: '.mdmax:mb-42 **', type: 'break-md -1'},
-    { name: '.smmax:mb-16', type: '$break-sm -1' },
-    { name: '.smmax:mb-20 **', type: '$break-sm -1'  },
-    { name: '.smmax:mb-42 **', type: '$break-sm -1' }
-    ]
+{ name: '.mdmax:mb-16', type: '$break-md -1' },
+{ name: '.mdmax:mb-20 **', type: 'break-md -1'},
+{ name: '.mdmax:mb-42 **', type: 'break-md -1'},
+{ name: '.smmax:mb-16', type: '$break-sm -1' },
+{ name: '.smmax:mb-20 **', type: '$break-sm -1'  },
+{ name: '.smmax:mb-42 **', type: '$break-sm -1' }
+]
 %}
 
-
-
 {% set ModalSizes = [
-    { name: 'SIZE_XS', class: 'modalx-xs' ,size:'295px', explicacion:'Tamaño max. 295px'},
-    { name: 'SIZE_S', class: 'modalx-sm' ,size:'445px', explicacion:'Tamaño max. 445px'},
-    { name: 'SIZE_M', class: 'modalx-md',size:'595px',explicacion:'Tamaño max. 595px' },
-    { name: 'SIZE_L', class: 'modalx-lg' ,size:'899px',explicacion:'Tamaño max. 899px'},
-    { name: 'SIZE_XL', class: 'modalx-xl' ,size:'995px' ,explicacion:' <span class="todo"> FALTA </span> Tamaño max. 950px'}
-
-    ]
+{ name: 'SIZE_XS', class: 'modalx-xs' ,size:'295px', explicacion:'Tamaño max. 295px'},
+{ name: 'SIZE_S', class: 'modalx-sm' ,size:'445px', explicacion:'Tamaño max. 445px'},
+{ name: 'SIZE_M', class: 'modalx-md',size:'595px',explicacion:'Tamaño max. 595px' },
+{ name: 'SIZE_L', class: 'modalx-lg' ,size:'899px',explicacion:'Tamaño max. 899px'},
+{ name: 'SIZE_XL', class: 'modalx-xl' ,size:'995px' ,explicacion:' <span class="todo"> FALTA </span> Tamaño max. 950px'}
+]
 %}
 
 {% set ModalMargins = [
-    { name: 'MARGIN_0',  class: 'modalx-0', explicacion:'la explicacion' },
-    { name: 'MARGIN_16', class: 'modalx-16' , explicacion:'la explicacion'},
-    { name: 'MARGIN_24', class: 'modalx-24' , explicacion:'la explicacion'},
-    { name: 'MARGIN_32', class: 'modalx-32', explicacion:'la explicacion' },
-    { name: 'MARGIN_40', class: 'modalx-40' , explicacion:'la explicacion'},
-    { name: 'MARGIN_0_24', class:'modalx-0-24' , explicacion:'la explicacion'}
-
-    ]
+{ name: 'MARGIN_0',  class: 'modalx-0', explicacion:'la explicacion' },
+{ name: 'MARGIN_16', class: 'modalx-16' , explicacion:'la explicacion'},
+{ name: 'MARGIN_24', class: 'modalx-24' , explicacion:'la explicacion'},
+{ name: 'MARGIN_32', class: 'modalx-32', explicacion:'la explicacion' },
+{ name: 'MARGIN_40', class: 'modalx-40' , explicacion:'la explicacion'},
+{ name: 'MARGIN_0_24', class:'modalx-0-24' , explicacion:'la explicacion'}
+]
 %}
-
 
 {% set ModalOptions = [
-    { name: 'HIDE_TITLE', class: 'HIDE_TITLE', explicacion:'Oculta el título de la modal' },
-    { name: 'HIDE_X', class: 'HIDE_X', explicacion:'Oculta el icono de cerrar la modal' },
-    { name: 'FULL_MOBILE', class: 'FULL_MOBILE', explicacion:'la modal ocupa todo el alto y el ancho de la pantalla de >768' },
-    { name: 'FULL_VIEWPORT', class: 'FULL_VIEWPORT', explicacion:'la modal ocupa todo el ancho de la pantalla de >768' },
-    { name: 'FEEL_BG', class: 'FEEL_BG', explicacion:'el fondo del modal cambia a gris claro' },
-    { name: 'CLOSE_ON_BACKDROP_CLICK', class: 'CLOSE_ON_BACKDROP_CLICK', explicacion:'Pendiente' },
-    { name: 'TRANSPARENT_BACKGROUND', class: 'TRANSPARENT_BACKGROUND', explicacion:'Desaparece la capa oscura que da contraste al modal ' }
-
-    ]
+{ name: 'HIDE_TITLE', class: 'HIDE_TITLE', explicacion:'Oculta el título de la modal' },
+{ name: 'HIDE_X', class: 'HIDE_X', explicacion:'Oculta el icono de cerrar la modal' },
+{ name: 'FULL_MOBILE', class: 'FULL_MOBILE', explicacion:'la modal ocupa todo el alto y el ancho de la pantalla de >768' },
+{ name: 'FULL_VIEWPORT', class: 'FULL_VIEWPORT', explicacion:'la modal ocupa todo el ancho de la pantalla de >768' },
+{ name: 'FEEL_BG', class: 'FEEL_BG', explicacion:'el fondo del modal cambia a gris claro' },
+{ name: 'CLOSE_ON_BACKDROP_CLICK', class: 'CLOSE_ON_BACKDROP_CLICK', explicacion:'Pendiente' },
+{ name: 'TRANSPARENT_BACKGROUND', class: 'TRANSPARENT_BACKGROUND', explicacion:'Desaparece la capa oscura que da contraste al modal ' }
+]
 %}
-
-
-
