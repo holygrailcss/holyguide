@@ -163,18 +163,31 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
              {% call button.svg('has-ico-pre btn-primary','btn-ico-pre  descripcion del pre') %} {% endcall %}
              {% call button.svg('has-ico-post btn-primary','btn-default description') %} {% endcall %} 
              
+         
              
+
+
+
+
+
+
              <div class="row mb-16">
                 <div class="col-xs-12">
                     <h3 class='h6 mb-16'>Active Buttons</h3>
                     <button class='btn btn-primary  btn--small  '> Action </button>
+
+                    
                     <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--small  '> Action </button> " | escape }}</code></pre>
-                    <button class='btn btn-primary  btn--small  has-ico-pre '> {% call insert.svgIcon('ico-pre') %} {%
-                        endcall %} ico-pre </button>
-                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-pre '>
-    <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon>
-     .has-ico-pre
-</button> " | escape }}</code></pre>
+
+
+
+
+                    <button class='btn btn-primary  btn--small  has-ico-pre '> {% call insert.svgIcon('ico-pre') %} {% endcall %} ico-pre </button>
+
+
+                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-pre '> <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> .has-ico-pre </button> " | escape }}</code></pre>
+                  
+                  
                     <button class='btn btn-primary  btn--small  has-ico-post'> {% call insert.svgIcon('ico-post') %} {%
                         endcall %} ico-post </button>
                     <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-post '>
@@ -208,6 +221,14 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                         {% endcall %} ico-pre </div>
                     <div class="btn btn-primary  btn--small  has-ico-post disabled"> {% call insert.svgIcon('ico-post')
                         %} {% endcall %} ico-post </div>
+<pre><code class='language-markup'>
+{{"<button class='btn btn-invert  btn--large  has-ico-pre disabled '>
+    <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> 
+    .has-ico-pre
+    </button> " | escape }}</code>
+</pre>
+
+
                 </div>
             </div>
             <div class="row mb-16">
@@ -222,16 +243,18 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <pre><code class="language-markup">&lt;div class=&quot;btn btn-primary  btn--small&quot;&gt; Action &lt;/div&gt;
-&lt;div class=&quot;btn btn-primary  btn--small  has-ico-pre&quot;&gt;
-    &lt;svg-icon src=&quot;ICON_NAME&quot;&gt;&lt;/svg-icon&gt;
-    ico-pre
-&lt;/div&gt;
-&lt;div class=&quot;btn btn-primary  btn--small  has-ico-post&quot;&gt;
-    ico-post
-    &lt;svg-icon src=&quot;ICON_NAME&quot;&gt;&lt;/svg-icon&gt;
-&lt;/div&gt;
-        </code></pre>
+
+               
+<pre><code class='language-markup'>
+{{"<button class='btn btn-invert  btn--large  has-ico-pre '>
+    <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> 
+    .has-ico-pre
+ </button> " | escape }}</code>
+</pre>
+                  
+
+
+
                 </div>
             </div>
             <div class="row">
