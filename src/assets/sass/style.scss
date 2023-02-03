@@ -49,9 +49,7 @@
   .select:not(.is-multiple):not(.is-loading).select-box::after {
     left: 8px;
   }
-}
-//TODO hg el rtl todos los marg y padd deberían tener su inverso el RTL
-.is-rtl {
+
   .pr-30 {
     padding-right: 0px;
     padding-left: 30px;
@@ -67,6 +65,11 @@
   .pr-16 {
     padding-right: 0px;
     padding-left: 16px;
+  }
+
+  .pr-24 {
+    padding-right: 0px;
+    padding-left: 24px;
   }
     .pl-32{
       padding-left: initial;
