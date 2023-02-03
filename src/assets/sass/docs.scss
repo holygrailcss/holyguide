@@ -23,6 +23,12 @@
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
+
+.c-white{
+	color:white;
+}
+
+
 @import "vendor/_toolsguide.scss";
 ::-webkit-scrollbar {
 	width: 12px;
@@ -74,6 +80,7 @@ nav {
 		height: 50px;
 	}
 }
+
 .toggle-menu {
 	display: none;
 	transform: translateX(0px);

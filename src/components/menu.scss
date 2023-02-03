@@ -1,3 +1,5 @@
+
+
 .nav {
 	position: absolute;
 	top: 0px;
@@ -27,6 +29,10 @@
 .nav-mainbar-close {
 	display: flex;
 	align-items: center;
+    &:hover{
+        opacity: .6;
+        cursor: pointer;
+    }
 
 }
 .nav-mainbar-content {
@@ -115,6 +121,10 @@
 }
 
 .nav{
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     .c-sale{ color: $c-error;
     &::after{
         background-color:  $c-error;
@@ -124,4 +134,42 @@
     }
 
   }
+
+/***ZONA ANIMACIÓN FAKE**/
+  .nav-wrap{
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.active .nav{
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+.ov-custom{
+    &::-webkit-scrollbar-track {
+        background-color: $c-light-grey;
+    }
+    &::-webkit-scrollbar-track:hover {
+        background-color: $c-light-grey;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $c-dark-grey;
+        border-radius: 16px;
+        border: 3px solid $c-white;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $c-dark-grey;
+        border: 2px solid $c-light-grey;
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+}
+
+
+
   
