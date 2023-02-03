@@ -11,6 +11,16 @@ $desktop-duration: 50s;
   }
 }
 
+@keyframes marquee-left-to-right {
+  from {
+    transform: translateX(-100%);
+
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
 // marquee animation
 .marquee {
   display: flex;
@@ -36,12 +46,27 @@ $desktop-duration: 50s;
 
 @media (max-width: 991px) {
   .marquee-content p {
-    animation: marquee-right-to-left $mobile-duration linear infinite;
+    animation: marquee-right-to-left  $mobile-duration linear infinite;
   }
 }
 
 @media (min-width: 992px) {
   .marquee-content p {
-    animation: marquee-right-to-left $desktop-duration linear infinite;
+    animation: marquee-right-to-left  $desktop-duration linear infinite;
   }
+}
+
+.is-rtl{
+  @media (max-width: 991px) {
+    .marquee-content p {
+      animation: marquee-left-to-right $mobile-duration linear infinite;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .marquee-content p {
+      animation: marquee-left-to-right $desktop-duration linear infinite;
+    }
+  }
+
 }
