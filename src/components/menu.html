@@ -1,167 +1,178 @@
-{% block menu %}
-<div class="nav-wrap active">
-    <div class="nav-mainbar-close pr-24 c-white  head-l ">
-        ABRIR
-    </div>
-     <nav class="nav">
+{% block menu %} <div class="nav-wrap active">
+    <div class="nav-mainbar-close pr-24 c-white  head-l "> ABRIR </div>
+    <nav class="nav">
         <div class="nav-mainbar mb-24">
             <div class="nav-mainbar-close pr-24 ">
-                <svg  width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="0.353553" y1="0.646447" x2="16.3536" y2="16.6464" stroke="black" /> <line x1="16.3536" y1="1.35355" x2="0.353554" y2="17.3536" stroke="black" /> </svg>
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="0.353553" y1="0.646447" x2="16.3536" y2="16.6464" stroke="black" /> <line x1="16.3536" y1="1.35355" x2="0.353554" y2="17.3536" stroke="black" /> </svg>
             </div>
             <div class="nav-mainbar-content">
                 <div class="nav-mainbar-item ">
                     <a href="" class="nav-submenu-item-link  pt-8 pb-8 pr-16">
-                        <h2 class="p-m">   MEN   </h2>
+                        <h2 class="p-m"> MEN </h2>
                     </a>
                 </div>
                 <div class="nav-mainbar-item ">
                     <a href="" class="nav-submenu-item-link pt-8 pb-8 pr-16">
-                        <h2 class="p-m">    WOMAN   </h2>
+                        <h2 class="p-m"> WOMAN </h2>
                     </a>
                 </div>
                 <div class="nav-mainbar-item"></div>
             </div>
             <div class="nav-mainbar-search sm:hidden">
-                <div class="nav-mainbar-search-bar " >
-                    <svg class="mr-16"  width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8097 10.3946C12.8161 9.29328 13.424 7.86209 13.424 6.29765C13.424 2.81956 10.419 0 6.71202 0C3.00507 0 0 2.81956 0 6.29765C0 9.77575 3.00507 12.5953 6.71202 12.5953C8.3799 12.5953 9.9057 12.0245 11.0796 11.0798L14.0403 13.8577C14.2419 14.0469 14.5688 14.0469 14.7704 13.8577C14.9721 13.6685 14.9721 13.3618 14.7704 13.1726L11.8097 10.3946ZM6.71541 11.6273C3.57876 11.6273 1.03601 9.24152 1.03601 6.29851C1.03601 3.3555 3.57876 0.969727 6.71541 0.969727C9.85206 0.969727 12.3948 3.3555 12.3948 6.29851C12.3948 9.24152 9.85206 11.6273 6.71541 11.6273Z" fill="#8E8E8E" /> <mask id="mask0_690_4978" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="13"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.424 6.29765C13.424 9.77575 10.419 12.5953 6.71202 12.5953C3.00507 12.5953 0 9.77575 0 6.29765C0 2.81956 3.00507 0 6.71202 0C10.419 0 13.424 2.81956 13.424 6.29765ZM1.03601 6.29851C1.03601 9.24152 3.57876 11.6273 6.71541 11.6273C9.85206 11.6273 12.3948 9.24152 12.3948 6.29851C12.3948 3.3555 9.85206 0.969727 6.71541 0.969727C3.57876 0.969727 1.03601 3.3555 1.03601 6.29851Z" fill="white" /> </mask> <g mask="url(#mask0_690_4978)"></g> </svg> Search
+                <div class="nav-mainbar-search-bar ">
+                    <svg class="mr-16" width="15" height="14" viewBox="0 0 15 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M11.8097 10.3946C12.8161 9.29328 13.424 7.86209 13.424 6.29765C13.424 2.81956 10.419 0 6.71202 0C3.00507 0 0 2.81956 0 6.29765C0 9.77575 3.00507 12.5953 6.71202 12.5953C8.3799 12.5953 9.9057 12.0245 11.0796 11.0798L14.0403 13.8577C14.2419 14.0469 14.5688 14.0469 14.7704 13.8577C14.9721 13.6685 14.9721 13.3618 14.7704 13.1726L11.8097 10.3946ZM6.71541 11.6273C3.57876 11.6273 1.03601 9.24152 1.03601 6.29851C1.03601 3.3555 3.57876 0.969727 6.71541 0.969727C9.85206 0.969727 12.3948 3.3555 12.3948 6.29851C12.3948 9.24152 9.85206 11.6273 6.71541 11.6273Z"
+                            fill="#8E8E8E" />
+                        <mask id="mask0_690_4978" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="14" height="13">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.424 6.29765C13.424 9.77575 10.419 12.5953 6.71202 12.5953C3.00507 12.5953 0 9.77575 0 6.29765C0 2.81956 3.00507 0 6.71202 0C10.419 0 13.424 2.81956 13.424 6.29765ZM1.03601 6.29851C1.03601 9.24152 3.57876 11.6273 6.71541 11.6273C9.85206 11.6273 12.3948 9.24152 12.3948 6.29851C12.3948 3.3555 9.85206 0.969727 6.71541 0.969727C3.57876 0.969727 1.03601 3.3555 1.03601 6.29851Z"
+                                fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_690_4978)"></g>
+                    </svg> Search
                 </div>
             </div>
         </div>
         <div class="nav-submenu ov-custom-nav">
             <ul>
                 <li class="nav-submenu-item mb-24 bold">
-                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Studio <div class="tag-new">NEW</div>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Studio <div
+                            class="tag-new">NEW</div>
                     </a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a  title="Rebajas"  title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8  c-sale ">Rebajas</a>
+                    <a title="Rebajas" title="Studio" href="url-del-link"
+                        class="nav-submenu-item-link p-m pb-8 pt-8  c-sale ">Rebajas</a>
                     <ul class="">
                         <li class="nav-submenu-item ">
-                            <a  title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 c-sale link-active  ">Abrigos y Chaquetas</a>
+                            <a title="Studio" href="url-del-link"
+                                class="nav-submenu-item-link p-m pb-8 pt-8 c-sale link-active  ">Abrigos y Chaquetas</a>
                         </li>
                         <li class="nav-submenu-item ">
-                            <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Plumíferos y Acolchados</a>
+                            <a title="Studio" href="url-del-link"
+                                class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Plumíferos y Acolchados</a>
                         </li>
                         <li class="nav-submenu-item ">
-                            <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Piel</a>
+                            <a title="Studio" href="url-del-link"
+                                class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Piel</a>
                         </li>
                         <li class="nav-submenu-item ">
-                            <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Americanas</a>
+                            <a title="Studio" href="url-del-link"
+                                class="nav-submenu-item-link p-m pb-8 pt-8  c-sale">Americanas</a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8  link-active">Soft</a>
+                    <a title="Studio" href="url-del-link"
+                        class="nav-submenu-item-link p-m pb-8 pt-8  link-active">Soft</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Soft</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Vestidos</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Trajes</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Pantalones</a>
                 </li>
                 <li class="nav-submenu-item ">
-                    <a title="Studio" href="url-del-link"  class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
+                    <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                 </li>
             </ul>
         </div>
         <div class="nav-mainbar-search sm:visible pt-16">
             <div class="nav-mainbar-search-bar">
                 <svg class="mr-16" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8097 10.3946C12.8161 9.29328 13.424 7.86209 13.424 6.29765C13.424 2.81956 10.419 0 6.71202 0C3.00507 0 0 2.81956 0 6.29765C0 9.77575 3.00507 12.5953 6.71202 12.5953C8.3799 12.5953 9.9057 12.0245 11.0796 11.0798L14.0403 13.8577C14.2419 14.0469 14.5688 14.0469 14.7704 13.8577C14.9721 13.6685 14.9721 13.3618 14.7704 13.1726L11.8097 10.3946ZM6.71541 11.6273C3.57876 11.6273 1.03601 9.24152 1.03601 6.29851C1.03601 3.3555 3.57876 0.969727 6.71541 0.969727C9.85206 0.969727 12.3948 3.3555 12.3948 6.29851C12.3948 9.24152 9.85206 11.6273 6.71541 11.6273Z" fill="#8E8E8E" /> <mask id="mask0_690_4978" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="13"> <path fill-rule="evenodd" clip-rule="evenodd" d="M13.424 6.29765C13.424 9.77575 10.419 12.5953 6.71202 12.5953C3.00507 12.5953 0 9.77575 0 6.29765C0 2.81956 3.00507 0 6.71202 0C10.419 0 13.424 2.81956 13.424 6.29765ZM1.03601 6.29851C1.03601 9.24152 3.57876 11.6273 6.71541 11.6273C9.85206 11.6273 12.3948 9.24152 12.3948 6.29851C12.3948 3.3555 9.85206 0.969727 6.71541 0.969727C3.57876 0.969727 1.03601 3.3555 1.03601 6.29851Z" fill="white" /> </mask> <g mask="url(#mask0_690_4978)"></g> </svg>
-        Search
+                 Search
             </div>
         </div>
     </nav>
 </div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 <script>
     $(document).ready(function () {
-    	$(".nav-mainbar-close").click(function () {
-		$(".nav-wrap").toggleClass("active");
-
-	
-	});
-});
-</script>
+        $(".nav-mainbar-close").click(function () {
+            $(".nav-wrap").toggleClass("active");
 
 
-{% endblock %}
+        });
+    });
+</script> {% endblock %}
