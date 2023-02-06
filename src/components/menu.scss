@@ -8,7 +8,7 @@
 	width: 100%;
 	z-index: 2;
 	background: white;
-	padding: 24px 16px;
+	padding: 20px 16px 24px;
 	@media (min-width: 768px) {
 		padding: 24px 42px;
 	}
@@ -51,7 +51,6 @@
 	flex-basis: 100%;
 }
 .nav-submenu-item-link {
-	position: relative;
     position: relative;
     display: inline-block;
 }
@@ -168,6 +167,25 @@
     &::-webkit-scrollbar-button {
         display: none;
     }
+}
+
+
+.nav-mainbar-dropdown{
+    position: absolute;
+    left: 0;
+    top:90px;
+
+    overflow: auto;
+    height: calc(100vh - 180px);
+    width: calc(100vw - 16px);
+
+    @media (min-width: 768px) {
+        top:100px;
+        height: calc(100vh - 135px);
+        width: calc(100vw - 67px);
+        left: 24px;
+
+	}
 }
 
 
