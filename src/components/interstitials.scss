@@ -1,0 +1,31 @@
+@import "../../node_modules/holygrailcss/scss/abstract/_all.scss";
+
+
+.b-red{
+    border: 1px solid red;
+}
+
+.inter-container{
+    position: fixed;
+    padding: 16px 16px 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 440px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.inter-modal{
+    width: 100%;
+}
+
+.is-rtl{
+    right: auto;
+    left: 0;
+}
