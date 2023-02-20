@@ -22,6 +22,8 @@
 @import "../../components/marquee.scss";
 @import "../../components/limited1.scss";
 @import "../../components/interstitials.scss";
+
+
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
@@ -198,6 +200,8 @@ $c-guide: rgb(218, 19, 112);
 	justify-content: space-between;
 	cursor: pointer;
 }
+
+
 
 .guide {
 	h1 {
