@@ -1,0 +1,25 @@
+@media (max-width: 767px) {
+  .barside-mobile {
+      transform: initial;
+  }
+
+  .barside-mobile-wrap {  
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    width: calc(100% + 16px);
+
+    .col-xs-6 {
+      width: 10vw;
+    }
+  }
+
+  .barside-mobile-inner {
+    flex-wrap: nowrap;
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+  }
+}

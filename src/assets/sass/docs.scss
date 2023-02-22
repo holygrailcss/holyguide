@@ -22,6 +22,7 @@
 @import "../../components/marquee.scss";
 @import "../../components/limited1.scss";
 @import "../../components/interstitials.scss";
+@import "../../components/shopthelook.scss";
 
 
 $c-secondary: orange;
@@ -67,7 +68,7 @@ $c-guide: rgb(218, 19, 112);
 		padding-bottom: 32px;
 	}
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		transform: translateX(-250px);
 		transition: all ease-in-out 0.4s;
 
@@ -90,7 +91,7 @@ $c-guide: rgb(218, 19, 112);
 	height: 70px;
 	border-bottom: 1px solid rgb(215, 215, 215);
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		height: 50px;
 	}
 }
@@ -101,7 +102,7 @@ $c-guide: rgb(218, 19, 112);
 	transition: all ease-in-out 0.4s;
 	z-index: 10;
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		width: 40px;
 		height: 50px;
 		position: fixed;
@@ -151,7 +152,7 @@ $c-guide: rgb(218, 19, 112);
 		direction: rtl;
 	}
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		margin-top: 50px;
 		margin-left: 0px;
 		overflow-x: hidden;
@@ -165,7 +166,7 @@ $c-guide: rgb(218, 19, 112);
 		direction: rtl;
 	}
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		margin-top: 50px;
 		margin-left: 0px;
 		overflow-x: hidden;
@@ -186,7 +187,7 @@ $c-guide: rgb(218, 19, 112);
 	margin-left: $nav-width ;
 	width: calc(100vw - (#{$nav-width} + 28px));
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		width: 100%;
 		margin-top: 50px;
 		margin-left: 0px;
@@ -1314,7 +1315,7 @@ a.opac {
 	background-color: #ffffff;
 	padding: 8px;
 
-	@media (max-width: 769px) {
+	@media (max-width: 767px) {
 		position: relative;
 		border-right: none;
 	}
