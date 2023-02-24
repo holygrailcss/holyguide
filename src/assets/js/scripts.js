@@ -42,6 +42,13 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$(".openshoplook").click(function () {
+	
+		$("body").toggleClass("openshop");
+		return false;
+	});
+
+
 	$('input[type="checkbox"]').click(function () {
 		if ($(this).is(":checked")) {
 			console.log("Checkbox esta seleccionado.");

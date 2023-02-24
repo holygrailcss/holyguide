@@ -1756,28 +1756,33 @@ img {
 
 .maxlook {
 	width: 100%;
-
     overflow: hidden;
-    height: 30vh;
+    height: 250px;
+	transition: all ease-in-out 0.4s;
+	cursor: pointer;
 
 	@media (min-width: $break-sm) {
 		position: sticky;
 		top: 20px;
 		height: initial;
-
 		max-width: 500px;
 	}
 
 	@media (min-width: $break-md) {
-
-
 		max-width: 500px;
 	}
 
 	@media (min-width: $break-lg) {
-
-
 		max-width: calc(100% - 64px);
+	}
+
+
+}
+.openshop{
+
+	.maxlook {
+		transition: all ease-in-out 0.4s;
+		height: 600px;
 	}
 
 
