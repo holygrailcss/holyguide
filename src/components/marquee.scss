@@ -11,16 +11,6 @@ $desktop-duration: 50s;
   }
 }
 
-@keyframes marquee-left-to-right {
-  from {
-    transform: translateX(-100%);
-
-  }
-  to {
-    transform: translateX(100vw);
-  }
-}
-
 // marquee animation
 .marquee {
   display: flex;
@@ -30,7 +20,6 @@ $desktop-duration: 50s;
   border: 3px solid #000;
   font-family: "arial";
   padding: 20px 0;
-
 }
 
 .marquee-content {
@@ -41,32 +30,30 @@ $desktop-duration: 50s;
 .marquee-inner {
   margin: 0;
   width: fit-content;
-  white-space: nowrap;
 }
 
 @media (max-width: 991px) {
   .marquee-content p {
-    animation: marquee-right-to-left  $mobile-duration linear infinite;
+    animation: marquee-right-to-left $mobile-duration linear infinite;
+  }
+  .marquee {
+    &:hover {
+      p {
+        animation-play-state: paused;
+      }
+    }
   }
 }
 
 @media (min-width: 992px) {
   .marquee-content p {
-    animation: marquee-right-to-left  $desktop-duration linear infinite;
+    animation: marquee-right-to-left $desktop-duration linear infinite;
   }
-}
-
-.is-rtl{
-  @media (max-width: 991px) {
-    .marquee-content p {
-      animation: marquee-left-to-right $mobile-duration linear infinite;
+  .marquee {
+    &:hover {
+      p {
+        animation-play-state: paused;
+      }
     }
   }
-  
-  @media (min-width: 992px) {
-    .marquee-content p {
-      animation: marquee-left-to-right $desktop-duration linear infinite;
-    }
-  }
-
 }

@@ -20,6 +20,7 @@
 @import "../../components/menu.scss";
 @import "../../components/limited.scss";
 @import "../../components/marquee.scss";
+@import "../../components/slidergroup.scss";
 @import "../../components/limited1.scss";
 @import "../../components/interstitials.scss";
 @import "../../components/shopthelook.scss";
@@ -1497,9 +1498,6 @@ article svg-icon div svg {
 	margin-bottom: 8px;
 }
 
-img {
-	max-width: initial;
-}
 
 .img-responsive {
 	width: 100%;
