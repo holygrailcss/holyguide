@@ -1763,17 +1763,22 @@ article svg-icon div svg {
 		position: sticky;
 		top: 20px;
 		height: initial;
-		max-width: 500px;
+
 	}
+
+img{
 
 	@media (min-width: $break-md) {
 		max-width: 500px;
+		width: 100%;
 	}
 
 	@media (min-width: $break-lg) {
-		max-width: calc(100% - 64px);
+		max-width: 100%;
+		width: calc(100% - 64px);
 	}
 
+}
 
 }
 .openshop{
