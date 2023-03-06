@@ -2,3 +2,4 @@ node_modules
 .cache
 build/
 dist/
+package-lock.json
