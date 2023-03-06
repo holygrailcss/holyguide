@@ -104,6 +104,23 @@ special.titledoc('Input','desc','actualizado') %} {% endcall %} {% endblock %} {
 
 
 
+{% call insert.element("Input con texto  ","
+    <div class='p-s '>
+        Titular del input básico
+    </div>
+<div class='form-input-label-2  '>
+    <input type='email' id='t2' class='input' placeholder='Email address' required='' />
+    <label for='t2'>form input label 2 </label>
+    <div class='p-s c-gray pt-8'>
+        Texto explicativo
+
+
+    </div>
+</div> ", "narrow") %} {% endcall %} 
+
+
+
+
 
 {% call insert.element("Input is-error","
 <div class='form-input-label-2 is-error '>
@@ -227,8 +244,9 @@ special.titledoc('Input','desc','actualizado') %} {% endcall %} {% endblock %} {
 </section>
 
 
-<section>
-    <div class="tit-m mb-24">Inputs básicos placeholder sin animación</div>
+<section class="mb-100">
+    <div class="tit-m">Inputs básicos placeholder sin animación</div>
+        <div class="tit-s mb-24">Utilizados de forma residual en ipod y react.</div>
     <div class='row'>
         <div class='col-xs-6 '>
             <label for=''> Input</label>
