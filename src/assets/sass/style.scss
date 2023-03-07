@@ -726,3 +726,34 @@ svg-icon{
   font-family:massimo-daily-bold !important;
 
 }
+.ico-ball{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $c-middle-grey;
+  
+
+  .ico-count  {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    position: absolute;
+    left: 3px;
+    bottom: 5px;
+    border: 1px solid #fff;
+
+  }
+  svg{
+    margin-top: -4px;
+  }
+}

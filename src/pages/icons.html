@@ -290,13 +290,46 @@
 <section class="mb-32 mt-32">
     <div class="row">
        
-        <div class="col-xs-12"><div class="tit-m"> Titulo</div>  </div>
+        <div class="col-xs-12"><div class="tit-m"> Iconos especiales</div>  </div>
         <div class="col-xs-12">
-            <div class="tit-s c-gray "> El color es fundamental para la experiencia del usuario y debe transmitir
-                información de manera accesible para todos nuestros usuarios. </div>
+            <div class="tit-s c-gray mb-16 "> En ocasiones los iconos pueden aparecer con otros elementos</div>
         </div>
     </div>
 </section>
+
+
+
+<section>
+
+    <div class="resize-mini">
+        <div class="resize-mini-content">
+            <div class="container-6">
+                <div class="row">
+                    <div class="col-xs-12 mb-16 align-center">
+                        <div class="ico-ball">
+                            {% call insert.svgIconname('shopping-bag') %} {% endcall %}
+                            <div class="ico-count">1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% set standardcode %}
+<div class="ico-ball">{% call insert.svgIconname('shopping-bag') %} {% endcall %}<div class="ico-count">1</div>
+</div>
+{% endset%}
+        <pre>
+        <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+          <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
+          <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+             </code>
+        </pre>
+    </div>
+
+
+</section>
+
+
 
 <section>
     <div class="container">
