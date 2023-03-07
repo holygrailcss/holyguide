@@ -98,7 +98,7 @@
      </pre>
 {% endmacro %} {% macro title(titular='', descripcion='') %}
 <div class="col-xs-12">
-	<div class="text-18-2b">{{titular}}</div>
+	<div class="tit-s">{{titular}}</div>
 	<div class="p-14">{{descripcion}}</div>
 	<hr class="mt-16 mb-40" />
 </div>
@@ -134,7 +134,7 @@
 
 
 {% macro links(links='', explicacion='',svg='' ,dark='' ) %}
-<p class="text-14-r mt-32">{{ explicacion }}</p>
+<p class="p-14 mt-32">{{ explicacion }}</p>
 {% if svg == '' %}
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
@@ -161,12 +161,12 @@
 		<div class="container-6">
 			<div class="row">
 				<div class="col-xs-12 mb-16 text-center">
-					<button class="  text-14-r {{ links  }} " href="">{{ links }}</button>
+					<button class="  p-14 {{ links  }} " href="">{{ links }}</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	{% set standardcode %}<button class="text-14-r {{ links  }} " href="">
+	{% set standardcode %}<button class="p-14 {{ links  }} " href="">
 		{{ links }}
 	</button>
 	{% endset%}
@@ -369,14 +369,14 @@
 						</i>
 						{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 						'checkbox-item is-error') %}
-						<span class="text-14-r"
+						<span class="p-14"
 							>{{ checkboxClass }} <a href="#">legal text</a></span
 						>
 						{% endif %}
 					</label>
 				</div>
 				{% if checkboxClass == 'checkbox-item-text' %}
-				<span class="text-14-r">{{ checkboxClass }} </span> {% endif %}
+				<span class="p-14">{{ checkboxClass }} </span> {% endif %}
 			</div>
 		</div>
 		<div class="col-xs-6  p-48 has-light bg-primary">
@@ -397,14 +397,14 @@
 						</i>
 						{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 						'checkbox-item is-error') %}
-						<span class="text-14-r"
+						<span class="p-14"
 							>{{ checkboxClass }} <a href="#">legal text</a></span
 						>
 						{% endif %}
 					</label>
 				</div>
 				{% if checkboxClass == 'checkbox-item-text' %}
-				<span class="text-14-r">{{ checkboxClass }} </span> {% endif %}
+				<span class="p-14">{{ checkboxClass }} </span> {% endif %}
 			</div>
 		</div>
 	</div>
@@ -428,14 +428,14 @@
 				</i>
 				{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 				'checkbox-item is-error') %}
-				<span class="text-14-r"
+				<span class="p-14"
 					>{{ checkboxClass }} <a href="#">legal text</a></span
 				>
 				{% endif %}
 			</label>
 		</div>
 		{% if checkboxClass == 'checkbox-item-text' %}
-		<span class="text-14-r">{{ checkboxClass }} </span> {% endif %}
+		<span class="p-14">{{ checkboxClass }} </span> {% endif %}
 	</div>
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
@@ -507,7 +507,7 @@
 			<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
 			<label for="{{randomNumber}}">
 				<i class="ico-radio"></i>
-				<span class="text-14-m">{{ checkboxClass }} </span>
+				<span class="p-14">{{ checkboxClass }} </span>
 				<span>
 					<div class="mb-10">{{ checkboxClass }}</div>
 				</span>
@@ -518,7 +518,7 @@
 			<input id="{{randomNumber}}-2" name="gender" type="radio" value="F" />
 			<label for="{{randomNumber}}-2">
 				<i class="ico-radio"></i>
-				<span class="text-14-m">{{ checkboxClass }} </span>
+				<span class="p-14">{{ checkboxClass }} </span>
 				<span>
 					<div class="mb-10">{{ checkboxClass }}</div>
 				</span>
@@ -532,7 +532,7 @@
 		<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
 		<label for="{{randomNumber}}">
 			<i class="ico-radio"></i>
-			<span class="text-14-m">{{ checkboxClass }} </span>
+			<span class="p-14">{{ checkboxClass }} </span>
 			<span>
 				<div class="mb-10">{{ checkboxClass }}</div>
 			</span>
@@ -821,7 +821,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 								commodi, veritatis qui repellendus eius .
 							  </div>
 							<div class="col-xs-12 col-sm-6 is-flex banner-cookies-btn  ">
-							  <button class="link-line text-14-r m-16 ">
+							  <button class="link-line p-14 m-16 ">
 								Boton link uno
 							  </button>
 							  <button class="btn btn-primary btn--full">Boton dos de cookies</button>
@@ -1087,7 +1087,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 		<div class="{{ checkboxcard  }}">
 		  <input id="{{randomNumber}}-1" name="gender" type="radio">
 		  <label for="{{randomNumber}}-1" class=" checkbox-card-label">
-			  <div class=" text-14-b">Recoger el 24/09 en la misma tienda</div>
+			  <div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
 		  </label>
 		</div>
 	  </div>
@@ -1096,7 +1096,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 		<div class="{{ checkboxcard  }}">
 		  <input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
 		  <label for="{{randomNumber}}-3" class=" checkbox-card-label ">
-			  <div class="  text-14-b">Guardar los artículos en la carpeta “Comprar más tarde” </div>
+			  <div class="  p-14-b">Guardar los artículos en la carpeta “Comprar más tarde” </div>
 		  </label>
 		</div>
 	  </div>
@@ -1109,7 +1109,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 				<div class="{{ checkboxcard  }}">
 				  <input id="{{randomNumber}}-4" name="gender" type="radio">
 				  <label for="{{randomNumber}}-4" class=" checkbox-card-label">
-					  <div class=" text-14-b">Recoger el 24/09 en la misma tienda</div>
+					  <div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
 				  </label>
 				</div>
 			  </div>
@@ -1118,7 +1118,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 				<div class="{{ checkboxcard  }}">
 				  <input id="{{randomNumber}}-5" name="gender" type="radio" value="a">
 				  <label for="{{randomNumber}}-5" class=" checkbox-card-label ">
-					  <div class="  text-14-b">Guardar los artículos en la carpeta  “Comprar más tarde” </div>
+					  <div class="  p-14-b">Guardar los artículos en la carpeta  “Comprar más tarde” </div>
 				  </label>
 				</div>
 			  </div>
@@ -1137,7 +1137,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 			<div class="{{ checkboxcard  }}">
 			  <input id="{{randomNumber}}-1" name="gender" type="radio">
 			  <label for="{{randomNumber}}-1" class=" checkbox-card-label">
-				<div class=" text-14-b">Recoger el 24/09 en la misma tienda</div>
+				<div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
 			  </label>
 			</div>
 		  </div>
@@ -1145,7 +1145,7 @@ tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
 			<div class="{{ checkboxcard  }}">
 			  <input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
 			  <label for="{{randomNumber}}-3" class=" checkbox-card-label ">
-				<div class=" text-14-b">Guardar los artículos en “Comprar más tarde” </div>
+				<div class=" p-14-b">Guardar los artículos en “Comprar más tarde” </div>
 			  </label>
 			</div>
 		  </div>
