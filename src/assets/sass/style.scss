@@ -742,15 +742,16 @@ svg-icon{
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 10px;
     background-color: $c-primary;
-    color: #fff;
+    color: $c-white;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.6;
     position: absolute;
     left: 5px;
     bottom: 5px;
-    border: 1px solid #fff;
+    border: 1px solid $c-white;
+    font-weight: 600;
 
   }
   svg{
