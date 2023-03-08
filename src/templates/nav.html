@@ -1,111 +1,224 @@
 <nav class="nav-guide">
-	<div class="menu-lateral sidebar">
+  <div class="menu-lateral sidebar">
+    <ul class="list-clear p-m-b mb-16 mt-8">
+      <li class="{% if page_title == 'getting' %} link-line {% endif %}">
+        <a class="p-xs" target="_parent" href="./tailor.html"
+          >Getting Started</a
+        >
+      </li>
 
-		<ul class="list-clear p-m-b mb-16 mt-8">
-			<li> <a class="p-xs   " target="_parent" href="./tailor.html">Getting Started</a></li>
-			<li> <a class="p-xs   " target="_parent" href="./startdev.html">Start Dev</a></li>
-			<li> <a class="p-xs   " target="_parent" href="./startdesigner.html">Start Designer (wip)</a> </li>
-		</ul>
+      <li class="{% if page_title == 'colores' %} link-line {% endif %}">
+        <a href="colores.html">colores </a>
+      </li>
 
-		<ul class="list-clear mb-8">
-			<div class=" doc-menu-title mt-8 mb-4 tit-xs align-middle "> Base </div>
-			<div class="body">
-				<li><a class="p-xs " target="_parent" href="layout.html"> Layout</a></li>
-				<!-- <li><a class="p-xs" target="_parent" href="icons.html"> Icons</a></li> -->
-				<li><a class="p-xs " target="_parent" href="colores.html">Colores</a></li>
-				<li><a class="p-xs " target="_parent" href="images.html">images</a></li>
-				<li><a class="p-xs " target="_parent" href="icons.html">Icons</a></li>
-				<li><a class="p-xs " target="_parent" href="heights.html"> Height </a></li>
-				<li><a class="p-xs " target="_parent" href="helpers.html"> Helpers</a></li>
-				<li><a class="p-xs " target="_parent" href="flexbox.html"> Flexbox</a></li>
-				<li><a class="p-xs " target="_parent" href="espaciado.html"> Espaciado</a></li>
-				<li><a class="p-xs " target="_parent" href="ratios.html"> Ratios</a></li>
-				<li> <a class="p-xs " target="_parent" href="tipografia.html"> Tipografia</a></li>
-				<li> <a class="p-xs " target="_parent" href="playground.html"> Playground</a></li>
-				<li> <a class="p-xs " target="_parent" href="videos.html"> Videos</a></li>
-			</div>
-		</ul>
-		<ul class="list-clear mb-8">
-			<div class="doc-menu-title mt-8 mb-4 tit-xs align-middle"> 
-				<a class="tit-xs" target="_parent" href="./atoms.html"> Atoms </a> 
-			 </div>
-			<div class="body">
-				<li><a class="p-xs " target="_parent" href="./buttons.html"> Buttons </a>   </li>
-				<li><a class="p-xs  " target="_parent" href="./checkbox.html"> Checkbox</a></li>
-				<li><a class="p-xs " target="_parent" href="./input.html"> Input </a></li>
-				<li><a class="p-xs " target="_parent" href="./links.html"> Links</a></li>
-				<li><a class="p-xs " target="_parent" href="./list.html"> List </a></li>
-				<li><a class="p-xs " target="_parent" href="./select.html"> Select </a></li>
-				<li><a class="p-xs " target="_parent" href="./datalist.html"> Datalist </a></li>
-				<li><a class="p-xs " target="_parent" href="./tabs.html"> Tabs </a></li>
-				<li><a class="p-xs " target="_parent" href="./tags.html"> Tags </a></li>
-				<li><a class="p-xs process" target="_parent" href="./banners.html"> banners </a></li>
-			</div>
-		</ul>
-		<ul class="list-clear mb-8">
-			<div class="doc-menu-title mt-8 mb-4 tit-xs align-middle"> Componentes <div class="p-xs"> (WIP)
-				</div>
-			</div>
-			<div class="body">
-				<li><a class="p-xs" target="_parent" href="componentes.html"> Componentes</a></li>
-				<li><a class="p-xs" target="_parent" href="modal.html"> Modales</a></li>
-				<li><a class="p-xs" target="_parent" href="marquee.html"> Marquee</a></li>
-                <li><a class="p-xs" target="_parent" href="slidergroup.html"> slidergroup</a></li>
-			</div>
-		</ul>
-		<ul class="list-clear mb-8">
-			<div class="doc-menu-title mt-8 mb-4 tit-xs align-middle"> Templates </div>
-			<div class="body">
-				<li><a class="p-xs" target="_blank" href="01-giftcard.html"> Gift Card</a></li>
-				<li><a class="p-xs" target="_parent" href="02-minicesta.html"> Minicesta</a></li>
-				<li><a class="p-xs" target="_parent" href="03-pdecorte.html"> P. de corte</a></li>
-				<li><a class="p-xs" target="_parent" href="08-guiadetallas.html"> Guía de tallas</a></li>
-				<li><a class="p-xs" target="_parent" href="04-menu.html"> menu </a></li>
-				<li><a class="p-xs process" target="_parent" href="05-modals.html"> modals </a></li>
-				<li><a class="p-xs" target="_parent" href="06-worldwide.html"> Worldwide </a></li>
-				<li><a class="p-xs" target="_parent" href="07-limited.html"> Limited </a></li>
-				<li><a class="p-xs" target="_parent" href="09-feel.html"> Feel </a></li>
-				<li><a class="p-xs" target="_blank" href="10-storelocator.html"> Store locator</a> </li>
-				
-					<li><a class="p-xs" target="_blank" href="11-interstitials.html"> Interstitials</a> </li>
-					<li><a class="p-xs" target="_blank" href="12-shopthelook.html"> Shopthelook</a> </li>
-				
-				{#<li><a class="p-xs"
-						target="_blank" href="./templates/template-header2.html"> NEW header</a></li>
-				<li><a class="p-xs" target="_blank" href="./templates/template-home.html"> NEW home</a></li>
-				<li><a class="p-xs" target="layout" href="./templates/parrilla/parrilla.html"> Parrillas </a></li>
-				<li><a class="p-xs" target="layout" href="./templates/newsletter/newsletter.html"> Newsletters </a>
-				</li>
-				<li><a class="p-xs" target="_blank" href="./templates/feel_reserva/feel_reserva.html"> Feel
-						reserva</a></li>
-				<li><a class="p-xs" target="_blank" href="./templates/feel/landing.html"> Feel landing</a></li>
-				<li><a class="p-xs" target="_blank" href="./templates/template-feel.html"> Feel</a></li>
-				<li><a class="p-xs" target="_blank" href="./templates/template-wishlist.html"> Wishlist</a></li>
-		 #}
-			</div>
-		</ul>
-		<ul class="list-clear p-m-b mb-48">
-			<li> <a class="p-m-b " target="_parent" href="./proceso.html">Proceso</a>
-			<li> <a class="p-m-b " target="_parent" href="./news.html">News</a>
-				<!-- </li>
-			<li> <a class="p-m-b " target="_parent" href="./guia.html">Guia <div class=""></div></a>
-			</li> -->
-		</ul>
-		<div class="nav-bottom">
-			<div class="row m-0">
-				<div class="col-xs-12 mb-16">
-					<button onclick="rtlChange()" class="menu-arabian btn btn--mini"> RTL</button>
-					<a href="https://www.npmjs.com/package/holygrailcss" target="_blank" rel="nofollow">
-						<img src="https://img.shields.io/npm/v/holygrailcss.svg">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+      <li class="{% if page_title == 'startdev' %} link-line {% endif %}">
+        <a class="p-xs" target="_parent" href="./startdev.html">Start Dev</a>
+      </li>
+      <li class="{% if page_title == 'startdes' %} link-line {% endif %}">
+        <a class="p-xs" target="_parent" href="./startdesigner.html"
+          >Start Designer (wip)</a
+        >
+      </li>
+    </ul>
+
+    <ul class="list-clear mb-8">
+      <div class="doc-menu-title mt-8 mb-4 tit-xs align-middle">Base</div>
+      <div class="body">
+        <li class="{% if page_title == 'layout' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="layout.html"> Layout</a>
+        </li>
+        <!-- <li class=" {% if page_title == 'colores' %} link-line {% endif %}"><a class="p-xs" target="_parent" href="icons.html"> Icons</a></li> -->
+        <li class="{% if page_title == 'colores' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="colores.html">Colores</a>
+        </li>
+        <li class="{% if page_title == 'images' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="images.html">images</a>
+        </li>
+        <li class="{% if page_title == 'icons' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="icons.html">Icons</a>
+        </li>
+        <li class="{% if page_title == 'heights' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="heights.html"> Height </a>
+        </li>
+        <li class="{% if page_title == 'helpers' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="helpers.html"> Helpers</a>
+        </li>
+        <li class="{% if page_title == 'flexbox' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="flexbox.html"> Flexbox</a>
+        </li>
+        <li class="{% if page_title == 'espaciado' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="espaciado.html"> Espaciado</a>
+        </li>
+        <li class="{% if page_title == 'ratios' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="ratios.html"> Ratios</a>
+        </li>
+        <li class="{% if page_title == 'tipografia' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="tipografia.html">
+            Tipografia</a
+          >
+        </li>
+        <li class="{% if page_title == 'playground' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="playground.html">
+            Playground</a
+          >
+        </li>
+        <li class="{% if page_title == 'videos' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="videos.html"> Videos</a>
+        </li>
+      </div>
+    </ul>
+    <ul class="list-clear mb-8">
+      <div class="doc-menu-title mt-8 mb-4 tit-xs align-middle">
+        <a class="tit-xs" target="_parent" href="./atoms.html"> Atoms </a>
+      </div>
+      <div class="body">
+        <li class="{% if page_title == 'buttons' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./buttons.html"> Buttons </a>
+        </li>
+        <li class="{% if page_title == 'checkbox' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./checkbox.html"> Checkbox</a>
+        </li>
+        <li class="{% if page_title == 'input' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./input.html"> Input </a>
+        </li>
+        <li class="{% if page_title == 'links' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./links.html"> Links</a>
+        </li>
+        <li class="{% if page_title == 'list' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./list.html"> List </a>
+        </li>
+        <li class="{% if page_title == 'select' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./select.html"> Select </a>
+        </li>
+        <li class="{% if page_title == 'datalist' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./datalist.html"> Datalist </a>
+        </li>
+        <li class="{% if page_title == 'tabs' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./tabs.html"> Tabs </a>
+        </li>
+        <li class="{% if page_title == 'tags' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="./tags.html"> Tags </a>
+        </li>
+        <li class="{% if page_title == 'banners' %} link-line {% endif %}">
+          <a class="p-xs process" target="_parent" href="./banners.html">
+            banners
+          </a>
+        </li>
+      </div>
+    </ul>
+    <ul class="list-clear mb-8">
+      <div class="doc-menu-title mt-8 mb-4 tit-xs align-middle">
+        Componentes
+        <div class="p-xs">(WIP)</div>
+      </div>
+      <div class="body">
+        <li class="{% if page_title == 'componentes' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="componentes.html">
+            Componentes</a
+          >
+        </li>
+        <li class="{% if page_title == 'modales' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="modal.html"> Modales</a>
+        </li>
+        <li class="{% if page_title == 'marquee' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="marquee.html"> Marquee</a>
+        </li>
+        <li class="{% if page_title == 'slidergroup' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="slidergroup.html">
+            slidergroup</a
+          >
+        </li>
+      </div>
+    </ul>
+    <ul class="list-clear mb-8">
+      <div class="doc-menu-title mt-8 mb-4 tit-xs align-middle">Templates</div>
+      <div class="body">
+        <li class="{% if page_title == 'giftcard' %} link-line {% endif %}">
+          <a class="p-xs" target="_blank" href="01-giftcard.html"> Gift Card</a>
+        </li>
+        <li class="{% if page_title == 'minicesta' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="02-minicesta.html">
+            Minicesta</a
+          >
+        </li>
+        <li class="{% if page_title == 'pdecorte' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="03-pdecorte.html">
+            P. de corte</a
+          >
+        </li>
+        <li class="{% if page_title == 'guiadetallas' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="08-guiadetallas.html">
+            Guía de tallas</a
+          >
+        </li>
+        <li class="{% if page_title == 'menu' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="04-menu.html"> menu </a>
+        </li>
+        <li class="{% if page_title == 'modals' %} link-line {% endif %}">
+          <a class="p-xs process" target="_parent" href="05-modals.html">
+            modals
+          </a>
+        </li>
+        <li class="{% if page_title == 'worldwide' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="06-worldwide.html">
+            Worldwide
+          </a>
+        </li>
+        <li class="{% if page_title == 'limited' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="07-limited.html"> Limited </a>
+        </li>
+        <li class="{% if page_title == 'feel' %} link-line {% endif %}">
+          <a class="p-xs" target="_parent" href="09-feel.html"> Feel </a>
+        </li>
+        <li class="{% if page_title == 'storelocator' %} link-line {% endif %}">
+          <a class="p-xs" target="_blank" href="10-storelocator.html">
+            Store locator</a
+          >
+        </li>
+
+        <li
+          class="{% if page_title == 'interstitials' %} link-line {% endif %}"
+        >
+          <a class="p-xs" target="_blank" href="11-interstitials.html">
+            Interstitials</a
+          >
+        </li>
+        <li class="{% if page_title == 'shopthelook' %} link-line {% endif %}">
+          <a class="p-xs" target="_blank" href="12-shopthelook.html">
+            Shopthelook</a
+          >
+        </li>
+      </div>
+    </ul>
+    <ul class="list-clear p-m-b mb-48">
+      <li class="{% if page_title == 'proceso' %} link-line {% endif %}">
+        <a class="p-m-b" target="_parent" href="./proceso.html">Proceso</a>
+      </li>
+      <li class="{% if page_title == 'news' %} link-line {% endif %}">
+        <a class="p-m-b" target="_parent" href="./news.html">News</a>
+      </li>
+    </ul>
+
+    <div class="nav-bottom">
+      <div class="row m-0">
+        <div class="col-xs-12 mb-16">
+          <button onclick="rtlChange()" class="menu-arabian btn btn--mini">
+            RTL
+          </button>
+          <a
+            href="https://www.npmjs.com/package/holygrailcss"
+            target="_blank"
+            rel="nofollow"
+          >
+            <img src="https://img.shields.io/npm/v/holygrailcss.svg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
 <div class="toggle-menu"></div>
 
-
-	<script src="/js/rtl-action-components.js"></script>
+<script src="/js/rtl-action-components.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/js/nav-interactions.js"></script>
