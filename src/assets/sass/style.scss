@@ -75,14 +75,24 @@
     padding-left: initial;
     padding-right: 32px;
   }
-  .check-center.check-bleed.checkbox-radio [type="radio"]:checked + label:before,
-  .check-center.check-bleed.checkbox-radio [type="radio"]:not(:checked) + label:before {
+  .check-center.check-bleed.checkbox-radio
+    [type="radio"]:checked
+    + label:before,
+  .check-center.check-bleed.checkbox-radio
+    [type="radio"]:not(:checked)
+    + label:before {
     left: initial;
     right: 0px;
   }
 
-  .check-center.check-bleed.checkbox-radio [type="radio"]:checked + label .ico-radio,
-  .check-center.check-bleed.checkbox-radio [type="radio"]:not(:checked) + label .ico-radio {
+  .check-center.check-bleed.checkbox-radio
+    [type="radio"]:checked
+    + label
+    .ico-radio,
+  .check-center.check-bleed.checkbox-radio
+    [type="radio"]:not(:checked)
+    + label
+    .ico-radio {
     left: initial;
     right: 7px;
   }
@@ -769,5 +779,36 @@ svg-icon {
   &:hover {
     opacity: 0.6;
     cursor: pointer;
+  }
+}
+
+.box4 {
+  position: relative;
+  display: flex;
+  ul {
+    margin-left: 16px;
+    margin-top: 4px;
+  }
+  &:before {
+    width: 2px;
+    height: calc(100% - 48px);
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 47px;
+    left: 20px;
+  }
+
+  .is-rtl & {
+    ul {
+      margin-left: 0;
+      margin-right: 16px;
+    }
+    &:before {
+      left: initial;
+
+      top: 47px;
+      right: 20px;
+    }
   }
 }
