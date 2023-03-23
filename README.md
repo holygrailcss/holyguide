@@ -59,14 +59,14 @@ giftcard.scss
                 </ul> <!-- END tabguideguide-nav -->
                 <div id="tabguide-content">
                     <div id="tabguide1" class="tabguide-content">
-                        <div class='form-input-label'>
+                        <div class='form-input-label-2'>
                             <input type='email' id='Input animado' class='input Input animado'
                                 placeholder='Input animado' required=''>
                             <label for='Input animado'>Input animado</label>
                         </div>
                     </div>
                     <div id="tabguide2" class="tabguide-content">
-                        <div class="form-input-label is-error">
+                        <div class="form-input-label-2 is-error">
                             <input type="email" id="10" class="input" placeholder="Email address" required="">
                             <label for="10">Email address</label>
                             <div class="validation-error-messages">
@@ -75,7 +75,7 @@ giftcard.scss
                         </div>
                     </div>
                     <div id="tabguide3" class="tabguide-content">
-                        <div class="form-input-label is-error">
+                        <div class="form-input-label-2 is-error">
                             <input type="email" id="10" class="input" placeholder="Email address" required="">
                             <label for="10">Email address</label>
                             <div class="info-text p-14 text-right">0/3</div>
@@ -85,7 +85,7 @@ giftcard.scss
                         </div>
                     </div>
                     <div id="tabguide4" class="tabguide-content">
-                        <div class='form-input-label has-ico-pre'>
+                        <div class='form-input-label-2 has-ico-pre'>
                             <input type='email' id='dos' class='input' placeholder='Email address' required='' />
                             <label for='dos'>Email dos</label>
                             <svg class='ico-pre' width='16px' height='16px' viewBox='0 0 16 16'>
@@ -93,7 +93,7 @@ giftcard.scss
                                     <circle fill='none' stroke='#000000' cx='8' cy='8' r='6'>
                                     </circle>
                                 </g>
-                            </svg>
+                            </svg
                         </div>
                     </div>
                 </div> <!-- END tabguideguide-content -->
