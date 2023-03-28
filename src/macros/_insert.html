@@ -916,42 +916,33 @@ descripcion %}
 							</div>
 						</div>{% endset %}
 						{% elif bannerClass === "ico-link" %}
-
-					
 								<div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
 									<div class="row ">
-
 										<div class="col-xs-10">
 											<span class="tit-xs">
 												¡Recoge tu pedido en solo X horas!
 											</span>
 											<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
 										</div>
-
-										<div class="col-xs-2 text-right is-flex content-end">
-											<button class='btn btn-clear'>
+										<div class="col-xs-2 text-right is-flex content-end  align-middle">							
 												{% call svgIconname('arrow-right') %} {% endcall %}
-											</button>
 										</div>
-
 									</div>
 								</div>
 					
-{% set standardcode %}<div class="col-xs-12 bg-alert  pt-8 pb-8 pl-16 pr-16">
-		<div class="row ">
-			<div class="col-xs-10">
-				<span class="tit-xs">
-					¡Recoge tu pedido en solo X horas!
-				</span>
-				<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
-			</div>
-			<div class="col-xs-2 text-right is-flex content-end">
-				<button class='btn btn-clear'>
-					<svg-icon src="arrow-right"></svg-icon>
-				</button>
-			</div>
+{% set standardcode %}<div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
+	<div class="row ">
+		<div class="col-xs-10">
+			<span class="tit-xs">
+				¡Recoge tu pedido en solo X horas!
+			</span>
+			<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
 		</div>
-	</div>{% endset %}
+		<div class="col-xs-2 text-right is-flex content-end  align-middle">							
+			<svg-icon src="arrow-right"></svg-icon>
+		</div>
+	</div>
+</div>{% endset %}
 
 
 
