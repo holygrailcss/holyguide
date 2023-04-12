@@ -25,7 +25,20 @@
 
 } */
 
-
-
-
-
+.container-slide {
+  width: calc(100% + 16px);
+  overflow: hidden;
+  .swiper-container {
+    width: 100%;
+  }
+  .container-slide {}
+  .swiper-container {
+    padding-left: calc(100% / 2 - 400px);
+  }
+  .swiper-button-prev.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+}

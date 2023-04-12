@@ -95,6 +95,21 @@ $(document).ready(function () {
 	});
 
 
+    var mySwiper = new Swiper ('.swiper-container', {
+		// esto es opcional
+		direction: 'horizontal',
+		slidesPerView: "6",
+		spaceBetween: 0,
+		//visibilityFullFit: true,
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+	  })
+
+
+
+
 
 });
 
