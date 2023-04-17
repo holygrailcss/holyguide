@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$(".resize-code").on("click", function () {
-		$(this.parentNode.parentNode.parentNode).toggleClass("openCode");
+		$(this.parentNode.parentNode.parentNode.parentNode).toggleClass("opencode-button");
 		e.preventDefault();
 	});
 	$(".resize-rules").on("click", function () {
@@ -36,8 +36,8 @@ $(document).ready(function () {
 		return false;
 	});
 
-	$(".opencode").click(function () {
-		$(this.parentNode).toggleClass("active");
+	$(".opencode-button").click(function () {
+		$(this.parentNode.parentNode).toggleClass("active");
 
 		return false;
 	});

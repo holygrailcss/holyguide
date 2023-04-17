@@ -65,3 +65,15 @@
 
 
 }
+.swiper-button-prev, 
+.swiper-container-rtl .swiper-button-next{
+  filter: hue-rotate(45deg);
+  transform: scale(.5);
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #ffffff;
+}
+
+
