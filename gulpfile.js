@@ -30,6 +30,9 @@ function imageMin(cb) {
 		.src("src/assets/images/components/*")
 		.pipe(imagemin())
 		.pipe(gulp.dest("dist/images/components"));
+        gulp
+		.src("src/assets/images/grafico/*")
+		.pipe(gulp.dest("dist/images/grafico"));
 
 	cb();
 }

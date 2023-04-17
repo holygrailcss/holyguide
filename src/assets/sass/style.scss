@@ -42,3 +42,26 @@
     pointer-events: none;
   }
 }
+.swiper-container{
+  .swiper-wrapper{
+    height: 800px;
+  }
+
+  .swiper-slide {
+    height: 800px;
+    width: auto;
+    img{
+      height: 500px;
+
+    }
+    .texto {
+      width: 100%;
+      max-width: 300px;
+  }
+
+
+  }
+
+
+
+}

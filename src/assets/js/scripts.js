@@ -98,7 +98,7 @@ $(document).ready(function () {
     var mySwiper = new Swiper ('.swiper-container', {
 		// esto es opcional
 		direction: 'horizontal',
-		slidesPerView: "6",
+		slidesPerView: 'auto',
 		spaceBetween: 0,
 		//visibilityFullFit: true,
 		pagination: '.swiper-pagination',
