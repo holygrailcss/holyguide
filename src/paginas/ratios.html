@@ -1,0 +1,96 @@
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Ratios','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+
+  {% set page_title = "ratios" %} 
+{% block content %}
+
+
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 "></div>
+        <div class="col-xs-12 ">
+            <div class="tit-s c-dark-grey "> Contenedores que conservan una relación de aspecto definida. </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+
+        <div class="col-xs-12 ">
+            <div class="tit-m">Como se usa</div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <p> Para poder usar el ratio solo tenemos que incluirlo dentro de
+                <code>.rat-2-1.rat-content</code> para que su contenido tenga posicion absoluta. </p>
+            <p> Adjuntamos los paddings-tops para los ratios. <br> Si no existe tu ratio
+                puedes crear nuevos ratios de esta manera.
+                <code> @include ratio(ancho, alto); </code>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+
+        <div class="col-xs-12 "> <div class="tit-m">Ratios</div>   </div>
+        <div class="col-xs-12">
+
+            <h3 class="mb-24">Ejemplo</h3>
+
+            <pre><code class="language-markup">
+                {{"<div class='rat-2-1'>
+                    <div class='rat-content'>
+                        <img src='image.jpg' alt='Image description'>
+                    </div>
+                </div>" | escape }}
+
+</code></pre>
+
+
+
+<div class="masonry">
+    {% for item in globals.ratios %}<div class="mini-box rat-{{ item.ancho }}-{{ item.alto }} ;">
+
+        <div class="rat-content">
+            <div class="p-xs">
+                .rat-{{ item.ancho }}-{{ item.alto }} 
+            </div>
+            {{ item.ancho }}:{{ item.alto }} 
+     
+
+        </div>
+    </div>
+    {% endfor %}
+
+
+    {% for item in globals.skeletons %}
+    <div class="border-1 sk-load{{ item.number }} ;">
+
+dfdfdfdfdf
+    </div>
+    {% endfor %}
+
+
+
+
+
+
+</div>
+
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

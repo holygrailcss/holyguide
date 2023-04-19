@@ -1,0 +1,58 @@
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Practicas','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+
+  {% set page_title = "practicas" %} 
+{% block content %}
+
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+    
+        <div class="col-xs-12 ">
+            <div class="tit-m "> Buenas prácticas</div>
+        </div>
+        <div class="col-xs-12 ">
+            <div class="tit-s c-dark-grey "> Los mínimos mandamientos a seguir en maqueta.  </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3 class="tit-s   ">
+                        <svg class="mr-16 ico-error" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z"
+                                fill="#292929"></path>
+                        </svg> DON'T
+                    </h3>
+                </div>
+                <div class="col-xs-6">
+                    <h3 class="tit-s  ">
+                        <svg class="mr-16 ico-success"  width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.7063 3.78557L5.9 14.5617L0.293677 8.40095L1.03328 7.72791L5.9 13.076L14.9667 3.11253L15.7063 3.78557Z"
+                                fill="#292929"></path>
+                        </svg>DO
+                    </h3>
+                </div>
+                <hr class="mt-16 mb-16">
+            </div>   
+            {% call lists.lists('No Usar clases para hacer <b>   querySelector  </b>',' Usar clases nativas de Angular para seleccionar elementos<b> (ViewChild, ElementRef)</b> ') %} {% endcall %} 
+            {% call lists.lists('No Crear un archivo sass <b>sin importar las variables de inicio</b>','importar todas las clases al inicio del sass  <b>abstract/all </b>') %} {% endcall %} 
+            {% call lists.lists('No Crear css para nuevos elementos sin testear, y <b>sin pasar por UX</b> ','Usaremos los css que ya están testeados <b>en la guia</b> directamente en el html ') %} {% endcall %} 
+            {% call lists.lists('Si no existe el componente <b> no lo creo</b> . ','El equipo de ux creará el componente, y lo introducirá en el <b>ds system </b>de art digital') %} {% endcall %} 
+
+            {% call lists.lists(' No Usaremos <b> :host</b> para usar las clases de forma global . ',':host, no funciona en la web. Debemos trabajar el <b>encapsulation: ViewEncapsulation.None</b>') %} {% endcall %} 
+
+            {% call lists.lists(' No Usaremos <b> :host</b> para usar las clases de forma global . ',':host, no funciona en la web. Debemos trabajar el <b>encapsulation: ViewEncapsulation.None</b>') %} {% endcall %} 
+
+            {% call lists.lists(' No Usaremos <b> disabled en botones</b> ',' Los botones <b> estarán habilitados </b>  para saber que nos falta por rellenar al hacer click. ') %} {% endcall %} 
+
+        </div>
+    </div>
+</section> 
+
+
+{% endblock %}

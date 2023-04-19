@@ -1,0 +1,298 @@
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Star','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+  {% set page_title = "start" %} 
+{% block content %}
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12">
+        </div>
+        <div class="col-xs-12 "></div>
+        <div class="col-xs-12 col-md-9">
+            <iframe
+            src="https://ghbtns.com/github-btn.html?user=holygrailcss&amp;repo=holygrail&amp;type=star&amp;count=true&amp;size=large"
+            frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            <div class="tit-s c-dark-grey "> Aqui veremos como customizar holygrail de cero siguiendo la especificación de
+                Holygrail css. </div>
+            <div id="ghbtns" class="bd-hello-ghbtns">
+            </div>
+        </div>
+        
+        <div class="col-xs-12 "></div>
+        <div class="col-xs-12">
+            <p class="p-14 mt-32 mb-24"> <b> Sitemap.</b> visión global de la estructura de la web</p>
+            {% call insert.figma('https://www.figma.com/file/bSNp0v69JdwRaLADtQ4jkh/MD---site-map?node-id=308%3A2') %}  {% endcall %}
+
+            <p class="p-14 mt-48">
+                Para incluir capturas de pantalla usa esta guia: 
+            </p>
+            <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/e2c21fcbaea240e08e2eefe3aa317ee0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </div>
+
+    </div>
+</section>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+
+            <div class="col-xs-12 ">
+                <div class="tit-m"> Instalación</div>
+            </div>
+            <div class="col-xs-12">
+                <p class=" p-l"> Somos independientes del Framework, esto es una guía para ayudarte a comenzar
+                    rápidamente: </p>
+                <br>
+                <h2 class="p-m"> Configuración </h2>
+                <p class=" p-l"> Aqui veremos como customizar el holygrail de cero siguiendo la especificación de
+                    Holygrail css, desarrollamos una biblioteca de elementos de usuario que contiene un conjunto de
+                    componentes y demostraciones de alta calidad para crear interfaces de usuario Previas a Desarrollo.
+                </p>
+                <h4>ONLINE</h4>
+                <p class="p-14"> Vívelo ahora a través de tu plataforma online preferida: </p>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <a href="https://codesandbox.io/s/origen-holygrail-ktq12?file=/index.html">
+                            <div class="checkbox-svg">
+                                <div class="checkbox-svg-label flex-column align-center">
+                                    <div class="svg-content">
+                                        <img width="60px" src="./images/sandbox.png" alt="">
+                                    </div>
+                                    <div class=" tit-s">Codesandbox</div>
+                                     <div class="text-center p-14"> Crea un fork para crear componente o una maqueta con holygrail en la
+                                    nube. </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <img width="60px" src="./images/githublogo.png" alt="">
+                                </div>
+                                <div class=" tit-s">Github</div>
+                                <div class="text-center p-14"> Crea un entorno de desarrollo desde cero </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class=" tit-s">Boilerplate</div>
+                                <div class="text-center p-14"> Crea un proyecto completo con parcel y gulp en tu
+                                    local. </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>CDN</h4>
+                <pre><code class='language-html '>{{ "<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link href='https://cdn.jsdelivr.net/npm/holygrailcss@version/dist/style.css' rel='stylesheet'>
+</head>
+<body>
+    <h1 class='h1'>Hello World</h1>
+</body>" | escape }}
+</code>
+</pre>
+                <br> Actualmente la última versión es la <br>
+                <code>https://cdn.jsdelivr.net/npm/holygrailcss@{{globals.holygrailcssv }}/dist/style.css</code>
+                <h4>INSTALACIÓN</h4>
+                <code>npm i holygrailcss </code>
+                <h4>IMPORTAR </h4>
+                <p class="p-14"> Agregar <code>~holygrailcss/scss/style.scss </code>desde node_modules a tu archivo de
+                    entrada de scss: </p>
+                <pre><code class='language-css '>@import "setup.scss"; 
+</code>
+</pre>
+                <h4>COMPATIBILIDAD CON NAVEGADOR </h4>
+                <p class="p-14"> Desde <b>UX IT</b> hemos intentado agregar prefijos de proveedores apropiados a algunos estilos,
+                    solo tienes que asegurarse de que las propiedades CSS que estás utilizando actualmente sean
+                    compatibles con la mayoría de los navegadores modernos - <a class="link-line"
+                        href="https://caniuse.com/" target="blank"> caniuse.com </a>
+                </p>
+                <h4>INSTALACIÓN MANUAL</h4>
+                <h3> 0. Comprobar node</h3>
+                <p class=" p-l"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no tenerlo
+                    instalarlo.</p>
+                <code>node -v</code>
+                <p class="p-14"> Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm </p>
+                <code>npm i</code>
+                <p class=" p-l"> Compilamos sass con npm</p>
+                <code>npm build-sass</code>
+                <p class=" p-l"> Usamos Gulp para comprimir y lanzar el proyecto</p>
+                <code>gulp style gulp watch</code>
+                <p class=" p-l"> Si no tienes gulp instalado:</p>
+                <code>npm install --save-dev gulp</code>
+                <p class=" p-l"> Si tienes problemas en Mac puede que necesites ejecutar el comando como
+                    administrador</p>
+                <code>sudo npm install --save-dev gulp</code>
+                <hr class="mb-32 mt-32">
+                <h3> 1. Clonar el repo</h3>
+                <p class=" p-l">Holygrail está disponible con github</p>
+                <code>git clone https://github.com/holygrailcss</code>
+                <h3> 2. Ejecutar proyecto</h3>
+                <p class="p-14">
+                    <code>gulp</code>
+                </p>
+            </div>
+        </div>
+        <div class="row pt-64 pb-64">
+
+            <div class="col-xs-12 ">
+                <div class="tit-m"> Setup</div>
+            </div>
+            <div class="col-xs-12">
+                <h2 class="p-m"> Setup </h2>
+                <p class="p-14"> Antes de nada customizaremos el proyecto base desde la propia guia. Este es el código que
+                    deberás incluir en el setup. </p>
+                <pre class=""><code class="language-css ">
+/*Primarios*/
+{% for item in globals.colorsPrimary %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+/*Semanticos*/
+{% for item in globals.colorsSemantic %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+/* Escala de grises*/
+{% for item in globals.colorsGreyscale %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+/* Containers*/
+{% for item in globals.containers %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+/* Breakpoints*/
+{% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
+{% endfor %}</code>
+</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="mb-32 mt-32">
+    <div class="row">
+    
+        <div class="col-xs-12 ">
+            <div class="tit-m"> Creando un componente</div>
+        </div>
+        <div class="col-xs-12">
+
+
+            <div class="tit-s c-dark-grey  mb-40"> Una vez tengamos holygrail instalado y configurado, crearemos los elementos
+            </div>
+            <p class="p-14">Trataremos cada elemento como un elemento atómico,y lo incorporaremos a holygrail creando una nueva versión</p>
+       
+       
+        </div>
+    </div>
+</section>
+<section class="mb-32 mt-32">
+    <div class="row">
+    
+        <div class="col-xs-12 ">
+            <div class="tit-m"> Creando un template</div>
+        </div>
+        <div class="col-xs-12">
+            <div class="tit-s c-dark-grey  mb-40"> Una vez creados los elementos , crearemos templates.</div>
+            <p class="p-14"> Para ello crearemos un fork con el nombre del nuevo template, y desarrollaremos en
+                codesandbox. Es importante que tengas una cuenta en codesandbox. </p>
+            <div class="row mb-64">
+        
+                <div class="col-xs-4">
+                    <a class="opac" target="_blank  " href="https://codesandbox.io/s/origen-holygrail-ktq12">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <img width="60px" src="./images/sandbox.png" alt="">
+                                <div class=" tit-s">Codesandbox</div>
+                                <div class="text-center p-14"> Template Base</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <p class="p-14"> Una vez tengamos el template, lo documentaremos en la guia de estilos. </p>
+        </div>
+    </div>
+</section> 
+
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+    
+        <div class="col-xs-12 "></div>
+        <div class="col-xs-12 col-sm-6">
+
+
+
+            <div class="tit-s c-dark-grey  mb-40"> Una vez tenemos los elementos los colocaremos en el snippets txt. 
+            </div>
+            <p class="p-14">Para ello usaremos un snippet generator, el cual nos dará el código escapado y listo para copiar en los fragmentos de usuario de visual studio code. </p>
+       
+
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="checkbox-svg">
+                        <a class="opac" target="_blank" href="https://snippet-generator.app/">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class=" tit-s">Snippet Generator</div>
+                                <div class="text-center p-14"> Crea Snippets para reutilizarlo</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <br>
+<b>
+    <a target="_blank"href="https://github.com/holygrailcss/massimoguide2/blob/master/snippets.txt
+    "> Snippets.txt</a>
+</b>
+
+
+    
+  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Status','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+  {% set page_title = "status" %} 
+{% block content %}
+
+
+
+<ul class="list-clear mb-64">
+    <li>
+        <a href="">  ⚪️ 1- To do</a>
+    </li>
+    <li>
+        <a href=""> ✅ 2- Ready to use</a>
+    </li>
+    <li>
+        <a href="">  ❌ 3- Not available</a>
+    </li>
+    <li>
+        <a href=""> ✍️ 4- Work in progress</a>
+    </li>
+</ul>
+
+    <div class="tit-m mb-24"> Foundations </div>
+
+<div class="boxtable tit-xs">
+	<div> Token </div> <div> FigmaDS </div> <div> Holygrail   </div> <div> Specs  </div>
+</div>
+
+
+<div class="mb-64">
+    
+    {% call insert.boxtable('Layout', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('Colores', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('images', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('icons', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('height', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('helpers', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('flexbox', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('espaciado', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('ratios', '2','2','2') %}  {% endcall %}
+
+    {% call insert.boxtable('tipografia', '2','2','2') %}  {% endcall %}
+
+    {% call insert.boxtable('Playground', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('videos', '2','2','2') %}  {% endcall %}
+</div>
+
+    <div class="tit-m mb-24"> Componentes </div>
+
+
+<div class="boxtable tit-xs">
+	<div> Token </div> <div> FigmaDS </div> <div> Holygrail   </div> <div> Specs  </div>
+</div>
+
+
+<div class="mb-64">
+    
+    {% call insert.boxtable('buttons', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('checkbox', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('input', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('links', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('list', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('select', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('datalist', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('tabs', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('banners', '2','2','2') %}  {% endcall %}
+</div>
+
+
+
+
+    <div class="tit-m mb-24"> Templates </div>
+
+
+<div class="boxtable tit-xs">
+	<div> Token </div> <div> FigmaDS </div> <div> Holygrail   </div> <div> Specs  </div>
+</div>
+
+
+<div class="mb-64">
+    
+    {% call insert.boxtable('buttons', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('checkbox', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('input', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('links', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('list', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('select', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('datalist', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('tabs', '2','2','2') %}  {% endcall %}
+    {% call insert.boxtable('banners', '2','2','2') %}  {% endcall %}
+</div>
+
+        </div>
+    </div>
+</section> {% endblock %}
+
+<img width="100%" alt="imagenes"  src="" alt="">

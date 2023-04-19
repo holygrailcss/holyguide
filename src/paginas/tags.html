@@ -1,0 +1,39 @@
+{% extends "base2.html" %} 
+  {% import "_button.html" as button %} 
+  {% block title %} 
+    {% call special.titledoc('Tags','desc','actualizado') %} {% endcall %} 
+  {% endblock %} 
+  {% set page_title = "tags" %} 
+{% block content %}
+
+
+
+
+
+
+<div class="tit-s c-dark-grey ">
+  Tags usados para marcar información importante en los diferentes componentes del sistema.
+
+
+</div>
+
+<div class="tit-m"> tipos de tags </div>
+
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+    <div class="col-xs-12 ">
+
+      {% call insert.tags('tag-warning' ,'Tag warning') %}  {% endcall %}
+      {% call insert.tags('tag-info' ,'Tag info') %}  {% endcall %}
+      {% call insert.tags('tag-valid' ,'Tag valid') %}  {% endcall %}
+      {% call insert.tags('tag-alert' ,'Tag alert') %}  {% endcall %}
+      {% call insert.tags('tag-feel' ,'Tag feel') %}  {% endcall %}
+      {% call insert.tags('tag-limited' ,'Tag limited') %}  {% endcall %}
+
+
+    </div>
+  </div>
+</section> {% endblock %}

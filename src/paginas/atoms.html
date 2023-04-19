@@ -1,0 +1,140 @@
+{% extends "base2.html" %}
+ {% import "_button.html" as button %} {% block title %} 
+{% call special.titledoc('Atoms','desc','actualizado') %} {% endcall %} {% endblock %} 
+{% set page_title = "atoms" %} 
+{% block content %} 
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 mb-32 ">
+            <div class="tit-m "> Creando snippets  </div>
+
+
+            <div class="tit-s c-dark-grey  mb-40"> Una vez tenemos los elementos los colocaremos en el snippets txt. </div>
+            <p class="p-14 mb-32">Para ello usaremos un snippet generator, el cual nos dará el código escapado y listo
+                para copiar en los fragmentos de usuario de visual studio code. </p>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="checkbox-svg">
+                        <a class="opac" target="_blank" href="https://snippet-generator.app/">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 116.99 122.31">
+                                        <title>icon</title>
+                                        <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                        <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                        <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                        <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                            fill="#6a68ad" />
+                                        <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z"
+                                            transform="translate(-6.12 -4.08)" fill="#6a68ad" />
+                                        <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                        <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                        <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                                    </svg>
+                                </div>
+                                <div class=" tit-s">Snippet Generator</div>
+                                <div class="text-center p-14"> Crea Snippets para reutilizarlo</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 ">
+            <a target="_blank" href="https://github.com/holygrailcss/massimoguide2/blob/master/snippets.txt
+            "> Snippets.txt</a> <br>
+            <code>Cmd+shift+p</code> <br>
+            <code>Configurar fragmentos de código</code> <br>
+            <code>Seleccionaremos html o Css</code>
+        </div>
+    </div>
+</section>
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="tit-m "> Buenas prácticas</div>
+            <div class="tit-s c-dark-grey "> Los mínimos mandamientos a seguir en maqueta. </div>
+        </div>
+        <div class="col-xs-12 ">
+     
+            <div class="row">
+                <div class="col-xs-6">
+                    <h3 class="tit-s   ">
+                        <svg class="mr-16 ico-error" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z"
+                                fill="#292929"></path>
+                        </svg> DON'T
+                    </h3>
+                </div>
+                <div class="col-xs-6">
+                    <h3 class="tit-s  ">
+                        <svg class="mr-16 ico-success" width="16" height="17" viewBox="0 0 16 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M15.7063 3.78557L5.9 14.5617L0.293677 8.40095L1.03328 7.72791L5.9 13.076L14.9667 3.11253L15.7063 3.78557Z"
+                                fill="#292929"></path>
+                        </svg>DO
+                    </h3>
+                </div>
+                <hr class="mt-16 mb-16">
+            </div> 
+{% call lists.lists('No Usar clases para hacer <b> querySelector </b>',' Usar clases nativas de Angular para seleccionar elementos<b> (ViewChild, ElementRef)</b> ') %} {% endcall %} 
+{% call lists.lists('No Crear un archivo sass <b>sin importar las variables de inicio</b>','importar todas las clases al inicio del sass <b>abstract/all </b>') %} {% endcall %} 
+{% call lists.lists('No Crear css para nuevos elementos sin testear, y <b>sin pasar por UX</b> ','Usaremos los css que ya están testeados <b>en la guia</b> directamente en el html ') %} {% endcall %} 
+{% call lists.lists('Si no existe el componente <b> no lo creo</b> . ','El equipo de ux creará el componente, y lo introducirá en el <b>ds system </b>de art digital') %} {% endcall %} 
+{% call lists.lists(' No Usaremos <b> :host</b> para usar las clases de forma global . ',':host, no funciona en la web. Debemos trabajar el <b>encapsulation: ViewEncapsulation.None</b>') %} {% endcall %}
+        </div>
+    </div>
+</section> 
+
+
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="tit-m"> Creando un componente</div>
+        </div>
+        <div class="col-xs-12">
+            <div class="tit-s c-dark-grey  mb-40"> Una vez tengamos holygrail instalado y configurado, crearemos los
+                elementos </div>
+            <p class="p-14">Trataremos cada elemento como un elemento atómico,y lo incorporaremos a holygrail creando una
+                nueva versión</p>
+        </div>
+    </div>
+</section>
+<section class="mb-32 mt-32">
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="tit-m"> Creando un template</div>
+        </div>
+        <div class="col-xs-12">
+            <div class="tit-s c-dark-grey  mb-40"> Una vez creados los elementos , crearemos templates.</div>
+            <p class="p-14"> Para ello crearemos un fork con el nombre del nuevo template, y desarrollaremos en
+                codesandbox. Es importante que tengas una cuenta en codesandbox. </p>
+            <div class="row mb-64">
+                <div class="col-xs-4">
+                    <a class="opac" target="_blank  " href="https://codesandbox.io/s/origen-holygrail-ktq12">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <img width="60px" src="./images/sandbox.png" alt="">
+                                <div class=" tit-s">Codesandbox</div>
+                                <div class="text-center p-14"> Template Base</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <p class="p-14"> Una vez tengamos el template, lo documentaremos en la guia de estilos. </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

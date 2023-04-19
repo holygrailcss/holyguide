@@ -1,0 +1,219 @@
+{% extends "base2.html" %} {% import "_button.html" as button %} {% block title %} {% call
+special.titledoc('Stardev','desc','actualizado') %} {% endcall %} {% endblock %}
+{% set page_title = "startdev" %} 
+
+ {% block content %} <section
+    class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <iframe
+                src="https://ghbtns.com/github-btn.html?user=holygrailcss&amp;repo=holygrail&amp;type=star&amp;count=true&amp;size=large"
+                frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+            <div class="tit-m "> Empezando</div>
+            <div class="tit-s c-dark-grey "> Aqui veremos como customizar holygrail de cero siguiendo la especificación de
+                Holygrail css. </div>
+        </div>
+    </div>
+</section>
+<section class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="tit-s c-dark-grey "> Holygrail es una biblioteca CSS y una libreria de componentes . Esto significa
+                que proporciona clases de CSS para ayudar a diseñar código HTML. Para usar Holygrailcss, puede usar el
+                archivo precompilado <code>.css</code> o instalar los archivos <code>.sass</code> para que pueda
+                personalizarlo según sus necesidades. </div>
+        </div>
+    </div>
+</section>
+<section class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="tit-s mb-16"> Opción 1. Usar un css directo</p>
+            <p> Puede importar el archivo scss a través de jsdeliver : </p>
+
+              <p>  --npmversion--  <img src="https://img.shields.io/npm/v/holygrailcss.svg" alt=""></p>
+            <p> <code>   https://cdn.jsdelivr.net/npm/holygrailcss@--npmversion--/dist/style.css </code> </p>
+            <p>Crearemos una versión rtl exclusiva aqui</p>
+        </div>
+    </div>
+</section>
+<section class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="tit-s mb-16"> Opción 2. Descargar una versión de Github </p>
+        </div>
+        <div class="col-xs-12">
+            <p> Puede obtener la última versión de Holygrail como una <code>.zip</code> de GitHub: </p>
+            <button class="btn btn-primary btn--medium"> Descargar v 0.94 </button>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="tit-s mb-16"> Opción 1. Importar directamente al scss</p>
+            <p>Agregar <code>~holygrailcss/scss/style.scss</code> desde node_modules a tu archivo de entrada de scss:
+            </p>
+            <p> Importaremos en nuestro sass base <code>@import "setup.scss"; </code></p>
+        </div>
+    </div>
+</section>
+<section class="pb-64">
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="tit-s mb-16"> Opción 2. Instalación por node</p>
+            <p class="p-m"> Antes que nada comprueba que tienes node.js en tu ordenador, en caso de no tenerlo
+                instalarlo.</p>
+            <code>node -v</code>
+            <p class="p-14"> Una vez en la carpeta del proyecto instalamos los módulos necesarios con npm </p>
+            <code>npm i</code>
+            <p class="p-m"> Compilamos sass con npm</p>
+            <code>npm build-sass</code>
+            <p class="p-m"> Usamos Gulp para comprimir y lanzar el proyecto</p>
+            <code>gulp style gulp watch</code>
+            <p class="p-m"> Si no tienes gulp instalado:</p>
+            <code>npm install --save-dev gulp</code>
+            <p class="p-m"> Si tienes problemas en Mac puede que necesites ejecutar el comando como administrador </p>
+            <code>sudo npm install --save-dev gulp</code>
+        </div>
+    </div>
+</section>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="pb-16">
+            <div class="tit-m"> Online</div>
+            <p class="p-14"> Vívelo ahora a través de tu plataforma online preferida: </p>
+        </div>
+        <div class="row pb-64">
+            <div class="col-xs-4">
+                <a class="opac" target="_blank  " href="https://codesandbox.io/s/origen-holygrail-ktq12">
+                    <a href="https://codesandbox.io/s/origen-holygrail-ktq12?file=/index.html">
+                        <div class="checkbox-svg">
+                            <div class="checkbox-svg-label flex-column align-center">
+                                <div class="svg-content">
+                                    <img width="60px" src="./images/sandbox.png" alt="">
+                                </div>
+                                <div class=" tit-s">Codesandbox</div>
+                                <div class="text-center p-14"> Crea un fork para crear componente o una maqueta con holygrail en la
+                                    nube. </div>
+                            </div>
+                        </div>
+                    </a>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a class="opac" target="_blank  " href="https://github.com/holygrailcss/holygrail">
+                    <div class="checkbox-svg">
+                        <div class="checkbox-svg-label flex-column align-center">
+                            <div class="svg-content">
+                                <img width="60px" src="./images/githublogo.png" alt="">
+                            </div>
+                            <div class=" tit-s">Github</div>
+                            <div class="text-center p-14"> Crea un entorno de desarrollo desde cero </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <div class="checkbox-svg">
+                    <div class="checkbox-svg-label flex-column align-center">
+                        <div class="svg-content">
+                            <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 116.99 122.31">
+                                <title>icon</title>
+                                <circle id="cir1" cx="58.49" cy="28.07" r="26.25" fill="#b0b0d1" />
+                                <circle id="cir2" cx="58.49" cy="35.08" r="32.38" fill="#b0b0d1" />
+                                <circle id="cir3" cx="58.49" cy="24.4" r="19.88" fill="#b0b0d1" />
+                                <path d="M6.5,4.08a58.5,58.5,0,1,0,116.22,0Z" transform="translate(-6.12 -4.08)"
+                                    fill="#6a68ad" />
+                                <path d="M97.88,126.1a33.26,33.26,0,0,0-66.52.3Z" transform="translate(-6.12 -4.08)"
+                                    fill="#6a68ad" />
+                                <rect x="48.5" y="37.34" width="20" height="53.67" fill="#6a68ad" />
+                                <rect x="33.2" y="60.12" width="50.58" height="6.56" fill="#6a68ad" />
+                                <rect x="41.72" y="66.68" width="33.55" height="6.45" fill="#6a68ad" />
+                            </svg>
+                        </div>
+                        <div class=" tit-s">Boilerplate</div>
+                        <div class="text-center p-14"> Crea un proyecto completo con parcel y gulp en tu local.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="pb-64">
+            <div class="tit-m"> Compatibilidad con navegador</div> <br>
+            <p class="p-14"> Desde <b>UX IT</b> hemos intentado agregar prefijos de proveedores apropiados a algunos
+                estilos, solo tienes que asegurarse de que las propiedades CSS que estás utilizando actualmente sean
+                compatibles con la mayoría de los navegadores modernos - <a class="link-line"
+                    href="https://caniuse.com/" target="blank"> caniuse.com </a>
+            </p>
+        </div>
+        <div class=" pb-64">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="tit-m"> fonts.scss</div>
+                    <p class="p-14"> Antes de nada añadimos las fontface.</p>
+                    <pre class=""><code class="language-css ">@font-face {
+    font-family: 'massimo-daily-regular';
+    src: url('../../massimo-daily/massimo-daily-regular.woff2') format('woff2'),
+         url('../../massimo-daily/massimo-daily-regular.woff') format('woff');
+    }
+    </code>
+    </pre>
+                </div>
+                <div class="col-xs-12 ">
+                    <div class="tit-m"> Setup.scss</div>
+                </div>
+                <div class="col-xs-12">
+                    <p class="p-14"> Despues customizaremos el setup.scss. Lo podemos hacer desde el propio archivo
+                        globals de la guia. </p>
+                </div>
+                <div class="col-xs-12">
+                    <pre class=""><code class="language-css ">
+{% for item in globals.fonts %}$font-family-{{ item.name }}:{{ item.family }};
+{% endfor %}
+$font-weight-light: {{globals.fontweight}};
+$font-weight-regular: {{globals.fontweight}};
+$font-weight-medium: {{globals.fontweight}};
+$font-weight-bold: {{globals.fontweight}};
+$font-family-form-placeholder: {{globals.fontdefault}};
+$font-family-form: {{globals.fontdefault}};
+
+{% for item in globals.Generic %}${{ item.name }}:{{ item.value }};
+{% endfor %}
+{% for item in globals.colors %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.containers %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.breakpoints %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.heights %}${{ item.name }}:{{ item.type }};
+{% endfor %}
+{% for item in globals.ModalSizes %}${{ item.class }}:{{ item.size }};
+{% endfor %}
+
+$headers: (
+{% for item in globals.TypeHeaders %}
+{{ item.name }}:({{ item.xs }},{{ item.sm }},{{ item.md }},{{ item.lg }},{{ item.line }},{{ item.weight }}),{% endfor %}
+);
+
+$headersFixers: (
+{% for item in globals.fixes %}{{ item.name }}: ({{ item.name }}px ,{{ item.line }}),
+{% endfor %} );
+
+$headersFluids: (
+{% for item in globals.fluid %} {{ item.name }}: ({{ item.from }} ,{{ item.to }} ,{{ item.line }}),
+{% endfor %} );
+        </code>
+        </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endblock %}

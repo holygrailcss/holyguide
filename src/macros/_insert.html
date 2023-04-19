@@ -674,7 +674,7 @@ descripcion %}
 				</div>
 
 
-				<div class="col-xs-6 text-right c-gray">
+				<div class="col-xs-6 text-right c-dark-grey">
 
 					{% if type == 'tit' %} <div class=" "> Class .{{type}}-{{name}} </div>{% endif %}
 					{% if type == 'head' %} <div class=" ">Class .{{type}}-{{name}} </div>{% endif %}
@@ -687,21 +687,21 @@ descripcion %}
 						<div class="col-xs-12 mb-16">
 							<div class="row">
 								<div class="col-xs-12">
-									<div class="c-gray"> Familia: </div>
+									<div class="c-dark-grey"> Familia: </div>
 									<div class="tit-s mb-16"> {{familia}} </div>
 								</div>
 							</div>
 						</div>
 						<div class="col-xs-12">
 							<div class="row mb-16">
-								<div class="col-xs-6"><span class="c-gray"> Size Mobile : </span> {{size1}}</div>
-								<div class="col-xs-6"><span class="c-gray"> Line-h : </span> {{line1}} </div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Size Mobile : </span> {{size1}}</div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Line-h : </span> {{line1}} </div>
 							</div>
 						</div>
 						<div class="col-xs-12">
 							<div class="row">
-								<div class="col-xs-6"><span class="c-gray"> Size Desktop : </span> {{size2}} </div>
-								<div class="col-xs-6"><span class="c-gray"> Line-h : </span> {{line2}}</div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Size Desktop : </span> {{size2}} </div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Line-h : </span> {{line2}}</div>
 							</div>
 						</div>
 					</div>
@@ -1190,3 +1190,30 @@ descripcion %}
 			</div>
 		</section>
 		{% endmacro %}
+
+
+
+
+⚪️ To do
+✅ Ready to use
+❌ Not available
+✍️ Work in progress
+
+
+{% macro boxtable(nombre='', estadofigma='',estadoholygrail='', estadospecs='') %}
+
+<div class="boxtable">
+	<div>  <a class="link-line" href="{{ nombre }}.html ">{{ nombre }} </a>  </div>
+	<div>   {% if estadofigma == 1 %} ⚪️   {% elif estadofigma == 2 %} ✅ {% elif estadofigma == 3 %}❌  {% elif estadofigma == 4 %} ✍️      {% else %}    {{ estadofigma }}   {% endif %}  </div>
+	<div>   {% if estadoholygrail == 1 %} ⚪️   {% elif estadoholygrail == 2 %} ✅ {% elif estadoholygrail == 3 %}❌  {% elif estadoholygrail == 4 %} ✍️       {% else %}    {{ estadoholygrail }}    {% endif %} </div>
+	<div>   {% if estadospecs == 1 %} ⚪️   {% elif estadospecs == 2 %} ✅ {% elif estadospecs == 3 %}❌  {% elif estadospecs == 4 %} ✍️       {% else %}    {{ estadospecs }}    {% endif %}  </div>
+</div>
+
+
+
+
+
+
+{% endmacro %}
+
+
