@@ -15,19 +15,26 @@
     transform: translateX(0vw);
     transition: all .4s ease-out;
     }
+    @media (min-width:768px){
+        width: 30%;
+    } 
     
     .sidebar-close{
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 16px;
+        right: 16px;
     
     }
     .sidebar-content{
         padding:100px 40px 40px;
+        @media (min-width:768px){
+
+            padding:40px 16px 16px;
+        } 
+
+
     }
     
-    @media (min-width:768px){
-        width: 30%;
-    } 
+
 
 }
