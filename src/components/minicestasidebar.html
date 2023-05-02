@@ -36,7 +36,9 @@
                 <!-- Listado de componentes -->
                 {% call productCard.productCard('promotion', 'class') %} {% endcall %}
                 {% call productCard.productCard('','outOfStock','clase') %} {% endcall %}
-                {% call productCard.productCardCustom() %} {% endcall %}
+                <div class="row">
+                    <div class="col-xs-12 is-flex">{% call productCard.productCardCustom() %} {% endcall %}</div>
+                </div>
                 {% call productCard.productCard() %} {% endcall %}
             </div>
 
