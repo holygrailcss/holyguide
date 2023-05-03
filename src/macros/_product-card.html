@@ -1,7 +1,7 @@
 {% macro productCard( promotion='', outOfStock='', classes='') %}
 
 
-
+{# minicesta lateral #}
 
 <item-product-cart class="{{ classes }}">
     <div class="item-mini-cart mb-32  ">
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             {% endif %}
-                            </shop-cart-price>
+                        </shop-cart-price>
                     </div>
                 </div>
                 <div class="row content-sp-between m-0">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="">
                         <div class="is-flex content-end">
-                            <button class="btn btn--icon btn-phantom state-changing"
+                            <button class="btn btn--icon btn-clear state-changing"
                                 title="Agregar a la lista de deseos" id="addItemWishlist">
                                 <svg-icon ng-reflect-src="bookmark">
                                     <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -87,7 +87,7 @@
                                         </svg></div>
                                 </svg-icon>
                             </button>
-                            <button class="btn btn--icon btn-phantom" title="Eliminar" id="deleteItemShopcart">
+                            <button class="btn btn--icon btn-clear" title="Eliminar" id="deleteItemShopcart">
                                 <svg-icon>
                                     <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -118,6 +118,10 @@
 {% endmacro %}
 
 {% macro productCardCustom( promotion='', outOfStock='', classes='') %}
+
+{# minicesta sola #}
+
+
 	<div class="align-middle mr-16">
         <div class="checkbox-item-box ">
             <div class="checkbox-item">
@@ -174,8 +178,15 @@
                             {% else %}
                             <div class="row text-right">
                                 <div class="col-xs-12">
-                                    <span class="p-14"> 89,95&nbsp;€ </span>
+                                    <span class="p-xs is-through c-dark-grey "> 89,95&nbsp;€ </span>
+                            
                                 </div>
+                      
+                                    <div class="col-xs-12">
+                                        <span class="p-xs  future-price">
+                                            59,95&nbsp;€ </span>
+                                    </div>
+                          
                             </div>
                             {% endif %}
                             </shop-cart-price>
@@ -209,7 +220,7 @@
                     </div>
                     <div class="">
                         <div class="is-flex content-end">
-                            <button class="btn btn--icon btn-phantom state-changing"
+                            <button class="btn btn--icon btn-clear state-changing"
                                 title="Agregar a la lista de deseos" id="addItemWishlist">
                                 <svg-icon ng-reflect-src="bookmark">
                                     <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -219,7 +230,7 @@
                                         </svg></div>
                                 </svg-icon>
                             </button>
-                            <button class="btn btn--icon btn-phantom" title="Eliminar" id="deleteItemShopcart">
+                            <button class="btn btn--icon btn-clear" title="Eliminar" id="deleteItemShopcart">
                                 <svg-icon>
                                     <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
