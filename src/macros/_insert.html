@@ -1,6 +1,6 @@
 {% macro template(templateClass='', explicacion='',dark='') %}
 <h3>{{ templateClass }}</h3>
-<p class="p-14">{{ explicacion }}</p>
+<p class="p-xs">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -108,7 +108,7 @@
 {% endmacro %} {% macro title(titular='', descripcion='') %}
 <div class="col-xs-12">
 	<div class="tit-s">{{titular}}</div>
-	<div class="p-14">{{descripcion}}</div>
+	<div class="p-xs">{{descripcion}}</div>
 	<hr class="mt-16 mb-40" />
 </div>
 {% endmacro %}
@@ -143,18 +143,29 @@
 
 
 {% macro links(links='', explicacion='',svg='' ,dark='' ) %}
-<p class="p-14 mt-32">{{ explicacion }}</p>
+
+
+<p class="p-xs mt-32">{{ explicacion }}</p>
+<br>
 {% if svg == '' %}
+
 <div class="resize-mini">
-	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-6">
+
+
+	<div class="resize-mini-content  ">
+		<div class="container-fluid w-100">
 			<div class="row">
-				<div class="col-xs-12 mb-16 text-center">
+				<div class="col-xs-6 text-center pt-40 pb-40 ">
+					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+				</div>
+
+				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
 					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	{% set standardcode %}
 	<a class="mb-16  {{ links  }} " href=""> {{ links }} </a> {% endset%}
 	<pre>
@@ -166,16 +177,20 @@
 </div>
 {% elif svg == 'btn' %}
 <div class="resize-mini">
-	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-6">
+	<div class="resize-mini-content  ">
+		<div class="container-fluid w-100">
 			<div class="row">
-				<div class="col-xs-12 mb-16 text-center">
-					<button class="  p-14 {{ links  }} " href="">{{ links }}</button>
+				<div class="col-xs-6 text-center pt-40 pb-40 ">
+					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+				</div>
+
+				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
+					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
 				</div>
 			</div>
 		</div>
 	</div>
-	{% set standardcode %}<button class="p-14 {{ links  }} " href="">
+	{% set standardcode %}<button class="p-xs {{ links  }} " href="">
 		{{ links }}
 	</button>
 	{% endset%}
@@ -188,10 +203,24 @@
 </div>
 {% elif svg =='post' %}
 <div class="resize-mini">
-	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-6">
+	<div class="resize-mini-content  ">
+		<div class="container-fluid w-100">
+
 			<div class="row">
-				<div class="col-xs-12 mb-16 text-center">
+				<div class="col-xs-6 text-center pt-40 pb-40 ">
+					<a class="mb-16 link-line {{ links  }} " href="">
+						{{ links }}
+						<svg-icon>
+							<div>
+								<svg width="16px" height="16px">
+									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+								</svg>
+							</div>
+						</svg-icon>
+					</a>
+				</div>
+
+				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
 					<a class="mb-16 link-line {{ links  }} " href="">
 						{{ links }}
 						<svg-icon>
@@ -204,6 +233,9 @@
 					</a>
 				</div>
 			</div>
+
+
+
 		</div>
 	</div>
 	{% set standardcode %}
@@ -225,10 +257,23 @@
 </div>
 {% else %}
 <div class="resize-mini">
-	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-6">
+	<div class="resize-mini-content ">
+		<div class="container-fluid w-100">
 			<div class="row">
-				<div class="col-xs-12 mb-16 text-center">
+				<div class="col-xs-6 text-center pt-40 pb-40">
+					<a class="mb-16 link-line {{ links  }} " href="">
+						<svg-icon>
+							<div>
+								<svg width="16px" height="16px">
+									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+								</svg>
+							</div>
+						</svg-icon>
+						{{ links }}
+					</a>
+				</div>
+
+				<div class="col-xs-6 text-center  has-light bg-dark  pt-40 pb-40 ">
 					<a class="mb-16 link-line {{ links  }} " href="">
 						<svg-icon>
 							<div>
@@ -261,9 +306,14 @@
     </pre>
 </div>
 {% endif %} {% endmacro %}
+
+
+
+
+
 {% macro list(listClass='', explicacion='') %}
 <h3>{{ listClass }}</h3>
-<p class="p-14">{{ explicacion }}</p>
+<p class="p-xs">{{ explicacion }}</p>
 <ul class="{{ listClass  }}">
 	<li><a href="">{{ listClass }}</a></li>
 	<li><a href="">{{ listClass }}</a></li>
@@ -281,7 +331,7 @@
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 {% endmacro %} {% macro input(inputName='', explicacion='',dark='') %}
 <h3>{{ inputName | capitalize }}</h3>
-<p class="p-14">{{inputName }} : {{ explicacion }}</p>
+<p class="p-xs">{{inputName }} : {{ explicacion }}</p>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
 		<div class="form-input-label-2 mb-16">
@@ -300,7 +350,7 @@
 </div>
 {% endmacro %} {% macro select(selectName='', explicacion='',dark='') %}
 <h3>{{ selectName | capitalize }}</h3>
-<p class="p-14">{{selectName }} : {{ explicacion }}</p>
+<p class="p-xs">{{selectName }} : {{ explicacion }}</p>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
 		<div class="select {{selectName }}">
@@ -331,7 +381,7 @@
 {% endmacro %}
 {% macro checkbox(checkboxClass='', explicacion='',dark='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p-14">{{ explicacion }}</p>
+<p class="p-xs">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -351,15 +401,15 @@
 								</i>
 								{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 								'checkbox-item is-error') %}
-								<span class="p-14">{{ checkboxClass }} <a href="#">legal text</a></span>
+								<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
 								{% endif %}
 							</label>
 						</div>
 						{% if checkboxClass == 'checkbox-item-text' %}
-						<span class="p-14">{{ checkboxClass }} </span> {% endif %}
+						<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
 					</div>
 				</div>
-				<div class="col-xs-6  p-48 has-light bg-primary">
+				<div class="col-xs-6  p-48  has-light bg-dark bg-primary">
 					<div class="{{ checkboxClass  }}">
 						<div class="checkbox-item">
 							<input id="checkbox_{{randomNumber}}-2" type="checkbox" />
@@ -373,12 +423,12 @@
 								</i>
 								{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 								'checkbox-item is-error') %}
-								<span class="p-14">{{ checkboxClass }} <a href="#">legal text</a></span>
+								<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
 								{% endif %}
 							</label>
 						</div>
 						{% if checkboxClass == 'checkbox-item-text' %}
-						<span class="p-14">{{ checkboxClass }} </span> {% endif %}
+						<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
 					</div>
 				</div>
 			</div>
@@ -398,12 +448,12 @@
 				</i>
 				{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
 				'checkbox-item is-error') %}
-				<span class="p-14">{{ checkboxClass }} <a href="#">legal text</a></span>
+				<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
 				{% endif %}
 			</label>
 		</div>
 		{% if checkboxClass == 'checkbox-item-text' %}
-		<span class="p-14">{{ checkboxClass }} </span> {% endif %}
+		<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
 	</div>
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
@@ -411,7 +461,7 @@
 {% endmacro %}
 {% macro checkboxSide(checkboxClass='', explicacion='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p-14">{{ explicacion }}</p>
+<p class="p-xs">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -460,7 +510,7 @@
 {% endmacro %}
 {% macro checkboxRadio(checkboxClass='', explicacion='') %}
 <h3>{{ checkboxClass }}</h3>
-<p class="p-14">{{ explicacion }}</p>
+<p class="p-xs">{{ explicacion }}</p>
 {% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 <div class="resize-mini">
 	<div class="resize-mini-content-narrow {{dark  }} ">
@@ -471,7 +521,7 @@
 						<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
 						<label for="{{randomNumber}}">
 							<i class="ico-radio"></i>
-							<span class="p-14">{{ checkboxClass }} </span>
+							<span class="p-xs">{{ checkboxClass }} </span>
 							<span>
 								<div class="mb-10">{{ checkboxClass }}</div>
 							</span>
@@ -483,7 +533,7 @@
 						<input id="{{randomNumber}}-2" name="gender" type="radio" value="F" />
 						<label for="{{randomNumber}}-2">
 							<i class="ico-radio"></i>
-							<span class="p-14">{{ checkboxClass }} </span>
+							<span class="p-xs">{{ checkboxClass }} </span>
 							<span>
 								<div class="mb-10">{{ checkboxClass }}</div>
 							</span>
@@ -498,7 +548,7 @@
 		<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
 		<label for="{{randomNumber}}">
 			<i class="ico-radio"></i>
-			<span class="p-14">{{ checkboxClass }} </span>
+			<span class="p-xs">{{ checkboxClass }} </span>
 			<span>
 				<div class="mb-10">{{ checkboxClass }}</div>
 			</span>
@@ -528,7 +578,7 @@ descripcion %}
 </div>
 {% endmacro %} {% macro minicomponent(titulo='' ) %}
 <a href="./{{titulo}}.html">
-	<div class="p-146 resize-mini">
+	<div class="p-xs6 resize-mini">
 		<div class="p-16 text-center">
 			<div class="p-m-b pb-8">{{titulo}}</div>
 			<img src="images/components/{{titulo}}.jpg" alt="" />
@@ -777,7 +827,7 @@ descripcion %}
 												commodi, veritatis qui repellendus eius .
 											</div>
 											<div class="col-xs-12 col-sm-6 is-flex banner-cookies-btn  ">
-												<button class="link-line p-14 m-16 ">
+												<button class="link-line p-xs m-16 ">
 													Boton link uno
 												</button>
 												<button class="btn btn-primary btn--full">Boton dos de cookies</button>
@@ -807,7 +857,7 @@ descripcion %}
 		{% endmacro %}
 		{% macro listButton(listClass='', explicacion='') %}
 		<h3>{{ listClass | capitalize }}</h3>
-		<p class="p-14">{{ explicacion }}</p>
+		<p class="p-xs">{{ explicacion }}</p>
 		<div class="resize-mini">
 			{% if listClass === "list-button list-icons" %}
 			<div class="p-16">
@@ -1029,7 +1079,7 @@ descripcion %}
 			{% macro checkboxcard(checkboxcard='', explicacion='',dark='') %}
 			<h3>{{ checkboxcard }}</h3>
 
-			<p class="p-14">{{ explicacion }}</p>
+			<p class="p-xs">{{ explicacion }}</p>
 			{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
 			<div class="resize-mini">
 				<div class="resize-mini-content-narrow {{dark  }} ">
@@ -1043,7 +1093,7 @@ descripcion %}
 									<div class="{{ checkboxcard  }}">
 										<input id="{{randomNumber}}-1" name="gender" type="radio">
 										<label for="{{randomNumber}}-1" class=" checkbox-card-label">
-											<div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
+											<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
 										</label>
 									</div>
 								</div>
@@ -1052,7 +1102,7 @@ descripcion %}
 									<div class="{{ checkboxcard  }}">
 										<input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
 										<label for="{{randomNumber}}-3" class=" checkbox-card-label ">
-											<div class="  p-14-b">Guardar los artículos en la carpeta “Comprar más
+											<div class="  p-xs-b">Guardar los artículos en la carpeta “Comprar más
 												tarde” </div>
 										</label>
 									</div>
@@ -1066,7 +1116,7 @@ descripcion %}
 									<div class="{{ checkboxcard  }}">
 										<input id="{{randomNumber}}-4" name="gender" type="radio">
 										<label for="{{randomNumber}}-4" class=" checkbox-card-label">
-											<div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
+											<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
 										</label>
 									</div>
 								</div>
@@ -1075,7 +1125,7 @@ descripcion %}
 									<div class="{{ checkboxcard  }}">
 										<input id="{{randomNumber}}-5" name="gender" type="radio" value="a">
 										<label for="{{randomNumber}}-5" class=" checkbox-card-label ">
-											<div class="  p-14-b">Guardar los artículos en la carpeta “Comprar más
+											<div class="  p-xs-b">Guardar los artículos en la carpeta “Comprar más
 												tarde” </div>
 										</label>
 									</div>
@@ -1095,7 +1145,7 @@ descripcion %}
 					<div class="{{ checkboxcard  }}">
 						<input id="{{randomNumber}}-1" name="gender" type="radio">
 						<label for="{{randomNumber}}-1" class=" checkbox-card-label">
-							<div class=" p-14-b">Recoger el 24/09 en la misma tienda</div>
+							<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
 						</label>
 					</div>
 				</div>
@@ -1103,7 +1153,7 @@ descripcion %}
 					<div class="{{ checkboxcard  }}">
 						<input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
 						<label for="{{randomNumber}}-3" class=" checkbox-card-label ">
-							<div class=" p-14-b">Guardar los artículos en “Comprar más tarde” </div>
+							<div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
 						</label>
 					</div>
 				</div>

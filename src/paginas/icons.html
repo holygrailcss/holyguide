@@ -28,7 +28,7 @@
         </div>
         <div class="col-xs-12">
             
-            <p class="p-14">Al usar el componente solo hay que asignar el parámetro <b><i>src</i></b> con el icono a usar,
+            <p class="p-xs">Al usar el componente solo hay que asignar el parámetro <b><i>src</i></b> con el icono a usar,
                 que a su vez deberá estar en el archivo icons.json en el proyecto.  <a class="btn btn-primary btn--mini" href="../icons/icons.json"> Ver Archivo json </a></p>
             <pre><code class="language-markup">&lt;svg-icon src=&quot;alert&quot;&gt;&lt;/svg-icon&gt;</code></pre>
         </div>
@@ -42,7 +42,7 @@
             <div class="tit-m"> Estados de los iconos </div>
         </div>
         <div class="col-xs-12">
-            <p class="p-14 mb-48">Usa las clases <code class="highlighter-rouge">.ico-white</code><code class="highlighter-rouge">.ico-success</code><code class="highlighter-rouge">.ico-error</code> para cambiar el color los icones.</p>
+            <p class="p-xs mb-48">Usa las clases <code class="highlighter-rouge">.ico-white</code><code class="highlighter-rouge">.ico-success</code><code class="highlighter-rouge">.ico-error</code> para cambiar el color los icones.</p>
 
             <h3 class="mb-24">Icono Básico</h3>
             
@@ -57,7 +57,7 @@
             </div>
             
             <h3 class="mb-16">Icono en blanco</h3>
-            <p class="p-14 mb-16">
+            <p class="p-xs mb-16">
                 Usaremos la clase <code>ico-white </code>en el interior del svg-icon . 
             </p>
             <div class="resize-mini">
@@ -72,7 +72,7 @@
             </div>
 
             <h3 class="mb-16">Ejemplo icono success</h3>
-            <p class="p-14 mb-16">
+            <p class="p-xs mb-16">
                 Usaremos la clase <code>ico-success</code> en el interior del svg-icon . 
             </p>
             <div class="resize-mini">
@@ -87,7 +87,7 @@
             </div>
 
             <h3 class="mb-16">Ejemplo icono Error</h3>
-            <p class="p-14 mb-16">
+            <p class="p-xs mb-16">
                 Usaremos la clase <code>ico-error </code>en el interior del svg-icon . 
             </p>
             <div class="resize-mini">
@@ -121,11 +121,11 @@
             <div class="tit-s c-dark-grey  mb-32">
                 Cuando necesites incorporar un nuevo icono en la lista sigue atentamente estas recomendaciones:
             </div>
-            <p class="p-14 mb-24">
+            <p class="p-xs mb-24">
                 Recuerda que el recurso gráfico <b>SIEMPRE</b> debe ser proveído por art digital o estar en el <b>MD
                     DESING SYSTEM</b> en figma
             </p>
-            <p class="p-14 mb-24">
+            <p class="p-xs mb-24">
                 Cuando exportes el SVG, ábrelo en un editor de código y valida que:
             </p>
             <ul class=" mb-24">
@@ -138,7 +138,7 @@
                 A la hora de incluirlo en el json, recuerda mantener el orden alfabético para mantener el orden. Usaremos la extensión de visual studio <b>Alphabetical Sorter</b>
             </div>
 
-            <p class="p-14 mt-48">
+            <p class="p-xs mt-48">
                 Guia para incluir iconos desde Figma:
             </p>
             <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/31072d083792468f842532573d080bf2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
@@ -153,7 +153,7 @@
         <div class="col-xs-12">
 <span class="todo"> ( TODO pasar a primary)  </span>
 
-            <p class="p-14">Inventario de iconos disponibles, todo en minúsculas y separado por guión medio. </p>
+            <p class="p-xs">Inventario de iconos disponibles, todo en minúsculas y separado por guión medio. </p>
 
             <div class="tabguide">
                 <ul id="tabguide-nav" class="tabguide-head list-inline sticky-top bg-white">
@@ -220,7 +220,7 @@
                                 
                                 <div class="is-flex">
                                     {% call insert.svgIconname('plus') %} {% endcall %}
-                                    <p class="p-14 pl-16">texto</p>
+                                    <p class="p-xs pl-16">texto</p>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +228,7 @@
                 </div>
 {% set standardcode %}<div class="is-flex">
     <svg-icon src="plus"></svg-icon>
-    <p class="p-14 pl-16">texto</p>
+    <p class="p-xs pl-16">texto</p>
 </div>{% endset%}
                 <pre>
                 <button class="btn btncode" data-clipboard-target="#{{buttonName}}">

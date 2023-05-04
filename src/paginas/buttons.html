@@ -8,9 +8,9 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
     <div class="row">
         <div class="col-xs-12"> {% call insert.figma('
             https://www.figma.com/file/a964zjTH63yAgIwWhia2op/MD-DESIGN-SYSTEM?node-id=531%3A4090') %} {% endcall %} <p
-                class="p-14 mb-16"> Para definir que este elemento usará todos los estilos de botón, lo primero es
+                class="p-xs mb-16"> Para definir que este elemento usará todos los estilos de botón, lo primero es
                 identificarlo con la clase <code>.btn</code></p>
-            <p class="p-14">después su modificador de tipo, por ejemplo <code>.link-btn</code> y por último su tamaño si
+            <p class="p-xs">después su modificador de tipo, por ejemplo <code>.link-btn</code> y por último su tamaño si
                 lo tiene, por ejemplo <code>.btn-xs</code>.</p>
             <div class="h4 code mt-32"> <code>Qué és?</code>+<code>Tipo</code> + <code>Tamaño</code>
             </div>
@@ -22,7 +22,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
-            <p class="p-14">Este es el aspecto de un botón solo con la clase <code>.btn</code> que lo prepara para obtener
+            <p class="p-xs">Este es el aspecto de un botón solo con la clase <code>.btn</code> que lo prepara para obtener
                 todas las clases de los botones de la guía</p> {% call button.simple('btn','Reseteamos el botón','') %}
             {% endcall %}
         </div> 
@@ -31,7 +31,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12">
-            <p class="p-14 p-m mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color
+            <p class="p-xs p-m mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color
                 de fuente, apariencia en los diferentes estados del botón... </p>
             <span class="todo"> ( TODO falta Focus ) </span> 
             {% call button.simple('primary','Es nuestro botón base','') %} {% endcall %} 
@@ -48,8 +48,8 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
 
 <div class="btn btn-circle">btn-circle</div> <br> <br> 
 {% call button.simple('circle','Usado en la newsletter') %} {% endcall %}
-{% call button.simple('text','btn-default description') %} {% endcall %}
-{% call button.simple('link','btn-default description') %} {% endcall %}
+{% call button.simple('text','btn-primary description') %} {% endcall %}
+{% call button.simple('link','btn-primary description') %} {% endcall %}
 {% call button.iconClear('btn-clear','Usado para iconos') %} {% endcall %}
 
 
@@ -153,9 +153,10 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                     d="M18.0667 17C17.4787 16.7424 16.9395 16.3551 16.3653 16.2961C15.7929 16.2372 15.1921 16.5628 14.594 16.6227C12.7711 16.8068 11.1378 16.3061 9.79161 15.0779C7.23079 12.7432 7.59702 9.16303 10.559 7.24914C13.1925 5.5484 17.0545 6.11531 18.9105 8.47548C20.5309 10.5345 20.3404 13.2675 18.362 14.9972C17.7897 15.4979 17.5836 15.9097 17.9507 16.5701C18.0197 16.6925 18.0271 16.8467 18.0667 17ZM11.3743 10.6134C11.7488 10.6134 12.0571 10.325 12.0709 9.96033C12.0856 9.57483 11.7709 9.25101 11.3789 9.2492C10.9906 9.24738 10.6658 9.57574 10.6796 9.95579C10.6925 10.3195 11.0026 10.6125 11.3743 10.6134ZM15.688 9.25101C15.3246 9.24829 15.0163 9.54127 15.0016 9.90318C14.9859 10.2896 15.2905 10.608 15.6788 10.6089C16.0543 10.6098 16.3515 10.3304 16.3644 9.96214C16.38 9.57392 16.0745 9.25373 15.688 9.25101Z"
                     fill="white" />
             </svg> ', 'btn-google description','Sign in with WECHAT ') %} {% endcall %} 
-             {% call button.simple('primary','btn-default description') %} {% endcall %} 
+
+
              {% call button.svg('has-ico-pre btn-primary','btn-ico-pre  descripcion del pre') %} {% endcall %}
-             {% call button.svg('has-ico-post btn-primary','btn-default description') %} {% endcall %} 
+             {% call button.svg('has-ico-post btn-primary','btn-primary description') %} {% endcall %} 
              
          
              
@@ -194,8 +195,8 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
 </button> " | escape }}</code></pre>
                     <h2>Otros ejemplos</h2>
                     <section class="p-16 align-center">
-                        <button class='btn btn-default btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
-                            endcall %} .btn-default.has-ico-center </button>
+                        <button class='btn btn-primary btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+                            endcall %} .btn-primary.has-ico-center </button>
                         <button class='btn btn-blue btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
                             endcall %} .btn-blue.has-ico-center </button>
                     </section>
@@ -254,7 +255,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Contenido a los extremos</h3>
-                    <p class="p-14">Si el icono tiene que ir al final del botón usa la clase separate para distribuir los
+                    <p class="p-xs">Si el icono tiene que ir al final del botón usa la clase separate para distribuir los
                         elementos a cada extremo</p> {% call button.btnDistribution('btn-separate','Usado para separar
                     en los extremos texto y botón','') %} {% endcall %}
                 </div>
@@ -262,7 +263,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Boton especial para worldwide</h3>
-                    <p class="p-14">Uso exclusivo para el selector de paises</p> {% call
+                    <p class="p-xs">Uso exclusivo para el selector de paises</p> {% call
                     button.btnDistribution('btn-world','Usado para separar en los extremos texto y botón','') %} {%
                     endcall %}
                 </div>
@@ -303,7 +304,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Agrupación conjunta</h3>
-                    <p class="p-14">Una en un solo elemento, un grupo de botones, que a su vez pueden tener clases que
+                    <p class="p-xs">Una en un solo elemento, un grupo de botones, que a su vez pueden tener clases que
                         transformen su aspecto.</p>
                     <p><code>.btn-group</code></p>
                     <div class="pre-show">
@@ -331,7 +332,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
         </div>
         <div class="col-xs-12">
             <p class="tit-s c-dark-grey  mb-32"> Botón animado con loading cuando haces clic.</p>
-            <p class="p-14 mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error
+            <p class="p-xs mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error
                 cuando hagamos clic</p> {% call button.animation('Btn-anim','btn animado description') %} {% endcall %}
             {% call button.animationsvg('Btn-anim','btn-anim con svg-icon ') %} {% endcall %}
         </div>
@@ -345,8 +346,8 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
         </div>
         <div class="col-xs-12">
             <p class="tit-s c-dark-grey  mb-32"> Botón Square</p>
-            <p class="p-14 mb-32">Añadiremos la clase <code>.btn-square</code> </p> {% call
-            button.square('square','btn-square description') %} {% endcall %}
+            <p class="p-xs mb-32">Añadiremos la clase <code>.btn-square</code> </p> {% call
+            button.square('square btn-primary','btn-square description') %} {% endcall %}
         </div>
     </div>
 </section> {% endblock %}

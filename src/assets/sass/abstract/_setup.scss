@@ -10,6 +10,13 @@
     url('../fonts/dutti-daily/dutti-daily-regular.woff') format('woff');
 }
 
+
+@font-face {
+    font-family: 'dutti-daily-medium';
+    src: url('../fonts/dutti-daily/dutti-daily-medium.woff2') format('woff2'), 
+    url('../fonts/dutti-daily/dutti-daily-medium.woff') format('woff');
+}
+
 @font-face {
     font-family: 'dutti-daily-bold';
     src: url('../fonts/dutti-daily/dutti-daily-bold.woff2') format('woff2'),
@@ -79,8 +86,9 @@ $headers:/* name:mobile,768,992,1280,line-height,font */
 
     p-18-2b: ( 18px, 18px, 18px, 18px, 1.3, "bold"),
     p-18-b: ( 18px, 18px, 18px, 18px, 1.3, "bold"),
-    p-14: ( 14px, 14px, 14px, 14px, 1.3, "regular"),
-    p-14-b: ( 14px, 14px, 14px, 14px, 1.3, "bold"),
+
+    p-lm: (16px, 16px, 18px ,18px, 1.3, "medium"),
+
     p-l: (16px, 16px, 18px ,18px, 1.3, "regular"),
     p-m: (14px, 14px, 16px ,16px, 1.3, "regular"),
     p-m-b: (14px, 14px, 16px ,16px, 1.3, "bold"), //NUEVO
@@ -138,6 +146,7 @@ $headersFluids: (
 
 
 
+$font-family-a-l: 'dutti-daily-medium', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 
 $font-family-a-r: 'dutti-daily-regular', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;
 $font-family-a-m: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida Grande', sans-serif;

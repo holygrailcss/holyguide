@@ -70,7 +70,7 @@ giftcard.scss
                             <input type="email" id="10" class="input" placeholder="Email address" required="">
                             <label for="10">Email address</label>
                             <div class="validation-error-messages">
-                                <p class="help p-14">Mensaje extra</p>
+                                <p class="help p-xs">Mensaje extra</p>
                             </div>
                         </div>
                     </div>
@@ -78,9 +78,9 @@ giftcard.scss
                         <div class="form-input-label-2 is-error">
                             <input type="email" id="10" class="input" placeholder="Email address" required="">
                             <label for="10">Email address</label>
-                            <div class="info-text p-14 text-right">0/3</div>
+                            <div class="info-text p-xs text-right">0/3</div>
                             <div class="validation-error-messages">
-                                <p class="help p-14">Mensaje extra</p>
+                                <p class="help p-xs">Mensaje extra</p>
                             </div>
                         </div>
                     </div>
