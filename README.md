@@ -108,3 +108,7 @@ giftcard.scss
 {"  codigo " | escape }}
 
 ```
+
+<p align="center">
+Developed with ❤️ from Barcelona
+</p>
