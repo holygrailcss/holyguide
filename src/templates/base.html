@@ -37,7 +37,12 @@
   <div id="guideContainer" class="guide">
     <div class="main-widthsidebar">
       <div class="main-title">{% block title %}{% endblock %}</div>
-      <div class="main-content">{% block content %}{% endblock %} </div>
+
+
+      <div class="  {% if page_container == 'full' %} main-full   {% else %}  main-content  {% endif %}">{% block content %}{% endblock %}
+      
+        
+         </div>
     </div>
   </div>
   {% endif %}
