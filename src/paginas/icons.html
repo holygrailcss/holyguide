@@ -215,15 +215,13 @@ endblock %} {% set page_title = "icons" %} {% block content %}
     <div class="row">
         <div class="col-xs-12">
             <div class="tit-m">Tamaños de iconos</div>
-            <div class="tit-s c-dark-grey mb-32">
-                Podemos cambiar el tamaño de los iconos con las siguientes clases.
-            </div>
+            <p class="p-s mb-16">Podemos cambiar el tamaño de los iconos con las clases <code>x24</code> <code>x32</code> <code>x48</code> y <code>x64</code></p>
             <div class="resize-mini mb-32">
                 <div class="resize-mini-content">
                     <div class="container-6">
                         <div class="row">
                             <div class="col-xs-12 mb-16 text-center">
-                                <div class="is-flex align-middle content-center">
+                                <div class="is-flex align-middle content-center flex-vcenter">
                                     {% call insert.svgIconSize() %} {% endcall %}
                                     {% call insert.svgIconSize('x24') %} {% endcall %}
                                     {% call insert.svgIconSize('x32') %} {% endcall %}
