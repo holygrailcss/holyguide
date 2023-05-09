@@ -211,6 +211,45 @@ endblock %} {% set page_title = "icons" %} {% block content %}
   </div>
 </section>
 
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="tit-m">Tamaños de iconos</div>
+            <div class="tit-s c-dark-grey mb-32">
+                Podemos cambiar el tamaño de los iconos con las siguientes clases.
+            </div>
+            <div class="resize-mini mb-32">
+                <div class="resize-mini-content">
+                    <div class="container-6">
+                        <div class="row">
+                            <div class="col-xs-12 mb-16 text-center">
+                                <div class="is-flex align-middle content-center">
+                                    {% call insert.svgIconSize() %} {% endcall %}
+                                    {% call insert.svgIconSize('x24') %} {% endcall %}
+                                    {% call insert.svgIconSize('x32') %} {% endcall %}
+                                    {% call insert.svgIconSize('x48') %} {% endcall %}
+                                    {% call insert.svgIconSize('x64') %} {% endcall %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% set standardcode %}
+                <svg-icon src="premium-fitting-room"></svg-icon>
+                <svg-icon src="premium-fitting-room" class="x24"></svg-icon>
+                <svg-icon src="premium-fitting-room" class="x32"></svg-icon>
+                <svg-icon src="premium-fitting-room" class="x48"></svg-icon>
+                <svg-icon src="premium-fitting-room" class="x64"></svg-icon>
+                {% endset%}
+                <pre>
+                  <code class="language-markup">{{standardcode}}</code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
