@@ -66,11 +66,23 @@ function isFlexAlignMultiBottom() {
 	$(".flexbox-demo").toggleClass("align-multi-bottom");
 	$(".flexbox-demo-is-align-bottom").toggleClass("hidden ");
 }
-
 function isFlexAlignCenter() {
 	$(".flexbox-demo").toggleClass("align-center");
 	$(".flexbox-demo-is-align-center").toggleClass("hidden ");
 }
+
+
+function isFlexAlignItemsCenter() {
+	$(".flexbox-demo").toggleClass("align-items-center");
+	$(".flexbox-demo-is-align-items-center").toggleClass("hidden ");
+}
+
+function isFlexAlignVertical() {
+	$(".flexbox-demo").toggleClass("align-vertical");
+	$(".flexbox-demo-is-align-vertical").toggleClass("hidden ");
+}
+
+
 
 
 
