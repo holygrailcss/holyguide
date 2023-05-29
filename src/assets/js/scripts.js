@@ -154,3 +154,13 @@ if(document.querySelector(".md-scroll-wrap")){
 
 }
 
+//Boton que marca en rojo los iconos que no son 16x16
+$(".check-16").on("click", function() {
+	document.querySelectorAll("svg").forEach(icon => {
+		if(icon.getBoundingClientRect().width!=16 || icon.getBoundingClientRect().height!=16) {
+			icon.querySelectorAll("path").forEach(path => {
+				path.setAttribute("style", "fill: red;");
+			});
+		}
+	});
+});
