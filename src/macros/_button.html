@@ -1,52 +1,32 @@
 {% import "_insert.html" as insert %}
 
-{% macro simple(buttonName='', explicacion='',dark='') %} 
+
+{% macro simple(buttonName='', explicacion='',dark='') %}
 <h3>{{ buttonName | capitalize }} </h3>
-
-<p class="p-m"> <span class="bold mr-8">   .btn-{{buttonName }}  </span>   {{ explicacion | capitalize }} </p>
-
+<p class="p-m"> <span class="bold mr-8"> .btn-{{buttonName }} </span> {{ explicacion | capitalize }} </p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
-
-<div class="container-3">
-  <div class="row">
-    <div class="col-xs-6">
+    <div class="container-3">
       <div class="row">
-        <div class="col-xs-12 mb-16 mt-16"><button class=" btn-{{buttonName }} btn btn--full"> Enabled</button></div>
-        <div class="col-xs-12 mb-16"><button class=" btn-{{buttonName }} btn btn--full hover">Hover</button></div>
-        <div class="col-xs-12 mb-16"><button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button></div>
-      </div>
-    </div>
-    <div class="col-xs-6 has-light bg-primary">
-
-      <div class="row">
-        <div class="col-xs-12 mb-16 mt-16"><button class=" btn-{{buttonName }} btn btn--full"> Enabled</button></div>
-
-
-        <div class="col-xs-12 mb-16"><button class=" btn-{{buttonName }} btn btn--full hover">Hover</button></div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 mb-16"><button disabled class=" btn-{{buttonName }} btn btn--full">Disabled</button>
+        <div class="col-xs-12">
+          <button class=" btn-{{buttonName }} btn btn--small"> Enabledxx</button>
+          <button class=" btn-{{buttonName }} btn btn--small hover">Hover</button>
+          <button disabled class=" btn-{{buttonName }} btn btn--small">Disabled</button>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 has-light bg-primary">
+            <button class=" btn-{{buttonName }} btn btn--small"> Enabled</button>
+            <button class=" btn-{{buttonName }} btn btn--small hover">Hover</button>
+            <button disabled class=" btn-{{buttonName }} btn btn--small">Disabled</button>
+          </div>
         </div>
       </div>
-
-
-
     </div>
   </div>
-</div>
-
-
-
-
-  </div> {% set standardcode %}<button class='btn btn-{{buttonName }} btn--full'>btn-{{buttonName }} </button>{% endset %}
-
+  {% set standardcode %}<button class='btn btn-{{buttonName }} btn--full'>btn-{{buttonName }} </button>{% endset %}
   <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
-
-
 </div>
- {% endmacro %}
-
+{% endmacro %}
  
 
 
@@ -229,12 +209,15 @@
 
 
  {% macro social(buttonName='', svgsolo='', explicacion='', placeholder='',dark='')  %} 
-<h3>{{ buttonName | capitalize }} </h3>
 
-<p class="p-m"> btn-{{buttonName }} : {{ explicacion }} </p>
 
-<div class="resize-mini">
-  <div class="resize-mini-content {{dark  }} ">
+<p class="p-s p-8"> {{buttonName }} : {{ explicacion }} </p>
+
+<div class="">
+  <div class=" is-flex ">
+
+
+
     <button class=" {{buttonName }} btn btn-social  btn--medium">
       <svg-icon >
         <div>
@@ -242,17 +225,26 @@
         </div>
       </svg-icon>
   {{placeholder }}    </button>
-  </div> {% set standardcode %}<button class=' {{buttonName }} btn  btn-social  btn--medium'>
-    <svg-icon class=" ">
+
+
+  <button class=" {{buttonName }} btn btn-social  btn--medium hover">
+    <svg-icon >
       <div>
         {{ svgsolo  | safe }}
       </div>
-    </svg-icon>    
-    btn-{{buttonName }} </button>{% endset %}
-  <pre><code class="language-markup">{{standardcode}} </code></pre>
+    </svg-icon>
+{{placeholder }}    </button>
 
+<button class=" {{buttonName }} btn btn-social  btn--medium disabled">
+  <svg-icon >
+    <div>
+      {{ svgsolo  | safe }}
+    </div>
+  </svg-icon>
+{{placeholder }}    </button>
 
-
+  </div> 
+  
 </div>
  {% endmacro %}
 
@@ -384,3 +376,83 @@
 
 </div>
  {% endmacro %}
+
+
+
+
+
+
+{% macro list(buttonNames=[], explicacion='',dark='') %}
+<h3>{{ buttonName | capitalize }} </h3>
+<p class="p-m"> <span class="bold mr-8"> .btn-{{buttonName }} </span> {{ explicacion | capitalize }} </p>
+<div class="resize-mini">
+  <div class="resize-mini-content {{dark  }} ">
+    <div class="container-3">
+      <div class="row">
+        <div class="col-xs-12 p-xs p-16">Primary</div>
+        <div class="col-xs-12 is-flex ">
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small"> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 p-xs p-16">hover</div>
+        <div class="col-xs-12 is-flex hover ">
+       
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small hover"> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 p-xs p-16">disabled</div>
+        <div class="col-xs-12 is-flex disabled ">
+       
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small disabled"> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <div class="row has-light bg-primary">
+        <div class="col-xs-12 p-xs p-16">has-light primarys</div>
+        <div class="col-xs-12 is-flex  ">
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small "> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="row has-light bg-primary">
+        <div class="col-xs-12 p-xs p-16">has-light hover</div>
+        <div class="col-xs-12 is-flex  ">
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small hover "> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="row has-light bg-primary">
+     <div class="col-xs-12 p-xs p-16">has-light disabled</div>
+        <div class="col-xs-12 is-flex  ">
+          {% for buttonName in buttonNames %}
+          <button class="btn btn-{{buttonName}}  btn--small disabled "> {{buttonName}}</button>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  {% set standardcode %}{% for buttonName in buttonNames %} <button class="btn btn-{{buttonName}}  btn--small">{{buttonName}}</button>
+  {% endfor %}{% endset %}
+  <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+</div>
+{% endmacro %}
+ 

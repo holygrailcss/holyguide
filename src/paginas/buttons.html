@@ -34,70 +34,49 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <p class="p-xs p-m mb-32"> La segunda parte del botón es su tipo, este define su aspecto, fondo, color
                 de fuente, apariencia en los diferentes estados del botón... </p>
             <span class="todo"> ( TODO falta Focus ) </span> 
-            {% call button.simple('primary','Es nuestro botón base','') %} {% endcall %} 
+
+{% set buttonNames = ['primary', 'secondary', 'phantom', 'feel', 'feel-invert', 'world','clear' ,'circle', 'link', 'text'] %}
+
+         {% call button.list( buttonNames ,'Todas las casuisticas de botones','') %} {% endcall %} 
+
+            {# {% call button.simple('primary','Es nuestro botón base','') %} {% endcall %} 
             {% call button.simple('secondary','btn-secondary description') %} {% endcall %} 
             {% call button.simple('phantom','btn-phantom description','bg-dark') %} {% endcall %} 
 
             {% call button.simple('feel','Botón de feel','') %} {% endcall %} 
-            {% call button.simple('feel-invert','Botón invertido Feel','') %} {% endcall %} 
+            {% call button.simple('feel-invert','Botón invertido Feel','') %} {% endcall %}  #}
 
             
             
             
-    
 
-<div class="btn btn-circle">btn-circle</div> <br> <br> 
-{% call button.simple('circle','Usado en la newsletter') %} {% endcall %}
-{% call button.simple('text','btn-primary description') %} {% endcall %}
-{% call button.simple('link','btn-primary description') %} {% endcall %}
-{% call button.iconClear('btn-clear','Usado para iconos') %} {% endcall %}
 
 
         </div>
     </div>
 </section>
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12 ">
-            <div class="tit-m"> Tamaños </div>
-        </div>
-        <div class="col-xs-12">
-            <p class="p-m mb-32"> La tercera parte a definir en un botón es el tamaño. </p>
-            <div class="pre-show"> {% call insert.title('Tamaños Alto','Tenemos dos tipos extra de tamaños ') %} {%
-                endcall %} <div class="btn btn-primary btn--mini">btn--mini</div> <br><br>
-                <div class="btn btn-primary btn--xlarge">btn--xlarge</div>
-                <pre><code class="language-markup">{{ "<div class='btn btn-primary btn--mini'>btn--mini xx</div>
-<div class='btn btn-primary btn--xlarge'>btn--xlarge</div> " | escape}}</code></pre> {% call insert.title('Tamaños
-                Largos','Vamos a unificar todos al btn--full') %} {% endcall %}  <br>
-                <div class="btn btn-primary btn--small">btn--small</div> <br> <br>
-                <div class="btn btn-primary btn--medium">btn--medium</div> <br> <br>
-                <div class="btn btn-primary btn--large">btn--large</div> <br> <br>
-                <div class="btn btn-primary btn--full">btn--full</div> <br> <br>
-                <pre><code class="language-markup">{{ "
-<div class='btn btn-primary btn--small'>btn--small</div>
-<div class='btn btn-primary btn--medium'>btn--medium</div>
-<div class='btn btn-primary btn--xlarge'>btn--xlarge</div>
-<div class='btn btn-primary btn--full'>btn--full</div>" | escape}}</code></pre>
-            </div>
-        </div>
-        <div class="col-xs-12">
-            <div class="pre-show"> {% call insert.title('Tamaños Responsive','Tamaños diferentes en desktop y mobile con breakpoints en 768px ') %} {%
-                endcall %} </div>
-            <p class="p-m mb-32"> Tamaños responsive, Desktop 48px de alto , Mobile 32px de alto RD (ResponsiveDesign) </p>
-            <div class='btn btn-primary btn--mini-rd'>btn--mini-rd</div>
-        </div>
-    </div>
-</section>
+
+
 <!-- Botones iconos -->
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12 ">
-            <div class="tit-m"> Botones con iconos </div>
+            <div class="tit-m"> Botones Socials </div>
+
+
+ <pre class="language-markup">
+    <code class="language-markup">&lt;button class=&#39;btn  btn-google  btn-social  btn--medium&#39;&gt; dfhfdihdfiu&lt;/button&gt;    </code>
+ </pre>
+
+
         </div>
         <div class="col-xs-12">
             <div class="tit-s c-dark-grey  mb-32">En algunos casos los botones pueden ir acompañados de un icono. </div>
-            <p class="p-m mb-32"> Usa las siguientes clases para posicionar el icono a la derecha o a la izquierda
-            </p> {% call button.social('btn-google', '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+            <p class="p-m mb-32"> Botón primario, botón hover, botón disabled.
+            </p> 
+            
+            
+            {% call button.social('btn-google', '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M17.64 9.20455C17.64 8.56636 17.5827 7.95273 17.4764 7.36364H9V10.845H13.8436C13.635 11.97 13.0009 12.9232 12.0477 13.5614V15.8195H14.9564C16.6582 14.2527 17.64 11.9455 17.64 9.20455Z"
@@ -117,7 +96,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M10.4059 17.8908V11.6022H12.5031L12.9017 9.00001H10.4059V7.31164C10.4059 6.60035 10.7539 5.90551 11.8728 5.90551H13.008V3.69063C13.008 3.69063 11.9778 3.51471 10.9931 3.51471C8.93773 3.51471 7.59362 4.7601 7.59362 7.01675V9.00001H5.30786V11.6022H7.59362V17.8908C3.29108 17.2156 0 13.4921 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.4923 14.7087 17.2159 10.4059 17.8908Z"
                     fill="#292929" />
-            </svg> ', ' btnbtn-google description','Sign in with facebook ') %} {% endcall %}
+            </svg> ', '','Sign in with facebook ') %} {% endcall %}
             
             
             {% call
@@ -126,7 +105,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M10.6208 1C8.9723 1.0665 7.62712 2.79616 7.81495 4.22655C9.33864 4.34498 10.8005 2.6369 10.6208 1ZM10.4217 14.9819C11.8357 14.9562 13.2083 12.6012 13.6668 11.2711C11.3241 10.1762 10.984 7.19695 13.1663 5.77239C12.3438 4.56951 11.0622 4.405 10.606 4.38575C9.93947 4.31834 9.29278 4.57341 8.76429 4.78185C8.42833 4.91436 8.14013 5.02803 7.92498 5.02803C7.68629 5.02803 7.39084 4.91067 7.05913 4.77892C6.62476 4.60638 6.12821 4.40915 5.61554 4.41842C3.92969 4.4435 2 5.81614 2 8.58534C2 11.6001 4.31586 15.0571 5.81621 14.9994C6.22783 14.9831 6.52065 14.8584 6.82347 14.7294C7.17296 14.5805 7.53577 14.4259 8.1099 14.4259C8.65806 14.4259 9.0048 14.576 9.33814 14.7202C9.65681 14.8581 9.96323 14.9907 10.4217 14.9819Z"
                     fill="white" />
-            </svg>', 'btn-google description','Sign in with Apple ') %} {% endcall %} {% call button.social('btn-naver',
+            </svg>', '','Sign in with Apple ') %} {% endcall %} {% call button.social('btn-naver',
             '<svg width="60" height="13" viewBox="0 0 60 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M17.2719 0.785706L12.7563 12.2143H16.5945L17.1399 10.7017H21.4678L22.0132 12.2143H25.8514L21.3358 0.785706H17.2719ZM18.0167 7.95657L19.3039 4.38649L20.591 7.95657H18.0167Z"
@@ -143,7 +122,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                 <path
                     d="M57.0889 8.29364L57.4381 8.14859C58.7763 7.59263 59.4569 6.38972 59.4569 4.86308C59.4569 3.41941 58.9264 2.35141 57.8801 1.68871C56.9075 1.07263 55.6461 0.785706 53.9106 0.785706H49.0499V12.2143H52.6623V9.02101H53.9605L56.1618 12.2143H60L57.0889 8.29364ZM54.5814 6.10784H52.6058V3.69887H54.5814C55.2516 3.69887 55.7949 4.23814 55.7949 4.90335C55.7949 5.56857 55.2516 6.10784 54.5814 6.10784Z"
                     fill="white" />
-            </svg> ', 'btn-google description','Sign in') %} {% endcall %} {% call button.social('btn-wechat', '<svg
+            </svg> ', '','Sign in') %} {% endcall %} {% call button.social('btn-wechat', '<svg
                 width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M13.8956 5.59013C12.0387 5.68537 10.4247 6.24049 9.11346 7.49404C7.78842 8.76029 7.18387 10.3123 7.3495 12.2361C6.62349 12.1472 5.96281 12.0502 5.29845 11.9949C5.06841 11.9758 4.79604 12.003 4.60189 12.111C3.95685 12.4702 3.33758 12.8756 2.60421 13.3273C2.73855 12.7269 2.82597 12.2017 2.98055 11.6964C3.09373 11.3245 3.04129 11.1186 2.69438 10.8765C0.465742 9.32539 -0.473747 7.00423 0.22926 4.61414C0.878896 2.40364 2.4763 1.0621 4.64697 0.363666C7.60991 -0.590558 10.9391 0.382714 12.7408 2.70115C13.3904 3.53837 13.7897 4.47898 13.8956 5.59013ZM5.34998 4.84543C5.36746 4.40823 4.98283 4.01457 4.52643 4.00096C4.05899 3.98736 3.67528 4.3393 3.66148 4.79373C3.64767 5.25361 4.0047 5.62278 4.4749 5.63457C4.94143 5.64637 5.3325 5.29352 5.34998 4.84543ZM9.80818 4.00096C9.34994 4.00913 8.96347 4.39372 8.97083 4.83274C8.97911 5.28717 9.35914 5.64364 9.83027 5.6382C10.3023 5.63276 10.6612 5.27266 10.6566 4.80825C10.6529 4.3529 10.2747 3.9928 9.80818 4.00096Z"
@@ -151,11 +130,9 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
                 <path
                     d="M18.0667 17C17.4787 16.7424 16.9395 16.3551 16.3653 16.2961C15.7929 16.2372 15.1921 16.5628 14.594 16.6227C12.7711 16.8068 11.1378 16.3061 9.79161 15.0779C7.23079 12.7432 7.59702 9.16303 10.559 7.24914C13.1925 5.5484 17.0545 6.11531 18.9105 8.47548C20.5309 10.5345 20.3404 13.2675 18.362 14.9972C17.7897 15.4979 17.5836 15.9097 17.9507 16.5701C18.0197 16.6925 18.0271 16.8467 18.0667 17ZM11.3743 10.6134C11.7488 10.6134 12.0571 10.325 12.0709 9.96033C12.0856 9.57483 11.7709 9.25101 11.3789 9.2492C10.9906 9.24738 10.6658 9.57574 10.6796 9.95579C10.6925 10.3195 11.0026 10.6125 11.3743 10.6134ZM15.688 9.25101C15.3246 9.24829 15.0163 9.54127 15.0016 9.90318C14.9859 10.2896 15.2905 10.608 15.6788 10.6089C16.0543 10.6098 16.3515 10.3304 16.3644 9.96214C16.38 9.57392 16.0745 9.25373 15.688 9.25101Z"
                     fill="white" />
-            </svg> ', 'btn-google description','Sign in with WECHAT ') %} {% endcall %} 
+            </svg> ', '','Sign in with WECHAT ') %} {% endcall %} 
 
 
-             {% call button.svg('has-ico-pre btn-primary','btn-ico-pre  descripcion del pre') %} {% endcall %}
-             {% call button.svg('has-ico-post btn-primary','btn-primary description') %} {% endcall %} 
              
          
              
@@ -168,42 +145,50 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
              <div class="row mb-16">
                 <div class="col-xs-12">
                     <h3 class='h6 mb-16'>Active Buttons</h3>
-                    <button class='btn btn-primary  btn--small  '> Action </button>
-
-                    
-                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--small  '> Action </button> " | escape }}</code></pre>
-
-
-
-
-                    <button class='btn btn-primary  btn--small  has-ico-pre '> {% call insert.svgIcon('ico-pre') %} {% endcall %} ico-pre </button>
-
-
-                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-pre '> <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> .has-ico-pre </button> " | escape }}</code></pre>
-                  
-                  
-                    <button class='btn btn-primary  btn--small  has-ico-post'> {% call insert.svgIcon('ico-post') %} {%
+                    <button class='btn btn-primary  btn--small   '> Action </button>
+                    <button class='btn btn-primary  btn--small  has-ico-pre  '> {% call insert.svgIcon('ico-pre') %} {% endcall %} ico-pre
+                    </button>
+                    <button class='btn btn-primary  btn--small  has-ico-post '> {% call insert.svgIcon('ico-post') %} {%
                         endcall %} ico-post </button>
-                    <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-post '>
-    <svg-icon class='ico-post' src='premium-fitting-room'></svg-icon> .has-ico-post
-</button> " | escape }}</code></pre>
-                    <button class='btn btn-primary  btn--large  has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+
+<pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--small  '> Action </button> 
+<button class='btn btn-primary  btn--small  has-ico-pre '> <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> .has-ico-pre </button>
+<button class='btn btn-primary  btn--small  has-ico-post '> <svg-icon class='ico-post' src='premium-fitting-room'></svg-icon> .has-ico-post </button> 
+" | escape }}</code></pre>
+
+                    <button class='btn btn-primary  btn--large  has-ico-center mb-16'> {% call insert.svgIcon() %} {%
                         endcall %} .has-ico-center </button>
+                    <button class='btn btn-primary btn--large has-ico-center mb-16'> {% call insert.svgIcon() %} {%
+                        endcall %} .btn-primary.has-ico-center </button>
+                    <button class='btn btn-blue btn--large has-ico-center mb-16'> {% call insert.svgIcon() %} {%
+                        endcall %} .btn-blue.has-ico-center </button>
+                    <button class='btn btn-trans btn--large has-ico-center mb-16'> {% call insert.svgIcon() %} {%
+                        endcall %} .btn-trans.has-ico-center </button>
+                    
+<pre><code class='language-markup'>{{"
+<button class='btn btn-primary  btn--large  has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+endcall %} .has-ico-center </button>
+<button class='btn btn-primary btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+endcall %} .btn-primary.has-ico-center </button>
+<button class='btn btn-blue btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+endcall %} .btn-blue.has-ico-center </button>
+<button class='btn btn-phantom btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+endcall %} .btn-phantom.has-ico-center </button>
+<button class='btn btn-trans btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
+endcall %} .btn-trans.has-ico-center </button> " | escape }}</code></pre>
+                            
+
+
+        
                     <pre><code class='language-markup'>{{"<button class='btn btn-primary  btn--large  has-ico-center '>
     <svg-icon src='premium-fitting-room'></svg-icon> .has-ico-center
 </button> " | escape }}</code></pre>
                     <h2>Otros ejemplos</h2>
                     <section class="p-16 align-center">
-                        <button class='btn btn-primary btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
-                            endcall %} .btn-primary.has-ico-center </button>
-                        <button class='btn btn-blue btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
-                            endcall %} .btn-blue.has-ico-center </button>
+                 
                     </section>
                     <section class="bg-dark p-16 align-center">
-                        <button class='btn btn-phantom btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
-                            endcall %} .btn-phantom.has-ico-center </button>
-                        <button class='btn btn-trans btn--large has-ico-center mb-32'> {% call insert.svgIcon() %} {%
-                            endcall %} .btn-trans.has-ico-center </button>
+               
                     </section>
                 </div>
             </div>
@@ -225,32 +210,8 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
 
                 </div>
             </div>
-            <div class="row mb-16">
-                <div class="col-xs-12">
-                    <h3 class="p-m mb-16">Invert</h3>
-                    <div class="btn btn-secondary btn--small  "> Action </div>
-                    <div class="btn btn-secondary btn--small  has-ico-pre"> {% call insert.svgIcon('ico-pre') %} {% endcall
-                        %} ico-pre </div>
-                    <div class="btn btn-secondary btn--small  has-ico-post"> {% call insert.svgIcon('ico-post') %} {%
-                        endcall %} ico-post </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-
-               
-<pre><code class='language-markup'>
-{{"<button class='btn btn-secondary  btn--large  has-ico-pre '>
-    <svg-icon class='ico-pre' src='premium-fitting-room'></svg-icon> 
-    .has-ico-pre
- </button> " | escape }}</code>
-</pre>
-                  
 
 
-
-                </div>
-            </div>
             <div class="row">
                 <div class="col-xs-12">
                     <h3>Contenido a los extremos</h3>
@@ -261,8 +222,7 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <h3>Boton especial para worldwide</h3>
-                    <p class="p-xs">Uso exclusivo para el selector de paises</p> {% call
+                {% call
                     button.btnDistribution('btn-world','Usado para separar en los extremos texto y botón','') %} {%
                     endcall %}
                 </div>
@@ -270,6 +230,44 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
         </div>
     </div>
 </section>
+
+
+<section class="mb-32 mt-32">
+    <div class="row">
+
+        <div class="col-xs-12">
+
+
+
+{% call insert.title('Tamaños Largos','Vamos a unificar todos al btn--full') %} {% endcall %}  <br>
+<div class="btn btn-primary btn--mini">btn--mini</div> <br> <br>
+<div class="btn btn-primary btn--small">btn--small</div> <br> <br>
+<div class="btn btn-primary btn--medium">btn--medium</div> <br> <br>
+<div class="btn btn-primary btn--large">btn--large</div> <br> <br>
+<div class="btn btn-primary btn--xlarge">btn--xlarge</div> <br> <br>
+<div class="btn btn-primary btn--full">btn--full</div> <br> <br>
+<pre><code class="language-markup">{{ "
+<div class='btn btn-primary btn--mini'>btn--mini</div>
+<div class='btn btn-primary btn--small'>btn--small</div>
+<div class='btn btn-primary btn--medium'>btn--medium</div>
+<div class='btn btn-primary btn--large'>btn--xlarge</div>
+<div class='btn btn-primary btn--xlarge'>btn--xlarge</div>
+<div class='btn btn-primary btn--full'>btn--full</div>" | escape}}</code></pre>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-xs-12">
+            <div class="pre-show"> {% call insert.title('Tamaños Responsive','Tamaños diferentes en desktop y mobile con breakpoints en 768px ') %} {%
+                endcall %} </div>
+            <p class="p-m mb-32"> Tamaños responsive, Desktop 48px de alto , Mobile 32px de alto RD (ResponsiveDesign) </p>
+            <div class='btn btn-primary btn--mini-rd'>btn--mini-rd</div>
+        </div>
+
+</section>
+
 <!-- grupos de botones -->
 <section class="mb-32 mt-32">
     <div class="row">
@@ -333,20 +331,9 @@ special.titledoc('Buttons','desc','actualizado') %} {% endcall %} {% endblock %}
             <p class="tit-s c-dark-grey  mb-32"> Botón animado con loading cuando haces clic.</p>
             <p class="p-xs mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear error
                 cuando hagamos clic</p> {% call button.animation('Btn-anim','btn animado description') %} {% endcall %}
-            {% call button.animationsvg('Btn-anim','btn-anim con svg-icon ') %} {% endcall %}
+   
         </div>
     </div>
 </section>
 <!-- Animación loader -->
-<section class="mb-32 mt-32">
-    <div class="row">
-        <div class="col-xs-12 ">
-            <div class="tit-m"> <strong>Botón Square </strong> </div>
-        </div>
-        <div class="col-xs-12">
-            <p class="tit-s c-dark-grey  mb-32"> Botón Square</p>
-            <p class="p-xs mb-32">Añadiremos la clase <code>.btn-square</code> </p> {% call
-            button.square('square btn-primary','btn-square description') %} {% endcall %}
-        </div>
-    </div>
-</section> {% endblock %}
+{% endblock %}
