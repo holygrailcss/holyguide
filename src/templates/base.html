@@ -97,13 +97,13 @@
         if (event.rect.width < 320) {
           target.querySelector(".resize-media").textContent = "XS";
         } else if (event.rect.width < 768) {
-          target.querySelector(".resize-media").textContent = "XS";
-        } else if (event.rect.width < 992) {
           target.querySelector(".resize-media").textContent = "SM";
-        } else if (event.rect.width < 1280) {
+        } else if (event.rect.width < 992) {
           target.querySelector(".resize-media").textContent = "MD";
-        } else if (event.rect.width < 1500) {
+        } else if (event.rect.width < 1280) {
           target.querySelector(".resize-media").textContent = "LG";
+        } else if (event.rect.width < 1500) {
+          target.querySelector(".resize-media").textContent = "XL";
          } else   {
           target.querySelector(".resize-media").textContent = "XL";
         }
