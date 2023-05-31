@@ -20,6 +20,9 @@
 </iframe>
 {% endmacro %}
 
+
+
+
 {% macro component(component='',size='',componentfigma="" ,descripcion='') %}
 <section class="mb-32 mt-32 ">
 	<div class="resize-container">
@@ -87,7 +90,9 @@
 			</div>
 			<div class="resize-left"></div>
 			<div class="resize-right"></div>
-			<iframe id="cover1" class="resizable" src="components/{{ component }}.html" width="100%" height="{{ size }}"
+
+	
+			<iframe id="cover1" class="resizable" src="/components/{{ component }}.html" width="100%" height="{{ size }}"
 				frameborder="0" seamless></iframe>
 		</div>
 	</div>

@@ -16,6 +16,8 @@
 @import "../../components/interstitials.scss";
 @import "../../components/shopthelook.scss";
 
+@import "../sass/components/to-holygrail.scss";
+
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
@@ -743,7 +745,7 @@ $checkbox-svg-brad: 0;
   float: left;
   left: 0;
   top: 0;
-  padding: 20px 50px;
+  padding: 6px 50px;
   border-right: 1px solid #eaeaea;
 }
 

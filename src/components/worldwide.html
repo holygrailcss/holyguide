@@ -1,5 +1,7 @@
 {% extends "basecomponent.html" %}
-{% block worldwide %} <div class="container-fluid " contenteditable="true">
+
+
+{% block content %} <div class="container-fluid " contenteditable="true">
   <div class="height-full" ng-style="::$ctrl.setImageBackground($ctrl.image_ww)"
     style="background-image: url(../images/anchos.jpg);">
     <video class="video-cover" ng-if="$ctrl.showVideo" src="**video" autoplay="" loop="" muted="" playsinline=""
