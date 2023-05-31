@@ -164,7 +164,7 @@ $c-guide: rgb(218, 19, 112);
 
 .main-full {
   width: calc(100vw - #{$nav-width});
-  margin-left: calc(50% - (50vw - 117px));
+  margin-left: calc(50% - (50vw - 138px));
 
   &.is-rtl {
     direction: rtl;
@@ -175,12 +175,12 @@ $c-guide: rgb(218, 19, 112);
   margin-top: 71px;
   margin-left: $nav-width;
   width: calc(100vw - (#{$nav-width} + 28px));
-
+  overflow: hidden;
   @media (max-width: 767px) {
     width: 100%;
     margin-top: 50px;
     margin-left: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
@@ -704,8 +704,7 @@ $checkbox-svg-brad: 0;
   padding: 0 0 50px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  width: calc(100vw - 300px);
-  left: -50%;
+  width: 100%;
   box-sizing: border-box;
   flex-direction: column;
 }
@@ -2245,6 +2244,10 @@ pre[class*=language-] {
   margin-right: -20%;
 }
 
-
+.insert-figma{
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
 
 

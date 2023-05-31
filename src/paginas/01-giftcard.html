@@ -4,11 +4,12 @@
 {% call special.titledoc('GiftCard','desc','actualizado') %} {% endcall %} 
 {% endblock %} 
 {% set page_title = "giftcard" %} 
+  {% set page_container = "full" %} 
 {% block content %} 
 <section class="mb-32 mt-32">
     <div class="row">
         <div class="col-xs-12 "></div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 insert-figma">
         {% call
             insert.figma('https://www.figma.com/file/IYi86E9KtGzUmr6Uuhjpcd/29580---Tarjeta-Regalo?node-id=2073%3A2084')
             %} {% endcall %}
