@@ -1,9 +1,7 @@
+{% extends "basecomponent.html" %}
 {% import "_product-card.html" as productCard %}
  {% block content %}
-
-
 <div class="body-contet">
-
     <section>
         <div class="container">
             <div class="row">
@@ -18,10 +16,8 @@
             </div>
         </div>
     </section>
-
     <div id="sidebarShopcar" class="sidebar-shopcar show-sidebar">
         <div class="sidebar-shopcar-container">
-
             <!-- sidebar nav -->
             <div class="tabs is-around">
                 <ul>
@@ -29,10 +25,8 @@
                     <li><a class="p-xs-b">Lista de deseos</a></li>
                 </ul>
             </div>
-
             <!-- contenedor de tarjetas -->
             <div class="mini-shopcart__content">
-    
                 <!-- Listado de componentes -->
                 {% call productCard.productCard('promotion', 'class') %} {% endcall %}
                 {% call productCard.productCard('','outOfStock','clase') %} {% endcall %}
@@ -41,8 +35,6 @@
                 </div>
                 {% call productCard.productCard() %} {% endcall %}
             </div>
-
-
             <!-- Contenedor resumen de la compra -->
             <div class="mini-shopcart__summary">
                 <div class="col-xs-12 p-16">
@@ -68,25 +60,13 @@
                     </order-summary>
                     <button class="btn btn-primary btn--full">*** Ir a la cesta</button>
                 </div>
-
-
-
             </div>
-
-
-
-
         </div>
     </div>
 </div>
-
-
 <script>
     function toggleSidebar(){
-
         document.getElementById("sidebarShopcar").classList.toggle("show-sidebar");
     }
 </script>
-
-
 {% endblock %}

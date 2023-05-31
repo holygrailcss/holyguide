@@ -98,3 +98,11 @@
 }
 
 
+.multi-img{
+  width: 100%;
+  &>div{
+    width: 50%;
+    float: left;
+
+  }
+}

@@ -1,16 +1,12 @@
+{% extends "basecomponent.html" %}
 {% import "_product-card.html" as productCard %}
 {% block content %}
-
-
 <div class="body-contet">
-
-
     <section class="">
         <div class="container mt-48">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 pr-32">
                     <div class="mini-shopcart__content">
-
                         <!-- Listado de componentes -->
                         {% call productCard.productCard('promotion', 'class') %} {% endcall %}
                         {% call productCard.productCard('','outOfStock','clase') %} {% endcall %}
@@ -43,25 +39,15 @@
                             </order-summary>
                             <button class="btn btn-primary btn--full mt-16">*** Ir a la cesta</button>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 </div>
-
-
 <script>
     function toggleSidebar() {
-
         document.getElementById("sidebarShopcar").classList.toggle("show-sidebar");
     }
 </script>
-
-
 {% endblock %}

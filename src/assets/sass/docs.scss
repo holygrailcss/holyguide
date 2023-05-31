@@ -149,7 +149,7 @@ $c-guide: rgb(218, 19, 112);
 }
 
 .main-title {
-  margin-top: 71px;
+
 
   &.is-rtl {
     direction: rtl;
@@ -2251,3 +2251,7 @@ pre[class*=language-] {
 }
 
 
+.viewcode code.language-markup{
+  margin-top: -300px;
+
+}

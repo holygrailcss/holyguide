@@ -1,3 +1,4 @@
+{% extends "basecomponent.html" %}
 {% block menu %} <div class="nav-wrap active">
     <div class="nav-mainbar-close pr-24 c-white  head-l "> ABRIR </div>
     <nav class="nav">
@@ -6,12 +7,10 @@
                 <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <line x1="0.353553" y1="0.646447" x2="16.3536" y2="16.6464" stroke="black" /> <line x1="16.3536" y1="1.35355" x2="0.353554" y2="17.3536" stroke="black" /> </svg>
             </div>
             <ul class="nav-mainbar-content">
-
                 <li class="nav-mainbar-item ">
                     <div  id="menlink" class="nav-submenu-item-link  pt-8 pb-8 mr-16">
                         <h2 class="p-m"> MEN </h2>
                     </div>
-
                     <ul id="mensub" class="nav-mainbar-dropdown">
                         <li class="nav-submenu-item mb-24 ">
                             <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 bold ">Studio <div
@@ -89,23 +88,18 @@
                         <li class="nav-submenu-item ">
                             <a title="Faldas" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Faldas</a>
                         </li>
-                   
                     </ul>
-
                 </li>
-
                 <li class="nav-mainbar-item ">
                     <div id="womanlink" class="nav-submenu-item-link  pt-8 pb-8 mr-16">
                         <h2 class="p-m"> WOMAN </h2>
                     </div>
-
                     <ul id="womansub" class="nav-mainbar-dropdown">
                         <li class="nav-submenu-item mb-24 bold">
                             <a title="Studio" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Studio WOMAN <div
                                     class="tag-new">NEW</div>
                             </a>
                         </li>
-    
                         <li class="nav-submenu-item ">
                             <a title="Soft" href="url-del-link"
                                 class="nav-submenu-item-link p-m pb-8 pt-8  link-active">Soft WOMAN</a>
@@ -205,7 +199,6 @@
                             <a title="Zapatos" href="url-del-link" class="nav-submenu-item-link p-m pb-8 pt-8 ">Zapatos</a>
                         </li>
                     </ul>
-
                 </li>
                 <div class="nav-mainbar-item"></div>
             </ul>
@@ -228,7 +221,6 @@
             </div>
         </div>
         <div class="nav-submenu ov-custom-nav">
-   
         </div>
         <div class="nav-mainbar-search sm:visible pt-16">
             <div class="nav-mainbar-search-bar">
@@ -243,8 +235,6 @@
     $(document).ready(function () {
         $(".nav-mainbar-close").click(function () {
             $(".nav-wrap").toggleClass("active");
-
-
         });
     });
 </script> {% endblock %}

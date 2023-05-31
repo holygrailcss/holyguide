@@ -1,9 +1,9 @@
+{% extends "basecomponent.html" %}
 {% block limited %} 
 <div class="container-fluid ">
   <div class="row height-xs bg-dark align-center">
     <span class="tit-s"> Header zone</span>
   </div>
-
 <div class="limited-submenu pr-body pl-body ">
   <div class="limited-submenu-selection">
     <div class="p-xs-b pt-16 pb-16"> LIMITED EDITION</div>
@@ -14,12 +14,6 @@
     <a href="" class="p-xs-b pt-16 pb-16"> LIMITED EDITION </a>
   </div>
 </div>
-
-
-
-
-
-
   <div class="row">
     <div class="col-xs-12 pt-40 pb-40">
       <img width="100%" src="../images/inicio.jpg" alt="Image description">
@@ -49,21 +43,16 @@
             <div class="md-scroll-btn"> <div class="p-xs-b">  SHOP THE LOOK   </div> </div> <img  src="../images/v4.jpeg"
               alt="Image description">
           </div>
-
           <div class="md-scroll-img">
             <div class="md-scroll-btn"> <div class="p-xs-b">  SHOP THE LOOK   </div> </div> <img  src="../images/h5.jpeg"
               alt="Image description">
           </div>
-
           <div class="md-scroll-img">
             <div class="md-scroll-btn"> <div class="p-xs-b">  SHOP THE LOOK   </div> </div> <img  src="../images/v4.jpeg"
               alt="Image description">
           </div>
-
-          
         </div>
       </section>
-
       <div class="md-scroll-infotext">
  VER lookbook
       </div>
@@ -75,15 +64,11 @@
     </div>
   </div>
 </div> 
-
 <script>
-
 $(document).ready(function () {
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.saveStyles(".mobile, .desktop");
-
 let container = document.querySelector(".md-scroll-wrap");
-
 	ScrollTrigger.matchMedia({
 		"(min-width: 768px)": function () {
 			gsap.to(".md-scroll-wrap", {
@@ -100,9 +85,6 @@ let container = document.querySelector(".md-scroll-wrap");
 			});
 		},
 	});
-
 } );
-
 </script>
-
 {% endblock %}
