@@ -94,13 +94,17 @@
           Math.round(event.rect.width) +
           "\u00D7" +
           Math.round(event.rect.height);
-        if (event.rect.width < 786) {
-          target.querySelector(".resize-media").textContent = "mobile";
+        if (event.rect.width < 320) {
+          target.querySelector(".resize-media").textContent = "XS";
+        } else if (event.rect.width < 768) {
+          target.querySelector(".resize-media").textContent = "XS";
         } else if (event.rect.width < 992) {
-          target.querySelector(".resize-media").textContent = "MD";
+          target.querySelector(".resize-media").textContent = "SM";
         } else if (event.rect.width < 1280) {
-          target.querySelector(".resize-media").textContent = "LG";
+          target.querySelector(".resize-media").textContent = "MD";
         } else if (event.rect.width < 1500) {
+          target.querySelector(".resize-media").textContent = "LG";
+         } else   {
           target.querySelector(".resize-media").textContent = "XL";
         }
       })
