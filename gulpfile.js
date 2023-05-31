@@ -110,7 +110,7 @@ function nunjucks(cb) {
 
         .pipe(
             nunjucksRender({
-                path: ["src/templates/","src/macros","src/paginas","src/components","src/molecules","src/assets/sass"] // String or Array
+                path: ["src/templates/","src/macros","src/paginas","src/components","src/assets/sass"] // String or Array
             })
         )
 
@@ -127,12 +127,10 @@ function nunjucks(cb) {
 								"src/macros",
 								"src/paginas",
 								"src/components",
-								"src/molecules",
                                 "src/assets/sass",
 							], // String or Array
 						})
-					)
-					.pipe(gulp.dest("dist/molecules"));
+					);
 
 
 
