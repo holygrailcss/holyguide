@@ -24,6 +24,15 @@
                 <div class="col-xs-9 col-sm-10 is-flex content-sp-between flex-column">
                     <div class="row">
                         <div class="col-xs-9">
+
+
+
+                    
+                                <span class="p-xs tag-warning mb-8" *ngIf="hasStock"> No hay stock </span>
+                        
+                            <div class="p-xs ttu item-name" *ngIf="isGift">Es un regalo</div>
+
+
                             <div class="p-xs  ttu">Zapato tacón piel negro pulsera</div>
                             <div class="p-xs  ">Devolución disponible hasta el 22/04/2022</div>
                             <div class="p-xs  c-info ">Este artículo requiere de condiciones especiales de devolución
@@ -149,7 +158,20 @@
                     </div>
                 </div>
             </div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="link-line p-xs">Disponibilidad en tienda</div>
+
+    </div>
+</div>
+
         </div>
     </item-product-cart>
 </div>
+
+
+
+
+
 {% endblock %}
