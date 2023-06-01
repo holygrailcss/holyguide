@@ -1,7 +1,7 @@
 {% extends "basecomponent.html" %}
 {% block content %}
-    <div class=" is-flex pt-64">
-        <div class="align-middle mr-16">
+    <div class="is-flex pt-64">
+        <div class=" flex-initial  align-middle mr-16">
             <div class="checkbox-item-box ">
                 <div class="checkbox-item">
                     <input id="checkbox_21" type="checkbox"/>
@@ -17,10 +17,21 @@
                 </div>
             </div>
         </div>
-        <item-product-cart class="">
+        <item-product-cart class="flex-1">
             <div class="item-mini-cart  ">
                 <div class="row ">
-                    <div class="col-xs-3 col-sm-2"><img class="img-responsive" src="/images/2.jpeg">
+                    <div class="col-xs-3 col-sm-2">
+                        
+                 
+
+                        <div class="rat-3-4">
+                            <div class="rat-content">
+                 
+                                <img class="img-responsive" src="/images/2.jpeg">
+
+                        
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-9 col-sm-10 is-flex content-sp-between flex-column">
                         <div class="row">
@@ -68,7 +79,7 @@
                                     <div class="row text-right">
                                         <div class="col-xs-12">
                                             <span class="p-xs  c-feel-dark">
-                                                49,95&nbsp;€
+                                              En MD Feel  49,95&nbsp;€
                                             </span>
                                         </div>
                                         <div class="col-xs-12">
@@ -80,8 +91,8 @@
                                 </shop-cart-price>
                             </div>
                         </div>
-                        <div class="row content-sp-between">
-                            <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 content-sp-between is-flex">
                                 <div class="align-middle">
                                     <div class="align-middle">
                                         <div class="p-xs mr-8 align-middle">Cantidad</div>
@@ -109,7 +120,7 @@
                                         </app-select-ui>
                                     </div>
                                 </div>
-                                <div class="is-flex content-end">
+                                <div class="is-flex">
                                     <button class="btn btn--icon btn-clear state-changing" title="Agregar a la lista de deseos" id="addItemWishlist">
                                         <svg-icon ng-reflect-src="bookmark">
                                             <div>
