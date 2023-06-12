@@ -35,19 +35,15 @@
 
                 <div class="p-xs">Los links son elementos interactivos de la interfaz que permiten al usuario identificar una acción que lo llevará a otra página o abrirá otra capa de navegación para continuar o ampliar su experiencia en la web.</div>
                 <div class="p-xs mt-32">Hay 2 tipos de enlaces y su uso depende del contexto en el que se esté usando o la jerarquía del elemento que necesite ser estilizado.</div>
-              
-              
+            
                 {% call insert.links('link-raw' ,'Link básico','','') %}  {% endcall %}
                 {% call insert.links('link-line','Link con una línea o múltiple','','') %}  {% endcall %}
                 
-
                 {% call insert.links('link-svg-pre','Link con icono svg-icon al inicio','pre','') %}  {% endcall %}
                 {% call insert.links('link-svg-post','Link con icono svg-icon al final','post','') %}  {% endcall %}
 
-
-
-
-
+                {% call insert.links('is-error','Links con error','is-error','') %}  {% endcall %}
+                
             </div>
 
 

@@ -102,15 +102,17 @@
 
 {% macro code(code='') %}
 <pre>
-      <code class="language-html">
-      variables -->   {{code}}
+    <code class="language-html">
+    variables -->   {{code}}
         {% set standardcode %}
-         {% include code+'' %}  {# esto si funciona #}
-          {% endset %}
+        {% include code+'' %}  {# esto si funciona #}
+        {% endset %}
     standard -->   {{standardcode}}
-         </code>
-     </pre>
-{% endmacro %} {% macro title(titular='', descripcion='') %}
+        </code>
+    </pre>
+{% endmacro %} 
+
+{% macro title(titular='', descripcion='') %}
 <div class="col-xs-12">
 	<div class="tit-s">{{titular}}</div>
 	<div class="p-xs">{{descripcion}}</div>
@@ -148,24 +150,96 @@
 
 
 {% macro links(links='', explicacion='',svg='' ,dark='' ) %}
-
-
 <p class="p-xs mt-32">{{ explicacion }}</p>
 <br>
-{% if svg == '' %}
 
 <div class="resize-mini">
-
-
 	<div class="resize-mini-content  ">
 		<div class="container-fluid w-100">
 			<div class="row">
 				<div class="col-xs-6 text-center pt-40 pb-40 ">
-					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% if svg == '' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg == 'btn' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg =='post' %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							{{ links }}
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+						</a>
+					{% elif svg =='is-error' %}
+						<a class="mb-16 link-raw {{ links  }} " href=""> {{ links }} </a>
+						<br>
+						<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% else %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% endif %}
 				</div>
-
 				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
-					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% if svg == '' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg == 'btn' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg =='post' %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							{{ links }}
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+						</a>
+					{% elif svg =='is-error' %}
+						<a class="mb-16 link-raw {{ links  }} " href=""> {{ links }} </a>
+						<br>
+						<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% else %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16px" height="16px">
+										<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -175,142 +249,12 @@
 	<a class="mb-16  {{ links  }} " href=""> {{ links }} </a> {% endset%}
 	<pre>
     <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
-      <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
-      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
-         </code>
+    <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"></button >
+	<code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+        </code>
     </pre>
 </div>
-{% elif svg == 'btn' %}
-<div class="resize-mini">
-	<div class="resize-mini-content  ">
-		<div class="container-fluid w-100">
-			<div class="row">
-				<div class="col-xs-6 text-center pt-40 pb-40 ">
-					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
-				</div>
-
-				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
-					<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% set standardcode %}<button class="p-xs {{ links  }} " href="">
-		{{ links }}
-	</button>
-	{% endset%}
-	<pre>
-    <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
-      <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
-      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
-         </code>
-  </pre>
-</div>
-{% elif svg =='post' %}
-<div class="resize-mini">
-	<div class="resize-mini-content  ">
-		<div class="container-fluid w-100">
-
-			<div class="row">
-				<div class="col-xs-6 text-center pt-40 pb-40 ">
-					<a class="mb-16 link-line {{ links  }} " href="">
-						{{ links }}
-						<svg-icon>
-							<div>
-								<svg width="16px" height="16px">
-									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-								</svg>
-							</div>
-						</svg-icon>
-					</a>
-				</div>
-
-				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
-					<a class="mb-16 link-line {{ links  }} " href="">
-						{{ links }}
-						<svg-icon>
-							<div>
-								<svg width="16px" height="16px">
-									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-								</svg>
-							</div>
-						</svg-icon>
-					</a>
-				</div>
-			</div>
-
-
-
-		</div>
-	</div>
-	{% set standardcode %}
-	<a class="mb-16 link-line {{ links  }} " href="">
-		{{ links }}
-		<svg-icon>
-			<div>
-				<svg width="16px" height="16px">
-					<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-				</svg>
-			</div>
-		</svg-icon>
-	</a>
-	{% endset%}
-	<pre>
-    <button class="btn btncode" data-clipboard-target="#{{buttonName}}"> <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
-      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  </code>
-    </pre>
-</div>
-{% else %}
-<div class="resize-mini">
-	<div class="resize-mini-content ">
-		<div class="container-fluid w-100">
-			<div class="row">
-				<div class="col-xs-6 text-center pt-40 pb-40">
-					<a class="mb-16 link-line {{ links  }} " href="">
-						<svg-icon>
-							<div>
-								<svg width="16px" height="16px">
-									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-								</svg>
-							</div>
-						</svg-icon>
-						{{ links }}
-					</a>
-				</div>
-
-				<div class="col-xs-6 text-center  has-light bg-dark  pt-40 pb-40 ">
-					<a class="mb-16 link-line {{ links  }} " href="">
-						<svg-icon>
-							<div>
-								<svg width="16px" height="16px">
-									<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-								</svg>
-							</div>
-						</svg-icon>
-						{{ links }}
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% set standardcode %}
-	<a class="mb-16 link-line {{ links  }} " href="">
-		<svg-icon>
-			<div>
-				<svg width="16px" height="16px">
-					<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
-				</svg>
-			</div>
-		</svg-icon>
-		{{ links }}
-	</a>
-	{% endset%}
-	<pre>
-    <button class="btn btncode" data-clipboard-target="#{{buttonName}}"> <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> </button >
-      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  </code>
-    </pre>
-</div>
-{% endif %} {% endmacro %}
+{% endmacro %}
 
 
 
