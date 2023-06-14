@@ -212,19 +212,18 @@ special.titledoc('Input','desc','actualizado') %} {% endcall %} {% endblock %}
 
 
 
-{% call insert.element("Input con prefijo telefónico
-","
-<div class='form-input-prefix'>
-    <div class='input-prefix'>
-        <input type='tel' class='input ' placeholder='+34'  />
-        
+{% call insert.element('Input con prefijo telefónico
+','<div class="form-prefix" action="">
+    <div class="input-prefix">
+        <input type="tel" class="input " placeholder="+34" />
     </div>
-    <div class='form-input-label-2'>
-        <input type='tel' id='t6' class='input' placeholder='Teléfono'  />
-        <label for='t1'>Teléfono </label>
+    <div class="form-input-label-2">
+        <input type="tel" id="t6" class="input" placeholder="Teléfono" />
+        <label for="t1">Teléfono </label>
     </div>
-</div> 
-", "narrow") %} {% endcall %} 
+    <button class="btn btn-primary prefix-btn">VERIFICAR TELEFONO</button>
+</div>
+', "narrow") %} {% endcall %} 
 
 
 
