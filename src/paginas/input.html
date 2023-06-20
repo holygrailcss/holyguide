@@ -211,23 +211,52 @@ special.titledoc('Input','desc','actualizado') %} {% endcall %} {% endblock %}
 </div> ", "narrow") %} {% endcall %} 
 
 
-
 {% call insert.element('Input con prefijo telefónico
 ','<div class="form-prefix" action="">
     <div class="input-prefix">
         <input type="tel" class="input " placeholder="+34" />
     </div>
     <div class="form-input-label-2">
-        <input type="tel" id="t6" class="input" placeholder="Teléfono" />
+        <input type="tel" id="t1" class="input" placeholder="Teléfono" />
         <label for="t1">Teléfono </label>
     </div>
-    <button class="btn btn-primary prefix-btn">VERIFICAR TELEFONO</button>
+</div>
+', "narrow") %} {% endcall %} 
+
+{% call insert.element('Input con prefijo telefónico con boton
+','<div class="form-prefix" action="">
+    <div class="input-prefix">
+        <input type="tel" class="input " placeholder="+34" />
+    </div>
+    <div class="form-input-label-2">
+        <input type="tel" id="t1" class="input" placeholder="Teléfono" />
+        <label for="t1">Teléfono </label>
+    </div>
+    <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+</div>
+', "narrow") %} {% endcall %} 
+
+{% call insert.element('Input con prefijo telefónico dropdown
+','<div class="form-prefix" action="">
+    <div class="select ">
+        <select>
+            <option value="+34">+34</option>
+            <option value="+106">+106</option>
+            <option value="+3">+3</option>
+            <option value="+1002">+1002</option>
+        </select>
+    </div>
+    <div class="form-input-label-2">
+        <input type="tel" id="t1" class="input" placeholder="Teléfono" />
+        <label for="t1">Teléfono </label>
+    </div>
+    <button class="btn btn-primary">VERIFICAR TELEFONO</button>
 </div>
 ', "narrow") %} {% endcall %} 
 
 
 
-{% call insert.element("Input con prefijo telefónico
+{% call insert.element("Input de password
 "," <div class='row'>
     <div class='col-xs-12'>
         <div class='tit-s mb-16'> Input Password</div>
