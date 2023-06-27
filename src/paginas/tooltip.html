@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "_button.html" as button %}
+{% block title %}
+    {% call special.titledoc('Tooltip', 'desc', 'actualizado') %}
+    {% endcall %}
+{% endblock %}
+
+{% set page_title = "tooltip" %}
+{% block content %}
+
+    <section class="mb-32 mt-32">
+        <div class="row">
+            <div class="col-xs-12 tit-m"> Tooltips</div>
+            <div class="col-xs-12">
+                {% call insert.baseTooltip('tooltip-sm','Tooltip con icono.') %}{% endcall %}
+            </div>
+            <div class="col-xs-12">
+                {% call insert.baseTooltip('tooltip-*dir*','Tooltips con dirección.') %}{% endcall %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
