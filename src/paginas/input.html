@@ -326,27 +326,36 @@
         </section>
 
         <section class="mb-100">
-            <div class="tit-m">Inputs básicos placeholder sin animación</div>
-            <div class="tit-s mb-24">Utilizados de forma residual en ipod y react.</div>
+            <h3>Inputs básicos placeholder sin animación</h3>
+            <p class="mb-24">Utilizados de forma residual en ipod y react.</p>
             <div class='row'>
                 <div class='col-xs-6 '>
-                    <label for=''> Input</label>
-                    <input type='text' placeholder='text' class='input'/>
+                    <label class="p-xs" for=''> Input</label>
+                    <input type='text' placeholder='input' class='input'/>
                 </div>
-
                 <div class='col-xs-6 is-error'>
-                    <label for=''> is-error</label>
-                    <input type='text' placeholder='text' class='input'/>
+                    <label class="p-xs" for=''> is-error</label>
+                    <input type='text' placeholder='is-error' class='input'/>
                 </div>
                 <div class='col-xs-6 ok-input'>
-                    <label for=''> ok-input</label>
-                    <input type='text' placeholder='text' class='input'/>
+                    <label class="p-xs" for=''> ok-input</label>
+                    <input type='text' placeholder='ok-input' class='input'/>
                 </div>
                 <div class='col-xs-6 disabled-input'>
-                    <label for=''> disabled-input</label>
-                    <input type='text' placeholder='text' class='input'/>
+                    <label class="p-xs" for=''> disabled-input</label>
+                    <input type='text' placeholder='disabled-input' class='input'/>
                 </div>
             </div>
+            <pre><code class="language-markup">
+        {{"
+        <div class='row'>
+            <div class='col-xs-6 is-error | ok-input | disabled-input'>
+                <label class='p-xs' for=''>Input</label>
+                <input type='text' placeholder='input' class='input'/>
+            </div>
+        </div>
+        "| escape }}
+</code></pre>
 
         </section>
 

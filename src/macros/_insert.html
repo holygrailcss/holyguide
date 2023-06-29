@@ -1207,6 +1207,12 @@ descripcion %}
 
 <h3>{{ tooltipType }}</h3>
 <p class="p-s">{{ explicacion }}</p>
+{% if tooltipType === "tooltip-*dir*" %}
+	<p><code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
+	<p><code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
+	<p><code>tooltip-bl</code>Expande el tooltip hacia bottom-left</p>
+	<p><code>tooltip-br</code>Expande el tooltip hacia bottom-right</p>
+{% endif %}
 <div class="resize-mini mt-16">
 	<div class="resize-mini-content">
 		{% if tooltipType === "tooltip-sm" %}
@@ -1267,8 +1273,8 @@ descripcion %}
 		</div>
 	{% elif tooltipType === "tooltip-*dir*" %}
 		<div class="has-tooltip">
-			<p class="p-s cursor-pointer">tooltip-tl|tooltip-tr|tooltip-bl|tooltip-br</p>
-			<div class="tooltip-sm tooltip-tl|tooltip-tr|tooltip-bl|tooltip-br">
+			<p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
+			<div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
 				<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
 				<div class="close">
 					<svg-icon src="close-s"></svg-icon>
