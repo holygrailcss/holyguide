@@ -105,7 +105,7 @@ giftcard.scss
 ## insertar codigo escapado
 
 ````
-{"  codigo " | escape }}
+{"  codigo " | escape }
 
 ```
 

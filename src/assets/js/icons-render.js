@@ -3,6 +3,7 @@
     const loopprint2 = document.getElementById('loopicons2');
     const loopprint3 = document.getElementById('loopicons3');
     const loopprint4 = document.getElementById('loopicons4');
+    const loopprint5 = document.getElementById('loopicons5');
 
 
     let requestURL = '/icons/icons.json';
@@ -88,6 +89,25 @@
                 imageIcon.appendChild(imageDiv);
 
                 loopprint4.appendChild(myArticle);
+            }
+
+
+            for (let key in o) {
+
+                const myArticle = document.createElement('article');
+                const myspan = document.createElement('div');
+                const imageIcon = document.createElement('svg-icon');
+                const imageDiv = document.createElement('div');
+
+
+                myspan.textContent = key;
+                imageDiv.innerHTML = atob(o[key]);
+
+                myArticle.appendChild(imageIcon);
+                myArticle.appendChild(myspan);
+                imageIcon.appendChild(imageDiv);
+
+                loopprint5.appendChild(myArticle);
             }
         }
 
