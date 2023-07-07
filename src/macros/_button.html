@@ -386,29 +386,28 @@
     <div class="container-3">
       <div class="row">
         <div class="col-xs-12 p-xs p-16">Primary</div>
-        <div class="col-xs-12 is-flex ">
+        <div class="col-xs-12">
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small mr-16"> {{buttonName}}</button>
-          {% endfor %}
+          <button class=" {% if buttonName == 'link-line'  %} link-line {% elif buttonName == 'link-raw'  %} link-raw {% else %}    btn btn-{{buttonName}} {% endif %}    "> {{buttonName}} </button>          {% endfor %}
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12 p-xs p-16">hover</div>
-        <div class="col-xs-12 is-flex hover ">
+        <div class="col-xs-12hover ">
        
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small hover  mr-16"> {{buttonName}}</button>
-          {% endfor %}
+          <button class=" {% if buttonName == 'link-line'  %} link-line hover {% elif buttonName == 'link-raw'  %} link-raw hover {% else %}    btn btn-{{buttonName}}  hover {% endif %}    "> {{buttonName}} </button>          {% endfor %}
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-12 p-xs p-16">disabled</div>
-        <div class="col-xs-12 is-flex disabled ">
+        <div class="col-xs-12disabled ">
        
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small disabled  mr-16"> {{buttonName}}</button>
+
+          <button class=" {% if buttonName == 'link-line'  %} link-line disabled {% elif buttonName == 'link-raw'  %} link-raw disabled {% else %}    btn btn-{{buttonName}}  disabled {% endif %}    "> {{buttonName}} </button>
           {% endfor %}
         </div>
       </div>
@@ -416,27 +415,28 @@
 
       <div class="row has-light bg-primary">
         <div class="col-xs-12 p-xs p-16">has-light primary</div>
-        <div class="col-xs-12 is-flex  ">
+        <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small  mr-16 "> {{buttonName}}</button>
+          <button class=" {% if buttonName == 'link-line'  %} link-line {% elif buttonName == 'link-raw'  %} link-raw {% else %}    btn btn-{{buttonName}} {% endif %}    "> {{buttonName}} </button>
+
           {% endfor %}
         </div>
       </div>
 
       <div class="row has-light bg-primary">
         <div class="col-xs-12 p-xs p-16">has-light hover</div>
-        <div class="col-xs-12 is-flex  ">
+        <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small hover  mr-16 "> {{buttonName}}</button>
+          <button class=" {% if buttonName == 'link-line'  %} link-line hover {% elif buttonName == 'link-raw'  %} link-raw hover {% else %}    btn btn-{{buttonName}}  hover {% endif %}    "> {{buttonName}} </button>
           {% endfor %}
         </div>
       </div>
 
       <div class="row has-light bg-primary">
      <div class="col-xs-12 p-xs p-16">has-light disabled</div>
-        <div class="col-xs-12 is-flex  ">
+        <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
-          <button class="btn btn-{{buttonName}}  btn--small disabled  mr-16 "> {{buttonName}}</button>
+          <button class=" {% if buttonName == 'link-line'  %} link-line disabled {% elif buttonName == 'link-raw'  %} link-raw disabled {% else %}    btn btn-{{buttonName}}  disabled {% endif %}    "> {{buttonName}} </button>
           {% endfor %}
         </div>
       </div>
