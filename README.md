@@ -46,7 +46,7 @@ giftcard1.html
 giftcard.scss
 
 
-## TAblas tabulares
+## Tablas tabulares
 
 
 ```
