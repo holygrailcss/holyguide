@@ -218,7 +218,7 @@ $c-guide: rgb(218, 19, 112);
 
     code {
       font-size: 12px;
-      padding: 23px 24px 16px;
+      padding: 23px 24px 1px;
       margin-bottom: 0;
       width: 100%;
       float: left;
@@ -272,11 +272,7 @@ $c-guide: rgb(218, 19, 112);
     @include font-regular;
   }
 
-  hr {
-    width: 100%;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid transparent;
-  }
+
 }
 
 table {
