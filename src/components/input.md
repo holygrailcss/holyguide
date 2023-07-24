@@ -2,7 +2,7 @@
 layout: _paginas/components/_input.njk
 permalink: /input/
 
-titulo: input
+titulo: Input
 descripcion: .
 
 date: 2023-06-19

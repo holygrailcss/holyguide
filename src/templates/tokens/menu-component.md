@@ -1,10 +1,10 @@
 ---
-layout: _tokens/_templates_/feelcard.njk
-permalink: /feelcard/
+layout: _tokens/_templates/menu-component.njk
+permalink: /menu-component/
 page_section: templates
 
-titulo: Feel Card
-descripcion: Feel Card
+titulo: menu-component
+descripcion: menu-component
 image: /assets/static/images/1.jpg
 
 author: autor
