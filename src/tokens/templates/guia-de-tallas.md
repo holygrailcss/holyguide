@@ -1,5 +1,5 @@
 ---
-layout: /_tokens/_templates/guia-de-tallas.njk
+layout: _tokens/_templates/guia-de-tallas.njk
 permalink: /guia-de-tallas/
 page_section: templates
 

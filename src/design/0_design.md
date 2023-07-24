@@ -1,7 +1,6 @@
 ---
 layout: _paginas/foundations/_foundations.njk
 permalink: /design/
-page_section: design
 
 titulo: Design
 descripcion: Los principios de diseño ayudan a los equipos a tomar decisiones de diseño que reflejen sus valores. A continuación se muestran los nuestros a altura cero...

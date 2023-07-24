@@ -1,13 +1,12 @@
 ---
 layout: _paginas/foundations/_foundations.njk
 permalink: /start-design/
-page_section: design
 
-titulo: Design
+titulo: start design
 descripcion: Los principios de diseño ayudan a los equipos a tomar decisiones de diseño que reflejen sus valores. A continuación se muestran los nuestros a altura cero...
 
 date: 2023-06-19
-tags: ["Estructuras modulares", "diseño", "figma"]
+tags: ["design"]
 image: /assets/static/images/7.jpg
 imageAlt: Ilustración de un diseño de sistema
 ---

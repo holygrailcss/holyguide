@@ -1,186 +1,68 @@
 <nav class="nav-guide">
   <div class="menu-lateral sidebar">
-
     {{seccion_actual}}
-
     {% if page_section == "design" %}
-
       <a target="_parent" href="/design">
         <h6> Design </h6>
       </a>
       <ul class="list-clear p-m-b mb-32 mt-8">
-        <li class="{% if page_title == 'getting' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/start-design">Getting Started</a>
-        </li>
+
+        {% for template in collections.design %}
+              {% include 'nav-loop.njk' %}
+            {% endfor %}
+
 
       </ul>
-
     {% endif %}
-
     {% if page_section == "develop" %}
-
       <a target="_parent" href="/develop">
         <h6> Develop </h6>
       </a>
-
       <ul class="list-clear p-m-b mb-32 mt-8">
-        <li class="{% if page_title == 'getting' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/start-dev">Getting Started</a>
-        </li>
 
-        <li class="{% if page_title == 'getting' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/practices">Buenas practicas</a>
-        </li>
-
+        {% for template in collections.develop  %}
+              {% include 'nav-loop.njk' %}
+            {% endfor %}
       </ul>
-
     {% endif %}
-
     {% if page_section == 'foundations' %}
-
       <a target="_parent" href="/foundations">
         <h6> Foundations </h6>
       </a>
-
       <ul class="list-clear mb-32">
-
         <div class="body">
-          <li class="{% if page_title == 'colores' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/colores">Colores </a>
-          </li>
-          <li class="{% if page_title == 'espaciado' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/espaciado"> Espaciado </a>
-          </li>
-          <li class="{% if page_title == 'flexbox' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/flexbox"> Flexbox </a>
-          </li>
-          <li class="{% if page_title == 'heights' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/heights"> Height  </a>
-          </li>
-          <li class="{% if page_title == 'heights' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/icons"> Icons  </a>
-          </li>
-
-          <li class="{% if page_title == 'images' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/images">Images </a>
-          </li>
-          <li class="{% if page_title == 'modales' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/modales"> Modales </a>
-          </li>
-
-          <li class="{% if page_title == 'ratios' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/ratios"> Ratios </a>
-          </li>
-          <li class="{% if page_title == 'tipografia' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/tipografia"> Tipografia </a>
-            <li class="{% if page_title == 'helpers' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/helpers"> Helpers </a>
-            </li>
-            <li class="{% if page_title == 'videos' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/videos"> Videos  </a>
-            </li>
-
-            {# 
-        <li class="{% if page_title == 'modales' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/markdown"> Markdown ❌</a>
-        </li>
-        </li>
-
-
-        <li class="{% if page_title == 'playground' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/playground">
-            Playground ❌</a>
-        </li>
-        <li class="{% if page_title == 'sitemap' %} link-line {% endif %}">
-          <a class="p-xs" target="_parent" href="/sitemap">
-            Sitemap ❌</a>
-        </li> #}
-
+           {% for template in collections.foundations | reverse %}
+              {% include 'nav-loop.njk' %}
+            {% endfor %}
           </div>
         </ul>
       {% endif %}
       {% if page_section == 'components' %}
-
         <ul class="list-clear mb-32">
           <a target="_parent" href="/components">
             <h6> Componentes </h6>
           </a>
           <div class="body">
-            <li class="{% if page_title == 'baners' %} link-line {% endif %}">
-              <a class="p-xs process" target="_parent" href="/baners"> Banners  </a>
-            </li>
-            <li class="{% if page_title == 'buttons' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/buttons"> Buttons  </a>
-            </li>
-            <li class="{% if page_title == 'checkbox' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/checkbox"> Checkbox </a>
-            </li>
-            <li class="{% if page_title == 'datalist' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/datalist"> Datalist  </a>
-            </li>
-            <li class="{% if page_title == 'input' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/input"> Input </a>
-            </li>
-            <li class="{% if page_title == 'links' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/links"> Links </a>
-            </li>
-            <li class="{% if page_title == 'list' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/list"> List  </a>
-            </li>
-            <li class="{% if page_title == 'select' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/select"> Select  </a>
-            </li>
-            <li class="{% if page_title == 'tabs' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/tabs"> Tabs  </a>
-            </li>
-            <li class="{% if page_title == 'tags' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/tags"> Tags  </a>
-            </li>
-            <li class="{% if page_title == 'tooltip' %} link-line {% endif %}">
-              <a class="p-xs" target="_parent" href="/tooltip"> Tooltip  </a>
-            </li>
-
+          {% for template in collections.components  %}
+              {% include 'nav-loop.njk' %}
+            {% endfor %}
           </div>
         </ul>
-
       {% endif %}
-
       {% if page_section == "templates" %}
-
         <ul class="list-clear p-m-b mb-32 mt-8">
           <li class="{% if page_title == 'templates' %} link-line {% endif %}">
             <a  target="_parent" href="/templates">
               <h6> Templates </h6>
             </a>
           </li>
-          <li class="{% if page_title == 'parrillas' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/parrillas">Parrilla 2023 </a>
-          </li>
-          <li class="{% if page_title == 'parrillas' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/parrillas-onepage">Parrillas onepage </a>
-          </li>
-          <li class="{% if page_title == 'feel' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/feel">Feel</a>
-          </li>
-          <li class="{% if page_title == 'store-locator' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/store-locator/">Store locator</a>
-          </li>
-          <li class="{% if page_title == 'guia-de-tallas' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/guia-de-tallas/">Guia de tallas</a>
-          </li>
-          <li class="{% if page_title == 'guia-de-tallas' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/footer/">Footer</a>
-          </li>
-          <li class="{% if page_title == 'guia-de-tallas' %} link-line {% endif %}">
-            <a class="p-xs" target="_parent" href="/menu/">Menu</a>
-          </li>
+          {% for template in collections.templates  %}
+              {% include 'nav-loop.njk' %}
+            {% endfor %}
         </ul>
-
       {% endif %}
-
     </div>
   </nav>
-
   <div class="toggle-menu"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   {#

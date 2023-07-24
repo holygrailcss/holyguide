@@ -2,7 +2,7 @@
 layout: _paginas/foundations/_ratios.njk
 permalink: /ratios/
 
-titulo: Ratios
+titulo: ratios
 descripcion: Contenedores que conservan una relación de aspecto definida.
 
 date: 2023-06-19

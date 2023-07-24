@@ -3,6 +3,9 @@ layout: _paginas/develop/_start-dev.njk
 permalink: /start-dev/
 page_section: develop
 
+tags: ["Estructuras modulares", "develop", ""]
+
+
 titulo: Start Dev
 descripcion: .
 ---
