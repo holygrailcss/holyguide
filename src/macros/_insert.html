@@ -1,0 +1,1344 @@
+{% macro template(templateClass='', explicacion='',dark='') %}
+<h3>{{ templateClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow {{dark  }} ">
+		<div class="{{ templateClass  }}">
+			<input id="checkbox_{{randomNumber}}-2" type="checkbox" />
+		</div>
+	</div>
+</div>
+{% set standardcode %}
+{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+{% macro figma(url='') %}
+<iframe height="450" width="100%" src="https://www.figma.com/embed?embed_host=share&amp;&url={{ url }}
+    " allowfullscreen>
+</iframe>
+{% endmacro %}
+
+
+
+
+{% macro component(component='',size='',componentfigma="" ,descripcion='') %}
+<section class="mb-32 mt-32 ">
+	<div class="resize-container">
+		<div class="resize-bar">
+			<div class="resize-name">
+				<div class="tit-m">{{ component | capitalize }}</div>
+			</div>
+			<div class="resize-snip">
+				<a target="_blank" href=" {{ componentfigma }}">
+					<img width="18px" src="../images/figma.png" alt="" />
+				</a>
+			</div>
+			<div class="resize-snip">
+				<a class="p-xs" target="_blank" href="components/{{ component }}.html">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<title>open-in-browser</title>
+						<g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5"
+							transform="translate(0.5 0.5)" fill="#000000" stroke="#000000">
+							<line x1="12" y1="23" x2="12" y2="10" fill="none" stroke-miterlimit="10"
+								stroke-linecap="butt"></line>
+							<polyline points="16 14 12 10 8 14" fill="none" stroke-miterlimit="10"></polyline>
+							<path d="M4,17H3a2,2,0,0,1-2-2V3A2,2,0,0,1,3,1H21a2,2,0,0,1,2,2V15a2,2,0,0,1-2,2H20"
+								fill="none" stroke="#000000" stroke-miterlimit="10"></path>
+							<line x1="1" y1="5" x2="23" y2="5" fill="none" stroke="#000000" stroke-miterlimit="10">
+							</line>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="resize-code">
+				<div class="seecode p-xs">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<title>window-dev</title>
+						<g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5"
+							transform="translate(0.5 0.5)" fill="#000000" stroke="#000000">
+							<polyline fill="none" stroke-miterlimit="10" points=" 8,12 6,14 8,16 "></polyline>
+							<polyline fill="none" stroke-miterlimit="10" points=" 16,12 18,14 16,16 "></polyline>
+							<line fill="none" stroke-miterlimit="10" x1="11" y1="18" x2="13" y2="10"></line>
+							<rect x="1" y="2" fill="none" stroke="#000000" stroke-miterlimit="10" width="22"
+								height="20"></rect>
+							<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1" y1="6" x2="23" y2="6">
+							</line>
+							<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6" y1="2" x2="6" y2="6">
+							</line>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="viewcode">
+			<pre><code class="language-markup">{% set standardcode %}{% include component+'.html' %}  {# esto si funciona #}{% endset %}{{standardcode}}</code></pre>
+		</div>
+		<div class="container-fluid pt-40">
+			<div class="row">
+				<div class="col-xs-12">{{descripcion}}</div>
+			</div>
+		</div>
+		<div class="resize">
+			<div class="r1"></div>
+			<div class="r2"></div>
+			<div class="r3"></div>
+			<div class="resize-content">
+				<div class="resize-media"></div>
+				<div class="resize-resolution"></div>
+			</div>
+			<div class="resize-left"></div>
+			<div class="resize-right"></div>
+
+	
+			<iframe id="cover1" class="resizable" src="/components/{{ component }}.html" width="100%" height="{{ size }}"
+				frameborder="0" seamless></iframe>
+		</div>
+	</div>
+</section>
+{% endmacro %}
+
+
+{% macro code(code='') %}
+<pre>
+    <code class="language-html">
+    variables -->   {{code}}
+        {% set standardcode %}
+        {% include code+'' %}  {# esto si funciona #}
+        {% endset %}
+    standard -->   {{standardcode}}
+        </code>
+    </pre>
+{% endmacro %} 
+
+{% macro title(titular='', descripcion='') %}
+<div class="col-xs-12">
+	<div class="tit-s">{{titular}}</div>
+	<div class="p-xs">{{descripcion}}</div>
+	<hr class="mt-16 mb-40" />
+</div>
+{% endmacro %}
+
+
+{% macro sass(sass='') %}
+<div class="resize-large">
+	<pre>
+  <button class="btn btncode" data-clipboard-target="#id{{sass}}">
+    <img src="./images/clippy.svg" width="13" alt="Copy to clipboard">
+</button >
+  <code id="id{{sass}}" class="language-css">
+{% set standardcode %}{% include sass+'.scss' %}  {# esto si funciona #}{% endset %}{{standardcode}}
+</code></pre>
+</div>
+{% endmacro %}
+
+
+{% macro sass2(sass='') %}
+<div class="resize-large">
+	<pre>
+  <button class="btn btncode" data-clipboard-target="#id{{sass}}">
+    <img src="./images/clippy.svg" width="13" alt="Copy to clipboard">
+</button >
+  <code id="id{{sass}}" class="language-css">
+{% set standardcode %}{% include ''+sass+'/'+sass+'.scss' %}  {# esto si funciona #}{% endset %}{{standardcode}}
+</code></pre>
+</div>
+{% endmacro %}
+
+
+
+
+{% macro links(links='', explicacion='',svg='' ,dark='' ) %}
+<p class="p-xs mt-32">{{ explicacion }}</p>
+<br>
+
+<div class="resize-mini">
+	<div class="resize-mini-content  ">
+		<div class="container-fluid w-100">
+			<div class="row">
+				<div class="col-xs-6 text-center pt-40 pb-40 ">
+					{% if svg == '' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg == 'btn' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg =='post' %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							{{ links }}
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+						</a>
+					{% elif svg =='is-error' %}
+						<a class="mb-16 link-raw {{ links  }} " href=""> {{ links }} </a>
+						<br>
+						<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% else %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% endif %}
+				</div>
+				<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
+					{% if svg == '' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg == 'btn' %}
+						<a class="mb-16  {{ links  }} " href=""> {{ links }} </a>
+					{% elif svg =='post' %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							{{ links }}
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+						</a>
+					{% elif svg =='is-error' %}
+						<a class="mb-16 link-raw {{ links  }} " href=""> {{ links }} </a>
+						<br>
+						<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% else %}
+						<a class="mb-16 link-line {{ links  }} " href="">
+							<svg-icon>
+								<div>
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+									</svg>
+								</div>
+							</svg-icon>
+							{{ links }}
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% set standardcode %}
+	<a class="mb-16  {{ links  }} " href=""> {{ links }} </a> {% endset%}
+	<pre>
+    <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+    <img src="./images/clippy.svg" width="13" alt="Copy to clipboard"></button >
+	<code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+        </code>
+    </pre>
+</div>
+{% endmacro %}
+
+
+
+
+
+{% macro list(listClass='', explicacion='') %}
+<h3>{{ listClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+<ul class="{{ listClass  }}">
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+</ul>
+{% set standardcode %}
+<ul class="{{ listClass  }}">
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+	<li><a href="">{{ listClass }}</a></li>
+</ul>
+{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+{% endmacro %} {% macro input(inputName='', explicacion='',dark='') %}
+<h3>{{ inputName | capitalize }}</h3>
+<p class="p-xs">{{inputName }} : {{ explicacion }}</p>
+<div class="resize-mini">
+	<div class="resize-mini-content {{dark  }} ">
+		<div class="form-input-label-2 mb-16">
+			<input type="email" id="{{inputName }}" class="input  {{inputName }}" placeholder="{{inputName }}"
+				required="" />
+			<label for="{{inputName }}">{{inputName }}</label>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="form-input-label-2 mb-16">
+		<input type="email" id="{{inputName }}" class="input {{inputName }}" placeholder="{{inputName }}" required="" />
+		<label for="{{inputName }}">{{inputName }}</label>
+	</div>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %} {% macro select(selectName='', explicacion='',dark='') %}
+<h3>{{ selectName | capitalize }}</h3>
+<p class="p-xs">{{selectName }} : {{ explicacion }}</p>
+<div class="resize-mini">
+	<div class="resize-mini-content {{dark  }} ">
+		<div class="select {{selectName }}">
+			{% if selectName == 'select-label' %}<label>{{selectName }} </label>{%
+			endif %}
+			<select>
+				<option value="S">S</option>
+				<option value="M">M</option>
+				<option value="l">L</option>
+				<option value="XL">XL</option>
+			</select>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="select {{selectName }}">
+		{% if selectName == 'select-label' %}<label>{{selectName }}</label>{% endif
+		%}
+		<select>
+			<option value="S">S</option>
+			<option value="M">M</option>
+			<option value="l">L</option>
+			<option value="XL">XL</option>
+		</select>
+	</div>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+{% macro checkbox(checkboxClass='', explicacion='',dark='') %}
+<h3>{{ checkboxClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow {{dark  }} ">
+		<div class="container-3">
+			<div class="row">
+				<div class="col-xs-6  p-48">
+					<div class="{{ checkboxClass  }}">
+						<div class="checkbox-item">
+							<input id="checkbox_{{randomNumber}}" type="checkbox" />
+							<label for="checkbox_{{randomNumber}}">
+								<i class="icon">
+									<svg width="16" height="16">
+										<g stroke-width="1">
+											<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+										</g>
+									</svg>
+								</i>
+								{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
+								'checkbox-item is-error') %}
+								<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
+								{% endif %}
+							</label>
+						</div>
+						{% if checkboxClass == 'checkbox-item-text' %}
+						<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
+					</div>
+				</div>
+				<div class="col-xs-6  p-48  has-light bg-dark bg-primary">
+					<div class="{{ checkboxClass  }}">
+						<div class="checkbox-item">
+							<input id="checkbox_{{randomNumber}}-2" type="checkbox" />
+							<label for="checkbox_{{randomNumber}}-2">
+								<i class="icon">
+									<svg width="16" height="16">
+										<g stroke-width="1">
+											<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+										</g>
+									</svg>
+								</i>
+								{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
+								'checkbox-item is-error') %}
+								<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
+								{% endif %}
+							</label>
+						</div>
+						{% if checkboxClass == 'checkbox-item-text' %}
+						<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="{{ checkboxClass  }}">
+		<div class="checkbox-item">
+			<input id="checkbox_{{randomNumber}}" type="checkbox" />
+			<label for="checkbox_{{randomNumber}}">
+				<i class="icon">
+					<svg width="16" height="16">
+						<g stroke-width="1">
+							<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+						</g>
+					</svg>
+				</i>
+				{% if (checkboxClass == 'checkbox-item') or (checkboxClass ==
+				'checkbox-item is-error') %}
+				<span class="p-xs">{{ checkboxClass }} <a href="#">legal text</a></span>
+				{% endif %}
+			</label>
+		</div>
+		{% if checkboxClass == 'checkbox-item-text' %}
+		<span class="p-xs">{{ checkboxClass }} </span> {% endif %}
+	</div>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+{% macro checkboxSide(checkboxClass='', explicacion='') %}
+<h3>{{ checkboxClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow {{dark  }} ">
+		<div class="container-3">
+			<div class="row">
+				<div class="col-xs-6 p-48 ">
+					<div class="{{ checkboxClass  }}">
+						<div class="">
+							<input id="checkbox{{randomNumber}}" name="checkbox{{randomNumber}}" type="checkbox"
+								class="ng-valid" />
+							<label for="checkbox{{randomNumber}}">
+								<div class="checkbox-circle"></div>
+								<span class="theta">{{ checkboxClass }}</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 p-48  has-light bg-primary">
+					<div class="{{ checkboxClass  }}">
+						<div class="">
+							<input id="checkbox{{randomNumber}}-2" name="checkbox{{randomNumber}}" type="checkbox"
+								class="ng-valid" />
+							<label for="checkbox{{randomNumber}}-2">
+								<div class="checkbox-circle"></div>
+								<span class="theta">{{ checkboxClass }}</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="{{ checkboxClass  }}">
+		<div class="">
+			<input id="checkbox{{randomNumber}}" name="checkbox{{randomNumber}}" type="checkbox" class="ng-valid" />
+			<label for="checkbox{{randomNumber}}">
+				<div class="checkbox-circle"></div>
+				<span class="theta">{{ checkboxClass }}</span>
+			</label>
+		</div>
+	</div>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+{% macro checkboxRadio(checkboxClass='', explicacion='') %}
+<h3>{{ checkboxClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow {{dark  }} ">
+		<div class="container-3">
+			<div class="row">
+				<div class="col-xs-6  p-48">
+					<div class="{{ checkboxClass  }}">
+						<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
+						<label for="{{randomNumber}}">
+							<i class="ico-radio"></i>
+							<span class="p-xs">{{ checkboxClass }} </span>
+							<span>
+								<div class="mb-10">{{ checkboxClass }}</div>
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="col-xs-6  p-48 has-light bg-primary">
+					<div class="{{ checkboxClass  }}">
+						<input id="{{randomNumber}}-2" name="gender" type="radio" value="F" />
+						<label for="{{randomNumber}}-2">
+							<i class="ico-radio"></i>
+							<span class="p-xs">{{ checkboxClass }} </span>
+							<span>
+								<div class="mb-10">{{ checkboxClass }}</div>
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="{{ checkboxClass  }}">
+		<input id="{{randomNumber}}" name="gender" type="radio" value="F" />
+		<label for="{{randomNumber}}">
+			<i class="ico-radio"></i>
+			<span class="p-xs">{{ checkboxClass }} </span>
+			<span>
+				<div class="mb-10">{{ checkboxClass }}</div>
+			</span>
+		</label>
+	</div>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+{% macro key(descripcion='', x='',y='', z='', w='') %} {% if
+descripcion %}
+<div class="tit-s mb-16 mt-16">{{ descripcion }}</div>
+{% endif %}
+<div class="key-wrap">
+	{% if x %}
+	<div class="key">{{ x }}</div>
+	{% endif %} {% if y %}
+	<div class="key-plus">+</div>
+	<div class="key">{{ y }}</div>
+	{% endif %} {% if z %}
+	<div class="key-plus">+</div>
+	<div class="key">{{ z }}</div>
+	{% endif %} {% if w %}
+	<div class="key-plus">+</div>
+	<div class="key">{{ w }}</div>
+	{% endif %}
+</div>
+{% endmacro %} {% macro minicomponent(titulo='' ) %}
+<a href="./{{titulo}}.html">
+	<div class="p-xs6 resize-mini">
+		<div class="p-16 text-center">
+			<div class="p-m-b pb-8">{{titulo}}</div>
+			<img src="images/components/{{titulo}}.jpg" alt="" />
+		</div>
+	</div>
+</a>
+{% endmacro %} {% macro svgIcon(ico='') %}
+<svg-icon class="{{ico}}">
+	<div>
+		<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+				fill="#292929" />
+		</svg>
+	</div>
+</svg-icon>
+{% endmacro %}
+
+{% macro svgIconSize(size='') %}
+<svg-icon>
+	<div>
+		<svg class="{{size}}" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+				fill="#292929" />
+		</svg>
+	</div>
+</svg-icon>
+{% endmacro %}
+
+
+{% macro svgIconname(icoName='') %} {% if icoName == 'globe' %}
+<svg-icon>
+	<div>
+		<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885Z"
+				fill="#292929" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M6.48105 2.01307C6.90284 1.5968 7.4167 1.31885 8 1.31885H8.5V2.31885H8C7.75487 2.31885 7.47952 2.43265 7.18348 2.72482C6.88529 3.01911 6.59382 3.46974 6.33825 4.06606C5.82788 5.25692 5.5 6.93694 5.5 8.81885C5.5 10.7008 5.82788 12.3808 6.33825 13.5716C6.59382 14.168 6.88529 14.6186 7.18348 14.9129C7.47952 15.205 7.75487 15.3188 8 15.3188H8.5V16.3188H8C7.4167 16.3188 6.90284 16.0409 6.48105 15.6246C6.06141 15.2105 5.70643 14.636 5.41911 13.9656C4.84369 12.6229 4.5 10.8029 4.5 8.81885C4.5 6.83476 4.84369 5.01478 5.41911 3.67214C5.70643 3.00171 6.06141 2.42722 6.48105 2.01307Z"
+				fill="#292929" />
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M9.51895 2.01307C9.09716 1.5968 8.5833 1.31885 8 1.31885H7.5V2.31885H8C8.24513 2.31885 8.52048 2.43265 8.81652 2.72482C9.11471 3.01911 9.40618 3.46974 9.66175 4.06606C10.1721 5.25692 10.5 6.93694 10.5 8.81885C10.5 10.7008 10.1721 12.3808 9.66175 13.5716C9.40618 14.168 9.11471 14.6186 8.81652 14.9129C8.52048 15.205 8.24513 15.3188 8 15.3188H7.5V16.3188H8C8.5833 16.3188 9.09716 16.0409 9.51895 15.6246C9.93859 15.2105 10.2936 14.636 10.5809 13.9656C11.1563 12.6229 11.5 10.8029 11.5 8.81885C11.5 6.83476 11.1563 5.01478 10.5809 3.67214C10.2936 3.00171 9.93859 2.42722 9.51895 2.01307Z"
+				fill="#292929" />
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M15 9.31885H1V8.31885H15V9.31885Z" fill="#292929" />
+		</svg>
+	</div>
+</svg-icon>
+{% endif %} {% if icoName == 'plus' %}
+<svg-icon>
+	<div>
+		<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M3.5 8.56149L7.74264 8.56149L7.74264 4.31885L8.74264 4.31885L8.74264 8.56149L12.9853 8.56149V9.56149L8.74264 9.56149L8.74264 13.8041L7.74264 13.8041L7.74264 9.56149L3.5 9.56149V8.56149Z"
+				fill="#292929" />
+		</svg>
+	</div>
+</svg-icon>
+{% endif %} {% if icoName == 'arrow-right' %}
+<svg-icon>
+	<div>
+		<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.752 13.3391L10.0172 12.6609L13.858 8.5L-3.8147e-06 8.5L-3.8147e-06 7.5L13.858 7.5L10.0172 3.33914L10.752 2.66086L15.6805 8L10.752 13.3391Z"
+				fill="#292929" />
+		</svg>
+	</div>
+</svg-icon>
+{% endif %}
+{% if icoName == 'shopping-bag' %}
+<svg-icon>
+	<div><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M6.65628 1.77402C7.08185 1.59323 7.53842 1.5 7.99983 1.5C8.46124 1.5 8.91782 1.59323 9.34339 1.77402C9.76893 1.95481 10.1547 2.21943 10.4792 2.55216C10.8035 2.88486 11.0602 3.27915 11.2351 3.7122C11.3376 3.96603 11.4109 4.2304 11.454 4.5H12.1092C13.3955 4.5 14.4719 5.47616 14.5973 6.75641L15.1751 12.659C15.3766 14.7169 13.7596 16.5 11.6918 16.5H4.30788C2.24011 16.5 0.623061 14.7169 0.824538 12.659L1.40241 6.75641C1.52775 5.47617 2.60415 4.5 3.89052 4.5H4.54566C4.58877 4.2304 4.66206 3.96603 4.76458 3.7122C4.93947 3.27915 5.19613 2.88486 5.52051 2.55216C5.84492 2.21943 6.23074 1.95481 6.65628 1.77402ZM4.49983 5.5V7C4.49983 7.27614 4.72369 7.5 4.99983 7.5C5.27598 7.5 5.49983 7.27614 5.49983 7V5.5H10.4998V7C10.4998 7.27614 10.7237 7.5 10.9998 7.5C11.276 7.5 11.4998 7.27614 11.4998 7V5.5H12.1092C12.881 5.5 13.5268 6.0857 13.602 6.85385L14.1799 12.7564C14.3238 14.2264 13.1688 15.5 11.6918 15.5H4.30788C2.8309 15.5 1.67587 14.2264 1.81978 12.7564L2.39765 6.85385C2.47286 6.0857 3.1187 5.5 3.89052 5.5H4.49983ZM10.4364 4.5H5.5633C5.59472 4.35904 5.63766 4.22076 5.69181 4.08667C5.81845 3.7731 6.00374 3.489 6.23651 3.25026C6.46926 3.01155 6.74487 2.82289 7.04729 2.69441C7.34968 2.56595 7.67331 2.5 7.99983 2.5C8.32636 2.5 8.64999 2.56595 8.95238 2.69441C9.25479 2.82289 9.53041 3.01155 9.76315 3.25026C9.99592 3.489 10.1812 3.7731 10.3079 4.08667C10.362 4.22076 10.4049 4.35904 10.4364 4.5Z"
+				fill="#292929"></path>
+		</svg> </div>
+</svg-icon>
+{% endif %}
+{% endmacro %}
+
+
+{% macro element(title='',element='', contentNarrow='' ) %}
+<h3>{{title}}</h3>
+{% if contentNarrow === 'narrow' %}
+<div class="resize-mini">
+	<div class="resize-mini-content-narrow ">
+		<div class="container-3">
+			<div class="row">
+				<div class="col-xs-6  p-48"> {{element | safe }} </div>
+				<div class="col-xs-6  p-48 has-light bg-primary"> {{element | safe }} </div>
+			</div>
+		</div>
+	</div>
+	<div class="opencode-wrap">
+		<div class="opencode">
+
+
+			<div class="opencode-button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+					<title>code</title>
+					<g stroke-width="1" fill="#292929" stroke="#292929">
+						<line x1="10.5" y1="1.5" x2="5.5" y2="14.5" fill="none" stroke-linecap="round"
+							stroke-linejoin="round"></line>
+						<polyline points="3.5 4.5 0.5 7.5 3.5 10.5" fill="none" stroke="#292929" stroke-linecap="round"
+							stroke-linejoin="round"></polyline>
+						<polyline points="12.5 4.5 15.5 7.5 12.5 10.5" fill="none" stroke="#292929" stroke-linecap="round"
+							stroke-linejoin="round"></polyline>
+					</g>
+				</svg>
+			</div>
+			<pre><code class="language-markup">{{element}}</code></pre>
+		</div>
+	</div>
+	{% else %}
+	<div class="resize-mini">
+		<div class="resize-mini-content ">
+			<div class="container-3">
+				<div class="row">
+					<div class="col-xs-6 pt-16"> {{element | safe }} </div>
+					<div class="col-xs-6 has-light bg-primary pt-16"> {{element | safe }} </div>
+				</div>
+			</div>
+		</div>
+		<div class="opencode-wrap">
+			<div class="opencode">
+				<div class="opencode-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+						<title>code</title>
+						<g stroke-width="1" fill="#292929" stroke="#292929">
+							<line x1="10.5" y1="1.5" x2="5.5" y2="14.5" fill="none" stroke-linecap="round"
+								stroke-linejoin="round"></line>
+							<polyline points="3.5 4.5 0.5 7.5 3.5 10.5" fill="none" stroke="#292929" stroke-linecap="round"
+								stroke-linejoin="round"></polyline>
+							<polyline points="12.5 4.5 15.5 7.5 12.5 10.5" fill="none" stroke="#292929"
+								stroke-linecap="round" stroke-linejoin="round"></polyline>
+						</g>
+					</svg>
+				</div>
+				<pre><code class="language-markup">{{element}}</code></pre>
+			</div>
+		</div>
+		{% endif %}
+		{% endmacro %}
+
+
+		{% macro
+		tipos(type='',name='',familia='',size1='',line1='',size2='',line2='' ) %}
+		<div class="mb-40">
+			<div class="row mb-24">
+				<div class="col-xs-6">
+
+					{% if type == 'tit' %} <div class="tit-s ">Titulo {{name}} </div>{% endif %}
+					{% if type == 'head' %} <div class="tit-s ">Header {{name}} </div>{% endif %}
+					{% if type == 'p' %} <div class="tit-s ">Paragraph {{name}} </div>{% endif %}
+				</div>
+
+
+				<div class="col-xs-6 text-right c-dark-grey">
+
+					{% if type == 'tit' %} <div class=" "> Class .{{type}}-{{name}} </div>{% endif %}
+					{% if type == 'head' %} <div class=" ">Class .{{type}}-{{name}} </div>{% endif %}
+					{% if type == 'p' %} <div class=" ">Class .{{type}}-{{name}} </div>{% endif %}
+				</div>
+			</div>
+			<div class="row mb-40">
+				<div class="col-xs-6">
+					<div class="row">
+						<div class="col-xs-12 mb-16">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="c-dark-grey"> Familia: </div>
+									<div class="tit-s mb-16"> {{familia}} </div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="row mb-16">
+								<div class="col-xs-6"><span class="c-dark-grey"> Size Mobile : </span> {{size1}}</div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Line-h : </span> {{line1}} </div>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-6"><span class="c-dark-grey"> Size Desktop : </span> {{size2}} </div>
+								<div class="col-xs-6"><span class="c-dark-grey"> Line-h : </span> {{line2}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+
+				<div class="col-xs-12"> {% if type == 'head' %}
+
+					<div contenteditable="true" class="contenteditable"
+						style="font-size:{{size2}}; font-family:{{familia}}; line-height: {{line2}}"> Women's Collection
+					</div> {% else %}
+
+					<div contenteditable="true" class="contenteditable"
+						style="font-size:{{size2}}; font-family:{{familia}}; line-height: {{line2}}"> Women's Collection
+					</div>
+					{% endif %}
+				</div>
+
+			</div>
+		</div>
+
+		<hr class="line2 pb-16" />
+		{% endmacro %}
+
+		{% macro tags(tagClass='', title='') %}
+		<h3>{{title}}</h3>
+		<div class="resize-mini">
+			<div class="resize-mini-content {{dark  }} ">
+				<div class="container-6">
+					<div class="row">
+						<div class="col-xs-12 mb-16 text-center">
+							<span class="{{ tagClass }}">{{ tagClass }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% set standardcode %}<span class="{{ tagClass }}">{{ tagClass }}</span>{%
+			endset%}
+			<pre>
+      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+         </code>
+    </pre>
+		</div>
+		{% endmacro %}
+		{% macro banner(bannerClass='', descipcion='') %}
+		<h3 class="mb-24">{{bannerClass}}</h3>
+		<p class="mb-32">{{descipcion}}</p>
+		<div class="resize-mini">
+			<div class="resize-mini-content {{dark  }} ">
+				<div class="container-6">
+					<div class="row">
+						<div class="col-xs-12 mb-16 text-center">
+							{% if bannerClass === "marketing-spot" %}
+							<div class="{{ bannerClass }}">
+								{% call svgIconname('plus') %} {% endcall %}
+								<span>{{ bannerClass }} Lorem ipsum dolor sit amet, cambios en
+									consectum adipisicing elit. Vel alias repellendus iusto assumenda
+									praesentium totam necessitatibus ratione fugit culpa sint nemo
+									placeat vitae laudantium aliquam minus, odio tempora corporis.
+									Sunt!</span>
+							</div>
+							{% set standardcode %}<span class="{{ bannerClass }}">{{ bannerClass }} aaaaa</span>{%
+							endset%}
+							{% elif bannerClass === "banner-cookies" %}
+							<div class="container-fluid">
+								<div class="row is-flex align-middle">
+									<div class="col-xs-12">
+										<div class="{{ bannerClass }} p-body w-100 xs:text-center">
+											<div class="col-xs-12 col-sm-6 mdmax:mb-16">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+												commodi, veritatis qui repellendus eius .
+											</div>
+											<div class="col-xs-12 col-sm-6 is-flex banner-cookies-btn  ">
+												<button class="link-line p-xs m-16 ">
+													Boton link uno
+												</button>
+												<button class="btn btn-primary btn--full">Boton dos de cookies</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% set standardcode %}<span class="{{ bannerClass }}">{{ bannerClass }} bbbbbbb</span>{%
+							endset%}
+							{% else%}
+							<span class="{{ bannerClass }}">{{ bannerClass }} Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Vel alias repellendus iusto assumenda praesentium
+								totam necessitatibus</span>
+							{% set standardcode %}<span class="{{ bannerClass }}">{{ bannerClass }} ccccccc</span>{%
+							endset%}
+							{%endif%}
+						</div>
+					</div>
+				</div>
+			</div>
+			<pre>
+      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+         </code>
+    </pre>
+		</div>
+		{% endmacro %}
+		{% macro listButton(listClass='', explicacion='') %}
+		<h3>{{ listClass | capitalize }}</h3>
+		<p class="p-xs">{{ explicacion }}</p>
+		<div class="resize-mini">
+			{% if listClass === "list-button list-icons" %}
+			<div class="p-16">
+				<div class="{{listClass}}">
+					{% call svgIconname('globe') %} {% endcall %}
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+				<div class="{{listClass}} list-secundary">
+					{% call svgIconname('globe') %} {% endcall %}
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+				<div class="{{listClass}} list-tertiary">
+					{% call svgIconname('globe') %} {% endcall %}
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+			</div>
+			<div class="p-16">
+				<div class="{{listClass}}">
+					{% call svgIconname('globe') %} {% endcall %} <span>{{listClass}}</span>
+				</div>
+				<div class="{{listClass}} list-secundary">
+					{% call svgIconname('globe') %} {% endcall %}
+					<span>{{listClass}}</span>
+				</div>
+				<div class="{{listClass}} list-tertiary">
+					{% call svgIconname('globe') %} {% endcall %}
+					<span>{{listClass}}</span>
+				</div>
+			</div>
+			<div class="p-16">
+				<div class="{{listClass}}">
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+				<div class="{{listClass}} list-secundary">
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+				<div class="{{listClass}} list-tertiary">
+					<span>{{listClass}}</span> {% call svgIconname('plus') %} {% endcall %}
+				</div>
+			</div>
+			{% set standardcode %}
+			<div class="{{listClass}}">
+				<svg-icon src="YOUR_ICON"></svg-icon>
+				<span>{{listClass}}</span>
+				<svg-icon src="YOUR_ICON"></svg-icon>
+			</div>
+			<div class="{{listClass}} list-secundary">
+				<svg-icon src="YOUR_ICON"></svg-icon>
+				<span>{{listClass}}</span>
+				<svg-icon src="YOUR_ICON"></svg-icon>
+			</div>
+			<div class="{{listClass}} list-tertiary">
+				<svg-icon src="YOUR_ICON"></svg-icon>
+				<span>{{listClass}}</span>
+				<svg-icon src="YOUR_ICON"></svg-icon>
+			</div>
+			{% endset %} {% else %}
+			<div class="p-16">
+				<div class="{{listClass}}">
+					<span>{{listClass}}</span>
+				</div>
+				<div class="{{listClass}} list-secundary">
+					<span>{{listClass}}</span>
+				</div>
+				<div class="{{listClass}} list-tertiary">
+					<span>{{listClass}}</span>
+				</div>
+			</div>
+			{% set standardcode %}
+			<div class="{{listClass}}">
+				<span>{{listClass}}</span>
+			</div>
+			{% endset %} {% endif %}
+			<pre><code class="language-markup">{{standardcode}} </code></pre>
+		</div>
+		{% endmacro %}
+
+
+		{% macro bannerActions(bannerClass='', title='') %}
+		<h3>{{title}}</h3>
+		<div class="resize-mini">
+			<div class="resize-mini-content {{dark  }} ">
+				<div class="container-8">
+					<div class="row">
+
+						{% if bannerClass === "link-line" %}
+						<div class=" bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
+							<div class="is-flex flex-column">
+								<span class="tit-xs mb-8">
+									Recoge tu pedido en Gran Via de les Corts Catalanes
+								</span>
+								<p class="p-xs link-raw">Pulsa aquí para cambiar de tienda</p>
+							</div>
+							<div class="flex-grow-0 ml-16">
+								<span class="link-line">
+									Cancelar
+								</span>
+							</div>
+						</div>
+						{% set standardcode %}<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
+							<div class="is-flex flex-column">
+								<span class="tit-xs mb-8">
+									¡Recoge tu pedido en solo X horas!
+								</span>
+								<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+							</div>
+							<div class="flex-grow-0 ml-16">
+								<span class="link-line">
+									Cancelar
+								</span>
+							</div>
+						</div>{% endset %}
+						{% elif bannerClass === "ico-link" %}
+								<div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
+									<div class="row ">
+										<div class="col">
+											<span class="tit-xs">
+												¡Recoge tu pedido en solo X horas!
+											</span>
+											<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+										</div>
+										<div class="col-xs-2 text-right is-flex content-end  align-middle">							
+												{% call svgIconname('arrow-right') %} {% endcall %}
+										</div>
+									</div>
+								</div>
+					
+{% set standardcode %}<div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
+	<div class="row ">
+		<div class="col">
+			<span class="tit-xs">
+				¡Recoge tu pedido en solo X horas!
+			</span>
+			<p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+		</div>
+		<div class="col-xs-2 text-right is-flex content-end  align-middle">							
+			<svg-icon src="arrow-right"></svg-icon>
+		</div>
+	</div>
+</div>{% endset %}
+
+
+
+							{% elif bannerClass === "ico-context" %}
+							<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
+								<div class="flex-grow-0 pr-16">
+									{% call svgIconname('globe') %} {% endcall %}
+								</div>
+								<div class="is-flex flex-column">
+									<p class="p-m">
+										Los artículos no disponibles han sido guardados en “Comprar más tarde”.
+									</p>
+								</div>
+							</div>
+							{% set standardcode %}<div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
+								<div class="flex-grow-0 pr-16">
+									<svg-icon src="arrow-right"></svg-icon>
+								</div>
+								<div class="is-flex flex-column">
+									<p class="p-m">
+										Los artículos no disponibles han sido guardados en “Comprar más tarde”.
+									</p>
+								</div>
+							</div>{% endset %}
+
+							{% elif bannerClass === "ico-app" %}
+							<div class="bg-white border-1 flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
+								<div class="flex-grow-0 pr-16">
+									{% call svgIconname('globe') %} {% endcall %}
+								</div>
+								<div class="flex-grow-0 pr-16">
+									{% call svgIconname('globe') %} {% endcall %}
+								</div>
+								<div class="is-flex flex-column">
+									<p class="p-s">
+										Descubre las últimas novedades en nuestra app
+									</p>
+								</div>
+								<div class="flex-grow-0 pl-16">
+									{% call svgIconname('globe') %} {% endcall %}
+								</div>
+							</div>
+							{% set standardcode %}
+
+							<div class="bg-white border-1 flex-vcenter pt-8 pb-8 pl-16 pr-16 ">
+								<div class="flex-grow-0 pr-16">
+									<svg-icon src="arrow-right"></svg-icon>
+								</div>
+								<div class="flex-grow-0 pr-16">
+									<svg-icon src="arrow-right"></svg-icon>
+								</div>
+								<div class="is-flex flex-column">
+									<p class="p-s"> Descubre las últimas novedades en nuestra app </p>
+								</div>
+								<div class="flex-grow-0 pl-16">
+									<svg-icon src="arrow-right"></svg-icon>
+								</div>
+							</div>{% endset %}
+
+
+
+
+
+							{%endif%}
+
+						</div>
+					</div>
+				</div>
+
+				<pre>
+      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+         </code>
+    </pre>
+			</div>
+			{% endmacro %}
+
+
+
+			{% macro checkboxcard(checkboxcard='', explicacion='',dark='') %}
+			<h3>{{ checkboxcard }}</h3>
+
+			<p class="p-xs">{{ explicacion }}</p>
+			{% set randomNumber %}{{ range(1, 51) | random }}{% endset %}
+			<div class="resize-mini">
+				<div class="resize-mini-content-narrow {{dark  }} ">
+
+
+
+					<div class="row">
+						<div class="col-xs-6 bg-light-grey ">
+							<div class="row p-16">
+								<div class="col-xs-12 mb-8 ">
+									<div class="{{ checkboxcard  }}">
+										<input id="{{randomNumber}}-1" name="gender" type="radio">
+										<label for="{{randomNumber}}-1" class=" checkbox-card-label">
+											<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+										</label>
+									</div>
+								</div>
+
+								<div class="col-xs-12 ">
+									<div class="{{ checkboxcard  }}">
+										<input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
+										<label for="{{randomNumber}}-3" class=" checkbox-card-label ">
+											<div class="  p-xs-b">Guardar los artículos en la carpeta “Comprar más
+												tarde” </div>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-6 has-light bg-primary">
+							<div class="row p-16">
+								<div class="col-xs-12 mb-8 ">
+									<div class="{{ checkboxcard  }}">
+										<input id="{{randomNumber}}-4" name="gender" type="radio">
+										<label for="{{randomNumber}}-4" class=" checkbox-card-label">
+											<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+										</label>
+									</div>
+								</div>
+
+								<div class="col-xs-12 ">
+									<div class="{{ checkboxcard  }}">
+										<input id="{{randomNumber}}-5" name="gender" type="radio" value="a">
+										<label for="{{randomNumber}}-5" class=" checkbox-card-label ">
+											<div class="  p-xs-b">Guardar los artículos en la carpeta “Comprar más
+												tarde” </div>
+										</label>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+			</div>
+			{% set standardcode %}
+			<div class="container-4">
+				<div class="col-xs-12 mb-8">
+					<div class="{{ checkboxcard  }}">
+						<input id="{{randomNumber}}-1" name="gender" type="radio">
+						<label for="{{randomNumber}}-1" class=" checkbox-card-label">
+							<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+						</label>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="{{ checkboxcard  }}">
+						<input id="{{randomNumber}}-3" name="gender" type="radio" value="a">
+						<label for="{{randomNumber}}-3" class=" checkbox-card-label ">
+							<div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
+						</label>
+					</div>
+				</div>
+			</div>
+			{% endset %}
+			<pre><code class="language-markup">{{standardcode}} </code></pre>
+		</div>
+		{% endmacro %}
+
+
+
+
+		{% macro component2(component='',size='',componentfigma="" ,descripcion='') %}
+		<section class="mb-32 mt-32">
+			<div class="resize-container">
+				<div class="resize-bar">
+					<div class="resize-name">
+						<div class="tit-m">{{ component | capitalize }}</div>
+					</div>
+					<div class="resize-snip">
+						<a target="_blank" href=" {{ componentfigma }}">
+							<img width="18px" src="../images/figma.png" alt="" />
+						</a>
+					</div>
+					<div class="resize-snip">
+						<a class="p-xs" target="_blank" href="components/{{ component }}.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<title>open-in-browser</title>
+								<g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5"
+									transform="translate(0.5 0.5)" fill="#000000" stroke="#000000">
+									<line x1="12" y1="23" x2="12" y2="10" fill="none" stroke-miterlimit="10"
+										stroke-linecap="butt"></line>
+									<polyline points="16 14 12 10 8 14" fill="none" stroke-miterlimit="10"></polyline>
+									<path d="M4,17H3a2,2,0,0,1-2-2V3A2,2,0,0,1,3,1H21a2,2,0,0,1,2,2V15a2,2,0,0,1-2,2H20"
+										fill="none" stroke="#000000" stroke-miterlimit="10"></path>
+									<line x1="1" y1="5" x2="23" y2="5" fill="none" stroke="#000000"
+										stroke-miterlimit="10"></line>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<div class="resize-code">
+						<div class="seecode p-xs">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+								<title>window-dev</title>
+								<g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5"
+									transform="translate(0.5 0.5)" fill="#000000" stroke="#000000">
+									<polyline fill="none" stroke-miterlimit="10" points=" 8,12 6,14 8,16 "></polyline>
+									<polyline fill="none" stroke-miterlimit="10" points=" 16,12 18,14 16,16 ">
+									</polyline>
+									<line fill="none" stroke-miterlimit="10" x1="11" y1="18" x2="13" y2="10"></line>
+									<rect x="1" y="2" fill="none" stroke="#000000" stroke-miterlimit="10" width="22"
+										height="20"></rect>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1" y1="6" x2="23"
+										y2="6"></line>
+									<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="6" y1="2" x2="6"
+										y2="6"></line>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="viewcode">
+					<pre><code class="language-markup">{% set standardcode %}{% include component+'.html' %}  {# esto si funciona #}{% endset %}{{standardcode}}</code></pre>
+				</div>
+				<div class="container-3 pt-40">
+					<div class="row">
+						<div class="col-xs-12">{{descripcion}}</div>
+					</div>
+				</div>
+				<div class="resize">
+					<div class="r1"></div>
+					<div class="r2"></div>
+					<div class="r3"></div>
+					<div class="resize-content">
+						<div class="resize-media"></div>
+						<div class="resize-resolution"></div>
+					</div>
+					<div class="resize-left"></div>
+					<div class="resize-right"></div>
+					<iframe id="cover1" class="resizable" src="components/{{ component }}.html" width="100%"
+						height="{{ size }}" frameborder="0" seamless></iframe>
+				</div>
+			</div>
+		</section>
+		{% endmacro %}
+
+
+{% macro baseTooltip(tooltipType='', explicacion='') %}
+
+<h3>{{ tooltipType }}</h3>
+<p class="p-s">{{ explicacion }}</p>
+{% if tooltipType === "tooltip-*dir*" %}
+	<p><code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
+	<p><code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
+	<p><code>tooltip-bl</code>Expande el tooltip hacia bottom-left</p>
+	<p><code>tooltip-br</code>Expande el tooltip hacia bottom-right</p>
+{% endif %}
+<div class="resize-mini mt-16">
+	<div class="resize-mini-content">
+		{% if tooltipType === "tooltip-sm" %}
+			<div class="container-6 align-center mb-64 height-sm">
+				<div class="has-tooltip">
+					<svg-icon src="question" class="cursor-pointer">
+						<div>
+							<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885ZM8.5428 5.81204C7.86689 5.69939 7.1896 5.83636 6.85355 6.1724C6.65829 6.36766 6.34171 6.36767 6.14645 6.1724C5.95118 5.97714 5.95118 5.66056 6.14645 5.4653C6.8104 4.80134 7.88311 4.6883 8.7072 4.82565C9.13265 4.89655 9.55091 5.042 9.87701 5.2662C10.1983 5.48705 10.5 5.83901 10.5 6.31884C10.5 6.86526 10.4134 7.27267 10.134 7.60015C10.0061 7.75008 9.85652 7.86026 9.71868 7.95203C9.65389 7.99517 9.58468 8.0387 9.51742 8.081L9.50341 8.08982C9.42993 8.13605 9.35541 8.18309 9.27637 8.23552C9.00633 8.41463 8.80604 8.64453 8.67473 8.86262C8.53574 9.09345 8.5 9.266 8.5 9.31884C8.5 9.59498 8.27614 9.81884 8 9.81884C7.72386 9.81884 7.5 9.59498 7.5 9.31884C7.5 9.01873 7.62609 8.66558 7.81802 8.3468C8.01763 8.01529 8.31734 7.67165 8.72363 7.40217C8.81367 7.34244 8.89722 7.28975 8.97089 7.2434L8.98116 7.23694C9.05207 7.19233 9.11089 7.15533 9.16447 7.11965C9.27755 7.04436 9.33572 6.99508 9.37326 6.95108C9.42477 6.89071 9.5 6.77242 9.5 6.31884C9.5 6.29868 9.48923 6.21313 9.31049 6.09024C9.13659 5.97068 8.86735 5.86613 8.5428 5.81204ZM8 11.3188C8.27614 11.3188 8.5 11.5427 8.5 11.8188V12.3188C8.5 12.595 8.27614 12.8188 8 12.8188C7.72386 12.8188 7.5 12.595 7.5 12.3188V11.8188C7.5 11.5427 7.72386 11.3188 8 11.3188Z" fill="#292929"></path>
+							</svg>
+						</div>
+					</svg-icon>
+					{% call tooltip('tooltip-sm','true') %}{% endcall %}
+				</div>
+			</div>
+		{% elif tooltipType === "tooltip-*dir*" %}
+			<div class="container-6 align-center height-md">
+				<div class="row">
+					<div class="col-xs-12 is-flex">
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-tl</p>
+						{% call tooltip('tooltip-sm tooltip-tl','') %}{% endcall %}
+						</div>
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-tr</p>
+						{% call tooltip('tooltip-sm tooltip-tr','') %}{% endcall %}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 is-flex">
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-bl</p>
+						{% call tooltip('tooltip-sm tooltip-bl','') %}{% endcall %}
+						</div>
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-br</p>
+						{% call tooltip('tooltip-sm tooltip-br','') %}{% endcall %}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	{% set standardcode %}
+	{% if tooltipType === "tooltip-sm" %}
+		<div class="has-tooltip">
+			<svg-icon src='question' class="cursor-pointer"></svg-icon>
+			<div class="tooltip-sm">
+				<div class="is-flex">
+					<svg-icon src="credit-card"></svg-icon>
+					<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+				</div>
+				<div class="close">
+					<svg-icon src="close-s"></svg-icon>
+				</div>
+			</div>
+		</div>
+	{% elif tooltipType === "tooltip-*dir*" %}
+		<div class="has-tooltip">
+			<p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
+			<div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
+				<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+				<div class="close">
+					<svg-icon src="close-s"></svg-icon>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+</div>
+{% endmacro %} 
+
+{% macro tooltip(tooltipClass='', hasIcon='') %}
+<div class="{{ tooltipClass }}">
+	<div class="is-flex">
+		{% if hasIcon === "true" %}
+		<svg-icon src="credit-card">
+			<div>
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M1.93333 4.5C1.63039 4.5 1.5 4.70251 1.5 4.81818V6.2H14.5V4.81818C14.5 4.70251 14.3696 4.5 14.0667 4.5H1.93333ZM15.5 4.81818C15.5 4.03058 14.7941 3.5 14.0667 3.5H1.93333C1.20587 3.5 0.5 4.03058 0.5 4.81818V12.1818C0.5 12.9694 1.20587 13.5 1.93333 13.5H14.0667C14.7941 13.5 15.5 12.9694 15.5 12.1818V4.81818ZM14.5 7.2H1.5V12.1818C1.5 12.2975 1.63039 12.5 1.93333 12.5H14.0667C14.3696 12.5 14.5 12.2975 14.5 12.1818V7.2ZM3.5 10.3C3.5 10.0239 3.72386 9.8 4 9.8H7C7.27614 9.8 7.5 10.0239 7.5 10.3C7.5 10.5761 7.27614 10.8 7 10.8H4C3.72386 10.8 3.5 10.5761 3.5 10.3ZM10.5 10.3C10.5 10.0239 10.7239 9.8 11 9.8H12C12.2761 9.8 12.5 10.0239 12.5 10.3C12.5 10.5761 12.2761 10.8 12 10.8H11C10.7239 10.8 10.5 10.5761 10.5 10.3Z" fill="#292929"></path>
+				</svg>
+			</div>
+		</svg-icon>
+		{% endif %}
+		<p class="p-s px-8"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro. </p>
+	</div>
+	<div class="close">
+		<svg-icon src="close-s">
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" class="cursor-pointer">
+					<g transform="translate(0, 0)">
+						<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="13.5" y1="2.5" x2="2.5" y2="13.5" data-cap="butt"></line>
+						<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="2.5" y1="2.5" x2="13.5" y2="13.5" data-cap="butt"></line>
+					</g>
+				</svg>
+			</div>
+		</svg-icon>
+	</div>
+</div>
+{% endmacro %}
+
+
+
+⚪️ To do
+✅ Ready to use
+❌ Not available
+✍️ Work in progress
+
+
+{% macro boxtable(nombre='', estadofigma='',estadoholygrail='', estadospecs='') %}
+
+<div class="boxtable">
+	<div>  <a class="link-line" href="{{ nombre }}.html ">{{ nombre }} </a>  </div>
+	<div>   {% if estadofigma == 1 %} ⚪️   {% elif estadofigma == 2 %} ✅ {% elif estadofigma == 3 %}❌  {% elif estadofigma == 4 %} ✍️      {% else %}    {{ estadofigma }}   {% endif %}  </div>
+	<div>   {% if estadoholygrail == 1 %} ⚪️   {% elif estadoholygrail == 2 %} ✅ {% elif estadoholygrail == 3 %}❌  {% elif estadoholygrail == 4 %} ✍️       {% else %}    {{ estadoholygrail }}    {% endif %} </div>
+	<div>   {% if estadospecs == 1 %} ⚪️   {% elif estadospecs == 2 %} ✅ {% elif estadospecs == 3 %}❌  {% elif estadospecs == 4 %} ✍️       {% else %}    {{ estadospecs }}    {% endif %}  </div>
+</div>
+
+
+
+
+
+
+{% endmacro %}
+
+
