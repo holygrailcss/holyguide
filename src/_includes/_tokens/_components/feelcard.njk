@@ -1,0 +1,42 @@
+---
+layout: base-clean.njk
+title: feelcard
+permalink: /feelcard/
+---
+
+{% import "_macros/_feel.njk" as feel %}
+{% import "_macros/_insert.njk" as insert %}
+
+<section class="mt-24">
+  <div class="container-body">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('3') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('2') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('1') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('1') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('1') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('2') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('2') %} {% endcall %}
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mb-24">
+        {% call feel.feelCard('') %} {% endcall %}
+      </div>
+    </div>
+  </div>
+</section>

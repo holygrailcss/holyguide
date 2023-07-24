@@ -1,0 +1,405 @@
+{
+  "author": "manuel ruiz",
+  "authorweb": "digitalstrategy.es",
+  "authorinstagram": "manuel ruiz",
+  "title": "Estructuras modulares",
+  "lang": "es-es",
+  "footer": "",
+  "url": "digitalstrategy.es",
+  "empresa": "Estructuras modulares",
+  "imageDir": "/assets/static/",
+  "tag_manager": " ",
+  "about": "about",
+  "services": "Sistemas",
+  "blog": "Blog",
+  "brands": "1,2,3,4,5,6",
+  "galeria": "1,2,3,4,5,6,7,8",
+  "contact_img": "/assets/static/images/1.jpg",
+  "search_console": "search_console",
+  "empresa_copyright": " © 2023 empresa_copyright",
+  "empresa_legal_titular": "empresa_legal_titular ",
+  "empresa_legal": "Empresa_legal_largo",
+  "empresa_corto": "Empresa_corto",
+  "website": "www.design-systems.es",
+  "telefono": "+111",
+  "empresa_dni": "dni111",
+  "email": "design@gmail.com",
+  "link": "digitalstrategy.es",
+  "whatsapp": "+1111",
+  "codigopostal": "0000",
+  "direccion": " calle",
+  "ciudad": " barcelona",
+  "provincia": "Barcelona",
+  "actividad": " Estructuras modulares",
+  "c_primary": "#292929",
+  "c_secondary": "#292929",
+  "bg_dark": "#161616",
+  "c_bg_dark": "#f7f6f5",
+  "bg_light": "#efefef",
+  "c_bg_light": "#292929",
+  "btn_radius": "0",
+  "seo_title": "seo_title",
+  "seo_description": " seo_description",
+  "googlemaps_api": "",
+  "googlemaps_link": "",
+  "googlemaps_iframe": "",
+  "social_linkedin": " https://www.linkedin.com/",
+  "social_youtube": "https://www.youtube.com/",
+  "social_instagram": "https://www.instagram.com/",
+  "personas": [
+    {
+      "imagen": "/assets/static/images/1.jpg",
+      "nombre": "Persona 1",
+      "posicion": "Posición 1",
+      "descripcion": "Descripción 1"
+    },
+    {
+      "imagen": "/assets/static/images/1.jpg",
+      "nombre": "Persona 2",
+      "posicion": "Posición 2",
+      "descripcion": "Descripción 2"
+    },
+    {
+      "imagen": "/assets/static/images/1.jpg",
+      "nombre": "Persona 3",
+      "posicion": "Posición 3",
+      "descripcion": "Descripción 3"
+    }
+  ],
+  "placeholders": [
+    { "placeholder": "2-3" },
+    { "placeholder": "3-4" },
+    { "placeholder": "1-1" },
+    { "placeholder": "2-1" },
+    { "placeholder": "4-3" },
+    { "placeholder": "3-2" },
+    { "placeholder": "16-9" },
+    { "placeholder": "4-2" },
+    { "placeholder": "66" },
+    { "placeholder": "33" },
+    { "placeholder": "21-9" },
+    { "placeholder": "30" },
+    { "placeholder": "105" },
+    { "placeholder": "AR_SOCIAL_4" },
+    { "placeholder": "AR_SOCIAL_6" },
+    { "placeholder": "bg-light" }
+  ],
+
+  "templates": [
+    { "parrilla": "template-1F"},
+    { "parrilla": "template-1A"},
+    { "parrilla": "template-1E"},
+    { "parrilla": "template-1G"},
+    { "parrilla": "template-1LE"},
+    { "parrilla": "template-2A"},
+    { "parrilla": "template-2B"},
+    { "parrilla": "template-2C"},
+    { "parrilla": "template-2D"},
+    { "parrilla": "template-2DS"},
+    { "parrilla": "template-2E"},
+    { "parrilla": "template-2FDoble"},
+    { "parrilla": "template-2FH"},
+    { "parrilla": "template-2FV"},
+    { "parrilla": "template-2G"},
+    { "parrilla": "template-2SD"},
+    { "parrilla": "template-3A"},
+    { "parrilla": "template-3S"},
+    { "parrilla": "template-4A"},
+    { "parrilla": "template-4B"},
+    { "parrilla": "template-4S"},
+    { "parrilla": "template-5A"},
+    { "parrilla": "template-6S"},
+    { "parrilla": "template-G4"},
+    { "parrilla": "template-FIV"},
+    { "parrilla": "template-VIT"},
+    { "parrilla": "template-MINIGRID"},
+    { "parrilla": "template-MINIGRID-INFO"},
+    { "parrilla": "template-SEC"},
+    { "parrilla": "template-SEPARATOR_12_5"},
+    { "parrilla": "template-SEPARATOR_25"}
+  ],
+  "ratios": [
+    { "ratio": "2-3" },
+    { "ratio": "3-4" },
+    { "ratio": "1-1" },
+    { "ratio": "2-1" },
+    { "ratio": "4-3" },
+    { "ratio": "3-2" },
+    { "ratio": "16-9" },
+    { "ratio": "4-2" },
+    { "ratio": "21-9" }
+  ],
+  "coloresPrimarios": [
+    {
+      "hex": "#292929",
+      "variable": "c-primary",
+      "font": "c-primary",
+      "bg": ".bg-primary"
+    },
+    {
+      "hex": "#000000",
+      "variable": "c-black",
+      "font": "c-black",
+      "bg": "bg-black"
+    },
+    {
+      "hex": "#8e8e8e",
+      "variable": "c-dark-grey",
+      "font": "c-dark-grey",
+      "bg": "bg-dark-grey"
+    },
+    {
+      "hex": "#e3e3e3",
+      "variable": "c-middle-grey",
+      "font": "c-middle-grey",
+      "bg": "bg-middle-grey"
+    },
+    {
+      "hex": "#f0f0f0",
+      "variable": "c-light-grey",
+      "font": "c-light-grey",
+      "bg": "bg-light-grey"
+    },
+    {
+      "hex": "#ffffff",
+      "variable": "c-white",
+      "font": "c-white",
+      "bg": "bg-white"
+    }
+  ],
+  "coloresSemanticos": [
+    {
+      "hex": "#b40016",
+      "variable": "c-error",
+      "font": "c-error",
+      "bg": "bg-error"
+    },
+    {
+      "hex": "#b40016",
+      "variable": "c-sale",
+      "font": "c-sale",
+      "bg": "bg-sale"
+    },
+    {
+      "hex": "#1a32a4",
+      "variable": "c-info",
+      "font": "c-info",
+      "bg": "bg-info"
+    },
+    {
+      "hex": "#76ae4a",
+      "variable": "c-success",
+      "font": "c-success",
+      "bg": "bg-success"
+    },
+    {
+      "hex": "#ffc700",
+      "variable": "c-warning",
+      "font": "c-warning",
+      "bg": "bg-warning"
+    },
+    {
+      "hex": "#fb9962",
+      "variable": "c-feel",
+      "font": "c-feel",
+      "bg": "bg-feel"
+    }
+  ],
+  "coloresFeel": [
+    {
+      "hex": "#fb9962",
+      "variable": "c-feel",
+      "font": "c-feel",
+      "bg": "bg-feel"
+    },
+    {
+      "hex": "#c94c07",
+      "variable": "c-feel-dark",
+      "font": "c-feel-dark",
+      "bg": "bg-feel-dark"
+    },
+    {
+      "hex": "#fccbb0",
+      "variable": "c-feel-light",
+      "font": "c-feel-light",
+      "bg": "bg-feel-light"
+    }
+  ],
+  "tipografias": [
+    {
+      "name": "sub-l",
+      "xs": "56px",
+      "lg": "96px",
+      "line": " 1.1",
+      "weight": "bold3"
+    },
+    {
+      "name": "sub-m",
+      "xs": "42px",
+      "lg": "64px",
+      "line": " 1.1",
+      "weight": "bold3"
+    },
+    {
+      "name": "sub-s",
+      "xs": "32px",
+      "lg": "56px",
+      "line": " 1.1",
+      "weight": "bold3"
+    },
+    {
+      "name": "head-l",
+      "xs": "56px",
+      "lg": "96px",
+      "line": " 1.1",
+      "weight": "bold"
+    },
+    {
+      "name": "head-m",
+      "xs": "42px",
+      "lg": "64px",
+      "line": " 1.1",
+      "weight": "bold"
+    },
+    {
+      "name": "head-s",
+      "xs": "32px",
+      "lg": "56px",
+      "line": " 1.1",
+      "weight": "bold"
+    },
+    {
+      "name": "tit-l",
+      "xs": "24px",
+      "lg": " 42px",
+      "line": " 1.2 ",
+      "weight": "bold"
+    },
+    {
+      "name": "tit-m",
+      "xs": "20px",
+      "lg": "32px",
+      "line": " 1.2",
+      "weight": "bold"
+    },
+    {
+      "name": "tit-s",
+      "xs": "16px",
+      "lg": "20px",
+      "line": " 1.2",
+      "weight": "bold"
+    },
+    {
+      "name": "tit-xs",
+      "xs": "14px",
+      "lg": "14px",
+      "line": " 1.2",
+      "weight": "bold"
+    },
+    {
+      "name": "p-l",
+      "xs": "18px",
+      "lg": "20px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-m",
+      "xs": "14px",
+      "lg": "16px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-m-b",
+      "xs": "14px",
+      "lg": "16px",
+      "line": " 1.3",
+      "weight": "bold"
+    },
+    {
+      "name": "p-s",
+      "xs": "12px",
+      "lg": "13px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-s-b",
+      "xs": "12px",
+      "lg": "13px",
+      "line": " 1.3",
+      "weight": "bold"
+    },
+    {
+      "name": "p-xs",
+      "xs": "11px",
+      "lg": "12px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-xs-b",
+      "xs": "11px",
+      "lg": "12px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-xxs-b",
+      "xs": "9px",
+      "lg": "9px",
+      "line": " 1.3",
+      "weight": "bold"
+    },
+    {
+      "name": "p-18-2b",
+      "xs": "18px",
+      "lg": "18px",
+      "line": " 1.3",
+      "weight": "bold"
+    },
+    {
+      "name": "p-18-b",
+      "xs": "18px",
+      "lg": "18px",
+      "line": " 1.3",
+      "weight": "bold"
+    },
+    {
+      "name": "p-xs",
+      "xs": "14px",
+      "lg": "14px",
+      "line": " 1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "p-xs-b",
+      "xs": "14px",
+      "lg": "14px",
+      "line": " 1.3",
+      "weight": "bold"
+    }
+  ],
+  "ButtonType": [
+    { "class": "btn-primary" },
+    { "class": "btn-secondary" },
+    { "class": "btn-limited" },
+    { "class": "btn-feel" },
+    { "class": "btn-blue" },
+    { "class": "btn-trans" },
+    { "class": "btn-secondary-feel" },
+    { "class": "btn-phantom" },
+    { "class": "btn-clear" },
+    { "class": "btn-text" },
+    { "class": "link-raw" },
+    { "class": "link-line" }
+  ],
+  "ButtonSize": [
+    { "size": "btn--mini" },
+    { "size": "btn--small" },
+    { "size": "btn--medium" },
+    { "size": "btn--large" },
+    { "size": "btn--full" }
+  ]
+}

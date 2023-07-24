@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+{% import "_macros/_helper.njk" as helper %}
+
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+
+
+
+
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+    <div class="col-xs-12 ">
+
+
+      {% call helper.insert(elementType='span',['tag-alert', 'tag-info' , 'tag-valid', 'tag-alert', 'tag-feel', 'tag-limited']) %}
+{% endcall %}
+
+
+    </div>
+  </div>
+</section> 
+
+
+
+
+
+
+
+  </div>

@@ -1,35 +1,66 @@
 {
-    "name": "gulp-boilerplate",
-    "version": "1.0.0",
-    "description": "A basic Gulp boilerplate to get developing locally. Comes with Sass/JS/image minification and hot reload.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "11ty-nunjucks-md",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:eleventy": "eleventy --serve --incremental",
+    "watch:sass": "sass  --no-source-map --watch src/assets/sass:src/assets/css",
+    "build:eleventy": "eleventy",
+    "build:sass": "sass  --no-source-map --style=expanded src//assets/sass:src//assets/css",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*",
+    "debug": "DEBUG=* npx eleventy",
+    "format": "npm run prettier -- --write",
+    "format:md": "prettier --write 'src/**/*.md'",
+    "prettier": "prettier 'src/assets/sass/**/*.+(css|scss)'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allchorne3/11ty-nunjucks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Allchorne3/11ty-nunjucks/issues"
+  },
+  "homepage": "https://github.com/Allchorne3/11ty-nunjucks#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "eleventy-plugin-toc": "^1.1.5"
+  },
+  "dependencies": {
+    "holygrailcss": "^2.2.4",
+    "aos": "^2.3.4",
+    "eleventy-plugin-embed-everything": "^1.16.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.6",
+    "markdown-it-highlightjs": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "nunjucks": "^3.2.4",
+    "rellax": "^1.12.1",
+    "sass": "^1.62.0",
+    "prettier": "^2.8.4"
+  },
+
+"prettier": {
+  "overrides": [
+    {
+      "files": "**/*.md",
+      "options": {
+        "parser": "markdown"
+      }
     },
-    "author": "Kieran Brown",
-    "license": "ISC",
-    "dependencies": {
-        "clipboard": "^2.0.11"
-    },
-    "devDependencies": {
-        "holygrailcss": "^2.2.3",
-        "@babel/core": "^7.11.0",
-        "@babel/preset-env": "^7.11.0",
-        "browser-sync": "^2.27.10",
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^6.1.0",
-        "gulp-babel": "^8.0.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-htmlmin": "^5.0.1",
-        "gulp-imagemin": "^7.1.0",
-        "gulp-nunjucks-render": "^2.2.3",
-        "gulp-sass": "^5.0.0",
-        "gulp-uglify": "^3.0.2",
-        "gulp-watch": "^5.0.1",
-        "lodash": "^4.17.21",
-        "lodash.mergewith": ">=4.6.2",
-        "mixin-deep": "^2.0.1",
-        "sass": "^1.57.1",
-        "set-value": "^4.0.1"
+    {
+      "files": "**/*.njk",
+      "options": {
+        "parser": "nunjucks"
+      }
     }
+  ]
+}
 }

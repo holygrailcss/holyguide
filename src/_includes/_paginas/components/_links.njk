@@ -1,0 +1,31 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+</div>
+<div class="main-content">
+
+<div class="mb-32">
+  {% call insert.link('link-line','Link básico') %}
+  {% endcall %}
+</div>
+<div class="mb-32">
+  {% call insert.link('link-raw','Link con una línea o múltiple') %}
+  {% endcall %}
+</div>
+<div class="mb-32">
+  {% call insert.linkPre('link-svg-pre','Link con icono svg-icon al inicio') %}
+  {% endcall %}
+</div>
+<div class="mb-32">
+  {% call insert.linkPost('link-svg-post','Link con icono svg-icon al final') %}
+  {% endcall %}
+</div>
+
+</div>

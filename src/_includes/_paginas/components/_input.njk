@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+</div>
+<div class="main-content">
+
+  {% call insert.input('Input básico') %}{% endcall %}
+  {% call insert.inputTexto('Input con texto') %}{% endcall %}
+  {% call insert.inputError('Input con error') %}{% endcall %}
+  {% call insert.inputPre('has-ico-pre') %}{% endcall %}
+  {% call insert.inputPost('has-ico-post') %}{% endcall %}
+  {% call insert.inputPwd('Input password') %}{% endcall %}
+  {% call insert.inputDisabled('Input no-touch/disabled') %}{% endcall %}
+  {% call insert.inputPrefix('Input prefijo telefónico') %}{% endcall %}
+  {% call insert.inputIpod('Inputs básicos placeholder sin animación') %}{% endcall %}
+
+</div>

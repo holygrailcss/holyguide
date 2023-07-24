@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert  %}
+
+
+
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+</div>
+<div class="main-content">
+
+  {% call insert.checkbox('checkbox-item-box','Checkbox básico') %} {% endcall %} 
+  {% call insert.checkboxText('checkbox-item-text','Checkbox con texto') %} {% endcall %} 
+  {% call insert.checkbox2('checkbox-item-2','Checkbox switch') %} {% endcall %} 
+  {% call insert.checkboxRadio('checkbox-radio','Radio button') %} {% endcall %} 
+  {% call insert.checkboxCard('checkbox-card','Radio text button') %} {% endcall %} 
+
+  </div>
+
+
+

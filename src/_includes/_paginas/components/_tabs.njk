@@ -1,0 +1,159 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+
+
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+      <div class="col-xs-12 "></div>
+      <div class="col-xs-12">
+          <div class="tit-s c-dark-grey ">
+       Tabs , selectables entre listas y en línea. 
+
+
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+    <div class="col-xs-12 "> 
+
+      <div class="tit-m"> Tabs en línea </div>
+
+
+    </div>
+    <div class="col-xs-12"> 
+    
+      
+      <h3> Left Tabs</h3>
+      <div class="tabs mb-40">
+        <ul>
+          <li class="is-active"><span>Pictures</span></li>
+          <li><span>Music</span></li>
+          <li><span>Videos</span></li>
+          <li><span>Documents</span></li>
+        </ul>
+      </div>
+      <div class="resize-mini">
+      <pre><code class="language-markup">{{"<div class='tabs'>
+    <ul>
+        <li class='is-active'><a>Pictures</a></li>
+        <li><a>Music</a></li>
+        <li><a>Videos</a></li>
+        <li><a>Documents</a></li>
+    </ul>
+  </div> "| escape  }} 
+</code></pre> 
+</div>
+
+{# Element #}
+ <h3> Center Tabs</h3>
+      <div class="tabs is-center mb-40">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+
+      <div class="resize-mini">
+      <pre><code class="language-markup">{{"<div class='tabs is-center'>
+    <ul>
+        <li class='is-active'><a>Pictures</a></li>
+        <li><a>Music</a></li>
+        <li><a>Videos</a></li>
+        <li><a>Documents</a></li>
+    </ul>
+  </div> "| escape  }} 
+</code></pre> 
+
+</div>
+{# /Element #} 
+
+{# Element #} 
+
+<h3> Around Tabs</h3>
+      <p class="p-xs"> Distribución de pestañas en el espacio disponible. </p>
+      <div class="tabs is-around mb-40">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+
+
+<div class="resize-mini">
+      <pre><code class="language-markup">{{" <div class='tabs is-around'>
+    <ul>
+        <li class='is-active'><a>Pictures</a></li>
+        <li><a>Music</a></li>
+        <li><a>Videos</a></li>
+        <li><a>Documents</a></li>
+    </ul>
+  </div> "| escape  }} 
+</code></pre> 
+</div>
+
+{# /Element #} 
+
+
+
+{# Element #} <h3> Equal Tabs</h3>
+      <p class="p-xs"> Se distribuyen el espacio las tabs. Ideal para dos selectores. </p>
+      <div class="tabs mb-40">
+        <ul class="list-equal ">
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+
+<div class="resize-mini">
+  
+  <pre><code class="language-markup">{{"<div class='tabs '>
+      <ul class='list-equal'>
+    <li class='is-active'><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+      </ul>
+    </div> "| escape  }} 
+  </code></pre>
+</div>
+
+{# /Element #}
+
+
+
+
+    </div>
+  </div>
+</section> 
+
+
+
+
+
+
+
+
+  </div>

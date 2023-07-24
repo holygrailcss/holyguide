@@ -1,0 +1,25 @@
+---
+layout: base.njk
+---
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+
+<div class="main-content innermarkdown">
+  {{ content | safe }}
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="masonry">
+          {% for global in global.placeholders %}
+          <div class="mb-8">
+            <img class="mb-8" src="  https://holygrailcss.github.io/assets/placeholder/{{global.placeholder}}.jpg" alt="">
+            <div class=" text-12-r"> {{global.placeholder}}.jpg </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

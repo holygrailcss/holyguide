@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+
+
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+    <div class="col-xs-12"> 
+      {% call insert.list('list-clear','Lista limpia vertical. ') %} {% endcall %} 
+      {% call insert.list('list-inline','Lista limpia horizontal. ') %} {% endcall %} 
+      {% call insert.list('list-disc','Lista con puntos iniciales . ') %} {% endcall %} </div>
+  </div>
+</section>
+
+
+<section class="mb-32 mt-32">
+  <div class="row">
+
+    <div class="col-xs-12  tit-m"> Listas con estilos</div>
+    <div class="col-xs-12"> 
+      
+
+{% call insert.listButton('list-button','Lista con estilo de botón usada para desplegables o acordeones. ') %} {% endcall %}
+{% call insert.listButton('list-button list-icons','Puedes usar iconos en el botón agregando la case list-icons, y agregando los svg-icon') %} {% endcall %} 
+
+<p class="mt-24">Usado en el template  <a href="/06-worldwide.html" class="link-line">Worldwide</a></p>
+
+
+    
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  </div>

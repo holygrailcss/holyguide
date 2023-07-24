@@ -1,0 +1,115 @@
+---
+layout: base.njk
+---
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+<div class="main-content"> 
+
+
+  <div class="row pb-64">
+    <div class="col-xs-12">
+      <p class="tit-m mb-16">
+        Actualmente tenemos las siguientes Familias tipográficas:
+      </p>
+      <p class="p-m mb-16">
+        Las familias tipograficas que van después de la fuente primaria son las
+        llamadas <strong>"fallbacks"</strong>, estás fuentes son las primeras en
+        cargar.
+      </p>
+      <div class="tit-s mb-16 mt-32">Familia dutti-daily</div>
+      <p>
+        <strong>regular</strong>:'dutti-daily-regular', Helvetica, 'Arial ',
+        'Lucida Grande', sans-serif;
+      </p>
+      <p>
+        <strong>medium</strong>: 'dutti-daily-light', Helvetica, 'Arial ', 'Lucida
+        Grande', sans-serif;
+      </p>
+      <p>
+        <strong>bold</strong>: 'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida
+        Grande', sans-serif;
+      </p>
+      <div class="tit-s mb-16 mt-32 bold3">Familia massimo-daily</div>
+      <p>
+        <strong class="bold3">regular3</strong>: 'massimo-daily-regular',
+        'ms-serif',serif;
+      </p>
+      <p>
+        <strong class="bold3">medium3</strong>: 'massimo-daily-light',
+        'ms-serif',serif;
+      </p>
+      <p>
+        <strong class="bold3">bold3</strong>: 'massimo-daily-bold',
+        'ms-serif',serif;
+      </p>
+    </div>
+  </div>
+  <hr />
+  
+  <div class="row pt-64"> 
+
+<div class="col-xs-12">
+  <div class="tit-s c-dark-grey pb-32">
+    Familia tipográfica y jerarquías que debemos usar con sus ejemplos y
+    variantes.
+  </div>
+</div>
+
+
+<div class="col-xs-12 mb-64">
+  <div class="bg-info p-16 c-white is-flex mb-24">
+    <p>
+      Estas son las tipografías que estarán definidas en los archivos de diseño
+      y las que deberias usar siempre.
+    </p>
+  </div>
+
+  <div class="row p-m-b mb-16">
+    <div class="col-xs-2">Nombre</div>
+
+    <div class="col-xs-2">Mobile (xs) </div>
+    <div class="col-xs-2">Desktop (md) +992px</div>
+    <div class="col-xs-4">FAMILY</div>
+    <div class="col-xs-2">LINE</div>
+    <hr class="m-0" />
+  </div>
+
+
+
+  {% for tipo in global.tipografias %}
+  <div class="row mb-8">
+	<div class="col-xs-2 p-m-b">.{{tipo.name}}</div>
+	
+	<div class="col-xs-2 p-s">{{tipo.xs}}</div>
+	<div class="col-xs-2 p-s">{{tipo.lg}}</div>
+  
+	<div class="col-xs-4 {{tipo.weight}} ">
+  
+	  {% if tipo.weight == 'regular' %} 
+	  dutti-daily-regular - regular
+	  {% elif tipo.weight ==
+	  'bold' %} dutti-daily-bold - bold
+	  {% elif tipo.weight == 'bold3' %}
+	  massimo-daily-medium - bold3
+	  {% elif tipo.weight == 'bold' %}
+	   massimo-daily-medium - bold
+	  {% endif %}
+  
+  
+	</div>
+	<div class="col-xs-2 p-s">{{tipo.line}}</div>
+  </div>
+  {% endfor %}
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+

@@ -1,0 +1,22 @@
+{% include 'base-clean.njk' %} 
+{% import "_macros/_product.njk" as product %}
+
+
+<li class="grid-product grid-product-view template-2FH">
+  <div class="template-name" id="2FH">2FH</div>
+  <studio-multi-product-template
+    ><div class="grid-2FH-wrap">
+      <ul class="grid-product-wrap--2FH">
+        <li class="grid-product-list--2FH sk-load5">
+          {% call product.ratio('3-2') %} {% endcall %}
+        </li>
+        <li class="grid-product-list--2FH sk-load5">
+          {% call product.ratio('3-2') %} {% endcall %}
+        </li>
+        
+      </ul>
+      
+    </div>
+    </studio-multi-product-template
+  >
+</li>

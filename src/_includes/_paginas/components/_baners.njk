@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+
+  <div class="row">
+
+
+    <div class="col-xs-12">
+
+      {% call insert.banner('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de personalización') %}  {% endcall %}
+      {% call insert.banner('bg-warning is-flex p-16' ,'Banner warning') %}  {% endcall %}
+      {% call insert.banner('bg-info is-flex p-16' ,'Banner info') %}  {% endcall %}
+      {% call insert.banner('bg-success is-flex p-16' ,'Banner valid') %}  {% endcall %}
+      {% call insert.banner('bg-error is-flex p-16 has-light' ,'Banner alert') %}  {% endcall %}
+      {% call insert.banner('bg-feel is-flex p-16' ,'Banner feel') %}  {% endcall %}
+      {% call insert.banner('bg-limited is-flex p-16' ,'Banner limited') %}  {% endcall %}
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+  </div>

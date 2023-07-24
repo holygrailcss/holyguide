@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+    {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}</div>
+
+<div class="main-content">
+
+    <section class="mb-32 mt-32">
+        <div class="row">
+            <div class="col-xs-12 tit-m"> Tooltips</div>
+            <div class="col-xs-12 mb-32">
+                {% call insert.baseTooltip('tooltip-sm','Tooltip con icono.') %}{% endcall %}
+            </div>
+            <div class="col-xs-12">
+                {% call insert.baseTooltip('tooltip-*dir*','Tooltips con dirección.') %}{% endcall %}
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown">
+  {{ content | safe }}
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="masonry">
+
+
+
+
+          {% for item in  global.ratios %}
+          <div class="mini-box rat-{{ item.ratio }}">
+            <div class="rat-content">
+              <div class="p-xs">
+                .rat-{{ item.ratio }}
+              </div>
+              {{ item.ratio }}
+            </div>
+          </div>
+          {% endfor %}
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

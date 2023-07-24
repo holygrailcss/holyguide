@@ -1,0 +1,2076 @@
+{% macro template(ruta = '',component = '', size = '', componentfigma = "", descripcion = '') %}
+	<section class="mb-32 mt-32 ">
+		<div class="resize-container">
+			<div class="resize-bar p-xs">
+				<div class="resize-name">
+					<div class="tit-m">{{ component | capitalize }}</div>
+				</div>
+				<div class="resize-snip">
+					<a target="_blank" href=" {{ componentfigma }}">
+                    FIGMA
+                </a>
+				</div>
+				<div class="resize-snip">
+					<a class="" target="_blank" href="/{{ component }}">
+                    VER
+                </a>
+				</div>
+				<div class="resize-code">
+					<div class="p-xs">
+                    CODE </div>
+				</div>
+			</div>
+			<div class="viewcode">
+				<pre><code class="language-markup">{% set standardcode %} 
+                
+                {% include   ruta+component +'.njk' %}
+				{% endset %}{{standardcode}}</code></pre> 
+			</div>
+			<div class="main-content">
+				<div class="col-xs-12">{{descripcion}}</div>
+			</div>
+			<div class="resize">
+				<div class="r1"></div>
+				<div class="r2"></div>
+				<div class="r3"></div>
+				<div class="resize-content">
+					<div class="resize-media"></div>
+					<div class="resize-resolution"></div>
+				</div>
+				<div class="resize-left"></div>
+				<div class="resize-right"></div>
+				<iframe id="cover1" class="resizable" src="/{{ component }}/" width="100%" height="{{ size }}"
+                frameborder="0" seamless></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+{% endmacro %}
+
+
+{% macro select(selectName = '', explicacion = '', dark = '') %}
+<h3>{{ selectName | capitalize }}</h3>
+<p class="p-xs">{{selectName }} : {{ explicacion }}</p>
+
+<div class="resize-mini">
+	<div class="resize-mini-content {{dark  }} ">
+		<div class="select {{selectName }}">
+			{% if selectName == 'select-label' %}
+				<label>{{selectName }}
+				</label>
+			{% endif %}
+			<select>
+				<option value="S">S</option>
+				<option value="M">M</option>
+				<option value="l">L</option>
+				<option value="XL">XL</option>
+			</select>
+		</div>
+	</div>
+	{% set standardcode %}
+	<div class="select {{selectName }}">
+		{% if selectName == 'select-label' %}
+			<label>{{ selectName }}</label>
+		{% endif
+ %}
+		<select>
+			<option value="S">S</option>
+			<option value="M">M</option>
+			<option value="l">L</option>
+			<option value="XL">XL</option>
+		</select>
+	</div>
+	{% endset %}
+
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+
+{% endmacro %}
+
+{% macro list(listClass = '', explicacion = '') %}
+<h3>{{ listClass }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+<ul class="{{ listClass  }}">
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+</ul>
+{% set standardcode %}
+<ul class="{{ listClass  }}">
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+	<li>
+		<a href="">{{ listClass }}</a>
+	</li>
+</ul>
+{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+{% endmacro %}
+
+{% macro listButton(listClass = '', explicacion = '') %}
+<h3>{{ listClass | capitalize }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+<div class="resize-mini">
+	{% if listClass === "list-button list-icons" %}
+		<div class="p-16">
+			<div class="{{listClass}}">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+			<div class="{{listClass}} list-secundary">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+			<div class="{{listClass}} list-tertiary">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+		</div>
+		<div class="p-16">
+			<div class="{{listClass}}">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+			</div>
+			<div class="{{listClass}} list-secundary">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+			</div>
+			<div class="{{listClass}} list-tertiary">
+				{% call svgIconname('globe') %}
+				{% endcall %}
+				<span>{{listClass}}</span>
+			</div>
+		</div>
+		<div class="p-16">
+			<div class="{{listClass}}">
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+			<div class="{{listClass}} list-secundary">
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+			<div class="{{listClass}} list-tertiary">
+				<span>{{listClass}}</span>
+				{% call svgIconname('plus') %}
+				{% endcall %}
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="{{listClass}}">
+			<svg-icon src="YOUR_ICON"></svg-icon>
+			<span>{{listClass}}</span>
+			<svg-icon src="YOUR_ICON"></svg-icon>
+		</div>
+		<div class="{{listClass}} list-secundary">
+			<svg-icon src="YOUR_ICON"></svg-icon>
+			<span>{{listClass}}</span>
+			<svg-icon src="YOUR_ICON"></svg-icon>
+		</div>
+		<div class="{{listClass}} list-tertiary">
+			<svg-icon src="YOUR_ICON"></svg-icon>
+			<span>{{listClass}}</span>
+			<svg-icon src="YOUR_ICON"></svg-icon>
+		</div>
+		{% endset %}
+	{% else %}
+		<div class="p-16">
+			<div class="{{listClass}}">
+				<span>{{listClass}}</span>
+			</div>
+			<div class="{{listClass}} list-secundary">
+				<span>{{listClass}}</span>
+			</div>
+			<div class="{{listClass}} list-tertiary">
+				<span>{{listClass}}</span>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="{{listClass}}">
+			<span>{{listClass}}</span>
+		</div>
+		{% endset %}
+	{% endif %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
+
+{% macro baseTooltip(tooltipType = '', explicacion = '') %}
+
+<h3>{{ tooltipType }}</h3>
+<p class="p-s">{{ explicacion }}</p>
+{% if tooltipType === "tooltip-*dir*" %}
+	<p>
+		<code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
+	<p>
+		<code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
+	<p>
+		<code>tooltip-bl</code>Expande el tooltip hacia bottom-left</p>
+	<p>
+		<code>tooltip-br</code>Expande el tooltip hacia bottom-right</p>
+{% endif %}
+<div class="resize-mini mt-16">
+	<div class="resize-mini-content">
+		{% if tooltipType === "tooltip-sm" %}
+			<div class="container-6 align-center mb-64 height-sm">
+				<div class="has-tooltip">
+					<svg-icon src="question" class="cursor-pointer">
+						<div>
+							<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885ZM8.5428 5.81204C7.86689 5.69939 7.1896 5.83636 6.85355 6.1724C6.65829 6.36766 6.34171 6.36767 6.14645 6.1724C5.95118 5.97714 5.95118 5.66056 6.14645 5.4653C6.8104 4.80134 7.88311 4.6883 8.7072 4.82565C9.13265 4.89655 9.55091 5.042 9.87701 5.2662C10.1983 5.48705 10.5 5.83901 10.5 6.31884C10.5 6.86526 10.4134 7.27267 10.134 7.60015C10.0061 7.75008 9.85652 7.86026 9.71868 7.95203C9.65389 7.99517 9.58468 8.0387 9.51742 8.081L9.50341 8.08982C9.42993 8.13605 9.35541 8.18309 9.27637 8.23552C9.00633 8.41463 8.80604 8.64453 8.67473 8.86262C8.53574 9.09345 8.5 9.266 8.5 9.31884C8.5 9.59498 8.27614 9.81884 8 9.81884C7.72386 9.81884 7.5 9.59498 7.5 9.31884C7.5 9.01873 7.62609 8.66558 7.81802 8.3468C8.01763 8.01529 8.31734 7.67165 8.72363 7.40217C8.81367 7.34244 8.89722 7.28975 8.97089 7.2434L8.98116 7.23694C9.05207 7.19233 9.11089 7.15533 9.16447 7.11965C9.27755 7.04436 9.33572 6.99508 9.37326 6.95108C9.42477 6.89071 9.5 6.77242 9.5 6.31884C9.5 6.29868 9.48923 6.21313 9.31049 6.09024C9.13659 5.97068 8.86735 5.86613 8.5428 5.81204ZM8 11.3188C8.27614 11.3188 8.5 11.5427 8.5 11.8188V12.3188C8.5 12.595 8.27614 12.8188 8 12.8188C7.72386 12.8188 7.5 12.595 7.5 12.3188V11.8188C7.5 11.5427 7.72386 11.3188 8 11.3188Z" fill="#292929"></path>
+							</svg>
+						</div>
+					</svg-icon>
+					{% call tooltip('tooltip-sm','true') %}{% endcall %}
+				</div>
+			</div>
+		{% elif tooltipType === "tooltip-*dir*" %}
+			<div class="container-6 align-center height-md">
+				<div class="row">
+					<div class="col-xs-12 is-flex">
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-tl</p>
+							{% call tooltip('tooltip-sm tooltip-tl','') %}{% endcall %}
+						</div>
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-tr</p>
+							{% call tooltip('tooltip-sm tooltip-tr','') %}{% endcall %}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 is-flex">
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-bl</p>
+							{% call tooltip('tooltip-sm tooltip-bl','') %}{% endcall %}
+						</div>
+						<div class="has-tooltip mx-16">
+							<p class="p-s cursor-pointer">tooltip-br</p>
+							{% call tooltip('tooltip-sm tooltip-br','') %}{% endcall %}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	{% set standardcode %}
+	{% if tooltipType === "tooltip-sm" %}
+		<div class="has-tooltip">
+			<svg-icon src='question' class="cursor-pointer"></svg-icon>
+			<div class="tooltip-sm">
+				<div class="is-flex">
+					<svg-icon src="credit-card"></svg-icon>
+					<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+				</div>
+				<div class="close">
+					<svg-icon src="close-s"></svg-icon>
+				</div>
+			</div>
+		</div>
+	{% elif tooltipType === "tooltip-*dir*" %}
+		<div class="has-tooltip">
+			<p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
+			<div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
+				<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+				<div class="close">
+					<svg-icon src="close-s"></svg-icon>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+</div>
+{% endmacro %}
+
+{% macro banner(bannerClass = '', descipcion = '') %}
+<h3 class="mb-24">{{bannerClass}}</h3>
+<p class="mb-32">{{descipcion}}</p>
+<div class="resize-mini">
+	<div class="resize-mini-content {{dark  }} ">
+		<div class="container-6">
+			<div class="row">
+				<div class="col-xs-12  text-center">
+					{% if bannerClass === "marketing-spot" %}
+						<div class="{{ bannerClass }}">
+							{% call svgIconname('plus') %}
+							{% endcall %}
+							<span>{{ bannerClass }} Lorem ipsum dolor sit amet, cambios en
+									consectum adipisicing elit. Vel alias repellendus iusto assumenda
+									praesentium totam necessitatibus ratione fugit culpa sint nemo
+									placeat vitae laudantium aliquam minus, odio tempora corporis.
+									Sunt!</span>
+						</div>
+						{% set standardcode %}
+						<span class="{{ bannerClass }}">{{ bannerClass }} aaaaa</span>{%
+							endset%}
+					{% elif bannerClass === "banner-cookies" %}
+						<div class="container-fluid">
+							<div class="row is-flex align-middle">
+								<div class="col-xs-12">
+									<div class="{{ bannerClass }} p-body w-100 xs:text-center">
+										<div class="col-xs-12 col-sm-6 mdmax:mb-16">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+												commodi, veritatis qui repellendus eius .
+											</div>
+										<div class="col-xs-12 col-sm-6 is-flex banner-cookies-btn  ">
+											<button class="link-line p-xs m-16 ">
+													Boton link uno
+												</button>
+											<button class="btn btn-primary btn--full">Boton dos de cookies</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% set standardcode %}
+						<span class="{{ bannerClass }}">{{ bannerClass }} bbbbbbb</span>{%
+							endset%}
+						{% else%}
+						<span class="{{ bannerClass }}">{{ bannerClass }} Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Vel alias repellendus iusto assumenda praesentium
+								totam necessitatibus</span>
+						{% set standardcode %}
+						<span class="{{ bannerClass }}">{{ bannerClass }} ccccccc</span>{%
+							endset%}
+						{%endif%}
+					</div>
+				</div>
+			</div>
+		</div>
+		<pre>
+      <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+         </code>
+    </pre>
+	</div>
+{% endmacro %}
+
+{% macro svgIconname(icoName = '') %}
+	{% if icoName == 'globe' %}
+		<svg-icon>
+			<div>
+				<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885Z"
+				fill="#292929"/>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M6.48105 2.01307C6.90284 1.5968 7.4167 1.31885 8 1.31885H8.5V2.31885H8C7.75487 2.31885 7.47952 2.43265 7.18348 2.72482C6.88529 3.01911 6.59382 3.46974 6.33825 4.06606C5.82788 5.25692 5.5 6.93694 5.5 8.81885C5.5 10.7008 5.82788 12.3808 6.33825 13.5716C6.59382 14.168 6.88529 14.6186 7.18348 14.9129C7.47952 15.205 7.75487 15.3188 8 15.3188H8.5V16.3188H8C7.4167 16.3188 6.90284 16.0409 6.48105 15.6246C6.06141 15.2105 5.70643 14.636 5.41911 13.9656C4.84369 12.6229 4.5 10.8029 4.5 8.81885C4.5 6.83476 4.84369 5.01478 5.41911 3.67214C5.70643 3.00171 6.06141 2.42722 6.48105 2.01307Z"
+				fill="#292929"/>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M9.51895 2.01307C9.09716 1.5968 8.5833 1.31885 8 1.31885H7.5V2.31885H8C8.24513 2.31885 8.52048 2.43265 8.81652 2.72482C9.11471 3.01911 9.40618 3.46974 9.66175 4.06606C10.1721 5.25692 10.5 6.93694 10.5 8.81885C10.5 10.7008 10.1721 12.3808 9.66175 13.5716C9.40618 14.168 9.11471 14.6186 8.81652 14.9129C8.52048 15.205 8.24513 15.3188 8 15.3188H7.5V16.3188H8C8.5833 16.3188 9.09716 16.0409 9.51895 15.6246C9.93859 15.2105 10.2936 14.636 10.5809 13.9656C11.1563 12.6229 11.5 10.8029 11.5 8.81885C11.5 6.83476 11.1563 5.01478 10.5809 3.67214C10.2936 3.00171 9.93859 2.42722 9.51895 2.01307Z"
+				fill="#292929"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15 9.31885H1V8.31885H15V9.31885Z" fill="#292929"/>
+				</svg>
+			</div>
+		</svg-icon>
+	{% endif %}
+	{% if icoName == 'plus' %}
+		<svg-icon>
+			<div>
+				<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M3.5 8.56149L7.74264 8.56149L7.74264 4.31885L8.74264 4.31885L8.74264 8.56149L12.9853 8.56149V9.56149L8.74264 9.56149L8.74264 13.8041L7.74264 13.8041L7.74264 9.56149L3.5 9.56149V8.56149Z"
+				fill="#292929"/>
+				</svg>
+			</div>
+		</svg-icon>
+	{% endif %}
+	{% if icoName == 'arrow-right' %}
+		<svg-icon>
+			<div>
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10.752 13.3391L10.0172 12.6609L13.858 8.5L-3.8147e-06 8.5L-3.8147e-06 7.5L13.858 7.5L10.0172 3.33914L10.752 2.66086L15.6805 8L10.752 13.3391Z"
+				fill="#292929"/>
+				</svg>
+			</div>
+		</svg-icon>
+	{% endif %}
+	{% if icoName == 'shopping-bag' %}
+		<svg-icon>
+			<div>
+				<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M6.65628 1.77402C7.08185 1.59323 7.53842 1.5 7.99983 1.5C8.46124 1.5 8.91782 1.59323 9.34339 1.77402C9.76893 1.95481 10.1547 2.21943 10.4792 2.55216C10.8035 2.88486 11.0602 3.27915 11.2351 3.7122C11.3376 3.96603 11.4109 4.2304 11.454 4.5H12.1092C13.3955 4.5 14.4719 5.47616 14.5973 6.75641L15.1751 12.659C15.3766 14.7169 13.7596 16.5 11.6918 16.5H4.30788C2.24011 16.5 0.623061 14.7169 0.824538 12.659L1.40241 6.75641C1.52775 5.47617 2.60415 4.5 3.89052 4.5H4.54566C4.58877 4.2304 4.66206 3.96603 4.76458 3.7122C4.93947 3.27915 5.19613 2.88486 5.52051 2.55216C5.84492 2.21943 6.23074 1.95481 6.65628 1.77402ZM4.49983 5.5V7C4.49983 7.27614 4.72369 7.5 4.99983 7.5C5.27598 7.5 5.49983 7.27614 5.49983 7V5.5H10.4998V7C10.4998 7.27614 10.7237 7.5 10.9998 7.5C11.276 7.5 11.4998 7.27614 11.4998 7V5.5H12.1092C12.881 5.5 13.5268 6.0857 13.602 6.85385L14.1799 12.7564C14.3238 14.2264 13.1688 15.5 11.6918 15.5H4.30788C2.8309 15.5 1.67587 14.2264 1.81978 12.7564L2.39765 6.85385C2.47286 6.0857 3.1187 5.5 3.89052 5.5H4.49983ZM10.4364 4.5H5.5633C5.59472 4.35904 5.63766 4.22076 5.69181 4.08667C5.81845 3.7731 6.00374 3.489 6.23651 3.25026C6.46926 3.01155 6.74487 2.82289 7.04729 2.69441C7.34968 2.56595 7.67331 2.5 7.99983 2.5C8.32636 2.5 8.64999 2.56595 8.95238 2.69441C9.25479 2.82289 9.53041 3.01155 9.76315 3.25026C9.99592 3.489 10.1812 3.7731 10.3079 4.08667C10.362 4.22076 10.4049 4.35904 10.4364 4.5Z"
+				fill="#292929"></path>
+				</svg>
+			</div>
+		</svg-icon>
+	{% endif %}
+{% endmacro %}
+
+{% macro links(links = '', explicacion = '', svg = '', dark = '') %}
+	<p class="p-xs mt-32">{{ explicacion }}</p>
+	<br>
+
+	<div class="resize-mini">
+		<div class="resize-mini-content  ">
+			<div class="container-fluid w-100">
+				<div class="row">
+					<div class="col-xs-6 text-center pt-40 pb-40 ">
+						{% if svg == '' %}
+							<a class="mb-16  {{ links  }} " href="">
+								{{ links }}
+							</a>
+						{% elif svg == 'btn' %}
+							<a class="mb-16  {{ links  }} " href="">
+								{{ links }}
+							</a>
+						{% elif svg == 'post' %}
+							<a class="mb-16 link-line {{ links  }} " href="">
+								{{ links }}
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+							</a>
+						{% elif svg =='is-error' %}
+							<a class="mb-16 link-raw {{ links  }} " href="">
+								{{ links }}
+							</a>
+							<br>
+							<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+								{{ links }}
+							</a>
+						{% else %}
+							<a class="mb-16 link-line {{ links  }} " href="">
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+								{{ links }}
+							</a>
+						{% endif %}
+					</div>
+					<div class="col-xs-6 text-center  has-light bg-dark pt-40 pb-40 ">
+						{% if svg == '' %}
+							<a class="mb-16  {{ links  }} " href="">
+								{{ links }}
+							</a>
+						{% elif svg == 'btn' %}
+							<a class="mb-16  {{ links  }} " href="">
+								{{ links }}
+							</a>
+						{% elif svg == 'post' %}
+							<a class="mb-16 link-line {{ links  }} " href="">
+								{{ links }}
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+							</a>
+						{% elif svg =='is-error' %}
+							<a class="mb-16 link-raw {{ links  }} " href="">
+								{{ links }}
+							</a>
+							<br>
+							<a class="mb-16 link-line link-svg-pre {{ links  }} " href="">
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+								{{ links }}
+							</a>
+						{% else %}
+							<a class="mb-16 link-line {{ links  }} " href="">
+								<svg-icon>
+									<div>
+										<svg width="16px" height="16px">
+											<circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+										</svg>
+									</div>
+								</svg-icon>
+								{{ links }}
+							</a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% set standardcode %}
+		<a class="mb-16  {{ links  }} " href="">
+			{{ links }}
+		</a>
+		{% endset%}
+		<pre>
+    <button class="btn btncode" data-clipboard-target="#{{buttonName}}">
+    <img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"></button >
+	<code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}  
+        </code>
+    </pre>
+	</div>
+{% endmacro %}
+
+{% macro svgIconSize(size = '') %}
+	<svg-icon>
+		<div>
+			<svg class="{{size}}" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+				fill="#292929"/>
+			</svg>
+		</div>
+	</svg-icon>
+{% endmacro %}
+
+{% macro simple(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+	<p class="p-m">
+		<span class="bold mr-8"> .btn-{{buttonName }}
+		</span>
+		{{ explicacion | capitalize }}
+	</p>
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<div class="container-3">
+				<div class="row">
+					<div class="col-xs-6">
+						<button class=" btn-{{buttonName }} btn btn--small"> btn</button>
+						<button class=" btn-{{buttonName }} btn btn--small hover">hover</button>
+						<button disabled class=" btn-{{buttonName }} btn btn--small">disabled</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<button class='{{buttonName }} '>{{buttonName }}
+		</button>{% endset %}
+		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+	</div>
+{% endmacro %}
+
+{% macro animation(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+	<p class="p-m">
+		<span class="bold mr-8"> .btn-{{buttonName }}
+		</span>
+		{{ explicacion | capitalize }}
+	</p>
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<div class="container-6">
+				<div class="row">
+					<div class="col-xs-12 mb-16">
+						<button  class="btn  btn-primary btn--full btn-anim  ">
+							<span class="btn-submit  ">
+								{{buttonName }}
+							</span>
+							<span class="btn-loading">
+								<svg-icon>
+									<div>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.88724 1.96002C6.73363 1.62705 7.62672 1.47473 8.51612 1.50341C9.29365 1.52848 10.0674 1.69186 10.8037 1.99276C11.7628 2.3847 12.6172 2.99307 13.3131 3.76374C13.7625 4.26144 14.1459 4.82691 14.449 5.44586L13.551 5.88574C13.2885 5.34981 12.9574 4.86196 12.5709 4.43391C11.9723 3.77107 11.2412 3.25181 10.4254 2.91845C9.79919 2.66253 9.14263 2.52413 8.48388 2.50289C7.73045 2.47859 6.97291 2.60751 6.25333 2.8906C5.65441 3.12622 5.09961 3.46164 4.60769 3.88064C4.07918 4.3308 3.62326 4.87746 3.26384 5.5L6.16621 5.5V6.5L1.5 6.5L1.5 1.61775L2.5 1.61775L2.5 4.82843C2.89898 4.17871 3.39211 3.60243 3.95926 3.11936C4.53323 2.63048 5.18301 2.23707 5.88724 1.96002Z" fill="#292929"/>
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1128 14.04C9.33084 14.3476 8.50902 14.501 7.68702 14.5C6.84141 14.4989 5.99675 14.3344 5.19628 14.0072C4.52307 13.7321 3.90138 13.3503 3.34993 12.8806C2.60851 12.2491 1.99405 11.4587 1.55097 10.5541L2.44903 10.1143C2.8327 10.8976 3.36285 11.5781 3.99836 12.1194C4.47098 12.5219 5.00187 12.8475 5.57456 13.0816C6.25531 13.3597 6.97194 13.4991 7.68829 13.5C8.38466 13.5009 9.08184 13.3709 9.74667 13.1094C10.4544 12.831 11.1005 12.4132 11.6541 11.8828C12.0723 11.4821 12.4375 11.0173 12.7362 10.5H9.83379V9.5H14.5V14.3822H13.5V11.1716C13.1744 11.7018 12.786 12.1832 12.3459 12.6049C11.7011 13.2227 10.945 13.7126 10.1128 14.04Z" fill="#292929"/>
+										</svg>
+									</div>
+								</svg-icon>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<button  class="btn  btn-primary btn--full btn-anim  ">
+			<span class="btn-submit  ">
+				{{buttonName }}
+			</span>
+			<span class="btn-loading">
+				<svg-icon>
+					<div>
+						<svg width='16px' height='16px' viewBox='0 0 16 16'>
+							<g transform='translate(0, 0)'>
+								<circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'></circle>
+							</g>
+						</svg>
+					</div>
+				</svg-icon>
+			</span>
+		</button>
+		{% endset %}
+		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+	</div>
+{% endmacro %}
+
+{% macro animationsvg(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+	<p class="p-m">
+		<span class="bold mr-8"> .btn-{{buttonName }}
+		</span>
+		{{ explicacion | capitalize }}
+	</p>
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<div class="container-6">
+				<div class="row">
+					<div class="col-xs-12 mb-16">
+						<button  class="btn  btn-primary btn--full btn-anim  ">
+							<span class="btn-submit has-ico-center ">
+  Submit
+            </span>
+							<span class="btn-loading">
+								<svg-icon>
+									<div>
+										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.88724 1.96002C6.73363 1.62705 7.62672 1.47473 8.51612 1.50341C9.29365 1.52848 10.0674 1.69186 10.8037 1.99276C11.7628 2.3847 12.6172 2.99307 13.3131 3.76374C13.7625 4.26144 14.1459 4.82691 14.449 5.44586L13.551 5.88574C13.2885 5.34981 12.9574 4.86196 12.5709 4.43391C11.9723 3.77107 11.2412 3.25181 10.4254 2.91845C9.79919 2.66253 9.14263 2.52413 8.48388 2.50289C7.73045 2.47859 6.97291 2.60751 6.25333 2.8906C5.65441 3.12622 5.09961 3.46164 4.60769 3.88064C4.07918 4.3308 3.62326 4.87746 3.26384 5.5L6.16621 5.5V6.5L1.5 6.5L1.5 1.61775L2.5 1.61775L2.5 4.82843C2.89898 4.17871 3.39211 3.60243 3.95926 3.11936C4.53323 2.63048 5.18301 2.23707 5.88724 1.96002Z" fill="#292929"/>
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1128 14.04C9.33084 14.3476 8.50902 14.501 7.68702 14.5C6.84141 14.4989 5.99675 14.3344 5.19628 14.0072C4.52307 13.7321 3.90138 13.3503 3.34993 12.8806C2.60851 12.2491 1.99405 11.4587 1.55097 10.5541L2.44903 10.1143C2.8327 10.8976 3.36285 11.5781 3.99836 12.1194C4.47098 12.5219 5.00187 12.8475 5.57456 13.0816C6.25531 13.3597 6.97194 13.4991 7.68829 13.5C8.38466 13.5009 9.08184 13.3709 9.74667 13.1094C10.4544 12.831 11.1005 12.4132 11.6541 11.8828C12.0723 11.4821 12.4375 11.0173 12.7362 10.5H9.83379V9.5H14.5V14.3822H13.5V11.1716C13.1744 11.7018 12.786 12.1832 12.3459 12.6049C11.7011 13.2227 10.945 13.7126 10.1128 14.04Z" fill="#292929"/>
+										</svg>
+									</div>
+								</svg-icon>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<button id='btnAddToCart'
+    class='btn  btn-primary btn--full btn-anim  '>
+			<span class='btn-submit has-ico-center '>
+				<svg-icon>
+					<div>
+						<svg width='16px' height='16px' viewBox='0 0 16 16'>
+							<g transform='translate(0, 0)'>
+								<circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'></circle>
+							</g>
+						</svg>
+					</div>
+				</svg-icon> Submit
+    </span>
+			<span class='btn-loading'>
+				<svg-icon>
+					<div>
+						<svg width='16px' height='16px' viewBox='0 0 16 16'>
+							<g transform='translate(0, 0)'>
+								<circle fill='none' stroke='#ffffff' cx='8' cy='8' r='6'></circle>
+							</g>
+						</svg>
+					</div>
+				</svg-icon>
+			</span>
+		</button>{% endset %}
+		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+	</div>
+{% endmacro %}
+
+{% macro svg(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+
+	<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
+	</p>
+
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<button class=" {{buttonName }} btn  btn--small">
+				<svg-icon class="{% if buttonName=='has-ico-pre btn-primary' %} ico-pre {% else %}  ico-post {% endif %}">
+					<div>
+						<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                    fill="#292929"/>
+						</svg>
+					</div>
+				</svg-icon>
+      .btn .{{buttonName }}</button>
+		</div>
+		{% set standardcode %}
+		<button class='btn {{buttonName }}'>
+			<svg-icon class="{% if buttonName=='has-ico-pre' %} ico-pre{% else %}ico-post{% endif %}">
+				<div>
+					<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                  fill="#292929"/>
+					</svg>
+				</div>
+			</svg-icon>    
+    btn-{{buttonName }}
+		</button>{% endset %}
+		<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+	</div>
+{% endmacro %}
+
+{% macro iconClear(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+
+	<p class="p-m">
+		{{buttonName }} : {{ explicacion }}
+	</p>
+
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<button class=" btn {{buttonName}}">
+				<svg-icon class="">
+					<div>
+						<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                    fill="#292929"/>
+						</svg>
+					</div>
+				</svg-icon>
+			</button>
+		</div>
+		{% set standardcode %}
+		<button class='btn {{buttonName }}'>
+			<svg-icon class="">
+				<div>
+					<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.86667 2.31885C2.67809 2.31885 2.50554 2.42496 2.42045 2.59326L0.553788 6.28557C0.463354 6.46445 0.488486 6.68005 0.617642 6.83333L7.61764 15.141C7.71264 15.2538 7.85257 15.3188 8.00001 15.3188C8.14744 15.3188 8.28737 15.2538 8.38237 15.141L15.3824 6.83333C15.5115 6.68005 15.5367 6.46445 15.4462 6.28557L13.5796 2.59326C13.4945 2.42496 13.3219 2.31885 13.1333 2.31885H2.86667ZM1.59536 6.44175L3.17416 3.31885H12.8259L14.4047 6.44175L8.00001 14.0429L1.59536 6.44175ZM5 6.31885C4.72386 6.31885 4.5 6.54271 4.5 6.81885C4.5 7.09499 4.72386 7.31885 5 7.31885L11 7.31885C11.2761 7.31885 11.5 7.09499 11.5 6.81885C11.5 6.54271 11.2761 6.31885 11 6.31885L5 6.31885Z"
+                  fill="#292929"/>
+					</svg>
+				</div>
+			</svg-icon>
+		</button>{% endset %}
+		<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+	</div>
+{% endmacro %}
+
+{% macro social(buttonName = '', svgsolo = '', explicacion = '', placeholder = '', dark = '') %}
+
+	<p class="p-s p-8">
+		{{buttonName }} : {{ explicacion }}
+	</p>
+
+	<div class="">
+		<div class=" is-flex ">
+
+			<button class=" {{buttonName }} btn btn-social  btn--medium">
+				<svg-icon >
+					<div>
+						{{ svgsolo  | safe }}
+					</div>
+				</svg-icon>
+				{{placeholder }}
+			</button>
+
+			<button class=" {{buttonName }} btn btn-social  btn--medium hover">
+				<svg-icon >
+					<div>
+						{{ svgsolo  | safe }}
+					</div>
+				</svg-icon>
+				{{placeholder }}
+			</button>
+
+			<button class=" {{buttonName }} btn btn-social  btn--medium disabled">
+				<svg-icon >
+					<div>
+						{{ svgsolo  | safe }}
+					</div>
+				</svg-icon>
+				{{placeholder }}
+			</button>
+
+		</div>
+
+	</div>
+{% endmacro %}
+
+{% macro btnDistribution(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+
+	<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
+	</p>
+
+	{% if buttonName == 'btn-separate'%}
+		<div class="resize-mini">
+			<div class="resize-mini-content {{dark  }} ">
+				<button class="btn btn-primary btn--medium {{buttonName }}">
+					<span>{{buttonName }}</span>
+					<svg-icon>
+						<div>
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M11.0455 14.1862C10.8426 13.9989 10.8299 13.6826 11.0172 13.4797L14.858 9.31885L1 9.31885C0.723858 9.31885 0.5 9.09499 0.5 8.81885C0.5 8.5427 0.723858 8.31885 1 8.31885L14.858 8.31885L11.0172 4.15798C10.8299 3.95507 10.8426 3.63875 11.0455 3.45144C11.2484 3.26414 11.5647 3.27679 11.752 3.4797L16.3674 8.47971C16.5442 8.67124 16.5442 8.96645 16.3674 9.15799L11.752 14.158C11.5647 14.3609 11.2484 14.3735 11.0455 14.1862Z" fill="#292929"></path>
+							</svg>
+						</div>
+					</svg-icon>
+				</button>
+
+			</div>
+			{% set standardcode %}
+			<button class="btn btn-primary btn--medium {{buttonName }}">
+				<span>{{buttonName }}</span>
+				<svg-icon src="YOUR_ICON"></svg-icon>
+			</button>
+			{% endset %}
+			<pre><code class="language-markup">{{standardcode}} </code></pre>
+		</div>
+
+	{% endif %}
+
+	{% if buttonName == 'btn-world'%}
+		<div class="resize-mini">
+			<div class="resize-mini-content {{dark  }} ">
+
+				<button class="btn btn--large btn-world">
+					<div class="btn-world-left">
+						{% call insert.svgIconname('globe') %}
+						{% endcall %}
+					</div>
+					<div class="btn-world-center"> HONG KONG SAR | 香港特別行政區香港特別行政區 (English)</div>
+					<div class="btn-world-right">
+						{% call insert.svgIconname('arrow-right') %}
+						{% endcall %}
+					</div>
+				</button>
+
+			</div>
+
+			{% set standardcode %}
+
+			<button class="btn btn--large btn-world">
+				<div class="btn-world-left">
+					<svg-icon src="YOUR_ICON"></svg-icon>
+				</div>
+				<div class="btn-world-center"> HONG KONG SAR | 香港特別行政區香港特別行政區 (English)</div>
+				<div class="btn-world-right">
+					<svg-icon src="YOUR_ICON"></svg-icon>
+				</div>
+			</button>
+
+			{% endset %}
+
+			<pre><code class="language-markup">{{standardcode}} </code></pre>
+		</div>
+	{% endif %}
+
+{% endmacro %}
+
+{% macro square(buttonName = '', explicacion = '', dark = '') %}
+	<h3>{{ buttonName | capitalize }}
+	</h3>
+
+	<p class="p-m">
+		<span class="bold mr-8">   .btn--{{buttonName }}
+		</span>
+		{{ explicacion | capitalize }}
+	</p>
+
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<div class="container-3">
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="row">
+							<div class="col-xs-12 mb-16 mt-16">
+								<button class=" btn--{{buttonName }} btn btn--full"> Enabled</button>
+							</div>
+							<div class="col-xs-12 mb-16">
+								<button class=" btn--{{buttonName }} btn btn--full hover">Hover</button>
+							</div>
+							<div class="col-xs-12 mb-16">
+								<button disabled class=" btn--{{buttonName }} btn btn--full">Disabled</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 has-light bg-primary">
+						<div class="row">
+							<div class="col-xs-12 mb-16 mt-16">
+								<button class=" btn--{{buttonName }} btn btn--full"> Enabled</button>
+							</div>
+							<div class="col-xs-12 mb-16">
+								<button class=" btn--{{buttonName }} btn btn--full hover">Hover</button>
+							</div>
+							<div class="col-xs-12 mb-16">
+								<button disabled class=" btn--{{buttonName }} btn btn--full">Disabled</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		{% set standardcode %}
+		<button class='btn btn--{{buttonName }} btn--full'>btn--{{buttonName }}
+		</button>{% endset %}
+
+		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+
+	</div>
+{% endmacro %}
+
+{% macro button(buttonNames = [], explicacion = '', dark = '') %}
+
+	<div class="resize-mini">
+		<div class="resize-mini-content {{dark  }} ">
+			<div class="container-3">
+				<div class="row">
+					<div class="col-xs-12 p-xs p-16">Primary</div>
+					<div class="col-xs-12">
+						{% for buttonName in buttonNames %}
+							<button class=" {% if buttonName == 'link-line'  %} link-line {% elif buttonName == 'link-raw'  %} link-raw {% else %}    btn btn-{{buttonName}} {% endif %}    ">
+								{{buttonName}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 p-xs p-16">hover</div>
+					<div class="col-xs-12hover ">
+
+						{% for buttonName in buttonNames %}
+							<button class=" {% if buttonName == 'link-line'  %} link-line hover {% elif buttonName == 'link-raw'  %} link-raw hover {% else %}    btn btn-{{buttonName}}  hover {% endif %}    ">
+								{{buttonName}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 p-xs p-16">disabled</div>
+					<div class="col-xs-12disabled ">
+
+						{% for buttonName in buttonNames %}
+
+							<button class=" {% if buttonName == 'link-line'  %} link-line disabled {% elif buttonName == 'link-raw'  %} link-raw disabled {% else %}    btn btn-{{buttonName}}  disabled {% endif %}    ">
+								{{buttonName}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="row has-light bg-primary">
+					<div class="col-xs-12 p-xs p-16">has-light primary</div>
+					<div class="col-xs-12 ">
+						{% for buttonName in buttonNames %}
+							<button class=" {% if buttonName == 'link-line'  %} link-line {% elif buttonName == 'link-raw'  %} link-raw {% else %}    btn btn-{{buttonName}} {% endif %}    ">
+								{{buttonName}}
+							</button>
+
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="row has-light bg-primary">
+					<div class="col-xs-12 p-xs p-16">has-light hover</div>
+					<div class="col-xs-12 ">
+						{% for buttonName in buttonNames %}
+							<button class=" {% if buttonName == 'link-line'  %} link-line hover {% elif buttonName == 'link-raw'  %} link-raw hover {% else %}    btn btn-{{buttonName}}  hover {% endif %}    ">
+								{{buttonName}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="row has-light bg-primary">
+					<div class="col-xs-12 p-xs p-16">has-light disabled</div>
+					<div class="col-xs-12 ">
+						{% for buttonName in buttonNames %}
+							<button class=" {% if buttonName == 'link-line'  %} link-line disabled {% elif buttonName == 'link-raw'  %} link-raw disabled {% else %}    btn btn-{{buttonName}}  disabled {% endif %}    ">
+								{{buttonName}}
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+		{% set standardcode %}
+		{% for buttonName in buttonNames %}
+			<button class="btn btn-{{buttonName}}  btn--small">{{buttonName}}</button>
+		{% endfor %}{% endset %}
+		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
+	</div>
+{% endmacro %}
+
+{% macro baseTooltip(tooltipType = '', explicacion = '') %}
+
+	<h3>{{ tooltipType }}</h3>
+	<p class="p-s">{{ explicacion }}</p>
+	{% if tooltipType === "tooltip-*dir*" %}
+		<p>
+			<code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
+		<p>
+			<code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
+		<p>
+			<code>tooltip-bl</code>Expande el tooltip hacia bottom-left</p>
+		<p>
+			<code>tooltip-br</code>Expande el tooltip hacia bottom-right</p>
+	{% endif %}
+	<div class="resize-mini mt-16">
+	<div class="code-view ">
+		<div class="check-new"></div>
+			{% if tooltipType === "tooltip-sm" %}
+				<div class="container-6 align-center mb-64 height-sm">
+					<div class="has-tooltip">
+						<svg-icon src="question" class="cursor-pointer">
+							<div>
+								<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885ZM8.5428 5.81204C7.86689 5.69939 7.1896 5.83636 6.85355 6.1724C6.65829 6.36766 6.34171 6.36767 6.14645 6.1724C5.95118 5.97714 5.95118 5.66056 6.14645 5.4653C6.8104 4.80134 7.88311 4.6883 8.7072 4.82565C9.13265 4.89655 9.55091 5.042 9.87701 5.2662C10.1983 5.48705 10.5 5.83901 10.5 6.31884C10.5 6.86526 10.4134 7.27267 10.134 7.60015C10.0061 7.75008 9.85652 7.86026 9.71868 7.95203C9.65389 7.99517 9.58468 8.0387 9.51742 8.081L9.50341 8.08982C9.42993 8.13605 9.35541 8.18309 9.27637 8.23552C9.00633 8.41463 8.80604 8.64453 8.67473 8.86262C8.53574 9.09345 8.5 9.266 8.5 9.31884C8.5 9.59498 8.27614 9.81884 8 9.81884C7.72386 9.81884 7.5 9.59498 7.5 9.31884C7.5 9.01873 7.62609 8.66558 7.81802 8.3468C8.01763 8.01529 8.31734 7.67165 8.72363 7.40217C8.81367 7.34244 8.89722 7.28975 8.97089 7.2434L8.98116 7.23694C9.05207 7.19233 9.11089 7.15533 9.16447 7.11965C9.27755 7.04436 9.33572 6.99508 9.37326 6.95108C9.42477 6.89071 9.5 6.77242 9.5 6.31884C9.5 6.29868 9.48923 6.21313 9.31049 6.09024C9.13659 5.97068 8.86735 5.86613 8.5428 5.81204ZM8 11.3188C8.27614 11.3188 8.5 11.5427 8.5 11.8188V12.3188C8.5 12.595 8.27614 12.8188 8 12.8188C7.72386 12.8188 7.5 12.595 7.5 12.3188V11.8188C7.5 11.5427 7.72386 11.3188 8 11.3188Z" fill="#292929"></path>
+								</svg>
+							</div>
+						</svg-icon>
+						{% call tooltip('tooltip-sm','true') %}{% endcall %}
+					</div>
+				</div>
+			{% elif tooltipType === "tooltip-*dir*" %}
+				<div class="container-6 align-center height-md">
+					<div class="row">
+						<div class="col-xs-12 is-flex">
+							<div class="has-tooltip mx-16">
+								<p class="p-s cursor-pointer">tooltip-tl</p>
+								{% call tooltip('tooltip-sm tooltip-tl','') %}{% endcall %}
+							</div>
+							<div class="has-tooltip mx-16">
+								<p class="p-s cursor-pointer">tooltip-tr</p>
+								{% call tooltip('tooltip-sm tooltip-tr','') %}{% endcall %}
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 is-flex">
+							<div class="has-tooltip mx-16">
+								<p class="p-s cursor-pointer">tooltip-bl</p>
+								{% call tooltip('tooltip-sm tooltip-bl','') %}{% endcall %}
+							</div>
+							<div class="has-tooltip mx-16">
+								<p class="p-s cursor-pointer">tooltip-br</p>
+								{% call tooltip('tooltip-sm tooltip-br','') %}{% endcall %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+		{% set standardcode %}
+		{% if tooltipType === "tooltip-sm" %}
+			<div class="has-tooltip">
+				<svg-icon src='question' class="cursor-pointer"></svg-icon>
+				<div class="tooltip-sm">
+					<div class="is-flex">
+						<svg-icon src="credit-card"></svg-icon>
+						<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+					</div>
+					<div class="close">
+						<svg-icon src="close-s"></svg-icon>
+					</div>
+				</div>
+			</div>
+		{% elif tooltipType === "tooltip-*dir*" %}
+			<div class="has-tooltip">
+				<p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
+				<div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
+					<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+					<div class="close">
+						<svg-icon src="close-s"></svg-icon>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		{% endset %}
+		<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+	</div>
+{% endmacro %}
+
+{% macro tooltip(tooltipClass = '', hasIcon = '') %}
+	<div class="{{ tooltipClass }}">
+		<div class="is-flex">
+			{% if hasIcon === "true" %}
+				<svg-icon src="credit-card">
+					<div>
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.93333 4.5C1.63039 4.5 1.5 4.70251 1.5 4.81818V6.2H14.5V4.81818C14.5 4.70251 14.3696 4.5 14.0667 4.5H1.93333ZM15.5 4.81818C15.5 4.03058 14.7941 3.5 14.0667 3.5H1.93333C1.20587 3.5 0.5 4.03058 0.5 4.81818V12.1818C0.5 12.9694 1.20587 13.5 1.93333 13.5H14.0667C14.7941 13.5 15.5 12.9694 15.5 12.1818V4.81818ZM14.5 7.2H1.5V12.1818C1.5 12.2975 1.63039 12.5 1.93333 12.5H14.0667C14.3696 12.5 14.5 12.2975 14.5 12.1818V7.2ZM3.5 10.3C3.5 10.0239 3.72386 9.8 4 9.8H7C7.27614 9.8 7.5 10.0239 7.5 10.3C7.5 10.5761 7.27614 10.8 7 10.8H4C3.72386 10.8 3.5 10.5761 3.5 10.3ZM10.5 10.3C10.5 10.0239 10.7239 9.8 11 9.8H12C12.2761 9.8 12.5 10.0239 12.5 10.3C12.5 10.5761 12.2761 10.8 12 10.8H11C10.7239 10.8 10.5 10.5761 10.5 10.3Z" fill="#292929"></path>
+						</svg>
+					</div>
+				</svg-icon>
+			{% endif %}
+			<p class="p-s px-8"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro. </p>
+		</div>
+		<div class="close">
+			<svg-icon src="close-s">
+				<div>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" class="cursor-pointer">
+						<g transform="translate(0, 0)">
+							<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="13.5" y1="2.5" x2="2.5" y2="13.5" data-cap="butt"></line>
+							<line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="2.5" y1="2.5" x2="13.5" y2="13.5" data-cap="butt"></line>
+						</g>
+					</svg>
+				</div>
+			</svg-icon>
+		</div>
+	</div>
+{% endmacro %}
+
+{# TODO JUNTAR MACROS LINKS #}
+{% macro link(elementType = '', explicacion = '', dark = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="code-view">
+		<div class="check-new"></div>
+		<a class="{{ elementType }}" href="">
+			{{ elementType }}
+		</a>
+	</div>
+	{% set standardcode %}
+	<a class="{{ elementType }}" href="">
+		{{ elementType }}
+	</a>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}}</code></pre>
+{% endmacro %}
+
+{% macro linkPost(elementType = '', explicacion = '', dark = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="code-view ">
+		<div class="check-new"></div>
+		<a class="link-line {{ elementType }}" href="">
+			{{ elementType }}
+			<svg-icon src="alert">
+				<div>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+					</svg>
+				</div>
+			</svg-icon>
+		</a>
+	</div>
+	{% set standardcode %}
+	<a class="link-line {{ elementType }}" href="">
+		{{ elementType }}
+		<svg-icon src="alert"></svg-icon>
+	</a>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}}</code></pre>
+{% endmacro %}
+
+{% macro linkPre(elementType = '', explicacion = '', dark = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="code-view ">
+		<div class="check-new"></div>
+		<a class="link-line {{ elementType }}" href="">
+			<svg-icon src="alert">
+				<div>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
+					</svg>
+				</div>
+			</svg-icon>
+			{{ elementType }}
+		</a>
+	</div>
+	{% set standardcode %}
+	<a class="link-line {{ elementType }}" href="">
+		{{ elementType }}
+		<svg-icon src="alert"></svg-icon>
+	</a>
+	{% endset %}
+	<pre><code class="language-markup">{{standardcode}}</code></pre>
+{% endmacro %}
+{# TODO END #}
+
+{# TODO JUNTAR MACROS CHECK #}
+{% macro checkbox(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="checkbox-item-box">
+				<div class="checkbox-item">
+					<input id="checkbox_1" type="checkbox"/>
+					<label for="checkbox_1">
+						<i class="icon">
+							<svg width="16" height="16">
+								<g stroke-width="1">
+									<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+								</g>
+							</svg>
+						</i>
+					</label>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="checkbox-item-box">
+			<div class="checkbox-item">
+				<input id="checkbox_1" type="checkbox"/>
+				<label for="checkbox_1">
+					<i class="icon">
+						<svg width="16" height="16">
+							<g stroke-width="1">
+								<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+							</g>
+						</svg>
+					</i>
+				</label>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro checkboxText(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="checkbox-item">
+				<input id="checkbox_2" type="checkbox">
+				<label for="checkbox_2">
+					<i class="icon">
+						<svg width="16" height="16">
+							<g stroke-width="1">
+								<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+							</g>
+						</svg>
+					</i>
+					<span class="p-xs">
+            checkbox-item <a href="#">legal text</a>
+					</span>
+				</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="checkbox-item">
+			<input id="checkbox_2" type="checkbox">
+			<label for="checkbox_2">
+				<i class="icon">
+					<svg width="16" height="16">
+						<g stroke-width="1">
+							<polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+						</g>
+					</svg>
+				</i>
+				<span class="p-xs">
+            checkbox-item <a href="#">legal text</a>
+				</span>
+			</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro checkbox2(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="checkbox-item-2">
+				<input id="checkbox18" name="checkbox18" type="checkbox" class="ng-valid"/>
+				<label for="checkbox18">
+					<div class="checkbox-circle"></div>
+					<span class="theta">checkbox-item-2</span>
+				</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="checkbox-item-2">
+			<input id="checkbox18" name="checkbox18" type="checkbox" class="ng-valid"/>
+			<label for="checkbox18">
+				<div class="checkbox-circle"></div>
+				<span class="theta">checkbox-item-2</span>
+			</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro checkboxRadio(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="checkbox-radio">
+				<input id="1" name="gender" type="radio" value="F"/>
+				<label for="1">
+					<i class="ico-radio"></i>
+					<span class="p-xs">checkbox-radio</span>
+				</label>
+			</div>
+			<div class="checkbox-radio">
+				<input id="2" name="gender" type="radio" value="F"/>
+				<label for="2">
+					<i class="ico-radio"></i>
+					<span class="p-xs">checkbox-radio</span>
+				</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="checkbox-radio">
+			<input id="1" name="gender" type="radio" value="F"/>
+			<label for="1">
+				<i class="ico-radio"></i>
+				<span class="p-xs">checkbox-radio</span>
+			</label>
+		</div>
+		<div class="checkbox-radio">
+			<input id="2" name="gender" type="radio" value="F"/>
+			<label for="2">
+				<i class="ico-radio"></i>
+				<span class="p-xs">checkbox-radio</span>
+			</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro checkboxCard(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="row">
+				<div class="col-xs-12 mb-8">
+					<div class="checkbox-card">
+						<input id="17-1" name="gender" type="radio">
+						<label for="17-1" class=" checkbox-card-label">
+							<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+						</label>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="checkbox-card">
+						<input id="17-3" name="gender" type="radio" value="a">
+						<label for="17-3" class=" checkbox-card-label ">
+							<div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="row">
+			<div class="col-xs-12 mb-8">
+				<div class="checkbox-card">
+					<input id="17-1" name="gender" type="radio">
+					<label for="17-1" class=" checkbox-card-label">
+						<div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+					</label>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="checkbox-card">
+					<input id="17-3" name="gender" type="radio" value="a">
+					<label for="17-3" class=" checkbox-card-label ">
+						<div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
+					</label>
+				</div>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+{# TODO END #}
+
+{# TODO INPUTS #}
+{% macro input(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="form-input-label-2">
+				<input type="text" id="basico1" class="input" placeholder="Nombre">
+				<label for="basico1">{{ elementType }}</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="form-input-label-2 mb-16">
+			<input type="text" id="basico1" class="input" placeholder="Nombre">
+			<label for="basico1">{{ elementType }}</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputTexto(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div>
+				<div class="p-s">
+          Titular del input básico
+        </div>
+				<div class="form-input-label-2 mb-16  ">
+					<input type="email" id="t2" class="input" placeholder="Email address" required="">
+					<label for="t2">form input label 2 </label>
+					<div class="p-s c-dark-grey pt-8">
+            Texto explicativo
+          </div>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div>
+			<p class="p-s">
+          Titular del input básico
+        </p>
+			<div class="form-input-label-2 mb-16  ">
+				<input type="email" id="t2" class="input" placeholder="Email address" required="">
+				<label for="t2">form input label 2 </label>
+				<p class="p-s c-dark-grey pt-8">
+            Texto explicativo
+          </p>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputError(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class='form-input-label-2 mb-16 is-error '>
+				<input type='email' id='t2' class='input' placeholder='Email address' required=''/>
+				<label for='t2'>form input label 2</label>
+				<div class='validation-error-messages'>
+					<div class='help p-xs'>
+						<svg-icon src='warning' class='pr-8'>
+							<div>
+								<svg width='16' height='16' viewBox='0 0 16 16' fill='none'
+                        xmlns='http://www.w3.org/2000/svg'>
+									<path d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z'
+                            fill='black'></path>
+								</svg>
+							</div>
+						</svg-icon>
+            Mensaje de error nuevo , empuja el siguiente 
+            Mensaje de error nuevo , empuja el siguiente 
+            Mensaje de error nuevo , empuja el siguiente 
+            Mensaje de error nuevo , empuja el siguiente 
+            Mensaje de error nuevo , empuja el siguiente
+          </div>
+				</div>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="form-input-label-2 mb-16 is-error ">
+			<input type="email" id="t2" class="input" placeholder="Email address" required="">
+			<label for="t2">form input label 2</label>
+			<div class="validation-error-messages">
+				<div class="help p-xs">
+					<svg-icon src="alert"></svg-icon>
+            Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+            siguiente Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
+            siguiente Mensaje de error nuevo , empuja el siguiente
+        </div>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputPre(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="form-input-label-2 mb-16 has-ico-pre  ">
+				<input type="email" id="t3" class="input" placeholder="Email address" required="">
+				<div class="ico-pre">
+					<svg-icon src='warning' class='pr-8'>
+						<div>
+							<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+								<path d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z' fill='black'></path>
+							</svg>
+						</div>
+					</svg-icon>
+				</div>
+				<label for="t3">has ico pre</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="form-input-label-2 mb-16 has-ico-pre  ">
+			<input type="email" id="t3" class="input" placeholder="Email address" required="">
+			<div class="ico-pre">
+				<svg-icon src="alert"></svg-icon>
+			</div>
+			<label for="t3">has ico pre</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputPost(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			<div class="form-input-label-2 mb-16 has-ico-post  ">
+				<input type="email" id="t3" class="input" placeholder="Email address" required="">
+				<div class="ico-post">
+					<svg-icon src='warning' class='pr-8'>
+						<div>
+							<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+								<path d='M8.5 8V8.5H7.5V8H8.5ZM7.5 5V4.5H8.5V5H7.5ZM8.5 11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11H8.5ZM7.5 10.5C7.5 10.2239 7.72386 10 8 10C8.27614 10 8.5 10.2239 8.5 10.5H7.5ZM14.5 8C14.5 4.41015 11.5899 1.5 8 1.5V0.5C12.1421 0.5 15.5 3.85786 15.5 8H14.5ZM8 1.5C4.41015 1.5 1.5 4.41015 1.5 8H0.5C0.5 3.85786 3.85786 0.5 8 0.5V1.5ZM1.5 8C1.5 11.5899 4.41015 14.5 8 14.5V15.5C3.85786 15.5 0.5 12.1421 0.5 8H1.5ZM8 14.5C11.5899 14.5 14.5 11.5899 14.5 8H15.5C15.5 12.1421 12.1421 15.5 8 15.5V14.5ZM7.5 8V5H8.5V8H7.5ZM7.5 11V10.5H8.5V11H7.5Z' fill='black'></path>
+							</svg>
+						</div>
+					</svg-icon>
+				</div>
+				<label for="t3">has ico post</label>
+			</div>
+		</div>
+		{% set standardcode %}
+		<div class="form-input-label-2 mb-16 has-ico-post  ">
+			<input type="email" id="t3" class="input" placeholder="Email address" required="">
+			<div class="ico-post">
+				<svg-icon src="alert"></svg-icon>
+			</div>
+			<label for="t3">has ico post</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputPwd(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			{# ---------- #}
+			<div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="tit-s mb-16"> Input Password</div>
+						<div class="form-input-label-2 form-input-pass has-ico-post">
+							<input type="password" id="t5" class="input" placeholder="Password">
+							<label for="t5">Input Password</label>
+							<div class="ico-post">
+								<svg-icon>
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
+										<g transform="translate(0, 0)">
+											<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M0.5,8 c0,0,3-5.5,7.5-5.5S15.5,8,15.5,8s-3,5.5-7.5,5.5S0.5,8,0.5,8z"></path>
+											<path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5,8 c0-1.657,1.343-3,3-3"></path>
+											<path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M11,8c0,1.657-1.343,3-3,3"></path>
+											<line data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="15" x2="15" y2="1"></line>
+										</g>
+									</svg>
+								</svg-icon>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-xs-6">
+						<ul class=" list-mini p-xs">
+							<li>lorem</li>
+							<li>lorem</li>
+							<li>lorem</li>
+							<li>lorem</li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<ul class=" list-mini p-xs">
+							<li class="is-missing">lorem</li>
+							<li>lorem</li>
+							<li>lorem</li>
+							<li>lorem</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{# ---------- #}
+		</div>
+		{% set standardcode %}
+		<div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="tit-s mb-16"> Input Password</div>
+					<div class="form-input-label-2 form-input-pass has-ico-post">
+						<input type="password" id="t5" class="input" placeholder="Password">
+						<label for="t5">Input Password</label>
+						<div class="ico-post">
+							<svg-icon>
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16">
+									<g transform="translate(0, 0)">
+										<path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M0.5,8 c0,0,3-5.5,7.5-5.5S15.5,8,15.5,8s-3,5.5-7.5,5.5S0.5,8,0.5,8z"></path>
+										<path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M5,8 c0-1.657,1.343-3,3-3"></path>
+										<path data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d=" M11,8c0,1.657-1.343,3-3,3"></path>
+										<line data-color="color-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="15" x2="15" y2="1"></line>
+									</g>
+								</svg>
+							</svg-icon>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-xs-6">
+					<ul class=" list-mini p-xs">
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<ul class=" list-mini p-xs">
+						<li class="is-missing">lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+						<li>lorem</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro inputDisabled(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			{# ---------- #}
+			<div class="form-input-label-2 mb-16">
+				<input type="text" id="basico1" class="input input-notouch" placeholder="Nombre">
+				<label for="basico1">Input Básico</label>
+			</div>
+			{# ---------- #}
+		</div>
+		{% set standardcode %}
+		<div class="form-input-label-2 mb-16">
+			<input type="text" id="basico1" class="input input-notouch" placeholder="Nombre">
+			<label for="basico1">Input Básico</label>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro inputPrefix(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			{# ---------- #}
+			<div class="form-prefix" action="">
+				<div class="select ">
+					<select>
+						<option value="+34">+34</option>
+						<option value="+106">+106</option>
+						<option value="+3">+3</option>
+						<option value="+1002">+1002</option>
+					</select>
+				</div>
+				<div class="form-input-label-2">
+					<input type="tel" id="t1" class="input" placeholder="Teléfono" />
+					<label for="t1">Teléfono </label>
+				</div>
+				<button class="btn btn-primary">VERIFICAR TELEFONO</button>
+			</div>
+			{# ---------- #}
+		</div>
+		{% set standardcode %}
+		<div class="form-prefix" action="">
+			<div class="select ">
+				<select>
+					<option value="+34">+34</option>
+					<option value="+106">+106</option>
+					<option value="+3">+3</option>
+					<option value="+1002">+1002</option>
+				</select>
+			</div>
+			<div class="form-input-label-2">
+				<input type="tel" id="t1" class="input" placeholder="Teléfono" />
+				<label for="t1">Teléfono </label>
+			</div>
+			<button class="btn btn-primary">VERIFICAR TELEFONO</button>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+
+
+{% macro inputIpod(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			{# ---------- #}
+			<div class="row">
+				<div class="col-xs-6 ">
+					<label class="p-xs" for=""> Input</label>
+					<input type="text" placeholder="input" class="input">
+				</div>
+				<div class="col-xs-6 is-error">
+					<label class="p-xs" for=""> is-error</label>
+					<input type="text" placeholder="is-error" class="input">
+				</div>
+				<div class="col-xs-6 ok-input">
+					<label class="p-xs" for=""> ok-input</label>
+					<input type="text" placeholder="ok-input" class="input">
+				</div>
+				<div class="col-xs-6 disabled-input">
+					<label class="p-xs" for=""> disabled-input</label>
+					<input type="text" placeholder="disabled-input" class="input">
+				</div>
+			</div>
+			{# ---------- #}
+		</div>
+		{% set standardcode %}
+		<div class='row'>
+			<div class='col-xs-6 is-error | ok-input | disabled-input'>
+				<label class='p-xs' for=''>Input</label>
+				<input type='text' placeholder='input' class='input'/>
+			</div>
+		</div>
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+{# TODO END #}
+
+
+{# TODO MACRO STORE LOCATOR #}
+{% macro storeLocator(elementType = '', explicacion = '') %}
+	<h3>{{ elementType }}
+	</h3>
+	<p class="p-xs">{{ explicacion }}</p>
+	<div class="mb-32 ">
+		<div class="code-view ">
+			<div class="check-new"></div>
+			{# ---------- #}
+			<div class="w-100">
+			<div class="pt-64">
+  <div contenteditable="true">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-input-label-2 mb-16 has-ico-post">
+              <input type="email" id="dos" class="input" placeholder="Email address" required="" />
+              <label for="dos">Buscador</label>
+              <svg class="ico-post" width="16px" height="16px" viewBox="0 0 16 16">
+                <g transform="translate(0, 0)">
+                  <circle fill="none" stroke="#000000" cx="8" cy="8" r="6">
+                  </circle>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-xs-12 text-right">
+            <div class="only-mobile">
+              <a class="mb-16 mr-16 link-line link-svg-post p-xs  " href=""> Ver mapa <svg-icon>
+                  <div>
+                    <svg width="16px" height="16px">
+                      <circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+                    </svg>
+                  </div>
+                </svg-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="tabs ">
+              <ul class="list-equal">
+                <li class="is-active"><a>Resultados</a></li>
+                <li><a>Tiendas Favoritas</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="checkbox-radio check-center check-bleed pt-8 "> <input type="radio" id="12008" value="12008">
+              <label for="12008">
+                <div class="is-flex bg-line  pl-32 pb-8">
+                  <div class="col-xs-9">
+                    <div class="p-m-b">Goya</div>
+                    <div class="p-xs">Calle de Goya, 85, Madrid</div>
+                    <div class="p-xs is-info mb-16">+34 91 4323900</div>
+                    <div class="p-xs is-info"> Massimo Dutti Studio </div>
+                  </div>
+                  <div class="col-xs-3 is-flex flex-column content-sp-between">
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">2.1 km</div>
+                    </div>
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">ICON</div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ico-radio"></i>
+              </label>
+            </div>
+            <div class="checkbox-radio check-center check-bleed pt-8 "> <input type="radio" id="120010" value="120010">
+              <label for="120010">
+                <div class="is-flex bg-line  pl-32 pb-8">
+                  <div class="col-xs-9">
+                    <div class="p-m-b">Goya</div>
+                    <div class="p-xs">Calle de Goya, 85, Madrid</div>
+                    <div class="p-xs is-info mb-16">+34 91 4323900</div>
+                    <div class="p-xs is-info"> Massimo Dutti Studio </div>
+                  </div>
+                  <div class="col-xs-3 is-flex flex-column content-sp-between">
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">2.1 km</div>
+                    </div>
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">ICON</div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ico-radio"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 col-xl-9 bleed-0 only-desktop"
+        style="background-size: cover; background-image:url( ' https://holygrailcss.github.io/assets/placeholder/2-1.jpg')">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="storeloc">
+  <div class="storeloc-search"></div>
+  <div class="storeloc-list"></div>
+  <div class="storeloc-map"></div>
+</div> 
+</div>
+			{# ---------- #}
+		</div>
+		{% set standardcode %}
+		<div class="pt-64">
+  <div contenteditable="true">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="form-input-label-2 mb-16 has-ico-post">
+              <input type="email" id="dos" class="input" placeholder="Email address" required="" />
+              <label for="dos">Buscador</label>
+              <svg class="ico-post" width="16px" height="16px" viewBox="0 0 16 16">
+                <g transform="translate(0, 0)">
+                  <circle fill="none" stroke="#000000" cx="8" cy="8" r="6">
+                  </circle>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-xs-12 text-right">
+            <div class="only-mobile">
+              <a class="mb-16 mr-16 link-line link-svg-post p-xs  " href=""> Ver mapa <svg-icon>
+                  <div>
+                    <svg width="16px" height="16px">
+                      <circle fill="none" stroke="#000000" cx="8" cy="8" r="6"></circle>
+                    </svg>
+                  </div>
+                </svg-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="tabs ">
+              <ul class="list-equal">
+                <li class="is-active"><a>Resultados</a></li>
+                <li><a>Tiendas Favoritas</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="checkbox-radio check-center check-bleed pt-8 "> <input type="radio" id="12008" value="12008">
+              <label for="12008">
+                <div class="is-flex bg-line  pl-32 pb-8">
+                  <div class="col-xs-9">
+                    <div class="p-m-b">Goya</div>
+                    <div class="p-xs">Calle de Goya, 85, Madrid</div>
+                    <div class="p-xs is-info mb-16">+34 91 4323900</div>
+                    <div class="p-xs is-info"> Massimo Dutti Studio </div>
+                  </div>
+                  <div class="col-xs-3 is-flex flex-column content-sp-between">
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">2.1 km</div>
+                    </div>
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">ICON</div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ico-radio"></i>
+              </label>
+            </div>
+            <div class="checkbox-radio check-center check-bleed pt-8 "> <input type="radio" id="120010" value="120010">
+              <label for="120010">
+                <div class="is-flex bg-line  pl-32 pb-8">
+                  <div class="col-xs-9">
+                    <div class="p-m-b">Goya</div>
+                    <div class="p-xs">Calle de Goya, 85, Madrid</div>
+                    <div class="p-xs is-info mb-16">+34 91 4323900</div>
+                    <div class="p-xs is-info"> Massimo Dutti Studio </div>
+                  </div>
+                  <div class="col-xs-3 is-flex flex-column content-sp-between">
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">2.1 km</div>
+                    </div>
+                    <div class=" p-xs text-right">
+                      <div class="p-xs c-dark-grey">ICON</div>
+                    </div>
+                  </div>
+                </div>
+                <i class="ico-radio"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8 col-xl-9 bleed-0 only-desktop"
+        style="background-size: cover; background-image:url( ' https://holygrailcss.github.io/assets/placeholder/2-1.jpg')">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="storeloc">
+  <div class="storeloc-search"></div>
+  <div class="storeloc-list"></div>
+  <div class="storeloc-map"></div>
+</div> 
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre>
+		</div>
+	</div>
+{% endmacro %}
+{# TODO END #}

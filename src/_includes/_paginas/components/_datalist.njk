@@ -1,0 +1,116 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}
+
+
+
+<div class="row pt-64 pb-64">
+
+    <div class="col-xs-12 ">
+        <div class="tit-m"> Datalist</div>
+    </div>
+    <div class="col-xs-12"> 
+
+        <section>
+            <div class="container-fluid">
+          <div class="mb-48">
+            <div class="row mb-48">
+               <div class="col-xs-12 ">
+                 <div class="pre-title mb-16">
+                
+                         <p class="p-xs">
+                            El elemento <b>datalist</b> representa una lista de opciones predefinidas que pueden ser utilizadas para proveer sugerencias en muchos controles de formularios (form). Estas opciones pueden ser provistas por el navegador en una lista o como una referencia de autocompletado, dependiendo del navegador y el control con el cual este elemento está relacionado. Un datalist nunca es representado por sí mismo.
+
+                        </p>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-12 ">
+                    <div class="pre-show">
+
+                        <div class="form-input-label-2 mb-16 datalist">
+                            <input type="text" list="statecodes"  id="statecode" class="input" placeholder="Provincia" required="">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                    <rect width="16" height="16" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.999991 3.93935L7.99999 10.9393L15 3.93935L16.0607 5.00001L7.99999 13.0607L-0.0606689 5.00001L0.999991 3.93935Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0">
+                                        <rect width="16" height="16" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            <label for="uno">Provincia</label>
+                            <datalist  id="statecodes" name="stateCodeList">
+                                <option  value="A CORUÑA" ng-reflect-value="A CORUÑA">A CORUÑA</option>
+                                <option  value="ALAVA" ng-reflect-value="ALAVA">ALAVA</option>
+                                <option  value="ALBACETE" ng-reflect-value="ALBACETE">ALBACETE</option>
+                                <option  value="ALICANTE" ng-reflect-value="ALICANTE">ALICANTE</option>
+                                <option  value="ALMERIA" ng-reflect-value="ALMERIA">ALMERIA</option>
+                                <option  value="ZARAGOZA" ng-reflect-value="ZARAGOZA">ZARAGOZA</option>
+                            </datalist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+              <div class="col-xs-12 ">
+                <pre><code class="language-markup">
+{{"<div class='form-input-label-2 mb-16 datalist'>
+    <input type='text' list='statecodes'  id='statecode' class='input' placeholder='Provincia' required=''>
+    <svg-icon src='chevron-down'></svg-icon>
+    <label for='uno'>Provincia</label>
+
+    <datalist  id='statecodes' name='stateCodeList'>
+        <option  value='A CORUÑA' >A CORUÑA</option>
+        <option  value='ALAVA' >ALAVA</option>
+        <option  value='ALBACETE'>ALBACETE</option>
+        <option  value='ALICANTE' >ALICANTE</option>
+        <option  value='ALMERIA' >ALMERIA</option>
+        <option  value='ZARAGOZA' >ZARAGOZA</option>
+    </datalist>
+</div>"| escape  }}</code></pre>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 mb-16">
+                    <!-- <p class="p-s">Snipet de uso rápido</p> -->
+                    <!-- <code>xselector-box</code> -->
+                </div>
+            </div>
+          </div>
+          </div>
+          </section>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+  </div>

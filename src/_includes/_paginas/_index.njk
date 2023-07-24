@@ -1,0 +1,140 @@
+---
+layout: base.njk
+permalink: /index/
+---
+<section class="header-img ">
+  <div class="video-bg">
+    {# <img data-aos="fade-up" width="100%" height="100%" src="{{global.imageDir}}_home/home2.webp"
+      alt="{{global.empresa}}"> #}
+  </div>
+  <div class="container-full">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="height-full is-flex flex-column content-center">
+          <div class="mb-24">
+            <h1 class="h1 mb-16" data-aos="fade-up" data-aos-delay="100">
+              <b>Creamos, implementamos y diseñamos</b> Estructuras modulares.
+            </h1>
+            <h3 data-aos="fade-up" data-aos-delay="200">
+              Holygrail es un sistema de diseño completo creado para brindar una experiencia completa y agradable al
+              usar los productos digitales de Ecommerce modernos.
+            </h3>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <a href="/foundations"><button class="btn btn-primary btn-small">Empezar</button></a>
+            <a href="/components"><button class="btn btn-secondary btn-small">Componentes</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="front-section bg-light height-full-2 front-section mtr-128 mbr-128">
+  <div class="container mb-64">
+    <div class="row  ptr-120 pbr-120">
+      <div class="col-xs-6 ">
+        <div data-aos="fade-up" data-aos-delay="200" class="is-flex flex-column">
+          <h2 class=" pl-64 pb-24"> Todo lo que necesitas. Cuándo lo necesitas.
+
+          </h2>
+          <div class="mb-24">
+            <p class="" data-aos="fade-up" data-aos-once="true" data-aos-delay="300">
+              Colores, tipografías, símbolos, temas y mucho más, todo lo que necesita un diseñador, Wanda se lo brinda.
+
+
+            </p>
+          </div>
+          <div><a data-aos="fade-up" data-aos-once="true" data-aos-delay="500" class="link-line" href="/about/">Ver más
+            </a></div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-6 col-md-4  mdmax:mb-42 ">
+        <a href="/about/">
+          <div class="rat-1-1">
+            <div class="rat-content  align-center">
+              <img data-aos="fade-up" width="100%" src="{{global.imageDir}}images/1.jpg"
+                alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="row  ptr-120 pbr-120">
+
+      <div class="col-xs-6 col-md-4  mdmax:mb-42  ">
+        <a href="/about/">
+          <div class="rat-1-1">
+            <div class="rat-content  align-center">
+              <img data-aos="fade-up" width="100%" src="{{global.imageDir}}images/1.jpg"
+                alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 ">
+        <div data-aos="fade-up" data-aos-delay="200" class="is-flex flex-column">
+          <h2 class=" pl-64 pb-24"> Un conjunto de  herramientas completa para crear experiencias digitales.
+
+
+          </h2>
+          <div class="mb-24">
+            <p class="" data-aos="fade-up" data-aos-once="true" data-aos-delay="300">
+              Un conjunto completo de componentes y estilos agnosticos altamente personalizables listos para usar dentro de las aplicaciones.
+
+
+
+            </p>
+          </div>
+          <div><a data-aos="fade-up" data-aos-once="true" data-aos-delay="500" class="link-line" href="/about/">Ver más
+            </a></div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+</section>
+
+
+<section class="front-section bg-white pt-64 pb-64">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="/components">
+          <h3 class=" mb-24">Nuestros componentes</h3>
+        </a>
+  
+          <ul role="list" class="list-clear blog-intro-inner w-100">
+            <div class="list-grid">
+              {% for component in collections.components | reverse %}
+              {% include 'token-loop.njk' %}
+              {% endfor %}
+            </div>
+          </ul>
+   
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+{% include '_website/footer.njk' %} 
+
+</div>

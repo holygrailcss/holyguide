@@ -1,0 +1,38 @@
+{% macro token(tokenType='', explicacion='',dark='') %}
+<h3>{{ tokenType }}</h3>
+<p class="p-xs">{{ explicacion }}</p>
+<div class="resize-mini">
+  <div class="resize-mini-content-narrow {{dark  }} ">
+    {% include 'components/' + tokenType + '.njk' %}
+  </div>
+</div>
+{% set standardcode %}
+{% include 'components/' + tokenType + '.njk' %}
+{% endset %}
+<pre><code class=" ">{{standardcode }} </code></pre>
+{% endmacro %}
+
+
+{% macro insert(elementType='', elements) %}
+
+<div class="mb-32 ">
+
+  
+  <div class="code-view ">
+    <div class="check-new"> </div>
+
+
+    {% for element in elements %}
+    <{{ elementType }} class="{{ element }}">{{ element }}</{{ elementType }}>
+    {% endfor %}
+  </div>
+  {% set standardcode %}
+  {% for element in elements %}<{{ elementType }} class="{{ element }}">{{ element }}</{{ elementType }}>
+  {% endfor %} {% endset %}
+
+  <div class="code-zone">
+    <pre><code class=" language-markup">{{standardcode }} </code></pre>
+  </div>
+
+</div>
+{% endmacro %}
