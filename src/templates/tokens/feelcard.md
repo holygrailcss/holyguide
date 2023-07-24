@@ -1,5 +1,5 @@
 ---
-layout: _tokens/_templates_/feelcard.njk
+layout: _tokens/_templates/feelcard.njk
 permalink: /feelcard/
 page_section: templates
 

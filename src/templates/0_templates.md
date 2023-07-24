@@ -4,7 +4,7 @@ permalink: /templates/
 page_section: templates
 
 titulo: Templates
-descripcion: Es una agrupación de componentes
+descripcion: Es una agrupación de templates
 
 image: /assets/static/images/1.jpg
 author: autor
@@ -15,4 +15,4 @@ imageAlt: Contacta
 
 # Templates
 
-Es una agrupación de componentes.
+Es una agrupación de Templates.

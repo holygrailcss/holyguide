@@ -17926,3 +17926,9 @@ code {
   right: 0px;
   top: 0px;
 }
+
+.w-50 {
+  width: 50px;
+  float: left;
+  margin-right: 16px;
+}

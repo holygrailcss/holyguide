@@ -168,6 +168,11 @@
     </url>
     
     <url>
+        <loc>digitalstrategy.es/menu/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
+    </url>
+    
+    <url>
         <loc>digitalstrategy.es/_parrillas-collection/</loc>
         <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
@@ -184,6 +189,16 @@
     
     <url>
         <loc>digitalstrategy.es/feelcard/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/footer-component/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/menu-component/</loc>
         <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
     
@@ -373,18 +388,18 @@
     </url>
     
     <url>
+        <loc>digitalstrategy.es/guia-de-tallas/</loc>
+        <lastmod>2023-07-21T11:29:59.835Z</lastmod>
+    </url>
+    
+    <url>
         <loc>digitalstrategy.es/helpers/</loc>
-        <lastmod>2023-07-20T14:34:57.521Z</lastmod>
+        <lastmod>2023-07-24T14:39:29.921Z</lastmod>
     </url>
     
     <url>
         <loc>digitalstrategy.es/videos/</loc>
-        <lastmod>2023-07-20T14:34:57.588Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/guia-de-tallas/</loc>
-        <lastmod>2023-07-21T11:29:59.835Z</lastmod>
+        <lastmod>2023-07-24T14:39:29.921Z</lastmod>
     </url>
     
 </urlset>

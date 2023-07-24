@@ -1,22 +1,22 @@
-      <article class="mb-24">
-          <a class="w-100" href="{{ template.data.permalink }}"> 
-            <div class="rat-16-9 w-100">
-              <div class="rat-content">
-   {# {% include '_templates/'+template.data.titulo +'.njk' %}  #}
-  <img class="video-cover" width="100%" height="100%" src="{{ template.data.image }}" alt="{{ template.titulo }}">
-              </div>
-            </div>
-                </a>
-          <div class="article-text mt-24">
-              <div class="mb-16">
-                <h3 class=" "><a href="{{ template.data.titulo }}">{{ template.data.titulo }}  </a></h3>
-                  <span class="text-12-r">{{ template.data.descripcion }}</span>
-              </div>
-              {% set sortedTags = template.data.tags | sort %}
-              {% for tag in sortedTags %}
-              <div class=" tag-info text-12-r">
-                {{ tag }}
-              </div>
-              {% endfor %}
-          </div>
-      </article>
+<a class="w-100" href="{{ template.data.permalink }}">
+  <article class="mb-24">
+    <div class="rat-1-1 w-50">
+      <div class="rat-content">
+    
+
+
+        <div class="number-template">
+          {{ template.data.titulo }}
+        </div>
+
+      </div>
+    </div>
+    <div class="article-text mt-24">
+      <div class="mb-16">
+        <h4 class=" "> {{ template.data.titulo }} </h4>
+        <span class="text-12-r">{{ template.data.descripcion }}</span>
+      </div>
+
+    </div>
+  </article>
+</a>
