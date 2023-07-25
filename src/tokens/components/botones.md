@@ -7,7 +7,7 @@ titulo: botones
 descripcion: botones
 image: /assets/static/images/botones.jpg
 author: autor
-date: 2023-07-24 // Utilizamos la fecha actual
+date: 2023-07-24 
 tags: ["components"]
 imageAlt: botones
 ---

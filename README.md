@@ -97,12 +97,8 @@ Here's our logo (hover to see the title text):
 Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
+Reference-style:
+ `code` has `back-ticks around` it.
 
 
 ```javascript
@@ -158,3 +154,10 @@ You can also use words, to fit your writing style more closely[^note].
 
 ⚪️ 1- To do
 ✍️ 4- Work in progress
+
+
+
+## Creación de nuevos elementos
+
+`npm run template nombreDeLaPaginaTemplate`
+`npm run token-template nombreDelToken`

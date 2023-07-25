@@ -13,10 +13,10 @@ if (!fileName) {
 }
 
 // Ruta donde se guardará el archivo Markdown
-const targetMarkdownFilePath = path.join("src", "tokens", "components", `${fileName}.md`);
+const targetMarkdownFilePath = path.join("src", "templates", `${fileName}.md`);
 
 // Ruta donde se guardará el archivo Nunjucks
-const targetNunjucksFilePath = path.join("src", "_includes", "_tokens", "_components", `${fileName}.njk`);
+const targetNunjucksFilePath = path.join("src", "_includes", "_paginas", "templates", `${fileName}.njk`);
 
 // Configurar Nunjucks
 nunjucks.configure({
@@ -30,29 +30,45 @@ nunjucks.configure({
 const currentDate = new Date().toISOString().slice(0, 10);
 
 // Plantilla Nunjucks (para archivo .md)
-const markdownTemplate = `
----
-layout: _tokens/_components/${fileName}.njk
+const markdownTemplate = `---
+layout: _paginas/templates/${fileName}.njk
 permalink: /${fileName}/
-page_section: components
+page_section: templates
 titulo: ${fileName}
 descripcion: ${fileName}
 image: /assets/static/images/${fileName}.jpg
 author: autor
-date: ${currentDate} // Utilizamos la fecha actual
-tags: ["components"]
+date: ${currentDate} 
+tags: ["templates"]
 imageAlt: ${fileName}
 ---
 # ${fileName}
-
 `;
 
 // Plantilla Nunjucks (para archivo .njk)
-const nunjucksTemplate = `
+const nunjucksTemplate = `---
+layout: base.njk
 ---
-layout: base-clean.njk
----
-<!-- Contenido de la plantilla ${fileName}.njk -->
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+	{% include '_website/hero.njk' %}
+</div>
+
+
+<section class="mb-32 mt-32">
+<div class="row">
+  <div class="col-xs-12">
+
+          {% call insert.template('_tokens/_templates/','token-${fileName}', '550px','https://www.figma.com') %} {% endcall %} 
+
+  </div>
+</div>
+</section>
+
+
+<!-- Contenido de la página plantilla ${fileName}.njk -->
 `;
 
 // Renderizar la plantilla con los datos y guardar el archivo Markdown

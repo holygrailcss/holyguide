@@ -408,8 +408,13 @@
     </url>
     
     <url>
-        <loc>digitalstrategy.es/tokens/templates/makumba/</loc>
-        <lastmod>2023-07-24T17:42:40.043Z</lastmod>
+        <loc>digitalstrategy.es/ccc/</loc>
+        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/token-ccc/</loc>
+        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
     </url>
     
 </urlset>
