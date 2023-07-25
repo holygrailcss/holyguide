@@ -47,10 +47,10 @@ imageAlt: ${fileName}
 `;
 
 // Plantilla Nunjucks (para archivo .njk)
-const nunjucksTemplate = `
----
+const nunjucksTemplate = `---
 layout: base-clean.njk
 ---
+
 <!-- Contenido de la plantilla ${fileName}.njk -->
 `;
 
