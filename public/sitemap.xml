@@ -188,21 +188,6 @@
     </url>
     
     <url>
-        <loc>digitalstrategy.es/feelcard/</loc>
-        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/footer-component/</loc>
-        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/menu-component/</loc>
-        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
-    </url>
-    
-    <url>
         <loc>digitalstrategy.es/product-view/</loc>
         <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
@@ -213,208 +198,213 @@
     </url>
     
     <url>
-        <loc>digitalstrategy.es/start-dev/</loc>
-        <lastmod>2023-07-12T10:03:25.984Z</lastmod>
+        <loc>digitalstrategy.es/token-feelcard/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
     
     <url>
-        <loc>digitalstrategy.es/practices/</loc>
-        <lastmod>2023-07-13T10:11:52.371Z</lastmod>
+        <loc>digitalstrategy.es/token-footer/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
     
     <url>
-        <loc>digitalstrategy.es/template-1A/</loc>
-        <lastmod>2023-07-20T06:49:18.830Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-1E/</loc>
-        <lastmod>2023-07-20T06:49:18.832Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-1F/</loc>
-        <lastmod>2023-07-20T06:49:18.833Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-1G/</loc>
-        <lastmod>2023-07-20T06:49:18.834Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-1LE/</loc>
-        <lastmod>2023-07-20T06:49:18.834Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2A/</loc>
-        <lastmod>2023-07-20T06:49:18.835Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2B/</loc>
-        <lastmod>2023-07-20T06:49:18.836Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2C/</loc>
-        <lastmod>2023-07-20T06:49:18.836Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2D/</loc>
-        <lastmod>2023-07-20T06:49:18.838Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2DS/</loc>
-        <lastmod>2023-07-20T06:49:18.838Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2E/</loc>
-        <lastmod>2023-07-20T06:49:18.839Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2FDoble/</loc>
-        <lastmod>2023-07-20T06:49:18.839Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2FH/</loc>
-        <lastmod>2023-07-20T06:49:18.840Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2FV/</loc>
-        <lastmod>2023-07-20T06:49:18.840Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2G/</loc>
-        <lastmod>2023-07-20T06:49:18.841Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-2SD/</loc>
-        <lastmod>2023-07-20T06:49:18.841Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-3A/</loc>
-        <lastmod>2023-07-20T06:49:18.841Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-3S/</loc>
-        <lastmod>2023-07-20T06:49:18.842Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-4A/</loc>
-        <lastmod>2023-07-20T06:49:18.842Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-4B/</loc>
-        <lastmod>2023-07-20T06:49:18.843Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-4S/</loc>
-        <lastmod>2023-07-20T06:49:18.843Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-5A/</loc>
-        <lastmod>2023-07-20T06:49:18.843Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-6S/</loc>
-        <lastmod>2023-07-20T06:49:18.844Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-FIV/</loc>
-        <lastmod>2023-07-20T06:49:18.844Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-G4/</loc>
-        <lastmod>2023-07-20T06:49:18.845Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-MINIGRID-INFO/</loc>
-        <lastmod>2023-07-20T06:49:18.845Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-MINIGRID/</loc>
-        <lastmod>2023-07-20T06:49:18.845Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-SEC/</loc>
-        <lastmod>2023-07-20T06:49:18.846Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-SEPARATOR_12_5/</loc>
-        <lastmod>2023-07-20T06:49:18.846Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-SEPARATOR_25/</loc>
-        <lastmod>2023-07-20T06:49:18.846Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-SEPARATOR_50/</loc>
-        <lastmod>2023-07-20T06:49:18.847Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/template-VIT/</loc>
-        <lastmod>2023-07-20T06:49:18.847Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/</loc>
-        <lastmod>2023-07-20T11:12:01.682Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/guia-de-tallas/</loc>
-        <lastmod>2023-07-21T11:29:59.835Z</lastmod>
+        <loc>digitalstrategy.es/token-menu/</loc>
+        <lastmod>2023-07-10T00:00:00.000Z</lastmod>
     </url>
     
     <url>
         <loc>digitalstrategy.es/helpers/</loc>
-        <lastmod>2023-07-24T14:39:29.921Z</lastmod>
+        <lastmod>2023-07-24T16:29:50.016Z</lastmod>
     </url>
     
     <url>
         <loc>digitalstrategy.es/videos/</loc>
-        <lastmod>2023-07-24T14:39:29.921Z</lastmod>
+        <lastmod>2023-07-24T16:29:50.019Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-1A/</loc>
+        <lastmod>2023-07-24T16:29:50.022Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-1E/</loc>
+        <lastmod>2023-07-24T16:29:50.022Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-1F/</loc>
+        <lastmod>2023-07-24T16:29:50.022Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-1G/</loc>
+        <lastmod>2023-07-24T16:29:50.022Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-1LE/</loc>
+        <lastmod>2023-07-24T16:29:50.023Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2A/</loc>
+        <lastmod>2023-07-24T16:29:50.023Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2B/</loc>
+        <lastmod>2023-07-24T16:29:50.023Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2C/</loc>
+        <lastmod>2023-07-24T16:29:50.023Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2D/</loc>
+        <lastmod>2023-07-24T16:29:50.023Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2DS/</loc>
+        <lastmod>2023-07-24T16:29:50.024Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2E/</loc>
+        <lastmod>2023-07-24T16:29:50.024Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2FDoble/</loc>
+        <lastmod>2023-07-24T16:29:50.024Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2FH/</loc>
+        <lastmod>2023-07-24T16:29:50.025Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2FV/</loc>
+        <lastmod>2023-07-24T16:29:50.025Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2G/</loc>
+        <lastmod>2023-07-24T16:29:50.025Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-2SD/</loc>
+        <lastmod>2023-07-24T16:29:50.025Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-3A/</loc>
+        <lastmod>2023-07-24T16:29:50.026Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-3S/</loc>
+        <lastmod>2023-07-24T16:29:50.026Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-4A/</loc>
+        <lastmod>2023-07-24T16:29:50.026Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-4B/</loc>
+        <lastmod>2023-07-24T16:29:50.026Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-4S/</loc>
+        <lastmod>2023-07-24T16:29:50.026Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-5A/</loc>
+        <lastmod>2023-07-24T16:29:50.027Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-6S/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-FIV/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-G4/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-MINIGRID-INFO/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-MINIGRID/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-SEC/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-SEPARATOR_12_5/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-SEPARATOR_25/</loc>
+        <lastmod>2023-07-24T16:29:50.028Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-SEPARATOR_50/</loc>
+        <lastmod>2023-07-24T16:29:50.029Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/template-VIT/</loc>
+        <lastmod>2023-07-24T16:29:50.029Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/</loc>
+        <lastmod>2023-07-25T07:21:09.949Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/start-dev/</loc>
+        <lastmod>2023-07-25T07:21:09.952Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/guia-de-tallas/</loc>
+        <lastmod>2023-07-25T07:21:09.954Z</lastmod>
+    </url>
+    
+    <url>
+        <loc>digitalstrategy.es/practices/</loc>
+        <lastmod>2023-07-25T07:21:09.955Z</lastmod>
     </url>
     
     <url>
         <loc>digitalstrategy.es/tokens/components/botones/</loc>
-        <lastmod>2023-07-24T17:31:56.190Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/ddd/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
-    </url>
-    
-    <url>
-        <loc>digitalstrategy.es/token-ddd/</loc>
-        <lastmod>2023-07-25T00:00:00.000Z</lastmod>
+        <lastmod>2023-07-25T14:48:23.241Z</lastmod>
     </url>
     
 </urlset>
