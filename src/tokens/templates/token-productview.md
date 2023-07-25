@@ -1,6 +1,6 @@
 ---
-layout: _tokens/_templates/product-view.njk
-permalink: /product-view/
+layout: _tokens/_templates/token-productview.njk
+permalink: /token-productview/
 page_section: templates
 
 titulo: Feel Card

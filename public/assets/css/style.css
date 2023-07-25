@@ -17927,8 +17927,17 @@ code {
   top: 0px;
 }
 
-.w-50 {
+.template-box {
+  border: 1px solid #eaeaea;
+  padding: 16px;
+  transition: all 0.5s;
+}
+.template-box .template-box-icon {
   width: 50px;
   float: left;
   margin-right: 16px;
+}
+.template-box:hover {
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.0784313725), 0 9px 28px rgba(0, 0, 0, 0.0509803922), 0 12px 48px 16px rgba(0, 0, 0, 0.031372549);
+  opacity: 1;
 }
