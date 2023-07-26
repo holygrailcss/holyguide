@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +8,6 @@
   <title>{{ title }}</title>
   <meta name="robots" content="{{ metaRobots }}" />
     <link rel="icon" href="/assets/static/images/favicon.ico" type="image/x-icon">
-
   <meta name="description"
     content="{{ metaDescription or eleventyComputed.metaDescription or metadata.description }}" />
   <meta name="keywords" content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
@@ -26,10 +24,8 @@
   --btn-radius: {{global.btn_radius}};
   }
 </style>
-
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="canonical" href="{{ global.url }}/{{ page.url | url }}" />
-
   <meta property="og:site_name" content="{{ global.empresa }}" />
   <meta property="og:image" content="{{ global.url }}/assets/static/images/1.jpg" />
   <meta property="og:title" content="{{ title }}" />
@@ -37,20 +33,12 @@
   <meta property="og:url" content="{{ global.url }}" />
   <meta property="og:description"
     content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
-
-
 </head>
-
 <body class="contain guide ">
-
+  <main>
     {{ content | safe }}
-
-
-
-
-
-
-<button class="resize-rules guide-inspect btn btn-secondary  ">  
+<div class="guide-inspect">   
+<button class="resize-rules  btn btn-secondary  ">  
 	<div class="">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 			<title>measure-02</title>
@@ -65,24 +53,14 @@
 		</svg>
 	</div>
 </button>
-
-<button class="guide-inspect btn btn-secondary rtl-inspect" onclick="rtlChange()">RTL</button>
-
-
-
+<button class=" btn btn-secondary rtl-inspect" onclick="rtlChange()">RTL</button>
+</div>
+  </main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="/assets/js/index.js"></script>
 <script type="module" src="/assets/js/prism.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-
-
 <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css" />
-
-
-
-
-
 </body>
-
 </html>

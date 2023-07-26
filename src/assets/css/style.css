@@ -14204,6 +14204,637 @@ h6 {
   filter: invert(1);
 }
 
+.openRules .resize-rules svg g {
+  fill: rgb(218, 19, 112);
+  stroke: rgb(218, 19, 112);
+}
+.openRules .resize-rules svg rect {
+  stroke: rgb(218, 19, 112);
+}
+.openRules.guide .mbr-50-100 {
+  position: relative;
+}
+.openRules.guide .mbr-50-100:before {
+  content: "mbr-50-100";
+  font-size: 10px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  height: 50px;
+  bottom: -50px;
+}
+@media (min-width: 768px) {
+  .openRules.guide .mbr-50-100:before {
+    height: 100px;
+    bottom: -100px;
+  }
+}
+.openRules.guide .mb-2 {
+  position: relative;
+}
+.openRules.guide .mb-2:before {
+  content: "mb-2";
+  font-size: 10px;
+  height: 2px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -2px;
+}
+.openRules.guide .mb-4 {
+  position: relative;
+}
+.openRules.guide .mb-4:before {
+  content: "mb-4";
+  font-size: 10px;
+  height: 4px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -4px;
+}
+.openRules.guide .mb-8 {
+  position: relative;
+}
+.openRules.guide .mb-8:before {
+  content: "mb-8";
+  font-size: 10px;
+  height: 8px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -8px;
+}
+.openRules.guide .mb-16 {
+  position: relative;
+}
+.openRules.guide .mb-16:before {
+  content: "mb-16";
+  font-size: 10px;
+  height: 16px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -16px;
+}
+.openRules.guide .mb-32 {
+  position: relative;
+}
+.openRules.guide .mb-32:before {
+  content: "mb-32";
+  font-size: 10px;
+  height: 32px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -32px;
+}
+.openRules.guide .mb-64 {
+  position: relative;
+}
+.openRules.guide .mb-64:before {
+  content: "mb-64";
+  font-size: 10px;
+  height: 64px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -64px;
+}
+.openRules.guide .mb-128 {
+  position: relative;
+}
+.openRules.guide .mb-128:before {
+  content: "mb-128";
+  font-size: 10px;
+  height: 128px;
+  width: auto;
+  border-left: 1px solid rgb(218, 19, 112);
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -128px;
+}
+.openRules.guide .mb-4 {
+  position: relative;
+}
+.openRules.guide .mb-4:before {
+  content: "mb-4";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 4px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+.openRules.guide .mb-8 {
+  position: relative;
+}
+.openRules.guide .mb-8:before {
+  content: "mb-8";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 8px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+.openRules.guide .mb-16 {
+  position: relative;
+}
+.openRules.guide .mb-16:before {
+  content: "mb-16";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 16px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+.openRules.guide .mb-24 {
+  position: relative;
+}
+.openRules.guide .mb-24:before {
+  content: "mb-24";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 24px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+.openRules.guide .mb-32 {
+  position: relative;
+}
+.openRules.guide .mb-32:before {
+  content: "mb-32";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 32px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+}
+.openRules.guide .mb-40 {
+  position: relative;
+}
+.openRules.guide .mb-40:before {
+  content: "mb-40";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 40px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+.openRules.guide .mb-48 {
+  position: relative;
+}
+.openRules.guide .mb-48:before {
+  content: "mb-48";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 48px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -48px;
+  left: 0;
+}
+.openRules.guide .mb-64 {
+  position: relative;
+}
+.openRules.guide .mb-64:before {
+  content: "mb-64";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 64px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -64px;
+  left: 0;
+}
+.openRules.guide .mb-100 {
+  position: relative;
+}
+.openRules.guide .mb-100:before {
+  content: "mb-100";
+  background-color: #ebcfdc;
+  font-size: 10px;
+  height: 100px;
+  padding-left: 4px;
+  width: 100%;
+  color: rgb(218, 19, 112);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+}
+.openRules.guide .pb-4 {
+  position: relative;
+}
+.openRules.guide .pb-4:before {
+  content: "pb-4";
+  font-size: 10px;
+  height: 4px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-4 {
+  position: relative;
+}
+.openRules.guide .pt-4:after {
+  content: "pt-4";
+  font-size: 10px;
+  height: 4px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-8 {
+  position: relative;
+}
+.openRules.guide .pb-8:before {
+  content: "pb-8";
+  font-size: 10px;
+  height: 8px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-8 {
+  position: relative;
+}
+.openRules.guide .pt-8:after {
+  content: "pt-8";
+  font-size: 10px;
+  height: 8px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-16 {
+  position: relative;
+}
+.openRules.guide .pb-16:before {
+  content: "pb-16";
+  font-size: 10px;
+  height: 16px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-16 {
+  position: relative;
+}
+.openRules.guide .pt-16:after {
+  content: "pt-16";
+  font-size: 10px;
+  height: 16px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-24 {
+  position: relative;
+}
+.openRules.guide .pb-24:before {
+  content: "pb-24";
+  font-size: 10px;
+  height: 24px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-24 {
+  position: relative;
+}
+.openRules.guide .pt-24:after {
+  content: "pt-24";
+  font-size: 10px;
+  height: 24px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-32 {
+  position: relative;
+}
+.openRules.guide .pb-32:before {
+  content: "pb-32";
+  font-size: 10px;
+  height: 32px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-32 {
+  position: relative;
+}
+.openRules.guide .pt-32:after {
+  content: "pt-32";
+  font-size: 10px;
+  height: 32px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-40 {
+  position: relative;
+}
+.openRules.guide .pb-40:before {
+  content: "pb-40";
+  font-size: 10px;
+  height: 40px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-40 {
+  position: relative;
+}
+.openRules.guide .pt-40:after {
+  content: "pt-40";
+  font-size: 10px;
+  height: 40px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-48 {
+  position: relative;
+}
+.openRules.guide .pb-48:before {
+  content: "pb-48";
+  font-size: 10px;
+  height: 48px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-48 {
+  position: relative;
+}
+.openRules.guide .pt-48:after {
+  content: "pt-48";
+  font-size: 10px;
+  height: 48px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-64 {
+  position: relative;
+}
+.openRules.guide .pb-64:before {
+  content: "pb-64";
+  font-size: 10px;
+  height: 64px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-64 {
+  position: relative;
+}
+.openRules.guide .pt-64:after {
+  content: "pt-64";
+  font-size: 10px;
+  height: 64px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pb-100 {
+  position: relative;
+}
+.openRules.guide .pb-100:before {
+  content: "pb-100";
+  font-size: 10px;
+  height: 100px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide .pt-100 {
+  position: relative;
+}
+.openRules.guide .pt-100:after {
+  content: "pt-100";
+  font-size: 10px;
+  height: 100px;
+  padding-left: 4px;
+  width: 100%;
+  background-color: #cde0be;
+  color: #76ae4a;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  left: 0;
+}
+.openRules.guide.is-rtl .mb-4:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -4px;
+}
+.openRules.guide.is-rtl .mb-8:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -8px;
+}
+.openRules.guide.is-rtl .mb-16:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -16px;
+}
+.openRules.guide.is-rtl .mb-24:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -24px;
+}
+.openRules.guide.is-rtl .mb-32:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -32px;
+}
+.openRules.guide.is-rtl .mb-40:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -40px;
+}
+.openRules.guide.is-rtl .mb-48:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -48px;
+}
+.openRules.guide.is-rtl .mb-64:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -64px;
+}
+.openRules.guide.is-rtl .mb-100:before {
+  padding-right: 4px;
+  width: auto;
+  right: 0;
+  border-left: none;
+  border-right: 5px solid rgb(218, 19, 112);
+  bottom: -100px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -18773,4 +19404,15 @@ code {
   background-color: #fff;
   display: block;
   float: left;
+}
+
+.guide-inspect {
+  position: fixed;
+  bottom: 0;
+}
+.is-rtl .guide-inspect {
+  left: 0;
+}
+.guide-inspect .btn {
+  height: 35px;
 }

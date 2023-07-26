@@ -333,3 +333,15 @@ code {
     }
   }
 }
+
+.guide-inspect{
+  position: fixed;
+  bottom: 0;
+  .is-rtl & {
+    left: 0;
+  }
+  .btn{
+    height: 35px;
+  }
+  
+}

@@ -1,5 +1,9 @@
 $nav-width: 250px;
 
+$c-secondary: orange;
+$nav-width: 250px;
+$c-guide: rgb(218, 19, 112);
+
 h1 {
   @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
   width: 100%;
@@ -449,4 +453,180 @@ h6 {
   padding: 0;
   border-radius: 0 0 0 4px;
   filter: invert(1);
+}
+
+
+.openRules {
+  .resize-rules {
+      svg {
+          g {
+              fill: $c-guide;
+              stroke: $c-guide;
+          }
+
+          rect {
+              stroke: $c-guide;
+          }
+      }
+  }
+
+  &.guide {
+      .mbr-50-100 {
+          position: relative;
+
+          &:before {
+              content: "mbr-50-100";
+              font-size: 10px;
+              width: auto;
+              border-left: 1px solid $c-guide;
+              color: $c-guide;
+              position: absolute;
+              height: 50px;
+              bottom: -50px;
+
+              @media (min-width: 768px) {
+                  height: 100px;
+                  bottom: -100px;
+              }
+          }
+      }
+
+      $a: 1;
+
+      @for $i from 2 through 8 {
+          $a: $a * 2;
+
+          .mb-#{$a} {
+              position: relative;
+
+              &:before {
+                  content: "mb-#{$a}";
+                  font-size: 10px;
+                  height: #{$a}px;
+                  width: auto;
+                  border-left: 1px solid $c-guide;
+                  color: $c-guide;
+                  position: absolute;
+                  bottom: -#{$a}px;
+              }
+          }
+      }
+
+      $marginsFamily: (
+          4,
+          8,
+          16,
+          24,
+          32,
+          40,
+          48,
+          64,
+          100
+      );
+
+  @each $name in $marginsFamily {
+      $typeFluid0: $name; //funcion del fipografia
+
+      .mb-#{$typeFluid0} {
+          position: relative;
+
+          &:before {
+              content: "mb-#{$typeFluid0}";
+              background-color: #ebcfdc;
+              font-size: 10px;
+              height: #{$typeFluid0}px;
+              padding-left: 4px;
+              width: 100%;
+
+              color: $c-guide;
+              position: absolute;
+              bottom: -#{$typeFluid0}px;
+
+
+              left: 0;
+          }
+
+      }
+  }
+
+  $marginsFamily: (
+      4,
+      8,
+      16,
+      24,
+      32,
+      40,
+      48,
+      64,
+      100
+  );
+
+@each $name in $marginsFamily {
+  $typeFluid0: $name; //funcion del fipografia
+
+  .pb-#{$typeFluid0} {
+      position: relative;
+
+      &:before {
+          content: "pb-#{$typeFluid0}";
+          font-size: 10px;
+          height: #{$typeFluid0}px;
+          padding-left: 4px;
+          width: 100%;
+          background-color: #cde0be;
+          color: $c-success;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          left: 0;
+
+      }
+
+  }
+
+  .pt-#{$typeFluid0} {
+      position: relative;
+
+      &:after {
+          content: "pt-#{$typeFluid0}";
+          font-size: 10px;
+          height: #{$typeFluid0}px;
+          padding-left: 4px;
+          width: 100%;
+          background-color: #cde0be;
+          color: $c-success;
+          position: absolute;
+          top: 0;
+          display: flex;
+          align-items: center;
+          left: 0;
+
+      }
+
+  }
+}
+
+
+
+
+
+&.is-rtl {
+  @each $name in $marginsFamily {
+      $typeFluid0: $name; //funcion del fipografia
+
+      .mb-#{$typeFluid0} {
+          &:before {
+              padding-right: 4px;
+              width: auto;
+              right: 0;
+              border-left: none;
+              border-right: 5px solid $c-guide;
+              bottom: -#{$typeFluid0}px;
+          }
+
+      }
+  }
+}
+}
 }
