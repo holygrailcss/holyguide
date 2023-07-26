@@ -7,28 +7,16 @@ permalink: /store-locator/
 {% import "_macros/_insert.njk" as insert %}
 
 <div class="container-fluid">
-  {% include '_website/hero.njk' %}
+	{% include '_website/hero.njk' %}
 </div>
 
-  <div class="main-content">
-	<section class="mb-32 mt-32">
-        <div class="row">
-            <div class="col-xs-12"> 
- <div class="pt-64">
-  
-      {% call insert.storeLocator('Store locator','') %} {% endcall %}  </div>
-        </div>
-    </section>
-  </div>
+<section class="mb-32 mt-32">
+	<div class="row">
+		<div class="col-xs-12">
 
+			{% call insert.template('_tokens/_templates/','token-store-locator', '550px','https://www.figma.com') %}
+			{% endcall %}
 
-  <script>
-    Prism.highlightAll();
-
-    document.addEventListener("DOMContentLoaded", function() {
-    // Inicializa Highlight.js
-
-
-    
-  });
-    </script>
+		</div>
+	</div>
+</section>
