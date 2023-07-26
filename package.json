@@ -46,7 +46,7 @@
     "eleventy-plugin-toc": "^1.1.5"
   },
   "dependencies": {
-    "holygrailcss": "^2.2.4",
+    "holygrailcss": "^2.2.8",
     "aos": "^2.3.4",
     "fs": "^0.0.1-security",
     "eleventy-plugin-embed-everything": "^1.16.0",

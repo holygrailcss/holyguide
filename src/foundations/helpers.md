@@ -115,4 +115,3 @@ Helpers que ayudan a agilizar el proceso de maquetación.
 | .sm:min-text-center | Centrado desde sm - 1     |
 | .md:min-text-center | Centrado desde md - 1     |
 | .lg:min-text-center | Centrado desde lg - 1     |
-| .sm:flex            | Flex hasta sm             |

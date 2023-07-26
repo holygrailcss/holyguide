@@ -2074,3 +2074,16 @@
 	</div>
 {% endmacro %}
 {# TODO END #}
+
+
+{% macro spacer(title = '',type = '') %}
+
+
+          <div class="clean-box-wrap">
+          
+            <div class="clean-box {{type}}">
+              <div> <b>{{title}}</b> <br> .{{type}}</div>
+            </div>
+          </div>
+
+{% endmacro %}
