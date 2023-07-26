@@ -18,23 +18,16 @@ eleventyComputed:
   metaRobots: "noindex, nofollow"
 ---
 
-## Espaciado Responsive
 
-| Helper   | Mobile             | Desktop             |
-| -------- | ------------------ | ------------------- |
-| .mbr-128 | Margen bottom 64px | Margen bottom 128px |
-| .mbr-32  | Margen bottom 64px | Margen bottom 32px  |
-| .mbr-24  | Margen bottom 64px | Margen bottom 24px  |
 
 ### Unidades
 
 Por lo tanto las unicas unidades que podemos usar para los espaciados es de...
-8px, 16px, 24px, 32px, 40px, 48px, 64px...
-6pt, 12pt, 18pt, 24pt, 30pt, 36pt, 48pt...
+#### 8px, 16px, 24px, 32px, 40px, 48px, 64px...
 
 
 
-### Márgenes Hasta
+### Márgenes Bottoms Hasta
 
 - \*\* eliminar del proyecto
 
