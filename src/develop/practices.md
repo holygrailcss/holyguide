@@ -5,7 +5,6 @@ page_section: develop
 
 tags: ["Estructuras modulares", "develop", ""]
 
-
 titulo: Buenas Practicas
 descripcion: Lo que nunca deberemos hacer
 ---

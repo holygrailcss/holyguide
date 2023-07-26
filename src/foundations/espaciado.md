@@ -18,14 +18,11 @@ eleventyComputed:
   metaRobots: "noindex, nofollow"
 ---
 
-
-
 ### Unidades
 
 Por lo tanto las unicas unidades que podemos usar para los espaciados es de...
+
 #### 8px, 16px, 24px, 32px, 40px, 48px, 64px...
-
-
 
 ### Márgenes Bottoms Hasta
 

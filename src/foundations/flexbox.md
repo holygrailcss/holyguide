@@ -9,7 +9,9 @@ tags: ["Estructuras modulares", "web design", "foundations"]
 image: /assets/static/components/flexbox.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
+
 ### Flex init
+
 | Helper      | Description ✅   |
 | ----------- | ---------------- |
 | .is-flex    | Display flex     |

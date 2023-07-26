@@ -6,8 +6,9 @@ titulo: orderConfirmation
 descripcion: orderConfirmation
 image: /assets/static/images/orderConfirmation.jpg
 author: autor
-date: 2023-07-25 
+date: 2023-07-25
 tags: ["templates"]
 imageAlt: orderConfirmation
 ---
+
 # orderConfirmation

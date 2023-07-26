@@ -16,6 +16,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./guia.scss";
 @import "./theme.scss";
 @import "parrillas/_all.scss";
+@import "template/_all.scss";
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
@@ -288,8 +289,6 @@ code {
   }
 }
 
-
-
 .clean-box-wrap {
   position: relative;
   box-sizing: border-box;
@@ -311,10 +310,10 @@ code {
     border: 1px dashed #348c95;
     position: relative;
 
-    div{
+    div {
       position: absolute;
       top: 50%;
-      transform: translate(0, -50% );
+      transform: translate(0, -50%);
       text-align: center;
       width: 100%;
       font-size: 14px;
@@ -334,14 +333,14 @@ code {
   }
 }
 
-.guide-inspect{
+.guide-inspect {
   position: fixed;
   bottom: 0;
+  z-index: 10;
   .is-rtl & {
     left: 0;
   }
-  .btn{
+  .btn {
     height: 35px;
   }
-  
 }

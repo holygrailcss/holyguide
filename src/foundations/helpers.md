@@ -26,7 +26,6 @@ Helpers que ayudan a agilizar el proceso de maquetación.
 | flex-none     | flex: none                                   |
 | p-wrap        | position relative al 100%                    |
 
-
 ### Bordes
 
 | Helper     | Description                              |
