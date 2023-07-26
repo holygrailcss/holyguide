@@ -22,7 +22,6 @@
 			</div>
 			<div class="viewcode">
 				<pre><code class="language-markup">{% set standardcode %} 
-                
                 {% include   ruta+component +'.njk' %}
 				{% endset %}{{standardcode}}</code></pre> 
 			</div>
@@ -46,12 +45,9 @@
 	</div>
 </section>
 {% endmacro %}
-
-
 {% macro select(selectName = '', explicacion = '', dark = '') %}
 <h3>{{ selectName | capitalize }}</h3>
 <p class="p-xs">{{selectName }} : {{ explicacion }}</p>
-
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
 		<div class="select {{selectName }}">
@@ -81,12 +77,9 @@
 		</select>
 	</div>
 	{% endset %}
-
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
-
 {% endmacro %}
-
 {% macro list(listClass = '', explicacion = '') %}
 <h3>{{ listClass }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -122,7 +115,6 @@
 {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 {% endmacro %}
-
 {% macro listButton(listClass = '', explicacion = '') %}
 <h3>{{ listClass | capitalize }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -223,9 +215,7 @@
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
-
 {% macro baseTooltip(tooltipType = '', explicacion = '') %}
-
 <h3>{{ tooltipType }}</h3>
 <p class="p-s">{{ explicacion }}</p>
 {% if tooltipType === "tooltip-*dir*" %}
@@ -309,10 +299,8 @@
 	{% endif %}
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
-
 </div>
 {% endmacro %}
-
 {% macro banner(bannerClass = '', descipcion = '') %}
 <h3 class="mb-24">{{bannerClass}}</h3>
 <p class="mb-32">{{descipcion}}</p>
@@ -374,7 +362,6 @@
     </pre>
 	</div>
 {% endmacro %}
-
 {% macro svgIconname(icoName = '') %}
 	{% if icoName == 'globe' %}
 		<svg-icon>
@@ -428,11 +415,9 @@
 		</svg-icon>
 	{% endif %}
 {% endmacro %}
-
 {% macro links(links = '', explicacion = '', svg = '', dark = '') %}
 	<p class="p-xs mt-32">{{ explicacion }}</p>
 	<br>
-
 	<div class="resize-mini">
 		<div class="resize-mini-content  ">
 			<div class="container-fluid w-100">
@@ -536,7 +521,6 @@
 				</div>
 			</div>
 		</div>
-
 		{% set standardcode %}
 		<a class="mb-16  {{ links  }} " href="">
 			{{ links }}
@@ -550,7 +534,6 @@
     </pre>
 	</div>
 {% endmacro %}
-
 {% macro svgIconSize(size = '') %}
 	<svg-icon>
 		<div>
@@ -562,7 +545,6 @@
 		</div>
 	</svg-icon>
 {% endmacro %}
-
 {% macro simple(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
@@ -580,7 +562,6 @@
 						<button class=" btn-{{buttonName }} btn btn--small hover">hover</button>
 						<button disabled class=" btn-{{buttonName }} btn btn--small">disabled</button>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -590,7 +571,6 @@
 		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 	</div>
 {% endmacro %}
-
 {% macro animation(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
@@ -644,7 +624,6 @@
 		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 	</div>
 {% endmacro %}
-
 {% macro animationsvg(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
@@ -706,14 +685,11 @@
 		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 	</div>
 {% endmacro %}
-
 {% macro svg(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
-
 	<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
 	</p>
-
 	<div class="resize-mini">
 		<div class="resize-mini-content {{dark  }} ">
 			<button class=" {{buttonName }} btn  btn--small">
@@ -742,18 +718,14 @@
     btn-{{buttonName }}
 		</button>{% endset %}
 		<pre><code class="language-markup">{{standardcode}} </code></pre>
-
 	</div>
 {% endmacro %}
-
 {% macro iconClear(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
-
 	<p class="p-m">
 		{{buttonName }} : {{ explicacion }}
 	</p>
-
 	<div class="resize-mini">
 		<div class="resize-mini-content {{dark  }} ">
 			<button class=" btn {{buttonName}}">
@@ -781,19 +753,14 @@
 			</svg-icon>
 		</button>{% endset %}
 		<pre><code class="language-markup">{{standardcode}} </code></pre>
-
 	</div>
 {% endmacro %}
-
 {% macro social(buttonName = '', svgsolo = '', explicacion = '', placeholder = '', dark = '') %}
-
 	<p class="p-s p-8">
 		{{buttonName }} : {{ explicacion }}
 	</p>
-
 	<div class="">
 		<div class=" is-flex ">
-
 			<button class=" {{buttonName }} btn btn-social  btn--medium">
 				<svg-icon >
 					<div>
@@ -802,7 +769,6 @@
 				</svg-icon>
 				{{placeholder }}
 			</button>
-
 			<button class=" {{buttonName }} btn btn-social  btn--medium hover">
 				<svg-icon >
 					<div>
@@ -811,7 +777,6 @@
 				</svg-icon>
 				{{placeholder }}
 			</button>
-
 			<button class=" {{buttonName }} btn btn-social  btn--medium disabled">
 				<svg-icon >
 					<div>
@@ -820,19 +785,14 @@
 				</svg-icon>
 				{{placeholder }}
 			</button>
-
 		</div>
-
 	</div>
 {% endmacro %}
-
 {% macro btnDistribution(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
-
 	<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
 	</p>
-
 	{% if buttonName == 'btn-separate'%}
 		<div class="resize-mini">
 			<div class="resize-mini-content {{dark  }} ">
@@ -846,7 +806,6 @@
 						</div>
 					</svg-icon>
 				</button>
-
 			</div>
 			{% set standardcode %}
 			<button class="btn btn-primary btn--medium {{buttonName }}">
@@ -856,13 +815,10 @@
 			{% endset %}
 			<pre><code class="language-markup">{{standardcode}} </code></pre>
 		</div>
-
 	{% endif %}
-
 	{% if buttonName == 'btn-world'%}
 		<div class="resize-mini">
 			<div class="resize-mini-content {{dark  }} ">
-
 				<button class="btn btn--large btn-world">
 					<div class="btn-world-left">
 						{% call insert.svgIconname('globe') %}
@@ -874,11 +830,8 @@
 						{% endcall %}
 					</div>
 				</button>
-
 			</div>
-
 			{% set standardcode %}
-
 			<button class="btn btn--large btn-world">
 				<div class="btn-world-left">
 					<svg-icon src="YOUR_ICON"></svg-icon>
@@ -888,25 +841,19 @@
 					<svg-icon src="YOUR_ICON"></svg-icon>
 				</div>
 			</button>
-
 			{% endset %}
-
 			<pre><code class="language-markup">{{standardcode}} </code></pre>
 		</div>
 	{% endif %}
-
 {% endmacro %}
-
 {% macro square(buttonName = '', explicacion = '', dark = '') %}
 	<h3>{{ buttonName | capitalize }}
 	</h3>
-
 	<p class="p-m">
 		<span class="bold mr-8">   .btn--{{buttonName }}
 		</span>
 		{{ explicacion | capitalize }}
 	</p>
-
 	<div class="resize-mini">
 		<div class="resize-mini-content {{dark  }} ">
 			<div class="container-3">
@@ -924,7 +871,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="col-xs-6 has-light bg-primary">
 						<div class="row">
 							<div class="col-xs-12 mb-16 mt-16">
@@ -939,22 +885,15 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
-
 		{% set standardcode %}
 		<button class='btn btn--{{buttonName }} btn--full'>btn--{{buttonName }}
 		</button>{% endset %}
-
 		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
-
 	</div>
 {% endmacro %}
-
 {% macro button(buttonNames = [], explicacion = '', dark = '') %}
-
 	<div class="resize-mini">
 		<div class="resize-mini-content {{dark  }} ">
 			<div class="container-3">
@@ -968,11 +907,9 @@
 						{% endfor %}
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-xs-12 p-xs p-16">hover</div>
 					<div class="col-xs-12hover ">
-
 						{% for buttonName in buttonNames %}
 							<button class=" {% if buttonName == 'link-line'  %} link-line hover {% elif buttonName == 'link-raw'  %} link-raw hover {% else %}    btn btn-{{buttonName}}  hover {% endif %}    ">
 								{{buttonName}}
@@ -980,20 +917,16 @@
 						{% endfor %}
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-xs-12 p-xs p-16">disabled</div>
 					<div class="col-xs-12disabled ">
-
 						{% for buttonName in buttonNames %}
-
 							<button class=" {% if buttonName == 'link-line'  %} link-line disabled {% elif buttonName == 'link-raw'  %} link-raw disabled {% else %}    btn btn-{{buttonName}}  disabled {% endif %}    ">
 								{{buttonName}}
 							</button>
 						{% endfor %}
 					</div>
 				</div>
-
 				<div class="row has-light bg-primary">
 					<div class="col-xs-12 p-xs p-16">has-light primary</div>
 					<div class="col-xs-12 ">
@@ -1001,11 +934,9 @@
 							<button class=" {% if buttonName == 'link-line'  %} link-line {% elif buttonName == 'link-raw'  %} link-raw {% else %}    btn btn-{{buttonName}} {% endif %}    ">
 								{{buttonName}}
 							</button>
-
 						{% endfor %}
 					</div>
 				</div>
-
 				<div class="row has-light bg-primary">
 					<div class="col-xs-12 p-xs p-16">has-light hover</div>
 					<div class="col-xs-12 ">
@@ -1016,7 +947,6 @@
 						{% endfor %}
 					</div>
 				</div>
-
 				<div class="row has-light bg-primary">
 					<div class="col-xs-12 p-xs p-16">has-light disabled</div>
 					<div class="col-xs-12 ">
@@ -1027,7 +957,6 @@
 						{% endfor %}
 					</div>
 				</div>
-
 			</div>
 		</div>
 		{% set standardcode %}
@@ -1037,9 +966,7 @@
 		<pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="/assets/static/images/clippy.svg" width="13" alt="Copy to clipboard"> </button ><code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}   </code></pre>
 	</div>
 {% endmacro %}
-
 {% macro baseTooltip(tooltipType = '', explicacion = '') %}
-
 	<h3>{{ tooltipType }}</h3>
 	<p class="p-s">{{ explicacion }}</p>
 	{% if tooltipType === "tooltip-*dir*" %}
@@ -1124,10 +1051,8 @@
 		{% endif %}
 		{% endset %}
 		<pre><code class="language-markup">{{standardcode}} </code></pre>
-
 	</div>
 {% endmacro %}
-
 {% macro tooltip(tooltipClass = '', hasIcon = '') %}
 	<div class="{{ tooltipClass }}">
 		<div class="is-flex">
@@ -1156,7 +1081,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {# TODO JUNTAR MACROS LINKS #}
 {% macro link(elementType = '', explicacion = '', dark = '') %}
 	<h3>{{ elementType }}
@@ -1175,7 +1099,6 @@
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
-
 {% macro linkPost(elementType = '', explicacion = '', dark = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1201,7 +1124,6 @@
 	{% endset %}
 	<pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
-
 {% macro linkPre(elementType = '', explicacion = '', dark = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1228,7 +1150,6 @@
 	<pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
 {# TODO END #}
-
 {# TODO JUNTAR MACROS CHECK #}
 {% macro checkbox(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}</h3>
@@ -1272,7 +1193,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro checkboxText(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1318,7 +1238,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro checkbox2(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1348,7 +1267,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro checkboxRadio(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1392,7 +1310,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro checkboxCard(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1445,7 +1362,6 @@
 	</div>
 {% endmacro %}
 {# TODO END #}
-
 {# TODO INPUTS #}
 {% macro input(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
@@ -1470,7 +1386,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputTexto(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1510,7 +1425,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputError(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1560,7 +1474,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputPre(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1596,7 +1509,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputPost(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1632,7 +1544,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputPwd(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1732,7 +1643,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
 {% macro inputDisabled(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1758,8 +1668,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
-
 {% macro inputPrefix(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1807,8 +1715,6 @@
 		</div>
 	</div>
 {% endmacro %}
-
-
 {% macro inputIpod(elementType = '', explicacion = '') %}
 	<h3>{{ elementType }}
 	</h3>
@@ -1851,16 +1757,23 @@
 	</div>
 {% endmacro %}
 {# TODO END #}
-
-
 {% macro spacer(title = '',type = '') %}
-
-
           <div class="clean-box-wrap mr-16">
-          
             <div class="clean-box {{type}}">
               <div> <b>{{title}}</b> <br> .{{type}}</div>
             </div>
           </div>
+{% endmacro %}
 
+
+
+
+{% macro sass(name = '',type = '') %}
+
+          		{% set standardcode %}
+    {% include 'src/assets/sass/parrillas/_grid-'+ name +'.scss' %}  
+		{% endset %}
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre> 
+		</div>
 {% endmacro %}

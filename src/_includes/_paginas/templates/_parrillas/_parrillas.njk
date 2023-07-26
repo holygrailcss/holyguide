@@ -3,6 +3,7 @@ layout: base.njk
 title: parrillas index
 permalink: /parrillas/
 ---
+{% import "_macros/_insert.njk" as insert %}
 <div class="container-fluid">{% include '_website/hero.njk' %}</div>
 <section>
   <div class="row">
@@ -17,28 +18,13 @@ permalink: /parrillas/
               </a>
             {% endfor %}
         </div>
-
             <div class="main-content innermarkdown">
         {% for global in global.templates %}
-
-
 {% set parts = global.parrilla.split('-') %}
 {% set targetPart = parts[1] %}
-
 {{ targetPart }}
-
-          		{% set standardcode %}
-    {% include 'src/assets/sass/parrillas/_grid-'+ targetPart +'.scss' %}  
-		{% endset %}
-
-		
-		<div class="code-zone">
-			<pre><code class=" language-markup">{{standardcode}}</code></pre> 
-		</div>
-
+            {% call insert.sass(targetPart,'') %} {% endcall %}
          {% endfor %}
-
-
     </div>    </div>
   </div>
 </section>
