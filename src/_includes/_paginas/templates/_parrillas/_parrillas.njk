@@ -20,9 +20,22 @@ permalink: /parrillas/
 
             <div class="main-content innermarkdown">
         {% for global in global.templates %}
-          <div>
-            /assets/static/parrillas/{{ global.parrilla }}.scss
-          </div>
+
+
+{% set parts = global.parrilla.split('-') %}
+{% set targetPart = parts[1] %}
+
+{{ targetPart }}
+
+          		{% set standardcode %}
+    {% include 'src/assets/sass/parrillas/_grid-'+ targetPart +'.scss' %}  
+		{% endset %}
+
+		
+		<div class="code-zone">
+			<pre><code class=" language-markup">{{standardcode}}</code></pre> 
+		</div>
+
          {% endfor %}
 
 

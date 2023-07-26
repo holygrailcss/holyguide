@@ -1,5 +1,4 @@
 
-console.log("Hola, mundo!");
 
 document.body.onscroll = function () {
   if (
