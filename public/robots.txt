@@ -1,8 +1,0 @@
-
-User-agent: *
-Disallow: /admin/
-Disallow: /temp/
-Disallow: /private/
-Disallow: /legal/
-
-Sitemap: digitalstrategy.es/sitemap.xml
