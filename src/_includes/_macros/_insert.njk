@@ -1777,12 +1777,17 @@
 
 
 
-{% macro sass(name = '',type = '') %}
+{% macro sass(name = '',description = '') %}
 
 {% set standardcode %}{% include 'src/assets/sass/parrillas/_grid-'+ name +'.scss' %}{% endset %}
 
 		<div class="code-zone">
-			       <div class="code-title" onclick="cerrarDiv(this)" >{{ name }}</div>
+			       <div class="code-title" onclick="cerrarDiv(this)" >{{ name }}
+
+ <div class="code-title-description">   {{description}}  </div>
+
+
+				   </div>
 			<pre><code class=" language-css">{{standardcode}}</code></pre> 
 		</div>
 

@@ -24,14 +24,15 @@ permalink: /parrillas/
             <div class="main-content innermarkdown">
 
               <h2 class="h2">  Sass zone</h2>
+              <p class="p1"> para poner comentarios usaremos el <code>global.json</code> de templates</p>
 
                   {% for global in global.templates %}
                       {% set parts = global.parrilla.split('-') %}
                       {% set targetPart = parts[1] %}
-               
+           
 
 
-                      {% call insert.sass(targetPart,'') %} {% endcall %}
+                      {% call insert.sass(targetPart,   global.description) %} {% endcall %}
                   {% endfor %}
     </div>    </div>
   </div>
