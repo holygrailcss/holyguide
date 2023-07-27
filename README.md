@@ -155,7 +155,7 @@ You can also use words, to fit your writing style more closely[^note].
 ⚪️ 1- To do
 ✍️ 4- Work in progress
 
-
+🔴🟣🟡⚫⚪🟢🔵🟠🟤
 
 ## Creación de nuevos elementos
 
