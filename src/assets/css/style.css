@@ -14835,6 +14835,23 @@ h6 {
   bottom: -100px;
 }
 
+.code-zone {
+  height: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+.code-zone .code-title {
+  transition: all ease 0.2s;
+  height: 30px;
+  padding: 8px;
+}
+.code-zone .code-title:hover {
+  opacity: 0.6;
+  background-color: #eaeaea;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;

@@ -18,16 +18,28 @@ permalink: /parrillas/
               </a>
             {% endfor %}
         </div>
+
+
+
             <div class="main-content innermarkdown">
-        {% for global in global.templates %}
-{% set parts = global.parrilla.split('-') %}
-{% set targetPart = parts[1] %}
-{{ targetPart }}
-            {% call insert.sass(targetPart,'') %} {% endcall %}
-         {% endfor %}
+
+              <h2 class="h2">  Sass zone</h2>
+
+                  {% for global in global.templates %}
+                      {% set parts = global.parrilla.split('-') %}
+                      {% set targetPart = parts[1] %}
+               
+
+
+                      {% call insert.sass(targetPart,'') %} {% endcall %}
+                  {% endfor %}
     </div>    </div>
   </div>
 </section>
+
+
+
+
  {{ content | safe }}</div>
 <div id="mask"></div>
 <div id="boxes">

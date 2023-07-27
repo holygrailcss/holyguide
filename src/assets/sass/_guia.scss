@@ -598,3 +598,25 @@ h6 {
     }
   }
 }
+
+
+.code-zone{
+
+  height: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+  transition: all ease .2s;
+  cursor: pointer;
+
+  .code-title{
+    transition: all ease .2s;
+    height: 30px;
+    padding: 8px;
+    &:hover{
+      opacity: .6;
+      background-color: #eaeaea;
+    }
+
+  }
+
+}

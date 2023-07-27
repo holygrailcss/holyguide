@@ -654,3 +654,21 @@ $(".check-16").on("click", function() {
 		}
 	});
 });
+
+
+
+
+
+function cerrarDiv(clickedElement) {
+  // Buscar el div padre (code-zone) del elemento clicado (code-title)
+  var codeZoneDiv = clickedElement.closest('.code-zone');
+  
+  // Verificar si el div está visible u oculto
+  if (codeZoneDiv.style.height === '30px' || codeZoneDiv.style.height === '') {
+    // Si está oculto, mostrarlo ajustando su altura automáticamente
+    codeZoneDiv.style.height = 'auto';
+  } else {
+    // Si está visible, ocultarlo ajustando su altura a 0
+    codeZoneDiv.style.height = '30px';
+  }
+}

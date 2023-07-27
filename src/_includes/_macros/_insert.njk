@@ -80,6 +80,10 @@
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
+
+
+
+
 {% macro list(listClass = '', explicacion = '') %}
 <h3>{{ listClass }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -113,8 +117,13 @@
 	</li>
 </ul>
 {% endset %}
+
+
 <pre><code class="language-markup">{{standardcode}} </code></pre>
 {% endmacro %}
+
+
+
 {% macro listButton(listClass = '', explicacion = '') %}
 <h3>{{ listClass | capitalize }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -1770,10 +1779,11 @@
 
 {% macro sass(name = '',type = '') %}
 
-          		{% set standardcode %}
-    {% include 'src/assets/sass/parrillas/_grid-'+ name +'.scss' %}  
-		{% endset %}
+{% set standardcode %}{% include 'src/assets/sass/parrillas/_grid-'+ name +'.scss' %}{% endset %}
+
 		<div class="code-zone">
-			<pre><code class=" language-markup">{{standardcode}}</code></pre> 
+			       <div class="code-title" onclick="cerrarDiv(this)" >{{ name }}</div>
+			<pre><code class=" language-css">{{standardcode}}</code></pre> 
 		</div>
+
 {% endmacro %}
