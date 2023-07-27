@@ -114,8 +114,8 @@
     { "parrilla": "template-MINIGRID", "description": " 🟣Sangre / 16 " },
     { "parrilla": "template-MINIGRID-INFO", "description": "🟣Sangre / 16  " },
     { "parrilla": "template-SEC", "description": " " },
-    { "parrilla": "template-SEPARATOR_12_5", "description": " " },
-    { "parrilla": "template-SEPARATOR_25" }
+    { "parrilla": "template-separator_12_5", "description": " " },
+    { "parrilla": "template-separator_25" }
   ],
   "ratios": [
     { "ratio": "2-3" },
