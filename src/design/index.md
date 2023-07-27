@@ -1,7 +1,7 @@
 ---
 layout: _paginas/_index.njk
 permalink: /
-title: Titutar de la página
+title: Holyguide
 
 page_section: index
 ---
