@@ -1,0 +1,38 @@
+---
+layout: base.njk
+---
+
+<!-- Contenido de la plantilla marquee.njk -->
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}</div>
+
+<div class="main-content">
+
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12 mb-32">
+        <div class="code-view ">
+          <div class="check-new"></div>
+          {# -------- #}
+          <div class="marquee">
+            <div class="marquee-content">
+              <p class="marquee-inner p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a></p>
+            </div>
+          </div>
+          {# -------- #}
+        </div>
+        {% set standardcode %}
+        <div class="marquee">
+          <div class="marquee-content">
+            <p class="marquee-inner p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a></p>
+          </div>
+        </div>
+        {% endset %}
+        <pre><code class="language-markup">{{standardcode}}</code></pre>
+      </div>
+    </div>
+  </section>
+
+</div>
