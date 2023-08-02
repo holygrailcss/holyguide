@@ -1,0 +1,158 @@
+
+{% import "_macros/_insert.njk" as insert %} 
+{% macro modal(modalsize='',margin='', explicacion='') %} <h3>{{ modalsize |
+    capitalize }} + {{ margin | capitalize }}</h3>
+<hr>
+<p class="p-m"> {{ explicacion | capitalize }} </p>
+<div class="resize-mini">
+    <div class="resize-mini-content {{dark  }} ">
+        <div class="row">
+            <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
+                <button class="btn btn-primary" onclick="openModal('{{modalsize}}', '{{margin}}')"> Modal {{modalsize}}
+                    {{margin}} </button>
+            </div>
+        </div>
+    </div> {% set standardcode %} public launchModalName(): void { this.modalService.openModalFromComponent( null,
+    MyAccountFeelStyleAdvisorCancelModalComponent, null, ModalSizes.{{modalsize}} , ModalMargins.{{margin}} ,
+    [ModalOptions.HIDE_TITLE] ); } {% endset %}
+    <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> 
+    </button ><code id="{{buttonName}}" class="language-javascript  ">{{standardcode}}   </code></pre>
+</div> {% endmacro %} {% macro modalContent() %} <div class="cdk-overlay-container modal-container"
+    id="modal-container">
+    <button class="start-options btn btn-secundary m-16" onclick="modalOptionsToggle()">Mostrar opciones
+        adicionales</button>
+    <div class="sidebar-options">
+        <div class="content-options">
+            <button class="btn btn-secundary" onclick="modalOptionsToggle()">Ocultar opciones</button>
+            <h5> ModalSizes</h5>
+            <button class="btn btn--mini btn-primary btn-size-change "
+                onclick="modalSizeChange('MARGIN_0')">MARGIN_0</button>
+            <button class="btn btn--mini btn-primary btn-size-change"
+                onclick="modalSizeChange('MARGIN_16')">MARGIN_16</button>
+            <button class="btn btn--mini btn-primary btn-size-change"
+                onclick="modalSizeChange('MARGIN_24')">MARGIN_24</button>
+            <button class="btn btn--mini btn-primary btn-size-change"
+                onclick="modalSizeChange('MARGIN_32')">MARGIN_32</button>
+            <button class="btn btn--mini btn-primary btn-size-change"
+                onclick="modalSizeChange('MARGIN_40')">MARGIN_40</button>
+            <button class="btn btn--mini btn-primary btn-size-change"
+                onclick="modalSizeChange('MARGIN_0_24')">MARGIN_0_24</button>
+            <h5> ModalOptions</h5>
+            <button class="btn btn--mini btn-primary" onclick="modalHideTittle()">HIDE_TITLE</button>
+            <button class="btn btn--mini btn-primary" onclick="modalHideX()">HIDE_X</button>
+            <button class="btn btn--mini btn-primary" onclick="modalXfullM()">FULL_MOBILE</button>
+            <button class="btn btn--mini btn-primary" onclick="modalFullWp()">FULL_VIEWPORT</button>
+            <button class="btn btn--mini btn-primary" onclick="modalFeelBg()">FEEL_BG</button>
+            <!-- <button class="btn btn-primary" onclick="modalCloseBc()">CLOSE_ON_BACKDROP_CLICK</button> -->
+            <button class="btn btn--mini btn-primary" onclick="modalBgtransparent()">TRANSPARENT_BACKGROUND</button>
+        </div>
+    </div>
+    <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
+    <div class="modal-content" dir="ltr">
+        <div class="cdk-overlay-pane">
+            <component>
+                <div class="modalx" id="modalx">
+                    <div class="modalx-dialog" id="modalx-dialog">
+                        <div class="modalx-content">
+                            <div class="margin-a"></div>
+                            <div class="margin-b"></div>
+                            <div class="margin-c"></div>
+                            <div class="margin-d"></div>
+                            <div class="modalx-close">
+                                <button class="closex" onclick="openModal()">
+                                    <svg-icon src="close"  ng-reflect-src="close">
+                                        <div _ngcontent-nds-c30=""><svg width="18" height="18" viewBox="0 0 18 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z"
+                                                    fill="#292929"></path>
+                                            </svg>
+                                        </div>
+                                    </svg-icon>
+                                </button>
+                            </div>
+                            <div class="modalx-body">
+                                <div class="modal-title text-center mb-24">
+                                    <p class=" tit-s">Modal</p>
+                                </div>
+                                <p class="p-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                    fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
+                                    Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
+                                <p class="p-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                    fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
+                                    Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </component>
+    </div>
+</div>
+</div> {% endmacro %} {% macro modalShopLook(modalname='', explicacion='') %} <h3>{{ modalname | capitalize }}</h3>
+<hr>
+<p class="p-m"> {{ explicacion | capitalize }} </p>
+<div class="resize-mini">
+    <div class="resize-mini-content {{dark  }} ">
+        <div class="container-6">
+            <div class="row">
+                <div class="col-xs-12 mb-16 col-xs-12 mb-16 align-center">
+                    <button class="btn btn-primary" onclick="openModalShopLook()"> {{modalname}} </button>
+                </div>
+            </div>
+        </div>
+    </div> {% set standardcode %}public openShopTheLookModal(_productId: string) {
+    this.modalService.openModalFromComponent( null, ShopTheLookComponent, { productId: _productId, },
+    ModalSizes.SIZE_XXS, ModalMargins.MARGIN_0, [ModalOptions.HIDE_TITLE] ); }{% endset %}
+    <pre><button class="btn btncode" data-clipboard-target="#{{buttonName}}"><img src="./images/clippy.svg" width="13" alt="Copy to clipboard"> 
+    </button ><code id="{{buttonName}}" class="language-javascript  ">{{standardcode}}   </code></pre>
+</div> {% endmacro %} {% macro modalContentShopLook() %} <div class="cdk-overlay-container modal-container"
+    id="modal-container-shoplook">
+    <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
+    <div class="modal-content" dir="ltr">
+        <div class="cdk-overlay-pane">
+            <component>
+                <div class="modalx" id="modalx-backdrop">
+                    <div class="modalx-dialog" id="modalx-dialog">
+                        <div class="modalx-content">
+                            <div class="modalx-close">
+                                <button class="closex" onclick="openModalShopLook()">
+                                    <svg-icon src="close"  ng-reflect-src="close">
+                                        <div _ngcontent-nds-c30=""><svg width="18" height="18" viewBox="0 0 18 18"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z"
+                                                    fill="#292929"></path>
+                                            </svg>
+                                        </div>
+                                    </svg-icon>
+                                </button>
+                            </div>
+                            <div class="modalx-body">
+                                <div class="container-10 mt-40">
+                                    <img src="https://placeimg.com/600/800/people/grayscale" alt="" class="w-100 mb-16">
+                                    <h2 class="p-m mb-16 text-center has-ellipsis-3">TOP DE PUNTO RAYAS HOMBROS
+                                    </h2>
+                                    <p class="p-m mb-16 text-center">49,95 €</p>
+                                    <div class="is-flex flex-column w-100 mb-16">
+                                        <button class="btn btn-secondary mb-16"> Label</button>
+                                        <button class="btn btn-primary mb-16"> Label</button>
+                                        <div class="text-center"><button class="link-line"> Label</button></div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="is-flex content-center mb-16">
+                                    <img src="https://placeimg.com/75/100/people/grayscale" alt="" class="h-100">
+                                    <img src="https://placeimg.com/75/100/people/grayscale" alt="" class="h-100">
+                                    <img src="https://placeimg.com/75/100/people/grayscale" alt="" class="h-100">
+                                    <img src="https://placeimg.com/75/100/people/grayscale" alt="" class="h-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </component>
+    </div>
+</div>
+</div> {% endmacro %}

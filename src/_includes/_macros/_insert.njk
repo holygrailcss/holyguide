@@ -81,9 +81,6 @@
 </div>
 {% endmacro %}
 
-
-
-
 {% macro list(listClass = '', explicacion = '') %}
 <h3>{{ listClass }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -224,92 +221,7 @@
 	<pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
-{% macro baseTooltip(tooltipType = '', explicacion = '') %}
-<h3>{{ tooltipType }}</h3>
-<p class="p-s">{{ explicacion }}</p>
-{% if tooltipType === "tooltip-*dir*" %}
-	<p>
-		<code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
-	<p>
-		<code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
-	<p>
-		<code>tooltip-bl</code>Expande el tooltip hacia bottom-left</p>
-	<p>
-		<code>tooltip-br</code>Expande el tooltip hacia bottom-right</p>
-{% endif %}
-<div class="resize-mini mt-16">
-	<div class="resize-mini-content">
-		{% if tooltipType === "tooltip-sm" %}
-			<div class="container-6 align-center mb-64 height-sm">
-				<div class="has-tooltip">
-					<svg-icon src="question" class="cursor-pointer">
-						<div>
-							<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 8.81885C0.5 4.67671 3.85786 1.31885 8 1.31885C12.1421 1.31885 15.5 4.67671 15.5 8.81885C15.5 12.961 12.1421 16.3188 8 16.3188C3.85786 16.3188 0.5 12.961 0.5 8.81885ZM8 2.31885C4.41015 2.31885 1.5 5.229 1.5 8.81885C1.5 12.4087 4.41015 15.3188 8 15.3188C11.5899 15.3188 14.5 12.4087 14.5 8.81885C14.5 5.229 11.5899 2.31885 8 2.31885ZM8.5428 5.81204C7.86689 5.69939 7.1896 5.83636 6.85355 6.1724C6.65829 6.36766 6.34171 6.36767 6.14645 6.1724C5.95118 5.97714 5.95118 5.66056 6.14645 5.4653C6.8104 4.80134 7.88311 4.6883 8.7072 4.82565C9.13265 4.89655 9.55091 5.042 9.87701 5.2662C10.1983 5.48705 10.5 5.83901 10.5 6.31884C10.5 6.86526 10.4134 7.27267 10.134 7.60015C10.0061 7.75008 9.85652 7.86026 9.71868 7.95203C9.65389 7.99517 9.58468 8.0387 9.51742 8.081L9.50341 8.08982C9.42993 8.13605 9.35541 8.18309 9.27637 8.23552C9.00633 8.41463 8.80604 8.64453 8.67473 8.86262C8.53574 9.09345 8.5 9.266 8.5 9.31884C8.5 9.59498 8.27614 9.81884 8 9.81884C7.72386 9.81884 7.5 9.59498 7.5 9.31884C7.5 9.01873 7.62609 8.66558 7.81802 8.3468C8.01763 8.01529 8.31734 7.67165 8.72363 7.40217C8.81367 7.34244 8.89722 7.28975 8.97089 7.2434L8.98116 7.23694C9.05207 7.19233 9.11089 7.15533 9.16447 7.11965C9.27755 7.04436 9.33572 6.99508 9.37326 6.95108C9.42477 6.89071 9.5 6.77242 9.5 6.31884C9.5 6.29868 9.48923 6.21313 9.31049 6.09024C9.13659 5.97068 8.86735 5.86613 8.5428 5.81204ZM8 11.3188C8.27614 11.3188 8.5 11.5427 8.5 11.8188V12.3188C8.5 12.595 8.27614 12.8188 8 12.8188C7.72386 12.8188 7.5 12.595 7.5 12.3188V11.8188C7.5 11.5427 7.72386 11.3188 8 11.3188Z" fill="#292929"></path>
-							</svg>
-						</div>
-					</svg-icon>
-					{% call tooltip('tooltip-sm','true') %}{% endcall %}
-				</div>
-			</div>
-		{% elif tooltipType === "tooltip-*dir*" %}
-			<div class="container-6 align-center height-md">
-				<div class="row">
-					<div class="col-xs-12 is-flex">
-						<div class="has-tooltip mx-16">
-							<p class="p-s cursor-pointer">tooltip-tl</p>
-							{% call tooltip('tooltip-sm tooltip-tl','') %}{% endcall %}
-						</div>
-						<div class="has-tooltip mx-16">
-							<p class="p-s cursor-pointer">tooltip-tr</p>
-							{% call tooltip('tooltip-sm tooltip-tr','') %}{% endcall %}
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 is-flex">
-						<div class="has-tooltip mx-16">
-							<p class="p-s cursor-pointer">tooltip-bl</p>
-							{% call tooltip('tooltip-sm tooltip-bl','') %}{% endcall %}
-						</div>
-						<div class="has-tooltip mx-16">
-							<p class="p-s cursor-pointer">tooltip-br</p>
-							{% call tooltip('tooltip-sm tooltip-br','') %}{% endcall %}
-						</div>
-					</div>
-				</div>
-			</div>
-		{% endif %}
-	</div>
-	{% set standardcode %}
-	{% if tooltipType === "tooltip-sm" %}
-		<div class="has-tooltip">
-			<svg-icon src='question' class="cursor-pointer"></svg-icon>
-			<div class="tooltip-sm">
-				<div class="is-flex">
-					<svg-icon src="credit-card"></svg-icon>
-					<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
-				</div>
-				<div class="close">
-					<svg-icon src="close-s"></svg-icon>
-				</div>
-			</div>
-		</div>
-	{% elif tooltipType === "tooltip-*dir*" %}
-		<div class="has-tooltip">
-			<p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
-			<div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
-				<p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
-				<div class="close">
-					<svg-icon src="close-s"></svg-icon>
-				</div>
-			</div>
-		</div>
-	{% endif %}
-	{% endset %}
-	<pre><code class="language-markup">{{standardcode}} </code></pre>
-</div>
-{% endmacro %}
+
 {% macro banner(bannerClass = '', descipcion = '') %}
 <h3 class="mb-24">{{bannerClass}}</h3>
 <p class="mb-32">{{descipcion}}</p>
@@ -977,9 +889,9 @@
 {% endmacro %}
 {% macro baseTooltip(tooltipType = '', explicacion = '') %}
 	<h3>{{ tooltipType }}</h3>
-	<p class="p-s">{{ explicacion }}</p>
+	<p class="p-m mt-8">{{ explicacion }}</p>
 	{% if tooltipType === "tooltip-*dir*" %}
-		<p>
+		<p class="mt-8">
 			<code>tooltip-tl</code>Expande el tooltip hacia top-left</p>
 		<p>
 			<code>tooltip-tr</code>Expande el tooltip hacia top-right</p>
