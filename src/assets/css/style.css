@@ -19656,3 +19656,9 @@ code {
 .guide-inspect .btn {
   height: 35px;
 }
+
+table tr td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #eaeaea;
+}

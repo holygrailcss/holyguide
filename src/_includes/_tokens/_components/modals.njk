@@ -6,6 +6,7 @@ layout: base.njk
 {% import "_macros/_token.njk" as tokens %} 
 {% import "_macros/_insert.njk" as insert %} 
 {% import "_macros/_modal.njk" as modal %} 
+{% import "_macros/_globals.njk" as globals %} 
 
 
 <section class="mb-32 mt-32">
@@ -29,10 +30,9 @@ layout: base.njk
           <table>
             <thead>
               <tr>
-
-                <th style="width:20%">ModalSizes</th>
-                <th style="width:20%">Clase scss</th>
-                <th style="width:60%">Description</th>
+                <td style="width:20%">ModalSizes</td>
+                <td style="width:20%">Class</td>
+                <td style="width:60%">Description</td>
               </tr>
             </thead>
             <tbody> {% for item in globals.ModalSizes %} <tr>
@@ -58,9 +58,9 @@ layout: base.njk
           <table>
             <thead>
               <tr>
-                <th style="width:20%">ModalMargins</th>
-                <th style="width:20%">Clase scss</th>
-                <th style="width:60%">Description</th>
+                <td style="width:20%">ModalMargins</td>
+                <td style="width:20%">Class</td>
+                <td style="width:60%">Description</td>
               </tr>
             </thead>
             <tbody> {% for item in globals.ModalMargins %} <tr>
@@ -87,9 +87,9 @@ layout: base.njk
           <table>
             <thead>
               <tr>
-                <th style="width:20%">ModalOptions</th>
-                <th style="width:20%">Clase scss</th>
-                <th style="width:60%">Description</th>
+                <td style="width:20%">ModalOptions</td>
+                <td style="width:20%">Class</td>
+                <td style="width:60%">Description</td>
 
 
               </tr>
@@ -120,6 +120,7 @@ layout: base.njk
 <section class="mb-32 mt-32">
 </section>
 
+{% call modal.modalContent() %} {% endcall %}
+{% call modal.modalContentShopLook() %} {% endcall %}
 
-
-<script src="/src/assets/js/modal-actions.js"></script>
+<script src="../../../assets/js/modal-actions.js"></script>
