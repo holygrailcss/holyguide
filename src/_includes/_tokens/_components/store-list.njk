@@ -12,18 +12,30 @@ layout: base.njk
 
   <section class="mb-32 mt-32">
     <div class="row">
+      <div class="col-xs-12 ">
+        <div class="tit-m">Store list</div>
+      </div>
       <div class="col-xs-12 mb-32">
         <div class="code-view ">
           <div class="check-new"></div>
           {# -------- #}
-          <div class="is-flex w-100 bg-line py-32">
-            <div class="col-xs-9">
-              <div class="p-m-b mb-8">A CORUÑA</div>
-              <div class="p-m">CC MYANMAR, LOC</div>
+          <div class="store-list w-100">
+            <div class="is-flex bg-line py-32">
+              <div class="flex-auto mr-16">
+                <div class="p-xs-b mb-8">A CORUÑA</div>
+                <div class="p-xs">CC MYANMAR, LOC</div>
+              </div>
+              <div>
+                <div class="p-xs">WOMEN & MEN</div>
+              </div>
             </div>
-            <div class="col-xs-3 is-flex flex-column content-sp-between">
-              <div class=" p-xs text-right">
-                <div class="p-m">WOMEN & MEN</div>
+            <div class="is-flex bg-line py-32">
+              <div class="flex-auto mr-16">
+                <div class="p-xs-b mb-8">A CORUÑA</div>
+                <div class="p-xs">CC MYANMAR, LOC</div>
+              </div>
+              <div>
+                <div class="p-xs">WOMEN & MEN</div>
               </div>
             </div>
           </div>
@@ -31,14 +43,56 @@ layout: base.njk
         </div>
         {% set standardcode %}
         <div class="is-flex w-100 bg-line py-32">
-          <div class="col-xs-9">
-            <div class="p-m-b mb-8">A CORUÑA</div>
-            <div class="p-m">CC MYANMAR, LOC</div>
+          <div class="flex-auto mr-16">
+            <div class="p-xs-b mb-8">A CORUÑA</div>
+            <div class="p-xs">CC MYANMAR, LOC</div>
           </div>
-          <div class="col-xs-3 is-flex flex-column content-sp-between">
-            <div class=" p-xs text-right">
-              <div class="p-m">WOMEN & MEN</div>
+          <div>
+            <div class="p-xs">WOMEN & MEN</div>
+          </div>
+        </div>
+        {% endset %}
+        <pre><code class="language-markup">{{standardcode}}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="tit-m">Store list con país</div>
+      </div>
+      <div class="col-xs-12 mb-32">
+        <div class="code-view ">
+          <div class="check-new"></div>
+          {# -------- #}
+          <div class="store-list w-100">
+            <div class="is-flex bg-line py-32">
+              <div class="mr-48">
+                <div class="p-xs-b">ESPAÑA</div>
+              </div>
+              <div class="flex-auto mr-16">
+                <div class="p-xs-b mb-8">A CORUÑA</div>
+                <div class="p-xs">CC MYANMAR, LOC</div>
+              </div>
+              <div>
+                <div class="p-xs">WOMEN & MEN</div>
+              </div>
             </div>
+          </div>
+          {# -------- #}
+        </div>
+        {% set standardcode %}
+        <div class="is-flex w-100 bg-line py-32">
+          <div class="mr-16">
+            <div class="p-xs-b">ESPAÑA</div>
+          </div>
+          <div class="flex-auto mr-16">
+            <div class="p-xs-b mb-8">A CORUÑA</div>
+            <div class="p-xs">CC MYANMAR, LOC</div>
+          </div>
+          <div>
+            <div class="p-xs">WOMEN & MEN</div>
           </div>
         </div>
         {% endset %}
