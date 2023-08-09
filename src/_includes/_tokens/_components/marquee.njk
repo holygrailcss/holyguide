@@ -16,15 +16,15 @@ layout: base.njk
         <div class="code-view ">
           <div class="check-new"></div>
           {# -------- #}
-          <div class="marquee">
+          <div class="marquee has-ico-post">
             <div class="marquee-content">
               <p class="marquee-inner text-center p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a>
               </p>
             </div>
-            <svg-icon src="close">
+            <svg-icon src="close-s" class="ico-post">
               <div>
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z" fill="#292929"></path>
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#292929" stroke-miterlimit="10" stroke-linecap="round"></path>
                 </svg>
               </div>
             </svg-icon>
@@ -32,19 +32,19 @@ layout: base.njk
           {# -------- #}
         </div>
         {% set standardcode %}
-        <div class="marquee">
-            <div class="marquee-content">
-              <p class="marquee-inner text-center p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a>
-              </p>
-            </div>
-            <svg-icon src="close">
-              <div>
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00001 0.11174L9.00001 8.11174L17 0.11174L17.7071 0.818847L9.70712 8.81885L17.7071 16.8188L17 17.526L9.00001 9.52595L1.00001 17.526L0.292908 16.8188L8.29291 8.81885L0.292908 0.818847L1.00001 0.11174Z" fill="#292929"></path>
-                </svg>
-              </div>
-            </svg-icon>
+        <div class="marquee has-ico-post">
+          <div class="marquee-content">
+            <p class="marquee-inner text-center p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a>
+            </p>
           </div>
+          <svg-icon src="close-s" class="ico-post">
+            <div>
+              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#292929" stroke-miterlimit="10" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </svg-icon>
+        </div>
         {% endset %}
         <pre><code class="language-markup">{{standardcode}}</code></pre>
       </div>
