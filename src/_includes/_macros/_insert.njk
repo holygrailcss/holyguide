@@ -223,11 +223,11 @@
 {% endmacro %}
 
 {% macro banner(bannerClass = '', descipcion = '') %}
-<h3 class="mb-24">{{bannerClass}}</h3>
-<p class="mb-32">{{descipcion}}</p>
+<h3>{{descipcion}}</h3>
+<p>{{bannerClass}}</p>
 <div class="resize-mini">
 	<div class="resize-mini-content {{dark  }} ">
-		<div class="container-6">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12  text-center">
 					{% if bannerClass === "marketing-spot" %}
