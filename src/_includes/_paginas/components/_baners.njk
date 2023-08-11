@@ -29,42 +29,12 @@ layout: base.njk
       {% call insert.banner('bg-limited is-flex p-16' ,'Banner limited') %}
       {% endcall %}
 
-      <h3>Banners especiales</h3>
-      <div class="resize-mini">
-        <div class="resize-mini-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12">
-                {# ---- #}
-                <div class="bg-warning is-flex p-16 has-ico-post">
-                  <svg-icon src="close-s" class="ico-pre mr-8">
-                    <div>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
-                      </svg>
-                    </div>
-                  </svg-icon>
-                  <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-                  <svg-icon src="close-s" class="ico-post">
-                    <div>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C4.41015 1.5 1.5 4.41015 1.5 8C1.5 11.5899 4.41015 14.5 8 14.5C11.5899 14.5 14.5 11.5899 14.5 8C14.5 4.41015 11.5899 1.5 8 1.5ZM0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8ZM8 4.5C8.27614 4.5 8.5 4.72386 8.5 5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V5C7.5 4.72386 7.72386 4.5 8 4.5ZM8 7.5C8.27614 7.5 8.5 7.72386 8.5 8V11C8.5 11.2761 8.27614 11.5 8 11.5C7.72386 11.5 7.5 11.2761 7.5 11V8C7.5 7.72386 7.72386 7.5 8 7.5Z" fill="#292929"></path>
-                      </svg>
-                    </div>
-                  </svg-icon>
-                </div>
-                {# ---- #}
-                {% set standardcode %}
+      {% call insert.bannerActions('link-line' ,'Banner con enlace de texto a la derecha') %}  {% endcall %}
+      {% call insert.bannerActions('ico-link' ,'Banner con enlace de icono a la derecha') %}  {% endcall %}
+      {% call insert.bannerActions('ico-context' ,'Banner con icono contextual a la izquierda') %}  {% endcall %}
+      {% call insert.bannerActions('ico-app' ,'Banner descarga la app') %}  {% endcall %}
+      {% call insert.bannerActions('ico-warning' ,'Banner warning') %}  {% endcall %}
 
-                {% endset %}
-              </div>
-            </div>
-          </div>
-        </div>
-        <pre>
-          <code id="{{buttonName}}" class="language-markup c-{{ buttonName }}">{{standardcode}}</code>
-        </pre>
-      </div>
     </div>
   </div>
 </div>
