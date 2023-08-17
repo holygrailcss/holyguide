@@ -46,7 +46,7 @@
 </section>
 {% endmacro %}
 {% macro select(selectName = '', explicacion = '', dark = '') %}
-<h3>{{ selectName | capitalize }}</h3>
+<h3 class="my-16 tit-m">{{ selectName | capitalize }}</h3>
 <p class="p-xs">{{selectName }} : {{ explicacion }}</p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
@@ -82,7 +82,7 @@
 {% endmacro %}
 
 {% macro list(listClass = '', explicacion = '') %}
-<h3>{{ listClass }}</h3>
+<h3 class="my-16 tit-m">{{ listClass }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
 <ul class="{{ listClass  }}">
   <li>
@@ -119,7 +119,7 @@
 {% endmacro %}
 
 {% macro listButton(listClass = '', explicacion = '') %}
-<h3>{{ listClass | capitalize }}</h3>
+<h3 class="my-16 tit-m">{{ listClass | capitalize }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
 <div class="resize-mini">
   {% if listClass === "list-button list-icons" %}
@@ -220,7 +220,7 @@
 {% endmacro %}
 
 {% macro banner(bannerClass = '', descipcion = '') %}
-<h3>{{descipcion}}</h3>
+<h3 class="my-16 tit-m">{{descipcion}}</h3>
 <p>{{bannerClass}}</p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
@@ -464,7 +464,7 @@
   </svg-icon>
 {% endmacro %}
 {% macro simple(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m">
     <span class="bold mr-8"> .btn-{{buttonName }}
@@ -490,7 +490,7 @@
   </div>
 {% endmacro %}
 {% macro animation(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m">
     <span class="bold mr-8"> .btn-{{buttonName }}
@@ -543,7 +543,7 @@
   </div>
 {% endmacro %}
 {% macro animationsvg(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m">
     <span class="bold mr-8"> .btn-{{buttonName }}
@@ -604,7 +604,7 @@
   </div>
 {% endmacro %}
 {% macro svg(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
   </p>
@@ -639,7 +639,7 @@
   </div>
 {% endmacro %}
 {% macro iconClear(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m">
     {{buttonName }} : {{ explicacion }}
@@ -707,7 +707,7 @@
   </div>
 {% endmacro %}
 {% macro btnDistribution(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
   </p>
@@ -765,7 +765,7 @@
   {% endif %}
 {% endmacro %}
 {% macro square(buttonName = '', explicacion = '', dark = '') %}
-  <h3>{{ buttonName | capitalize }}
+  <h3 class="my-16 tit-m">{{ buttonName | capitalize }}
   </h3>
   <p class="p-m">
     <span class="bold mr-8">   .btn--{{buttonName }}
@@ -885,7 +885,7 @@
   </div>
 {% endmacro %}
 {% macro baseTooltip(tooltipType = '', explicacion = '') %}
-  <h3>{{ tooltipType }}</h3>
+  <h3 class="my-16 tit-m">{{ tooltipType }}</h3>
   <p class="p-m mt-8">{{ explicacion }}</p>
   {% if tooltipType === "tooltip-*dir*" %}
     <p class="mt-8">
@@ -1001,7 +1001,7 @@
 {% endmacro %}
 {# TODO JUNTAR MACROS LINKS #}
 {% macro link(elementType = '', explicacion = '', dark = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="code-view">
@@ -1018,7 +1018,7 @@
   <pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
 {% macro linkPost(elementType = '', explicacion = '', dark = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="code-view ">
@@ -1043,7 +1043,7 @@
   <pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
 {% macro linkPre(elementType = '', explicacion = '', dark = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="code-view ">
@@ -1070,7 +1070,7 @@
 {# TODO END #}
 {# TODO JUNTAR MACROS CHECK #}
 {% macro checkbox(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}</h3>
+  <h3 class="my-16 tit-m">{{ elementType }}</h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
     <div class="code-view ">
@@ -1112,7 +1112,7 @@
   </div>
 {% endmacro %}
 {% macro checkboxText(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1157,7 +1157,7 @@
   </div>
 {% endmacro %}
 {% macro checkbox2(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1186,7 +1186,7 @@
   </div>
 {% endmacro %}
 {% macro checkboxRadio(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1229,7 +1229,7 @@
   </div>
 {% endmacro %}
 {% macro checkboxCard(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1282,7 +1282,7 @@
 {# TODO END #}
 {# TODO INPUTS #}
 {% macro input(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1305,7 +1305,7 @@
   </div>
 {% endmacro %}
 {% macro inputTexto(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1344,7 +1344,7 @@
   </div>
 {% endmacro %}
 {% macro inputError(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1393,7 +1393,7 @@
   </div>
 {% endmacro %}
 {% macro inputPre(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1428,7 +1428,7 @@
   </div>
 {% endmacro %}
 {% macro inputPost(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1463,7 +1463,7 @@
   </div>
 {% endmacro %}
 {% macro inputPwd(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1562,7 +1562,7 @@
   </div>
 {% endmacro %}
 {% macro inputDisabled(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1587,7 +1587,7 @@
   </div>
 {% endmacro %}
 {% macro inputPrefix(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1596,7 +1596,7 @@
       {# ---------- #}
       <div class="form-prefix" action="">
         <div class="input-prefix">
-          <input class="input " placeholder="+34"/>
+          <input type="tel" class="input " placeholder="+34"/>
         </div>
         <div class="form-input-label-2">
           <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
@@ -1608,7 +1608,7 @@
     {% set standardcode %}
     <div class="form-prefix" action="">
       <div class="input-prefix">
-        <input class="input " placeholder="+34"/>
+        <input type="tel" class="input " placeholder="+34"/>
       </div>
       <div class="form-input-label-2">
         <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
@@ -1616,9 +1616,14 @@
       </div>
     </div>
   </div>
+    {% endset %}
+    <div class="code-zone">
+      <pre><code class=" language-markup">{{standardcode}}</code></pre>
+    </div>
+  </div>
 {% endmacro %}
 {% macro inputPrefixBtn(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1665,7 +1670,7 @@
   </div>
 {% endmacro %}
 {% macro inputIpod(elementType = '', explicacion = '') %}
-  <h3>{{ elementType }}
+  <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
   <p class="p-xs">{{ explicacion }}</p>
   <div class="mb-32 ">
@@ -1734,7 +1739,7 @@
 {% endmacro %}
 
 {% macro bannerActions(bannerClass = '', title = '') %}
-  <h3>{{title}}</h3>
+  <h3 class="my-16 tit-m">{{title}}</h3>
   <div class="resize-mini">
     <div class="resize-mini-content {{dark  }} ">
       <div class="container">
