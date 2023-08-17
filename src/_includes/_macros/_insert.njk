@@ -1595,6 +1595,37 @@
       <div class="check-new"></div>
       {# ---------- #}
       <div class="form-prefix" action="">
+        <div class="input-prefix">
+          <input class="input " placeholder="+34"/>
+        </div>
+        <div class="form-input-label-2">
+          <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
+          <label for="t1">Teléfono </label>
+        </div>
+      </div>
+      {# ---------- #}
+    </div>
+    {% set standardcode %}
+    <div class="form-prefix" action="">
+      <div class="input-prefix">
+        <input class="input " placeholder="+34"/>
+      </div>
+      <div class="form-input-label-2">
+        <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
+        <label for="t1">Teléfono </label>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+{% macro inputPrefixBtn(elementType = '', explicacion = '') %}
+  <h3>{{ elementType }}
+  </h3>
+  <p class="p-xs">{{ explicacion }}</p>
+  <div class="mb-32 ">
+    <div class="code-view ">
+      <div class="check-new"></div>
+      {# ---------- #}
+      <div class="form-prefix" action="">
         <div class="select ">
           <select>
             <option value="+34">+34</option>
