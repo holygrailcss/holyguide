@@ -38,7 +38,7 @@ Si queremos que los videos se inicien en `autoplay`, deberemos forzarlo con la e
 
 [Link a handbrake ](https://handbrake.fr/)
 
-### Duración
+#### Duración
 
 Nunca deberá superar los **6 segundos** de vídeo en loop.
 
@@ -46,14 +46,14 @@ Si queremos insertar un vídeo de una duración superior con audio, deberemos ab
 Formato :
 Se entregarán dos versiones como mínimo. **mp-m y webm**, la versión ogg es opcional. Para ello usaremos Handbrake como herramienta de compresión .
 
-### Peso
+#### Peso
 
 Un vídeo en loop no deberia superar los **6 mb**, ya que más bloquearia y ralentizará la web.
 
-### Frame rate
+#### Frame rate
 
 Usaremos framerates de **24 fps / 30 fps**
 
-### Canal de audio
+#### Canal de audio
 
 Si no tiene sonido, deberemos eliminar el canal de audio a la hora de exportar
