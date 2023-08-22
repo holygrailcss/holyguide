@@ -160,4 +160,4 @@ You can also use words, to fit your writing style more closely[^note].
 ## Creación de nuevos elementos
 
 `npm run template nombreDeLaPaginaTemplate`
-`npm run token-template nombreDelToken`
+`npm run tokentemplate nombreDelToken`

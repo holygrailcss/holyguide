@@ -1,0 +1,54 @@
+---
+layout: base.njk
+---
+
+<!-- Contenido de la plantilla mktspot.njk -->
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+<div class="main-content innermarkdown ">{{ content | safe }}</div>
+
+<div class="main-content">
+
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12 mb-32">
+        <div class="code-view ">
+          <div class="check-new"></div>
+          {# -------- #}
+          <div class="mktspot has-ico-post">
+            <div class="mktspot-content">
+              <p class="mktspot-inner text-center p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a>
+              </p>
+            </div>
+            <svg-icon src="close-s" class="ico-post">
+              <div>
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#292929" stroke-miterlimit="10" stroke-linecap="round"></path>
+                </svg>
+              </div>
+            </svg-icon>
+          </div>
+          {# -------- #}
+        </div>
+        {% set standardcode %}
+        <div class="mktspot has-ico-post">
+          <div class="mktspot-content">
+            <p class="mktspot-inner text-center p-xs">VENTA EXCLUSIVA EL 02/02 A LAS 20H ONLINE Y 03/03 EN TIENDAS <a href="#" class="link-line ml-32">ÚNETE A FEEL</a>
+            </p>
+          </div>
+          <svg-icon src="close-s" class="ico-post">
+            <div>
+              <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#292929" stroke-miterlimit="10" stroke-linecap="round"></path>
+              </svg>
+            </div>
+          </svg-icon>
+        </div>
+        {% endset %}
+        <pre><code class="language-markup">{{standardcode}}</code></pre>
+      </div>
+    </div>
+  </section>
+
+</div>
