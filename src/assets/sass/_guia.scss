@@ -599,25 +599,23 @@ h6 {
   }
 }
 
-
-.code-zone{
+.code-zone {
   overflow: hidden;
   border-bottom: 1px solid #eaeaea;
-  transition: all ease .2s;
+  transition: all ease 0.2s;
   cursor: pointer;
 
-  .code-title{
-    transition: all ease .2s;
+  .code-title {
+    transition: all ease 0.2s;
     height: 30px;
     padding: 8px;
-    &:hover{
-      opacity: .6;
+    &:hover {
+      opacity: 0.6;
       background-color: #eaeaea;
     }
-
   }
 
-  .code-title-description{
+  .code-title-description {
     display: inline-block;
     background-color: #dfdfdf;
     padding: 0 8px;
@@ -625,10 +623,9 @@ h6 {
 
     font-weight: bold;
   }
-
 }
 
-.code-install{
+.code-install {
   background-color: #28292d;
   display: inline-block;
   float: left;
@@ -637,7 +634,7 @@ h6 {
   width: 300px;
   margin-top: 20px;
   border-radius: 10px;
-  b{
+  b {
     color: yellow;
   }
 }

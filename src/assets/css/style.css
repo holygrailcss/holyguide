@@ -13006,7 +13006,6 @@ header.interior svg path {
 .innermarkdown li {
   font-size: 14px;
   line-height: 1.4;
-  margin-bottom: 20px;
 }
 .innermarkdown h1 {
   margin-top: 24px;
@@ -14836,7 +14835,6 @@ h6 {
 }
 
 .code-zone {
-  height: 30px;
   overflow: hidden;
   border-bottom: 1px solid #eaeaea;
   transition: all ease 0.2s;
@@ -19662,4 +19660,10 @@ code {
   position: absolute;
   left: 16px;
   bottom: 16px;
+}
+
+table tr td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #eaeaea;
 }
