@@ -97,11 +97,11 @@ Cada tipografía tiene sus particularidades, y establecer dogmas sobre los valor
 
 - **Establece jerarquías** bien diferenciadas entre los distintos tipos de información. Para ello, puedes valerte de diferentes tipografías, pesos, tamaños, colores, etc. Una interesante forma de definir las distintas jerarquías para un sistema, es establecer en primer lugar los valores del cuerpo de texto, para a partir de ahí definir el resto.
 
-- **Un interlineado** entre 1,4 y 1,6 veces el tamaño de la tipografía suele funcionar para cuerpos de texto. Para destacados y titulares reducimos ese rango a 1,2-1,4.
+- **Un interlineado** entre 1,4 y 1,6 veces el tamaño de la tipografía suele funcionar para cuerpos de texto. Para destacados y titulares reducimos ese rango a 1,2-1,4. No usamos pixeles ya que son rangos porcentuales, con lo que un 1,2 equivale a un 120% en figma. 
 
-- **Controla el largo de la línea del cuerpo de texto** . Lo recomendable para una buena experiencia de lectura, son entre 45 y 75 caracteres. Puedes encontrar más información sobre este tema .
+- **Controla el largo de la línea del cuerpo de texto** . Lo recomendable para una buena experiencia de lectura, son entre 45 y 75 caracteres.  
 
-- **Cíñete a una o dos tipografías** y utiliza la menor cantidad de variaciones posibles de pesos de la misma. Esto es principalmente por cuestiones de rendimiento en webs y apps.
+- **Cíñete a una o dos tipografías** y utiliza la menor cantidad de variaciones posibles de pesos de la misma. Esto es principalmente por cuestiones de rendimiento en webs y apps. Ya que el uso de más tipografias sobrecarga la web haciendola más lenta y menos competitiva. 
 
 #### 3.5 Iconografía
 
@@ -114,7 +114,7 @@ Es importante definir las propiedades formales de los iconos para que exista un 
 
 - **Terminaciones**. Por norma general, pueden ser rectangulares o redondeadas.
 
-- **Esquinas**. Normalmente pueden ser: angulares, redondeadas o con bisel.
+- **Esquinas**. Normalmente pueden ser: angulares, redondeadas .
 
 #### 3.6 Estilos de capa
 
@@ -131,7 +131,7 @@ Todo sistema está por definición compuesto de elementos que lo articulan y le 
 - Fragmentos
 - Componentes
 - Módulos
-- Plantillas
+- Templates
 
 > Es importante destacar que aunque los nombres aquí los hemos reflejado en español normalmente, en las aplicaciones y a la hora de trabajar con ellos, usaremos siempre su traducción en inglés. > > Esto lo hacemos porque, así, se adapta mejor a todos los proyectos y porque luego será más sencillo que tengamos un mismo idioma con el equipo de desarrollo (que suelen escribir todo el código en inglés). Por lo tanto, a la hora de diseñar utilizaremos como nombres:
 >
@@ -154,7 +154,7 @@ Otro ejemplo de fragmentos serían los items que forman parte de un conjunto y n
 #### 4.2 02 Componentes
 
 Un componente sería un elemento que tiene sentido en sí mismo, es decir, está completo y no necesita acompañarse de otros elementos. Se sirven de ellos mismos para cumplir una función específica.
-Es importante que un componente deba cumplir una única función, en el caso de que cumpla más de una función, en el momento en que se incumple esta regla ese componente no debe ser considerado como tal y pasará a ser parte de una categoría de elementos más compleja como módulos o plantillas.
+Es importante que un componente deba cumplir una única función, en el caso de que cumpla más de una función, en el momento en que se incumple esta regla ese componente no debe ser considerado como tal y pasará a ser parte de una categoría de elementos más compleja como módulos o Templates.
 
 Por poner un ejemplo, un componente sería un botón. Un botón no necesita de otro elemento para cumplir su función y podemos colocarlo en una interfaz y no se vería incompleto o ausente de significado. Los componentes más comunes son:
 
@@ -321,9 +321,9 @@ Un ejemplo seria:
 - Calendarios
   03 Modules / Calendar
 
-###### 5.4 04 Plantillas
+###### 5.4 04 Templates
 
-Todas las plantillas siguen la misma nomenclatura, no distinguimos en subgrupos o elementos más pequeños. Lo hacemos de esta forma porque únicamente consideramos como plantilla aquellas vistas que se utilizan de forma recurrente.
+Todas las Templates siguen la misma nomenclatura, no distinguimos en subgrupos o elementos más pequeños. Lo hacemos de esta forma porque únicamente consideramos como template aquellas vistas que se utilizan de forma recurrente.
 
 04 Templates / [Nombre de la vista]
 
