@@ -1,17 +1,14 @@
 ---
 layout: base.njk
 ---
-
 {% import "_macros/_token.njk" as tokens %}
 {% import "_macros/_insert.njk" as insert %}
-
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
 <div class="main-content innermarkdown ">{{ content | safe }}
 </div>
 <div class="main-content">
-
   {% call insert.input('Input básico') %}{% endcall %}
   {% call insert.inputTexto('Input con texto') %}{% endcall %}
   {% call insert.inputError('Input con error') %}{% endcall %}
@@ -22,5 +19,10 @@ layout: base.njk
   {% call insert.inputPrefix('Input prefijo telefónico') %}{% endcall %}
   {% call insert.inputPrefixBtn('Input prefijo telefónico con botón') %}{% endcall %}
   {% call insert.inputIpod('Inputs básicos placeholder sin animación') %}{% endcall %}
+    {% call insert.inputBtn('Inputs básicos seguidos de botón') %}{% endcall %}
 
+
+
+<style>
+</style>
 </div>

@@ -19667,3 +19667,26 @@ table tr td {
   vertical-align: top;
   border-bottom: 1px solid #eaeaea;
 }
+
+.form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form-btn > :nth-child(1) {
+  flex: 1;
+}
+
+.form-btn > :nth-child(2) {
+  flex: 100%;
+}
+@media (min-width: 600px) {
+  .form-btn > :nth-child(2) {
+    flex: 0 0 auto;
+  }
+}
+
+.pe-none {
+  pointer-events: none;
+}

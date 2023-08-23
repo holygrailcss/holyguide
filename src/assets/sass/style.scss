@@ -288,7 +288,6 @@ code {
     opacity: 1;
   }
 }
-
 .clean-box-wrap {
   position: relative;
   box-sizing: border-box;
@@ -301,7 +300,6 @@ code {
   display: inline-block;
   border: 1px dashed #a94869;
   z-index: -1;
-
   .clean-box {
     box-sizing: border-box;
     width: 100px;
@@ -309,7 +307,6 @@ code {
     background-color: #dcfbfe;
     border: 1px dashed #348c95;
     position: relative;
-
     div {
       position: absolute;
       top: 50%;
@@ -332,7 +329,6 @@ code {
     }
   }
 }
-
 .guide-inspect {
   position: fixed;
   bottom: 0;
@@ -344,7 +340,6 @@ code {
     height: 35px;
   }
 }
-
 .inner-index {
   position: absolute;
   left: 16px;
@@ -354,4 +349,23 @@ table tr td {
   padding: 10px;
   vertical-align: top;
   border-bottom: 1px solid #eaeaea;
+}
+
+
+.form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.form-btn > :nth-child(1) {
+  flex: 1;
+}
+.form-btn > :nth-child(2) {
+  flex: 100%;
+  @media (min-width: 600px) {
+    flex: 0 0 auto;
+  }
+}
+.pe-none {
+  pointer-events: none;
 }

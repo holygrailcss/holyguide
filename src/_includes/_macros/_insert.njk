@@ -1586,6 +1586,8 @@
     </div>
   </div>
 {% endmacro %}
+
+
 {% macro inputPrefix(elementType = '', explicacion = '') %}
   <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
@@ -1622,6 +1624,13 @@
     </div>
   </div>
 {% endmacro %}
+
+
+
+
+
+
+
 {% macro inputPrefixBtn(elementType = '', explicacion = '') %}
   <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
@@ -1669,6 +1678,9 @@
     </div>
   </div>
 {% endmacro %}
+
+
+
 {% macro inputIpod(elementType = '', explicacion = '') %}
   <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
@@ -1711,6 +1723,41 @@
   </div>
 {% endmacro %}
 {# TODO END #}
+
+
+{% macro inputBtn(elementType = '', explicacion = '') %}
+  <h3 class="my-16 tit-m">{{ elementType }}
+  </h3>
+  <p class="p-xs">{{ explicacion }}</p>
+  <div class="mb-32 ">
+    <div class="code-view ">
+      <div class="check-new"></div>
+      {# ---------- #}
+    <div class="form-btn" action="">
+       <input type="tel" id="t1" class="input pe-none" placeholder="Teléfono"/>
+      <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+    </div>
+
+      {# ---------- #}
+    </div>
+    {% set standardcode %}
+    <div class='row'>
+    <div class="form-btn" action="">
+       <input type="tel" id="t1" class="input pe-none" placeholder="Teléfono"/>
+      <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+    </div>
+    </div>
+    {% endset %}
+    <div class="code-zone">
+      <pre><code class=" language-markup">{{standardcode}}</code></pre>
+    </div>
+  </div>
+{% endmacro %}
+{# TODO END #}
+
+
+
+
 {% macro spacer(title = '', type = '') %}
   <div class="clean-box-wrap mr-16">
     <div class="clean-box {{type}}">
