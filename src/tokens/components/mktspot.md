@@ -2,7 +2,7 @@
 layout: _tokens/_components/mktspot.njk
 permalink: /token-mktspot/
 page_section: components
-titulo: mktspot
+titulo: Marketing spot
 descripcion: mktspot
 image: /assets/static/images/mktspot.jpg
 author: autor
