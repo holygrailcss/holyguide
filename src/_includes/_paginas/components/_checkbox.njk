@@ -1,13 +1,8 @@
 ---
 layout: base.njk
 ---
-
 {% import "_macros/_token.njk" as tokens %}
 {% import "_macros/_insert.njk" as insert  %}
-
-
-
-
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
@@ -15,13 +10,46 @@ layout: base.njk
 </div>
 <div class="main-content">
 
+<div class="row">
+  <div class="col-xs-3">
+      <div class=" checkbox-item-img mb-64">
+          <div class="checkbox-item">
+            <input id="checkbox_1" type="checkbox"/>
+            <label for="checkbox_1">
+                            <img class="mb-8" src="  https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+
+              <i class="icon">
+                <svg width="16" height="16">
+                  <g stroke-width="1">
+                    <polyline fill="none" stroke="#000000" points="1,9 5,13 15,3 "></polyline>
+                  </g>
+                </svg>
+              </i>
+
+              <div class=" checkbox-item-img-text p-16 border-1">
+                dhgihfgh
+              </div>
+
+
+            </label>
+          </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+  </div>
+</div>
+
+
   {% call insert.checkbox('checkbox-item-box','Checkbox básico') %} {% endcall %} 
   {% call insert.checkboxText('checkbox-item-text','Checkbox con texto') %} {% endcall %} 
   {% call insert.checkbox2('checkbox-item-2','Checkbox switch') %} {% endcall %} 
   {% call insert.checkboxRadio('checkbox-radio','Radio button') %} {% endcall %} 
   {% call insert.checkboxCard('checkbox-card','Radio text button') %} {% endcall %} 
-
   </div>
-
-
-
