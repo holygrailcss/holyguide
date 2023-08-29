@@ -157,7 +157,7 @@ You can also use words, to fit your writing style more closely[^note].
 
 🔴🟣🟡⚫⚪🟢🔵🟠🟤
 
-## Creación de nuevos elementos
+## Creación de nuevos elementos Templates
 
 `npm run template nombreDeLaPaginaTemplate`
 `npm run tokentemplate nombreDelToken`

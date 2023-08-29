@@ -484,7 +484,7 @@ table tr td {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, calc(-50% - 40px));
     
     color: $c-primary;
     transition: all 0.2s;
@@ -505,6 +505,10 @@ border: 1px solid $c-primary;
   [type='checkbox']:not(:checked) + label  {
     border: 1px solid transparent;
       }
+      .checkbox-item [type=checkbox]:checked + label .icon {
+        opacity: 1;
+        transform: scale(1) translate(-50%, calc(-50% - 40px));
+    }
 
   &.color-filter {
     [type='checkbox']:not(:checked) + label,
@@ -532,9 +536,6 @@ border: 1px solid $c-primary;
   left: 0;
 }
 
-.checkbox-item-img [type=checkbox] + label {
-
-}
 [type='checkbox'] + label::after,
 [type='checkbox'] + label::after {
 width: 80px;

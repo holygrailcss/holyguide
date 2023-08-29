@@ -20003,7 +20003,7 @@ table tr td {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(1) translate(-50%, -50%);
+  transform: scale(1) translate(-50%, calc(-50% - 40px));
   color: var(--c-primary);
   transition: all 0.2s;
 }
@@ -20020,6 +20020,10 @@ table tr td {
 }
 .checkbox-item-img [type=checkbox]:not(:checked) + label {
   border: 1px solid transparent;
+}
+.checkbox-item-img .checkbox-item [type=checkbox]:checked + label .icon {
+  opacity: 1;
+  transform: scale(1) translate(-50%, calc(-50% - 40px));
 }
 .checkbox-item-img.color-filter [type=checkbox]:not(:checked) + label,
 .checkbox-item-img.color-filter [type=checkbox]:checked + label {
