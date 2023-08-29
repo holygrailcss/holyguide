@@ -14307,7 +14307,8 @@ h6 {
 #loopicons2,
 #loopicons3,
 #loopicons4,
-#loopicons5 {
+#loopicons5,
+#loopicons6 {
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -14317,7 +14318,8 @@ h6 {
 #loopicons2 article,
 #loopicons3 article,
 #loopicons4 article,
-#loopicons5 article {
+#loopicons5 article,
+#loopicons6 article {
   width: calc(50% - 8px);
   display: flex;
   align-items: center;
@@ -14331,14 +14333,16 @@ h6 {
 #loopicons2 article span,
 #loopicons3 article span,
 #loopicons4 article span,
-#loopicons5 article span {
+#loopicons5 article span,
+#loopicons6 article span {
   text-align: center;
 }
 #loopicons article .myspan,
 #loopicons2 article .myspan,
 #loopicons3 article .myspan,
 #loopicons4 article .myspan,
-#loopicons5 article .myspan {
+#loopicons5 article .myspan,
+#loopicons6 article .myspan {
   font-size: 12px;
   padding-top: 16px;
   text-align: center;
@@ -14348,13 +14352,18 @@ h6 {
   #loopicons2 article,
   #loopicons3 article,
   #loopicons4 article,
-  #loopicons5 article {
+  #loopicons5 article,
+  #loopicons6 article {
     width: calc(10% - 8px);
   }
 }
 
 .has-error svg-icon path {
   fill: #b40016;
+}
+
+.has-feel svg-icon path {
+  fill: #c94c07;
 }
 
 .has-success svg-icon path {
