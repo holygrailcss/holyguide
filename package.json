@@ -14,13 +14,24 @@
     "format": "npm run prettier -- --write",
     "format:md": "prettier --write 'src/**/*.md'",
     "prettier": "prettier 'src/assets/sass/**/*.+(css|scss)'",
-    "generate-token-component": "node src/assets/js/new-component.js",
-    "generate-component": "node src/assets/js/newComponent.js",
+
+
+
+
     "component": "npm run generate-component",
-    "generate-token-template": "node src/assets/js/newTokenTemplate.js",
-    "tokentemplate": "npm run generate-token-template",
+
+    "generate-component": "node src/assets/js/newComponent.js",
+    "tokencomponent": "npm run generate-token-component",
+    "generate-token-component": "node src/assets/js/newTokenComponent.js",
+
+
+    "template": "npm run generate-template",
+
     "generate-template": "node src/assets/js/newTemplate.js",
-    "template": "npm run generate-template"
+    "tokentemplate": "npm run generate-token-template",
+    "generate-token-template": "node src/assets/js/newTokenTemplate.js"
+
+
   },
   "repository": {
     "type": "git",

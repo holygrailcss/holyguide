@@ -19938,10 +19938,22 @@ table tr td {
   transform: rotate(50deg);
   background-color: var(--c-primary);
 }
+.checkbox-item-img [type=checkbox] + label::after,
+.checkbox-item-img [type=checkbox] + label::after {
+  width: 80px;
+  height: 80px;
+  content: "";
+}
+.checkbox-item-img [type=checkbox]:not(:checked),
+.checkbox-item-img [type=checkbox]:checked {
+  position: absolute;
+  left: -9999px;
+}
 .checkbox-item-img [type=checkbox]:not(:checked) + label,
 .checkbox-item-img [type=checkbox]:checked + label {
-  padding-bottom: calc(133% + 40px);
+  padding-bottom: 132%;
   height: 100%;
+  width: 100%;
   aspect-ratio: 3/4;
   position: relative;
   padding-left: 40px;
@@ -19949,9 +19961,20 @@ table tr td {
   font-weight: normal;
   font-size: 12px;
   text-align: initial;
-  display: box;
-  display: flexbox;
   display: flex;
+}
+.checkbox-item-img [type=checkbox]:not(:checked) + label span,
+.checkbox-item-img [type=checkbox]:checked + label span {
+  display: initial;
+  vertical-align: top;
+  margin: 5px 0 0;
+  line-height: 16px;
+  min-height: 20px;
+  padding-left: 0;
+}
+.checkbox-item-img [type=checkbox]:not(:checked) + label span::after,
+.checkbox-item-img [type=checkbox]:checked + label span::after {
+  content: " ";
 }
 .checkbox-item-img [type=checkbox]:not(:checked) + label::before,
 .checkbox-item-img [type=checkbox]:checked + label::before {
@@ -19968,28 +19991,19 @@ table tr td {
   vertical-align: top;
   margin: 0 0 0 0;
 }
-.checkbox-item-img [type=checkbox]:not(:checked) + label span,
-.checkbox-item-img [type=checkbox]:checked + label span {
-  display: initial;
-  vertical-align: top;
-  margin: 5px 0 0;
-  line-height: 16px;
-  min-height: 20px;
-  padding-left: 0;
-}
-.checkbox-item-img [type=checkbox]:not(:checked) + label span::after,
-.checkbox-item-img [type=checkbox]:checked + label span::after {
-  content: " ";
-}
 .checkbox-item-img [type=checkbox]:not(:checked) + label a,
 .checkbox-item-img [type=checkbox]:checked + label a {
   text-decoration: underline;
   margin-right: 4px;
 }
-.checkbox-item-img [type=checkbox]:not(:checked),
-.checkbox-item-img [type=checkbox]:checked {
+.checkbox-item-img .checkbox-item [type=checkbox]:not(:checked) + label .icon,
+.checkbox-item-img .checkbox-item [type=checkbox]:checked + label .icon {
   position: absolute;
-  left: -9999px;
+  top: 50%;
+  left: 50%;
+  transform: scale(1) translate(-50%, calc(-50% - 40px));
+  color: var(--c-primary);
+  transition: all 0.2s;
 }
 .checkbox-item-img input[type=checkbox] {
   box-sizing: border-box;
@@ -19998,32 +20012,23 @@ table tr td {
   margin-top: 1px \9 ;
   line-height: normal;
 }
-.checkbox-item-img [type=checkbox]:not(:checked) + label .icon,
 .checkbox-item-img [type=checkbox]:checked + label .icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  opacity: 1;
   transform: scale(1) translate(-50%, calc(-50% - 40px));
-  color: var(--c-primary);
-  transition: all 0.2s;
 }
-.checkbox-item-img [type=checkbox]:not(:checked) + label .icon {
-  opacity: 0;
-  transform: scale(0) translate(-50%, calc(-50% - 40px));
-}
-.checkbox-item-img [type=checkbox]:checked + label .icon {
+.checkbox-item-img .checkbox-item [type=checkbox]:checked + label .icon {
   opacity: 1;
   transform: scale(1) translate(-50%, calc(-50% - 40px));
 }
 .checkbox-item-img [type=checkbox]:checked + label {
   border: 1px solid var(--c-primary);
 }
+.checkbox-item-img [type=checkbox]:not(:checked) + label .icon {
+  opacity: 0;
+  transform: scale(0) translate(-50%, calc(-50% - 40px));
+}
 .checkbox-item-img [type=checkbox]:not(:checked) + label {
   border: 1px solid transparent;
-}
-.checkbox-item-img .checkbox-item [type=checkbox]:checked + label .icon {
-  opacity: 1;
-  transform: scale(1) translate(-50%, calc(-50% - 40px));
 }
 .checkbox-item-img.color-filter [type=checkbox]:not(:checked) + label,
 .checkbox-item-img.color-filter [type=checkbox]:checked + label {
@@ -20042,16 +20047,16 @@ table tr td {
   top: 0;
   left: 0;
 }
-.checkbox-item-img [type=checkbox] + label::after,
-.checkbox-item-img [type=checkbox] + label::after {
-  width: 80px;
-  height: 80px;
-  content: "";
-}
 .checkbox-item-img .checkbox-item-img-text {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 80px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }

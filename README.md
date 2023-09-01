@@ -161,3 +161,8 @@ You can also use words, to fit your writing style more closely[^note].
 
 `npm run template nombreDeLaPaginaTemplate`
 `npm run tokentemplate nombreDelToken`
+
+
+`npm run component nombreDeLaPaginaComponent`
+`npm run tokencomponent nombreDelcomponent`
+
