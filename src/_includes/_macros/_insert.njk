@@ -1409,6 +1409,39 @@
     </div>
   </div>
 {% endmacro %}
+{% macro inputFeelBadge(elementType = '', explicacion = '') %}
+  <h3 class="my-16 tit-m">{{ elementType }}
+  </h3>
+  <p class="p-xs">{{ explicacion }}</p>
+  <div class="mb-32 ">
+    <div class="code-view ">
+      <div class="check-new"></div>
+      <div>
+        <div class="is-flex content-end pb-4">
+          <svg-icon><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 2.68115C6.067 2.68115 4.5 4.24816 4.5 6.18115C4.5 8.11415 6.067 9.68115 8 9.68115C9.933 9.68115 11.5 8.11415 11.5 6.18115C11.5 4.24816 9.933 2.68115 8 2.68115ZM3.5 6.18115C3.5 3.69587 5.51472 1.68115 8 1.68115C10.4853 1.68115 12.5 3.69587 12.5 6.18115C12.5 8.66643 10.4853 10.6812 8 10.6812C5.51472 10.6812 3.5 8.66643 3.5 6.18115ZM4.8 9.68115C5.07614 9.68115 5.3 9.90501 5.3 10.1812V13.4426L8 12.3626L10.7 13.4426V10.1812C10.7 9.90501 10.9239 9.68115 11.2 9.68115C11.4761 9.68115 11.7 9.90501 11.7 10.1812V14.9197L8 13.4397L4.3 14.9197V10.1812C4.3 9.90501 4.52386 9.68115 4.8 9.68115Z" fill="#292929"></path></svg></div></svg-icon>
+        </div>
+        <div class="form-input-label-2 mb-16  ">
+          <input type="email" id="id" class="input" placeholder="Input con badge feel" required="">
+          <label for="id">Input con badge feel</label>
+        </div>
+      </div>
+    </div>
+    {% set standardcode %}
+    <div>
+        <div class="is-flex content-end pb-4">
+          <svg-icon src="badge"></svg-icon>
+        </div>
+        <div class="form-input-label-2 mb-16">
+          <input type="email" id="id" class="input" placeholder="Input con badge feel" required="">
+          <label for="id">Input con badge feel</label>
+        </div>
+      </div>
+    {% endset %}
+    <div class="code-zone">
+      <pre><code class=" language-markup">{{standardcode}}</code></pre>
+    </div>
+  </div>
+{% endmacro %}
 {% macro inputError(elementType = '', explicacion = '') %}
   <h3 class="my-16 tit-m">{{ elementType }}
   </h3>
