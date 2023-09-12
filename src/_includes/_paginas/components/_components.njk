@@ -2,26 +2,19 @@
 layout: base.njk
 ---
 
-
 <div class="container-fluid">{% include '_website/hero.njk' %}</div>
-
 
 <section>
   <div class="row">
     <div class="col-xs-12">
       <div class="main-content innermarkdown">
-
-        {{ content | safe }}</div>
-
-        <div class="list-grid"> 
-            {% for component in collections.components  %}
-              {% include 'token-loop.njk' %}
-            {% endfor %}
-
-
+        {{ content | safe }}
+        <div class="list-grid">
+          {% for component in collections.components %}
+            {% include 'token-loop.njk' %}
+          {% endfor %}
         </div>
-
-        
+      </div>
     </div>
   </div>
 </section>
