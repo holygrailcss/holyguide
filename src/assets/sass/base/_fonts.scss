@@ -26,7 +26,16 @@
 
 @font-face {
   font-display: swap;
+  font-family: "dutti-daily-semibold";
+  src: url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"),
+    url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
   font-family: "dutti-extended-regular";
   src: url("/assets/fonts/dutti/dutti-extended-regular.woff2") format("woff2"),
     url("/assets/fonts/dutti/dutti-extended-regular.woff") format("woff");
 }
+
+

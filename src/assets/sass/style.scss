@@ -524,3 +524,26 @@ table tr td {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
+
+
+
+.ttu,.btn-primary, .btn--full, .btn-secondary, .form-input-label-2 label {
+  text-transform: uppercase;
+}
+[lang^="de"], //aleman
+[lang^="zh"], //chino
+[lang^="zo"],
+[lang^="eu"],//euskera
+[lang^="el"],//griego
+[lang^="tr"],// turco
+[lang^="ru"], //ruso
+[lang^="sr"], //serbio
+[lang^="uk"], //ukraniano
+[lang^="bg"], //bulgaro
+[lang^="ar"],//arab emirates, egipto ,jordania, israel ,qatar , bahrain ,arabia saudi
+[lang^="nl"] //holandes
+{
+    .ttu,.btn-primary, .btn--full, .btn-secondary, .form-input-label-2 label  {
+        text-transform: none;
+    }
+}
