@@ -6,9 +6,9 @@ titulo: token-cajas
 descripcion: token-cajas
 image: /assets/static/images/cajas.jpg
 author: autor
-date: 2023-08-29 
+date: 2023-08-29
 tags: ["token-templates"]
 imageAlt: cajas
 ---
-# cajas
 
+# cajas

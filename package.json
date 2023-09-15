@@ -11,7 +11,10 @@
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*",
     "debug": "DEBUG=* npx eleventy",
-    "format": "npm run prettier -- --write",
+
+    "format": "npm run format:md && npm run prettier -- --write",
+
+
     "format:md": "prettier --write 'src/**/*.md'",
     "prettier": "prettier 'src/assets/sass/**/*.+(css|scss)'",
 

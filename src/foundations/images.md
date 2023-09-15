@@ -23,15 +23,18 @@ https://holygrailcss.github.io/assets/placeholder/2-3.jpg
 ```
 
 ### Como se usa
-Para poder usar el ratio solo tenemos que incluirlo dentro de ```.rat-2-1>.rat-content``` para que su contenido tenga posicion absoluta.
+
+Para poder usar el ratio solo tenemos que incluirlo dentro de `.rat-2-1>.rat-content` para que su contenido tenga posicion absoluta.
 
 Adjuntamos los paddings-tops para los ratios.
-Si no existe tu ratio puedes crear nuevos ratios de esta manera. 
+Si no existe tu ratio puedes crear nuevos ratios de esta manera.
+
 ```
 @include ratio(ancho, alto);
 ```
 
 #### Ejemplo
+
 ```
 <div class='rat-2-1'>
   <div class='rat-content'>

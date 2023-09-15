@@ -6,8 +6,7 @@ titulo: Store list
 descripcion: Store list
 image: /assets/static/components/store-list.jpg
 author: autor
-date: 2023-08-07 
+date: 2023-08-07
 tags: ["components"]
 imageAlt: store-list
 ---
-

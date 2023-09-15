@@ -54,13 +54,19 @@ Crea un proyecto completo con parcel y gulp en tu local.
 Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debugear mientras maquetamos.
 
 ```scss
-@include debug-divs();   // debugaremos con colores en las divs
-@include debug-imgs();   // Analisis de los links (uso de alts vacios  en imagenes)
-@include debug-links();  // Analisis de los links (uso de alts vacios  en imagenes)
-@include debug-forms();  // Analisis de los formularios y buenas praxis  (textarea. inputs erroneos)
-@include debug-headers();// Analisis de los encabezados
-@include debug-fine();   // depuración de elementos como
-@include debug-all();    // depuración de todos a la vez
+@include debug-divs(); // debugaremos con colores en las divs
+@include debug-imgs(
+
+); // Analisis de los links (uso de alts vacios  en imagenes)
+@include debug-links(
+
+); // Analisis de los links (uso de alts vacios  en imagenes)
+@include debug-forms(
+
+); // Analisis de los formularios y buenas praxis  (textarea. inputs erroneos)
+@include debug-headers(); // Analisis de los encabezados
+@include debug-fine(); // depuración de elementos como
+@include debug-all(); // depuración de todos a la vez
 ```
 
 Configuración del archivo setup.scss
@@ -137,29 +143,29 @@ $modalx-xl:995px;
 
 
 $headers: (
-  tit-m: ( 14px, 14px, 16px, 16px, 1.2, 'medium', ), 
-  tit-s: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ), 
+  tit-m: ( 14px, 14px, 16px, 16px, 1.2, 'medium', ),
+  tit-s: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
   tit-xs: ( 11px, 11px, 11px, 11px, 1.2, 'medium', ),
 
-  p-m-b: ( 12px, 12px, 13px, 13px, 1.2, 'bold', ), 
+  p-m-b: ( 12px, 12px, 13px, 13px, 1.2, 'bold', ),
 
   p-m: ( 12px, 12px, 13px, 13px, 1.2, 'regular', ),
   p-m-m: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
-  p-s: ( 12px, 12px, 12px, 12px, 1.2, 'regular', ), 
-  p-xs: ( 11px, 11px, 11px, 11px, 1.2, 'regular', ), 
-  p-s-b: ( 12px, 12px, 13px, 13px, 1.3, 'bold', ), 
-  p-xs-b: ( 11px, 11px, 12px, 12px, 1.3, 'bold', ), 
+  p-s: ( 12px, 12px, 12px, 12px, 1.2, 'regular', ),
+  p-xs: ( 11px, 11px, 11px, 11px, 1.2, 'regular', ),
+  p-s-b: ( 12px, 12px, 13px, 13px, 1.3, 'bold', ),
+  p-xs-b: ( 11px, 11px, 12px, 12px, 1.3, 'bold', ),
   p-xxs-b: ( 9px, 9px, 9px, 9px, 1.3, 'bold', ),
 
-  p-tag: ( 8px, 8px, 10px, 10px, 1.3, 'bold', )   
+  p-tag: ( 8px, 8px, 10px, 10px, 1.3, 'bold', )
 ) !default;
 
 /* hay que eliminar headers y quedarnos con minheaders */
-$minheaders: ( 
+$minheaders: (
   tit-m: ( 14px, 16px, 1.2, 'medium', ),  // siempre mayus   36 ✅
   tit-s: ( 12px, 13px, 1.2, 'medium', ),  // siempre mayus   84 lo vamos a borrar y sustiuir por p-m ❌
   tit-xs: ( 11px, 11px, 1.2, 'medium', ), // siempre mayus   77
-  
+
   p-m-b: ( 12px, 13px, 1.2, 'bold', ),  // 146  es semibold aunque ponga bold
 
 
@@ -172,7 +178,7 @@ $minheaders: (
   p-xxs-b: ( 9px, 9px, 1.3, 'bold', ),    // 6
 
   p-tag: ( 8px, 10px, 1.3, 'regular', )    //  siempre en mayus
-  
+
 ) !default;
 
  $headersFixers: (
@@ -206,7 +212,7 @@ Empezaremos maquetando por la
 nuestras webs se separarán siempre por sections, muy delimitadas.
 
 ```html
-<section m-48 p-48 bleed-8 has-light>
+<section m-48 p-48 bleed-8 has-light></section>
 ```
 
 | Seccionbase | márgenes | paddings | Reticula | Textos     |

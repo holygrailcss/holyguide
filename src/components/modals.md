@@ -6,9 +6,9 @@ titulo: Modals
 descripcion: modals
 image: /assets/static/components/modals.jpg
 author: autor
-date: 2023-08-02 
+date: 2023-08-02
 tags: ["components"]
 imageAlt: modals
 ---
-# modals
 
+# modals

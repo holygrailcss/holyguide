@@ -97,11 +97,11 @@ Cada tipografía tiene sus particularidades, y establecer dogmas sobre los valor
 
 - **Establece jerarquías** bien diferenciadas entre los distintos tipos de información. Para ello, puedes valerte de diferentes tipografías, pesos, tamaños, colores, etc. Una interesante forma de definir las distintas jerarquías para un sistema, es establecer en primer lugar los valores del cuerpo de texto, para a partir de ahí definir el resto.
 
-- **Un interlineado** entre 1,4 y 1,6 veces el tamaño de la tipografía suele funcionar para cuerpos de texto. Para destacados y titulares reducimos ese rango a 1,2-1,4. No usamos pixeles ya que son rangos porcentuales, con lo que un 1,2 equivale a un 120% en figma. 
+- **Un interlineado** entre 1,4 y 1,6 veces el tamaño de la tipografía suele funcionar para cuerpos de texto. Para destacados y titulares reducimos ese rango a 1,2-1,4. No usamos pixeles ya que son rangos porcentuales, con lo que un 1,2 equivale a un 120% en figma.
 
-- **Controla el largo de la línea del cuerpo de texto** . Lo recomendable para una buena experiencia de lectura, son entre 45 y 75 caracteres.  
+- **Controla el largo de la línea del cuerpo de texto** . Lo recomendable para una buena experiencia de lectura, son entre 45 y 75 caracteres.
 
-- **Cíñete a una o dos tipografías** y utiliza la menor cantidad de variaciones posibles de pesos de la misma. Esto es principalmente por cuestiones de rendimiento en webs y apps. Ya que el uso de más tipografias sobrecarga la web haciendola más lenta y menos competitiva. 
+- **Cíñete a una o dos tipografías** y utiliza la menor cantidad de variaciones posibles de pesos de la misma. Esto es principalmente por cuestiones de rendimiento en webs y apps. Ya que el uso de más tipografias sobrecarga la web haciendola más lenta y menos competitiva.
 
 #### 3.5 Iconografía
 

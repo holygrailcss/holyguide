@@ -6,9 +6,9 @@ titulo: Marketing spot
 descripcion: mktspot
 image: /assets/static/components/mktspot.jpg
 author: autor
-date: 2023-08-01 
+date: 2023-08-01
 tags: ["components"]
 imageAlt: mktspot
 ---
-# mktspot
 
+# mktspot
