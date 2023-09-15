@@ -160,15 +160,16 @@
   }
 }
 
+pre {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: #2d2d2d;
+}
+
 .resize-mini {
   overflow: hidden;
-
-  pre {
-    position: relative;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 16px;
-  }
 }
 
 .resize-mini-content {

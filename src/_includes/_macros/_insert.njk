@@ -1886,20 +1886,30 @@
   <div class="code-view ">
     <div class="check-new"></div>
     {# ---------- #}
-    <div class="form-btn" action="">
-      <input type="tel" id="t1" class="input pe-none" placeholder="Teléfono"/>
-      <button class="btn btn-primary">VERIFICAR TELEFONO</button>
-    </div>
+    <form novalidate="" class="is-flex flex-wrap"><div class="col-xs-12 col-sm-7"><div class="form-input-label-2"><input id="order" type="text" formcontrolname="order" class="form-control input" placeholder="Nº del pedido"><label for="order">Nº del pedido</label><div class="help"><div class="p-xs c-dark-grey">Ej: 34567890722</div></div></div></div><div class="col-xs-12 col-sm-5"><button class="btn btn-primary btn--full btn-separate"><span>Consultar</span><svg-icon src="arrow-right"><div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5455 13.3674C10.3426 13.1801 10.3299 12.8638 10.5172 12.6609L14.358 8.5L0.5 8.5C0.223858 8.5 0 8.27614 0 8C0 7.72386 0.223858 7.5 0.5 7.5L14.358 7.5L10.5172 3.33914C10.3299 3.13623 10.3426 2.8199 10.5455 2.6326C10.7484 2.4453 11.0647 2.45795 11.252 2.66086L15.8674 7.66086C16.0442 7.85239 16.0442 8.14761 15.8674 8.33914L11.252 13.3391C11.0647 13.5421 10.7484 13.5547 10.5455 13.3674Z" fill="#292929"></path>
+  </svg>
+  </div></svg-icon></button></div></form>
 
     {# ---------- #}
   </div>
   {% set standardcode %}
-  <div class='row'>
-    <div class="form-btn" action="">
-      <input type="tel" id="t1" class="input pe-none" placeholder="Teléfono"/>
-      <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+  <form novalidate="" class="is-flex flex-wrap">
+    <div class="col-xs-12 col-sm-7">
+      <div class="form-input-label-2"><input id="order" type="text" formcontrolname="order" class="form-control input" placeholder="Nº del pedido">
+        <label for="order">Nº del pedido</label>
+        <div class="help">
+          <div class="p-xs c-dark-grey">Ej: 34567890722</div>
+        </div>
+      </div>
     </div>
-  </div>
+    <div class="col-xs-12 col-sm-5">
+      <button class="btn btn-primary btn--full btn-separate">
+        <span>Consultar</span>
+        <svg-icon src="arrow-right"></svg-icon>
+      </button>
+    </div>
+  </form>
   {% endset %}
   <div class="code-zone">
     <pre><code class=" language-markup">{{standardcode}}</code></pre>

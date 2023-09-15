@@ -53,7 +53,7 @@ Crea un proyecto completo con parcel y gulp en tu local.
 
 Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debugear mientras maquetamos.
 
-```
+```scss
 @include debug-divs();   // debugaremos con colores en las divs
 @include debug-imgs();   // Analisis de los links (uso de alts vacios  en imagenes)
 @include debug-links();  // Analisis de los links (uso de alts vacios  en imagenes)
@@ -66,7 +66,7 @@ Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debu
 Configuración del archivo setup.scss
 Antes de nada configuraremos la guia, con ella generaremos el siguiente archivo de setup.scss. Después copiaremos y sustituiremos en nuestro archivo setup las diferentes variables, de esta forma, tanto la documentación como el proyecto estarán alineados.
 
-```
+```SCSS
 $font-family-regular:"dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-medium:"dutti-daily-light",Helvetica,arial,sans-serif;
 $font-family-bold:"dutti-daily-bold",Helvetica,arial,sans-serif;
@@ -137,30 +137,43 @@ $modalx-xl:995px;
 
 
 $headers: (
+  tit-m: ( 14px, 14px, 16px, 16px, 1.2, 'medium', ), 
+  tit-s: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ), 
+  tit-xs: ( 11px, 11px, 11px, 11px, 1.2, 'medium', ),
 
-sub-l:(56px,56px,96px,96px, 1.1,bold3),
-sub-m:(42px,42px,64px,64px, 1.1,bold3),
-sub-s:(32px,32px,56px,56px, 1.1,bold3),
-head-l:(56px,56px,96px,96px, 1.1,bold),
-head-m:(42px,42px,64px,64px, 1.1,bold),
-head-s:(32px,32px,56px,56px, 1.1,bold),
-tit-l:(24px,24px,42px, 42px, 1.2 ,bold),
-tit-m:(20px,20px,32px,32px, 1.2,bold),
-tit-s:(16px,16px,20px,20px, 1.2,bold),
-tit-xs:(14px,14px,14px,14px, 1.2,bold),
-p-l:(18px,18px,20px,20px, 1.3,regular),
-p-m:(14px, 14px,16px,16px, 1.3,regular),
-p-m-b:(14px, 14px,16px ,16px, 1.3,bold),
-p-s:(12px, 12px,13px ,13px, 1.3,regular),
-p-s-b:(12px, 12px,13px ,13px, 1.3,bold),
-p-xs:(11px, 11px,12px,12px, 1.3,regular),
-p-xs-b:(11px, 11px,12px,12px, 1.3,regular),
-p-xxs-b:(9px, 9px,9px,9px, 1.3,bold),
-p-18-2b:(18px,18px,18px,18px, 1.3,bold),
-p-18-b:(18px,18px,18px,18px, 1.3,bold),
-p-xs:(14px,14px,14px,14px, 1.3,regular),
-p-xs-b:(14px,14px,14px,14px, 1.3,bold),
-);
+  p-m-b: ( 12px, 12px, 13px, 13px, 1.2, 'bold', ), 
+
+  p-m: ( 12px, 12px, 13px, 13px, 1.2, 'regular', ),
+  p-m-m: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
+  p-s: ( 12px, 12px, 12px, 12px, 1.2, 'regular', ), 
+  p-xs: ( 11px, 11px, 11px, 11px, 1.2, 'regular', ), 
+  p-s-b: ( 12px, 12px, 13px, 13px, 1.3, 'bold', ), 
+  p-xs-b: ( 11px, 11px, 12px, 12px, 1.3, 'bold', ), 
+  p-xxs-b: ( 9px, 9px, 9px, 9px, 1.3, 'bold', ),
+
+  p-tag: ( 8px, 8px, 10px, 10px, 1.3, 'bold', )   
+) !default;
+
+/* hay que eliminar headers y quedarnos con minheaders */
+$minheaders: ( 
+  tit-m: ( 14px, 16px, 1.2, 'medium', ),  // siempre mayus   36 ✅
+  tit-s: ( 12px, 13px, 1.2, 'medium', ),  // siempre mayus   84 lo vamos a borrar y sustiuir por p-m ❌
+  tit-xs: ( 11px, 11px, 1.2, 'medium', ), // siempre mayus   77
+  
+  p-m-b: ( 12px, 13px, 1.2, 'bold', ),  // 146  es semibold aunque ponga bold
+
+
+  p-m: ( 12px, 13px, 1.2, 'regular', ),   // 384 pasa a ser medium y borramos tit-s ❌
+  p-m-m: ( 12px, 13px, 1.2, 'medium', ),  // 3
+  p-s: ( 12px, 12px, 1.2, 'regular', ),   //598  ❌
+  p-xs: ( 11px, 11px, 1.2, 'regular', ),  //169
+  p-s-b: ( 12px, 13px, 1.3, 'bold', ),     //0 borramos y pasa a ser p-m-b  ✅
+  p-xs-b: ( 11px, 12px, 1.3, 'bold', ),   // 35
+  p-xxs-b: ( 9px, 9px, 1.3, 'bold', ),    // 6
+
+  p-tag: ( 8px, 10px, 1.3, 'regular', )    //  siempre en mayus
+  
+) !default;
 
  $headersFixers: (
 14: (14px ,1.5),
@@ -192,7 +205,7 @@ Sections
 Empezaremos maquetando por la
 nuestras webs se separarán siempre por sections, muy delimitadas.
 
-```
+```html
 <section m-48 p-48 bleed-8 has-light>
 ```
 
