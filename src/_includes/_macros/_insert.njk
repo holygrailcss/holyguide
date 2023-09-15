@@ -1442,7 +1442,7 @@
         <div class="form-input-label-2 mb-16  ">
           <input type="email" id="t2" class="input" placeholder="Email address" required="">
           <label for="t2">form input label 2 </label>
-          <div class="p-s c-dark-grey pt-8">
+          <div class="p-s c-dark-grey pt-4">
             Texto explicativo
           </div>
         </div>
@@ -1456,7 +1456,7 @@
       <div class="form-input-label-2 mb-16  ">
         <input type="email" id="t2" class="input" placeholder="Email address" required="">
         <label for="t2">form input label 2 </label>
-        <p class="p-s c-dark-grey pt-8">
+        <p class="p-s c-dark-grey pt-4">
             Texto explicativo
           </p>
       </div>
@@ -1780,6 +1780,52 @@
       </div>
     </div>
   </div>
+  {% endset %}
+  <div class="code-zone">
+    <pre><code class=" language-markup">{{standardcode}}</code></pre>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro inputPrefixDropdown(elementType = '', explicacion = '') %}
+  <h3 class="my-16 tit-m">{{ elementType }}
+  </h3>
+  <p class="p-xs">{{ explicacion }}</p>
+  <div class="mb-32 ">
+    <div class="code-view ">
+      <div class="check-new"></div>
+      {# ---------- #}
+      <div class="form-prefix" action="">
+        <div class="select ">
+          <select>
+            <option value="+34">+34</option>
+            <option value="+106">+106</option>
+            <option value="+3">+3</option>
+            <option value="+1002">+1002</option>
+          </select>
+        </div>
+        <div class="form-input-label-2">
+          <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
+          <label for="t1">Teléfono </label>
+        </div>
+      </div>
+      {# ---------- #}
+    </div>
+    {% set standardcode %}
+    <div class="form-prefix" action="">
+      <div class="select ">
+        <select>
+          <option value="+34">+34</option>
+          <option value="+106">+106</option>
+          <option value="+3">+3</option>
+          <option value="+1002">+1002</option>
+        </select>
+      </div>
+      <div class="form-input-label-2">
+        <input type="tel" id="t1" class="input" placeholder="Teléfono"/>
+        <label for="t1">Teléfono </label>
+      </div>
+    </div>
   {% endset %}
   <div class="code-zone">
     <pre><code class=" language-markup">{{standardcode}}</code></pre>
