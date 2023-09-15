@@ -7,42 +7,192 @@ $padding-mobile: 16px;
 $text-input-m: 12px;
 $text-input-d: 12px;
 
-
 $headers:/* name:mobile,768,992,1280,line-height,font */ (
-    
-tit-m: ( 14px, 14px, 16px, 16px, 1.2, 'medium', ), 
-tit-s: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ), 
-tit-xs: ( 11px, 11px, 11px, 11px, 1.2, 'medium', ),
+  tit-m: (
+    14px,
+    14px,
+    16px,
+    16px,
+    1.2,
+    "medium",
+  ),
+  tit-s: (
+    12px,
+    12px,
+    13px,
+    13px,
+    1.2,
+    "medium",
+  ),
+  tit-xs: (
+    11px,
+    11px,
+    11px,
+    11px,
+    1.2,
+    "medium",
+  ),
 
-p-m-b: ( 12px, 12px, 13px, 13px, 1.2, 'bold', ), 
-p-m: ( 12px, 12px, 13px, 13px, 1.2, 'regular', ),
-p-m-m: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
+  p-m-b: (
+    12px,
+    12px,
+    13px,
+    13px,
+    1.2,
+    "bold",
+  ),
+  p-m: (
+    12px,
+    12px,
+    13px,
+    13px,
+    1.2,
+    "regular",
+  ),
+  p-m-m: (
+    12px,
+    12px,
+    13px,
+    13px,
+    1.2,
+    "medium",
+  ),
 
-p-s: ( 12px, 12px, 12px, 12px, 1.2, 'regular', ), 
-p-xs: ( 11px, 11px, 11px, 11px, 1.2, 'regular', ), 
-p-xs-b: ( 11px, 11px, 12px, 12px, 1.3, 'bold', ), 
+  p-s: (
+    12px,
+    12px,
+    12px,
+    12px,
+    1.2,
+    "regular",
+  ),
+  p-xs: (
+    11px,
+    11px,
+    11px,
+    11px,
+    1.2,
+    "regular",
+  ),
+  p-xs-b: (
+    11px,
+    11px,
+    12px,
+    12px,
+    1.3,
+    "bold",
+  ),
 
-p-xxs-b: ( 9px, 9px, 9px, 9px, 1.3, 'bold', ),
-p-tag: ( 8px, 8px, 10px, 10px, 1.3, 'bold', )   
+  p-xxs-b: (
+    9px,
+    9px,
+    9px,
+    9px,
+    1.3,
+    "bold",
+  ),
+  p-tag: (
+    8px,
+    8px,
+    10px,
+    10px,
+    1.3,
+    "bold",
+  ),
 );
 
 $minheaders: (
-  tit-m: ( 14px, 16px, 1.2, 'medium', ),  // siempre mayus   56
-  tit-s: ( 12px, 13px, 1.2, 'medium', ),  // siempre mayus   84 lo vamos a borrar y sustiuir por p-m
-  tit-xs: ( 11px, 11px, 1.2, 'medium', ), // siempre mayus   77
+  tit-m: (
+    14px,
+    16px,
+    1.2,
+    "medium",
+  ),
+  // siempre mayus   56
+  tit-s:
+    (
+      12px,
+      13px,
+      1.2,
+      "medium",
+    ),
+  // siempre mayus   84 lo vamos a borrar y sustiuir por p-m
+  tit-xs:
+    (
+      11px,
+      11px,
+      1.2,
+      "medium",
+    ),
 
-  p-m-b: ( 12px, 13px, 1.2, 'bold', ),  // 146  es semibold aunque ponga bold
-  p-m: ( 12px, 13px, 1.2, 'regular', ),   // 430 pasa a ser medium y borramos tit-s
-  p-m-m: ( 12px, 13px, 1.2, 'medium', ),  // 3
+  // siempre mayus   77
+  p-m-b:
+    (
+      12px,
+      13px,
+      1.2,
+      "bold",
+    ),
+  // 146  es semibold aunque ponga bold
+  p-m:
+    (
+      12px,
+      13px,
+      1.2,
+      "regular",
+    ),
+  // 430 pasa a ser medium y borramos tit-s
+  p-m-m:
+    (
+      12px,
+      13px,
+      1.2,
+      "medium",
+    ),
 
-  p-s: ( 12px, 12px, 1.2, 'regular', ),   //598
-  p-xs: ( 11px, 11px, 1.2, 'regular', ),  //169
-  p-xs-b: ( 11px, 12px, 1.3, 'bold', ),   // 35
+  // 3
+  p-s:
+    (
+      12px,
+      12px,
+      1.2,
+      "regular",
+    ),
+  //598
+  p-xs:
+    (
+      11px,
+      11px,
+      1.2,
+      "regular",
+    ),
+  //169
+  p-xs-b:
+    (
+      11px,
+      12px,
+      1.3,
+      "bold",
+    ),
 
-  p-xxs-b: ( 9px, 9px, 1.3, 'bold', ),    // 6
-  p-tag: ( 8px, 10px, 1.3, 'regular', )    //  siempre en mayus
+  // 35
+  p-xxs-b:
+    (
+      9px,
+      9px,
+      1.3,
+      "bold",
+    ),
+  // 6
+  p-tag:
+    (
+      8px,
+      10px,
+      1.3,
+      "regular",
+    )
+    //  siempre en mayus,
 );
-
 
 /* TYPES FIJOS */
 
@@ -81,19 +231,19 @@ $headersFixers: (
   ),
 );
 
-$font-family-a-l: 'dutti-daily-light', Helvetica, arial, sans-serif;
-$font-family-a-r: 'dutti-daily-regular', Helvetica, arial, sans-serif;
-$font-family-a-m: 'dutti-daily-medium', Helvetica, arial, sans-serif;
-$font-family-a-b: 'dutti-daily-semibold', Helvetica, arial, sans-serif;
-$font-family-a-sb:'dutti-daily-semibold', Helvetica, arial, sans-serif;
+$font-family-a-l: "dutti-daily-light", Helvetica, arial, sans-serif;
+$font-family-a-r: "dutti-daily-regular", Helvetica, arial, sans-serif;
+$font-family-a-m: "dutti-daily-medium", Helvetica, arial, sans-serif;
+$font-family-a-b: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+$font-family-a-sb: "dutti-daily-semibold", Helvetica, arial, sans-serif;
 
-$font-family-b-r: 'dutti-daily-semibold', Helvetica, arial, sans-serif;
-$font-family-b-m: 'dutti-extended-bold', arial-black, sans-serif;
-$font-family-b-b: 'dutti-extended-extrabold', arial-black, sans-serif;
+$font-family-b-r: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+$font-family-b-m: "dutti-extended-bold", arial-black, sans-serif;
+$font-family-b-b: "dutti-extended-extrabold", arial-black, sans-serif;
 
-$font-family-c-r: 'massimo-daily-regular', 'ms-serif',serif;
-$font-family-c-m: 'massimo-daily-light', 'ms-serif',serif;
-$font-family-c-b: 'massimo-daily-bold', 'ms-serif',serif;
+$font-family-c-r: "massimo-daily-regular", "ms-serif", serif;
+$font-family-c-m: "massimo-daily-light", "ms-serif", serif;
+$font-family-c-b: "massimo-daily-bold", "ms-serif", serif;
 
 $font-weight-light: 100;
 $font-weight-regular: 500;

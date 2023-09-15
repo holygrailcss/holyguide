@@ -525,9 +525,11 @@ table tr td {
   gap: 16px;
 }
 
-
-
-.ttu,.btn-primary, .btn--full, .btn-secondary, .form-input-label-2 label {
+.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
   text-transform: uppercase;
 }
 [lang^="de"], //aleman
@@ -543,7 +545,11 @@ table tr td {
 [lang^="ar"],//arab emirates, egipto ,jordania, israel ,qatar , bahrain ,arabia saudi
 [lang^="nl"] //holandes
 {
-    .ttu,.btn-primary, .btn--full, .btn-secondary, .form-input-label-2 label  {
-        text-transform: none;
-    }
+  .ttu,
+  .btn-primary,
+  .btn--full,
+  .btn-secondary,
+  .form-input-label-2 label {
+    text-transform: none;
+  }
 }
