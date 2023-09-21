@@ -20351,11 +20351,19 @@ table tr td {
   gap: 16px;
 }
 
-.ttu, .btn-primary, .btn--full, .btn-secondary, .form-input-label-2 label {
+.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
   text-transform: uppercase;
 }
 
-[lang^=de] .ttu, [lang^=de] .btn-primary, [lang^=de] .btn--full, [lang^=de] .btn-secondary, [lang^=de] .form-input-label-2 label,
+[lang^=de] .ttu,
+[lang^=de] .btn-primary,
+[lang^=de] .btn--full,
+[lang^=de] .btn-secondary,
+[lang^=de] .form-input-label-2 label,
 [lang^=zh] .ttu,
 [lang^=zh] .btn-primary,
 [lang^=zh] .btn--full,

@@ -227,79 +227,85 @@
       "bg": "bg-feel-light"
     }
   ],
-  "tipografias": [
 
+  "tipografias": [
     {
       "name": "tit-m",
       "xs": "14px",
       "lg": "16px",
-      "line": " 1.2",
-      "weight": "medium"
-    },
-    {
-      "name": "tit-s",
-      "xs": "12px",
-      "lg": "13px",
-      "line": " 1.2",
+      "line": "1.2",
       "weight": "medium"
     },
     {
       "name": "tit-xs",
       "xs": "12px",
       "lg": "12px",
-      "line": " 1.2",
+      "line": "1.2",
       "weight": "medium"
+    },
+    {
+      "name": "tit-xs-b",
+      "xs": "12px",
+      "lg": "12px",
+      "line": "1.2",
+      "weight": "bold"
+    },
+    {
+      "name": "sub-xs",
+      "xs": "11px",
+      "lg": "11px",
+      "line": "1.2",
+      "weight": "regular"
     },
     {
       "name": "p-m-b",
       "xs": "12px",
       "lg": "13px",
-      "line": " 1.2",
-      "weight": "bold"
+      "line": "1.2",
+      "weight": "semibold"
     },
     {
       "name": "p-m",
       "xs": "12px",
-      "lg": "13px",
-      "line": " 1.2",
-      "weight": "regular"
+      "lg": "12px",
+      "line": "1.2",
+      "weight": "medium"
     },
     {
-      "name": "p-s",
+      "name": "p-m-m",
       "xs": "12px",
-      "lg": "12px",
-      "line": " 1.2",
-      "weight": "regular"
+      "lg": "13px",
+      "line": "1.2",
+      "weight": "medium"
     },
     {
       "name": "p-xs",
       "xs": "11px",
       "lg": "11px",
-      "line": " 1.2",
+      "line": "1.2",
       "weight": "regular"
     },
     {
-      "name": "p-s-b",
-      "xs": "12px",
-      "lg": "13px",
-      "line": " 1.3",
-      "weight": "bold"
-    },
-    {
       "name": "p-xs-b",
-      "xs": "12px",
-      "lg": "13px",
-      "line": " 1.3",
+      "xs": "11px",
+      "lg": "12px",
+      "line": "1.3",
       "weight": "bold"
     },
     {
       "name": "p-xxs-b",
       "xs": "9px",
       "lg": "9px",
-      "line": " 1.3",
+      "line": "1.3",
       "weight": "bold"
+    },
+    {
+      "name": "p-tag",
+      "xs": "8px",
+      "lg": "10px",
+      "line": "1.3",
+      "weight": "regular"
     }
-
   ],
   "ButtonType": [
     { "class": "btn-primary" },
