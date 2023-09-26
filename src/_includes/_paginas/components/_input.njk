@@ -21,9 +21,48 @@ layout: base.njk
   {% call insert.inputPrefixDropdown('Input prefijo telefónico con dropdown') %}{% endcall %}
   {% call insert.inputPrefixBtn('Input prefijo telefónico con botón') %}{% endcall %}
   {% call insert.inputIpod('Inputs básicos placeholder sin animación') %}{% endcall %}
-    {% call insert.inputBtn('Inputs básicos seguidos de botón') %}{% endcall %}
+  {% call insert.inputBtn('Inputs básicos seguidos de botón') %}{% endcall %}
 
 
+<div class="row">
+    <div class="col-xs-12">
+        <p class="tit-s ttu mb-16">Fecha de nacimiento</p>
+    </div>
+    <div class="col-xs-12 is-flex">
+
+            <div class="form-input-label-2 " >
+                <input
+                    type="dia"
+                    id="t1"
+                    class="input"
+                    formControlName="phone"
+                    placeholder="dia"
+                />
+                <label for="t1">Dia </label>
+            </div>
+            <div class="form-input-label-2 " >
+                <input
+                type="mes"
+                id="t2"
+                class="input"
+                formControlName="phone"
+                placeholder="dia"
+                        />
+                        <label for="t2">Mes </label>
+            </div>
+            <div class="form-input-label-2 " >
+            <input
+            type="any"
+            id="t1"
+            class="input"
+            formControlName="phone"
+            placeholder="dia"
+                />
+                <label for="t1">Año</label>
+        </div>
+   
+    </div>
+</div>
 
 <style>
 </style>
