@@ -3616,7 +3616,7 @@ p {
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 p.b {
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
@@ -4192,6 +4192,30 @@ mark {
   }
 }
 
+.fluid-12-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-12-sb {
+  font-size: 1px;
+  line-height: 0.3;
+}
+@media screen and (min-width: 319px) {
+  .fluid-12-sb {
+    font-size: calc(
+                1px + 1 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.3;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-12-sb {
+    font-size: 2px;
+    line-height: 0.3;
+  }
+}
+
 .fluid-12-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4288,6 +4312,30 @@ mark {
   }
 }
 
+.fluid-14-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-14-sb {
+  font-size: 14px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-14-sb {
+    font-size: calc(
+                14px + 0 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-14-sb {
+    font-size: 14px;
+    line-height: 0.9;
+  }
+}
+
 .fluid-14-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4384,6 +4432,30 @@ mark {
   }
 }
 
+.fluid-6-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-6-sb {
+  font-size: 16px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-6-sb {
+    font-size: calc(
+                16px + -2 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-6-sb {
+    font-size: 14px;
+    line-height: 0.9;
+  }
+}
+
 .fluid-6-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4480,6 +4552,30 @@ mark {
   }
 }
 
+.fluid-18-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-18-sb {
+  font-size: 18px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-18-sb {
+    font-size: calc(
+                18px + -4 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-18-sb {
+    font-size: 14px;
+    line-height: 0.9;
+  }
+}
+
 .fluid-18-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4576,6 +4672,30 @@ mark {
   }
 }
 
+.fluid-20-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-20-sb {
+  font-size: 20px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-20-sb {
+    font-size: calc(
+                20px + -6 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-20-sb {
+    font-size: 14px;
+    line-height: 0.9;
+  }
+}
+
 .fluid-20-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4672,6 +4792,30 @@ mark {
   }
 }
 
+.fluid-50-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-50-sb {
+  font-size: 30px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-50-sb {
+    font-size: calc(
+                30px + 20 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-50-sb {
+    font-size: 50px;
+    line-height: 0.9;
+  }
+}
+
 .fluid-50-b {
   font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
   font-weight: 900;
@@ -4763,6 +4907,30 @@ mark {
 }
 @media screen and (min-width: 1500px) {
   .fluid-100-m {
+    font-size: 100px;
+    line-height: 0.9;
+  }
+}
+
+.fluid-100-sb {
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 700;
+}
+.fluid-100-sb {
+  font-size: 30px;
+  line-height: 0.9;
+}
+@media screen and (min-width: 319px) {
+  .fluid-100-sb {
+    font-size: calc(
+                30px + 70 *
+                  ((100vw - 319px) / 1181)
+              );
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .fluid-100-sb {
     font-size: 100px;
     line-height: 0.9;
   }
@@ -6466,6 +6634,12 @@ strong {
     transform: rotate(-360deg);
   }
 }
+input:is([type=button], [type=submit], [type=reset]),
+input[type=file]::file-selector-button,
+button {
+  color: #292929;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
@@ -6978,7 +7152,7 @@ strong {
 .btn-trans {
   color: #ffffff;
   background: rgba(226, 226, 226, 0.6);
-  font-size: 14px;
+  font-size: 12px;
   border: 0 solid #ffffff;
   box-sizing: border-box;
 }
@@ -7975,7 +8149,7 @@ select {
 }
 
 label {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .input,
@@ -8069,7 +8243,7 @@ label {
   box-shadow: none;
   display: inline-flex;
   height: 34px;
-  font-size: 18px;
+  font-size: 12px;
   margin-left: 10px;
   text-align: center;
   justify-content: flex-start;
@@ -8152,15 +8326,18 @@ label {
 }
 .form-input-label-2.has-ico-pre .ico-pre,
 .has-ico-pre .ico-pre {
+  height: 45px;
+  position: absolute;
+  top: 0;
   right: auto;
   left: 0;
-  position: absolute;
-  top: 50%;
   box-sizing: border-box;
-  transform: translateY(-50%);
-  margin: 0 16px;
-  height: 16px;
-  width: 16px;
+  display: block;
+  margin: 0 15px;
+  cursor: pointer;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .form-input-label-2.has-ico-post.btn, .form-input-label-2.has-ico-post > input, .form-input-label-2.has-ico-post > label,
@@ -8178,17 +8355,18 @@ label {
 }
 .form-input-label-2.has-ico-post .ico-post,
 .has-ico-post .ico-post {
+  height: 45px;
+  position: absolute;
+  top: 0;
   right: 0;
   left: auto;
-  position: absolute;
-  top: 22px;
   box-sizing: border-box;
-  display: table;
-  transform: translateY(-50%);
-  margin: 0 16px;
-  height: 16px;
-  width: 16px;
+  display: block;
+  margin: 0 15px;
   cursor: pointer;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
 }
 
 .is-error .input,
@@ -8635,18 +8813,18 @@ input::input-placeholder {
   }
 }
 
-.form-phone-prefix {
+.form-prefix {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.form-phone-prefix > :not(.select):nth-child(1) {
+.form-prefix > :not(.select):nth-child(1) {
   flex: 0 0 75px;
 }
-.form-phone-prefix > :nth-child(2) {
+.form-prefix > :nth-child(2) {
   flex: 5 0 130px;
 }
-.form-phone-prefix > .btn {
+.form-prefix > .btn {
   flex: 1 0 auto;
 }
 
@@ -9207,7 +9385,7 @@ u::after {
   transform: none;
   transition: background-color 0.3s ease-in-out;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
   padding: 2px 0;
   text-decoration: underline;
@@ -9224,7 +9402,7 @@ u::after {
   border: 0;
   transform: none;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
   padding: 0;
   cursor: pointer;
@@ -9994,7 +10172,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-info {
@@ -10003,7 +10180,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-valid {
@@ -10012,7 +10188,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-alert {
@@ -10021,7 +10196,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-feel {
@@ -10030,7 +10204,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-limited {
@@ -10039,7 +10212,6 @@ ul.list-mini.has-light > li::after {
   padding: 6px;
   line-height: 1;
   display: inline-block;
-  font-size: 14px;
 }
 
 .tag-new {
@@ -11426,7 +11598,6 @@ ul.list-clear li.list-box:last-child {
 .product-tag {
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
   font-weight: 500;
-  font-size: 10px;
   color: #8e8e8e;
   letter-spacing: 0;
   line-height: 1;
@@ -14487,6 +14658,9 @@ h6 {
   justify-content: space-evenly;
   border: 1px solid #eaeaea;
   transition: 0.2s ease all;
+}
+.code-view .form-input-label-2 {
+  min-width: 300px;
 }
 
 .check-new {
