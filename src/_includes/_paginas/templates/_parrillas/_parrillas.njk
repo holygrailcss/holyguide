@@ -11,61 +11,61 @@ permalink: /parrillas/
       <div class="main-content innermarkdown">
         {{ content | safe }}</div>
 
-            <div class="main-content innermarkdown">
+      <div class="main-content innermarkdown">
 
-   <a class="text-center" href="/parrillas-onepage/"  >  Ver  Parrillas unificadas >      </a>
-   
-   
-             <h2 class="h2">  Parrillas zone</h2>
-   
-   </div>
-        <div class="list-grid masonry-8"> 
-            {% for global in global.templates %}
-            <a class="text-center" href="#{{ global.parrilla }}" name="modal">
-          <div class="text-12-r mb-8">{{ global.parrilla.split('-')[1] }}</div>
-            <img src="/assets/static/parrillas/{{ global.parrilla }}.jpg"> 
-              </a>
-            {% endfor %}
-        </div>
+        <a class="text-center" href="/parrillas-onepage/"  >  Ver  Parrillas unificadas >      </a>
 
+        <h2 class="h2">  Parrillas zone</h2>
 
+      </div>
+      <div class="list-grid masonry-8">
+        {% for global in global.templates %}
+          <a class="text-center" href="#{{ global.parrilla }}" name="modal">
+            <div class="text-12-r mb-8">{{ global.parrilla.split('-')[1] }}</div>
+            <img src="/assets/static/parrillas/{{ global.parrilla }}.jpg">
+          </a>
+        {% endfor %}
+      </div>
 
-            <div class="main-content innermarkdown">
+      <div class="main-content innermarkdown">
 
-              <h2 class="h2">  Sass zone</h2>
-              <p class="p1"> para poner comentarios usaremos el <code>global.json</code> de templates</p>
-      <h5 class="h5">  Leyenda de grids</h5>
-                  <p class="p1"> 
+        <h2 class="h2">  Sass zone</h2>
+        
+        <h5 class="h5">Mixins</h5>
+        {% call insert.sassMixin() %}
+        {% endcall %}
+        <p class="p1 pt-16"> para poner comentarios usaremos el <code>global.json</code> de templates</p>
+        <h5 class="h5">  Leyenda de grids</h5>
+        <p class="p1"> 
                     🔵 Grid con Espacios laterales | 12 col  |  16px gap    <br>
                     🟣  Grid sin Espacios laterales | 12 col  |  16px gap    <br>
                     🟡Grid sin Espacios laterales | 12 col  |  0 gap    <br>
-                    
-                    </p>
 
-                  {% for global in global.templates %}
-                      {% set parts = global.parrilla.split('-') %}
-                      {% set targetPart = parts[1] %}
-                      {% call insert.sass(targetPart,   global.description) %} {% endcall %}
-                  {% endfor %}
-    </div>    </div>
+        </p>
+
+        {% for global in global.templates %}
+          {% set parts = global.parrilla.split('-') %}
+          {% set targetPart = parts[1] %}
+          {% call insert.sass(targetPart, global.description) %}
+          {% endcall %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
 
-
-
-
- {{ content | safe }}</div>
+{{ content | safe }}</div>
 <div id="mask"></div>
 <div id="boxes">
-	{% for global in global.templates %}
-	<div id="{{ global.parrilla }}" class="window pt-24">
-  <div class="modalheader">
-    <button class="size-change" data-size="mobile">Mobile</button>
-    <button class="size-change" data-size="tablet">Tablet</button>
-    <button class="size-change" data-size="desktop">Desktop</button>
-	  <a href="#" class="closemodal">Close it</a>
-  </div>
+{% for global in global.templates %}
+  <div id="{{ global.parrilla }}" class="window pt-24">
+    <div class="modalheader">
+      <button class="size-change" data-size="mobile">Mobile</button>
+      <button class="size-change" data-size="tablet">Tablet</button>
+      <button class="size-change" data-size="desktop">Desktop</button>
+      <a href="#" class="closemodal">Close it</a>
+    </div>
     <iframe id="cover1" class="resizable" style="  width: 100%; height:70vh;" src="/{{ global.parrilla }}" frameborder="0"></iframe>
-	</div>
-	{% endfor %}
+  </div>
+{% endfor %}
 <script src="/assets/js/modal-actions.js"></script>

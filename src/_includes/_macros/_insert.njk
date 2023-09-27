@@ -2037,6 +2037,12 @@
   <pre><code class=" language-css">{{standardcode}}</code></pre>
 </div>
 {% endmacro %}
+{% macro sassMixin() %}
+{% set standardcode %}{% include 'src/assets/sass/abstract/_gridNEW.scss' %}{% endset %}
+<div class="code-zone resize-large">
+  <pre><code class=" language-css">{{standardcode}}</code></pre>
+</div>
+{% endmacro %}
 {% macro bannerActions(bannerClass = '', title = '') %}
 <h3 class="my-16 tit-m">{{title}}</h3>
 <div class="resize-mini">

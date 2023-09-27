@@ -13092,6 +13092,7 @@ header.interior svg path {
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 0 0 6px 6px;
+  max-height: 400px;
 }
 .resize-large pre code {
   border-radius: 0 0 6px 6px;
