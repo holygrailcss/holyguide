@@ -1,12 +1,14 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
+
 .grid-product-wrap--1A {
   display: grid;
   grid-template-columns: 0 1fr 0;
   gap: 0;
-
   @include details-pmobile-0;
+  @include colors-pmobile-0;
+
   @media (min-width: $break-sm) {
     gap: 16px;
     grid-template-columns: 1fr 1fr 1fr;

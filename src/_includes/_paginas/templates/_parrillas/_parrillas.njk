@@ -40,14 +40,11 @@ permalink: /parrillas/
                     🟣  Grid sin Espacios laterales | 12 col  |  16px gap    <br>
                     🟡Grid sin Espacios laterales | 12 col  |  0 gap    <br>
                     
-                     </p>
+                    </p>
 
                   {% for global in global.templates %}
                       {% set parts = global.parrilla.split('-') %}
                       {% set targetPart = parts[1] %}
-           
-
-
                       {% call insert.sass(targetPart,   global.description) %} {% endcall %}
                   {% endfor %}
     </div>    </div>

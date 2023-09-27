@@ -1,1 +1,19 @@
-@import "../abstract/_all.scss";
+@import '../abstract/_all.scss';
+
+$grid-cols--4S: 4;
+$grid-cols-mobile--4S: 2;
+$margin-grid-cols--4S: 60px;
+$margin-grid-cols-mobile--4S: 10px;
+
+.grid-product-wrap--4S {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    @include details-pmobile-0;
+  @include colors-pmobile-0;
+    @media (min-width: $break-sm) {
+        gap: 64px;
+        padding: 0 64px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
