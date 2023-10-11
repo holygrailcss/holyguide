@@ -80,19 +80,44 @@
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
+
+
+
+
 {% macro list(listClass = '', explicacion = '') %}
 <h3 class="my-16 tit-m">{{ listClass }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
-<ul class="{{ listClass  }}">
+
+
+
+{% if listClass == 'list-breadcrumb' %}
+
+<ul class="{{ listClass  }} p-0">
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>   
+
+    <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>  
+
+      </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>       <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>        </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>       <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>        </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
@@ -102,19 +127,79 @@
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>
+    <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>
+  </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>
+    <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>
+  </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
+  <li class="list-breadcrumb-divider"><span>
+    <svg width="16" height="16" viewBox="0 0 16 16">
+    <g stroke-width="1" fill="none" stroke="#212121" >
+      <circle cx="8" cy="8" r="7.5"></circle></g>
+    </svg>
+  </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
 </ul>
 {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
+
+{% else%}
+
+<ul>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+</ul>
+{% set standardcode %}
+<ul class="{{ listClass  }}">
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+<li>
+  <a href="">{{ listClass }}</a>
+</li>
+</ul>
+{% endset %}
+<pre><code class="language-markup">{{standardcode}} </code></pre>
+
+{% endif %}
 {% endmacro %}
+
+
+
+
+
+
 {% macro listButton(listClass = '', explicacion = '') %}
 <h3 class="my-16 tit-m">{{ listClass | capitalize }}</h3>
 <p class="p-xs">{{ explicacion }}</p>
@@ -215,6 +300,13 @@
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
+
+
+
+
+
+
+
 {% macro banner(bannerClass = '', descipcion = '') %}
 <h3 class="my-16 tit-m">{{descipcion}}</h3>
 <p>{{bannerClass}}</p>

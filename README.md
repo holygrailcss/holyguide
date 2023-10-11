@@ -166,3 +166,7 @@ You can also use words, to fit your writing style more closely[^note].
 `npm run component nombreDeLaPaginaComponent`
 `npm run tokencomponent nombreDelcomponent`
 
+
+## Crearemos las fuentes si las necesitamos en el proyecto
+
+@include typesFluids($headersFluids);

@@ -2,6 +2,7 @@
 @import "abstract/_setup.scss";
 $space-left: calc(((100vw - 1280px) / 2));
 $width-left: calc((1280px + (100vw - 1280px) / 2));
+
 @import "../../../node_modules/holygrailcss/scss/style.scss";
 // -FASE 4 : OVERRIDE YOUR HOLYGRAIL
 @import "./prism.scss";
@@ -30,44 +31,8 @@ body {
   color: $primary-color;
   scroll-behavior: smooth;
 }
-p {
-  font-size: inherit;
-}
-strong {
-  color: $primary;
-}
-.bold {
-  @include font-bold;
-}
-b {
-  color: $c-secondary;
-}
-a {
-  &:hover {
-    cursor: pointer;
-  }
-}
-.bg-dark {
-  background-color: $bg-dark;
-  color: $c-bg-dark;
-}
-.bg-light {
-  background-color: $bg-light;
-  color: $c-bg-light;
-}
-.has-light {
-  a {
-    color: white;
-  }
-}
 .header-img {
   position: relative;
-}
-.ttc {
-  text-transform: capitalize;
-}
-.container-full {
-  max-width: 1600px;
 }
 .product-tag {
   font-family: "dutti-daily-bold";
@@ -91,32 +56,12 @@ a {
 ul {
   position: relative;
 }
-.list-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 16px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .masonry {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 16px;
   width: 100%;
   align-items: start;
-}
-.masonry-8 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 16px;
-  width: 100%;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-  img {
-    border: 1px solid #eaeaea;
-  }
 }
 code {
   margin: 0 1px;
@@ -125,10 +70,6 @@ code {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(5, 5, 5, 0.06);
   border-radius: 3px;
-}
-.texto-ellipsis {
-  height: 50px;
-  overflow: hidden;
 }
 .modal-container {
   display: none;
@@ -364,311 +305,73 @@ table tr td {
     flex: 0 0 auto;
   }
 }
-.pe-none {
-  pointer-events: none;
-}
-.checkbox-item-img {
-  text-align: center;
-  position: relative;
-  &.is-error {
-    color: $c-error;
-    [type="checkbox"]:checked + label::before,
-    [type="checkbox"]:not(:checked) + label::before {
-      border: 1px solid $c-error;
-    }
-  }
-  .ico-check {
-    width: 22px;
-    height: 22px;
-    left: 0;
-    top: 0;
-    &::after {
-      position: absolute;
-      content: "";
-      height: 1px;
-      background-color: $c-primary;
-      width: 16px;
-      transform: rotate(136deg);
-      left: 4px;
-      top: 8px;
-    }
-    &::before {
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 1px;
-      top: 10px;
-      transform: rotate(50deg);
-      background-color: $c-primary;
-    }
-  }
-  [type="checkbox"] + label::after,
-  [type="checkbox"] + label::after {
-    width: 80px;
-    height: 80px;
-    content: "";
-  }
-  [type="checkbox"]:not(:checked),
-  [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px;
-  }
-  [type="checkbox"]:not(:checked) + label,
-  [type="checkbox"]:checked + label {
-    padding-bottom: calc(132%);
-    height: 100%;
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    position: relative;
-    padding-left: 40px;
-    cursor: pointer;
-    font-weight: normal;
-    font-size: 12px;
-    text-align: initial;
-    display: flex;
-    span {
-      display: initial;
-      vertical-align: top;
-      margin: 5px 0 0;
-      line-height: 16px;
-      min-height: 20px;
-      padding-left: 0;
-      &::after {
-        content: " ";
-      }
-    }
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 3 / 4;
-      left: 0;
-      border: none;
-      border: 1px solid #a3a0a0;
-      outline: 0;
-      display: inline-block;
-      vertical-align: top;
-      margin: 0 0 0 0;
-    }
-    a {
-      text-decoration: underline;
-      margin-right: 4px;
-    }
-  }
-  .checkbox-item [type="checkbox"]:not(:checked) + label .icon,
-  .checkbox-item [type="checkbox"]:checked + label .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: scale(1) translate(-50%, calc(-50% - 40px));
-    color: $c-primary;
-    transition: all 0.2s;
-  }
-  input[type="checkbox"] {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 4px 0 0;
-    margin-top: 1px \9;
-    line-height: normal;
-  }
-  [type="checkbox"]:checked + label .icon {
-    opacity: 1;
-    transform: scale(1) translate(-50%, calc(-50% - 40px));
-  }
-  .checkbox-item [type="checkbox"]:checked + label .icon {
-    opacity: 1;
-    transform: scale(1) translate(-50%, calc(-50% - 40px));
-  }
-  [type="checkbox"]:checked + label {
-    border: 1px solid $c-primary;
-  }
-  [type="checkbox"]:not(:checked) + label .icon {
-    opacity: 0;
-    transform: scale(0) translate(-50%, calc(-50% - 40px));
-  }
-  [type="checkbox"]:not(:checked) + label {
-    border: 1px solid transparent;
-  }
-  &.color-filter {
-    [type="checkbox"]:not(:checked) + label,
-    [type="checkbox"]:checked + label {
-      padding-left: 32px;
-    }
-    .color-wrap {
-      button {
-        margin-right: 0;
-      }
-    }
-    [type="checkbox"]:not(:checked) + label span,
-    [type="checkbox"]:checked + label span {
-      padding-left: 24px;
-    }
-  }
-  img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .checkbox-item-img-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-  }
-}
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.ttu,
-.btn-primary,
-.btn--full,
-.btn-secondary,
-.form-input-label-2 label {
-  text-transform: uppercase;
-}
-[lang^="de"], //aleman
-[lang^="zh"], //chino
-[lang^="zo"],
-[lang^="eu"],//euskera
-[lang^="el"],//griego
-[lang^="tr"],// turco
-[lang^="ru"], //ruso
-[lang^="sr"], //serbio
-[lang^="uk"], //ukraniano
-[lang^="bg"], //bulgaro
-[lang^="ar"],//arab emirates, egipto ,jordania, israel ,qatar , bahrain ,arabia saudi
-[lang^="nl"] //holandes
-{
-  .ttu,
-  .btn-primary,
-  .btn--full,
-  .btn-secondary,
-  .form-input-label-2 label {
-    text-transform: none;
-  }
-}
-
-.form-prefix{
-
-}
-
 /*cambios genéricos de las parrillas*/
 //TODO HG
 .template-Carrusel {
   .swiper-slide {
-      &:first-child {
-          .card9-contents {
-              padding-left: 16px;
-          }
+    &:first-child {
+      .card9-contents {
+        padding-left: 16px;
       }
+    }
   }
 }
-
 .color-square.color-wrap button {
   width: auto;
   height: 12px;
   margin-right: 4px;
   overflow: hidden;
   &:first-child {
-      width: 8px;
-      height: 8px;
-      margin-top: 2px;
-      @media (min-width: $break-sm) {
-          width: 12px;
-          height: 12px;
-          margin-top: 0;
-      }
+    width: 8px;
+    height: 8px;
+    margin-top: 2px;
+    @media (min-width: $break-sm) {
+      width: 12px;
+      height: 12px;
+      margin-top: 0;
+    }
   }
 }
-
 .card9-contents {
   .product-view-info {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-
-      .tag-wrapper {
-          width: 100%;
-      }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .tag-wrapper {
+      width: 100%;
+    }
   }
 }
-
 .grid-product-list {
   .card9 .card9-wrap-details {
-      min-height: 110px;
-      position: relative;
+    min-height: 110px;
+    position: relative;
   }
-
   .sk-load2::before {
-      padding-top: calc(133.25% + 110px);
+    padding-top: calc(133.25% + 110px);
   }
   .tag-wrapper {
-      display: flex;
-      padding-top: 4px;
-      &:empty {
+    display: flex;
+    padding-top: 4px;
+    &:empty {
       padding: 0;
-      }
-
+    }
   }
-
   .card9 .color-wrap {
-      position: relative;
-      padding: 0;
+    position: relative;
+    padding: 0;
   }
-
   .product-tag {
-      @include font-regular;
-      font-size: 10px;
-      color: $c-dark-grey;
-      letter-spacing: 0;
-      line-height: 1;
+    @include font-regular;
+    font-size: 10px;
+    color: $c-dark-grey;
+    letter-spacing: 0;
+    line-height: 1;
   }
-
-
-  // &.grid-product-list--2DS:nth-child(odd) .card9 .card9-wrap-details,
-  // &.grid-product-list--2SD .card9 .card9-wrap-details,
-  // &.grid-product-list--2FDoble:nth-child(2n - 1) .card9 .card9-wrap-details,
-  // &.grid-product-list--2FV:nth-child(2n - 1) .card9 .card9-wrap-details,
-  // &.grid-product-list--4A:nth-child(4n - 3) .card9 .card9-wrap-details {
-
-  //     padding-right: $separacion-details-mobile;
-
-  //     @media (min-width: $break-sm) {
-  //         padding-right: $separacion-details-desktop;
-  //     }
-
-  // }
-
-  // &.grid-product-list--2C:nth-child(even) .card9 .card9-wrap-details {
-  //     padding-left: 0;
-  //     padding-right:  $separacion-details-mobile;
-
-  //     @media (min-width: $break-sm) {
-  //         padding-right: 0;
-  //     }
-  // }
-
-
-  // &.grid-product-list--1A:last-child .card9 .card9-wrap-details{
-
-  //     padding-right:  $separacion-details-mobile;
-      
-  //     @media (min-width: $break-sm) {
-  //         padding-right: 0;
-  //     }
-  // }
-
-
-
   .card9-wrap .card9-add {
-      left: 4px;
-      right: 4px;
-      bottom: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
   }
 }
+@include typesFluids($headersFluids);

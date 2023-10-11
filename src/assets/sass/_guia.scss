@@ -5,42 +5,47 @@ $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
 
 h1 {
-  @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
+   //    @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
+   font-size: clamp(1.5rem, 0.8112rem + 3.6735vw, 3.75rem);
   width: 100%;
   line-height: 1;
   @include font-bold();
 }
 
 h2 {
-  @include fluid-text($min_width, $break-lg, 20px, 50px, 1);
+   //    @include fluid-text($min_width, $break-lg, 20px, 50px, 1);
+   font-size: clamp(1.25rem, 0.676rem + 3.0612vw, 3.125rem);
   width: 100%;
   line-height: 1;
   @include font-bold();
 }
 
 h3 {
-  @include fluid-text($min_width, $break-lg, 18px, 40px, 1);
+    //   @include fluid-text($min_width, $break-lg, 18px, 40px, 1);
+    font-size: clamp(1.125rem, 0.7041rem + 2.2449vw, 2.5rem);
+
   width: 100%;
   line-height: 1;
   @include font-bold();
 }
 
 h4 {
-  @include fluid-text($min_width, $break-lg, 16px, 30px, 1);
+    //   @include fluid-text($min_width, $break-lg, 16px, 30px, 1);
   width: 100%;
   line-height: 1;
   @include font-bold();
 }
 
 h5 {
-  @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
+   //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
   width: 100%;
   line-height: 1;
   @include font-bold();
 }
 
 h6 {
-  @include fluid-text($min_width, $break-lg, 14px, 16px, 1);
+   //    @include fluid-text($min_width, $break-lg, 14px, 16px, 1);
+   font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
   width: 100%;
   line-height: 1;
   @include font-bold();
@@ -642,7 +647,6 @@ h6 {
 .code-install {
   background-color: #28292d;
   display: inline-block;
-  float: left;
   padding: 16px;
   color: white;
   width: 300px;
