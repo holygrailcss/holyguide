@@ -14244,14 +14244,15 @@ h6 {
 .menu-superior {
   width: 100%;
   padding-right: 20px;
+  padding-left: 20px;
   position: fixed;
+  height: 70px;
   z-index: 100;
   right: 0;
   left: 0;
   top: 0;
   background: #fff;
-  height: 70px;
-  border-bottom: 1px solid #d7d7d7;
+  border-bottom: 1px solid #212121;
 }
 
 .guide-header {
@@ -15273,6 +15274,15 @@ h6 {
 }
 .code-install b {
   color: yellow;
+}
+
+.article-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 65px;
 }
 
 @keyframes fadein {
@@ -19983,6 +19993,10 @@ body {
 
 .header-img {
   position: relative;
+  background-image: url("../../assets/static/holycup.jpg");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .product-tag {

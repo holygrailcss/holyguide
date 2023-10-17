@@ -4,7 +4,7 @@ permalink: /cajas/
 page_section: templates
 titulo: cajas
 descripcion: cajas
-image: /assets/static/images/cajas.jpg
+image: /assets/static/templates/cajas.jpg
 author: autor
 date: 2023-08-29
 tags: ["templates"]

@@ -33,6 +33,10 @@ body {
 }
 .header-img {
   position: relative;
+  background-image:url('../../assets/static/holycup.jpg');
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .product-tag {
   font-family: "dutti-daily-bold";
