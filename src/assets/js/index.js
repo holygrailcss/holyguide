@@ -1,5 +1,3 @@
-
-
 document.body.onscroll = function () {
   if (
     document.body.scrollTop >= 50 ||
@@ -10,26 +8,85 @@ document.body.onscroll = function () {
     document.body.classList.remove("scrolled");
   }
 };
-
-
-
 $(document).ready(function () {
-
-  $(".resize-code").on("click", function () {
-		$(this.parentNode.parentNode.parentNode.parentNode).toggleClass("opencode-button");
-		e.preventDefault();
-	});
-	$(".resize-rules").on("click", function () {
-		console.log("esto no funciona");
-		$(this.parentNode.parentNode).toggleClass("openRules");
-	});
-	$(".btn-anim").click(function () {
-		$(this).toggleClass("is-loading");
-	});
-
   initvideo();
-
-
+  $(".resize-code").on("click", function () {
+    $(this.parentNode.parentNode.parentNode.parentNode).toggleClass(
+      "opencode-button"
+    );
+    e.preventDefault();
+  });
+  $(".resize-rules").on("click", function () {
+    console.log("esto no funciona");
+    $(this.parentNode.parentNode).toggleClass("openRules");
+  });
+  $(".btn-anim").click(function () {
+    $(this).toggleClass("is-loading");
+  });
+  $("#menu-toggle").click(function () {
+    $("body").toggleClass("menu-open");
+  });
+  $(".check-new").on("click", function (e) {
+    console.log("Esto funciona");
+    $(this.parentNode).toggleClass("bg-dark");
+    $(this.parentNode).toggleClass("has-light");
+    e.preventDefault();
+  });
+  // Enseñamos el primero ocultamos el resto
+  $("#tabguide-nav li:first-child").addClass("active");
+  $(".tabguide-content").hide();
+  $(".tabguide-content:first").show();
+  $("#tabguide-nav li").click(function () {
+    $("#tabguide-nav li").removeClass("active");
+    $(this).addClass("active");
+    $(".tabguide-content").hide();
+    var activeTab = $(this).find("a").attr("href");
+    $(activeTab).fadeIn();
+    return false;
+  });
+  $(".opencode-button").click(function () {
+    $(this.parentNode.parentNode).toggleClass("active");
+    return false;
+  });
+  $(".openshoplook").click(function () {
+    $("body").toggleClass("openshop");
+    return false;
+  });
+  $('input[type="checkbox"]').click(function () {
+    if ($(this).is(":checked")) {
+      console.log("Checkbox esta seleccionado.");
+    } else if ($(this).is(":not(:checked)")) {
+      console.log("Checkbox no esta seleccionado.");
+    }
+  });
+  $(".nav-mainbar-close").click(function () {
+    $(".nav-wrap").toggleClass("active");
+  });
+  //Boton que marca en rojo los iconos que no son 16x16
+  $(".check-16").on("click", function () {
+    document.querySelectorAll("svg").forEach((icon) => {
+      if (
+        icon.getBoundingClientRect().width != 16 ||
+        icon.getBoundingClientRect().height != 16
+      ) {
+        icon.querySelectorAll("path").forEach((path) => {
+          path.setAttribute("style", "fill: red;");
+        });
+      }
+    });
+  });
+  $("#menlink").click(function () {
+    $("body").addClass("menopen");
+    $("body").removeClass("womanopen");
+    $("#menlink").addClass("link-active");
+    $("#womanlink").removeClass("link-active");
+  });
+  $("#womanlink").click(function () {
+    $("body").addClass("womanopen");
+    $("body").removeClass("menopen");
+    $("#womanlink").addClass("link-active");
+    $("#menlink").removeClass("link-active");
+  });
   if (document.querySelector(".btncode")) {
     var clipboard = new ClipboardJS(".btncode");
     clipboard.on("success", function (e) {
@@ -39,43 +96,67 @@ $(document).ready(function () {
       e.clearSelection();
     });
   }
-  
-  $(".check-16").on("click", function() {
-    document.querySelectorAll("svg").forEach(icon => {
-      if(icon.getBoundingClientRect().width!=16 || icon.getBoundingClientRect().height!=16) {
-        icon.querySelectorAll("path").forEach(path => {
+  $(".check-16").on("click", function () {
+    document.querySelectorAll("svg").forEach((icon) => {
+      if (
+        icon.getBoundingClientRect().width != 16 ||
+        icon.getBoundingClientRect().height != 16
+      ) {
+        icon.querySelectorAll("path").forEach((path) => {
           path.setAttribute("style", "fill: red;");
         });
       }
     });
   });
-  
-
-
-
-});
-
-
-function rtlChange(){
-  console.log("rtlChange activo");
-
-  let element = document.querySelector("body");
-  let validation = element.classList.contains("is-rtl");
-
-  if(validation == true ){
+  $("a.rtl").on("click", function () {
+    console.log("rtlChange activo");
+    let element = document.querySelector("body");
+    let validation = element.classList.contains("is-rtl");
+    if (validation) {
       element.classList.remove("is-rtl");
       document.querySelector("html").setAttribute("dir", "ltr");
-  } else{
+    } else {
       element.classList.add("is-rtl");
       document.querySelector("html").setAttribute("dir", "rtl");
+    }
+  });
+  $(".over1").on("click", function (e) {
+    $(this.parentNode.parentNode.parentNode.parentNode)
+      .toggleClass("open-over1")
+      .removeClass("open-over2 open-over3");
+    e.preventDefault();
+  });
+  $(".over2").on("click", function (e) {
+    $(this.parentNode.parentNode.parentNode.parentNode)
+      .toggleClass("open-over2")
+      .removeClass("open-over1 open-over3");
+    e.preventDefault();
+  });
+  $(".over3").on("click", function (e) {
+    $(this.parentNode.parentNode.parentNode.parentNode)
+      .toggleClass("open-over3")
+      .removeClass("open-over2 open-over1");
+    e.preventDefault();
+  });
+  $(".to-top").on("click", function () {
+    $(window).scrollTop(0);
+  });
+});
+function rtlChange() {
+  console.log("rtlChange activo");
+  let element = document.querySelector("body");
+  let validation = element.classList.contains("is-rtl");
+  if (validation == true) {
+    element.classList.remove("is-rtl");
+    document.querySelector("html").setAttribute("dir", "ltr");
+  } else {
+    element.classList.add("is-rtl");
+    document.querySelector("html").setAttribute("dir", "rtl");
   }
 }
-
-
 var swiper = new Swiper(".swiper-container", {
   spaceBetween: 15,
   slidesPerView: "1.5",
-
   loop: true,
   // autoHeight: true,
   pagination: {
@@ -115,27 +196,6 @@ var swiper = new Swiper(".swiper-container", {
     },
   },
 });
-
-$("#menu-toggle").click(function () {
-  $("body").toggleClass("menu-open");
-});
-
-
-
-
-$(".check-new").on("click", function (e) {
-  console.log("Esto funciona");
-
-
-  $(this.parentNode).toggleClass("bg-dark");
-  $(this.parentNode).toggleClass("has-light");
-
-
-  e.preventDefault();
-});
-
-
-
 function initvideo() {
   $(".action--play").click(function () {
     $(".video-wrap").addClass("video-wrap--show");
@@ -150,18 +210,14 @@ function initvideo() {
     $(".video-player").get(0).pause();
   });
 }
-
 const body = document.querySelector("body");
-
 // Guardar la posición actual del scroll
 let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
 // Función para manejar el evento de scroll
 const handleScroll = () => {
   // Obtener la nueva posición del scroll
   const newScrollPosition =
     window.pageYOffset || document.documentElement.scrollTop;
-
   // Comparar la posición actual con la nueva posición para determinar la dirección del scroll
   if (newScrollPosition > scrollPosition) {
     // Scroll hacia abajo
@@ -172,22 +228,17 @@ const handleScroll = () => {
     body.classList.remove("scroll-down");
     body.classList.add("scroll-up");
   }
-
   // Actualizar la posición actual del scroll
   scrollPosition = newScrollPosition;
 };
-
 // Agregar el listener al evento de scroll
 window.addEventListener("scroll", handleScroll);
-
 var mySwiper = new Swiper(".swiper-container-img", {
   // If loop true set photoswipe - counterEl: false
   loop: true,
   /* slidesPerView || auto - if you want to set width by css like flickity.js layout - in this case width:80% by CSS */
-
   spaceBetween: 15,
   slidesPerView: "1.5",
-
   loop: true,
   // autoHeight: true,
   pagination: {
@@ -230,7 +281,6 @@ var mySwiper = new Swiper(".swiper-container-img", {
     },
   },
 });
-
 var initPhotoSwipeFromDOM = function (gallerySelector) {
   // parse slide data (url, title, size ...) from DOM elements
   // (children of gallerySelector)
@@ -242,64 +292,49 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       linkEl,
       size,
       item;
-
     for (var i = 0; i < numNodes; i++) {
       figureEl = thumbElements[i]; // <figure> element
-
       // include only element nodes
       if (figureEl.nodeType !== 1) {
         continue;
       }
-
       linkEl = figureEl.children[0]; // <a> element
-
       size = linkEl.getAttribute("data-size").split("x");
-
       // create slide object
       item = {
         src: linkEl.getAttribute("href"),
         w: parseInt(size[0], 10),
         h: parseInt(size[1], 10),
       };
-
       if (figureEl.children.length > 1) {
         // <figcaption> content
         item.title = figureEl.children[1].innerHTML;
       }
-
       if (linkEl.children.length > 0) {
         // <img> thumbnail element, retrieving thumbnail url
         item.msrc = linkEl.children[0].getAttribute("src");
       }
-
       item.el = figureEl; // save link to element for getThumbBoundsFn
       items.push(item);
     }
-
     return items;
   };
-
   // find nearest parent element
   var closest = function closest(el, fn) {
     return el && (fn(el) ? el : closest(el.parentNode, fn));
   };
-
   // triggers when user clicks on thumbnail
   var onThumbnailsClick = function (e) {
     e = e || window.event;
     e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-
     var eTarget = e.target || e.srcElement;
-
     // find root element of slide
     var clickedListItem = closest(eTarget, function (el) {
       return el.tagName && el.tagName.toUpperCase() === "LI";
     });
-
     if (!clickedListItem) {
       return;
     }
-
     // find index of clicked item by looping through all child nodes
     // alternatively, you may define index via data- attribute
     var clickedGallery = clickedListItem.parentNode,
@@ -307,35 +342,29 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       numChildNodes = childNodes.length,
       nodeIndex = 0,
       index;
-
     for (var i = 0; i < numChildNodes; i++) {
       if (childNodes[i].nodeType !== 1) {
         continue;
       }
-
       if (childNodes[i] === clickedListItem) {
         index = nodeIndex;
         break;
       }
       nodeIndex++;
     }
-
     if (index >= 0) {
       // open PhotoSwipe if valid index found
       openPhotoSwipe(index, clickedGallery);
     }
     return false;
   };
-
   // parse picture index and gallery index from URL (#&pid=1&gid=2)
   var photoswipeParseHash = function () {
     var hash = window.location.hash.substring(1),
       params = {};
-
     if (hash.length < 5) {
       return params;
     }
-
     var vars = hash.split("&");
     for (var i = 0; i < vars.length; i++) {
       if (!vars[i]) {
@@ -347,14 +376,11 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       }
       params[pair[0]] = pair[1];
     }
-
     if (params.gid) {
       params.gid = parseInt(params.gid, 10);
     }
-
     return params;
   };
-
   var openPhotoSwipe = function (
     index,
     galleryElement,
@@ -365,15 +391,11 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       gallery,
       options,
       items;
-
     items = parseThumbnailElements(galleryElement);
-
     // define options (if needed)
-
     options = {
       /* "showHideOpacity" uncomment this If dimensions of your small thumbnail don't match dimensions of large image */
       //showHideOpacity:true,
-
       // Buttons/elements
       closeEl: true,
       captionEl: true,
@@ -385,18 +407,15 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       preloaderEl: true,
       // define gallery index (for URL)
       galleryUID: galleryElement.getAttribute("data-pswp-uid"),
-
       getThumbBoundsFn: function (index) {
         // See Options -> getThumbBoundsFn section of documentation for more info
         var thumbnail = items[index].el.getElementsByTagName("img")[0], // find thumbnail
           pageYScroll =
             window.pageYOffset || document.documentElement.scrollTop,
           rect = thumbnail.getBoundingClientRect();
-
         return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
       },
     };
-
     // PhotoSwipe opened from URL
     if (fromURL) {
       if (options.galleryPIDs) {
@@ -415,22 +434,17 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
     } else {
       options.index = parseInt(index, 10);
     }
-
     // exit if index not found
     if (isNaN(options.index)) {
       return;
     }
-
     if (disableAnimation) {
       options.showAnimationDuration = 0;
     }
-
     // Pass data to PhotoSwipe and initialize it
     gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
-
     /* EXTRA CODE (NOT FROM THE CORE) - UPDATE SWIPER POSITION TO THE CURRENT ZOOM_IN IMAGE (BETTER UI) */
-
     // photoswipe event: Gallery unbinds events
     // (triggers before closing animation)
     gallery.listen("unbindEvents", function () {
@@ -440,235 +454,62 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
       mySwiper.slideTo(getCurrentIndex, false);
     });
   };
-
   // loop through all gallery elements and bind events
   var galleryElements = document.querySelectorAll(gallerySelector);
-
   for (var i = 0, l = galleryElements.length; i < l; i++) {
     galleryElements[i].setAttribute("data-pswp-uid", i + 1);
     galleryElements[i].onclick = onThumbnailsClick;
   }
-
   // Parse URL and open gallery if it contains #&pid=3&gid=1
   var hashData = photoswipeParseHash();
   if (hashData.pid && hashData.gid) {
     openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
   }
 };
-
 // execute above function
 initPhotoSwipeFromDOM(".my-gallery");
-
-
-
-
-$("a.rtl").on("click", function() {
-  console.log("rtlChange activo");
-
-  let element = document.querySelector("body");
-  let validation = element.classList.contains("is-rtl");
-
-  if(validation) {
-      element.classList.remove("is-rtl");
-      document.querySelector("html").setAttribute("dir", "ltr");
-  } else {
-      element.classList.add("is-rtl");
-      document.querySelector("html").setAttribute("dir", "rtl");
-  }
-});
-
-
-$(".over1").on("click", function (e) {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over1").removeClass("open-over2 open-over3");
-  e.preventDefault();
-});
-$(".over2").on("click", function (e) {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over2").removeClass("open-over1 open-over3");
-  e.preventDefault();
-});
-$(".over3").on("click", function (e) {
-  $(this.parentNode.parentNode.parentNode.parentNode).toggleClass("open-over3").removeClass("open-over2 open-over1");
-  e.preventDefault();
-});
-
-
-
-
-$(".to-top").on("click", function() {
-  $(window).scrollTop(0);
-});
-
-
-
-//guia v1
-$(document).ready(function () {
-	$(".resize-code").on("click", function () {
-		$(this.parentNode.parentNode.parentNode.parentNode).toggleClass("opencode-button");
-		e.preventDefault();
-	});
-	$(".resize-rules").on("click", function () {
-		console.log("esto no funciona");
-		$(this.parentNode.parentNode).toggleClass("openRules");
-	});
-	$(".btn-anim").click(function () {
-		$(this).toggleClass("is-loading");
-	});
-
-	if (document.querySelector(".btncode")) {
-		var clipboard = new ClipboardJS(".btncode");
-		clipboard.on("success", function (e) {
-			console.info("Action:", e.action);
-			console.info("Text:", e.text);
-			console.info("Trigger:", e.trigger);
-			e.clearSelection();
-		});
-	}
-
-
-	// Enseñamos el primero ocultamos el resto
-	$("#tabguide-nav li:first-child").addClass("active");
-	$(".tabguide-content").hide();
-	$(".tabguide-content:first").show();
-	// Click function
-	$("#tabguide-nav li").click(function () {
-		$("#tabguide-nav li").removeClass("active");
-		$(this).addClass("active");
-		$(".tabguide-content").hide();
-		var activeTab = $(this).find("a").attr("href");
-		$(activeTab).fadeIn();
-		return false;
-	});
-
-	$(".opencode-button").click(function () {
-		$(this.parentNode.parentNode).toggleClass("active");
-
-		return false;
-	});
-
-	$(".openshoplook").click(function () {
-	
-		$("body").toggleClass("openshop");
-		return false;
-	});
-
-
-	$('input[type="checkbox"]').click(function () {
-		if ($(this).is(":checked")) {
-			console.log("Checkbox esta seleccionado.");
-		} else if ($(this).is(":not(:checked)")) {
-			console.log("Checkbox no esta seleccionado.");
-		}
-	});
-
-	$("#tabguide-nav li").click(function () {
-		$("#tabguide-nav li").removeClass("active");
-		$(this).addClass("active");
-		$(".tabguide-content").hide();
-		var activeTab = $(this).find("a").attr("href");
-		$(activeTab).fadeIn();
-		return false;
-	});
-
-	$(".nav-mainbar-close").click(function () {
-		$(".nav-wrap").toggleClass("active");
-
-	
-	});
-
-
-
-	$("#menlink").click(function () {
-		$("body").addClass("menopen");
-		$("body").removeClass("womanopen");
-
-		$("#menlink").addClass("link-active");
-		$("#womanlink").removeClass("link-active");
-	
-	});
-	
-	$("#womanlink").click(function () {
-		$("body").addClass("womanopen");
-		$("body").removeClass("menopen");
-
-		$("#womanlink").addClass("link-active");
-		$("#menlink").removeClass("link-active");
-
-	
-	
-	});
-
-
-
-
-
-});
-
-if(document.querySelector(".md-scroll-wrap")){
-
-	gsap.registerPlugin(ScrollTrigger);
-	ScrollTrigger.saveStyles(".mobile, .desktop");
-	
-	let container = document.querySelector(".md-scroll-wrap");
-	
-	ScrollTrigger.matchMedia({
-		"(min-width: 768px)": function () {
-			gsap.to(".md-scroll-wrap", {
-				x: () =>
-					-(container.scrollWidth - document.documentElement.clientWidth) + "px",
-				ease: "none",
-				scrollTrigger: {
-					trigger: ".md-scroll",
-					invalidateOnRefresh: true,
-					pin: true,
-					scrub: 1,
-					end: () => "+=" + container.offsetWidth,
-				},
-			});
-		},
-	});
-	
-	// Script
-	lastScroll = 0;
-	$(window).on("scroll", function () {
-		var scroll = $(window).scrollTop();
-		if (lastScroll - scroll > 0) {
-			$("body").addClass("scrollUp");
-		} else {
-			$("body").removeClass("scrollUp");
-		}
-		lastScroll = scroll;
-	});
-	
-	
-	
-
+if (document.querySelector(".md-scroll-wrap")) {
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.saveStyles(".mobile, .desktop");
+  let container = document.querySelector(".md-scroll-wrap");
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": function () {
+      gsap.to(".md-scroll-wrap", {
+        x: () =>
+          -(container.scrollWidth - document.documentElement.clientWidth) +
+          "px",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".md-scroll",
+          invalidateOnRefresh: true,
+          pin: true,
+          scrub: 1,
+          end: () => "+=" + container.offsetWidth,
+        },
+      });
+    },
+  });
+  // Script
+  lastScroll = 0;
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+    if (lastScroll - scroll > 0) {
+      $("body").addClass("scrollUp");
+    } else {
+      $("body").removeClass("scrollUp");
+    }
+    lastScroll = scroll;
+  });
 }
-
-//Boton que marca en rojo los iconos que no son 16x16
-$(".check-16").on("click", function() {
-	document.querySelectorAll("svg").forEach(icon => {
-		if(icon.getBoundingClientRect().width!=16 || icon.getBoundingClientRect().height!=16) {
-			icon.querySelectorAll("path").forEach(path => {
-				path.setAttribute("style", "fill: red;");
-			});
-		}
-	});
-});
-
-
-
-
-
 function cerrarDiv(clickedElement) {
   // Buscar el div padre (code-zone) del elemento clicado (code-title)
-  var codeZoneDiv = clickedElement.closest('.code-zone');
-  
+  var codeZoneDiv = clickedElement.closest(".code-zone");
   // Verificar si el div está visible u oculto
-  if (codeZoneDiv.style.height === '30px' || codeZoneDiv.style.height === '') {
+  if (codeZoneDiv.style.height === "30px" || codeZoneDiv.style.height === "") {
     // Si está oculto, mostrarlo ajustando su altura automáticamente
-    codeZoneDiv.style.height = 'auto';
+    codeZoneDiv.style.height = "auto";
   } else {
     // Si está visible, ocultarlo ajustando su altura a 0
-    codeZoneDiv.style.height = '30px';
+    codeZoneDiv.style.height = "30px";
   }
 }
