@@ -5788,6 +5788,18 @@ mark {
   color: #fccbb0;
 }
 
+.c-tier-silver {
+  color: #e3e3e3;
+}
+
+.c-tier-platinum {
+  color: #9dbddc;
+}
+
+.c-tier-gold {
+  color: #e0b279;
+}
+
 .c-limited {
   color: #000;
 }
@@ -5870,6 +5882,18 @@ mark {
 .bg-dark {
   background-color: #000;
   color: #fff;
+}
+
+.bg-tier-silver {
+  background-color: #e3e3e3;
+}
+
+.bg-tier-platinum {
+  background-color: #9dbddc;
+}
+
+.bg-tier-gold {
+  background-color: #e0b279;
 }
 
 .bg-cover {
@@ -10603,7 +10627,7 @@ ul.list-disc li a::after {
 }
 
 ul.list-inline {
-  margin: 0 -4px;
+  margin: 0;
   padding: 0;
 }
 ul.list-inline li {

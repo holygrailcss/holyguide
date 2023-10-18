@@ -226,6 +226,27 @@
       "font": "c-feel-light",
       "bg": "bg-feel-light"
     }
+    ,
+    {
+      "hex": "#e3e3e3",
+      "variable": "c-tier-silver",
+      "font": "c-tier-silver",
+      "bg": "bg-tier-silver"
+    }
+    ,
+    {
+      "hex": "#9dbddc",
+      "variable": "c-tier-platinum",
+      "font": "c-tier-platinum",
+      "bg": "bg-tier-platinum"
+    }
+    ,
+    {
+      "hex": "#e0b279",
+      "variable": "c-tier-gold",
+      "font": "c-tier-gold",
+      "bg": "bg-tier-gold"
+    }
   ],
 
   "tipografias": [
