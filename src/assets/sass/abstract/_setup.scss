@@ -153,6 +153,57 @@ $headersFixers: (
   ),
 );
 
+$headersFluids: (
+
+1: (
+  60px,
+  160px,
+  0.8,
+),
+
+  2: (
+    40px,
+    100px,
+    0.9,
+  ),
+  3: (
+    40px,
+    100px,
+    0.9,
+  ),
+  4: (
+    40px,
+    60px,
+    0.9,
+  ),
+  5: (
+    20px,
+    40px,
+    0.9,
+  ),
+
+  6: (
+    18px,
+    24px,
+    0.9,
+  ),
+
+  7: (
+    18px,
+    24px,
+    0.9,
+  ),
+
+  8: (
+    18px,
+    24px,
+    0.9,
+  ),
+
+) !default;
+
+
+
 $font-family-a-l: "dutti-daily-light", Helvetica, arial, sans-serif;
 $font-family-a-r: "dutti-daily-regular", Helvetica, arial, sans-serif;
 $font-family-a-m: "dutti-daily-medium", Helvetica, arial, sans-serif;
@@ -196,3 +247,17 @@ $c-feel: #fb9962;
 $c-feel-dark: #c94c07;
 $c-special: #b99d6b; //gold
 // fin massimodutti color MD 2022
+
+
+$pt: 'padding-top';
+$padding-top: (
+
+   ptr-120: ( 64px, 64px, 120px, 120px, ),
+) !default;
+
+$pb: 'padding-bottom';
+$padding-bottom: (
+
+   pbr-120: ( 64px, 64px, 120px, 120px, ),
+   
+   ) !default;
