@@ -18,6 +18,12 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./theme.scss";
 @import "parrillas/_all.scss";
 @import "template/_all.scss";
+
+
+
+@import "./newweb.scss";
+
+
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
