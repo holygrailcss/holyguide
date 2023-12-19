@@ -261,3 +261,17 @@ $padding-bottom: (
    pbr-120: ( 64px, 64px, 120px, 120px, ),
    
    ) !default;
+
+
+   $pl: 'padding-left';
+   $padding-left: (
+
+   pl-body: ( 16px, 16px, 40px, 40px, ),
+   
+   ) ;
+   $pr: 'padding-right';
+   $padding-right: (
+
+   pr-body: ( 16px, 16px, 40px, 40px, ),
+   
+   ) ;
