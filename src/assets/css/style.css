@@ -18718,9 +18718,6 @@ ul.list-clear li {
     margin-right: 40px;
   }
 }
-.list-slide .btn {
-  padding: 24px 0;
-}
 
 .search-height {
   min-height: 16px;
@@ -18748,10 +18745,6 @@ ul.list-clear li {
   }
 }
 
-.search-grid {
-  padding-top: 450px;
-}
-
 .search-close {
   position: fixed;
   z-index: 1000;
@@ -18765,6 +18758,12 @@ ul.list-clear li {
   background-color: rgba(255, 255, 255, 0.9215686275);
   transition: all 0.3s ease;
 }
+.search-content .btn {
+  padding: inherit;
+}
+.search-content .btn {
+  padding: 24px 0;
+}
 
 .scroll-down .search-content {
   top: -480px;
@@ -18772,6 +18771,15 @@ ul.list-clear li {
 
 .scroll-down .search-grid {
   padding-top: 16px;
+}
+
+.search-space {
+  height: 440px;
+  transition: all 0.3s ease;
+}
+
+.scroll-down .search-space {
+  height: 0;
 }
 
 body {

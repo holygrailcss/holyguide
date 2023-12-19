@@ -33,6 +33,8 @@ ul.list-clear li {
     padding: 40px;
   }
 }
+
+
 .list-slide {
   list-style: none;
   display: inline-flex;
@@ -42,10 +44,11 @@ ul.list-clear li {
       margin-right: 40px;
     }
   }
-  .btn {
-    padding: 24px 0 ;
-  }
+
 }
+
+
+
 .search-height {
   min-height: 16px;
   @media (min-width: $break-sm) {
@@ -68,9 +71,7 @@ ul.list-clear li {
     }
   }
 }
-.search-grid{
-  padding-top: 450px;
-}
+
 
 .search-close{
   position: fixed;
@@ -84,6 +85,13 @@ ul.list-clear li {
   z-index: 500;
   background-color: #ffffffeb;
   transition: all .3s ease;
+  .btn{
+    padding:inherit;
+  }
+
+  .btn {
+    padding: 24px 0 ;
+  }
 }
 
 .scroll-down .search-content{
@@ -96,4 +104,15 @@ ul.list-clear li {
 }
 
 
+.search-space{
+  height: 440px;
+  transition: all .3s ease;
+}
 
+
+.scroll-down {
+  .search-space{
+    height: 0;
+
+  }
+}
