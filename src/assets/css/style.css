@@ -18700,7 +18700,7 @@ ul.list-clear li {
   border-left: 0;
   border-top: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .input-search {
     padding: 40px;
   }

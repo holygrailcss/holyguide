@@ -29,7 +29,7 @@ ul.list-clear li {
     border-top: 0;
   }
   padding: 16px;
-  @media (min-width: $break-sm) {
+  @media (min-width: $break-md) {
     padding: 40px;
   }
 }
@@ -52,6 +52,8 @@ ul.list-clear li {
     min-height: 150px;
   }
 }
+
+
 .search-zone {
   position: relative;
   .search-zone-delete {
