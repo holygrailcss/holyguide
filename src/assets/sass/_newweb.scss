@@ -10,21 +10,19 @@ ul.list-clear li {
   grid-template-rows: auto;
   grid-column-gap: 1px;
   transition: all .3s ease;
-
-
   @media (min-width: $break-sm) {
     grid-template-columns: repeat(4, 1fr);
   }
-
-
   @media (min-width: $break-md) {
     grid-template-columns: repeat(6, 1fr);
   }
-
   div {
     padding-bottom: 1px;
   }
 }
+
+
+
 .input-search {
   border-right: 0;
   border-left: 0;
@@ -41,8 +39,6 @@ ul.list-clear li {
     padding: 40px;
   }
 }
-
-
 .list-slide {
   list-style: none;
   display: inline-flex;
@@ -52,19 +48,13 @@ ul.list-clear li {
       margin-right: 40px;
     }
   }
-
 }
-
-
-
 .search-height {
   min-height: 16px;
   @media (min-width: $break-sm) {
     min-height: 150px;
   }
 }
-
-
 .search-zone {
   position: relative;
   .search-zone-delete {
@@ -79,37 +69,12 @@ ul.list-clear li {
     }
   }
 }
-
-
-.search-close{
+.search-close {
   position: fixed;
   z-index: 1000;
 }
 
-.search-content{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 500;
-  background-color: #ffffffeb;
-  transition: all .3s ease;
-
-  @media (min-width: $break-sm) {
-    height: 480px;
-  }
-  .btn{
-    padding:inherit;
-  }
-
-  .btn {
-    padding: 24px 0 ;
-  }
-}
-
-
-
-
-.search-space{
+.search-space {
   height: 340px;
   transition: all .3s ease;
   @media (min-width: $break-sm) {
@@ -120,37 +85,59 @@ ul.list-clear li {
 
 
 
-.is-search{
-  .search-content{
 
-      top: -480px;
-
+.scroll-up.is-search {
+  .search-content {
+    top: 0;
   }
-
 }
-
-
-
-.scroll-up.is-search{
-
-
-
-
-
-  .search-content{
-
-      top: 0;
-
-  }
-
+.search-results {
+  position: absolute;
 }
-.search-results{
-  position:absolute;
-}
-
-.search-wrap{
+.search-wrap {
   position: fixed;
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+.btn-icon {}
+.text-none {
+  list-style: none;
+}
+
+
+
+.search-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+  background-color: #ffffffeb;
+  transition: transform .3s ease;
+
+  @media (min-width: $break-sm) {
+    height: 480px;
+  }
+  .btn {
+    padding: inherit;
+  }
+  .btn {
+    padding: 24px 0;
+  }
+}
+
+.is-search {
+  .search-content {
+    position: fixed;
+    top: -480px;
+
+  }
+
+
+&.scroll-down-search{
+
+
+}
+
 }

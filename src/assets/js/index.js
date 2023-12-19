@@ -10,19 +10,6 @@ document.body.onscroll = function () {
 };
 
 
-document.getElementById('searchcomponent').onscroll = function() {
-  var el = document.getElementById('searchcomponent');
-
-  console.log("dpsoijdsoifj")
-
-  if (el.scrollTop >= 300) {
-    console.log(el.scrollTop)
-    document.body.classList.add("is-search");
-  } else {
-    console.log(el.scrollTop)
-    document.body.classList.remove("is-search");
-  }
-};
 
 
 
@@ -557,7 +544,20 @@ div.onscroll = function() {
 body.classList.add("scroll-up-search");
   }
 
+
+
+  if (div.scrollTop >= 300) {
+    console.log(div.scrollTop)
+    document.body.classList.add("is-search");
+  } else {
+    console.log(div.scrollTop)
+    document.body.classList.remove("is-search");
+  }
+
+
   // Actualiza la última posición de desplazamiento para la próxima vez
   lastScrollTop = currentScrollTop;
 };
+
+
 
