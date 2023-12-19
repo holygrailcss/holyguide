@@ -561,3 +561,17 @@ body.classList.add("scroll-up-search");
 
 
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const buttons = document.querySelectorAll('.list-slide .btn');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', function() {
+          // Remover la clase is-active de todos los botones
+          buttons.forEach(btn => btn.classList.remove('is-active'));
+
+          // Agregar la clase is-active al botón clickeado
+          this.classList.add('is-active');
+      });
+  });
+});
