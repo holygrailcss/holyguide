@@ -6,13 +6,21 @@ ul.list-clear li {
 }
 .search-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-column-gap: 1px;
   transition: all .3s ease;
+
+
   @media (min-width: $break-sm) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+  @media (min-width: $break-md) {
     grid-template-columns: repeat(6, 1fr);
   }
+
   div {
     padding-bottom: 1px;
   }
@@ -79,12 +87,16 @@ ul.list-clear li {
 }
 
 .search-content{
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 500;
   background-color: #ffffffeb;
   transition: all .3s ease;
+
+  @media (min-width: $break-sm) {
+    height: 480px;
+  }
   .btn{
     padding:inherit;
   }
@@ -94,25 +106,51 @@ ul.list-clear li {
   }
 }
 
-.scroll-down .search-content{
-  top: -480px;
 
-}
-
-.scroll-down  .search-grid{
-  padding-top: 16px;
-}
 
 
 .search-space{
-  height: 440px;
+  height: 340px;
   transition: all .3s ease;
+  @media (min-width: $break-sm) {
+    height: 480px;
+  }
 }
 
 
-.scroll-down {
-  .search-space{
-    height: 0;
+
+
+.is-search{
+  .search-content{
+
+      top: -480px;
 
   }
+
+}
+
+
+
+.scroll-up.is-search{
+
+
+
+
+
+  .search-content{
+
+      top: 0;
+
+  }
+
+}
+.search-results{
+  position:absolute;
+}
+
+.search-wrap{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
 }

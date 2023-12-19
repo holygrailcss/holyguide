@@ -8,6 +8,26 @@ document.body.onscroll = function () {
     document.body.classList.remove("scrolled");
   }
 };
+
+
+document.getElementById('searchcomponent').onscroll = function() {
+  var el = document.getElementById('searchcomponent');
+
+  console.log("dpsoijdsoifj")
+
+  if (el.scrollTop >= 300) {
+    console.log(el.scrollTop)
+    document.body.classList.add("is-search");
+  } else {
+    console.log(el.scrollTop)
+    document.body.classList.remove("is-search");
+  }
+};
+
+
+
+
+
 $(document).ready(function () {
   initvideo();
   $(".resize-code").on("click", function () {
@@ -513,3 +533,31 @@ function cerrarDiv(clickedElement) {
     codeZoneDiv.style.height = "30px";
   }
 }
+
+
+
+
+var lastScrollTop = 0; // Variable para almacenar la última posición de desplazamiento
+var div = document.getElementById('searchcomponent');
+
+div.onscroll = function() {
+  var currentScrollTop = div.scrollTop;
+
+  if (currentScrollTop > lastScrollTop) {
+    // Desplazamiento hacia abajo
+
+
+    body.classList.remove("scroll-up-search");
+    body.classList.add("scroll-down-search");
+
+
+  } else if (currentScrollTop < lastScrollTop) {
+
+    body.classList.remove("scroll-down-search");
+body.classList.add("scroll-up-search");
+  }
+
+  // Actualiza la última posición de desplazamiento para la próxima vez
+  lastScrollTop = currentScrollTop;
+};
+
