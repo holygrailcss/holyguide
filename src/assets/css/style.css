@@ -18415,6 +18415,9 @@ h6 {
   position: absolute;
   bottom: 14px;
 }
+.list-slide .is-active.btn {
+  font-family: "dutti-daily-semibold";
+}
 
 .btn:focus, .btn.focus, .btn:hover, .btn.hover, .btn:visited, .btn:active, .btn.active {
   text-decoration: none;

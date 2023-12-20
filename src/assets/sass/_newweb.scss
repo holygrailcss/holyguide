@@ -1,6 +1,17 @@
 @import "./abstract/_all.scss";
 @import "./abstract/_gridNEW.scss";
 
+:root {
+  --line-width: 1px;
+  /* --zds-line-width-negative:-1px; */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min-resolution:2dppx) {
+  :root {
+      --line-width:0.5px;
+      --line-width-negative: -0.5px;
+  }
+}
 
 
 .search-wrap{
@@ -174,6 +185,11 @@
     bottom: 14px;
 
 
+  }
+  .is-active{
+    &.btn{
+      font-family: "dutti-daily-semibold";
+    }
   }
 
 
