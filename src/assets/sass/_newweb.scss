@@ -203,3 +203,14 @@
   outline: none;
   cursor: pointer;
 }
+
+$container-limit:1440px;
+.container-limit {
+  padding-right: $padding-global;
+  padding-left: $padding-global;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: 90%;
+  max-width: $container-limit;
+}
