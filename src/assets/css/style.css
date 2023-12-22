@@ -11475,7 +11475,7 @@ header.interior svg path {
 .search-wrap .search-zone .search-zone-delete {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
 }
 .is-rtl .search-wrap .search-zone .search-zone-delete {
   left: 0;
@@ -11493,14 +11493,12 @@ header.interior svg path {
   border-right: 0;
   border-left: 0;
   border-top: 0;
+  border-bottom: var(--line-width) solid #292929;
   padding: 16px;
 }
 .search-wrap .input-search:focus {
   outline: none;
-  border-bottom: 1px solid #292929;
-  border-right: 0;
-  border-left: 0;
-  border-top: 0;
+  border-bottom: var(--line-width) solid #000000;
 }
 @media (min-width: 992px) {
   .search-wrap .input-search {
@@ -11526,9 +11524,6 @@ header.interior svg path {
 }
 .search-wrap .search-grid div {
   padding-bottom: 1px;
-}
-.search-wrap .search-results {
-  position: absolute;
 }
 
 .list-slide {
@@ -11583,6 +11578,21 @@ header.interior svg path {
 .search-close {
   position: fixed;
   z-index: 1000;
+}
+
+.search-zone-results {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 400px;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .search-zone-results {
+    padding: 30px 40px;
+  }
 }
 
 .menu-mobile {
