@@ -1,7 +1,7 @@
 document.body.onscroll = function () {
   if (
-    document.body.scrollTop >= 50 ||
-    document.documentElement.scrollTop >= 50
+    document.body.scrollTop >= 150 ||
+    document.documentElement.scrollTop >= 150
   ) {
     document.body.classList.add("scrolled");
   } else {
