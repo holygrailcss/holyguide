@@ -1,20 +1,22 @@
 @import "./abstract/_all.scss";
 @import "./abstract/_gridNEW.scss";
 
+
+
 :root {
   --line-width: 1px;
   /* --zds-line-width-negative:-1px; */
 }
-
-@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min-resolution:2dppx) {
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution:2dppx) {
   :root {
-      --line-width:0.5px;
-      --line-width-negative: -0.5px;
+    --line-width: 0.5px;
+    --line-width-negative: -0.5px;
   }
-}
+} 
 
 
-.search-wrap{
+.search-wrap {
   .search-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -47,16 +49,7 @@
       padding: 40px;
     }
   }
-
-
-
 }
-
-
-
-
-
-
 .list-slide {
   list-style: none;
   display: grid;
@@ -64,10 +57,9 @@
   grid-auto-flow: column;
   grid-column-gap: 16px;
   overflow: auto;
-    @media (min-width: $break-sm) {
-      grid-column-gap: 24px;
-    }
-
+  @media (min-width: $break-sm) {
+    grid-column-gap: 24px;
+  }
 }
 .search-height {
   min-height: 16px;
@@ -81,14 +73,10 @@
     position: absolute;
     right: 0;
     bottom: 0;
-
-
-.is-rtl &{
-  left: 0;
-  right: inherit;
-
-}
-
+    .is-rtl & {
+      left: 0;
+      right: inherit;
+    }
     .btn {
       padding: 16px 16px;
       @media (min-width: $break-md) {
@@ -101,7 +89,6 @@
   position: fixed;
   z-index: 1000;
 }
-
 .search-space {
   height: 340px;
   transition: all .3s ease;
@@ -109,12 +96,7 @@
     height: 480px;
   }
 }
-
-
-
-
-
-.scroll-up.is-search {
+.scroll-up-search.is-search {
   .search-content {
     top: 0;
   }
@@ -133,21 +115,21 @@
 .text-none {
   list-style: none;
 }
-
-
-
 .search-content {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 500;
+
+  transition: all .3s ease;
+&:hover{
   background-color: #ffffffeb;
-  transition: transform .3s ease;
+}
+
 
   @media (min-width: $break-sm) {
     height: 480px;
   }
-
   .btn {
     padding: inherit;
     padding: 16px 0;
@@ -156,26 +138,16 @@
     }
   }
 }
-
 .is-search {
   .search-content {
     position: fixed;
     top: -480px;
-
   }
-
-
-&.scroll-down-search{
-
-
+  &.scroll-down-search {}
 }
-
-}
-
-
 .list-slide {
   position: relative;
-  .is-active::after{
+  .is-active::after {
     position: absolute;
     content: '';
     width: 8px;
@@ -183,28 +155,26 @@
     background-color: $bg-black;
     position: absolute;
     bottom: 14px;
-
-
   }
-  .is-active{
-    &.btn{
+  .is-active {
+    &.btn {
       font-family: "dutti-daily-semibold";
     }
   }
-
-
 }
-
-
-
-.btn:focus, .btn.focus, .btn:hover, .btn.hover, .btn:visited, .btn:active, .btn.active {
+.btn:focus,
+.btn.focus,
+.btn:hover,
+.btn.hover,
+.btn:visited,
+.btn:active,
+.btn.active {
   text-decoration: none;
   opacity: 1;
   outline: none;
   cursor: pointer;
 }
-
-$container-limit:1440px;
+$container-limit: 1440px;
 .container-limit {
   padding-right: $padding-global;
   padding-left: $padding-global;
