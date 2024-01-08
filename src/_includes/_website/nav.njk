@@ -29,7 +29,7 @@
       <a target="_parent" href="/foundations">
         <h6> Foundations </h6>
       </a>
-      <ul class="list-clear mb-32">
+      <ul class="list-clear p-m-b mb-32 mt-8">
         <div class="body">
            {% for template in collections.foundations | reverse %}
               {% include 'nav-loop.njk' %}
@@ -51,11 +51,15 @@
       {% endif %}
       {% if page_section == "templates" %}
         <ul class="list-clear p-m-b mb-32 mt-8">
-          <li class="{% if page_title == 'templates' %} link-line {% endif %}">
+
+
+          <li class="mb-8 {% if page_title == 'templates' %} link-line {% endif %}">
             <a  target="_parent" href="/templates">
               <h6> Templates </h6>
             </a>
           </li>
+
+
           {% for template in collections.templates  %}
               {% include 'nav-loop.njk' %}
             {% endfor %}
