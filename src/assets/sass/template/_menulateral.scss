@@ -1,3 +1,4 @@
+$w-plus: 10px;
 .mn-wrap {
   width: 100%;
   max-width: 100%;
@@ -10,91 +11,100 @@
     max-width: 400px;
     padding-bottom: 0;
   }
-}
-
-.mn-mainbar{
-
-
-
-  .tabs ul {
-
-    justify-content: center;
-    align-items: center;
-
-    &.mn-list-item li:first-child a, 
-  
-    &.mn-list-item li:first-child span {
-       padding: 8px 20px 8px 20px;
-   }
-
-
-    @media (min-width: 768px) {
-      justify-content: flex-start;
-      &.mn-list-item li:first-child a, 
-  
- &.mn-list-item li:first-child span {
-    padding: 8px 20px 8px 0px;
-}
-
-    }
-
-
-
-}
-}
-
-
-.mn-list-item {
-  display: flex;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 80px;
-  padding-right: 80px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.list-check {
-  li a {
-    position: relative;
-    list-style: none;
-    line-height: 1;
-  }
-  li.is-active {
-    a {
-      &::before {
-        content: '';
-        position: absolute;
-        top: calc(50% - 2px);
-        margin-left: -10px;
-        transform: translateY(-50%);
-        width: 4px;
-        height: 4px;
-        background-color: #000;
+  .mn-mainbar {
+    .tabs ul {
+      justify-content: center;
+      align-items: center;
+      &.mn-list-item li:first-child a,
+      &.mn-list-item li:first-child span {
+        padding: 8px 20px 8px 20px;
       }
-    }
-  }
-  .has-light & {
-    li.is-active {
-      a {
-        &::before {
-          content: '';
-          background-color: #fff;
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+        &.mn-list-item li:first-child a,
+        &.mn-list-item li:first-child span {
+          padding: 8px 20px 8px 0px;
         }
       }
     }
   }
+  .mn-list-item {
+    display: flex;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .list-check {
+    li a {
+      position: relative;
+      list-style: none;
+      line-height: 1;
+    }
+    li.is-active {
+      a {
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(50% - 2px);
+          margin-left: -10px;
+          transform: translateY(-50%);
+          width: 4px;
+          height: 4px;
+          background-color: #000;
+        }
+      }
+    }
+    .has-light & {
+      li.is-active {
+        a {
+          &::before {
+            content: '';
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .mn-wrap-overlay {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  .tabs {
+    ul.mn-list-item {
+      li:first-child {
+        a,
+        span {
+          padding: 8px 20px 8px 0;
+        }
+      }
+    }
+  }
+
+  .mn-footer {
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+    bottom: 0;
+    background-color: white;
+  }
+  .mn-search-zone {
+    display: grid;
+  }
+  .mn-mainbar-cesta {
+    padding: 10px;
+    text-align: right;
+  }
 }
-.mn-wrap-overlay {
-  position: fixed;
-  background-color: #000;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-}
+
 .min-overflow {
   overflow: auto;
   &::-webkit-scrollbar {
@@ -116,18 +126,6 @@
     background: #999;
   }
 }
-.tabs {
-  ul.mn-list-item {
-    li:first-child {
-      a,
-      span {
-        padding: 8px 20px 8px 0;
-      }
-    }
-  }
-}
-$w-plus: 10px;
-
 
 .icon-plus {
   position: relative;
@@ -165,16 +163,13 @@ $w-plus: 10px;
     }
   }
 }
-
-.icon-close{
+.icon-close {
   position: absolute;
   top: 30px;
   left: 20px;
-
   @media (min-width: 768px) {
     left: 32px;
   }
-
   &:after,
   &:before {
     width: 11px;
@@ -186,26 +181,6 @@ $w-plus: 10px;
     transform: rotate(45deg);
   }
   &:before {
-
     transform: rotate(-45deg);
   }
-
-
-}
-
-.mn-footer{
-  position: fixed;
-  width: 100%;
-  z-index: 3000;
-  bottom: 0;
-  background-color: white;
-}
-
-.mn-search-zone{
-  display: grid;
-}
-
-.mn-mainbar-cesta{
-  padding: 10px;
-  text-align: right;
 }
