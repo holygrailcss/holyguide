@@ -286,7 +286,7 @@ code {
 .guide-inspect {
   position: fixed;
   bottom: 0;
-  z-index: 10;
+  z-index: 10000;
   .is-rtl & {
     left: 0;
   }

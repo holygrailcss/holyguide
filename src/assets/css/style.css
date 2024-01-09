@@ -10690,6 +10690,16 @@ div.card9-wrap .rat-content:hover .card9-add {
   text-align: right;
 }
 
+.is-rtl .mn-mainmenu .list-check li.is-active a::before {
+  margin-right: -8px;
+}
+@media (min-width: 768px) {
+  .is-rtl .mn-mainmenu .mn-mainbar .tabs ul.mn-list-item li:first-child a,
+  .is-rtl .mn-mainmenu .mn-mainbar .tabs ul.mn-list-item li:first-child span {
+    padding: 8px 0px 8px 20px;
+  }
+}
+
 .is-rtl .fl-left {
   float: right;
 }
@@ -18917,7 +18927,7 @@ code {
 .guide-inspect {
   position: fixed;
   bottom: 0;
-  z-index: 10;
+  z-index: 10000;
 }
 .is-rtl .guide-inspect {
   left: 0;
