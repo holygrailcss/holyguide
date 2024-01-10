@@ -1,0 +1,17 @@
+@import "../abstract/_all.scss";
+@import "../abstract/_gridNEW.scss";
+.n1c {
+  .n1c-wrap {
+    margin: 0 ;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+
+    
+  }
+  .n1c-item {
+    grid-column: 1 / span 12;
+    
+
+  }
+}

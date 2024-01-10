@@ -347,6 +347,8 @@
     { "size": "btn--small" },
     { "size": "btn--medium" },
     { "size": "btn--large" },
-    { "size": "btn--full" }
+    { "size": "btn--full" },
+    { "size": "btn--xxl" },
+    { "size": "btn--search" }
   ]
 }

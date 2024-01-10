@@ -1,0 +1,18 @@
+{% include 'base-parrillas.njk' %} 
+
+{% import "_macros/_product.njk" as product %}
+
+
+
+
+<li class="grid-product grid-product-view n1c">
+  <div class="template-name" id="n1c">n1c</div>
+  
+  <studio-single-product-template>
+    <ul class="n1c-wrap">
+      <li class="n1c-item sk-load5">
+        {% call product.ratio('3-2') %} {% endcall %}
+      </li>
+    </ul>
+  </studio-single-product-template>
+</li>

@@ -81,10 +81,20 @@
   z-index: 1000;
   pointer-events: none;
   display: none;
-  gap: 16px;
+  gap: 20px;
   opacity: 0.1;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 16px;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  @media (min-width: $break-md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @media (min-width: $break-xl) {
+
+    grid-template-columns: repeat(24, 1fr);
+  }
+
   @include space-0-pdesktop;
 
   .overlayclip {
@@ -244,3 +254,40 @@
     height: 5px;
   }
 }
+
+.overlay{
+
+
+div:nth-of-type(n+7) {
+    display: none;
+ 
+}
+
+  @media (min-width: $break-md) {
+
+
+    div:nth-of-type(n+7) {
+      display: block;
+   
+  }
+
+    div:nth-of-type(n+13) {
+      display: none;
+  }
+
+  }
+
+  @media (min-width: $break-xl) {
+
+
+
+
+    div:nth-of-type(n+12) {
+      display: block;
+  }
+
+
+
+
+
+  }}
