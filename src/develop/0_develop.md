@@ -98,7 +98,7 @@ $padding-button:8px;
 $padding-btn:16px;
 $height-inputs:48px;
 $btn-radius:8px;
-$c-primary:#292929;
+$c-primary:#000000;
 
 
 $container-full:800px;

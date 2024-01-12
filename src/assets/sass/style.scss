@@ -392,3 +392,17 @@ table tr td {
 @include space($breakpoints, $padding-left, $pl);
 @include space($breakpoints, $padding-bottom, $pb);
 @include space($breakpoints, $padding-right, $pr); 
+
+
+.img-cover{
+  overflow: hidden;
+  object-fit: cover;
+  max-width: initial;
+  width: 100%;
+  height: 100%;
+  background-position: top;
+
+img{
+  max-width: initial;
+}
+}

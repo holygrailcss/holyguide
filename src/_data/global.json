@@ -31,12 +31,12 @@
   "ciudad": " barcelona",
   "provincia": "Barcelona",
   "actividad": " Estructuras modulares",
-  "c_primary": "#292929",
-  "c_secondary": "#292929",
+  "c_primary": "#000000",
+  "c_secondary": "#000000",
   "bg_dark": "#161616",
   "c_bg_dark": "#f7f6f5",
   "bg_light": "#efefef",
-  "c_bg_light": "#292929",
+  "c_bg_light": "#000000",
   "btn_radius": "0",
   "seo_title": "seo_title",
   "seo_description": " seo_description",
@@ -133,7 +133,7 @@
   ],
   "coloresPrimarios": [
     {
-      "hex": "#292929",
+      "hex": "#000000",
       "variable": "c-primary",
       "font": "c-primary",
       "bg": ".bg-primary"
