@@ -1,28 +1,23 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
-.n1a {
-  .n1a-wrap {
-    margin: 0 ;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
-    @media (min-width: $break-md) {
-      margin: 0 40px;
-      gap: 16px;
-      grid-template-columns: repeat(12, 1fr);
-    }
-    @media (min-width: $break-xl) {
-      gap: 16px;
-      grid-template-columns: repeat(24, 1fr);
-    }
+
+
+.n2b {
+  .n2b-wrap {
+    @include m-body;
+    display: flex;
+    justify-content: center;
   }
-  .n1a-item {
-    grid-column: 1 / span 12;
+  .n2b-item {
+    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+    @include col-24-12;
+    padding-left: 10px;
+    padding-right: 10px;
     @media (min-width: $break-md) {
-      grid-column: 3 / span 8;
+      @include col-24-12;
     }
     @media (min-width: $break-xl) {
-      grid-column: 7 / span 12;
+      @include col-24-8;
     }
   }
 }

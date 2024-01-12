@@ -1,0 +1,26 @@
+{% include 'base-parrillas.njk' %} 
+
+{% import "_macros/_product.njk" as product %}
+
+
+
+
+<li class="grid-product grid-product-view-new  n4e">
+  <div class="template-name" id="n4e">n4e</div>
+  <studio-single-product-template>
+    <ul class="n4e-wrap">
+      <li class="n4e-item sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="n4e-item sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="n4e-item sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+      <li class="n4e-item sk-load2">
+        {% call product.ratio('3-4') %} {% endcall %}
+      </li>
+    </ul>
+  </studio-single-product-template>
+</li>
