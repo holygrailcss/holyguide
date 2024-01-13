@@ -407,3 +407,19 @@
     }
   }
 }
+
+@mixin sp-contents-20-first-20 {
+  li  .card9-contents {
+    padding-left: 20px;
+    @media (min-width: $break-sm) {
+      padding-left: 0px;
+    }
+  }
+
+  li:first-child .card9-contents {
+    padding-left: 20px;
+  }
+
+
+
+}

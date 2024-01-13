@@ -18761,7 +18761,7 @@ h6 {
 }
 @media (min-width: 768px) {
   .n1a .n1a-wrap li:first-child .card9-contents {
-    padding-left: 20px;
+    padding-left: 0px;
   }
 }
 @media (min-width: 768px) {
@@ -19298,13 +19298,16 @@ h6 {
   justify-content: center;
   flex-direction: column;
 }
-.n2a .n2a-wrap li:first-child .card9-contents {
+.n2a .n2a-wrap li .card9-contents {
   padding-left: 20px;
 }
 @media (min-width: 768px) {
-  .n2a .n2a-wrap li:first-child .card9-contents {
-    padding-left: 20px;
+  .n2a .n2a-wrap li .card9-contents {
+    padding-left: 0px;
   }
+}
+.n2a .n2a-wrap li:first-child .card9-contents {
+  padding-left: 20px;
 }
 @media (min-width: 768px) {
   .n2a .n2a-wrap {

@@ -400,10 +400,13 @@
   }
 }
 @mixin sp-contents-first-20-20 {
-  li:first-child .card9-contents {
+  li .card9-contents {
     padding-left: 20px;
     @media (min-width: $break-sm) {
       padding-left: 20px;
     }
   }
 }
+
+
+
