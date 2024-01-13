@@ -6,6 +6,7 @@
   .n6b-wrap {
     @include m-body-0;
     @include gap-1;
+    @include sp-contents-2n-1-0;
 
 
     grid-template-columns: repeat(2, 1fr);

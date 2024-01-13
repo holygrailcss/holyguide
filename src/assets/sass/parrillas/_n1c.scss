@@ -4,6 +4,7 @@
   .n1c-wrap {
     @include m-body-0;
     @include gap-1;
+    @include sp-contents-first-20-20;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 16px;

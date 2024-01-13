@@ -2,27 +2,38 @@
 @import "../abstract/_gridNEW.scss";
 .n2a {
   .n2a-wrap {
-    margin: 0 ;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
-    @media (min-width: $break-md) {
-      margin: 0 40px;
-      gap: 16px;
-      grid-template-columns: repeat(12, 1fr);
+    @include m-body-0;
+    @include sp-contents-first-20-20;
+
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: $break-sm) {
+      flex-direction: row;
+
     }
     @media (min-width: $break-xl) {
-      gap: 16px;
-      grid-template-columns: repeat(24, 1fr);
+
     }
+
+
+
   }
   .n2a-item {
-    grid-column: 1 / span 12;
-    @media (min-width: $break-md) {
-      grid-column: 3 / span 8;
+    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+
+    @include col-6-6;
+    @include gap-0;
+
+
+     
+    @media (min-width: $break-sm) {
+      flex-direction: row;
+      @include col-24-12;
     }
     @media (min-width: $break-xl) {
-      grid-column: 7 / span 12;
+      @include col-24-12;
     }
   }
 }

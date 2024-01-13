@@ -7,12 +7,13 @@
     @include m-body;
     display: flex;
     justify-content: center;
+    @include gap-20;
   }
   .n2b-item {
     //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
     @include col-24-12;
-    padding-left: 10px;
-    padding-right: 10px;
+ 
+
     @media (min-width: $break-md) {
       @include col-24-12;
     }

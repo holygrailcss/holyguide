@@ -2,22 +2,21 @@
 @import "../abstract/_gridNEW.scss";
 
 
-.n4e {
-  .n4e-wrap {
+.n4f {
+  .n4f-wrap {
       display: flex;
-      @include m-body-bleed;
-      @include gap-20;
-      @include sp-contents-2n-1;
       flex-wrap: wrap;
+      @include m-body;
+      @include gap-20;
+ 
 
       @media (min-width: $break-sm) {
-          flex-wrap: nowrap;
-          justify-content: space-between;
-          @include m-body;
+
+          @include m-body-20-sm;
           @include gap-20;
       }
   }
-  .n4e-item {
+  .n4f-item {
       @include col-6-3;
       @media (min-width: $break-sm) {
           @include col-12-3;

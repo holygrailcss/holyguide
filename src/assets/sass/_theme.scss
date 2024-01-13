@@ -88,6 +88,14 @@
 
   @include space-20-40 ;
 
+  @media (min-width: $break-sm) {
+    gap: 20px;
+
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+
+
   @media (min-width: $break-md) {
     gap: 20px;
 
@@ -118,8 +126,7 @@
   pointer-events: none;
   display: none;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
+  grid-template-columns: repeat(12, 1fr);
   gap: 16px;
   opacity: 0.1;
 
@@ -267,7 +274,7 @@ div:nth-of-type(n+7) {
  
 }
 
-  @media (min-width: $break-md) {
+  @media (min-width: $break-sm) {
 
 
     div:nth-of-type(n+7) {

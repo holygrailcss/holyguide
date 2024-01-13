@@ -5,21 +5,27 @@
 
 .n1b {
   .n1b-wrap {
-    @include m-body;
+
     display: flex;
     justify-content: center;
+
+    @include m-body-0;
+    @include gap-0;
+
+    @media (min-width: $break-sm) {
+      @include m-body;
+      @include gap-20;
+    }
   }
   .n1b-item {
     //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-    @include col-24-12;
-    padding-left: 10px;
-    padding-right: 10px;
-    @media (min-width: $break-md) {
-      @include col-24-12;
+    @include col-6-6;
+
+    @media (min-width: $break-sm) {
+      @include col-12-8;
     }
     @media (min-width: $break-xl) {
-      @include col-24-8;
+      @include col-24-12;
     }
   }
 }
-
