@@ -1380,6 +1380,20 @@ input[type=number] {
   column-gap: 16px;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+}
+
+.colgap-16 {
+  column-gap: 16px;
+}
+
+.colgap-8 {
+  column-gap: 8px;
+}
+
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3954,6 +3968,19 @@ b {
   height: 100%;
   object-fit: cover;
   transform: translate(-50%, -50%);
+}
+
+.img-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+.img-cover img {
+  max-width: initial;
 }
 
 .center-absolute {
@@ -10338,16 +10365,17 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 
 .card9-contents {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .card9-contents .product-view-info {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.card9-contents .product-view-info .tag-wrapper {
+.card9-contents .tag-wrapper {
   width: 100%;
+  padding-top: 2px;
 }
 
 @media (max-width: 1280px) {
@@ -13933,8 +13961,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -13970,8 +13997,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14297,8 +14323,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14334,8 +14359,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14435,8 +14459,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14576,8 +14599,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14613,8 +14635,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14723,8 +14744,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14840,8 +14860,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -14922,8 +14941,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15062,8 +15080,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15167,8 +15184,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15272,8 +15288,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15420,8 +15435,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15576,8 +15590,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15682,8 +15695,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15822,8 +15834,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -15924,8 +15935,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16041,8 +16051,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16150,8 +16159,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16267,8 +16275,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16373,8 +16380,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16513,8 +16519,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16617,8 +16622,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16735,8 +16739,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -16875,8 +16878,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17001,8 +17003,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17100,8 +17101,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17231,8 +17231,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17370,8 +17369,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17446,8 +17444,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17592,8 +17589,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17723,8 +17719,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17809,8 +17804,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -17951,8 +17945,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18039,8 +18032,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18130,8 +18122,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18218,8 +18209,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18399,8 +18389,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18547,8 +18536,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18617,8 +18605,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -18870,8 +18857,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19095,8 +19081,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19279,8 +19264,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19388,8 +19372,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19425,8 +19408,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19545,8 +19527,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19582,8 +19563,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19694,8 +19674,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19731,8 +19710,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19810,8 +19788,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19847,8 +19824,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19934,8 +19910,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -19971,99 +19946,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
-}
-
-.grid-product-list .tag-wrapper {
-  display: flex;
-  padding-top: 4px;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-/* TYPES FIJOS */
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.grid-product-view-new {
-  flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  width: 100%;
-}
-
-.d-price-special div {
-  display: inline-block;
-}
-
-.d-price-special {
-  display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
-}
-
-.grid-product-list .tag-wrapper {
-  display: flex;
-  padding-top: 4px;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-.grid-product-view-new {
-  flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  width: 100%;
-}
-
-.d-price-special div {
-  display: inline-block;
-}
-
-.d-price-special {
-  display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20116,8 +19999,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20153,8 +20035,96 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
+}
+
+.grid-product-list .tag-wrapper {
+  display: flex;
+  padding-top: 4px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* TYPES FIJOS */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+
+.d-price-special div {
+  display: inline-block;
+}
+
+.d-price-special {
+  display: inline-table;
+  padding: 2px 8px;
+}
+
+.grid-product-list .tag-wrapper {
+  display: flex;
+  padding-top: 4px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+
+.d-price-special div {
+  display: inline-block;
+}
+
+.d-price-special {
+  display: inline-table;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20255,8 +20225,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20292,8 +20261,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20388,8 +20356,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20425,8 +20392,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20553,8 +20519,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20590,8 +20555,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20677,8 +20641,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20714,8 +20677,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20801,8 +20763,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20838,8 +20799,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20925,8 +20885,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -20962,8 +20921,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21016,8 +20974,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21053,8 +21010,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21184,8 +21140,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21221,8 +21176,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21275,8 +21229,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21312,8 +21265,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21406,8 +21358,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21443,8 +21394,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21573,8 +21523,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21610,8 +21559,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21728,8 +21676,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -21765,8 +21712,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -22055,8 +22001,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
@@ -22092,8 +22037,7 @@ h6 {
 
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
-  margin-top: 2px;
+  padding: 2px 8px;
 }
 
 .grid-product-list .tag-wrapper {
