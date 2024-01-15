@@ -8,6 +8,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./prism.scss";
 @import "./header2.scss";
 @import "./template/_buscador.scss";
+@import "./template/_header.scss";
 @import "./_menu.scss";
 @import "./_swiper.scss";
 @import "./_video.scss";
@@ -406,3 +407,21 @@ img{
   max-width: initial;
 }
 }
+
+
+.container-total {
+
+  margin-right: 0;
+  margin-left: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .container-total {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+

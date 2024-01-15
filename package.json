@@ -18,6 +18,9 @@
     "generate-component": "node src/assets/js/newComponent.js",
     "tokencomponent": "npm run generate-token-component",
     "generate-token-component": "node src/assets/js/newTokenComponent.js",
+
+
+
     "template": "npm run generate-template",
     "generate-template": "node src/assets/js/newTemplate.js",
     "tokentemplate": "npm run generate-token-template",
@@ -48,7 +51,7 @@
     "eleventy-plugin-toc": "^1.1.5" 
   },
   "dependencies": {
-    "holygrail2": "^1.0.20",
+    "holygrail2": "^1.0.23",
     "aos": "^2.3.4",
     "eleventy-plugin-embed-everything": "^1.16.0",
     "fs": "^0.0.1-security",

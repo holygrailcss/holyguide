@@ -312,25 +312,18 @@
   margin: 0;
 }
 @mixin m-body-bleed {
-  margin:0 -4px;
+  margin: 0 -4px;
 }
 @mixin m-body-bleed-sm {
-  margin:0  -10px;
+  margin: 0 -10px;
 }
 @mixin m-body-20-sm {
   margin: 0 10px;
 }
-
-
-
-
-
 @mixin gap-20 {
-
   .sk-load2::before {
-    padding-top: calc((133.25% + 86px) - 28px );
-}
-
+    padding-top: calc((133.25% + 86px) - 28px);
+  }
   .p-view {
     width: calc(100% - 8px);
     margin-left: 4px;
@@ -342,8 +335,6 @@
     }
   }
 }
-
-
 @mixin gap-1 {
   gap: 1px;
   grid-column-gap: 1px;
@@ -362,8 +353,6 @@
     margin-right: 0;
   }
 }
-
-
 @mixin sp-contents-2n-1 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
@@ -372,8 +361,6 @@
     }
   }
 }
-
-
 @mixin sp-contents-2n-1-0 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
@@ -381,15 +368,12 @@
       padding-left: 20px;
     }
   }
-
   li:nth-child(3) .card9-contents {
     padding-left: 20px;
     @media (min-width: $break-sm) {
       padding-left: 0px;
     }
   }
-
-
 }
 @mixin sp-contents-first-20-0 {
   li:first-child .card9-contents {
@@ -407,32 +391,89 @@
     }
   }
 }
-
 @mixin sp-contents-20-first-20 {
-  li  .card9-contents {
+  li .card9-contents {
     padding-left: 20px;
     @media (min-width: $break-sm) {
       padding-left: 0px;
     }
   }
-
   li:first-child .card9-contents {
     padding-left: 20px;
   }
-
-
-
 }
-
 .d-price-special div {
   display: inline-block;
 }
 .d-price-special {
   display: inline-table;
-  padding: 2px 8px;
+  padding: 0 8px 2px;
 }
-
 .grid-product-list .tag-wrapper {
   display: flex;
   padding-top: 4px;
+}
+
+
+.stories-grid {
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 8px;
+    max-width: 100%;
+
+    @media (min-width: $break-md) {
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 16px;
+    }
+
+
+    @media (min-width: $break-lg) {
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 16px;
+    }
+
+
+
+  }
+  .grid-8 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8px;
+    max-width: 100%;
+
+    @media (min-width: $break-md) {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 16px;
+    }
+
+
+    @media (min-width: $break-lg) {
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 16px;
+    }
+
+
+
+
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    max-width: 100%;
+
+    @media (min-width: $break-md) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 16px;
+    }
+
+
+    @media (min-width: $break-lg) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 16px;
+    }
+
+
+  }
 }
