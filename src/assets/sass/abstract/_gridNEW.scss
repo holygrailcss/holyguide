@@ -322,18 +322,9 @@
 }
 @mixin gap-20 {
   .sk-load2::before {
-    padding-top: calc((133.25% + 86px) - 28px);
+    padding-top: calc((133.25% + 86px) );
   }
-  .p-view {
-    width: calc(100% - 8px);
-    margin-left: 4px;
-    margin-right: 4px;
-    @media (min-width: $break-sm) {
-      width: calc(100% - 20px);
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
+
 }
 @mixin gap-1 {
   gap: 1px;
@@ -407,7 +398,9 @@
 }
 .d-price-special {
   display: inline-table;
-  padding: 0 8px 2px;
+  padding: 0px 8px 1px;
+
+  line-height: 0;
 }
 .grid-product-list .tag-wrapper {
   display: flex;
@@ -476,4 +469,9 @@
 
 
   }
+}
+
+
+.product-price{
+  line-height: 0;
 }

@@ -328,19 +328,9 @@
 @mixin gap-20 {
 
   .sk-load2::before {
-    padding-top: calc((133.25% + 86px) - 28px );
+    padding-top: calc((133.25% + 86px) );
 }
 
-  .p-view {
-    width: calc(100% - 8px);
-    margin-left: 4px;
-    margin-right: 4px;
-    @media (min-width: $break-sm) {
-      width: calc(100% - 20px);
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
 }
 
 

@@ -32,15 +32,15 @@
                     <product-size-selector class="is-flex content-center"="">
                       <ul class="btn-group product-size-selector">
                         <li class="product-size-selector__li w-100">
-                          <button class="product-size-selector__button p-s">
+                          <button class="product-size-selector__button title-s">
                             <span>S</span></button>
-                          <button class="product-size-selector__button p-s">
+                          <button class="product-size-selector__button title-s">
                             <span>M</span></button>
-                          <button class="product-size-selector__button p-s">
+                          <button class="product-size-selector__button title-s">
                             <span>L</span></button>
-                          <button class="product-size-selector__button p-s">
+                          <button class="product-size-selector__button title-s">
                             <span>XL</span></button>
-                          <button class="product-size-selector__button p-s">
+                          <button class="product-size-selector__button title-s">
                             <span>XXL</span>
                           </button>
                         </li>
@@ -56,22 +56,22 @@
             <product-view-details class="card9-view-details">
               <div class="card9-wrap-details">
                 <div class="card9-contents">
-                  <div class="p-s ttu pb-1">
+                  <div class="title-s ttu pb-1">
                     <a class="pointer" href="/es/vestido-corto-negro-mini-escote-l06626769">
                       Vestido corto negro mini escote
                     </a>
                   </div>
-                  <product-prices class="p-s">
+                  <product-prices class="title-s">
                     <div class="product-price mb-8 py-1">
                       <formatted-price>
-                        <div class="is-flex flex-wrap text-nowrap">
+                        <div class="is-flex flex-wrap text-nowrap mb-4">
                           <div>
-                            <span class="c-dark-grey c-gray is-through p-s">
+                            <span class="c-dark-grey c-gray is-through title-s">
                               59,95&nbsp;€ </span>
                           </div>
                           <div>
-                            <span class="c-sale p-s-b">
-                              <label class="p-s">
+                            <span class="c-sale title-s-b">
+                              <label class="title-s">
                                 -35% <label>*</label>
                               </label>
                               39,95&nbsp;€ </span>
@@ -88,29 +88,43 @@
             {% else %}
             <product-view-details class="card9-view-details">
               <div class="card9-wrap-details">
-                <div class="card9-contents">
-                  <div class="is-flex content-sp-between">
-                    <div class="title-m ttu product-title name-width-product has-ellipsis mb-4"><a class="pointer"
-                        href="/es/chaqueta-corta-relleno-plumon-y-plumas-efecto-satinado-l06743819"> Chaqueta corta
-                        relleno plumón y plumas efecto satinado </a></div>
-                  </div><product-prices class="p-s">
+                <div class="card9-contents ">
+                  <div class="is-flex content-sp-between mb-4">
+                    <div class="title-m ttu product-title name-width-product has-ellipsis  product-with-colors"><a
+                        class="pointer" href="/es/top-crop-halter-rayas-l06879535"> Top crop halter rayas </a></div>
+                    
+                    <div class="product-view-info"><product-view-color-selector class="color-wrap color-square "
+                        _nghost-mdfrontw-c1168964374="">
+                        <div _ngcontent-mdfrontw-c1168964374="" class="product-color-selector">
+                          <div _ngcontent-mdfrontw-c1168964374="" class="product-color-buttons is-flex flex-vcenter">
+                            <button _ngcontent-mdfrontw-c1168964374="" class="product-color-tile" title="CRUDO">
+                              <div _ngcontent-mdfrontw-c1168964374="" class="is-flex"><img
+                                  _ngcontent-mdfrontw-c1168964374="" loading="lazy"
+                                  src="https://static.massimodutti.net/3/photos//2023/I/0/1/p/6879/535/712/6879535712_3_1_7.jpg?t=1685003564342&amp;impolicy=massimodutti-itxmediumhigh&amp;imwidth=100&amp;imformat=chrome"
+                                  alt="CRUDO"></div>
+                            </button><button _ngcontent-mdfrontw-c1168964374="" aria-label="More colors"
+                              class="color-selector title-s"> +1 </button></div>
+                        </div>
+                      </product-view-color-selector></div>
+                  </div><product-prices class="">
                     <div class="product-price"><formatted-price>
                         <div>
-                          <div class="is-flex flex-wrap text-nowrap">
-                            <div><span class="is-through title-m"> 149,00 € </span> </div>
+                          <div class="is-flex flex-wrap text-nowrap  mb-4">
+                            <div><span class="is-through title-m"> 25,95 € </span></div>
+                            
                           </div>
-                          <div class="d-price-special title-m"
+                          <div class="d-price-special "
                             style="background-color: rgb(255, 206, 78); color: rgb(0, 0, 0);">
-                            <div class="text-nowrap"><label class="title-m"> -45%
-                                <label>*</label> </label> 79,95 € </div>
+                            <div class="text-nowrap title-m"><label class="title-m"> -40%
+                                <label>*</label></label> 15,95 € </div>
+                            
                           </div>
                         </div>
                       </formatted-price></div>
                   </product-prices>
                   <div class="product-view-info"></div>
-                  <div class="tag-wrapper grid-product-list"> <span class="product-tag title-s pr-8"> ONLINE
-                      EXCLUSIVE </span> </div>
-                  <div class="is-flex"> </div>
+                  <div class="tag-wrapper grid-product-list"> <span class="product-tag title-s pr-8"> ONLINE EXCLUSIVE </span> </div>
+                  <div class="is-flex"></div>
                 </div>
               </div>
             </product-view-details>
@@ -120,32 +134,23 @@
       </div>
 </product-view>
 {% endmacro %}
-
-
-
-
 {% macro ratiosimple(ratio = '', text = '') %}
-<div class="title-m mb-12" >{{text}}</div>
-
-<div class="sk-load-34">   
-<div class="p-absolute w-100 t-0">
-
-
-  {% if ratio == '3-2' %}
-  <div class="rat-3-2">
-    {% elif ratio == '3-4' %}
-    <div class="rat-3-4">
-      {% else %}
+<div class="title-m mb-12">{{text}}</div>
+<div class="sk-load-34">
+  <div class="p-absolute w-100 t-0">
+    {% if ratio == '3-2' %}
+    <div class="rat-3-2">
+      {% elif ratio == '3-4' %}
       <div class="rat-3-4">
-        {% endif %}
-        <div class="rat-content">
-          <img height="auto" rel="preload" class="card9-image" id=""
-            src="https://static.massimodutti.net/3/photos/2023/V/0/2/p/1419/289/251/1419289251_2_6_16.jpg"
-            alt="Camiseta manga corta cuello contraste" />
+        {% else %}
+        <div class="rat-3-4">
+          {% endif %}
+          <div class="rat-content">
+            <img height="auto" rel="preload" class="card9-image" id=""
+              src="https://static.massimodutti.net/3/photos/2023/V/0/2/p/1419/289/251/1419289251_2_6_16.jpg"
+              alt="Camiseta manga corta cuello contraste" />
+          </div>
         </div>
-  
-  </div>
-</div>
-
-</div>
+      </div>
+    </div>
     {% endmacro %}
