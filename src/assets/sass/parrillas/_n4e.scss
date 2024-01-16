@@ -13,17 +13,24 @@
       @media (min-width: $break-sm) {
           flex-wrap: nowrap;
           justify-content: space-between;
-          @include m-body;
-          @include gap-20;
+
+          margin-right: 20px;
+          margin-left:20px;
+          column-gap: 20px;
+
       }
   }
   .n4e-item {
       @include col-6-3;
       @media (min-width: $break-sm) {
-          @include col-12-3;
+
+
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
       }
       @media (min-width: $break-xl) {
-          @include col-24-6;
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
       }
   }
 }

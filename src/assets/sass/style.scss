@@ -19,7 +19,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./guia.scss";
 @import "./theme.scss";
 @import "parrillas/_all.scss";
-@import "template/_all.scss";
+@import "template/_alltemplate.scss";
 
 
 
@@ -340,8 +340,8 @@ table tr td {
     height: 8px;
     margin-top: 2px;
     @media (min-width: $break-sm) {
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
       margin-top: 0;
     }
   }

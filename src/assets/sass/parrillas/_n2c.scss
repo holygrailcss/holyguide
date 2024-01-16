@@ -9,22 +9,27 @@
   
       @include m-body-bleed;
       @include gap-20;
-      @include sp-contents-first-20-0;
+      column-gap: 8px;
   
       @media (min-width: $break-sm) {
+        column-gap: 20px;
         @include m-body;
         @include gap-20;
       }
     }
     .n2c-item {
       //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-      @include col-6-3;
+
+
+      -webkit-box-flex: 0;
+      flex: 0 0 calc(50% - 4px);
+      max-width: calc(50% - 4px);
   
       @media (min-width: $break-sm) {
         @include col-12-5;
       }
       @media (min-width: $break-xl) {
-        @include col-24-12;
+        @include col-24-8;
       }
     }
   }

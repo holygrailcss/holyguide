@@ -303,7 +303,7 @@
   width: 100%;
 }
 @mixin m-body {
-  margin: 0 16px;
+  margin: 0 20px;
   @media (min-width: $break-sm) {
     margin: 0 30px;
   }
@@ -312,7 +312,7 @@
   margin: 0;
 }
 @mixin m-body-bleed {
-  margin: 0 -4px;
+  margin: 0 ;
 }
 @mixin m-body-bleed-sm {
   margin: 0 -10px;

@@ -7,22 +7,44 @@
       display: flex;
       flex-wrap: wrap;
       @include m-body;
-      @include gap-20;
+
  
 
       @media (min-width: $break-sm) {
 
-          @include m-body-20-sm;
-          @include gap-20;
+
+        justify-content: space-between;
+
+      margin-right: 20px;
+      margin-left:20px;
+      column-gap: 20px;
+
       }
+
+
+      @media (min-width: $break-xl) {
+
+
+        justify-content: space-between;
+
+      margin-right: 40px;
+      margin-left:0px;
+      column-gap: 20px;
+
+      }
+
   }
   .n4f-item {
-      @include col-6-3;
       @media (min-width: $break-sm) {
-          @include col-12-3;
+        -webkit-box-flex: 0;
+
+
+        flex: 0 0 calc(25% - 15px);
+        max-width: calc(25% - 15px);
       }
       @media (min-width: $break-xl) {
-          @include col-24-6;
+        flex: 0 0 calc(22% - 15px);
+        max-width: calc(22% - 15px);
       }
   }
 }
