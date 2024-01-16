@@ -3,6 +3,8 @@
 
 
 .n4a {
+  @include sp-wraps('.n4a') ;
+}
   .n4a-wrap {
     @include m-body-0;
     @include gap-1;
@@ -28,6 +30,6 @@
     }
 
   }
-}
+
 
 

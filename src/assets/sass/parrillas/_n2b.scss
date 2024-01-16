@@ -3,6 +3,8 @@
 
 
 .n2b {
+  @include sp-wraps('.n2b') ;
+}
   .n2b-wrap {
     @include m-body;
     display: flex;
@@ -21,4 +23,3 @@
       @include col-24-8;
     }
   }
-}

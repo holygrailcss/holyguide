@@ -3,6 +3,9 @@
 
 
 .n6b {
+
+    @include sp-wraps('.n6b') ;
+  }
   .n6b-wrap {
     @include m-body-0;
     @include gap-1;
@@ -26,5 +29,5 @@
 
 
   }
-}
+
 

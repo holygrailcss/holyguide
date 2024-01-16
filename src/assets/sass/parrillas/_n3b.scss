@@ -3,6 +3,10 @@
 
 
 .n3b {
+
+    @include sp-wraps('.n3b') ;
+
+}
     .n3b-wrap {
         display: flex;
         @include m-body-bleed;
@@ -38,4 +42,3 @@
             @include col-24-7;
         }
     }
-}

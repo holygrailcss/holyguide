@@ -1,50 +1,33 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
-
-
 .n4f {
-  .n4f-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      @include m-body;
-
- 
-
-      @media (min-width: $break-sm) {
-
-
+    @include sp-wraps('.n4f');
+}
+.n4f-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    @include m-body;
+    @media (min-width: $break-sm) {
         justify-content: space-between;
-
-      margin-right: 20px;
-      margin-left:20px;
-      column-gap: 20px;
-
-      }
-
-
-      @media (min-width: $break-xl) {
-
-
+        margin-right: 20px;
+        margin-left: 20px;
+        column-gap: 20px;
+    }
+    @media (min-width: $break-xl) {
         justify-content: space-between;
-
-      margin-right: 40px;
-      margin-left:0px;
-      column-gap: 20px;
-
-      }
-
-  }
-  .n4f-item {
-      @media (min-width: $break-sm) {
+        margin-right: 40px;
+        margin-left: 0px;
+        column-gap: 20px;
+    }
+}
+.n4f-item {
+    @media (min-width: $break-sm) {
         -webkit-box-flex: 0;
-
-
         flex: 0 0 calc(25% - 15px);
         max-width: calc(25% - 15px);
-      }
-      @media (min-width: $break-xl) {
+    }
+    @media (min-width: $break-xl) {
         flex: 0 0 calc(22% - 15px);
         max-width: calc(22% - 15px);
-      }
-  }
+    }
 }

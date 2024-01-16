@@ -1,6 +1,8 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .n1c {
+  @include sp-wraps('.n1c') ;
+}
   .n1c-wrap {
     @include m-body-0;
     @include gap-1;
@@ -16,4 +18,3 @@
     
 
   }
-}

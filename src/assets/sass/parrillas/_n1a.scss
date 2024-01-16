@@ -3,6 +3,10 @@
 
 
 .n1a {
+  @include sp-wraps('.n1a') ;
+
+
+}
   .n1a-wrap {
 
     display: flex;
@@ -29,6 +33,5 @@
       @include col-24-12;
     }
   }
-}
 
 
