@@ -20660,32 +20660,30 @@ h6 {
 }
 @media (min-width: 768px) {
   .n4f-wrap {
-    justify-content: space-between;
-    margin-right: 20px;
-    margin-left: 20px;
+    justify-content: center;
     column-gap: 20px;
   }
 }
 @media (min-width: 1500px) {
   .n4f-wrap {
-    justify-content: space-between;
-    margin-right: 10%;
-    margin-left: 10%;
-    column-gap: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    column-gap: 72px;
+    max-width: 80%;
   }
 }
 
 @media (min-width: 768px) {
   .n4f-item {
     -webkit-box-flex: 0;
-    flex: 0 0 calc(21% - 15px);
-    max-width: calc(21% - 15px);
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
   }
 }
 @media (min-width: 1500px) {
   .n4f-item {
-    flex: 0 0 calc(22% - 15px);
-    max-width: calc(22% - 15px);
+    flex: 0 0 calc(22% - 20px);
+    max-width: calc(22% - 20px);
   }
 }
 
