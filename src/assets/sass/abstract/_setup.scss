@@ -10,17 +10,6 @@ $text-input-d: 12px;
 $height-sm: 150px ;
 
 $minheaders: (
-
-
-title-l: ( 12px, 12px, 1.2, "regular", ), 
-title-l-b: ( 12px, 12px, 1.2, "medium", ), 
-title-m: ( 11px, 11px, 1.2, "medium", ), 
-title-s: ( 10px, 10px, 1.2, "medium", ), 
-title-xs: ( 11px, 11px, 1.2, 'regular', ),
- 
-text-l: ( 12px, 12px, 1.2, "regular", ),  
-text-m: ( 11px, 11px, 1.2, "regular", ),  
-
   tit-m: ( 12px, 12px, 1.2, "regular", ), 
   tit-s: ( 12px, 12px, 1.2, "regular", ), 
   tit-xs: ( 10px, 10px, 1.2, "medium", ), 
@@ -30,15 +19,25 @@ text-m: ( 11px, 11px, 1.2, "regular", ),
 
   p-s: ( 12px, 12px, 1.2, "regular", ),  
 
-
   p-xs: ( 11px, 11px, 1.2, "regular", ),  
   p-xs-b: (11px, 11px, 1.2, "bold", ),  
-   p-xxs-b: ( 11px, 11px, 1.2, "bold", ),  
+  p-xxs-b: ( 11px, 11px, 1.2, "bold", ),  
 
+  p-tag: ( 8px, 10px, 1.3, "regular", ),
+
+  sub-xs: ( 11px, 11px, 1.2, 'regular', ),
+
+  title-l: ( 12px, 12px, 1.2, "regular", ), 
+  title-l-b: ( 12px, 12px, 1.2, "medium", ), 
+  title-m: ( 11px, 11px, 1.2, "medium", ), 
+  title-s: ( 10px, 10px, 1.2, "medium", ), 
+  title-xs: ( 11px, 11px, 1.2, 'regular', ),
+
+  text-l: ( 12px, 12px, 1.2, "regular", ),  
+  text-m: ( 11px, 11px, 1.2, "regular", ),  
    
-   p-tag: ( 8px, 10px, 1.3, "regular", ),
 
-   sub-xs: ( 11px, 11px, 1.2, 'regular', ),
+
 
 );
 

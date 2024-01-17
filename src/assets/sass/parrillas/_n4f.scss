@@ -15,16 +15,16 @@
     }
     @media (min-width: $break-xl) {
         justify-content: space-between;
-        margin-right: 40px;
-        margin-left: 0px;
+        margin-right: 10%;
+        margin-left: 10%;
         column-gap: 20px;
     }
 }
 .n4f-item {
     @media (min-width: $break-sm) {
         -webkit-box-flex: 0;
-        flex: 0 0 calc(25% - 15px);
-        max-width: calc(25% - 15px);
+        flex: 0 0 calc(21% - 15px);
+        max-width: calc(21% - 15px);
     }
     @media (min-width: $break-xl) {
         flex: 0 0 calc(22% - 15px);
