@@ -3,16 +3,15 @@ layout: base-clean.njk
 ---
 <!-- Contenido de la plantilla runway.njk -->
 <div class="row text-center mt-32">
-    <div class="col-xs-12">  <div class="title-l mb-12">22 LOOKS</div></div>
-    <div class="col-xs-12">  <div class="title-l mb-24">RUNWAY SS24</div></div>
+    <div class="col-xs-12">
+        <div class="title-l mb-12">22 LOOKS</div>
+    </div>
+    <div class="col-xs-12">
+        <div class="title-l mb-24">RUNWAY SS24</div>
+    </div>
 </div>
-
-
 <div class="bg-dark height-full ">
     <div class="grid-runway nativescroll min-scrollcustom-x ">
-
-
-
         <div class="inner-nativescroll">
             <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
                     alt=""> </div>
@@ -32,19 +31,14 @@ layout: base-clean.njk
                     alt=""> </div>
             <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
                     alt=""> </div>
-                    <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                        alt=""> </div>
-                        <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                            alt=""> </div>
-                            <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                                alt=""> </div>
+            <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
+                    alt=""> </div>
+            <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
+                    alt=""> </div>
+            <div><img src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
+                    alt=""> </div>
         </div>
-
-
-
     </div>
-
-
     <div class="mt-24 text-l text-center"> SCROLL HORIZONTAL TO VIEW ALL LOOKS</div>
     <div class="container-global pr-body pl-body">
         <div class="row">
@@ -98,51 +92,28 @@ layout: base-clean.njk
         </div>
     </div>
 </div>
-
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn--macro is-flex flex-column"> <div class="mt-20 mb-20"> <div class="text-m mb-20" > +</div>     <div class="text-m mb-8" > 22 LOOKS</div>   <div class="text-m">  RUNWAY</div>  </div></button>
-
-        <button class="btn btn--macro is-flex flex-column"> <div class="mt-20 mb-20"> <div class="text-m mb-20" >+</div>     <div class="text-m mb-8"> 22 LOOKS</div>  <div class="text-m">  RUNWAY</div>  </div></button>
-
-        <button class="btn btn--macro is-flex flex-column"> <div class="mt-20 mb-20">     <div class="text-m"> RUNWAY</div>  </div></button>
+        <button class="btn btn--macro is-flex flex-column">
+            <div class="mt-20 mb-20">
+                <div class="text-m mb-20"> +</div>
+                <div class="text-m mb-8"> 22 LOOKS</div>
+                <div class="text-m"> RUNWAY</div>
+            </div>
+        </button>
+        <button class="btn btn--macro is-flex flex-column">
+            <div class="mt-20 mb-20">
+                <div class="text-m mb-20">+</div>
+                <div class="text-m mb-8"> 22 LOOKS</div>
+                <div class="text-m"> RUNWAY</div>
+            </div>
+        </button>
+        <button class="btn btn--macro is-flex flex-column">
+            <div class="mt-20 mb-20">
+                <div class="text-m"> RUNWAY</div>
+            </div>
+        </button>
     </div>
 </div>
 
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-    const slider = document.querySelector('.inner-nativescroll');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; // El número 3 determina la velocidad del arrastre
-        slider.scrollLeft = scrollLeft - walk;
-    });
-});
-</script>
