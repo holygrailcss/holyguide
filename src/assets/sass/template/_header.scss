@@ -66,3 +66,20 @@ header.interior svg path {
     display: flex;
   }
 }
+
+
+
+.search-bar {
+  position: relative;
+}
+.search-bar:after {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  max-width: 250px;
+  height: var(--line-width) ;
+}

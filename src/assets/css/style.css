@@ -7359,7 +7359,7 @@ button {
 .checkbox-item [type=checkbox]:not(:checked) + label,
 .checkbox-item [type=checkbox]:checked + label {
   position: relative;
-  padding-left: 30px;
+  padding-left: 24px;
   cursor: pointer;
   font-weight: normal;
   font-size: 12px;
@@ -7415,7 +7415,7 @@ button {
 .checkbox-item [type=checkbox]:not(:checked) + label .icon,
 .checkbox-item [type=checkbox]:checked + label .icon {
   position: absolute;
-  top: 0;
+  top: 3px;
   left: 2px;
   color: #000000;
   transition: all 0.2s;
@@ -7602,7 +7602,7 @@ button {
 }
 .checkbox-item-text span {
   position: relative;
-  margin-left: 30px;
+  margin-left: 24px;
   min-height: 40px;
 }
 
@@ -7666,7 +7666,7 @@ button {
   width: 100%;
   aspect-ratio: 3/4;
   position: relative;
-  padding-left: 30px;
+  padding-left: 24px;
   cursor: pointer;
   font-weight: normal;
   font-size: 12px;
@@ -7783,8 +7783,8 @@ button {
 }
 .check-center.checkbox-radio [type=radio]:checked + label .ico-radio, .check-center.checkbox-radio [type=radio]:not(:checked) + label .ico-radio {
   top: 50%;
-  left: 23px;
-  margin-top: -5px;
+  left: 21px;
+  margin-top: -2px;
 }
 .check-center .box3-content {
   padding-left: 30px;
@@ -7797,7 +7797,7 @@ button {
   left: 0;
 }
 .check-bleed.checkbox-radio [type=radio]:checked + label .ico-radio, .check-bleed.checkbox-radio [type=radio]:not(:checked) + label .ico-radio {
-  left: 4px;
+  left: 5px;
 }
 
 .check-top.checkbox-radio [type=radio]:checked + label::before, .check-top.checkbox-radio [type=radio]:not(:checked) + label::before {
@@ -7949,9 +7949,9 @@ fieldset[disabled] .form-control {
 .input,
 .textarea,
 .select select {
-  border: 1px solid transparent;
-  border-color: #e3e3e3;
-  border-width: 0 0 1px 0;
+  border: var(--line-width) solid transparent;
+  border-color: #000000;
+  border-width: 0 0 var(--line-width) 0;
   border-radius: 0;
   appearance: none;
   align-items: center;
@@ -7985,9 +7985,9 @@ fieldset[disabled] .form-control {
 .textarea:focus,
 .select select:focus {
   outline: none;
-  border: 1px solid transparent;
+  border: var(--line-width) solid transparent;
   border-color: #000000;
-  border-width: 0 0 1px 0;
+  border-width: 0 0 var(--line-width) 0;
 }
 
 input::input-placeholder {
@@ -8096,7 +8096,7 @@ label {
   right: 6px;
   width: 5px;
   height: 5px;
-  margin-top: -3px;
+  margin-top: -5px;
 }
 .select.select-flat, .select.select-flat-no-icon {
   width: max-content;
@@ -8220,12 +8220,12 @@ label {
 }
 
 .input-line {
-  border-top: 1px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
+  border-top: var(--line-width) solid transparent;
+  border-left: var(--line-width) solid transparent;
+  border-right: var(--line-width) solid transparent;
   background-color: transparent;
   padding-left: 0;
-  border-bottom: 1px solid #000000;
+  border-bottom: var(--line-width) solid #000000;
 }
 
 .input-notouch {
@@ -8325,7 +8325,7 @@ label {
   display: block;
   width: 100%;
   font-weight: normal;
-  margin-top: 1px;
+  margin-top: var(--line-width);
   margin-bottom: 0;
   line-height: 1.1;
   color: #8e8e8e;
@@ -8481,7 +8481,7 @@ label {
   color: #b40016 !important;
 }
 .is-error .input {
-  border-bottom: 1px solid #b40016;
+  border-bottom: var(--line-width) solid #b40016;
 }
 .is-error .input-prefix :nth-child(1)::placeholder {
   color: #b40016;
@@ -8499,17 +8499,17 @@ label {
   color: #76ae4a !important;
 }
 .ok-input .input {
-  border-bottom: 1px solid #76ae4a;
+  border-bottom: var(--line-width) solid #76ae4a;
   color: #76ae4a;
 }
 .ok-input .input-prefix:nth-child(1)::placeholder {
   color: #76ae4a;
 }
 .ok-input .input-line {
-  border-top: 1px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
-  border-bottom: 1px solid #76ae4a;
+  border-top: var(--line-width) solid transparent;
+  border-left: var(--line-width) solid transparent;
+  border-right: var(--line-width) solid transparent;
+  border-bottom: var(--line-width) solid #76ae4a;
   color: #76ae4a;
 }
 
@@ -8532,7 +8532,7 @@ label {
   padding: 12px 0 4px;
   height: auto;
   border: none;
-  border-bottom: 1px solid #000000;
+  border-bottom: var(--line-width) solid #000000;
 }
 .input-line-v2 .input::input-placeholder {
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
@@ -8727,18 +8727,18 @@ a:hover {
   z-index: 1;
   cursor: pointer;
   border-radius: 50%;
-  border: 1px solid #e3e3e3;
+  border: var(--line-width) solid #e3e3e3;
 }
 
 .inner-button {
-  margin-top: -1px;
+  margin-top: -var(--line-width);
   display: block;
   width: 40px;
   height: 40px;
   color: #ffffff;
 }
 .inner-button::after {
-  border: 1px solid #000000;
+  border: var(--line-width) solid #000000;
   border-radius: 0;
   border-right: 0;
   border-top: 0;
@@ -8997,12 +8997,12 @@ ul.h-size-selector a:hover {
   cursor: pointer;
 }
 ul.h-size-selector a:hover::after {
-  border: 1px solid rgb(51, 48, 48);
+  border: var(--line-width) solid rgb(51, 48, 48);
 }
 ul.h-size-selector a::after {
   content: "";
   position: absolute;
-  border: 1px solid transparent;
+  border: var(--line-width) solid transparent;
   width: 10px;
   height: 10px;
   left: 3px;
@@ -9026,7 +9026,7 @@ ul.list-mini > li {
 ul.list-mini > li.is-missing::after {
   content: "";
   width: 100%;
-  height: 1px;
+  height: var(--line-width);
   background-color: #000000;
   border-radius: 0;
   margin-top: -1px;
@@ -9076,7 +9076,7 @@ ul.list-mini > li::after {
   position: relative;
   padding: 16px;
   background: #ffffff;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: var(--line-width) solid #e3e3e3;
   cursor: pointer;
   opacity: 1;
 }
@@ -9174,10 +9174,9 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   justify-content: center;
   align-items: center;
   vertical-align: top;
-  color: #000000;
   font-size: 12px;
   cursor: pointer;
-  padding: 8px 20px 8px 20px;
+  padding: 0px 20px 8px 20px;
 }
 .tabs li.is-active a, .tabs li.is-active span {
   position: relative;
@@ -9283,7 +9282,6 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
 }
 .tabs-mini li a {
   padding: 6px 8px 8px;
-  color: #000000;
   border: none;
   opacity: 0.5;
 }
@@ -9420,10 +9418,10 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   width: max-content;
   position: relative;
   padding-left: 16px;
+  padding-top: 1px;
 }
 .store-state div {
   position: absolute;
-  border-radius: 50%;
   overflow: hidden;
   top: 3px;
   left: 0;
@@ -9494,7 +9492,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
 
 .tooltip-sm-old::after {
   top: -6px;
-  right: 18px;
+  right: 3px;
   content: "";
   position: absolute;
   border-top: 1px solid #e3e3e3;
@@ -11872,6 +11870,22 @@ header.interior svg path {
     display: flex;
   }
 }
+.search-bar {
+  position: relative;
+}
+
+.search-bar:after {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  max-width: 250px;
+  height: var(--line-width);
+}
+
 .menu-mobile {
   display: block;
 }
