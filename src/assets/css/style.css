@@ -22508,6 +22508,15 @@ h6 {
   }
 }
 
+.btn--macro {
+  height: initial;
+  width: 100%;
+  border-bottom: var(--line-width) solid #000000;
+}
+.btn--macro.btn:hover {
+  opacity: 0.6;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
