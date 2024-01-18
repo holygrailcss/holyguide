@@ -22435,12 +22435,12 @@ table tr td {
 }
 @media (min-width: 1px) {
   .pl-body {
-    padding-left: 16px;
+    padding-left: 20px;
   }
 }
 @media (min-width: 768px) {
   .pl-body {
-    padding-left: 16px;
+    padding-left: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -22475,12 +22475,12 @@ table tr td {
 }
 @media (min-width: 1px) {
   .pr-body {
-    padding-right: 16px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 768px) {
   .pr-body {
-    padding-right: 16px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 992px) {
