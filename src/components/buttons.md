@@ -3,7 +3,7 @@ layout: _paginas/components/_buttons.njk
 permalink: /buttons/
 
 titulo: Buttons
-descripcion: .
+descripcion: Colección de botones linkables
 
 date: 2023-06-19
 fecha: 19 de junio de 2023

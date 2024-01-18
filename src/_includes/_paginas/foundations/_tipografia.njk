@@ -10,15 +10,15 @@ layout: base.njk
 
   <div class="row pb-64">
     <div class="col-xs-12">
-      <p class="tit-m mb-16">
+      <p class="title-l mb-16">
         Actualmente tenemos las siguientes Familias tipográficas:
       </p>
-      <p class="p-m mb-16">
+      <p class="text-l mb-16">
         Las familias tipograficas que van después de la fuente primaria son las
         llamadas <strong>"fallbacks"</strong>, estás fuentes son las primeras en
         cargar.
       </p>
-      <div class="tit-s mb-16 mt-32">Familia dutti-daily</div>
+      <div class="title-s mb-16 mt-32">Familia dutti-daily</div>
       <p>
         <strong>regular</strong>:'dutti-daily-regular', Helvetica, 'Arial ',
         'Lucida Grande', sans-serif;
@@ -31,7 +31,7 @@ layout: base.njk
         <strong>bold</strong>: 'dutti-daily-bold', Helvetica, 'Arial ', 'Lucida
         Grande', sans-serif;
       </p>
-      <div class="tit-s mb-16 mt-32 bold3">Familia massimo-daily</div>
+      <div class="title-s mb-16 mt-32 bold3">Familia massimo-daily</div>
       <p>
         <strong class="bold3">regular3</strong>: 'massimo-daily-regular',
         'ms-serif',serif;
@@ -51,7 +51,7 @@ layout: base.njk
   <div class="row pt-64"> 
 
 <div class="col-xs-12">
-  <div class="tit-s c-dark-grey pb-32">
+  <div class="title-s c-dark-grey pb-32">
     Familia tipográfica y jerarquías que debemos usar con sus ejemplos y
     variantes.
   </div>
@@ -66,7 +66,7 @@ layout: base.njk
     </p>
   </div>
 
-  <div class="row p-m-b mb-16">
+  <div class="row text-l-b mb-16">
     <div class="col-xs-2">Nombre</div>
 
     <div class="col-xs-2">Mobile (xs) </div>
@@ -80,10 +80,10 @@ layout: base.njk
 
   {% for tipo in global.tipografias %}
   <div class="row mb-8">
-	<div class="col-xs-2 p-m-b">.{{tipo.name}}</div>
+	<div class="col-xs-2 text-l-b">.{{tipo.name}}</div>
 	
-	<div class="col-xs-2 p-s">{{tipo.xs}}</div>
-	<div class="col-xs-2 p-s">{{tipo.lg}}</div>
+	<div class="col-xs-2 text-l">{{tipo.xs}}</div>
+	<div class="col-xs-2 text-l">{{tipo.lg}}</div>
   
 	<div class="col-xs-4 {{tipo.weight}} ">
   
@@ -97,7 +97,7 @@ layout: base.njk
 
   
 	</div>
-	<div class="col-xs-2 p-s">{{tipo.line}}</div>
+	<div class="col-xs-2 text-l">{{tipo.line}}</div>
   </div>
   {% endfor %}
 

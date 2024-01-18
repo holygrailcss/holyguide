@@ -10,19 +10,19 @@ layout: base.njk
     <section class="mb-32 mt-32">
         <div class="row">
             <div class="col-xs-12">
-                <div class="tit-s c-dark-grey">
+                <div class="title-s c-dark-grey">
                     Es la base de la distribución de todos los elementos en en nuestras
                     maquetas.
                 </div>
             </div>
         </div>
 
-                <p class="p-xs">
+                <p class="title-xs">
                     Flexbox viene de “Flexible Box Layout“, que se puede traducir como
                     “Diseño de caja flexible“, y nos aporta una magnífica solución para
                     todos nuestros desarrollos “responsive”.
                 </p>
-                <p class="p-xs mb-48">
+                <p class="title-xs mb-48">
                     Lo que nos permite es crear un conjunto de elementos flexibles que se
                     adaptan automáticamente a su contenedor y con el que podemos controlar
                     parámetros tales como la alineación, dirección (horizontal/vertical).
@@ -30,7 +30,7 @@ layout: base.njk
                 <h6 class="mb-32">Dar propiedas flex a un contenedor</h6>
 
 
-                <p class="p-xs mb-16">
+                <p class="title-xs mb-16">
                     Para que los elementos se distribuyan de acuerdo a las reglas flex el
                     padre de los elementos debe tener en sus estilos la propiedad display
                     en flex, para ello usaremos la clase <code>.is-flex</code>
@@ -124,13 +124,13 @@ layout: base.njk
 
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Mostrar</div>
-                        <div class="p-s">Habilita flex para todos sus hijos</div>
+                        <div class="title-s">Mostrar</div>
+                        <div class="text-l">Habilita flex para todos sus hijos</div>
                     </div>
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="p-s">.is-flex</h5>
+                        <h5 class="text-l">.is-flex</h5>
                         <div class="item-w is-flex" onclick="isFlex(this)">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -140,7 +140,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="p-s">.is-flexinline</h5>
+                        <h5 class="text-l">.is-flexinline</h5>
                         <div class="item-w is-flexinline" onclick="isFlexInline()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -151,7 +151,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-center</h5>
+                            <h5 class="text-l">.align-center</h5>
                             <div class="item-w is-flex align-center" onclick="isFlexAlignCenter()">
                                 <div class="item-i"></div>
                             </div>
@@ -160,15 +160,15 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Eje</div>
-                        <div class="p-s">
+                        <div class="title-s">Eje</div>
+                        <div class="text-l">
                             Establece el eje principal.Requiere de .is-flex
                         </div>
                     </div>
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="p-s">.flex-row</h5>
+                        <h5 class="text-l">.flex-row</h5>
                         <div class="item-w is-flex flex-row" onclick="isFlexRow()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -178,7 +178,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="p-s">.flex-column</h5>
+                        <h5 class="text-l">.flex-column</h5>
                         <div class="item-w is-flex flex-column" onclick="isFlexColumn()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -190,8 +190,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Envoltura flex</div>
-                        <div class="p-s">
+                        <div class="title-s">Envoltura flex</div>
+                        <div class="text-l">
                             Envuelve elementos si no se pueden hacer todos para que quepan en
                             una línea.Requiere de is-flex
                         </div>
@@ -199,7 +199,7 @@ layout: base.njk
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="p-s">.flex-wrap</h5>
+                        <h5 class="text-l">.flex-wrap</h5>
                         <div class="item-w is-flex flex-wrap" onclick="isFlexWrap()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -212,7 +212,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="p-s">.flex-nowrap</h5>
+                        <h5 class="text-l">.flex-nowrap</h5>
                         <div class="item-w is-flex flex-nowrap" onclick="isFlexNoWrap()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -227,8 +227,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Justificar-contenido</div>
-                        <div class="p-s">
+                        <div class="title-s">Justificar-contenido</div>
+                        <div class="text-l">
                             Intenta distribuir espacio adicional en el eje principal. Requiere
                             .is-flex
                         </div>
@@ -237,7 +237,7 @@ layout: base.njk
                 <div class="row mb-64">
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.content-start</h5>
+                            <h5 class="text-l">.content-start</h5>
                             <div class="item-w is-flex content-start" onclick="isFlexContentStart()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -247,7 +247,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.content-end</h5>
+                            <h5 class="text-l">.content-end</h5>
                             <div class="item-w is-flex content-end" onclick="isFlexContentEnd()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -257,7 +257,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.content-center</h5>
+                            <h5 class="text-l">.content-center</h5>
                             <div class="item-w is-flex content-center" onclick="isFlexContentCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -267,7 +267,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.content-sp-between</h5>
+                            <h5 class="text-l">.content-sp-between</h5>
                             <div class="item-w is-flex content-sp-between" onclick="isFlexContentBetween()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -277,7 +277,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.content-sp-around</h5>
+                            <h5 class="text-l">.content-sp-around</h5>
                             <div class="item-w is-flex content-sp-around" onclick="isFlexContentAround()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -287,7 +287,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div>
-                            <h5 class="p-s">.content-sp-evenly</h5>
+                            <h5 class="text-l">.content-sp-evenly</h5>
                             <div class="item-w is-flex content-sp-evenly" onclick="isFlexContentEvenly()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -298,8 +298,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Alinear-elementos</div>
-                        <div class="p-s">
+                        <div class="title-s">Alinear-elementos</div>
+                        <div class="text-l">
                             Determina cómo se disponen los elementos en el eje transversal.
                         </div>
                     </div>
@@ -307,7 +307,7 @@ layout: base.njk
                 <div class="row mb-64">
 
                     <div class="col-xs-2">
-                        <h5 class="p-s">.align-top</h5>
+                        <h5 class="text-l">.align-top</h5>
                         <div class="item-w is-flex align-top" onclick="isFlexAlignTop()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -319,7 +319,7 @@ layout: base.njk
 
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-middle</h5>
+                            <h5 class="text-l">.align-middle</h5>
                             <div class="item-w is-flex align-middle" onclick="isFlexAlignMiddle()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -331,7 +331,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-bottom</h5>
+                            <h5 class="text-l">.align-multi-bottom</h5>
                             <div class="item-w is-flex align-multi-bottom" onclick="isFlexAlignMultiBottom()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -346,7 +346,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-items-center</h5>
+                            <h5 class="text-l">.align-items-center</h5>
                             <div class="item-w is-flex align-items-center" onclick="isFlexAlignItemsCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -357,7 +357,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-vertical</h5>
+                            <h5 class="text-l">.align-vertical</h5>
                             <div class="item-w is-flex align-vertical" onclick="isFlexAlignVertical()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -369,8 +369,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="tit-s">Alinear-contenido</div>
-                        <div class="p-s">
+                        <div class="title-s">Alinear-contenido</div>
+                        <div class="text-l">
                             Solo tiene efecto con más de una línea de contenido. Los ejemplos
                             que se muestran aquí usan envoltura flexible.
                         </div>
@@ -379,7 +379,7 @@ layout: base.njk
                 <div class="row">
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-top</h5>
+                            <h5 class="text-l">.align-multi-top</h5>
                             <div class="item-w is-flex align-multi-top" onclick="isFlexAlignMultiTop()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -394,7 +394,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-bottom</h5>
+                            <h5 class="text-l">.align-bottom</h5>
                             <div class="item-w is-flex align-bottom" onclick="isFlexAlignBottom()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -406,7 +406,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-center</h5>
+                            <h5 class="text-l">.align-multi-center</h5>
                             <div class="item-w is-flex align-multi-center" onclick="isFlexAlignMultiCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -421,7 +421,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-between</h5>
+                            <h5 class="text-l">.align-multi-between</h5>
                             <div class="item-w is-flex align-multi-between" onclick="isFlexAlignMultiBetween()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -436,7 +436,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-around</h5>
+                            <h5 class="text-l">.align-multi-around</h5>
                             <div class="item-w is-flex align-multi-around" onclick="isFlexAlignMultiAround()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -451,7 +451,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="p-s">.align-multi-stretch</h5>
+                            <h5 class="text-l">.align-multi-stretch</h5>
                             <div class="item-w is-flex align-multi-stretch" onclick="isFlexAlignMultiStretch()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>

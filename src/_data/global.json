@@ -251,80 +251,53 @@
 
   "tipografias": [
     {
-      "name": "tit-m",
-      "xs": "14px",
-      "lg": "16px",
-      "line": "1.2",
-      "weight": "medium"
-    },
-    {
-      "name": "tit-xs",
+      "name": "title-l",
       "xs": "12px",
       "lg": "12px",
-      "line": "1.2",
-      "weight": "medium"
-    },
-    {
-      "name": "tit-xs-b",
-      "xs": "12px",
-      "lg": "12px",
-      "line": "1.2",
-      "weight": "bold"
-    },
-    {
-      "name": "sub-xs",
-      "xs": "11px",
-      "lg": "11px",
       "line": "1.2",
       "weight": "regular"
     },
     {
-      "name": "p-m-b",
-      "xs": "12px",
-      "lg": "13px",
-      "line": "1.2",
-      "weight": "semibold"
-    },
-    {
-      "name": "p-m",
+      "name": "title-l-b",
       "xs": "12px",
       "lg": "12px",
       "line": "1.2",
       "weight": "medium"
     },
     {
-      "name": "p-m-m",
-      "xs": "12px",
-      "lg": "13px",
-      "line": "1.2",
-      "weight": "medium"
-    },
-    {
-      "name": "p-xs",
+      "name": "title-m",
       "xs": "11px",
       "lg": "11px",
       "line": "1.2",
-      "weight": "regular"
+      "weight": "medium"
     },
     {
-      "name": "p-xs-b",
-      "xs": "11px",
-      "lg": "12px",
-      "line": "1.3",
-      "weight": "bold"
-    },
-    {
-      "name": "p-xxs-b",
-      "xs": "9px",
-      "lg": "9px",
-      "line": "1.3",
-      "weight": "bold"
-    },
-    {
-      "name": "p-tag",
-      "xs": "8px",
+      "name": "title-s",
+      "xs": "10px",
       "lg": "10px",
-      "line": "1.3",
+      "line": "1.2",
+      "weight": "regular"
+    },
+    {
+      "name": "title-xs",
+      "xs": "11px",
+      "lg": "11px",
+      "line": "1.2",
+      "weight": "regular"
+    },
+
+    {
+      "name": "text-l",
+      "xs": "12px",
+      "lg": "12px",
+      "line": "1.2",
+      "weight": "regular"
+    },
+    {
+      "name": "text-m",
+      "xs": "11px",
+      "lg": "11px",
+      "line": "1.2",
       "weight": "regular"
     }
   ],

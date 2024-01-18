@@ -3,7 +3,7 @@ layout: _paginas/components/_tooltip.njk
 permalink: /tooltip/
 
 titulo: Tooltip
-descripcion: .
+descripcion: Tooltip en rollover
 
 date: 2023-06-19
 fecha: 19 de junio de 2023

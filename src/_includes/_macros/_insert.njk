@@ -1,9 +1,9 @@
 {% macro template(ruta = '', component = '', size = '', componentfigma = "", descripcion = '') %}
 <section class="mb-32 mt-32 ">
   <div class="resize-container">
-    <div class="resize-bar p-xs">
+    <div class="resize-bar title-xs">
       <div class="resize-name">
-        <div class="tit-m">{{ component | capitalize }}</div>
+        <div class="title-l">{{ component | capitalize }}</div>
       </div>
       <div class="resize-snip">
         <a target="_blank" href=" {{ componentfigma }}">
@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="resize-code">
-        <div class="p-xs">
+        <div class="title-xs">
           CODE </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
 </section>
 {% endmacro %}
 {% macro select(selectName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ selectName | capitalize }}</h3>
-<p class="p-xs">{{selectName }} : {{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ selectName | capitalize }}</h3>
+<p class="title-xs">{{selectName }} : {{ explicacion }}</p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <div class="select {{selectName }}">
@@ -85,8 +85,8 @@
 
 
 {% macro list(listClass = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ listClass }}</h3>
-<p class="p-xs">{{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ listClass }}</h3>
+<p class="title-xs">{{ explicacion }}</p>
 
 
 
@@ -201,8 +201,8 @@
 
 
 {% macro listButton(listClass = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ listClass | capitalize }}</h3>
-<p class="p-xs">{{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ listClass | capitalize }}</h3>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="resize-mini">
   {% if listClass === "list-button list-icons" %}
   <div class="p-16">
@@ -308,7 +308,7 @@
 
 
 {% macro banner(bannerClass = '', descipcion = '') %}
-<h3 class="my-16 tit-m">{{descipcion}}</h3>
+<h3 class="my-16 title-l">{{descipcion}}</h3>
 <p>{{bannerClass}}</p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
@@ -338,7 +338,7 @@
                     commodi, veritatis qui repellendus eius .
                   </div>
                   <div class="col-xs-12 col-sm-6 is-flex banner-cookies-btn  ">
-                    <button class="link-line p-xs m-16 ">
+                    <button class="link-line title-xs m-16 ">
                       Boton link uno
                     </button>
                     <button class="btn btn-primary btn--full">Boton dos de cookies</button>
@@ -422,7 +422,7 @@
 {% endif %}
 {% endmacro %}
 {% macro links(links = '', explicacion = '', svg = '', dark = '') %}
-<p class="p-xs mt-32">{{ explicacion }}</p>
+<p class="title-xs mt-32">{{ explicacion }}</p>
 <br>
 <div class="resize-mini">
   <div class="resize-mini-content  ">
@@ -552,9 +552,9 @@
 </svg-icon>
 {% endmacro %}
 {% macro simple(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m">
+<p class="text-l">
   <span class="bold mr-8"> .btn-{{buttonName }}
   </span>
   {{ explicacion | capitalize }}
@@ -578,9 +578,9 @@
 </div>
 {% endmacro %}
 {% macro animation(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m">
+<p class="text-l">
   <span class="bold mr-8"> .btn-{{buttonName }}
   </span>
   {{ explicacion | capitalize }}
@@ -635,9 +635,9 @@
 </div>
 {% endmacro %}
 {% macro animationsvg(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m">
+<p class="text-l">
   <span class="bold mr-8"> .btn-{{buttonName }}
   </span>
   {{ explicacion | capitalize }}
@@ -699,9 +699,9 @@
 </div>
 {% endmacro %}
 {% macro svg(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
+<p class="text-l"> btn-{{buttonName }} : {{ explicacion }}
 </p>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
@@ -743,9 +743,9 @@
 </div>
 {% endmacro %}
 {% macro iconClear(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m">
+<p class="text-l">
   {{buttonName }} : {{ explicacion }}
 </p>
 <div class="resize-mini">
@@ -778,7 +778,7 @@
 </div>
 {% endmacro %}
 {% macro social(buttonName = '', svgsolo = '', explicacion = '', placeholder = '', dark = '') %}
-<p class="p-s p-8">
+<p class="text-l p-8">
   {{buttonName }} : {{ explicacion }}
 </p>
 <div class="">
@@ -811,9 +811,9 @@
 </div>
 {% endmacro %}
 {% macro btnDistribution(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m"> btn-{{buttonName }} : {{ explicacion }}
+<p class="text-l"> btn-{{buttonName }} : {{ explicacion }}
 </p>
 {% if buttonName == 'btn-separate'%}
 <div class="resize-mini">
@@ -871,9 +871,9 @@
 {% endif %}
 {% endmacro %}
 {% macro square(buttonName = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ buttonName | capitalize }}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}
 </h3>
-<p class="p-m">
+<p class="text-l">
   <span class="bold mr-8"> .btn--{{buttonName }}
   </span>
   {{ explicacion | capitalize }}
@@ -922,7 +922,7 @@
   <div class="resize-mini-content {{dark  }} ">
     <div class="container-3">
       <div class="row">
-        <div class="col-xs-12 p-xs p-16">Primary</div>
+        <div class="col-xs-12 title-xs p-16">Primary</div>
         <div class="col-xs-12">
           {% for buttonName in buttonNames %}
           <button
@@ -933,7 +933,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 p-xs p-16">hover</div>
+        <div class="col-xs-12 title-xs p-16">hover</div>
         <div class="col-xs-12hover ">
           {% for buttonName in buttonNames %}
           <button
@@ -944,7 +944,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12 p-xs p-16">disabled</div>
+        <div class="col-xs-12 title-xs p-16">disabled</div>
         <div class="col-xs-12disabled ">
           {% for buttonName in buttonNames %}
           <button
@@ -955,7 +955,7 @@
         </div>
       </div>
       <div class="row has-light bg-primary">
-        <div class="col-xs-12 p-xs p-16">has-light primary</div>
+        <div class="col-xs-12 title-xs p-16">has-light primary</div>
         <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
           <button
@@ -966,7 +966,7 @@
         </div>
       </div>
       <div class="row has-light bg-primary">
-        <div class="col-xs-12 p-xs p-16">has-light hover</div>
+        <div class="col-xs-12 title-xs p-16">has-light hover</div>
         <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
           <button
@@ -977,7 +977,7 @@
         </div>
       </div>
       <div class="row has-light bg-primary">
-        <div class="col-xs-12 p-xs p-16">has-light disabled</div>
+        <div class="col-xs-12 title-xs p-16">has-light disabled</div>
         <div class="col-xs-12 ">
           {% for buttonName in buttonNames %}
           <button
@@ -997,8 +997,8 @@
 </div>
 {% endmacro %}
 {% macro baseTooltip(tooltipType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ tooltipType }}</h3>
-<p class="p-m mt-8">{{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ tooltipType }}</h3>
+<p class="text-l mt-8">{{ explicacion }}</p>
 {% if tooltipType === "tooltip-*dir*" %}
 <p class="mt-8">
   <code>tooltip-tl</code>Expande el tooltip hacia top-left
@@ -1016,7 +1016,7 @@
 <div class="resize-mini mt-16">
   <div class="code-view ">
     <div class="check-new"></div>
-    {% if tooltipType === "tooltip-sm" %}
+    {% if tooltipType === "tooltitext-lm" %}
     <div class="container-6 align-center mb-64 height-sm">
       <div class="has-tooltip">
         <svg-icon src="question" class="cursor-pointer">
@@ -1028,7 +1028,7 @@
             </svg>
           </div>
         </svg-icon>
-        {% call tooltip('tooltip-sm','true') %}{% endcall %}
+        {% call tooltip('tooltitext-lm','true') %}{% endcall %}
       </div>
     </div>
     {% elif tooltipType === "tooltip-*dir*" %}
@@ -1036,24 +1036,24 @@
       <div class="row">
         <div class="col-xs-12 is-flex">
           <div class="has-tooltip mx-16">
-            <p class="p-s cursor-pointer">tooltip-tl</p>
-            {% call tooltip('tooltip-sm tooltip-tl','') %}{% endcall %}
+            <p class="text-l cursor-pointer">tooltip-tl</p>
+            {% call tooltip('tooltitext-lm tooltip-tl','') %}{% endcall %}
           </div>
           <div class="has-tooltip mx-16">
-            <p class="p-s cursor-pointer">tooltip-tr</p>
-            {% call tooltip('tooltip-sm tooltip-tr','') %}{% endcall %}
+            <p class="text-l cursor-pointer">tooltip-tr</p>
+            {% call tooltip('tooltitext-lm tooltip-tr','') %}{% endcall %}
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 is-flex">
           <div class="has-tooltip mx-16">
-            <p class="p-s cursor-pointer">tooltip-bl</p>
-            {% call tooltip('tooltip-sm tooltip-bl','') %}{% endcall %}
+            <p class="text-l cursor-pointer">tooltip-bl</p>
+            {% call tooltip('tooltitext-lm tooltip-bl','') %}{% endcall %}
           </div>
           <div class="has-tooltip mx-16">
-            <p class="p-s cursor-pointer">tooltip-br</p>
-            {% call tooltip('tooltip-sm tooltip-br','') %}{% endcall %}
+            <p class="text-l cursor-pointer">tooltip-br</p>
+            {% call tooltip('tooltitext-lm tooltip-br','') %}{% endcall %}
           </div>
         </div>
       </div>
@@ -1061,13 +1061,13 @@
     {% endif %}
   </div>
   {% set standardcode %}
-  {% if tooltipType === "tooltip-sm" %}
+  {% if tooltipType === "tooltitext-lm" %}
   <div class="has-tooltip">
     <svg-icon src='question' class="cursor-pointer"></svg-icon>
-    <div class="tooltip-sm">
+    <div class="tooltitext-lm">
       <div class="is-flex">
         <svg-icon src="credit-card"></svg-icon>
-        <p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+        <p class="text-l px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
       </div>
       <div class="close">
         <svg-icon src="close-s"></svg-icon>
@@ -1076,9 +1076,9 @@
   </div>
   {% elif tooltipType === "tooltip-*dir*" %}
   <div class="has-tooltip">
-    <p class="p-s cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
-    <div class="tooltip-sm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
-      <p class="p-s px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
+    <p class="text-l cursor-pointer">tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br</p>
+    <div class="tooltitext-lm tooltip-tl | tooltip-tr | tooltip-bl | tooltip-br">
+      <p class="text-l px-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro.</p>
       <div class="close">
         <svg-icon src="close-s"></svg-icon>
       </div>
@@ -1103,7 +1103,7 @@
       </div>
     </svg-icon>
     {% endif %}
-    <p class="p-s px-8"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro. </p>
+    <p class="text-l px-8"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, porro. </p>
   </div>
   <div class="close">
     <svg-icon src="close-s">
@@ -1124,9 +1124,9 @@
 {% endmacro %}
 {# TODO JUNTAR MACROS LINKS #}
 {% macro link(elementType = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="code-view">
   <div class="check-new"></div>
   <a class="{{ elementType }}" href="">
@@ -1141,9 +1141,9 @@
 <pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
 {% macro linkPost(elementType = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="code-view ">
   <div class="check-new"></div>
   <a class="link-line {{ elementType }}" href="">
@@ -1168,9 +1168,9 @@
 <pre><code class="language-markup">{{standardcode}}</code></pre>
 {% endmacro %}
 {% macro linkPre(elementType = '', explicacion = '', dark = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="code-view ">
   <div class="check-new"></div>
   <a class="link-line {{ elementType }}" href="">
@@ -1197,8 +1197,8 @@
 {# TODO END #}
 {# TODO JUNTAR MACROS CHECK #}
 {% macro checkboxImg(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}</h3>
-<p class="p-xs">{{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ elementType }}</h3>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1247,8 +1247,8 @@
 </div>
 {% endmacro %}
 {% macro checkbox(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}</h3>
-<p class="p-xs">{{ explicacion }}</p>
+<h3 class="my-16 title-l">{{ elementType }}</h3>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1289,9 +1289,9 @@
 </div>
 {% endmacro %}
 {% macro checkboxText(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1305,7 +1305,7 @@
             </g>
           </svg>
         </i>
-        <span class="p-xs">
+        <span class="title-xs">
           checkbox-item <a href="#">legal text</a>
         </span>
       </label>
@@ -1322,7 +1322,7 @@
           </g>
         </svg>
       </i>
-      <span class="p-xs">
+      <span class="title-xs">
         checkbox-item <a href="#">legal text</a>
       </span>
     </label>
@@ -1334,9 +1334,9 @@
 </div>
 {% endmacro %}
 {% macro checkbox2(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1363,9 +1363,9 @@
 </div>
 {% endmacro %}
 {% macro checkboxRadio(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1373,14 +1373,14 @@
       <input id="1" name="gender" type="radio" value="F" />
       <label for="1">
         <i class="ico-radio"></i>
-        <span class="p-xs">checkbox-radio</span>
+        <span class="title-xs">checkbox-radio</span>
       </label>
     </div>
     <div class="checkbox-radio">
       <input id="2" name="gender" type="radio" value="F" />
       <label for="2">
         <i class="ico-radio"></i>
-        <span class="p-xs">checkbox-radio</span>
+        <span class="title-xs">checkbox-radio</span>
       </label>
     </div>
   </div>
@@ -1389,14 +1389,14 @@
     <input id="1" name="gender" type="radio" value="F" />
     <label for="1">
       <i class="ico-radio"></i>
-      <span class="p-xs">checkbox-radio</span>
+      <span class="title-xs">checkbox-radio</span>
     </label>
   </div>
   <div class="checkbox-radio">
     <input id="2" name="gender" type="radio" value="F" />
     <label for="2">
       <i class="ico-radio"></i>
-      <span class="p-xs">checkbox-radio</span>
+      <span class="title-xs">checkbox-radio</span>
     </label>
   </div>
   {% endset %}
@@ -1406,9 +1406,9 @@
 </div>
 {% endmacro %}
 {% macro checkboxRadioFeel(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1420,7 +1420,7 @@
             <input id="gender_female" name="gender" formcontrolname="gender" type="radio" value="F" />
             <label for="gender_female">
               <i class="ico-radio"></i>
-              <span class="p-xs">Mujer</span></label>
+              <span class="title-xs">Mujer</span></label>
           </div>
         </div>
         <div class="pr-16">
@@ -1428,7 +1428,7 @@
               value="M" />
             <label for="gender_male">
               <i class="ico-radio"></i>
-              <span class="p-xs">Hombre</span></label>
+              <span class="title-xs">Hombre</span></label>
           </div>
         </div>
         <div class="has-feel">
@@ -1455,7 +1455,7 @@
           <input id="gender_female" name="gender" formcontrolname="gender" type="radio" value="F" />
           <label for="gender_female">
             <i class="ico-radio"></i>
-            <span class="p-xs">Mujer</span></label>
+            <span class="title-xs">Mujer</span></label>
         </div>
       </div>
       <div class="pr-16">
@@ -1463,7 +1463,7 @@
             value="M" />
           <label for="gender_male">
             <i class="ico-radio"></i>
-            <span class="p-xs">Hombre</span></label>
+            <span class="title-xs">Hombre</span></label>
         </div>
       </div>
       <div class="has-feel">
@@ -1479,9 +1479,9 @@
 </div>
 {% endmacro %}
 {% macro checkboxCard(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1490,7 +1490,7 @@
         <div class="checkbox-card">
           <input id="17-1" name="gender" type="radio">
           <label for="17-1" class=" checkbox-card-label">
-            <div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+            <div class=" title-xs">Recoger el 24/09 en la misma tienda</div>
           </label>
         </div>
       </div>
@@ -1498,7 +1498,7 @@
         <div class="checkbox-card">
           <input id="17-3" name="gender" type="radio" value="a">
           <label for="17-3" class=" checkbox-card-label ">
-            <div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
+            <div class=" title-xs">Guardar los artículos en “Comprar más tarde” </div>
           </label>
         </div>
       </div>
@@ -1510,7 +1510,7 @@
       <div class="checkbox-card">
         <input id="17-1" name="gender" type="radio">
         <label for="17-1" class=" checkbox-card-label">
-          <div class=" p-xs-b">Recoger el 24/09 en la misma tienda</div>
+          <div class=" title-xs">Recoger el 24/09 en la misma tienda</div>
         </label>
       </div>
     </div>
@@ -1518,7 +1518,7 @@
       <div class="checkbox-card">
         <input id="17-3" name="gender" type="radio" value="a">
         <label for="17-3" class=" checkbox-card-label ">
-          <div class=" p-xs-b">Guardar los artículos en “Comprar más tarde” </div>
+          <div class=" title-xs">Guardar los artículos en “Comprar más tarde” </div>
         </label>
       </div>
     </div>
@@ -1532,9 +1532,9 @@
 {# TODO END #}
 {# TODO INPUTS #}
 {% macro input(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1555,20 +1555,20 @@
 </div>
 {% endmacro %}
 {% macro inputTexto(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
     <div>
-      <div class="p-s">
+      <div class="text-l">
         Titular del input básico
       </div>
       <div class="form-input-label-2 mb-16  ">
         <input type="email" id="t2" class="input" placeholder="Email address" required="">
         <label for="t2">form input label 2 </label>
-        <div class="p-s c-dark-grey pt-4">
+        <div class="text-l c-dark-grey pt-4">
           Texto explicativo
         </div>
       </div>
@@ -1576,13 +1576,13 @@
   </div>
   {% set standardcode %}
   <div>
-    <p class="p-s">
+    <p class="text-l">
       Titular del input básico
     </p>
     <div class="form-input-label-2 mb-16  ">
       <input type="email" id="t2" class="input" placeholder="Email address" required="">
       <label for="t2">form input label 2 </label>
-      <p class="p-s c-dark-grey pt-4">
+      <p class="text-l c-dark-grey pt-4">
         Texto explicativo
       </p>
     </div>
@@ -1594,9 +1594,9 @@
 </div>
 {% endmacro %}
 {% macro inputFeelBadge(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1635,9 +1635,9 @@
 </div>
 {% endmacro %}
 {% macro inputError(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1645,7 +1645,7 @@
       <input type='email' id='t2' class='input' placeholder='Email address' required='' />
       <label for='t2'>form input label 2</label>
       <div class='validation-error-messages'>
-        <div class='help p-xs'>
+        <div class='help title-xs'>
           <svg-icon src='warning' class='pr-8'>
             <div>
               <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -1669,7 +1669,7 @@
     <input type="email" id="t2" class="input" placeholder="Email address" required="">
     <label for="t2">form input label 2</label>
     <div class="validation-error-messages">
-      <div class="help p-xs">
+      <div class="help title-xs">
         <svg-icon src="alert"></svg-icon>
         Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
         siguiente Mensaje de error nuevo , empuja el siguiente Mensaje de error nuevo , empuja el
@@ -1684,9 +1684,9 @@
 </div>
 {% endmacro %}
 {% macro inputPre(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1721,9 +1721,9 @@
 </div>
 {% endmacro %}
 {% macro inputPost(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1756,9 +1756,9 @@
 </div>
 {% endmacro %}
 {% macro inputPwd(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1766,7 +1766,7 @@
     <div>
       <div class="row">
         <div class="col-xs-12">
-          <div class="tit-s mb-16"> Input Password</div>
+          <div class="title-s mb-16"> Input Password</div>
           <div class="form-input-label-2 form-input-pass has-ico-post">
             <input type="password" id="t5" class="input" placeholder="Password">
             <label for="t5">Input Password</label>
@@ -1786,7 +1786,7 @@
       </div>
       <div class="row ">
         <div class="col-xs-6">
-          <ul class=" list-mini p-xs">
+          <ul class=" list-mini title-xs">
             <li>lorem</li>
             <li>lorem</li>
             <li>lorem</li>
@@ -1794,7 +1794,7 @@
           </ul>
         </div>
         <div class="col-xs-6">
-          <ul class=" list-mini p-xs">
+          <ul class=" list-mini title-xs">
             <li class="is-missing">lorem</li>
             <li>lorem</li>
             <li>lorem</li>
@@ -1809,7 +1809,7 @@
   <div>
     <div class="row">
       <div class="col-xs-12">
-        <div class="tit-s mb-16"> Input Password</div>
+        <div class="title-s mb-16"> Input Password</div>
         <div class="form-input-label-2 form-input-pass has-ico-post">
           <input type="password" id="t5" class="input" placeholder="Password">
           <label for="t5">Input Password</label>
@@ -1836,7 +1836,7 @@
     </div>
     <div class="row ">
       <div class="col-xs-6">
-        <ul class=" list-mini p-xs">
+        <ul class=" list-mini title-xs">
           <li>lorem</li>
           <li>lorem</li>
           <li>lorem</li>
@@ -1844,7 +1844,7 @@
         </ul>
       </div>
       <div class="col-xs-6">
-        <ul class=" list-mini p-xs">
+        <ul class=" list-mini title-xs">
           <li class="is-missing">lorem</li>
           <li>lorem</li>
           <li>lorem</li>
@@ -1860,9 +1860,9 @@
 </div>
 {% endmacro %}
 {% macro inputDisabled(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1885,9 +1885,9 @@
 </div>
 {% endmacro %}
 {% macro inputPrefix(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1921,9 +1921,9 @@
 </div>
 {% endmacro %}
 {% macro inputPrefixDropdown(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -1966,9 +1966,9 @@
 </div>
 {% endmacro %}
 {% macro inputPrefixBtn(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -2013,28 +2013,28 @@
 </div>
 {% endmacro %}
 {% macro inputIpod(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
     {# ---------- #}
     <div class="row">
       <div class="col-xs-6 ">
-        <label class="p-xs" for=""> Input</label>
+        <label class="title-xs" for=""> Input</label>
         <input type="text" placeholder="input" class="input">
       </div>
       <div class="col-xs-6 is-error">
-        <label class="p-xs" for=""> is-error</label>
+        <label class="title-xs" for=""> is-error</label>
         <input type="text" placeholder="is-error" class="input">
       </div>
       <div class="col-xs-6 ok-input">
-        <label class="p-xs" for=""> ok-input</label>
+        <label class="title-xs" for=""> ok-input</label>
         <input type="text" placeholder="ok-input" class="input">
       </div>
       <div class="col-xs-6 disabled-input">
-        <label class="p-xs" for=""> disabled-input</label>
+        <label class="title-xs" for=""> disabled-input</label>
         <input type="text" placeholder="disabled-input" class="input">
       </div>
     </div>
@@ -2043,7 +2043,7 @@
   {% set standardcode %}
   <div class='row'>
     <div class='col-xs-6 is-error | ok-input | disabled-input'>
-      <label class='p-xs' for=''>Input</label>
+      <label class='title-xs' for=''>Input</label>
       <input type='text' placeholder='input' class='input' />
     </div>
   </div>
@@ -2055,9 +2055,9 @@
 {% endmacro %}
 {# TODO END #}
 {% macro inputBtn(elementType = '', explicacion = '') %}
-<h3 class="my-16 tit-m">{{ elementType }}
+<h3 class="my-16 title-l">{{ elementType }}
 </h3>
-<p class="p-xs">{{ explicacion }}</p>
+<p class="title-xs">{{ explicacion }}</p>
 <div class="mb-32 ">
   <div class="code-view ">
     <div class="check-new"></div>
@@ -2067,7 +2067,7 @@
         <div class="form-input-label-2"><input id="order" type="text" formcontrolname="order" class="form-control input"
             placeholder="Nº del pedido"><label for="order">Nº del pedido</label>
           <div class="help">
-            <div class="p-xs c-dark-grey">Ej: 34567890722</div>
+            <div class="title-xs c-dark-grey">Ej: 34567890722</div>
           </div>
         </div>
       </div>
@@ -2090,7 +2090,7 @@
           placeholder="Nº del pedido">
         <label for="order">Nº del pedido</label>
         <div class="help">
-          <div class="p-xs c-dark-grey">Ej: 34567890722</div>
+          <div class="title-xs c-dark-grey">Ej: 34567890722</div>
         </div>
       </div>
     </div>
@@ -2136,7 +2136,7 @@
 </div>
 {% endmacro %}
 {% macro bannerActions(bannerClass = '', title = '') %}
-<h3 class="my-16 tit-m">{{title}}</h3>
+<h3 class="my-16 title-l">{{title}}</h3>
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <div class="container">
@@ -2144,10 +2144,10 @@
         {% if bannerClass === "link-line" %}
         <div class=" bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
           <div class="is-flex flex-column">
-            <span class="tit-xs mb-8">
+            <span class="title-s mb-8">
               Recoge tu pedido en Gran Via de les Corts Catalanes
             </span>
-            <p class="p-xs link-raw">Pulsa aquí para cambiar de tienda</p>
+            <p class="title-xs link-raw">Pulsa aquí para cambiar de tienda</p>
           </div>
           <div class="flex-grow-0 ml-16">
             <span class="link-line">
@@ -2158,10 +2158,10 @@
         {% set standardcode %}
         <div class="bg-alert flex-vcenter pt-8 pb-8 pl-16 pr-16 mb-24">
           <div class="is-flex flex-column">
-            <span class="tit-xs mb-8">
+            <span class="title-s mb-8">
               ¡Recoge tu pedido en solo X horas!
             </span>
-            <p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+            <p class="title-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
           </div>
           <div class="flex-grow-0 ml-16">
             <span class="link-line">
@@ -2173,10 +2173,10 @@
         <div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
           <div class="row ">
             <div class="col">
-              <span class="tit-xs">
+              <span class="title-s">
                 ¡Recoge tu pedido en solo X horas!
               </span>
-              <p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+              <p class="title-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
             </div>
             <div class="col-xs-2 text-right is-flex content-end  align-middle">
               {% call svgIconname('arrow-right') %}
@@ -2188,10 +2188,10 @@
         <div class="col-xs-12 bg-alert pt-8 pb-8 pl-16 pr-16">
           <div class="row ">
             <div class="col">
-              <span class="tit-xs">
+              <span class="title-s">
                 ¡Recoge tu pedido en solo X horas!
               </span>
-              <p class="p-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
+              <p class="title-xs">Selecciona una tienda para recoger tu pedido hoy mismo</p>
             </div>
             <div class="col-xs-2 text-right is-flex content-end  align-middle">
               <svg-icon src="arrow-right"></svg-icon>
@@ -2205,7 +2205,7 @@
             {% endcall %}
           </div>
           <div class="is-flex flex-column">
-            <p class="p-m">
+            <p class="text-l">
               Los artículos no disponibles han sido guardados en “Comprar más tarde”.
             </p>
           </div>
@@ -2216,7 +2216,7 @@
             <svg-icon src="arrow-right"></svg-icon>
           </div>
           <div class="is-flex flex-column">
-            <p class="p-m">
+            <p class="text-l">
               Los artículos no disponibles han sido guardados en “Comprar más tarde”.
             </p>
           </div>
@@ -2232,7 +2232,7 @@
             {% endcall %}
           </div>
           <div class="is-flex flex-1 flex-column">
-            <p class="p-s">
+            <p class="text-l">
               Descubre las últimas novedades en nuestra app
             </p>
           </div>
@@ -2250,7 +2250,7 @@
             <svg-icon src="X"></svg-icon>
           </div>
           <div class="is-flex flex-column">
-            <p class="p-s"> Descubre las últimas novedades en nuestra app </p>
+            <p class="text-l"> Descubre las últimas novedades en nuestra app </p>
           </div>
           <div class="flex-grow-0 pl-16">
             <svg-icon src="X"></svg-icon>
@@ -2270,7 +2270,7 @@
             </svg-icon>
           </div>
           <div class="is-flex flex-1 flex-column">
-            <p class="p-s">
+            <p class="text-l">
               Te faltan 26,70€ para disfrutar de envío gratuito a casa.
             </p>
           </div>
@@ -2292,7 +2292,7 @@
             <svg-icon class="warning"></svg-icon>
           </div>
           <div class="is-flex flex-1 flex-column">
-            <p class="p-s">Te faltan 26,70€ para disfrutar de envío gratuito a casa.</p>
+            <p class="text-l">Te faltan 26,70€ para disfrutar de envío gratuito a casa.</p>
           </div>
           <div class="flex-grow-0 pl-16">
             <svg-icon class="warning"></svg-icon>

@@ -14,14 +14,14 @@ layout: base.njk
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m mb-24">Svg icon</div>
+      <div class="title-l mb-24">Svg icon</div>
     </div>
     <div class="col-xs-12">
-      <div class="tit-s c-dark-grey mb-24">
+      <div class="title-s c-dark-grey mb-24">
         En el proyecto contamos con un componente que crea iconos basados en svg
         llamado <b><i>svg-icon</i></b>.
       </div>
-      <div class="p-s  mb-32">
+      <div class="text-l  mb-32">
         Es importante asegurarse que tenemos importado el modulo de svg en el componente </b>.
       </div>
       <pre>
@@ -35,10 +35,10 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Como usar</div>
+      <div class="title-l">Como usar</div>
     </div>
     <div class="col-xs-12">
-      <p class="p-s mb-16">
+      <p class="text-l mb-16">
         Al usar el componente solo hay que asignar el parámetro
         <b><i>src</i></b> con el icono a usar, que a su vez deberá estar en el
         archivo icons.json en el proyecto.
@@ -64,7 +64,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
                 </pre>
       </div>
       <h3 class="mb-16">Variante de color</h3>
-      <p class="p-s mb-16">
+      <p class="text-l mb-16">
         Usaremos la clase <code>ico-white </code> <code>ico-success </code> <code>ico-error </code> en el interior del
         svg-icon .
       </p>
@@ -94,18 +94,18 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Incluir iconos al inventario</div>
+      <div class="title-l">Incluir iconos al inventario</div>
     </div>
     <div class="col-xs-12">
-      <div class="tit-s c-dark-grey mb-32">
+      <div class="title-s c-dark-grey mb-32">
         Cuando necesites incorporar un nuevo icono en la lista sigue atentamente
         estas recomendaciones:
       </div>
-      <p class="p-s mb-24">
+      <p class="text-l mb-24">
         Recuerda que el recurso gráfico <b>SIEMPRE</b> debe ser proveído por art
         digital o estar en el <b>MD DESING SYSTEM</b> en figma
       </p>
-      <p class="p-s mb-24">
+      <p class="text-l mb-24">
         Cuando exportes el SVG, ábrelo en un editor de código y valida que:
       </p>
       <ul class="mb-24">
@@ -119,12 +119,12 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
         </ol>
       </ul>
       <div class="tip">
-        <div class="tit-s"><b> truco </b></div>
+        <div class="title-s"><b> truco </b></div>
         A la hora de incluirlo en el json, recuerda mantener el orden alfabético
         para mantener el orden. Usaremos la extensión de visual studio
         <b>Alphabetical Sorter</b>
       </div>
-      <p class="p-s mt-48">Guia para incluir iconos desde Figma:</p>
+      <p class="text-l mt-48">Guia para incluir iconos desde Figma:</p>
       <div style="position: relative; padding-bottom: 62.5%; height: 0">
         <iframe src="https://www.loom.com/embed/31072d083792468f842532573d080bf2" frameborder="0" webkitallowfullscreen
           mozallowfullscreen allowfullscreen
@@ -140,10 +140,10 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="m-32">
   <div class="row">
     <div class="col-xs-12">
-      <p class="tit-s ">
+      <p class="title-s ">
         Iconos
       </p>
-      <p class="p-s mb-32">
+      <p class="text-l mb-32">
         Inventario de iconos disponibles, todo en minúsculas y separado por
         guión medio.
       </p>
@@ -183,18 +183,18 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
           </div>
 
           <div id="tabguide5" class="tabguide-content btn-secondary">
-            <div id="loopicons5" class="p-s"></div>
+            <div id="loopicons5" class="text-l"></div>
           </div>
 
             <div id="tabguide6" class="tabguide-content has-feel btn-secondary">
-            <div id="loopicons6" class="p-s"></div>
+            <div id="loopicons6" class="text-l"></div>
           </div>
         </div>
         <!-- END tabguideguide-content -->
 
       <!-- END tabguideguide -->
       </div>
-      <p class="p-s mb-16">
+      <p class="text-l mb-16">
         Marcar que iconos no tienen el tamaño de 16x16: 
       </p>
       <button class="btn btn-primary btn--mini mb-16 check-16">Test</button>
@@ -207,8 +207,8 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section>
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Tamaños de iconos</div>
-      <p class="p-s mb-16">Podemos cambiar el tamaño de los iconos con las clases <code>x24</code> <code>x32</code>
+      <div class="title-l">Tamaños de iconos</div>
+      <p class="text-l mb-16">Podemos cambiar el tamaño de los iconos con las clases <code>x24</code> <code>x32</code>
         <code>x48</code> y <code>x64</code></p>
       <div class="resize-mini mb-32">
         <div class="resize-mini-content">
@@ -248,7 +248,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Ejemplos de elementos con iconos</div>
+      <div class="title-l">Ejemplos de elementos con iconos</div>
     </div>
     <div class="col-xs-12">
       <h2 class="">
@@ -270,7 +270,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Integrar iconos a una maqueta</div>
+      <div class="title-l">Integrar iconos a una maqueta</div>
     </div>
     <div class="col-xs-12">
       <h2 class="mb-24">
@@ -285,7 +285,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
               <div class="col-xs-12 mb-16 text-center">
                 <div class="is-flex">
                   {% call insert.svgIconname('plus') %} {% endcall %}
-                  <p class="p-s pl-16">texto</p>
+                  <p class="text-l pl-16">texto</p>
                 </div>
               </div>
             </div>
@@ -294,7 +294,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
         {% set standardcode %}
         <div class="is-flex">
           <svg-icon src="plus"></svg-icon>
-          <p class="p-s pl-16">texto</p>
+          <p class="text-l pl-16">texto</p>
         </div>
         {% endset%}
         <pre>
@@ -315,7 +315,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
                   </div>
                   <div class="row">
                     <div class="col-xs-12 text-left">
-                      <span class="p-m-b">Entrega 1</span>
+                      <span class="text-l-b">Entrega 1</span>
                       <span>- 12343232123</span>
                     </div>
                     <div class="col-xs-12 text-left">
@@ -334,7 +334,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
           </div>
           <div class="row">
             <div class="col-xs-12 text-left">
-              <span class="p-m">Entrega 1</span>
+              <span class="text-l">Entrega 1</span>
               <span>- 12343232123</span>
             </div>
             <div class="col-xs-12 text-left">
@@ -356,10 +356,10 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="tit-m">Iconos especiales</div>
+      <div class="title-l">Iconos especiales</div>
     </div>
     <div class="col-xs-12">
-      <div class="tit-s c-dark-grey mb-16">
+      <div class="title-s c-dark-grey mb-16">
         En ocasiones los iconos pueden aparecer con otros elementos
       </div>
     </div>

@@ -39,8 +39,8 @@ h4 {
 h5 {
    //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
   width: 100%;
-  line-height: 1;
-  @include font-bold();
+  line-height: 1.2;
+
 }
 
 h6 {
@@ -532,9 +532,10 @@ h6 {
       }
     }
 
-    $marginsFamily: (4, 8, 16, 24, 32, 40, 48, 64, 100);
 
-    @each $name in $marginsFamily {
+
+
+    @each $name in $espaciados {
       $typeFluid0: $name; //funcion del fipografia
 
       .mb-#{$typeFluid0} {
@@ -557,10 +558,68 @@ h6 {
       }
     }
 
-    $marginsFamily: (4, 8, 16, 24, 32, 40, 48, 64, 100);
 
-    @each $name in $marginsFamily {
+
+    @each $name in $espaciados {
       $typeFluid0: $name; //funcion del fipografia
+
+      .n1a-2, .n1c-2, .n2a-2, .n2b-2, .n2c-2, .n3b-2, .n4a-2, .n4e-2, .n4f-2, .n6b-2,.nt-2{
+        &:after{
+          content: "-2 margen bottom ";
+          position: absolute;
+          background-color: #cde0be;
+          color: #76ae4a;
+          width: 100%;
+          height: 48px;
+          bottom: 0;
+          text-align: center;
+        }
+        &:before{
+          content: "-2 margen top";
+          position: absolute;
+          background-color: #cde0be;
+          color: #76ae4a;
+          width: 100%;
+          height: 48px;
+          top: 0;
+          text-align: center;
+        }
+
+
+    }
+
+
+
+    .n1a-1, .n1c-1, .n2a-1, .n2b-1, .n2c-1, .n3b-1, .n4a-1, .n4e-1, .n4f-1, .n6b-1,.nt-1{
+      &:after{
+        content: "-2 margen bottom";
+        position: absolute;
+        background-color: #bed2e0;
+        color: #282e3f;
+        width: 100%;
+        height: 48px;
+        bottom: 0;
+        text-align: center;
+      }
+      &:before{
+    display: none;
+      }
+
+
+  }
+
+  .n1a-0, .n1c-0, .n2a-0, .n2b-0, .n2c-0, .n3b-0, .n4a-0, .n4e-0, .n4f-0, .n6b-0,.nt-0{
+    &:after{
+      display: none;
+    }
+    &:before{
+  display: none;
+    }
+
+
+}
+
+
 
       .pb-#{$typeFluid0} {
         position: relative;
@@ -602,7 +661,7 @@ h6 {
     }
 
     &.is-rtl {
-      @each $name in $marginsFamily {
+      @each $name in $espaciados {
         $typeFluid0: $name; //funcion del fipografia
 
         .mb-#{$typeFluid0} {

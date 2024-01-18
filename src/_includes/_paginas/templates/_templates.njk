@@ -9,7 +9,7 @@ layout: base.njk
     <div class="col-xs-12">
       <div class="main-content innermarkdown">
         {{ content | safe }}
-        <div class="list-grid">
+        <div class="list-grid pt-24">
           {% for template in collections.templates | reverse %}
             {% include 'template-loop.njk' %}
           {% endfor %}

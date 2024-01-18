@@ -9,7 +9,7 @@ layout: base.njk
         <h3>{{ modalsize |
     capitalize }} + {{ margin | capitalize }}</h3>
         <hr>
-        <p class="p-m">
+        <p class="text-l">
             {{ explicacion | capitalize }}
         </p>
         <div class="resize-mini">
@@ -60,7 +60,7 @@ layout: base.njk
                     <button class="btn btn--mini btn-primary" onclick="modalBgtransparent()">TRANSPARENT_BACKGROUND</button>
                 </div>
             </div>
-            <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
+            <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrotext-lhowing"></div>
             <div class="modal-content" dir="ltr">
                 <div class="cdk-overlay-pane">
                     <component>
@@ -87,12 +87,12 @@ layout: base.njk
                                     </div>
                                     <div class="modalx-body">
                                         <div class="modal-title text-center mb-24">
-                                            <p class=" tit-s">Modal</p>
+                                            <p class=" title-s">Modal</p>
                                         </div>
-                                        <p class="p-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                        <p class="title-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
                                     fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
                                     Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
-                                        <p class="p-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
+                                        <p class="title-xs mb-16"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
                                     fugit sint earum iste repudiandae saepe reprehenderit voluptates assumenda suscipit?
                                     Repudiandae natus iste non quisquam. Iusto quibusdam sit ex qui voluptatem. </p>
                                     </div>
@@ -108,7 +108,7 @@ layout: base.njk
 {% macro modalShopLook(modalname = '', explicacion = '') %}
     <h3>{{ modalname | capitalize }}</h3>
     <hr>
-    <p class="p-m">
+    <p class="text-l">
         {{ explicacion | capitalize }}
     </p>
     <div class="resize-mini">
@@ -133,7 +133,7 @@ layout: base.njk
 {% macro modalContentShopLook() %}
     <div class="cdk-overlay-container modal-container"
     id="modal-container-shoplook">
-        <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrop-showing"></div>
+        <div class="cdk-overlay-backdrop modalx-backdrop cdk-overlay-backdrotext-lhowing"></div>
         <div class="modal-content" dir="ltr">
             <div class="cdk-overlay-pane">
                 <component>
@@ -157,9 +157,9 @@ layout: base.njk
                                 <div class="modalx-body">
                                     <div class="container-10 mt-40">
                                         <img src="https://placeimg.com/600/800/people/grayscale" alt="" class="w-100 mb-16">
-                                        <h2 class="p-m mb-16 text-center has-ellipsis-3">TOP DE PUNTO RAYAS HOMBROS
+                                        <h2 class="text-l mb-16 text-center has-ellipsis-3">TOP DE PUNTO RAYAS HOMBROS
                                     </h2>
-                                        <p class="p-m mb-16 text-center">49,95 €</p>
+                                        <p class="text-l mb-16 text-center">49,95 €</p>
                                         <div class="is-flex flex-column w-100 mb-16">
                                             <button class="btn btn-secondary mb-16"> Label</button>
                                             <button class="btn btn-primary mb-16"> Label</button>

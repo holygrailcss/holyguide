@@ -3,7 +3,7 @@ layout: _paginas/foundations/_images.njk
 permalink: /images/
 
 titulo: Imágenes
-descripcion: .
+descripcion: Playground y imágenes
 
 date: 2023-06-19
 fecha: 19 de junio de 2023

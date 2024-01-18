@@ -3,7 +3,7 @@ layout: _paginas/foundations/_tipografia.njk
 permalink: /tipografia/
 
 titulo: Tipografias
-descripcion: .
+descripcion: Fuentes y tipografias
 
 date: 2023-06-19
 fecha: 19 de junio de 2023

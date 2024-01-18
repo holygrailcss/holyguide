@@ -2,10 +2,17 @@
 @import "../abstract/_gridNEW.scss";
 
 .n2c {
+  @include sp-wraps('.n2c');
+}
+
+
+
+
     .n2c-wrap {
   
       display: flex;
       justify-content: center;
+      @include sp-contents-2n-1;
   
       @include m-body-bleed;
       @include gap-20;
@@ -32,5 +39,5 @@
         @include col-24-8;
       }
     }
-  }
+
   

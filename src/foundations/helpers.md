@@ -2,7 +2,7 @@
 layout: _paginas/foundations/_foundations.njk
 permalink: /helpers/
 titulo: Helpers
-descripcion: .
+descripcion: Helpers para developers
 date: Last Modified
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]

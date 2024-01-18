@@ -4,29 +4,39 @@ title: parrillas
 permalink: /parrillas-collection/
 ---
 <div class="select-zone">
-    <a class="fin" href="#n1a"> n1a</a>
+    <div class="row">
+        <div class="col-xs-4">
+            <a class="fin" href="#n1a"> n1a</a>
+            <a class="fin" href="#n1c"> n1c</a>
+            <a class="fin" href="#n2a"> n2a</a>
+            <a class="fin" href="#n2b"> n2b</a>
+            <a class="fin" href="#n2c"> n2c</a>
+            <a class="fin" href="#n3b"> n3b</a>
+            <a class="fin" href="#n4a"> n4a</a>
+            <a class="fin" href="#n4e"> n4e</a>
+            <a class="fin" href="#n4f"> n4f</a>
+            <a class="fin" href="#n6b"> n6b</a>
+            <br>
+   
+        </div>
+            <div class="col-xs-4 text-center">
+                <a class="rtl">RTL</a>
+                <a class="over1">Sangre</a>
+                <a class="over2">pbody</a>
+                <a class="over3">no gap</a>
+        
+        </div>
 
-    <a class="fin" href="#n1c"> n1c</a>
+        <div class="col-xs-4 text-right pr-40 is-flex content-end">
+            <div  id="suffix-0"> <button class="btn btn-primary"> -0 </button>   </div>
+            <div  id="suffix-1">  <button class="btn btn-primary">-1</button></div>
+            <div  id="suffix-2">  <button class="btn btn-primary"> -2</button> </div>
+
+    
+    </div>
+    </div>
 
 
-    <a class="fin" href="#n2a"> n2a</a>
-    <a class="fin" href="#n2b"> n2b</a>
-    <a class="fin" href="#n2c"> n2c</a>
-
-    <a class="fin" href="#n3b"> n3b</a>
-
-    <a class="fin" href="#n4a"> n4a</a>
-    <a class="fin" href="#n4e"> n4e</a>
-    <a class="fin" href="#n4f"> n4f</a>
-
-    <a class="fin" href="#n6b"> n6b</a>
-
-
-    <br>
-    <a class="rtl">RTL</a>
-    <a class="over1">Sangre</a>
-    <a class="over2">pbody</a>
-    <a class="over3">no gap</a>
 </div>
 <div class="w-100 grid-product-list pt-100 ">
 
@@ -120,3 +130,30 @@ permalink: /parrillas-collection/
         <div class=" overlayclip overlay12"></div>
     </div>
 </div>
+
+<script>
+const classesToModify = ['n1a', 'n1c', 'n2a', 'n2b', 'n2c', 'n3b', 'n4a', 'n4e', 'n4f', 'n6b', 'nt'];
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    ['suffix-0', 'suffix-1', 'suffix-2'].forEach(suffixId => {
+        const suffix = suffixId.split('-')[1];
+        document.getElementById(suffixId).addEventListener('click', function() {
+            applySuffixToClasses(suffix);
+        });
+    });
+});
+
+function applySuffixToClasses(suffix) {
+    classesToModify.forEach(baseClass => {
+        document.querySelectorAll(`.${baseClass}`).forEach(element => {
+            // Eliminar las clases anteriores con sufijos
+            for (let i = 0; i <= 2; i++) {
+                element.classList.remove(`${baseClass}-${i}`);
+            }
+            // Añadir la nueva clase con sufijo
+            element.classList.add(`${baseClass}-${suffix}`);
+        });
+    });
+}
+</script>

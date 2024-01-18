@@ -3,9 +3,9 @@
     {{seccion_actual}}
     {% if page_section == "design" %}
       <a target="_parent" href="/design">
-        <h6> Design </h6>
+         <h6 class="mb-24"> Design </h6>
       </a>
-      <ul class="list-clear p-m-b mb-32 mt-8">
+      <ul class="list-clear text-l-b mb-32 mt-8">
 
         {% for template in collections.design %}
               {% include 'nav-loop.njk' %}
@@ -16,9 +16,9 @@
     {% endif %}
     {% if page_section == "develop" %}
       <a target="_parent" href="/develop">
-        <h6> Develop </h6>
+         <h6 class="mb-24"> Develop </h6>
       </a>
-      <ul class="list-clear p-m-b mb-32 mt-8">
+      <ul class="list-clear text-l-b mb-32 mt-8">
 
         {% for template in collections.develop  %}
               {% include 'nav-loop.njk' %}
@@ -27,9 +27,9 @@
     {% endif %}
     {% if page_section == 'foundations' %}
       <a target="_parent" href="/foundations">
-        <h6> Foundations </h6>
+         <h6 class="mb-24"> Foundations </h6>
       </a>
-      <ul class="list-clear p-m-b mb-32 mt-8">
+      <ul class="list-clear text-l-b mb-32 mt-8">
         <div class="body">
            {% for template in collections.foundations | reverse %}
               {% include 'nav-loop.njk' %}
@@ -40,7 +40,7 @@
       {% if page_section == 'components' %}
         <ul class="list-clear mb-32">
           <a target="_parent" href="/components">
-            <h6> Componentes </h6>
+            <h6 class="mb-24"> Componentes </h6>
           </a>
           <div class="body">
           {% for template in collections.components  %}
@@ -50,12 +50,12 @@
         </ul>
       {% endif %}
       {% if page_section == "templates" %}
-        <ul class="list-clear p-m-b mb-32 mt-8">
+        <ul class="list-clear text-l-b mb-32 mt-8">
 
 
           <li class="mb-8 {% if page_title == 'templates' %} link-line {% endif %}">
             <a  target="_parent" href="/templates">
-              <h6> Templates </h6>
+               <h6 class="mb-24"> Templates </h6>
             </a>
           </li>
 
