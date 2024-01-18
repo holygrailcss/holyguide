@@ -2628,6 +2628,12 @@ mark {
     font-size: 12px;
     line-height: 1.2;
   }
+  .title-l-l {
+    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 1.2;
+  }
   .title-m {
     font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
     font-weight: 500;
@@ -2669,6 +2675,10 @@ mark {
     line-height: 1.2;
   }
   .title-l-b {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .title-l-l {
     font-size: 12px;
     line-height: 1.2;
   }
@@ -4622,25 +4632,47 @@ strong {
   }
 }
 
-.min-overflow {
+.min-scrollcustom-y {
   overflow: auto;
   /* Track */
   /* Handle */
 }
-.min-overflow::-webkit-scrollbar {
+.min-scrollcustom-y::-webkit-scrollbar {
   width: 5px;
 }
-.min-overflow::-webkit-scrollbar-track {
+.min-scrollcustom-y::-webkit-scrollbar-track {
   background: #fff;
   -webkit-border-radius: 10px;
   border-radius: 0px;
 }
-.min-overflow::-webkit-scrollbar-thumb {
+.min-scrollcustom-y::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #999;
 }
-.min-overflow::-webkit-scrollbar-thumb:window-inactive {
+.min-scrollcustom-y::-webkit-scrollbar-thumb:window-inactive {
+  background: #999;
+}
+
+.min-scrollcustom-x {
+  overflow: auto;
+  /* Track */
+  /* Handle */
+}
+.min-scrollcustom-x::-webkit-scrollbar {
+  height: 5px;
+}
+.min-scrollcustom-x::-webkit-scrollbar-track {
+  background: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 0px;
+}
+.min-scrollcustom-x::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #999;
+}
+.min-scrollcustom-x::-webkit-scrollbar-thumb:window-inactive {
   background: #999;
 }
 
@@ -9083,7 +9115,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   display: none;
 }
 .tabs.tabs-resetfirst ul li:first-child a {
-  padding: 8px 20px 12px 0px;
+  padding: 0px 20px 8px 0px;
 }
 .tabs.is-center ul {
   justify-content: center;
@@ -9100,6 +9132,11 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
 }
 .tabs .list-equal li {
   flex-grow: 1;
+}
+
+.has-light .tabs .is-active a::after,
+.has-light .tabs .is-active span::after {
+  background-color: #ffffff;
 }
 
 .tabs-list,
@@ -11695,13 +11732,19 @@ header {
   width: 100%;
   color: #ffffff;
   z-index: 100;
-  height: 60px;
+  height: 50px;
   transition: all ease 0.3s;
   display: flex;
   align-items: center;
   font-size: 12px;
   mix-blend-mode: difference;
   background-blend-mode: difference;
+}
+@media (min-width: 992px) {
+  header {
+    padding-bottom: 0;
+    height: 60px;
+  }
 }
 
 header ul.list-clear li {
@@ -11712,12 +11755,6 @@ header a {
   color: white;
 }
 
-@media (min-width: 768px) {
-  header {
-    padding-bottom: 0;
-    height: 60px;
-  }
-}
 header.interior a {
   color: #212121;
 }
@@ -11735,7 +11772,7 @@ header.interior svg path {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .logo {
     width: 100%;
     max-width: 180px;
@@ -22445,6 +22482,32 @@ h6 {
   }
 }
 
+.nativescroll {
+  width: 100%;
+  padding: 0;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.nativescroll .inner-nativescroll {
+  position: relative;
+  display: inline-flex;
+}
+.nativescroll .inner-nativescroll div {
+  background: #ccc;
+  /* float: left; */
+  width: 22vw;
+}
+@media (min-width: 992px) {
+  .nativescroll .inner-nativescroll div {
+    width: 15vw;
+  }
+}
+@media (min-width: 1280px) {
+  .nativescroll .inner-nativescroll div {
+    width: 10vw;
+  }
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -23748,20 +23811,32 @@ table tr td {
   .ptr-120 {
     padding-top: 64px;
   }
+  .ptr-112 {
+    padding-top: 80px;
+  }
 }
 @media (min-width: 768px) {
   .ptr-120 {
     padding-top: 64px;
   }
+  .ptr-112 {
+    padding-top: 80px;
+  }
 }
 @media (min-width: 992px) {
   .ptr-120 {
     padding-top: 120px;
   }
+  .ptr-112 {
+    padding-top: 112px;
+  }
 }
 @media (min-width: 1280px) {
   .ptr-120 {
     padding-top: 120px;
+  }
+  .ptr-112 {
+    padding-top: 112px;
   }
 }
 @media (min-width: 1px) {
@@ -23788,20 +23863,32 @@ table tr td {
   .pbr-120 {
     padding-bottom: 64px;
   }
+  .pbr-112 {
+    padding-bottom: 80px;
+  }
 }
 @media (min-width: 768px) {
   .pbr-120 {
     padding-bottom: 64px;
+  }
+  .pbr-112 {
+    padding-bottom: 80px;
   }
 }
 @media (min-width: 992px) {
   .pbr-120 {
     padding-bottom: 120px;
   }
+  .pbr-112 {
+    padding-bottom: 112px;
+  }
 }
 @media (min-width: 1280px) {
   .pbr-120 {
     padding-bottom: 120px;
+  }
+  .pbr-112 {
+    padding-bottom: 112px;
   }
 }
 @media (min-width: 1px) {

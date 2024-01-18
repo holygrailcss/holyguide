@@ -1,6 +1,7 @@
 $container-5: 800px;
 $btn-text-full: 12px;
 $btn-text-large: 12px;
+
 $btn-text-medium: 12px;
 $btn-text-small: 12px;
 $padding-mobile: 16px;
@@ -20,6 +21,7 @@ $minheaders: (
 
   title-l: ( 12px, 12px, 1.2, "regular", ), 
   title-l-b: ( 12px, 12px, 1.2, "medium", ), 
+  title-l-l: ( 12px, 12px, 1.2, "light", ), 
   title-m: ( 11px, 11px, 1.2, "medium", ), 
   title-s: ( 10px, 10px, 1.2, "medium", ), 
   title-xs: ( 11px, 11px, 1.2, 'regular', ),
@@ -169,12 +171,14 @@ $pt: 'padding-top';
 $padding-top: (
 
    ptr-120: ( 64px, 64px, 120px, 120px, ),
+   ptr-112: ( 80px, 80px,112px, 112px  ),
 ) !default;
 
 $pb: 'padding-bottom';
 $padding-bottom: (
 
    pbr-120: ( 64px, 64px, 120px, 120px, ),
+   pbr-112: ( 80px, 80px, 112px, 112px ),
    
    ) !default;
 
