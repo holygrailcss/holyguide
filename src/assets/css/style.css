@@ -22070,7 +22070,7 @@ h6 {
   flex-wrap: wrap;
   margin: 0 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .n4f-wrap {
     margin: 0 30px;
   }
