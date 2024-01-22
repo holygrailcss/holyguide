@@ -2616,6 +2616,12 @@ mark {
     font-size: 8px;
     line-height: 1.3;
   }
+  .h2 {
+    font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 1.2;
+  }
   .title-l {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
@@ -2669,6 +2675,10 @@ mark {
   .p-tag {
     font-size: 10px;
     line-height: 1.3;
+  }
+  .h2 {
+    font-size: 24px;
+    line-height: 1.2;
   }
   .title-l {
     font-size: 12px;
@@ -23941,14 +23951,14 @@ table tr td {
     max-width: 100%;
   }
 }
-.d-price-special div {
-  display: inline-block;
-}
-
 .d-price-special {
   display: inline-table;
-  padding: 0px 8px 1px;
+  padding: 4px 4px 2px;
+  margin-top: 2px;
   line-height: 0;
+}
+.d-price-special div {
+  display: inline-block;
 }
 
 .grid-product-list .tag-wrapper {
