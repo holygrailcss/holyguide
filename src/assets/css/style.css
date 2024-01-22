@@ -12702,14 +12702,6 @@ header.interior svg path {
   max-height: 400px;
 }
 
-pre {
-  position: relative;
-  margin-top: 0px;
-  margin-bottom: 16px;
-  padding: 16px;
-  background: #2d2d2d;
-}
-
 .resize-mini {
   overflow: hidden;
 }

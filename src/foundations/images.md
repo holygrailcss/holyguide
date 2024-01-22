@@ -19,7 +19,7 @@ En ocasiones necesitaremos posicionar imágenes para ver las futuras maquetas, p
 ###### La ruta para incorporar imagenes placeholders.
 
 ```
-https://holygrailcss.github.io/assets/placeholder/2-3.jpg
+https://holygrail2.github.io/assets/placeholder/2-3.jpg
 ```
 
 ### Como se usa
