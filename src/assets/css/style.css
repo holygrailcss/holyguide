@@ -24150,7 +24150,7 @@ table tr td {
 }
 
 .stories-list {
-  padding: 16px;
+  padding: 16px 0;
   border-bottom: var(--line-width) solid var(--c-primary);
   display: flex;
 }
@@ -24159,6 +24159,7 @@ table tr td {
 }
 .stories-list .stories-item-1 {
   width: 10%;
+  min-width: 40px;
 }
 .stories-list .stories-item-2 {
   width: 80%;
@@ -24176,6 +24177,7 @@ table tr td {
 }
 @media (min-width: 1280px) {
   .stories-list {
+    padding: 16px;
     border-bottom: var(--line-width) solid var(--c-primary);
   }
   .stories-list:last-child {

@@ -475,7 +475,7 @@ table tr td {
 
 }
 .stories-list {
-  padding: 16px;
+  padding: 16px 0;
   border-bottom: var(--line-width) solid $c-primary;
   &:last-child{
     border-bottom: var(--line-width) solid transparent;
@@ -483,6 +483,7 @@ table tr td {
   display: flex;
   .stories-item-1 {
     width: 10%;
+    min-width: 40px;
   }
   .stories-item-2 {
     width: 80%;
@@ -502,6 +503,7 @@ table tr td {
     gap: 16px;
   }
   @media (min-width: $break-lg) {
+    padding: 16px;
 
     &:last-child{
       border-bottom: var(--line-width) solid $c-primary;
