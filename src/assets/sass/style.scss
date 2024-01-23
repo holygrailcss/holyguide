@@ -470,36 +470,42 @@ table tr td {
   line-height: 0;
 }
 .stories-list {
-
-padding: 16px;
-border-bottom: var(--line-width) solid black;
-
+  padding: 16px;
+  border-bottom: var(--line-width) solid black;
   display: flex;
   .stories-item-1 {
     width: 10%;
   }
-  .stories-item-2 { 
+  .stories-item-2 {
     width: 80%;
-    gap:16px;
+    gap: 16px;
+
+    div{
+      margin-bottom: 8px;
+    }
+
+    & :last-child{
+      margin-bottom: 0;
+    }
 
   }
   .stories-item-3 {
     width: 10%;
-
-    gap:16px;
-
+    gap: 16px;
   }
-
-
   @media (min-width: $break-lg) {
     .stories-item-1 {
       width: 10%;
     }
     .stories-item-2 {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr  ;
+      grid-template-columns: 1fr 2fr 1fr;
       column-gap: 16px;
       width: 80%;
+
+      div{
+        margin-bottom: 0;
+      }
     }
     .stories-item-3 {
       display: grid;
@@ -508,6 +514,4 @@ border-bottom: var(--line-width) solid black;
       width: 10%;
     }
   }
-
-
 }
