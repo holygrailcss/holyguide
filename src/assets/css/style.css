@@ -24019,19 +24019,19 @@ table tr td {
 }
 
 .stories-list {
+  padding: 16px;
+  border-bottom: var(--line-width) solid black;
   display: flex;
 }
 .stories-list .stories-item-1 {
   width: 10%;
 }
 .stories-list .stories-item-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 80%;
   gap: 16px;
 }
 .stories-list .stories-item-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 10%;
   gap: 16px;
 }
 @media (min-width: 1280px) {
@@ -24040,14 +24040,14 @@ table tr td {
   }
   .stories-list .stories-item-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     column-gap: 16px;
-    width: 90%;
+    width: 80%;
   }
   .stories-list .stories-item-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 16px;
-    width: 90%;
+    width: 10%;
   }
 }
