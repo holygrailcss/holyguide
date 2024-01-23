@@ -8313,7 +8313,7 @@ label {
 .error-zone select:-webkit-autofill,
 .error-zone select:-webkit-autofill:hover,
 .error-zone select:-webkit-autofill:focus {
-  border: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
   -webkit-text-fill-color: #000000;
   box-shadow: 0 0 0 1000px #ffffff inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -8523,7 +8523,7 @@ label {
 .has-light .form-input-prefix select:-webkit-autofill,
 .has-light .form-input-prefix select:-webkit-autofill:hover,
 .has-light .form-input-prefix select:-webkit-autofill:focus {
-  border: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   -webkit-text-fill-color: #ffffff;
   box-shadow: 0 0 0 1000px #000000 inset;
 }
@@ -8730,6 +8730,7 @@ a:hover {
 
 .link-raw {
   display: inline-block;
+  padding-inline: 0;
   position: relative;
   border: 0;
   transform: none;
@@ -10737,6 +10738,136 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 .btn--macro.btn:hover {
   opacity: 0.6;
+}
+
+.stories-list {
+  padding: 16px;
+  border-bottom: var(--line-width) solid black;
+  display: flex;
+}
+.stories-list .stories-item-1 {
+  width: 10%;
+}
+.stories-list .stories-item-2 {
+  width: 80%;
+  gap: 16px;
+}
+.stories-list .stories-item-2 div {
+  margin-bottom: 8px;
+}
+.stories-list .stories-item-2 :last-child {
+  margin-bottom: 0;
+}
+.stories-list .stories-item-3 {
+  width: 10%;
+  gap: 16px;
+}
+@media (min-width: 1280px) {
+  .stories-list .stories-item-1 {
+    width: 10%;
+  }
+  .stories-list .stories-item-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 16px;
+    width: 80%;
+  }
+  .stories-list .stories-item-2 div {
+    margin-bottom: 0;
+  }
+  .stories-list .stories-item-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+    width: 10%;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  z-index: 100;
+  height: 50px;
+  transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
+}
+@media (min-width: 992px) {
+  header {
+    padding-bottom: 0;
+    height: 60px;
+  }
+}
+
+header ul.list-clear li {
+  margin: 0;
+}
+
+header a {
+  color: white;
+}
+
+header.interior a {
+  color: #212121;
+}
+
+header.interior svg path {
+  fill: #212121;
+}
+
+.logo {
+  width: 100%;
+  max-width: 90px;
+}
+
+.logo svg {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 100%;
+    max-width: 180px;
+  }
+}
+.menu-mobile {
+  display: block;
+}
+
+@media (min-width: 1280px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+.menu-desktop {
+  display: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1280px) {
+  .menu-desktop {
+    display: flex;
+  }
+}
+.search-bar {
+  position: relative;
+}
+
+.search-bar:after {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  background-color: #fff;
+  width: 100%;
+  max-width: 250px;
+  height: var(--line-width);
 }
 
 .is-rtl .fl-left {
@@ -24020,8 +24151,11 @@ table tr td {
 
 .stories-list {
   padding: 16px;
-  border-bottom: var(--line-width) solid black;
+  border-bottom: var(--line-width) solid var(--c-primary);
   display: flex;
+}
+.stories-list:last-child {
+  border-bottom: var(--line-width) solid transparent;
 }
 .stories-list .stories-item-1 {
   width: 10%;
@@ -24041,6 +24175,12 @@ table tr td {
   gap: 16px;
 }
 @media (min-width: 1280px) {
+  .stories-list {
+    border-bottom: var(--line-width) solid var(--c-primary);
+  }
+  .stories-list:last-child {
+    border-bottom: var(--line-width) solid var(--c-primary);
+  }
   .stories-list .stories-item-1 {
     width: 10%;
   }
@@ -24059,4 +24199,17 @@ table tr td {
     column-gap: 16px;
     width: 10%;
   }
+}
+
+.border-b2 {
+  border-top: none;
+  border-bottom: var(--line-width) solid var(--c-primary);
+}
+
+.border-t2 {
+  border-top: var(--line-width) solid var(--c-primary);
+}
+
+.border-r2 {
+  border-right: var(--line-width) solid var(--c-primary);
 }
