@@ -23945,7 +23945,7 @@ table tr td {
 }
 .d-price-special {
   display: inline-table;
-  padding: 4px 4px 2px;
+  padding: 0px 4px 0px;
   margin-top: 2px;
   line-height: 0;
 }
@@ -24016,4 +24016,38 @@ table tr td {
 .product-price {
   margin-bottom: 2px;
   line-height: 0;
+}
+
+.stories-list {
+  display: flex;
+}
+.stories-list .stories-item-1 {
+  width: 10%;
+}
+.stories-list .stories-item-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.stories-list .stories-item-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+@media (min-width: 1280px) {
+  .stories-list .stories-item-1 {
+    width: 10%;
+  }
+  .stories-list .stories-item-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    width: 90%;
+  }
+  .stories-list .stories-item-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    width: 90%;
+  }
 }
