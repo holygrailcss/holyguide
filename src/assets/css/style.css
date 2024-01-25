@@ -24215,3 +24215,18 @@ table tr td {
 .border-r2 {
   border-right: var(--line-width) solid var(--c-primary);
 }
+
+.stories-list-wrap {
+  border-top: var(--line-width) solid var(--c-primary);
+  border-bottom: var(--line-width) solid var(--c-primary);
+}
+@media (min-width: 1280px) {
+  .stories-list-wrap .stories-list-inner {
+    border-right: var(--line-width) solid var(--c-primary);
+  }
+}
+
+.stories-list:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}

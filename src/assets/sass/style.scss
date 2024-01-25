@@ -471,15 +471,17 @@ table tr td {
 }
 
 
-.stories-list-wrap{
 
-}
 .stories-list {
-  padding: 16px 0;
-  border-bottom: var(--line-width) solid $c-primary;
+
   &:last-child{
     border-bottom: var(--line-width) solid transparent;
   }
+
+
+  padding: 16px 0;
+  border-bottom: var(--line-width) solid $c-primary;
+
   display: flex;
   .stories-item-1 {
     width: 10%;
@@ -510,6 +512,8 @@ table tr td {
     }
 
     border-bottom: var(--line-width) solid $c-primary;
+
+
     .stories-item-1 {
       width: 10%;
     }
@@ -542,3 +546,29 @@ table tr td {
 .border-r2 {
   border-right:  var(--line-width) solid $c-primary;
 }
+
+.stories-list-wrap{
+  border-top:  var(--line-width) solid $c-primary;
+  border-bottom:  var(--line-width) solid $c-primary;
+
+
+  .stories-list-inner {
+
+    @media (min-width: $break-lg) {
+
+    border-right:  var(--line-width) solid $c-primary;
+  } 
+ }
+
+}
+
+.stories-list{
+
+
+  &:hover{
+
+    background-color: rgba(0, 0, 0, 0.03); 
+    cursor: pointer;
+  }
+}
+
