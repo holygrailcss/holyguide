@@ -24230,3 +24230,16 @@ table tr td {
   background-color: rgba(0, 0, 0, 0.03);
   cursor: pointer;
 }
+
+.stories-zoom {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Spacing-margin-m-20, 20px);
+  border-radius: 56px;
+  background: var(--Background-primary-bg-primary, #000);
+}
