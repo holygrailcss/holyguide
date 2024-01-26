@@ -24203,8 +24203,11 @@ table tr td {
   }
 }
 
+.border-1 {
+  border: var(--line-width) solid var(--c-primary);
+}
+
 .border-b2 {
-  border-top: none;
   border-bottom: var(--line-width) solid var(--c-primary);
 }
 
