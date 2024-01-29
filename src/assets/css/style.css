@@ -24327,10 +24327,10 @@ table tr td {
 }
 
 .pdp-logo {
-  width: 60%;
+  width: 100%;
 }
 .pdp-logo svg {
-  width: 100%;
+  width: 60%;
 }
 
 .container-4 {
