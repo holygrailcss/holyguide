@@ -596,3 +596,20 @@ table tr td {
 background: var(--Background-primary-bg-primary, #000);
 }
 
+
+.pdp-container{
+  height: 100vh;
+  overflow: auto;
+}
+.pdp-logo{
+  width: 60%;
+  svg {
+    width: 100%;
+  }
+}
+
+.grid-6{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+}
