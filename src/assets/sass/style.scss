@@ -20,6 +20,9 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "parrillas/_all.scss";
 @import "template/_alltemplate.scss";
 @import "./newweb.scss";
+
+
+
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
@@ -563,18 +566,14 @@ table tr td {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-
-
 .pdp-container {
   overflow: auto;
   display: inline-flex;
   .pdp-image {
-    width: 70vw;
+    width: 80vw;
     @media (min-width: $break-sm) {
       width: 100%;
     }
-
-
   }
   @media (min-width: $break-sm) {
     display: block;
@@ -586,4 +585,57 @@ table tr td {
   svg {
     width: 100%;
   }
+}
+
+
+
+.container-4 {
+  padding-right: $padding-global * 2;
+  padding-left: $padding-global * 2;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  width: 100%;
+  max-width: $container-6;
+
+  @media (min-width: $break-sm) {
+    max-width: $container-4;
+  }
+
+
+}
+
+.btn--color{
+  width: 16px;
+  height: 16px;
+  position: relative;
+
+  &:hover{
+    opacity: .6;
+  }
+
+  &.is-active{
+    padding-bottom: 8px;
+  
+    &:after{
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+}
+
+
+.clamp-2{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: stretch;
+  height: 27px;
+  overflow: hidden;
+
 }
