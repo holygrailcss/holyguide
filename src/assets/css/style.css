@@ -15,6 +15,11 @@
 }
 @font-face {
   font-display: swap;
+  font-family: "dutti-daily-medium";
+  src: url("/assets/fonts/dutti/dutti-daily-medium.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-medium.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
   font-family: "dutti-daily-bold";
   src: url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
 }
@@ -642,13 +647,18 @@ button {
 }
 
 .container-4 {
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  width: 90%;
-  max-width: 356px;
+  width: 100%;
+  max-width: 442px;
+}
+@media (min-width: 768px) {
+  .container-4 {
+    max-width: 356px;
+  }
 }
 
 .container-5 {
@@ -6433,6 +6443,7 @@ button {
   background-color: #8e8e8e;
   border: 1px solid #8e8e8e;
   opacity: 1;
+  cursor: pointer;
 }
 .btn-primary[disabled], .btn-primary:disabled, .btn-primary.disabled {
   background-color: #e3e3e3;

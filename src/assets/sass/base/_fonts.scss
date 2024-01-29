@@ -17,6 +17,15 @@
   src: url("/assets/fonts/dutti/dutti-daily-regular.woff2") format("woff2"),
     url("/assets/fonts/dutti/dutti-daily-regular.woff") format("woff");
 }
+
+@font-face {
+  font-display: swap;
+  font-family: "dutti-daily-medium";
+  src: url("/assets/fonts/dutti/dutti-daily-medium.woff2") format("woff2"),
+    url("/assets/fonts/dutti/dutti-daily-medium.woff") format("woff");
+}
+
+
 @font-face {
   font-display: swap;
   font-family: "dutti-daily-bold";
