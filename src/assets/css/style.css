@@ -24291,9 +24291,28 @@ table tr td {
   background: var(--Background-primary-bg-primary, #000);
 }
 
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .pdp-container {
-  height: 100vh;
   overflow: auto;
+  display: inline-flex;
+}
+.pdp-container .pdp-image {
+  width: 70vw;
+}
+@media (min-width: 768px) {
+  .pdp-container .pdp-image {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .pdp-container {
+    display: block;
+    height: 100vh;
+  }
 }
 
 .pdp-logo {
@@ -24301,9 +24320,4 @@ table tr td {
 }
 .pdp-logo svg {
   width: 100%;
-}
-
-.grid-6 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
 }
