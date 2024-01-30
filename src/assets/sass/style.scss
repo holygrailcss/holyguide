@@ -328,7 +328,7 @@ table tr td {
 .color-square.color-wrap button {
   width: auto;
   height: 12px;
-  margin-right: 4px;
+
   overflow: hidden;
   &:first-child {
     width: 8px;
@@ -414,7 +414,6 @@ table tr td {
 .d-price-special {
   display: inline-table;
   padding: 0px 4px 0px;
-  margin-top: 2px;
   line-height: 0;
   div {
     display: inline-block;
@@ -422,7 +421,7 @@ table tr td {
 }
 .grid-product-list .tag-wrapper {
   display: flex;
-  padding-top: 4px;
+
 }
 .stories-grid {
   .grid-12 {
@@ -468,10 +467,7 @@ table tr td {
     }
   }
 }
-.product-price {
-  margin-bottom: 2px;
-  line-height: 0;
-}
+
 .stories-list {
   &:last-child {
     border-bottom: var(--line-width) solid transparent;
@@ -576,6 +572,8 @@ table tr td {
     }
   }
   @media (min-width: $break-sm) {
+    position: sticky;
+    top: 0;
     display: block;
     height: 100vh;
   }
@@ -642,3 +640,24 @@ table tr td {
   overflow: hidden;
 
 }
+
+.p-sticky{
+  position: sticky;
+  top: 20px;
+}
+
+
+
+.product-title a{
+  display: block;
+  line-height: 1;
+  padding-right: 30px;
+}
+
+.product-view-info{
+  position: absolute;
+  right:0;
+}
+
+
+

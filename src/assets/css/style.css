@@ -4482,6 +4482,10 @@ strong {
   flex-grow: 0;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-inline {
   display: inline;
 }
@@ -4685,6 +4689,10 @@ strong {
 }
 .min-scrollcustom-x::-webkit-scrollbar-thumb:window-inactive {
   background: #999;
+}
+
+.leading-1 {
+  line-height: 1;
 }
 
 .helper-font .titularbase-m {
@@ -9730,7 +9738,6 @@ ul.list-clear li.list-box:last-child {
   height: 12px;
   left: 0;
   line-height: 12px;
-  margin-right: 6px;
   opacity: 1;
   padding: 0;
   position: relative;
@@ -10354,7 +10361,6 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 .card9-contents .tag-wrapper {
   width: 100%;
-  padding-top: 4px;
 }
 
 @media (max-width: 1280px) {
@@ -23103,7 +23109,6 @@ table tr td {
 .color-square.color-wrap button {
   width: auto;
   height: 12px;
-  margin-right: 4px;
   overflow: hidden;
 }
 .color-square.color-wrap button:first-child {
@@ -24132,7 +24137,6 @@ table tr td {
 .d-price-special {
   display: inline-table;
   padding: 0px 4px 0px;
-  margin-top: 2px;
   line-height: 0;
 }
 .d-price-special div {
@@ -24141,7 +24145,6 @@ table tr td {
 
 .grid-product-list .tag-wrapper {
   display: flex;
-  padding-top: 4px;
 }
 
 .stories-grid .grid-12 {
@@ -24197,11 +24200,6 @@ table tr td {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
   }
-}
-
-.product-price {
-  margin-bottom: 2px;
-  line-height: 0;
 }
 
 .stories-list {
@@ -24321,6 +24319,8 @@ table tr td {
 }
 @media (min-width: 768px) {
   .pdp-container {
+    position: sticky;
+    top: 0;
     display: block;
     height: 100vh;
   }
@@ -24376,4 +24376,20 @@ table tr td {
   align-self: stretch;
   height: 27px;
   overflow: hidden;
+}
+
+.p-sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.product-title a {
+  display: block;
+  line-height: 1;
+  padding-right: 30px;
+}
+
+.product-view-info {
+  position: absolute;
+  right: 0;
 }
