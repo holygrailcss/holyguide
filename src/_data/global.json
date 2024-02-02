@@ -131,6 +131,18 @@
     { "ratio": "4-2" },
     { "ratio": "21-9" }
   ],
+
+
+  "skloads": [
+    { "skload": "2-3" },
+    { "skload": "3-4" },
+    { "skload": "1-1" },
+    { "skload": "2-1" },
+    { "skload": "4-3" },
+    { "skload": "3-2" },
+    { "skload": "16-9" }
+  ],
+
   "coloresPrimarios": [
     {
       "hex": "#000000",

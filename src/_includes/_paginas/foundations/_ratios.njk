@@ -2,19 +2,16 @@
 layout: base.njk
 ---
 {% set page_title = "ratios" %}
-
-
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
-
 <div class="main-content innermarkdown">
   {{ content | safe }}
   <section class="mb-32 mt-32">
     <div class="row">
       <div class="col-xs-12">
         <div class="masonry">
-          {% for item in  global.ratios %}
+          {% for item in global.ratios %}
           <div class="mini-box rat-{{ item.ratio }}">
             <div class="rat-content">
               <div class="title-xs">
@@ -24,8 +21,23 @@ layout: base.njk
             </div>
           </div>
           {% endfor %}
+        </div>
+      </div>
+    </div>
 
 
+
+
+<h3> Skload</h3>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="masonry">
+          {% for skload in global.skloads %}
+          <div class="mini-box    sk-load_{{ skload.skload }}">
+            <div class="p-absolute text-12-r mt-8"> sk-load_{{ skload.skload }}</div>
+          </div>
+          {% endfor %}
         </div>
       </div>
     </div>

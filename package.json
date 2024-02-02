@@ -14,6 +14,10 @@
     "format": "npm run format:md && npm run prettier -- --write",
     "format:md": "prettier --write 'src/**/*.md'",
     "prettier": "prettier 'src/assets/sass/**/*.+(css|scss)'",
+
+
+
+
     "component": "npm run generate-component",
     "generate-component": "node src/assets/js/newComponent.js",
     "tokencomponent": "npm run generate-token-component",
@@ -51,7 +55,8 @@
     "eleventy-plugin-toc": "^1.1.5" 
   },
   "dependencies": {
-    "holygrail2": "^1.0.62",
+    "holygrail2": "^1.0.66",
+    
     "aos": "^2.3.4",
     "eleventy-plugin-embed-everything": "^1.16.0",
     "fs": "^0.0.1-security",

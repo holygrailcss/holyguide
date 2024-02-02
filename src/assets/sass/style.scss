@@ -333,7 +333,7 @@ table tr td {
   &:first-child {
     width: 8px;
     height: 8px;
-    margin-top: 2px;
+    margin-top: 0;
     @media (min-width: $break-sm) {
       width: 8px;
       height: 8px;
@@ -415,6 +415,7 @@ table tr td {
   display: inline-table;
   padding: 0px 4px 0px;
   line-height: 0;
+
   div {
     display: inline-block;
   }
@@ -651,13 +652,29 @@ table tr td {
 .product-title a{
   display: block;
   line-height: 1;
-  padding-right: 30px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.product-view-info{
-  position: absolute;
-  right:0;
+
+
+.card9-contents {
+  padding-top: 12px!important;
+
 }
+
+
+
+.product-title a {
+overflow: hidden;
+}
+
+.align-item-center{
+  display: flex;
+  align-items: center;
+}
+
 
 
 

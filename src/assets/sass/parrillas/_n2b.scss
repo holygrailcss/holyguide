@@ -10,6 +10,15 @@
     display: flex;
     justify-content: center;
     @include gap-20;
+
+  li:first-child{
+
+  .product-view-info{
+    margin-right: 8px;
+  }
+  }
+
+
   }
   .n2b-item {
     //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );

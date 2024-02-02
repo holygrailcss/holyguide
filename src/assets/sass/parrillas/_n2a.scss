@@ -1,40 +1,31 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .n2a {
-  @include sp-wraps('.n2a') ;
+  @include sp-wraps('.n2a');
 }
-  .n2a-wrap {
-    @include m-body-0;
-    @include sp-contents-20-first-20 ;
-
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    @media (min-width: $break-sm) {
-      flex-direction: row;
-
-    }
-    @media (min-width: $break-xl) {
-
-    }
-
-
-
+.n2a-wrap {
+  @include m-body-0;
+  @include sp-contents-20-first-20;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media (min-width: $break-sm) {
+    flex-direction: row;
   }
-  .n2a-item {
-    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-
-    @include col-6-6;
-    @include gap-0;
-
-
-     
-    @media (min-width: $break-sm) {
-      flex-direction: row;
-      @include col-24-12;
-    }
-    @media (min-width: $break-xl) {
-      @include col-24-12;
-    }
+  @media (min-width: $break-xl) {}
+  .card9-contents {
+    padding-right: 16px
   }
+}
+.n2a-item {
+  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+  @include col-6-6;
+  @include gap-0;
+  @media (min-width: $break-sm) {
+    flex-direction: row;
+    @include col-24-12;
+  }
+  @media (min-width: $break-xl) {
+    @include col-24-12;
+  }
+}

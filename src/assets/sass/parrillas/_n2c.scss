@@ -23,6 +23,11 @@
         @include m-body;
         @include gap-20;
       }
+
+      .card9-contents {
+        padding-right: 16px
+      }
+
     }
     .n2c-item {
       //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
