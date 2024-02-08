@@ -2739,49 +2739,49 @@ mark {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-l-l {
     font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-l-b {
     font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-m {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-s {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 10px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .text-l {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
   .text-l-l {
     font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
   .text-m {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @media (min-width: 992px) {
@@ -2795,35 +2795,35 @@ mark {
   }
   .title-l {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-l-l {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-l-b {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-m {
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .title-s {
     font-size: 10px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   .text-l {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
   .text-l-l {
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
   .text-m {
     font-size: 11px;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @media (min-width: 1px) {
