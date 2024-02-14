@@ -1,12 +1,12 @@
 ---
-layout: /_tokens/_templates/parrillas/nt.njk
-permalink: /nt/
+layout: /_tokens/_templates/parrillas/nt2.njk
+permalink: /nt2/
 page_section: templates
 
-titulo: nt
+titulo: nt2
 descripcion: Es un template de parrilla studio
 
-image: /assets/static/nt.jpg
+image: /assets/static/nt2.jpg
 
 tags: ["page"]
 imageAlt: Contacta

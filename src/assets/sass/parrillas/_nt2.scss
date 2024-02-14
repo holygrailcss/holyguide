@@ -1,7 +1,7 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
-.nt {
-    .nt-wrap {
+.nt2 {
+    .nt2-wrap {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -13,7 +13,7 @@
         }
         @media (min-width: $break-xl) {}
     }
-    .nt-item {
+    .nt2-item {
         //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
         padding: 0 10px;
         @media (min-width: $break-sm) {

@@ -22635,7 +22635,7 @@ h6 {
   width: 100%;
 }
 
-.nt .nt-wrap {
+.nt2 .nt2-wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22643,21 +22643,21 @@ h6 {
   padding-bottom: 12px;
 }
 @media (min-width: 768px) {
-  .nt .nt-wrap {
+  .nt2 .nt2-wrap {
     padding-top: 48px;
     padding-bottom: 48px;
   }
 }
-.nt .nt-item {
+.nt2 .nt2-item {
   padding: 0 10px;
 }
 @media (min-width: 768px) {
-  .nt .nt-item {
+  .nt2 .nt2-item {
     padding: 0 120px;
   }
 }
 @media (min-width: 1500px) {
-  .nt .nt-item {
+  .nt2 .nt2-item {
     padding: 0 240px;
   }
 }
