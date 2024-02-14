@@ -24560,3 +24560,7 @@ table tr td {
   display: flex;
   align-items: center;
 }
+
+.m--1 {
+  margin-top: -1px;
+}

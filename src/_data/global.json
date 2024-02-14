@@ -266,35 +266,35 @@
       "name": "title-l",
       "xs": "12px",
       "lg": "12px",
-      "line": "1.2",
+      "line": "1.4",
       "weight": "regular"
     },
     {
       "name": "title-l-b",
       "xs": "12px",
       "lg": "12px",
-      "line": "1.2",
+      "line": "1.4",
       "weight": "medium"
     },
     {
       "name": "title-m",
       "xs": "11px",
       "lg": "11px",
-      "line": "1.2",
+      "line": "1.4",
       "weight": "medium"
     },
     {
       "name": "title-s",
       "xs": "10px",
       "lg": "10px",
-      "line": "1.2",
+      "line": "1.4",
       "weight": "regular"
     },
     {
       "name": "title-xs",
       "xs": "11px",
       "lg": "11px",
-      "line": "1.2",
+      "line": "1.4",
       "weight": "regular"
     },
 
@@ -302,14 +302,14 @@
       "name": "text-l",
       "xs": "12px",
       "lg": "12px",
-      "line": "1.2",
+      "line": "1.5",
       "weight": "regular"
     },
     {
       "name": "text-m",
       "xs": "11px",
       "lg": "11px",
-      "line": "1.2",
+      "line": "1.5",
       "weight": "regular"
     }
   ],
