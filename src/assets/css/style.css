@@ -24613,3 +24613,10 @@ table tr td {
 .m--1 {
   margin-top: -1px;
 }
+
+.is-active.btn-secondary {
+  background-color: var(--c-primary);
+  color: #ffffff;
+  background-color: var(--c-primary);
+  border: 1px solid var(--c-primary);
+}
