@@ -4,10 +4,6 @@
 .n2c {
   @include sp-wraps('.n2c');
 }
-
-
-
-
     .n2c-wrap {
   
       display: flex;
@@ -22,17 +18,14 @@
         column-gap: 20px;
         @include m-body;
         @include gap-20;
-      }
+        .card9-contents {
+          padding-right: 0;
+        }
 
-      .card9-contents {
-        padding-right: 16px
       }
 
     }
     .n2c-item {
-      //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-
-
       -webkit-box-flex: 0;
       flex: 0 0 calc(50% - 4px);
       max-width: calc(50% - 4px);

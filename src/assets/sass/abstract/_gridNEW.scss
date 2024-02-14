@@ -344,6 +344,17 @@
     margin-right: 0;
   }
 }
+
+@mixin sp-contents-20 {
+  li .card9-contents {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+}
+
+
+
 @mixin sp-contents-2n-1 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
