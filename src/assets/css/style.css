@@ -24610,7 +24610,7 @@ table tr td {
   align-items: center;
 }
 
-.m--1 {
+.btn-group-bleed .btn-group {
   margin-top: -1px;
 }
 
