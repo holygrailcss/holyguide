@@ -669,3 +669,20 @@ table tr td {
 .product-title a {
 overflow: hidden;
 }
+
+
+.fixed-bottom{
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+
+}
+
+.sidebar-overflow{
+  height: 100vh;
+  overflow: auto;
+}
+
