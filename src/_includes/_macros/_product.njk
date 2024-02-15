@@ -112,7 +112,10 @@
                           <div class="d-price-special text-m mb-4 " style="background-color: rgb(255, 206, 78); color: rgb(0, 0, 0);">
                             <div class="  "><label> -40% <label>*</label></label> 15,95 € </div>
                           </div>
+                          <span class="leading-1 text-m" (click)="openSuscriptionJoin(discount.cta)">
+                          </span>
                       </formatted-price>
+          
                     </div>
                   </product-prices>
                   <div class="product-view-info"></div>
@@ -149,7 +152,7 @@
     </div>
     {% endmacro %}
     {% macro productsimple( ) %}
-    dgfygdsufgds
+    
     <product-view class="p-view" ng-reflect-place="PRODUCT_GRID" ng-reflect-element-index="1"
       ng-reflect-element-default-image-types="[object Object]">
       <div class="charged">
@@ -229,25 +232,18 @@
                     ng-reflect-has-promotion="true" ng-reflect-show-prices-in-flex-mode="true"
                     ng-reflect-prices-in-two-columns="true" ng-reflect-alternative-prices-class="title-m ttu">
                     <div class="product-price">
-                      <formatted-price ng-reflect-price="995" ng-reflect-secondary-price="1295"
-                        ng-reflect-options="[object Object]" ng-reflect-prices-classes="[object Object]"
-                        ng-reflect-prices-styles="[object Object]" ng-reflect-is-page-product="false">
-                        <div class="text-l">
-                          <div class="is-flex flex-wrap text-nowrap align-item-center">
-                            <div class="prices-two-columns"><span class="text-m c-dark-grey c-gray is-through mr-8">
-                                22,95 € </span> </div>
-                            <div class="prices-two-columns"><span class="is-through text-m mr-8"> 12,95 € </span>
-                            </div>
-                            <div class="d-price-special text-m mr-8"
-                              style="background-color: rgb(255, 206, 78); color: rgb(0, 0, 0);">
-                              <div class="text-nowrap"><label ng-reflect-ng-class="text-m" class="text-m"> -55%
-                                  <label>*</label> </label> 9,95 € </div>
-                            </div>
-                            <span class="text-m" (click)="openSuscriptionJoin(discount.cta)">Prewarm 50% descuento
-                            </span>
+                      <formatted-price>
+                    
+                        <div class="is-flex text-m leading-1 mb-4">
+                          <div class="is-through mr-8   c-dark-grey leading-1"> 25,95 € </div> <div class=" mr-8  leading-1 "> 25,95 €
                           </div>
                         </div>
-                      </formatted-price>
+                        <div class="d-price-special text-m mb-4 " style="background-color: rgb(255, 206, 78); color: rgb(0, 0, 0);">
+                          <div class="  "><label> -40% <label>*</label></label> 15,95 € </div>
+                        </div>
+                        <div class="leading-1 text-m" (click)="openSuscriptionJoin(discount.cta)">
+                        </div>
+                    </formatted-price>
                     </div>
                   </product-prices>
                   <div class="product-view-info"> </div>

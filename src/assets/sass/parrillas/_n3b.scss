@@ -6,7 +6,7 @@
 .n3b-wrap {
     display: flex;
     @include m-body-bleed;
-    @include sp-contents-2n-1-0;
+    @include sp-contents-xs-1;
     flex-wrap: wrap;
     column-gap: 20px;
     @media (min-width: $break-sm) {

@@ -1,8 +1,4 @@
 @import "_variables.scss";
-
-
-
-
 @mixin space-0-pdesktop {
   padding-left: 0;
   padding-right: 0;
@@ -307,7 +303,7 @@
   width: 100%;
 }
 @mixin m-body {
-  margin: 0 20px;
+  margin: 0 8px;
   @media (min-width: $break-sm) {
     margin: 0 30px;
   }
@@ -316,7 +312,7 @@
   margin: 0;
 }
 @mixin m-body-bleed {
-  margin: 0 ;
+  margin: 0;
 }
 @mixin m-body-bleed-sm {
   margin: 0 -10px;
@@ -326,9 +322,8 @@
 }
 @mixin gap-20 {
   .sk-load2::before {
-    padding-top: calc((133.25% + 86px) );
+    padding-top: calc((133.25% + 76px));
   }
-
 }
 @mixin gap-1 {
   gap: 1px;
@@ -348,17 +343,12 @@
     margin-right: 0;
   }
 }
-
 @mixin sp-contents-20 {
   li .card9-contents {
     padding-left: 20px;
     padding-right: 20px;
-
   }
 }
-
-
-
 @mixin sp-contents-2n-1 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
@@ -408,8 +398,6 @@
     padding-left: 20px;
   }
 }
-
-
 @mixin sp-wraps($template) {
   &-0 {
     #{$template}-wrap {
@@ -435,6 +423,49 @@
         margin-top: 48px;
         margin-bottom: 48px;
       }
+    }
+  }
+}
+@mixin sp-contents-xs {
+  @media (max-width: #{$break-sm - 1}) {
+    li .card9-contents {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+@mixin sp-contents-sm {
+  @media (min-width: $break-sm) {
+    li .card9-contents {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+@mixin sp-contents-xs-1 {
+  //espaciados en los lados
+  @media (max-width: #{$break-sm - 1}) {
+    li:nth-child(odd) .card9-contents {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    li:nth-child(even) .card9-contents {
+      padding-left: 0;
+      padding-right: 8px;
+    }
+  }
+}
+
+  //espaciados en desktop a los lados
+@mixin sp-contents-sm-1 {
+  @media (min-width: $break-sm) {
+    li .card9-contents {
+      padding-left: 0;
+      padding-right: 12px;
+    }
+    li:first-child .card9-contents {
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 }

@@ -7,7 +7,7 @@
     display: flex;
     @include m-body-bleed;
     @include gap-20;
-    @include sp-contents-2n-1;
+    @include sp-contents-xs;
     flex-wrap: wrap;
     @media (min-width: $break-sm) {
         flex-wrap: nowrap;

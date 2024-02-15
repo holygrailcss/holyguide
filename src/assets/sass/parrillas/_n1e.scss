@@ -1,2 +1,25 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
+
+
+
+.n1e {
+    @include sp-wraps('.n1e') ;
+  }
+    .n1e-wrap {
+      @include m-body-0;
+      @include gap-1;
+      @include sp-contents-xs;
+      @include sp-contents-sm;
+  
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+  
+      
+    }
+    .n1e-item {
+      grid-column: 1 / span 12;
+      
+  
+    }

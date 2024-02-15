@@ -1,5 +1,8 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
+
+
+
 .n4f {
     @include sp-wraps('.n4f');
 }
@@ -8,7 +11,7 @@
     flex-wrap: wrap;
 
     margin: 0 20px;
-
+    column-gap: 20px;
 
     @media (min-width: $break-sm) {
         justify-content: center;
@@ -22,8 +25,13 @@
     }
 }
 .n4f-item {
+
+    -webkit-box-flex: 0;
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+
     @media (min-width: $break-sm) {
-        -webkit-box-flex: 0;
+
         flex: 0 0 calc(25% - 15px);
         max-width: calc(25% - 15px);
     }

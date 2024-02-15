@@ -312,28 +312,19 @@
   margin: 0;
 }
 @mixin m-body-bleed {
-  margin:0 -4px;
+  margin: 0 -4px;
 }
 @mixin m-body-bleed-sm {
-  margin:0  -10px;
+  margin: 0 -10px;
 }
 @mixin m-body-20-sm {
   margin: 0 10px;
 }
-
-
-
-
-
 @mixin gap-20 {
-
   .sk-load2::before {
-    padding-top: calc((133.25% + 86px) );
+    padding-top: calc((133.25% + 76px));
+  }
 }
-
-}
-
-
 @mixin gap-1 {
   gap: 1px;
   grid-column-gap: 1px;
@@ -352,8 +343,6 @@
     margin-right: 0;
   }
 }
-
-
 @mixin sp-contents-2n-1 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
@@ -362,8 +351,6 @@
     }
   }
 }
-
-
 @mixin sp-contents-2n-1-0 {
   li:nth-child(2n - 1) .card9-contents {
     padding-left: 20px;
@@ -371,15 +358,12 @@
       padding-left: 20px;
     }
   }
-
   li:nth-child(3) .card9-contents {
     padding-left: 20px;
     @media (min-width: $break-sm) {
       padding-left: 0px;
     }
   }
-
-
 }
 @mixin sp-contents-first-20-0 {
   li:first-child .card9-contents {
@@ -397,6 +381,8 @@
     }
   }
 }
+
+
 
 
 

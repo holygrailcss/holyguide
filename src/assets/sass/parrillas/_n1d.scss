@@ -6,6 +6,12 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
+
+
+    @include sp-contents-xs;
+
+
+
     @media (min-width: $break-md) {
       margin: 0 40px;
       gap: 16px;

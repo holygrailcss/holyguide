@@ -5,17 +5,17 @@
 }
 .n2a-wrap {
   @include m-body-0;
-  @include sp-contents-20-first-20;
+  @include sp-contents-xs;
+  @include sp-contents-sm;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
   @media (min-width: $break-sm) {
     flex-direction: row;
   }
-  @media (min-width: $break-xl) {}
-  .card9-contents {
-    padding-right: 16px
-  }
+
+
 }
 .n2a-item {
   //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );

@@ -8,7 +8,7 @@
   
       display: flex;
       justify-content: center;
-      @include sp-contents-2n-1;
+      @include sp-contents-xs-1;
   
       @include m-body-bleed;
       @include gap-20;
