@@ -24992,3 +24992,7 @@ table tr td {
   height: 100vh;
   overflow: auto;
 }
+
+.select-8::after {
+  right: 16px;
+}
