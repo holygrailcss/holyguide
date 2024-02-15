@@ -405,23 +405,34 @@
       @media (min-width: $break-sm) {
         margin-top: 0;
       }
+
+      @media (min-width: $break-lg) {
+        margin-top: 0;
+      }
     }
   }
   &-1 {
     #{$template}-wrap {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       @media (min-width: $break-sm) {
-        margin-bottom: 48px;
+        margin-bottom: 12px;
+      }
+      @media (min-width: $break-lg) {
+        margin-bottom: 24px;
       }
     }
   }
   &-2 {
     #{$template}-wrap {
-      margin-top: 12px;
-      margin-bottom: 12px;
+      margin-top: 8px;
+      margin-bottom: 8px;
       @media (min-width: $break-sm) {
-        margin-top: 48px;
-        margin-bottom: 48px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      @media (min-width: $break-lg) {
+        margin-top: 24px;
+        margin-bottom: 24px;
       }
     }
   }

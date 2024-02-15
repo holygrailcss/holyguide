@@ -14043,7 +14043,8 @@ h6 {
 }
 .openRules .mbr-50-100:before {
   content: "mbr-50-100";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
   color: rgb(218, 19, 112);
@@ -14062,7 +14063,8 @@ h6 {
 }
 .openRules .mb-2:before {
   content: "mb-2";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 2px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14075,7 +14077,8 @@ h6 {
 }
 .openRules .mb-4:before {
   content: "mb-4";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 4px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14088,7 +14091,8 @@ h6 {
 }
 .openRules .mb-8:before {
   content: "mb-8";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 8px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14101,7 +14105,8 @@ h6 {
 }
 .openRules .mb-16:before {
   content: "mb-16";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 16px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14114,7 +14119,8 @@ h6 {
 }
 .openRules .mb-32:before {
   content: "mb-32";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 32px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14127,7 +14133,8 @@ h6 {
 }
 .openRules .mb-64:before {
   content: "mb-64";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 64px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14140,7 +14147,8 @@ h6 {
 }
 .openRules .mb-128:before {
   content: "mb-128";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 128px;
   width: auto;
   border-left: 1px solid rgb(218, 19, 112);
@@ -14154,7 +14162,8 @@ h6 {
 .openRules .mb-0:before {
   content: "mb-0";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 0px;
   padding-left: 4px;
   width: 100%;
@@ -14169,7 +14178,8 @@ h6 {
 .openRules .mb-2:before {
   content: "mb-2";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 2px;
   padding-left: 4px;
   width: 100%;
@@ -14184,7 +14194,8 @@ h6 {
 .openRules .mb-4:before {
   content: "mb-4";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 4px;
   padding-left: 4px;
   width: 100%;
@@ -14199,7 +14210,8 @@ h6 {
 .openRules .mb-8:before {
   content: "mb-8";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 8px;
   padding-left: 4px;
   width: 100%;
@@ -14214,7 +14226,8 @@ h6 {
 .openRules .mb-12:before {
   content: "mb-12";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 12px;
   padding-left: 4px;
   width: 100%;
@@ -14229,7 +14242,8 @@ h6 {
 .openRules .mb-16:before {
   content: "mb-16";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 16px;
   padding-left: 4px;
   width: 100%;
@@ -14244,7 +14258,8 @@ h6 {
 .openRules .mb-20:before {
   content: "mb-20";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 20px;
   padding-left: 4px;
   width: 100%;
@@ -14259,7 +14274,8 @@ h6 {
 .openRules .mb-24:before {
   content: "mb-24";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 24px;
   padding-left: 4px;
   width: 100%;
@@ -14274,7 +14290,8 @@ h6 {
 .openRules .mb-32:before {
   content: "mb-32";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 32px;
   padding-left: 4px;
   width: 100%;
@@ -14289,7 +14306,8 @@ h6 {
 .openRules .mb-40:before {
   content: "mb-40";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 40px;
   padding-left: 4px;
   width: 100%;
@@ -14304,7 +14322,8 @@ h6 {
 .openRules .mb-48:before {
   content: "mb-48";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 48px;
   padding-left: 4px;
   width: 100%;
@@ -14319,7 +14338,8 @@ h6 {
 .openRules .mb-56:before {
   content: "mb-56";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 56px;
   padding-left: 4px;
   width: 100%;
@@ -14334,7 +14354,8 @@ h6 {
 .openRules .mb-64:before {
   content: "mb-64";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 64px;
   padding-left: 4px;
   width: 100%;
@@ -14349,7 +14370,8 @@ h6 {
 .openRules .mb-72:before {
   content: "mb-72";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 72px;
   padding-left: 4px;
   width: 100%;
@@ -14364,7 +14386,8 @@ h6 {
 .openRules .mb-80:before {
   content: "mb-80";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 80px;
   padding-left: 4px;
   width: 100%;
@@ -14379,7 +14402,8 @@ h6 {
 .openRules .mb-96:before {
   content: "mb-96";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 96px;
   padding-left: 4px;
   width: 100%;
@@ -14394,7 +14418,8 @@ h6 {
 .openRules .mb-112:before {
   content: "mb-112";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 112px;
   padding-left: 4px;
   width: 100%;
@@ -14409,7 +14434,8 @@ h6 {
 .openRules .mb-120:before {
   content: "mb-120";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 120px;
   padding-left: 4px;
   width: 100%;
@@ -14424,7 +14450,8 @@ h6 {
 .openRules .mb-128:before {
   content: "mb-128";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 128px;
   padding-left: 4px;
   width: 100%;
@@ -14439,7 +14466,8 @@ h6 {
 .openRules .mb-160:before {
   content: "mb-160";
   background-color: #ebcfdc;
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 160px;
   padding-left: 4px;
   width: 100%;
@@ -14449,36 +14477,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14492,7 +14558,8 @@ h6 {
 }
 .openRules .pb-0:before {
   content: "pb-0";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 0px;
   padding-left: 4px;
   width: 100%;
@@ -14509,7 +14576,8 @@ h6 {
 }
 .openRules .pt-0:after {
   content: "pt-0";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 0px;
   padding-left: 4px;
   width: 100%;
@@ -14522,36 +14590,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14565,7 +14671,8 @@ h6 {
 }
 .openRules .pb-2:before {
   content: "pb-2";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 2px;
   padding-left: 4px;
   width: 100%;
@@ -14582,7 +14689,8 @@ h6 {
 }
 .openRules .pt-2:after {
   content: "pt-2";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 2px;
   padding-left: 4px;
   width: 100%;
@@ -14595,36 +14703,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14638,7 +14784,8 @@ h6 {
 }
 .openRules .pb-4:before {
   content: "pb-4";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 4px;
   padding-left: 4px;
   width: 100%;
@@ -14655,7 +14802,8 @@ h6 {
 }
 .openRules .pt-4:after {
   content: "pt-4";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 4px;
   padding-left: 4px;
   width: 100%;
@@ -14668,36 +14816,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14711,7 +14897,8 @@ h6 {
 }
 .openRules .pb-8:before {
   content: "pb-8";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 8px;
   padding-left: 4px;
   width: 100%;
@@ -14728,7 +14915,8 @@ h6 {
 }
 .openRules .pt-8:after {
   content: "pt-8";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 8px;
   padding-left: 4px;
   width: 100%;
@@ -14741,36 +14929,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14784,7 +15010,8 @@ h6 {
 }
 .openRules .pb-12:before {
   content: "pb-12";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 12px;
   padding-left: 4px;
   width: 100%;
@@ -14801,7 +15028,8 @@ h6 {
 }
 .openRules .pt-12:after {
   content: "pt-12";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 12px;
   padding-left: 4px;
   width: 100%;
@@ -14814,36 +15042,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14857,7 +15123,8 @@ h6 {
 }
 .openRules .pb-16:before {
   content: "pb-16";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 16px;
   padding-left: 4px;
   width: 100%;
@@ -14874,7 +15141,8 @@ h6 {
 }
 .openRules .pt-16:after {
   content: "pt-16";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 16px;
   padding-left: 4px;
   width: 100%;
@@ -14887,36 +15155,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -14930,7 +15236,8 @@ h6 {
 }
 .openRules .pb-20:before {
   content: "pb-20";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 20px;
   padding-left: 4px;
   width: 100%;
@@ -14947,7 +15254,8 @@ h6 {
 }
 .openRules .pt-20:after {
   content: "pt-20";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 20px;
   padding-left: 4px;
   width: 100%;
@@ -14960,36 +15268,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15003,7 +15349,8 @@ h6 {
 }
 .openRules .pb-24:before {
   content: "pb-24";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 24px;
   padding-left: 4px;
   width: 100%;
@@ -15020,7 +15367,8 @@ h6 {
 }
 .openRules .pt-24:after {
   content: "pt-24";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 24px;
   padding-left: 4px;
   width: 100%;
@@ -15033,36 +15381,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15076,7 +15462,8 @@ h6 {
 }
 .openRules .pb-32:before {
   content: "pb-32";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 32px;
   padding-left: 4px;
   width: 100%;
@@ -15093,7 +15480,8 @@ h6 {
 }
 .openRules .pt-32:after {
   content: "pt-32";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 32px;
   padding-left: 4px;
   width: 100%;
@@ -15106,36 +15494,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15149,7 +15575,8 @@ h6 {
 }
 .openRules .pb-40:before {
   content: "pb-40";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 40px;
   padding-left: 4px;
   width: 100%;
@@ -15166,7 +15593,8 @@ h6 {
 }
 .openRules .pt-40:after {
   content: "pt-40";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 40px;
   padding-left: 4px;
   width: 100%;
@@ -15179,36 +15607,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15222,7 +15688,8 @@ h6 {
 }
 .openRules .pb-48:before {
   content: "pb-48";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 48px;
   padding-left: 4px;
   width: 100%;
@@ -15239,7 +15706,8 @@ h6 {
 }
 .openRules .pt-48:after {
   content: "pt-48";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 48px;
   padding-left: 4px;
   width: 100%;
@@ -15252,36 +15720,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15295,7 +15801,8 @@ h6 {
 }
 .openRules .pb-56:before {
   content: "pb-56";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 56px;
   padding-left: 4px;
   width: 100%;
@@ -15312,7 +15819,8 @@ h6 {
 }
 .openRules .pt-56:after {
   content: "pt-56";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 56px;
   padding-left: 4px;
   width: 100%;
@@ -15325,36 +15833,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15368,7 +15914,8 @@ h6 {
 }
 .openRules .pb-64:before {
   content: "pb-64";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 64px;
   padding-left: 4px;
   width: 100%;
@@ -15385,7 +15932,8 @@ h6 {
 }
 .openRules .pt-64:after {
   content: "pt-64";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 64px;
   padding-left: 4px;
   width: 100%;
@@ -15398,36 +15946,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15441,7 +16027,8 @@ h6 {
 }
 .openRules .pb-72:before {
   content: "pb-72";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 72px;
   padding-left: 4px;
   width: 100%;
@@ -15458,7 +16045,8 @@ h6 {
 }
 .openRules .pt-72:after {
   content: "pt-72";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 72px;
   padding-left: 4px;
   width: 100%;
@@ -15471,36 +16059,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15514,7 +16140,8 @@ h6 {
 }
 .openRules .pb-80:before {
   content: "pb-80";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 80px;
   padding-left: 4px;
   width: 100%;
@@ -15531,7 +16158,8 @@ h6 {
 }
 .openRules .pt-80:after {
   content: "pt-80";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 80px;
   padding-left: 4px;
   width: 100%;
@@ -15544,36 +16172,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15587,7 +16253,8 @@ h6 {
 }
 .openRules .pb-96:before {
   content: "pb-96";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 96px;
   padding-left: 4px;
   width: 100%;
@@ -15604,7 +16271,8 @@ h6 {
 }
 .openRules .pt-96:after {
   content: "pt-96";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 96px;
   padding-left: 4px;
   width: 100%;
@@ -15617,36 +16285,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15660,7 +16366,8 @@ h6 {
 }
 .openRules .pb-112:before {
   content: "pb-112";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 112px;
   padding-left: 4px;
   width: 100%;
@@ -15677,7 +16384,8 @@ h6 {
 }
 .openRules .pt-112:after {
   content: "pt-112";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 112px;
   padding-left: 4px;
   width: 100%;
@@ -15690,36 +16398,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15733,7 +16479,8 @@ h6 {
 }
 .openRules .pb-120:before {
   content: "pb-120";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 120px;
   padding-left: 4px;
   width: 100%;
@@ -15750,7 +16497,8 @@ h6 {
 }
 .openRules .pt-120:after {
   content: "pt-120";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 120px;
   padding-left: 4px;
   width: 100%;
@@ -15763,36 +16511,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15806,7 +16592,8 @@ h6 {
 }
 .openRules .pb-128:before {
   content: "pb-128";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 128px;
   padding-left: 4px;
   width: 100%;
@@ -15823,7 +16610,8 @@ h6 {
 }
 .openRules .pt-128:after {
   content: "pt-128";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 128px;
   padding-left: 4px;
   width: 100%;
@@ -15836,36 +16624,74 @@ h6 {
   left: 0;
 }
 .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen bottom ";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   bottom: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:after, .openRules .n1c-2:after, .openRules .n2a-2:after, .openRules .n2b-2:after, .openRules .n2c-2:after, .openRules .n3b-2:after, .openRules .n4a-2:after, .openRules .n4e-2:after, .openRules .n4f-2:after, .openRules .n6b-2:after, .openRules .nt-2:after {
+    height: 24px;
+  }
+}
 .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+  font-size: 9px;
+  line-height: 1;
   content: "-2 margen top";
   position: absolute;
   background-color: #cde0be;
   color: #76ae4a;
   width: 100%;
-  height: 48px;
+  height: 8px;
   top: 0;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-2:before, .openRules .n1c-2:before, .openRules .n2a-2:before, .openRules .n2b-2:before, .openRules .n2c-2:before, .openRules .n3b-2:before, .openRules .n4a-2:before, .openRules .n4e-2:before, .openRules .n4f-2:before, .openRules .n6b-2:before, .openRules .nt-2:before {
+    height: 24px;
+  }
+}
 .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+  font-size: 9px;
+  line-height: 1;
   content: "-1 margen bottom";
   position: absolute;
   background-color: #bed2e0;
   color: #282e3f;
   width: 100%;
-  height: 48px;
   bottom: 0;
   text-align: center;
+  height: 8px;
+}
+@media (min-width: 768px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .openRules .n1a-1:after, .openRules .n1c-1:after, .openRules .n2a-1:after, .openRules .n2b-1:after, .openRules .n2c-1:after, .openRules .n3b-1:after, .openRules .n4a-1:after, .openRules .n4e-1:after, .openRules .n4f-1:after, .openRules .n6b-1:after, .openRules .nt-1:after {
+    height: 24px;
+  }
 }
 .openRules .n1a-1:before, .openRules .n1c-1:before, .openRules .n2a-1:before, .openRules .n2b-1:before, .openRules .n2c-1:before, .openRules .n3b-1:before, .openRules .n4a-1:before, .openRules .n4e-1:before, .openRules .n4f-1:before, .openRules .n6b-1:before, .openRules .nt-1:before {
+  font-size: 9px;
+  line-height: 1;
   display: none;
 }
 .openRules .n1a-0:after, .openRules .n1c-0:after, .openRules .n2a-0:after, .openRules .n2b-0:after, .openRules .n2c-0:after, .openRules .n3b-0:after, .openRules .n4a-0:after, .openRules .n4e-0:after, .openRules .n4f-0:after, .openRules .n6b-0:after, .openRules .nt-0:after {
@@ -15879,7 +16705,8 @@ h6 {
 }
 .openRules .pb-160:before {
   content: "pb-160";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 160px;
   padding-left: 4px;
   width: 100%;
@@ -15896,7 +16723,8 @@ h6 {
 }
 .openRules .pt-160:after {
   content: "pt-160";
-  font-size: 10px;
+  font-size: 9px;
+  line-height: 1;
   height: 160px;
   padding-left: 4px;
   width: 100%;
@@ -20978,22 +21806,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n1a-0 .n1a-wrap {
+    margin-top: 0;
+  }
+}
 .n1a-1 .n1a-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1a-1 .n1a-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1a-1 .n1a-wrap {
+    margin-bottom: 24px;
   }
 }
 .n1a-2 .n1a-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1a-2 .n1a-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1a-2 .n1a-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21226,22 +22070,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n1c-0 .n1c-wrap {
+    margin-top: 0;
+  }
+}
 .n1c-1 .n1c-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1c-1 .n1c-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1c-1 .n1c-wrap {
+    margin-bottom: 24px;
   }
 }
 .n1c-2 .n1c-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1c-2 .n1c-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1c-2 .n1c-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21444,22 +22304,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n1e-0 .n1e-wrap {
+    margin-top: 0;
+  }
+}
 .n1e-1 .n1e-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1e-1 .n1e-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1e-1 .n1e-wrap {
+    margin-bottom: 24px;
   }
 }
 .n1e-2 .n1e-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1e-2 .n1e-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1e-2 .n1e-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21562,22 +22438,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n1f-0 .n1f-wrap {
+    margin-top: 0;
+  }
+}
 .n1f-1 .n1f-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1f-1 .n1f-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1f-1 .n1f-wrap {
+    margin-bottom: 24px;
   }
 }
 .n1f-2 .n1f-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n1f-2 .n1f-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n1f-2 .n1f-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21680,22 +22572,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n2a-0 .n2a-wrap {
+    margin-top: 0;
+  }
+}
 .n2a-1 .n2a-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2a-1 .n2a-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2a-1 .n2a-wrap {
+    margin-bottom: 24px;
   }
 }
 .n2a-2 .n2a-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2a-2 .n2a-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2a-2 .n2a-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21818,22 +22726,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n2b-0 .n2b-wrap {
+    margin-top: 0;
+  }
+}
 .n2b-1 .n2b-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2b-1 .n2b-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2b-1 .n2b-wrap {
+    margin-bottom: 24px;
   }
 }
 .n2b-2 .n2b-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2b-2 .n2b-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2b-2 .n2b-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -21940,22 +22864,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n2c-0 .n2c-wrap {
+    margin-top: 0;
+  }
+}
 .n2c-1 .n2c-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2c-1 .n2c-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2c-1 .n2c-wrap {
+    margin-bottom: 24px;
   }
 }
 .n2c-2 .n2c-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n2c-2 .n2c-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n2c-2 .n2c-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -22429,22 +23369,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n3b-0 .n3b-wrap {
+    margin-top: 0;
+  }
+}
 .n3b-1 .n3b-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n3b-1 .n3b-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n3b-1 .n3b-wrap {
+    margin-bottom: 24px;
   }
 }
 .n3b-2 .n3b-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n3b-2 .n3b-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n3b-2 .n3b-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -22620,22 +23576,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n4a-0 .n4a-wrap {
+    margin-top: 0;
+  }
+}
 .n4a-1 .n4a-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4a-1 .n4a-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4a-1 .n4a-wrap {
+    margin-bottom: 24px;
   }
 }
 .n4a-2 .n4a-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4a-2 .n4a-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4a-2 .n4a-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -22749,22 +23721,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n4e-0 .n4e-wrap {
+    margin-top: 0;
+  }
+}
 .n4e-1 .n4e-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4e-1 .n4e-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4e-1 .n4e-wrap {
+    margin-bottom: 24px;
   }
 }
 .n4e-2 .n4e-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4e-2 .n4e-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4e-2 .n4e-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -22879,22 +23867,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n4f-0 .n4f-wrap {
+    margin-top: 0;
+  }
+}
 .n4f-1 .n4f-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4f-1 .n4f-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4f-1 .n4f-wrap {
+    margin-bottom: 24px;
   }
 }
 .n4f-2 .n4f-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n4f-2 .n4f-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n4f-2 .n4f-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -23006,22 +24010,38 @@ h6 {
     margin-top: 0;
   }
 }
+@media (min-width: 1280px) {
+  .n6b-0 .n6b-wrap {
+    margin-top: 0;
+  }
+}
 .n6b-1 .n6b-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n6b-1 .n6b-wrap {
-    margin-bottom: 48px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n6b-1 .n6b-wrap {
+    margin-bottom: 24px;
   }
 }
 .n6b-2 .n6b-wrap {
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (min-width: 768px) {
   .n6b-2 .n6b-wrap {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .n6b-2 .n6b-wrap {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 

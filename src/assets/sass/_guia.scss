@@ -496,7 +496,9 @@ h6 {
 
       &:before {
         content: "mbr-50-100";
-        font-size: 10px;
+           font-size: 9px;
+    line-height: 1;
+
         width: auto;
         border-left: 1px solid $c-guide;
         color: $c-guide;
@@ -521,7 +523,9 @@ h6 {
 
         &:before {
           content: "mb-#{$a}";
-          font-size: 10px;
+             font-size: 9px;
+    line-height: 1;
+
           height: #{$a}px;
           width: auto;
           border-left: 1px solid $c-guide;
@@ -544,7 +548,9 @@ h6 {
         &:before {
           content: "mb-#{$typeFluid0}";
           background-color: #ebcfdc;
-          font-size: 10px;
+             font-size: 9px;
+    line-height: 1;
+
           height: #{$typeFluid0}px;
           padding-left: 4px;
           width: 100%;
@@ -565,22 +571,44 @@ h6 {
 
       .n1a-2, .n1c-2, .n2a-2, .n2b-2, .n2c-2, .n3b-2, .n4a-2, .n4e-2, .n4f-2, .n6b-2,.nt-2{
         &:after{
+             font-size: 9px;
+    line-height: 1;
+
           content: "-2 margen bottom ";
           position: absolute;
           background-color: #cde0be;
           color: #76ae4a;
           width: 100%;
-          height: 48px;
+          height: 8px;
+          @media (min-width: $break-sm) {
+            height: 12px;
+   
+          }
+          @media (min-width: $break-lg) {
+            height: 24px;
+   
+          }
           bottom: 0;
           text-align: center;
         }
         &:before{
+             font-size: 9px;
+    line-height: 1;
+
           content: "-2 margen top";
           position: absolute;
           background-color: #cde0be;
           color: #76ae4a;
           width: 100%;
-          height: 48px;
+          height: 8px;
+          @media (min-width: $break-sm) {
+            height: 12px;
+   
+          }
+          @media (min-width: $break-lg) {
+            height: 24px;
+   
+          }
           top: 0;
           text-align: center;
         }
@@ -592,16 +620,33 @@ h6 {
 
     .n1a-1, .n1c-1, .n2a-1, .n2b-1, .n2c-1, .n3b-1, .n4a-1, .n4e-1, .n4f-1, .n6b-1,.nt-1{
       &:after{
+           font-size: 9px;
+    line-height: 1;
+
         content: "-1 margen bottom";
         position: absolute;
         background-color: #bed2e0;
         color: #282e3f;
         width: 100%;
-        height: 48px;
+ 
         bottom: 0;
         text-align: center;
+
+
+        height: 8px;
+        @media (min-width: $break-sm) {
+           height: 12px;
+ 
+        }
+        @media (min-width: $break-lg) {
+           height: 24px;
+ 
+        }
       }
       &:before{
+           font-size: 9px;
+    line-height: 1;
+
     display: none;
       }
 
@@ -626,7 +671,9 @@ h6 {
 
         &:before {
           content: "pb-#{$typeFluid0}";
-          font-size: 10px;
+             font-size: 9px;
+    line-height: 1;
+
           height: #{$typeFluid0}px;
           padding-left: 4px;
           width: 100%;
@@ -645,7 +692,9 @@ h6 {
 
         &:after {
           content: "pt-#{$typeFluid0}";
-          font-size: 10px;
+             font-size: 9px;
+    line-height: 1;
+
           height: #{$typeFluid0}px;
           padding-left: 4px;
           width: 100%;
