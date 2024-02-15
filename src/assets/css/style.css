@@ -6329,7 +6329,6 @@ strong {
   margin-bottom: 5px;
 }
 .guide .menu-lateral ul.list-clear li {
-  margin: 0;
   line-height: 1.2;
 }
 .guide .menu-lateral {
@@ -8446,10 +8445,6 @@ input::input-placeholder {
   min-height: 100px;
   padding: 8px 0;
   box-sizing: border-box;
-}
-
-label {
-  font-size: 13px;
 }
 
 .select {
@@ -13588,10 +13583,10 @@ header.interior svg path {
 @media (min-width: 992px) {
   .card9 .card9-wrap-details {
     padding: 0;
-    min-height: 86px;
+    min-height: 74px;
   }
   .sk-load2::before {
-    padding-top: calc(133.25% + 86px);
+    padding-top: calc(133.25% + 74px);
   }
 }
 h1 {
@@ -24719,8 +24714,9 @@ table tr td {
 }
 .d-price-special {
   display: inline-table;
-  padding: 0px 4px 0px;
-  line-height: 0;
+  padding: 2px 4px;
+  line-height: 1;
+  float: left;
 }
 .d-price-special div {
   display: inline-block;
@@ -24971,10 +24967,6 @@ table tr td {
   line-height: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.card9-contents {
-  padding-top: 12px !important;
 }
 
 .product-title a {

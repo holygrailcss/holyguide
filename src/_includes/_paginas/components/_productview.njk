@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+{% import "_macros/_product.njk" as product %}
+
+
+
+<div class="row">
+    <div class="col-xs-12">
+        Productview
+    </div>
+</div>
+
+<div class="row pt-120 pb-120">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-2">
+
+        <div class="sk-load2">
+            {% call product.ratio('3-4') %} {% endcall %}
+          </div>
+
+    </div>
+</div>
+
+

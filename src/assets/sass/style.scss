@@ -413,10 +413,13 @@ table tr td {
 }
 .d-price-special {
   display: inline-table;
-  padding: 0px 4px 0px;
-  line-height: 0;
+  padding: 2px 4px;
+  line-height: 1;
+  float: left;
+
 
   div {
+
     display: inline-block;
   }
 }
@@ -659,10 +662,6 @@ table tr td {
 
 
 
-.card9-contents {
-  padding-top: 12px!important;
-
-}
 
 
 
