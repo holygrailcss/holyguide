@@ -20,9 +20,6 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "parrillas/_all.scss";
 @import "template/_alltemplate.scss";
 @import "./newweb.scss";
-
-
-
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
@@ -328,7 +325,6 @@ table tr td {
 .color-square.color-wrap button {
   width: auto;
   height: 12px;
-
   overflow: hidden;
   &:first-child {
     width: 8px;
@@ -416,16 +412,12 @@ table tr td {
   padding: 2px 4px;
   line-height: 1;
   float: left;
-
-
   div {
-
     display: inline-block;
   }
 }
 .grid-product-list .tag-wrapper {
   display: flex;
-
 }
 .stories-grid {
   .grid-12 {
@@ -471,7 +463,6 @@ table tr td {
     }
   }
 }
-
 .stories-list {
   &:last-child {
     border-bottom: var(--line-width) solid transparent;
@@ -582,18 +573,12 @@ table tr td {
     height: 100vh;
   }
 }
-
-
 .pdp-logo {
   width: 100%;
-
   svg {
     width: 60%;
   }
 }
-
-
-
 .container-4 {
   padding-right: $padding-global * 2;
   padding-left: $padding-global * 2;
@@ -602,27 +587,20 @@ table tr td {
   position: relative;
   width: 100%;
   max-width: $container-6;
-
   @media (min-width: $break-sm) {
     max-width: $container-4;
   }
-
-
 }
-
-.btn--color{
+.btn--color {
   width: 16px;
   height: 16px;
   position: relative;
-
-  &:hover{
+  &:hover {
     opacity: .6;
   }
-
-  &.is-active{
+  &.is-active {
     padding-bottom: 8px;
-  
-    &:after{
+    &:after {
       position: absolute;
       left: 0;
       bottom: -4px;
@@ -633,60 +611,37 @@ table tr td {
     }
   }
 }
-
-
-.clamp-2{
+.clamp-2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   align-self: stretch;
   height: 27px;
   overflow: hidden;
-
 }
-
-.p-sticky{
+.p-sticky {
   position: sticky;
   top: 20px;
 }
-
-
-
-.product-title a{
+.product-title a {
   display: block;
   line-height: 1;
-
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
-
-
-
-
 .product-title a {
-overflow: hidden;
+  overflow: hidden;
 }
-
-
-.fixed-bottom{
+.fixed-bottom {
   position: absolute;
-
   bottom: 0;
   left: 0;
   right: 0;
-  
-
 }
-
-.sidebar-overflow{
+.sidebar-overflow {
   height: 100vh;
   overflow: auto;
 }
-
 .select-8::after {
-
   right: 16px;
-
 }
