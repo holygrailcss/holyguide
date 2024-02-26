@@ -1,9 +1,10 @@
 ---
-layout: _paginas/foundations/_foundations.njk
+layout: _paginas/foundations/_motion.njk
 permalink: /motion/
 
 titulo: motion
 descripcion: Videos tipo background
+
 
 date: Last Modified
 

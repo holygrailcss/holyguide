@@ -405,7 +405,6 @@
       @media (min-width: $break-sm) {
         margin-top: 0;
       }
-
       @media (min-width: $break-lg) {
         margin-top: 0;
       }
@@ -466,8 +465,7 @@
     }
   }
 }
-
-  //espaciados en desktop a los lados
+//espaciados en desktop a los lados
 @mixin sp-contents-sm-1 {
   @media (min-width: $break-sm) {
     li .card9-contents {
@@ -478,5 +476,15 @@
       padding-left: 12px;
       padding-right: 12px;
     }
+  }
+}
+
+
+.grid-product-list {
+  .sk-load2::before {
+    padding-top: calc(133.25% + 76px);
+  }
+  .sk-nodetail.sk-load2::before {
+    padding-top: calc(133.25%);
   }
 }

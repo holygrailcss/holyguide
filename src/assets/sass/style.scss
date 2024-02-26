@@ -645,3 +645,52 @@ table tr td {
 .select-8::after {
   right: 16px;
 }
+
+.box-anim{
+  background-color: #fafafa;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  .box-anim-mini{
+    width: 40%;
+    background-color: #ccc;
+    aspect-ratio: 1/1;
+
+  }
+}
+
+.product-fadein {
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-name: fadein;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.logo-difference {
+  mix-blend-mode: difference;
+}
+
+.logo-hue {
+  mix-blend-mode: hue;
+}
+
+.logo-image {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  left: 78px;
+}
