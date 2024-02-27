@@ -1,28 +1,61 @@
 ---
 layout: base.njk
 ---
-
-
 <div class="container-fluid">{% include '_website/hero.njk' %}</div>
-
-
-<section>
+<section class="mb-64">
   <div class="row">
     <div class="col-xs-12">
       <div class="main-content innermarkdown">
-        {{ content | safe }}   </div>
+        {{ content | safe }} </div>
 
 
-
-          <div class="grid-8">
-            <div class="box-anim">
-            
-          <div class="box-anim-mini product-fadein "></div>
-
+          <div class="container mb-24">
+            <div class="row">
+              <div class="col-xs-12">
+                Tipo de animación
+              </div>
             </div>
           </div>
 
-        
+
+
+      <div class="grid-8 grid-gap-16 mb-24 pb-64">
+        <div class="box-anim">
+          <div class="box-anim-mini slide-in "></div>
+          <div class="box-text">slide-in </div>
+        </div>
+        <div class="box-anim">
+          <div class="box-anim-mini slide-out "></div>
+          <div class="box-text">slide-out </div>
+        </div>
+
+        <div class="box-anim">
+          <div class="box-anim-mini slide-out "></div>
+          <div class="box-text">slide-out </div>
+        </div>
+        <div class="box-anim">
+          <div class="box-anim-mini fade-in "></div>
+          <div class="box-text">fade-in </div>
+        </div>
+        <div class="box-anim">
+          <div class="box-anim-mini fade-out "></div>
+          <div class="box-text">fade-out </div>
+        </div>
+        <div class="box-anim">
+          <div class="box-anim-mini expand-top "></div>
+          <div class="box-text"> expand-top </div>
+        </div>
+        <div class="box-anim">
+          <div class="box-anim-mini collapse-top "></div>
+
+<div class="box-text"> collapse-top </div>
+
+        </div>
+      </div>
+
+
+
+
     </div>
   </div>
 </section>
