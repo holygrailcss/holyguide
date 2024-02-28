@@ -1,41 +1,36 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
+
+
 .n2c {
   @include sp-wraps('.n2c');
 }
-    .n2c-wrap {
-  
-      display: flex;
-      justify-content: center;
-      @include sp-contents-xs-1;
-  
-      @include m-body-bleed;
-      @include gap-20;
-      column-gap: 8px;
-  
-      @media (min-width: $break-sm) {
-        column-gap: 20px;
-        @include m-body;
-        @include gap-20;
-        .card9-contents {
-          padding-right: 0;
-        }
+.n2c-wrap {
+  display: flex;
+  justify-content: flex-start;
+  @include sp-contents-xs-1;
+  @include m-body-bleed;
+  @include gap-20;
+  column-gap: 8px;
+  flex-wrap: wrap;
 
-      }
-
+  @media (min-width: $break-sm) {
+    column-gap: 20px;
+    @include gap-20;
+    margin-left: 11.222%;
+    margin-right: 11.222%;
+    .card9-contents {
+      padding-right: 0;
     }
-    .n2c-item {
-      -webkit-box-flex: 0;
-      flex: 0 0 calc(50% - 4px);
-      max-width: calc(50% - 4px);
-  
-      @media (min-width: $break-sm) {
-        @include col-12-5;
-      }
-      @media (min-width: $break-xl) {
-        @include col-24-11;
-      }
-    }
-
-  
+  }
+}
+.n2c-item {
+  -webkit-box-flex: 0;
+  flex: 0 0 calc(50% - 4px);
+  max-width: calc(50% - 4px);
+  @media (min-width: $break-sm) {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}

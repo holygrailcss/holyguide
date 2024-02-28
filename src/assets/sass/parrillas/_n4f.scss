@@ -14,13 +14,14 @@
     column-gap: 20px;
 
     @media (min-width: $break-sm) {
-        justify-content: center;
+        justify-content: flex-start;
         column-gap: 20px;
     }
     @media (min-width: $break-xl) {
         margin-right: auto;
         margin-left: auto;
         column-gap: 72px;
+        width: 100%;
         max-width: 80%;
     }
 }
@@ -36,7 +37,7 @@
         max-width: calc(25% - 15px);
     }
     @media (min-width: $break-xl) {
-        flex: 0 0 calc(22% - 20px);
-        max-width: calc(22% - 20px);
+        flex: 0 0 calc(26.18% - 72px);
+        max-width: calc(26.18% - 72px);
     }
 }

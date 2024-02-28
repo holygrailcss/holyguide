@@ -13237,7 +13237,7 @@ header.interior svg path {
   white-space: nowrap;
 }
 .innermarkdown th {
-
+  color: #5c6b77;
   font-weight: 500;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.02);
@@ -23451,9 +23451,10 @@ h6 {
 
 .n2c-wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0;
   column-gap: 8px;
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
   .n2c-wrap li:nth-child(odd) .card9-contents {
@@ -23471,15 +23472,9 @@ h6 {
 @media (min-width: 768px) {
   .n2c-wrap {
     column-gap: 20px;
-    margin: 0 8px;
+    margin-left: 11.222%;
+    margin-right: 11.222%;
   }
-}
-@media (min-width: 768px) and (min-width: 768px) {
-  .n2c-wrap {
-    margin: 0 30px;
-  }
-}
-@media (min-width: 768px) {
   .n2c-wrap .sk-load2::before {
     padding-top: calc(133.25% + 76px);
   }
@@ -23495,15 +23490,8 @@ h6 {
 }
 @media (min-width: 768px) {
   .n2c-item {
-    -webkit-box-flex: 0;
-    flex: 0 0 41.6666666667%;
-    max-width: 41.6666666667%;
-  }
-}
-@media (min-width: 1500px) {
-  .n2c-item {
-    flex: 0 0 45.8333333333%;
-    max-width: 45.8333333333%;
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 }
 
@@ -24586,7 +24574,7 @@ h6 {
 }
 @media (min-width: 768px) {
   .n4f-wrap {
-    justify-content: center;
+    justify-content: flex-start;
     column-gap: 20px;
   }
 }
@@ -24595,6 +24583,7 @@ h6 {
     margin-right: auto;
     margin-left: auto;
     column-gap: 72px;
+    width: 100%;
     max-width: 80%;
   }
 }
@@ -24612,8 +24601,8 @@ h6 {
 }
 @media (min-width: 1500px) {
   .n4f-item {
-    flex: 0 0 calc(22% - 20px);
-    max-width: calc(22% - 20px);
+    flex: 0 0 calc(26.18% - 72px);
+    max-width: calc(26.18% - 72px);
   }
 }
 
