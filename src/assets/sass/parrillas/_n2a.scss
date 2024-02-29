@@ -8,24 +8,13 @@
   @include sp-contents-xs;
   @include sp-contents-sm;
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  @media (min-width: $break-sm) {
-    flex-direction: row;
-  }
-
-
-}
-.n2a-item {
-  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-  @include col-6-6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   @include gap-0;
+
   @media (min-width: $break-sm) {
     flex-direction: row;
-    @include col-24-12;
   }
-  @media (min-width: $break-xl) {
-    @include col-24-12;
-  }
+
+
 }

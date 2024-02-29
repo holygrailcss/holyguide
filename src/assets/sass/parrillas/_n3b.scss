@@ -4,26 +4,15 @@
     @include sp-wraps('.n3b');
 }
 .n3b-wrap {
-    display: flex;
+    display: grid;
     @include m-body-bleed;
     @include sp-contents-xs-1;
     flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     @media (min-width: $break-sm) {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        column-gap: 20px;
-    }
-}
-.n3b-item {
-    -webkit-box-flex: 0;
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-    @media (min-width: $break-sm) {
-        flex: 0 0 calc(33.3333333333% - 20px);
-        max-width: calc(33.3333333333% - 20px);
-    }
-    @media (min-width: $break-xl) {
-        @include col-24-7;
+        @include sp-contents-sm-3;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 72px;
     }
 }

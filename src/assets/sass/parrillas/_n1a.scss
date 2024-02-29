@@ -1,37 +1,22 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
-
-
 .n1a {
-  @include sp-wraps('.n1a') ;
-
-
+  @include sp-wraps('.n1a');
 }
-  .n1a-wrap {
-
-    display: flex;
-    justify-content: center;
-
-    @include m-body-0;
-    @include gap-0;
-    @include sp-contents-xs;
-
-
-    @media (min-width: $break-sm) {
-      @include m-body;
-      @include gap-20;
-    }
+.n1a-wrap {
+  display: grid;
+  @include m-body-0;
+  @include gap-0;
+  @include sp-contents-xs;
+  grid-template-columns: 100%;
+  @media (min-width: $break-sm) {
+    @include m-body;
+    grid-template-columns: 25% 50% 25%;
   }
-  .n1a-item {
-    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-    @include col-6-6;
-
-    @media (min-width: $break-sm) {
-      @include col-12-8;
-    }
-    @media (min-width: $break-xl) {
-      @include col-24-12;
-    }
+}
+.n1a-item {
+  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+  @media (min-width: $break-sm) {
+    grid-column: 2 / 3;
   }
-
-
+}
