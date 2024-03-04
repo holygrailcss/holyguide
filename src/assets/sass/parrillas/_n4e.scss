@@ -1,12 +1,14 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
+
+
 .n4e {
     @include sp-wraps('.n4e');
 }
 .n4e-wrap {
     display: grid;
     @include m-body-bleed;
-    @include sp-contents-xs;
+    @include sp-contents-xs-1 ;
     @include sp-contents-sm-4;
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);

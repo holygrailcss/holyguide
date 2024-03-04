@@ -2,35 +2,38 @@
 @import "../abstract/_gridNEW.scss";
 
 
+
 .n4a {
-  @include sp-wraps('.n4a') ;
+  @include sp-wraps('.n4a');
 }
-  .n4a-wrap {
-    @include m-body-0;
-    @include gap-1;
-    @include sp-contents-xs;
-    @include sp-contents-sm-1;
-
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    display: grid;
-    @media (min-width: $break-md) {
-      grid-template-columns: repeat(4, 1fr);
-   
+.n4a-wrap {
+  @include m-body-0;
+  @include gap-1;
+  @include sp-contents-xs;
+  @media (min-width: $break-sm) {
+    li .card9-contents {
+      padding-left: 0px;
+      padding-right: 12px;
     }
- 
-  }
-  .n4a-item {
-    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-
-
-    @media (min-width: $break-md) {
-      grid-template-columns: repeat(4, 1fr);
-   
+    li:nth-child(4n - 3) .card9-contents {
+      padding-left: 12px;
+      padding-right: 12px;
     }
-
+    li:nth-child(5n - 1) .card9-contents {
+      padding-left: 0;
+      padding-right: 12px;
+    }
   }
-
-
-
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  display: grid;
+  @media (min-width: $break-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.n4a-item {
+  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+  @media (min-width: $break-md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

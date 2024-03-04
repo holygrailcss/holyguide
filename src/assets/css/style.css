@@ -24202,11 +24202,15 @@ h6 {
 }
 @media (min-width: 768px) {
   .n4a-wrap li .card9-contents {
-    padding-left: 0;
+    padding-left: 0px;
     padding-right: 12px;
   }
-  .n4a-wrap li:first-child .card9-contents {
+  .n4a-wrap li:nth-child(4n-3) .card9-contents {
     padding-left: 12px;
+    padding-right: 12px;
+  }
+  .n4a-wrap li:nth-child(5n-1) .card9-contents {
+    padding-left: 0;
     padding-right: 12px;
   }
 }
@@ -24348,8 +24352,12 @@ h6 {
   column-gap: 8px;
 }
 @media (max-width: 767px) {
-  .n4e-wrap li .card9-contents {
+  .n4e-wrap li:nth-child(odd) .card9-contents {
     padding-left: 8px;
+    padding-right: 8px;
+  }
+  .n4e-wrap li:nth-child(even) .card9-contents {
+    padding-left: 0;
     padding-right: 8px;
   }
 }
