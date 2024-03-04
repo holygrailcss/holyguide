@@ -9,7 +9,7 @@
     display: grid;
     @include m-body-bleed;
     @include sp-contents-xs-1 ;
-    @include sp-contents-sm-4;
+    @include sp-contents-sm-0;
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 8px;

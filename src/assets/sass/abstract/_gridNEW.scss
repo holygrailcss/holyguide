@@ -467,6 +467,17 @@
 }
 
 
+
+
+@mixin sp-contents-sm-0 {
+  @media (min-width: $break-sm) {
+    li .card9-contents {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 @mixin sp-contents-sm-3 {
   //espaciados en los lados
   @media (min-width: $break-sm) {
