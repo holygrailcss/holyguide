@@ -484,10 +484,12 @@
     li:nth-child(3n - 2) .card9-contents {
       padding-left: 12px;
       padding-right: 0;
+
     }
-    li:nth-child(4n - 1) .card9-contents {
+    li:nth-child(3n) .card9-contents {
       padding-left: 0;
       padding-right: 12px;
+
     }
   }
 }
@@ -499,8 +501,9 @@
     li:nth-child(4n - 3) .card9-contents {
       padding-left: 12px;
       padding-right: 0;
+
     }
-    li:nth-child(5n - 1) .card9-contents {
+    li:nth-child(4n) .card9-contents {
       padding-left: 0;
       padding-right: 12px;
     }
