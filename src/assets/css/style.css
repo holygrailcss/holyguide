@@ -26969,14 +26969,14 @@ table tr td {
   height: 100%;
 }
 
-.container-grid {
+.cc-container {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
   padding: 0;
 }
 
-.ficha-imagen {
+.cc-imagen {
   position: sticky;
   top: 0;
   display: grid;
@@ -26985,52 +26985,52 @@ table tr td {
   justify-items: center;
 }
 
-.ficha-imagen-wrap {
+.cc-imagen-item {
   width: 100%;
 }
-.ficha-imagen-wrap img {
+.cc-imagen-item img {
   float: left;
   width: 80vw;
   height: initial;
 }
 
-.ficha-imagen-collection {
+.cc-imagen-collection {
   overflow: auto;
   height: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.ficha-imagen-logo {
+.cc-imagen-logo {
   width: 50%;
   display: none;
 }
-.ficha-imagen-logo svg {
+.cc-imagen-logo svg {
   width: 100%;
   max-width: 180px;
 }
 
 @media (min-width: 992px) {
-  .container-grid {
+  .cc-container {
     grid-template-columns: 1fr 1fr;
   }
-  .ficha-imagen-wrap {
+  .cc-imagen-item {
     height: 100%;
-    width: 100%;
+    width: initial;
   }
-  .ficha-imagen-wrap img {
+  .cc-imagen-item img {
     float: right;
     width: 100%;
     height: 100%;
   }
-  .ficha-imagen {
+  .cc-imagen {
     grid-template-columns: 1fr;
     display: grid;
   }
-  .ficha-imagen img {
+  .cc-imagen img {
     max-width: initial;
   }
-  .ficha-imagen-collection {
+  .cc-imagen-collection {
     overflow: auto;
     height: 100vh;
     display: flex;
@@ -27038,42 +27038,42 @@ table tr td {
   }
 }
 @media (min-width: 1280px) {
-  .container-grid {
+  .cc-container {
     grid-template-columns: 1fr 1fr;
   }
-  .ficha-imagen {
+  .cc-imagen {
     grid-template-columns: 1fr;
     display: grid;
   }
-  .ficha-imagen img {
+  .cc-imagen img {
     height: 100vh;
     max-width: initial;
   }
-  .ficha-imagen-wrap {
+  .cc-imagen-item {
     height: 100vh;
     width: initial;
   }
-  .ficha-imagen-wrap img {
+  .cc-imagen-item img {
     float: right;
     height: 100vh;
   }
 }
 @media (min-width: 1500px) {
-  .container-grid {
+  .cc-container {
     grid-template-columns: 1.5fr 1fr;
   }
-  .ficha-imagen-wrap {
+  .cc-imagen-item {
     width: initial;
   }
-  .ficha-imagen {
+  .cc-imagen {
     grid-template-columns: 1fr 1fr;
     display: flex;
   }
-  .ficha-imagen img {
+  .cc-imagen img {
     height: 100vh;
     max-width: initial;
   }
-  .ficha-imagen-logo {
+  .cc-imagen-logo {
     margin: 0 auto;
     width: initial;
     display: flex;
