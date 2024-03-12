@@ -26884,12 +26884,12 @@ table tr td {
 .image-zone {
   position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: flex-end;
 }
 @media (min-width: 992px) {
   .image-zone {
+    height: 100vh;
     width: 60%;
   }
 }
