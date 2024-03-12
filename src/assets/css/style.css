@@ -26903,6 +26903,7 @@ table tr td {
     width: initial;
     position: absolute;
     height: 100vh;
+    right: 0;
   }
 }
 
@@ -26954,9 +26955,128 @@ table tr td {
 }
 @media (min-width: 992px) {
   .logo-flotante {
+    top: 50%;
+    transform: translateY(-50%);
     display: block;
   }
 }
 .logo-flotante svg {
   width: 50%;
+}
+
+.image-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.container-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  padding: 0;
+}
+
+.ficha-imagen {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.ficha-imagen-wrap {
+  width: 100%;
+}
+.ficha-imagen-wrap img {
+  float: left;
+  width: 80vw;
+  height: initial;
+}
+
+.ficha-imagen-collection {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.ficha-imagen-logo {
+  width: 50%;
+  display: none;
+}
+.ficha-imagen-logo svg {
+  width: 100%;
+  max-width: 180px;
+}
+
+@media (min-width: 992px) {
+  .container-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ficha-imagen-wrap {
+    height: 100%;
+    width: 100%;
+  }
+  .ficha-imagen-wrap img {
+    float: right;
+    width: 100%;
+    height: 100%;
+  }
+  .ficha-imagen {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .ficha-imagen img {
+    max-width: initial;
+  }
+  .ficha-imagen-collection {
+    overflow: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1280px) {
+  .container-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ficha-imagen {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+  .ficha-imagen img {
+    height: 100vh;
+    max-width: initial;
+  }
+  .ficha-imagen-wrap {
+    height: 100vh;
+    width: initial;
+  }
+  .ficha-imagen-wrap img {
+    float: right;
+    height: 100vh;
+  }
+}
+@media (min-width: 1500px) {
+  .container-grid {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .ficha-imagen-wrap {
+    width: initial;
+  }
+  .ficha-imagen {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+  }
+  .ficha-imagen img {
+    height: 100vh;
+    max-width: initial;
+  }
+  .ficha-imagen-logo {
+    margin: 0 auto;
+    width: initial;
+    display: flex;
+    justify-content: center;
+  }
 }
