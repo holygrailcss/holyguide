@@ -26884,3 +26884,46 @@ table tr td {
   position: absolute;
   bottom: -25px;
 }
+
+.container-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+}
+
+.image-zone {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-content {
+  position: absolute;
+  height: 100vh;
+}
+
+.text-zone {
+  width: 40%;
+}
+
+.cosa {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-flotante {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 22%;
+  text-align: center;
+}
+.logo-flotante svg {
+  width: 50%;
+}
