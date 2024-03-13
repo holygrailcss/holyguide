@@ -1,0 +1,128 @@
+
+
+.cc-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  
+  .cc-imagen {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+  .cc-imagen-item {
+    width: 100%;
+    img {
+      float: left;
+      width: 80vw;
+      height: initial;
+    }
+  }
+  .cc-imagen-collection {
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .cc-imagen-logo {
+    display: none;
+  }
+  
+  
+  @media (min-width: 992px) {
+    .cc-container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .cc-imagen {
+      grid-template-columns: 1fr;
+      display: grid;
+      align-items: flex-end;
+      justify-items: flex-end;
+      img {
+        max-width: initial;
+      }
+    }
+    .cc-imagen-item {
+      height: 100%;
+      width: initial;
+      img {
+        float: right;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .cc-imagen-collection {
+      overflow: auto;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .cc-imagen-logo {
+      display: none;
+    }
+  }
+  
+  
+  @media (min-width: 1280px) {
+    .cc-container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .cc-imagen {
+      grid-template-columns: 1fr;
+      display: grid;
+      align-items: flex-end;
+      justify-items: flex-end;
+      img {
+        height: 100vh;
+        max-width: initial;
+      }
+    }
+    .cc-imagen-item {
+      height: initial;
+      width: initial;
+      img {
+        float: right;
+        height: initial;
+      }
+    }
+    .cc-imagen-logo {
+      display: none;
+    }
+  }
+  
+  
+  @media (min-width: 1700px) {
+    .cc-container {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    .cc-imagen {
+      grid-template-columns: 1fr 1fr;
+      display: flex;
+      align-items: center;
+      justify-items: flex-end;
+      img {
+        height: 100vh;
+        max-width: initial;
+      }
+    }
+    .cc-imagen-item {
+      width: initial;
+    }
+    .cc-imagen-logo {
+      width: 50%;
+      margin: 0 auto;
+      width: initial;
+      display: flex;
+      justify-content: center;
+      svg {
+        width: 100%;
+        max-width: 180px;
+      }
+    }
+  }

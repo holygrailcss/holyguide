@@ -52,19 +52,3 @@ $sm-grid-view3-cols: 12;
 $sm-grid-view3-gutter: 4px;
 $sm-grid-view3-mbottom: 4px;
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}

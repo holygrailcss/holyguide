@@ -1,18 +1,6 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
-// .grid-product-wrap--1F {
-
-// 	@include space-pmobile-pdesktop;
-
-// 	.grid-product-list--1F {
-
-// 		@media (min-width: $break-sm) {
-// 			width: calc((((100% / 12) * 8)) - 4px);
-// 		}
-// 	}
-
-// }
 
 .grid-product-wrap--1F {
   display: grid;
