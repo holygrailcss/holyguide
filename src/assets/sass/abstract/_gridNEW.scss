@@ -399,7 +399,7 @@
   }
 }
 @mixin sp-wraps($template) {
-  &-0 {
+  &_0 {
     #{$template}-wrap {
       margin-top: 0;
       @media (min-width: $break-sm) {
@@ -410,7 +410,7 @@
       }
     }
   }
-  &-1 {
+  &_1   {
     #{$template}-wrap {
       margin-bottom: 8px;
       @media (min-width: $break-sm) {
@@ -421,7 +421,7 @@
       }
     }
   }
-  &-2 {
+  &_2   {
     #{$template}-wrap {
       margin-top: 8px;
       margin-bottom: 8px;
@@ -533,5 +533,16 @@
   }
   .sk-nodetail.sk-load2::before {
     padding-top: calc(133.25%);
+  }
+}
+
+
+@mixin sp-gapnodetails($template) {
+
+  #{$template}_0 {
+    #{$template}-wrap {
+      gap: 0;
+    }
+  
   }
 }

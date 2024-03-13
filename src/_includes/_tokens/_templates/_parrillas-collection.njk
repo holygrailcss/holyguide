@@ -32,10 +32,9 @@ permalink: /parrillas-collection/
         </div>
 
         <div class="col-xs-4 text-right pr-40 is-flex content-end">
-            <div  id="suffix-0"> <button class="btn btn-primary"> -0 </button>   </div>
-            <div  id="suffix-1">  <button class="btn btn-primary">-1</button></div>
-            <div  id="suffix-2">  <button class="btn btn-primary"> -2</button> </div>
-
+            <div  id="suffix_0"> <button class="btn btn-primary"> _0 </button>   </div>
+            <div  id="suffix_1">  <button class="btn btn-primary">_1</button></div>
+            <div  id="suffix_2">  <button class="btn btn-primary"> _2</button> </div>
     
     </div>
     </div>
@@ -44,12 +43,6 @@ permalink: /parrillas-collection/
 </div>
 <div class="w-100 grid-product-list pt-100 ">
 
-
-
-    {% include '_tokens/_templates/parrillas/n3b.njk' %} 
-
-
-   {# 
 
 
     {% include '_tokens/_templates/parrillas/n1a.njk' %}
@@ -77,21 +70,12 @@ permalink: /parrillas-collection/
     {% include '_tokens/_templates/parrillas/nt2.njk' %} 
 
 
-
-
- 
-
-    
-     {% include '_tokens/_templates/parrillas/n2a.njk' %} 
-
-    {% include '_tokens/_templates/parrillas/n2c.njk' %}
     {% include '_tokens/_templates/parrillas/n2d.njk' %}
     {% include '_tokens/_templates/parrillas/n2e.njk' %}
     {% include '_tokens/_templates/parrillas/n2f.njk' %}
 
     {% include '_tokens/_templates/parrillas/n3a.njk' %}
-    {% include '_tokens/_templates/parrillas/n3b.njk' %}
-    {% include '_tokens/_templates/parrillas/n3c.njk' %} #}
+    {% include '_tokens/_templates/parrillas/n3c.njk' %} 
 
     <div class="grid">
         <div class="grid1"></div>
@@ -146,8 +130,9 @@ const classesToModify = ['n1a', 'n1c', 'n2a', 'n2b', 'n2c', 'n3b', 'n4a', 'n4e',
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    ['suffix-0', 'suffix-1', 'suffix-2'].forEach(suffixId => {
-        const suffix = suffixId.split('-')[1];
+    // Asegúrate de que los IDs de tus elementos usen guiones bajos, como 'suffix_0'
+    ['suffix_0', 'suffix_1', 'suffix_2'].forEach(suffixId => {
+        const suffix = suffixId.split('_')[1];
         document.getElementById(suffixId).addEventListener('click', function() {
             applySuffixToClasses(suffix);
         });
@@ -157,12 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function applySuffixToClasses(suffix) {
     classesToModify.forEach(baseClass => {
         document.querySelectorAll(`.${baseClass}`).forEach(element => {
-            // Eliminar las clases anteriores con sufijos
+            // Eliminar las clases anteriores con sufijos, usando guiones bajos
             for (let i = 0; i <= 2; i++) {
-                element.classList.remove(`${baseClass}-${i}`);
+                element.classList.remove(`${baseClass}_${i}`);
             }
-            // Añadir la nueva clase con sufijo
-            element.classList.add(`${baseClass}-${suffix}`);
+            // Añadir la nueva clase con sufijo, usando guiones bajos
+            element.classList.add(`${baseClass}_${suffix}`);
         });
     });
 }

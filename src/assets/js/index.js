@@ -1,154 +1,134 @@
-document.body.onscroll = function () {
-  if (
-    document.body.scrollTop >= 150 ||
-    document.documentElement.scrollTop >= 150
-  ) {
-    document.body.classList.add("scrolled");
-  } else {
-    document.body.classList.remove("scrolled");
-  }
-};
-
-
-
-
-
-
-
 $(document).ready(function () {
+  document.body.onscroll = function () {
+      if (document.body.scrollTop >= 150 || document.documentElement.scrollTop >= 150) {
+          document.body.classList.add("scrolled");
+      } else {
+          document.body.classList.remove("scrolled");
+      }
+  };
+
   initvideo();
-  $(".resize-code").on("click", function () {
-    $(this.parentNode.parentNode.parentNode.parentNode).toggleClass(
-      "opencode-button"
-    );
-    e.preventDefault();
+
+  $(".resize-code").on("click", function (e) {
+      $(this).closest('.code-container').toggleClass("opencode-button");
+      e.preventDefault();
   });
+
   $(".resize-rules").on("click", function () {
-    console.log("esto no funciona");
-    $(this.parentNode.parentNode).toggleClass("openRules");
+      console.log("esto no funciona");
+      $(this).closest('.rules-container').toggleClass("openRules");
   });
+
   $(".btn-anim").click(function () {
-    $(this).toggleClass("is-loading");
+      $(this).toggleClass("is-loading");
   });
+
   $("#menu-toggle").click(function () {
-    $("body").toggleClass("menu-open");
+      $("body").toggleClass("menu-open");
   });
+
   $(".check-new").on("click", function (e) {
-    console.log("Esto funciona");
-    $(this.parentNode).toggleClass("bg-dark");
-    $(this.parentNode).toggleClass("has-light");
-    e.preventDefault();
+      console.log("Esto funciona");
+      $(this).closest('.new-container').toggleClass("bg-dark has-light");
+      e.preventDefault();
   });
+
   // Enseñamos el primero ocultamos el resto
   $("#tabguide-nav li:first-child").addClass("active");
-  $(".tabguide-content").hide();
-  $(".tabguide-content:first").show();
+  $(".tabguide-content").hide().first().show();
+
   $("#tabguide-nav li").click(function () {
-    $("#tabguide-nav li").removeClass("active");
-    $(this).addClass("active");
-    $(".tabguide-content").hide();
-    var activeTab = $(this).find("a").attr("href");
-    $(activeTab).fadeIn();
-    return false;
+      $("#tabguide-nav li").removeClass("active");
+      $(this).addClass("active");
+      $(".tabguide-content").hide();
+      $($(this).find("a").attr("href")).fadeIn();
+      return false;
   });
+
   $(".opencode-button").click(function () {
-    $(this.parentNode.parentNode).toggleClass("active");
-    return false;
+      $(this).closest('.code-button-container').toggleClass("active");
+      return false;
   });
+
   $(".openshoplook").click(function () {
-    $("body").toggleClass("openshop");
-    return false;
+      $("body").toggleClass("openshop");
+      return false;
   });
+
   $('input[type="checkbox"]').click(function () {
-    if ($(this).is(":checked")) {
-      console.log("Checkbox esta seleccionado.");
-    } else if ($(this).is(":not(:checked)")) {
-      console.log("Checkbox no esta seleccionado.");
-    }
+      if ($(this).is(":checked")) {
+          console.log("Checkbox esta seleccionado.");
+      } else {
+          console.log("Checkbox no esta seleccionado.");
+      }
   });
+
   $(".nav-mainbar-close").click(function () {
-    $(".nav-wrap").toggleClass("active");
+      $(".nav-wrap").toggleClass("active");
   });
+
   //Boton que marca en rojo los iconos que no son 16x16
   $(".check-16").on("click", function () {
-    document.querySelectorAll("svg").forEach((icon) => {
-      if (
-        icon.getBoundingClientRect().width != 16 ||
-        icon.getBoundingClientRect().height != 16
-      ) {
-        icon.querySelectorAll("path").forEach((path) => {
-          path.setAttribute("style", "fill: red;");
-        });
-      }
-    });
+      document.querySelectorAll("svg").forEach(function(icon) {
+          if (icon.getBoundingClientRect().width != 16 || icon.getBoundingClientRect().height != 16) {
+              icon.querySelectorAll("path").forEach(function(path) {
+                  path.style.fill = "red";
+              });
+          }
+      });
   });
-  $("#menlink").click(function () {
-    $("body").addClass("menopen");
-    $("body").removeClass("womanopen");
-    $("#menlink").addClass("link-active");
-    $("#womanlink").removeClass("link-active");
+
+  $("#menlink, #womanlink").click(function () {
+      var isMen = $(this).is("#menlink");
+      $("body").toggleClass("menopen", isMen).toggleClass("womanopen", !isMen);
+      $("#menlink").toggleClass("link-active", isMen);
+      $("#womanlink").toggleClass("link-active", !isMen);
   });
-  $("#womanlink").click(function () {
-    $("body").addClass("womanopen");
-    $("body").removeClass("menopen");
-    $("#womanlink").addClass("link-active");
-    $("#menlink").removeClass("link-active");
-  });
+
   if (document.querySelector(".btncode")) {
-    var clipboard = new ClipboardJS(".btncode");
-    clipboard.on("success", function (e) {
-      console.info("Action:", e.action);
-      console.info("Text:", e.text);
-      console.info("Trigger:", e.trigger);
-      e.clearSelection();
-    });
+      var clipboard = new ClipboardJS(".btncode");
+      clipboard.on("success", function (e) {
+          console.info("Action:", e.action);
+          console.info("Text:", e.text);
+          console.info("Trigger:", e.trigger);
+          e.clearSelection();
+      });
   }
-  $(".check-16").on("click", function () {
-    document.querySelectorAll("svg").forEach((icon) => {
-      if (
-        icon.getBoundingClientRect().width != 16 ||
-        icon.getBoundingClientRect().height != 16
-      ) {
-        icon.querySelectorAll("path").forEach((path) => {
-          path.setAttribute("style", "fill: red;");
-        });
-      }
-    });
-  });
+
   $("a.rtl").on("click", function () {
-    console.log("rtlChange activo");
-    let element = document.querySelector("body");
-    let validation = element.classList.contains("is-rtl");
-    if (validation) {
-      element.classList.remove("is-rtl");
-      document.querySelector("html").setAttribute("dir", "ltr");
-    } else {
-      element.classList.add("is-rtl");
-      document.querySelector("html").setAttribute("dir", "rtl");
-    }
+      console.log("rtlChange activo");
+      $("body").toggleClass("is-rtl");
+      $("html").attr("dir", $("body").hasClass("is-rtl") ? "rtl" : "ltr");
   });
-  $(".over1").on("click", function (e) {
-    $(this.parentNode.parentNode.parentNode.parentNode)
-      .toggleClass("open-over1")
-      .removeClass("open-over2 open-over3");
-    e.preventDefault();
+
+  $(".over1, .over2, .over3").on("click", function (e) {
+      var className = "open-" + $(this).attr('class');
+      $(this).closest('.overlay-container').attr('class', 'overlay-container ' + className);
+      e.preventDefault();
   });
-  $(".over2").on("click", function (e) {
-    $(this.parentNode.parentNode.parentNode.parentNode)
-      .toggleClass("open-over2")
-      .removeClass("open-over1 open-over3");
-    e.preventDefault();
-  });
-  $(".over3").on("click", function (e) {
-    $(this.parentNode.parentNode.parentNode.parentNode)
-      .toggleClass("open-over3")
-      .removeClass("open-over2 open-over1");
-    e.preventDefault();
-  });
+
   $(".to-top").on("click", function () {
-    $(window).scrollTop(0);
+      $(window).scrollTop(0);
   });
 });
+
+function initvideo() {
+  $(".action--play").click(function () {
+      $(".video-wrap").addClass("video-wrap--show").removeClass("video-wrap--hide");
+      $(".video-player").attr("src", $(this).data("src")).get(0).play();
+  });
+
+  $(".action--close").click(function () {
+      $(".video-wrap").addClass("video-wrap--hide").removeClass("video-wrap--show");
+      $(".video-player").get(0).pause();
+  });
+}
+
+
+
+
+
+
 function rtlChange() {
   console.log("rtlChange activo");
   let element = document.querySelector("body");
@@ -238,6 +218,9 @@ const handleScroll = () => {
   // Actualizar la posición actual del scroll
   scrollPosition = newScrollPosition;
 };
+
+
+
 // Agregar el listener al evento de scroll
 window.addEventListener("scroll", handleScroll);
 var mySwiper = new Swiper(".swiper-container-img", {
@@ -522,56 +505,40 @@ function cerrarDiv(clickedElement) {
 }
 
 
-
-
-var lastScrollTop = 0; // Variable para almacenar la última posición de desplazamiento
-var div = document.getElementById('searchcomponent');
-
-div.onscroll = function() {
-  var currentScrollTop = div.scrollTop;
-
-  if (currentScrollTop > lastScrollTop) {
-    // Desplazamiento hacia abajo
-
-
-    body.classList.remove("scroll-up-search");
-    body.classList.add("scroll-down-search");
-
-
-  } else if (currentScrollTop < lastScrollTop) {
-
-    body.classList.remove("scroll-down-search");
-body.classList.add("scroll-up-search");
+document.addEventListener('DOMContentLoaded', function() {
+  var div = document.getElementById('searchcomponent');
+  if (div) {
+      div.onscroll = function () {
+          var currentScrollTop = div.scrollTop;
+          if (currentScrollTop > lastScrollTop) {
+              document.body.classList.remove("scroll-up-search");
+              document.body.classList.add("scroll-down-search");
+          } else if (currentScrollTop < lastScrollTop) {
+              document.body.classList.remove("scroll-down-search");
+              document.body.classList.add("scroll-up-search");
+          }
+          if (div.scrollTop >= 300) {
+              document.body.classList.add("is-search");
+          } else {
+              document.body.classList.remove("is-search");
+          }
+          lastScrollTop = currentScrollTop;
+      };
   }
-
-
-
-  if (div.scrollTop >= 300) {
-    console.log(div.scrollTop)
-    document.body.classList.add("is-search");
-  } else {
-    console.log(div.scrollTop)
-    document.body.classList.remove("is-search");
-  }
-
-
-  // Actualiza la última posición de desplazamiento para la próxima vez
-  lastScrollTop = currentScrollTop;
-};
+});
+var lastScrollTop = 0;
 
 
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  const buttons = document.querySelectorAll('.list-slide .btn');
-
-  buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          // Remover la clase is-active de todos los botones
-          buttons.forEach(btn => btn.classList.remove('is-active'));
-
-          // Agregar la clase is-active al botón clickeado
-          this.classList.add('is-active');
-      });
+document.addEventListener("DOMContentLoaded", (event) => {
+  const buttons = document.querySelectorAll(".list-slide .btn");
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remover la clase is-active de todos los botones
+      buttons.forEach((btn) => btn.classList.remove("is-active"));
+      // Agregar la clase is-active al botón clickeado
+      this.classList.add("is-active");
+    });
   });
 });
