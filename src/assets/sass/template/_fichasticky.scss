@@ -33,6 +33,36 @@
   .cc-imagen-logo {
     display: none;
   }
+
+  @media (min-width: 500px) {
+
+    .cc-imagen-item {
+        width: 100%;
+        img {
+          float: left;
+          width: 60vw;
+          height: initial;
+        }
+      }
+
+  }
+
+
+  @media (min-width: 768px) {
+
+    .cc-imagen-item {
+        width: 100%;
+        img {
+          float: left;
+          width: 40vw;
+          height: initial;
+        }
+      }
+
+  }
+
+
+
   
   
   @media (min-width: 992px) {
@@ -49,12 +79,12 @@
       }
     }
     .cc-imagen-item {
-      height: 100%;
-      width: initial;
+      height: initial;
+      width: 100%;
       img {
         float: right;
         width: 100%;
-        height: 100%;
+        height: initial;
       }
     }
     .cc-imagen-collection {
