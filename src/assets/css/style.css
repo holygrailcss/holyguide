@@ -14294,6 +14294,15 @@ h6 {
   padding-top: 16px;
   text-align: center;
 }
+#loopicons article svg,
+#loopicons2 article svg,
+#loopicons3 article svg,
+#loopicons4 article svg,
+#loopicons5 article svg,
+#loopicons6 article svg {
+  max-width: 100%;
+  height: 100%;
+}
 @media (min-width: 768px) {
   #loopicons article,
   #loopicons2 article,
