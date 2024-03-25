@@ -31,6 +31,24 @@ module.exports = function (eleventyConfig) {
 
 
 
+  eleventyConfig.addShortcode("br", function () { //  ✅ se usa poniendo esto--> {% br %}
+    return `
+  <br>
+`;
+  });
+  eleventyConfig.addShortcode("br2", function () { //  ✅ se usa poniendo esto-->  {% br %}
+    return `
+  <br><br>
+`;
+  });
+  eleventyConfig.addShortcode("br3", function () { //  ✅ se usa poniendo esto-->  {% br %}
+    return `
+  <br><br><br>
+`;
+  });
+
+
+
   eleventyConfig.addPlugin(embeds);
 
   eleventyConfig.setLibrary(

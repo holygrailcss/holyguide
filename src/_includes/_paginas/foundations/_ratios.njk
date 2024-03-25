@@ -12,13 +12,13 @@ layout: base.njk
       <div class="col-xs-12">
         <div class="masonry">
           {% for item in global.ratios %}
-          <div class="mini-box rat-{{ item.ratio }}">
-            <div class="rat-content">
+          <div class="mini-box ar-{{ item.ratio }} align-center">
+      
               <div class="title-m">
-                .rat-{{ item.ratio }}
+                .ar{{ item.ratio }}
               </div>
               {{ item.ratio }}
-            </div>
+           
           </div>
           {% endfor %}
         </div>

@@ -14,15 +14,14 @@ imageAlt: Ilustración de un diseño de sistema web
 
 ### Como se usan
 
-Para poder usar el ratio solo tenemos que incluirlo dentro de `.rat-2-1.rat-content` para que su contenido tenga posicion absoluta.
+Para poder usar el ratio solo tenemos que incluirlo dentro de `.ar-2-1` para que su contenido tenga posicion absoluta.
 
 Adjuntamos los paddings-tops para los ratios.
 Si no existe tu ratio puedes crear nuevos ratios de esta manera. `@include ratio(ancho, alto);`
 
+ {% br %} 
 ```
-<div class='rat-2-1'>
-    <div class='rat-content'>
+<div class='ar-2-1'>
         <img src='image.jpg' alt='Image description'>
-    </div>
 </div>
 ```

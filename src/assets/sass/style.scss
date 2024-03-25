@@ -79,7 +79,8 @@ ul {
 }
 .masonry {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   width: 100%;
   align-items: start;
@@ -682,3 +683,7 @@ table tr td {
 }
 
 
+.hljs{
+  padding: 16px;
+  font-size: 12px;
+}
