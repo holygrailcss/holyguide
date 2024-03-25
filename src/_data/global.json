@@ -333,7 +333,7 @@
     { "size": "btn--medium" },
     { "size": "btn--large" },
     { "size": "btn--full" },
-    { "size": "btn--xxl" },
-    { "size": "btn--search" }
+    { "size": "btn--xxl" }
+
   ]
 }
