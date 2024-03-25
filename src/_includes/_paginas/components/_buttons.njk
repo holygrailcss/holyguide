@@ -28,7 +28,7 @@ layout: base.njk
 {% call helper.insert(elementType='button',['btn btn-secondary']) %}
 {% endcall %}
          <h3 class="h3"> Botón Tertiary</h3>
-         <p class="p1 mb-24"> Botón simulando un link básico</p>
+         <p class="p1 mb-24"> Botón simulando un link básico - no necesita .btn para resetear</p>
 
 {% call helper.insert(elementType='button',['btn-tertiary']) %}
 {% endcall %}
@@ -201,6 +201,10 @@ layout: base.njk
             Apple Pay </button>
         </div>
       </div>
+
+
+
+
       <p class="text-l p-8"> btn-naver : </p>
       <div class="">
         <div class=" is-flex ">
@@ -322,9 +326,27 @@ layout: base.njk
             Sign in with WECHAT </button>
         </div>
       </div>
+
+<pre class="language-markup mt-24" tabindex="0"><code class="language-markup">
+&lt;button class=&quot;btn btn-social btn-apple-secondary btn-separate  btn--medium  &quot;&gt;
+  &lt;svg-icon&gt;
+    &lt;div&gt;
+      &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot;  xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot;
+          d=&quot;M10.6208 1C8.9723 1.0665 7.62712 2.79616 7.81495 4.22655C9.33864 4.34498 10.8005 2.6369 10.6208 1ZM10.4217 14.9819C11.8357 14.9562 13.2083 12.6012 13.6668 11.2711C11.3241 10.1762 10.984 7.19695 13.1663 5.77239C12.3438 4.56951 11.0622 4.405 10.606 4.38575C9.93947 4.31834 9.29278 4.57341 8.76429 4.78185C8.42833 4.91436 8.14013 5.02803 7.92498 5.02803C7.68629 5.02803 7.39084 4.91067 7.05913 4.77892C6.62476 4.60638 6.12821 4.40915 5.61554 4.41842C3.92969 4.4435 2 5.81614 2 8.58534C2 11.6001 4.31586 15.0571 5.81621 14.9994C6.22783 14.9831 6.52065 14.8584 6.82347 14.7294C7.17296 14.5805 7.53577 14.4259 8.1099 14.4259C8.65806 14.4259 9.0048 14.576 9.33814 14.7202C9.65681 14.8581 9.96323 14.9907 10.4217 14.9819Z&quot;
+          &gt;&lt;/path&gt;
+      &lt;/svg&gt;
+    &lt;/div&gt;
+  &lt;/svg-icon&gt;
+  Apple Pay &lt;/button&gt;
+
+
+</code></pre>
+
+
       <div class="row mb-16">
         <div class="col-xs-12">
-          <div class="title-l mb-16 mt-32">Posicionamiento de botones con iconos </div>
+          <h3 class="h6 mb-16  mt-32">Posicionamiento de botones con iconos </h3>
           <p class="text-l mb-64">Insertar ico-post o ico-pre en el propio svg-icon</p>
           <div class="mb-16">
             <button class="btn btn-primary  btn--medium  has-ico-pre">

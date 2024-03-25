@@ -29,7 +29,7 @@ $(document).ready(function () {
 
   $(".check-new").on("click", function (e) {
       console.log("Esto funciona");
-      $(this).closest('.new-container').toggleClass("bg-dark has-light");
+      $(this).closest('.code-view').toggleClass("bg-dark has-light");
       e.preventDefault();
   });
 
