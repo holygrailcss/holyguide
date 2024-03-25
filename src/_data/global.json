@@ -179,43 +179,28 @@
       "bg": "bg-white"
     }
   ],
-  "coloresSemanticos": [
-    {
-      "hex": "#b40016",
-      "variable": "c-error",
-      "font": "c-error",
-      "bg": "bg-error"
-    },
-    {
-      "hex": "#b40016",
-      "variable": "c-sale",
-      "font": "c-sale",
-      "bg": "bg-sale"
-    },
-    {
-      "hex": "#1a32a4",
-      "variable": "c-info",
-      "font": "c-info",
-      "bg": "bg-info"
-    },
-    {
-      "hex": "#76ae4a",
-      "variable": "c-success",
-      "font": "c-success",
-      "bg": "bg-success"
-    },
-    {
-      "hex": "#ffc700",
-      "variable": "c-warning",
-      "font": "c-warning",
-      "bg": "bg-warning"
-    },
-    {
-      "hex": "#fb9962",
-      "variable": "c-feel",
-      "font": "c-feel",
-      "bg": "bg-feel"
-    }
+
+
+
+  "coloresPrimariosAlfa": [
+
+
+
+
+
+{ "hex": "rgba(0, 0, 0, 0.3)", "variable": "c-primary-3", "font": "c-primary-3", "bg": ".bg-primary-3" }, 
+{ "hex": "rgba(0, 0, 0, 0.15)", "variable": "c-primary-15", "font": "c-primary-15", "bg": ".bg-primary-15" }, 
+{ "hex": "rgba(0, 0, 0, 0.30)", "variable": "c-primary-30", "font": "c-primary-30", "bg":  ".bg-primary-30" }, 
+{ "hex": "rgba(0, 0, 0, 0.60)", "variable": "c-primary-60", "font": "c-primary-60", "bg":  ".bg-primary-60"},
+ { "hex": "rgba(0, 0, 0, 0.97)", "variable": "c-primary-97", "font": "c-primary-97", "bg":  ".bg-primary-97" }
+
+
+], 
+ 
+ 
+ 
+ 
+ "coloresSemanticos": [ { "hex": "#b40016", "variable": "c-error", "font": "c-error", "bg": "bg-error" }, { "hex": "#b40016", "variable": "c-sale", "font": "c-sale", "bg": "bg-sale" }, { "hex": "#1a32a4", "variable": "c-info", "font": "c-info", "bg": "bg-info" }, { "hex": "#76ae4a", "variable": "c-success", "font": "c-success", "bg": "bg-success" }, { "hex": "#ffc700", "variable": "c-warning", "font": "c-warning", "bg": "bg-warning" }, { "hex": "#fb9962", "variable": "c-feel", "font": "c-feel", "bg": "bg-feel" }
   ],
   "coloresFeel": [
     {

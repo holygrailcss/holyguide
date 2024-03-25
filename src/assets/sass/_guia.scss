@@ -1,56 +1,55 @@
 $nav-width: 250px;
-
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
-
-h1 {
-   //    @include fluid-text($min_width, $break-lg, 24px, 60px, 1);
-   font-size: clamp(1.5rem, 0.8112rem + 3.6735vw, 3.75rem);
-  width: 100%;
-  line-height: 1;
-  @include font-bold();
+html {
+  font-size: 12px;
 }
-
-h2 {
-   //    @include fluid-text($min_width, $break-lg, 20px, 50px, 1);
-   font-size: clamp(1.25rem, 0.676rem + 3.0612vw, 3.125rem);
-  width: 100%;
-  line-height: 1;
-  @include font-bold();
+.guide {
+  ul {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    li {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  }
+  hr {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    @media (min-width: $break-md) {
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 13px;
+  }
+  h5 {
+    //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
+    width: 100%;
+    line-height: 1.2;
+  }
+  h6 {
+    font-size: 18px;
+    width: 100%;
+    line-height: 1;
+    @include font-bold();
+  }
 }
-
-h3 {
-    //   @include fluid-text($min_width, $break-lg, 18px, 40px, 1);
-    font-size: clamp(1.125rem, 0.7041rem + 2.2449vw, 2.5rem);
-
-  width: 100%;
-  line-height: 1;
-  @include font-bold();
-}
-
-h4 {
-    //   @include fluid-text($min_width, $break-lg, 16px, 30px, 1);
-  width: 100%;
-  line-height: 1;
-  @include font-bold();
-}
-
-h5 {
-   //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
-  width: 100%;
-  line-height: 1.2;
-
-}
-
-h6 {
-   //    @include fluid-text($min_width, $break-lg, 14px, 16px, 1);
-   font-size: clamp(0.875rem, 0.8367rem + 0.2041vw, 1rem);
-  width: 100%;
-  line-height: 1;
-  @include font-bold();
-}
-
 .main-content {
   margin-top: 71px;
   margin-left: auto;
@@ -60,18 +59,15 @@ h6 {
   width: 100%;
   max-width: 920px;
 }
-
 .guide-colors {
   float: left;
   margin-right: 16px;
   margin-bottom: 16px;
   width: calc(25% - 12px);
-
   .guide-colors-bg {
     width: 100%;
     aspect-ratio: 1/1;
   }
-
   .guide-colors-text {
     padding-top: 10px;
     text-align: left;
@@ -79,16 +75,13 @@ h6 {
     float: left;
     font-weight: 100;
   }
-
   .guide-colors-text span {
     opacity: 0.3;
   }
-
   &:nth-child(4n) {
     margin-right: 0;
   }
 }
-
 .menu-superior {
   width: 100%;
   padding-right: 20px;
@@ -100,23 +93,19 @@ h6 {
   left: 0;
   top: 0;
   background: #fff;
-
   border-bottom: 1px solid #212121;
 }
-
 .guide-header {
   padding: 0 100px;
   max-width: 800px;
   width: 100%;
 }
-
 .hero {
   height: 100%;
   display: flex;
   padding: 0 2%;
   align-items: center;
 }
-
 .item-i {
   min-width: 20%;
   min-height: 20%;
@@ -125,61 +114,21 @@ h6 {
   box-sizing: border-box;
 }
 
-.item-i:nth-child(1) {
-  background-color: $primary-guide;
-  opacity: 0.93;
+
+@for $i from 1 through 10 {
+  .item-i:nth-child(#{$i}) {
+    background-color: $primary-guide;
+    opacity: 1 - ($i * 0.06); // Ajusta este valor según necesites
+  }
 }
 
-.item-i:nth-child(2) {
-  background-color: $primary-guide;
-  opacity: 0.83;
-}
 
-.item-i:nth-child(3) {
-  background-color: $primary-guide;
-  opacity: 0.79;
-}
 
-.item-i:nth-child(4) {
-  background-color: $primary-guide;
-  opacity: 0.72;
-}
-
-.item-i:nth-child(5) {
-  background-color: $primary-guide;
-  opacity: 0.65;
-}
-
-.item-i:nth-child(6) {
-  background-color: $primary-guide;
-  opacity: 0.58;
-}
-
-.item-i:nth-child(7) {
-  background-color: $primary-guide;
-  opacity: 0.51;
-}
-
-.item-i:nth-child(8) {
-  background-color: $primary-guide;
-  opacity: 0.44;
-}
-
-.item-i:nth-child(9) {
-  background-color: $primary-guide;
-  opacity: 0.37;
-}
-
-.item-i:nth-child(10) {
-  background-color: $primary-guide;
-  opacity: 0.3;
-}
 
 .mini-box {
   background: #eaeaea;
   color: #757171;
   font-size: 8px;
-
   float: left;
   overflow: initial !important;
   position: relative;
@@ -187,15 +136,12 @@ h6 {
   margin-right: 20px;
   margin-bottom: 20px;
   border: 1px solid #f0f;
-
   img {
     width: 100%;
   }
-
   &:nth-child(4n) {
     margin-right: 0;
   }
-
   .rat-content {
     display: flex;
     font-size: 14px;
@@ -205,7 +151,6 @@ h6 {
     flex-direction: column;
     @include font-2-bold;
     color: #f0f;
-
     .p-xs {
       position: absolute;
       right: 4px;
@@ -214,7 +159,6 @@ h6 {
     }
   }
 }
-
 .mini-box-text {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -223,7 +167,6 @@ h6 {
   font-size: 12px;
   color: #ffffff;
 }
-
 .item-w {
   width: 46px;
   width: 50px;
@@ -235,21 +178,15 @@ h6 {
     cursor: pointer;
   }
 }
-
 .code-view {
   position: relative;
-  padding: 20px;
+  padding: 20px 20%;
   display: flex;
-  justify-content: space-evenly;
   border: 1px solid #eaeaea;
   transition: 0.2s ease all;
-.form-input-label-2{
-  min-width: 300px;
-}
-
+  flex-direction: column;
 
 }
-
 .check-new {
   width: 30px;
   height: 16px;
@@ -265,7 +202,6 @@ h6 {
   &:hover {
     opacity: 1;
   }
-
   &:after {
     content: "";
     top: 2px;
@@ -278,7 +214,6 @@ h6 {
     transition: 0.2s;
     border-radius: 50px;
   }
-
   &:before {
     content: "";
     top: 2px;
@@ -291,7 +226,6 @@ h6 {
     border-radius: 50px;
     transition: 0.2s;
   }
-
   .has-light & {
     background-color: #ffffff;
     &:after {
@@ -311,7 +245,6 @@ h6 {
     }
   }
 }
-
 .nav-guide {
   position: fixed;
   width: $nav-width;
@@ -323,22 +256,18 @@ h6 {
   border-right: 1px solid #e3e3e3;
   z-index: 11;
   overflow: auto;
-
   .menu-lateral {
     padding-bottom: 32px;
   }
-
   @media (max-width: 767px) {
     transform: translateX(-250px);
     transition: all ease-in-out 0.4s;
-
     &.open-menu {
       transform: translateX(0px);
       transition: all ease-in-out 0.4s;
     }
   }
 }
-
 .main-widthsidebar {
   margin-top: 71px;
   margin-left: $nav-width;
@@ -351,13 +280,11 @@ h6 {
     overflow: hidden;
   }
 }
-
 .opencode-button {
   .viewcode {
     height: 400px;
   }
 }
-
 // grid icons
 #loopicons,
 #loopicons2,
@@ -369,7 +296,6 @@ h6 {
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
-
   article {
     width: calc(50% - 8px);
     display: flex;
@@ -379,11 +305,9 @@ h6 {
     margin: 4px;
     padding: 8px;
     border-radius: 4px;
-
     span {
       text-align: center;
     }
-
     .myspan {
       font-size: 12px;
       padding-top: 16px;
@@ -394,14 +318,12 @@ h6 {
       height: 100%;
     }
   }
-
   @media (min-width: 768px) {
     article {
       width: calc(10% - 8px);
     }
   }
 }
-
 .has-error {
   svg-icon {
     path {
@@ -409,7 +331,6 @@ h6 {
     }
   }
 }
-
 .has-feel {
   svg-icon {
     path {
@@ -417,7 +338,6 @@ h6 {
     }
   }
 }
-
 .has-success {
   svg-icon {
     path {
@@ -425,35 +345,29 @@ h6 {
     }
   }
 }
-
 .has-light {
   article {
     background: transparent;
   }
-
   svg-icon {
     path {
       fill: $c-white;
     }
-
     circle {
       stroke: $c-white;
     }
   }
-
   //todo holygrail
   input:focus {
     outline: none;
     border: 1px solid $c-white;
   }
-
   .input,
   .textarea,
   .select select {
     color: $c-white;
   }
 }
-
 .tabguide-content {
   padding: 20px;
   overflow: hidden;
@@ -463,12 +377,10 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   svg-icon {
     margin-bottom: 8px;
   }
 }
-
 .btncode {
   position: absolute;
   top: 0;
@@ -479,7 +391,6 @@ h6 {
   border-radius: 0 0 0 4px;
   filter: invert(1);
 }
-
 .openRules {
   .resize-rules {
     svg {
@@ -487,257 +398,227 @@ h6 {
         fill: $c-guide;
         stroke: $c-guide;
       }
-
       rect {
         stroke: $c-guide;
       }
     }
   }
-
-
-    .mbr-50-100 {
+  .mbr-50-100 {
+    position: relative;
+    &:before {
+      content: "mbr-50-100";
+      font-size: 9px;
+      line-height: 1;
+      width: auto;
+      border-left: 1px solid $c-guide;
+      color: $c-guide;
+      position: absolute;
+      height: 50px;
+      bottom: -50px;
+      @media (min-width: 768px) {
+        height: 100px;
+        bottom: -100px;
+      }
+    }
+  }
+  $a: 1;
+  @for $i from 2 through 8 {
+    $a: $a * 2;
+    .mb-#{$a} {
       position: relative;
-
       &:before {
-        content: "mbr-50-100";
-           font-size: 9px;
-    line-height: 1;
-
+        content: "mb-#{$a}";
+        font-size: 9px;
+        line-height: 1;
+        height: #{$a}px;
         width: auto;
         border-left: 1px solid $c-guide;
         color: $c-guide;
         position: absolute;
-        height: 50px;
-        bottom: -50px;
-
-        @media (min-width: 768px) {
-          height: 100px;
-          bottom: -100px;
-        }
+        bottom: -#{$a}px;
       }
     }
-
-    $a: 1;
-
-    @for $i from 2 through 8 {
-      $a: $a * 2;
-
-      .mb-#{$a} {
-        position: relative;
-
-        &:before {
-          content: "mb-#{$a}";
-             font-size: 9px;
-    line-height: 1;
-
-          height: #{$a}px;
-          width: auto;
-          border-left: 1px solid $c-guide;
-          color: $c-guide;
-          position: absolute;
-          bottom: -#{$a}px;
-        }
+  }
+  @each $name in $espaciados {
+    $typeFluid0: $name; //funcion del fipografia
+    .mb-#{$typeFluid0} {
+      position: relative;
+      &:before {
+        content: "mb-#{$typeFluid0}";
+        background-color: #ebcfdc;
+        font-size: 9px;
+        line-height: 1;
+        height: #{$typeFluid0}px;
+        padding-left: 4px;
+        width: 100%;
+        color: $c-guide;
+        position: absolute;
+        bottom: -#{$typeFluid0}px;
+        left: 0;
       }
     }
-
-
-
-
-    @each $name in $espaciados {
-      $typeFluid0: $name; //funcion del fipografia
-
-      .mb-#{$typeFluid0} {
-        position: relative;
-
-        &:before {
-          content: "mb-#{$typeFluid0}";
-          background-color: #ebcfdc;
-             font-size: 9px;
-    line-height: 1;
-
-          height: #{$typeFluid0}px;
-          padding-left: 4px;
-          width: 100%;
-
-          color: $c-guide;
-          position: absolute;
-          bottom: -#{$typeFluid0}px;
-
-          left: 0;
+  }
+  @each $name in $espaciados {
+    $typeFluid0: $name; //funcion del fipografia
+    .n1a-2,
+    .n1c-2,
+    .n2a-2,
+    .n2b-2,
+    .n2c-2,
+    .n3b-2,
+    .n4a-2,
+    .n4e-2,
+    .n4f-2,
+    .n6b-2,
+    .nt-2 {
+      &:after {
+        font-size: 9px;
+        line-height: 1;
+        content: "-2 margen bottom ";
+        position: absolute;
+        background-color: #cde0be;
+        color: #76ae4a;
+        width: 100%;
+        height: 8px;
+        @media (min-width: $break-sm) {
+          height: 12px;
         }
+        @media (min-width: $break-lg) {
+          height: 24px;
+        }
+        bottom: 0;
+        text-align: center;
+      }
+      &:before {
+        font-size: 9px;
+        line-height: 1;
+        content: "-2 margen top";
+        position: absolute;
+        background-color: #cde0be;
+        color: #76ae4a;
+        width: 100%;
+        height: 8px;
+        @media (min-width: $break-sm) {
+          height: 12px;
+        }
+        @media (min-width: $break-lg) {
+          height: 24px;
+        }
+        top: 0;
+        text-align: center;
       }
     }
-
-
-
-    @each $name in $espaciados {
-      $typeFluid0: $name; //funcion del fipografia
-
-      .n1a-2, .n1c-2, .n2a-2, .n2b-2, .n2c-2, .n3b-2, .n4a-2, .n4e-2, .n4f-2, .n6b-2,.nt-2{
-        &:after{
-             font-size: 9px;
-    line-height: 1;
-
-          content: "-2 margen bottom ";
-          position: absolute;
-          background-color: #cde0be;
-          color: #76ae4a;
-          width: 100%;
-          height: 8px;
-          @media (min-width: $break-sm) {
-            height: 12px;
-   
-          }
-          @media (min-width: $break-lg) {
-            height: 24px;
-   
-          }
-          bottom: 0;
-          text-align: center;
-        }
-        &:before{
-             font-size: 9px;
-    line-height: 1;
-
-          content: "-2 margen top";
-          position: absolute;
-          background-color: #cde0be;
-          color: #76ae4a;
-          width: 100%;
-          height: 8px;
-          @media (min-width: $break-sm) {
-            height: 12px;
-   
-          }
-          @media (min-width: $break-lg) {
-            height: 24px;
-   
-          }
-          top: 0;
-          text-align: center;
-        }
-
-
-    }
-
-
-
-    .n1a-1, .n1c-1, .n2a-1, .n2b-1, .n2c-1, .n3b-1, .n4a-1, .n4e-1, .n4f-1, .n6b-1,.nt-1{
-      &:after{
-           font-size: 9px;
-    line-height: 1;
-
+    .n1a-1,
+    .n1c-1,
+    .n2a-1,
+    .n2b-1,
+    .n2c-1,
+    .n3b-1,
+    .n4a-1,
+    .n4e-1,
+    .n4f-1,
+    .n6b-1,
+    .nt-1 {
+      &:after {
+        font-size: 9px;
+        line-height: 1;
         content: "-1 margen bottom";
         position: absolute;
         background-color: #bed2e0;
         color: #282e3f;
         width: 100%;
- 
         bottom: 0;
         text-align: center;
-
-
         height: 8px;
         @media (min-width: $break-sm) {
-           height: 12px;
- 
+          height: 12px;
         }
         @media (min-width: $break-lg) {
-           height: 24px;
- 
+          height: 24px;
         }
       }
-      &:before{
-           font-size: 9px;
-    line-height: 1;
-
-    display: none;
+      &:before {
+        font-size: 9px;
+        line-height: 1;
+        display: none;
       }
-
-
+    }
+    .n1a-0,
+    .n1c-0,
+    .n2a-0,
+    .n2b-0,
+    .n2c-0,
+    .n3b-0,
+    .n4a-0,
+    .n4e-0,
+    .n4f-0,
+    .n6b-0,
+    .nt-0 {
+      &:after {
+        display: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+    .pb-#{$typeFluid0} {
+      position: relative;
+      &:before {
+        content: "pb-#{$typeFluid0}";
+        font-size: 9px;
+        line-height: 1;
+        height: #{$typeFluid0}px;
+        padding-left: 4px;
+        width: 100%;
+        background-color: #cde0be;
+        color: $c-success;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        left: 0;
+      }
+    }
+    .pt-#{$typeFluid0} {
+      position: relative;
+      &:after {
+        content: "pt-#{$typeFluid0}";
+        font-size: 9px;
+        line-height: 1;
+        height: #{$typeFluid0}px;
+        padding-left: 4px;
+        width: 100%;
+        background-color: #cde0be;
+        color: $c-success;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        left: 0;
+      }
+    }
   }
-
-  .n1a-0, .n1c-0, .n2a-0, .n2b-0, .n2c-0, .n3b-0, .n4a-0, .n4e-0, .n4f-0, .n6b-0,.nt-0{
-    &:after{
-      display: none;
-    }
-    &:before{
-  display: none;
-    }
-
-
-}
-
-
-
-      .pb-#{$typeFluid0} {
-        position: relative;
-
+  &.is-rtl {
+    @each $name in $espaciados {
+      $typeFluid0: $name; //funcion del fipografia
+      .mb-#{$typeFluid0} {
         &:before {
-          content: "pb-#{$typeFluid0}";
-             font-size: 9px;
-    line-height: 1;
-
-          height: #{$typeFluid0}px;
-          padding-left: 4px;
-          width: 100%;
-          background-color: #cde0be;
-          color: $c-success;
-          position: absolute;
-          bottom: 0;
-          display: flex;
-          align-items: center;
-          left: 0;
-        }
-      }
-
-      .pt-#{$typeFluid0} {
-        position: relative;
-
-        &:after {
-          content: "pt-#{$typeFluid0}";
-             font-size: 9px;
-    line-height: 1;
-
-          height: #{$typeFluid0}px;
-          padding-left: 4px;
-          width: 100%;
-          background-color: #cde0be;
-          color: $c-success;
-          position: absolute;
-          top: 0;
-          display: flex;
-          align-items: center;
-          left: 0;
+          padding-right: 4px;
+          width: auto;
+          right: 0;
+          border-left: none;
+          border-right: 5px solid $c-guide;
+          bottom: -#{$typeFluid0}px;
         }
       }
     }
-
-    &.is-rtl {
-      @each $name in $espaciados {
-        $typeFluid0: $name; //funcion del fipografia
-
-        .mb-#{$typeFluid0} {
-          &:before {
-            padding-right: 4px;
-            width: auto;
-            right: 0;
-            border-left: none;
-            border-right: 5px solid $c-guide;
-            bottom: -#{$typeFluid0}px;
-          }
-        }
-      }
-    }
-
+  }
 }
-
 .code-zone {
   overflow: hidden;
   border-bottom: 1px solid #eaeaea;
   transition: all ease 0.2s;
   cursor: pointer;
-
   .code-title {
     transition: all ease 0.2s;
     height: 30px;
@@ -747,17 +628,14 @@ h6 {
       background-color: #eaeaea;
     }
   }
-
   .code-title-description {
     display: inline-block;
     background-color: #dfdfdf;
     padding: 0 8px;
     font-size: 11px;
-
     font-weight: bold;
   }
 }
-
 .code-install {
   background-color: #28292d;
   display: inline-block;
@@ -770,8 +648,6 @@ h6 {
     color: yellow;
   }
 }
-
-
 .article-content {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -780,7 +656,6 @@ h6 {
   text-overflow: ellipsis;
   height: 65px;
 }
-
 code {
   margin: 0 1px;
   padding: 0.2em 0.4em;

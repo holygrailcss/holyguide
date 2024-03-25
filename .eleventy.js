@@ -1,9 +1,9 @@
 const { DateTime } = require("luxon");
 const pluginTOC = require("eleventy-plugin-toc");
-const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItHighlightJS = require("markdown-it-highlightjs");
 const embeds = require("eleventy-plugin-embed-everything");
+
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const eleventyWebcPlugin = require("@11ty/eleventy-plugin-webc");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
@@ -28,6 +28,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/pages", "pages");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPlugin(syntaxHighlight);
+
 
 
 
@@ -51,12 +53,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(embeds);
 
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt(mdOptions)
-      .use(markdownItAnchor, mdAnchorOpts)
-      .use(markdownItHighlightJS)
-  );
+
 
   eleventyConfig.addPlugin(pluginTOC);
 
