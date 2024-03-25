@@ -15,24 +15,29 @@ layout: base.njk
 
   </div>
 
-      <h3 class="h3"> Botón solido</h3>
+      <h3 class="h3"> Button primary</h3>
+      <p class="p1 mb-24"> Botón macizo básico</p>
 
-{% call helper.insert(elementType='button',['btn btn-primary', 'btn btn-limited' , 'btn btn-feel', 'btn btn-blue']) %}
+
+{% call helper.insert(elementType='button',['btn btn-primary']) %}
 {% endcall %}
-      <h3 class="h3"> Botón outline</h3>
+      <h3 class="h3"> Botón Secondary</h3>
+      <p class="p1 mb-24"> Botón outline</p>
 
-{% call helper.insert(elementType='button',['btn btn-secondary', 'btn btn-trans', 'btn btn-secondary-feel' , 'btn btn-pantom']) %}
+
+{% call helper.insert(elementType='button',['btn btn-secondary']) %}
 {% endcall %}
-         <h3 class="h3"> Botón clean</h3>
+         <h3 class="h3"> Botón Tertiary</h3>
+         <p class="p1 mb-24"> Botón simulando un link básico</p>
 
-{% call helper.insert(elementType='button',['btn btn-clear', 'btn', 'link-raw' , 'link-line']) %}
+{% call helper.insert(elementType='button',['btn-tertiary']) %}
 {% endcall %}
 
 
 
   <div class="row">
     <div class="col-xs-12">
-      <h3 class="h3"> Button Type</h3>
+      <h3 class="h3"> Tamaños de Button</h3>
     </div>
   </div>
 

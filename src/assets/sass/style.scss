@@ -11,6 +11,9 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./template/_buscador.scss";
 @import "./template/_fichasticky.scss";
 @import "./template/_header.scss";
+@import "./template/_sidebar.scss";
+@import "./template/_filtros.scss";
+
 @import "./_menu.scss";
 @import "./_swiper.scss";
 @import "./_video.scss";
