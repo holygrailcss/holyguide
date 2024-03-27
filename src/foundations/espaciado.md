@@ -36,3 +36,32 @@ Por lo tanto las unicas unidades que podemos usar para los espaciados es de...
 | .smmax:mb-16      | \*\* Margen inferior hasta $break-sm -1; |
 | .smmax:mb-20      | Margen inferior hasta $break-sm -1;      |
 | .smmax:mb-42 \*\* | Ancho máximo de 356px                    |
+
+
+
+Para trabajar con tamaños responsive
+
+Primero pondremos el margen en mobile y luego resetearemos si solo queremos el típico margen bottom en mobile
+
+
+| Helper            | Descripción                              |
+| ----------------- | ---------------------------------------- |
+| .sm:mb-0      | a partir de sm ponemos a cero;      |
+| .md:mb-0     |  a partir de md ponemos a cero;   |
+| .lg:mb-0     | a partir de lg ponemos a cero;     |
+| .xl:mb-0     |  a partir de xl ponemos a cero;   |
+|    |   |
+| .sm:mt-0      | a partir de sm ponemos a cero;      |
+| .md:mt-0     |  a partir de md ponemos a cero;   |
+| .lg:mt-0     | a partir de lg ponemos a cero;     |
+| .xl:mt-0     |  a partir de xl ponemos a cero;   |
+|    |   |
+| .sm:pr-0      | a partir de sm ponemos a cero;      |
+| .md:pr-0     |  a partir de md ponemos a cero;   |
+| .lg:pr-0     | a partir de lg ponemos a cero;     |
+| .xl:pr-0     |  a partir de xl ponemos a cero;   |
+|    |   |
+| .sm:pt-0      | a partir de sm ponemos a cero;      |
+| .md:pt-0     |  a partir de md ponemos a cero;   |
+| .lg:pt-0     | a partir de lg ponemos a cero;     |
+| .xl:pt-0     |  a partir de xl ponemos a cero;   |

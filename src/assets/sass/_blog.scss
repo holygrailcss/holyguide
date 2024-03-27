@@ -25,62 +25,6 @@
     }
   }
 
-  ul {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    li {
-      font-size: 12px;
-      line-height: 1.4;
-    }
-  }
-  hr {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    @media (min-width: $break-md) {
-      margin-top: 40px;
-      margin-bottom: 80px;
-    }
-  }
-  p {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-
-
-
-  h1 {
-font-size: 30px;
- }
-
- h2 {
-  font-size: 18px;
- }
-
- h3 {
-  font-size: 14px;
-}
-
-
- 
- h4 {
-  font-size: 13px;
- }
- 
- h5 {
-    //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
-   width: 100%;
-   line-height: 1.2;
- 
- }
- 
- h6 {
-   font-size: 18px;
- 
-   width: 100%;
-   line-height: 1;
-   @include font-bold();
- }
 
 
 
