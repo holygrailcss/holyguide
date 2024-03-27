@@ -44,6 +44,8 @@ Para trabajar con tamaños responsive
 Primero pondremos el margen en mobile y luego resetearemos si solo queremos el típico margen bottom en mobile
 
 
+
+
 | Helper            | Descripción                              |
 | ----------------- | ---------------------------------------- |
 | .sm:mb-0      | a partir de sm ponemos a cero;      |
