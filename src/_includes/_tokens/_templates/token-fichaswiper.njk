@@ -6,6 +6,11 @@ layout: base-clean.njk
 
 <div class="container-fluid cc-container">
     <div class="ficha-content">
+
+
+
+
+
         <div class="cc-imagen">
             <div class="cc-imagen-logo">
                 <svg width="267" height="39" viewBox="0 0 267 39" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,46 +18,56 @@ layout: base-clean.njk
                 </svg>
             </div>
             <div class="cc-imagen-item">
-                <div class="cc-imagen-collection scrollcustom">
-                    <img height="100vh"
-                        src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                        alt="">
-                    <img height="100vh"
-                        src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                        alt="">
-                    <img height="100vh"
-                        src="https://static.massimodutti.net/3/static2/media/2019/home/assets/placeholder/bases/3-4.jpg "
-                        alt="">
-                </div>
+
+
+
+
+                <div class="swiper mySwiper cc-imagen-collection-swiper  ">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img height="100vh" src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/6847/945/500/01/6847945500_2_5_16.jpg?t=1711113857793&impolicy=massimodutti-itxmediumhigh&imwidth=800&imformat=chrome " alt=""></div>
+                      <div class="swiper-slide"><img height="100vh" src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/6847/945/500/01/6847945500_2_6_16.jpg?t=1711113877724&impolicy=massimodutti-itxmediumhigh&imwidth=800&imformat=chrome " alt=""></div>
+
+                      <div class="swiper-slide"><img height="100vh" src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/6847/945/500/01/6847945500_2_7_16.jpg?t=1711114066412&impolicy=massimodutti-itxmediumhigh&imwidth=800&imformat=chrome" alt=""></div>
+
+                      <div class="swiper-slide"><img height="100vh" src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/6847/945/500/01/6847945500_2_8_16.jpg?t=1711113896973&impolicy=massimodutti-itxmediumhigh&imwidth=800&imformat=chrome " alt=""></div>
+
+
+                    </div>
+             
+                  </div>
+                  <div class="swiper-pagination"></div>
+
             </div>
         </div>
     </div>
     <div class="cc-descripcion">
         <div class="container-4 ptr-120">
-            <div class="title-l">CÁRDIGAN PUNTO TRENZADO MANGA CORTA</div>
+            <div class="title-l mb-4">CÁRDIGAN PUNTO TRENZADO MANGA CORTA</div>
 
             <div class="title-l">59,95 €</div>
-            <div class="text-l">Tejido de punto. Confeccionado con tejido en mezcla de algodón. Manga corta.</div>
+            <div class="text-l mt-32 mb-64">Tejido de punto. Confeccionado con tejido en mezcla de algodón. Manga corta.</div>
             
-            <div class="title-s">GRIS | REF. 5651/624</div>
+            <div class="title-s text-center mb-32">GRIS | REF. 5651/624</div>
             
             
-            GRIS
-            XS
-            S
-            M
-            L
-            <button class="btn">AÑADIR A LA CESTA</button>
+            <ul class="list-clear list-inline text-center">
+   
+                <li>XS</li>
+                <li>S</li>
+                <li>M</li>
+                <li>L</li>
+            </ul>
+            <button class="btn btn-secondary btn--full mb-24">AÑADIR A LA CESTA</button>
             
-            <div class="row">
-                <div class="col-xs-6">GUÍA DE TALLAS</div>
-                <div class="col-xs-6">RECOMENDADOR DE TALLA</div>
+            <div class=" pt-0 pb-64 align-items-center content-sp-between">
+                <div class="">GUÍA DE TALLAS</div>
+                <div class="">RECOMENDADOR DE TALLA</div>
             </div>
-            <p>Envío gratuito a domicilio en pedidos superiores a 80,00 €.</p>
+            <p class="mb-32">Envío gratuito a domicilio en pedidos superiores a 80,00 €.</p>
 
 
-            ENVÍOS, CAMBIOS Y DEVOLUCIONES
-            COMPOSICIÓN Y CUIDADOS
+            <div class="title-l mb-24">ENVÍOS, CAMBIOS Y DEVOLUCIONES</div>
+            <div class="title-l mb-64">COMPOSICIÓN Y CUIDADOS</div>
             <p>Pagos: VISA, MasterCard, American Express, Paypal, Transferencia Bancaria</p>
         </div>
     </div>
@@ -128,3 +143,20 @@ layout: base-clean.njk
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      mousewheel: {
+    forceToAxis: true,
+    sensitivity: 1,
+    releaseOnEdges: true,
+},
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        type: "progressbar",
+      },
+    });
+  </script>

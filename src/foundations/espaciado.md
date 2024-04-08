@@ -67,3 +67,9 @@ Primero pondremos el margen en mobile y luego resetearemos si solo queremos el t
 | .md:pt-0     |  a partir de md ponemos a cero;   |
 | .lg:pt-0     | a partir de lg ponemos a cero;     |
 | .xl:pt-0     |  a partir de xl ponemos a cero;   |
+
+
+``` 
+.logo-difference {
+  mix-blend-mode: difference;
+}
