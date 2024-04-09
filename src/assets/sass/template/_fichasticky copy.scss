@@ -20,19 +20,7 @@
     height: initial;
   }
 }
-.cc-imagen-collection-swiper {
-  overflow: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.cc-imagen-collection-swiper.swiper {
-  height: 100vh;
-  overflow: hidden;
-  .swiper-wrapper {
-    height: 100vh;
-  }
-}
+
 .cc-imagen-collection {
   overflow: auto;
   height: 100%;
@@ -149,57 +137,76 @@
     }
   }
 }
-@media (min-width: 980px) {
-  .swiper-slide:hover {
-    transform: scale(1) !important;
-  }
-}
-.swiper-pagination-progressbar {
-  background: white;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1px;
-  height: 100%;
-  z-index: 1000;
-}
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: black;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(0);
-  transform-origin: left top;
-}
 
 
 
-@media (max-width: 1700px) {
 
-  
+
+.cc-imagen-collection-swiper {
+
+
+
+
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+
+  .swiper {
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    .swiper-wrapper {
+      height: 100vh;
+    }
 }
 
 
-@media (max-width: 1700px) {
-  .cc-imagen-item .swiper-slide img{
-    object-fit: unset;
-  }
-
-
-  .cc-imagen-item {
-    width: 100%;
-
-
-
-  }
-  .cc-imagen-collection-swiper.swiper .swiper-wrapper {
+  .swiper .swiper-wrapper {
     overflow: auto;
   }
-}
-@media (min-width: 1700px) {
-  .cc-imagen-item {
-    width: initial;
+
+  .swiper-pagination-progressbar {
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    z-index: 1000;
   }
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: left top;
+  }
+
+  @media (min-width: 992px) {
+    .swiper-slide:hover {
+      transform: scale(1) !important;
+    }
+    .swiper-slide img {
+      float: right;
+      width: 100%;
+      height: 100vh;
+      object-fit: unset;
+    }
+    .swiper-wrapper {
+      width: 100%;
+    }
+  }
+  @media (min-width: 1700px) {
+    .swiper .swiper-wrapper {
+      overflow: hidden;
+    }
+  }
+
+
+
 }
