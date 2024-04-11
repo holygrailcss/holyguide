@@ -33,7 +33,7 @@ Crea un proyecto completo con parcel y gulp en tu local.
 
 Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debugear mientras maquetamos.
 
-```
+```scss
 @include debug-divs();   // debugaremos con colores en las divs
 @include debug-imgs();   // Analisis de los links (uso de alts vacios  en imagenes)
 @include debug-links();  // Analisis de los links (uso de alts vacios  en imagenes)
@@ -46,7 +46,7 @@ Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debu
 Configuración del archivo setup.scss
 Antes de nada configuraremos la guia, con ella generaremos el siguiente archivo de setup.scss. Después copiaremos y sustituiremos en nuestro archivo setup las diferentes variables, de esta forma, tanto la documentación como el proyecto estarán alineados.
 
-```
+```scss
 $font-family-regular:"dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-medium:"dutti-daily-light",Helvetica,arial,sans-serif;
 $font-family-bold:"dutti-daily-bold",Helvetica,arial,sans-serif;

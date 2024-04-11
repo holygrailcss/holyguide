@@ -20,8 +20,8 @@ Adjuntamos los paddings-tops para los ratios.
 Si no existe tu ratio puedes crear nuevos ratios de esta manera. `@include ratio(ancho, alto);`
 
  {% br %} 
-```
+```html
 <div class='ar-2-1'>
-        <img src='image.jpg' alt='Image description'>
+  <img src='image.jpg' alt='Image description'>
 </div>
 ```

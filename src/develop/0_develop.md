@@ -25,7 +25,7 @@ url3: /enlace3
 
 ## Unica fuente de la verdad
 
-#### Nuestro objetivo es convertir una de las empresas minoristas más grandes del mundo en una organización digital de primer orden. Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
+##### Nuestro objetivo es convertir una de las empresas minoristas más grandes del mundo en una organización digital de primer orden. Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
 
 Holygrail es un sistema de diseño completo que proporciona todas las herramientas que necesita para diseñar y desarrollar productos digitales, desde temas de Figma hasta configuraciones y componentes compartidos.
 
@@ -33,16 +33,17 @@ Si bien algunas de las herramientas de desarrollo, como SASS , son obligatorias 
 
 ### Enlaces de interes
 
-[Mindmaps para hacer ideas mentales](https://www.mindmaps.app/)
-[Creador de snippets](https://snippet-generator.app/)
-[Gráficos en ascii](https://asciiflow.com/#/)
-[SWIPER slider](https://swiperjs.com/)
+- [Mindmaps para hacer ideas mentales](https://www.mindmaps.app/)
+- [Creador de snippets](https://snippet-generator.app/)
+- [Gráficos en ascii](https://asciiflow.com/#/)
+- [SWIPER slider](https://swiperjs.com/)
 
 ## Boilerplate
 
 Aprende a maquetar desde cero con el sistema holygrail
 
-[Codesandbox](https://codesandbox.io/s/origen-holygrail-ktq12)
+- [Codesandbox](https://codesandbox.io/s/origen-holygrail-ktq12)
+  
 Crea un fork para crear componente o una maqueta con holygrail en la nube.
 Github
 Crea un entorno de desarrollo desde cero
@@ -72,7 +73,7 @@ Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debu
 Configuración del archivo setup.scss
 Antes de nada configuraremos la guia, con ella generaremos el siguiente archivo de setup.scss. Después copiaremos y sustituiremos en nuestro archivo setup las diferentes variables, de esta forma, tanto la documentación como el proyecto estarán alineados.
 
-```SCSS
+```scss
 $font-family-regular:"dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-medium:"dutti-daily-light",Helvetica,arial,sans-serif;
 $font-family-bold:"dutti-daily-bold",Helvetica,arial,sans-serif;
@@ -212,7 +213,7 @@ Empezaremos maquetando por la
 nuestras webs se separarán siempre por sections, muy delimitadas.
 
 ```html
-<section m-48 p-48 bleed-8 has-light></section>
+<section class=" m-48 p-48 bleed-8 has-light">  Contenido </section>
 ```
 
 | Seccionbase | márgenes | paddings | Reticula | Textos     |

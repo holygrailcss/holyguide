@@ -21,8 +21,8 @@ Si queremos que los videos se inicien en `autoplay`, deberemos forzarlo con la e
 
           </video>
 
-```
- <video autoplay loop muted playsinline>
+```html
+<video autoplay loop muted playsinline>
     <source src='https://vjs.zencdn.net/v/oceans.mp-m' type='video/mp-m'>
     <source src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm'>
 </video>

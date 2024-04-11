@@ -18,7 +18,7 @@ En ocasiones necesitaremos posicionar imágenes para ver las futuras maquetas, p
 
 ###### La ruta para incorporar imagenes placeholders.
 
-```
+```scss
 https://holygrail2.github.io/assets/placeholder/2-3.jpg
 ```
 
@@ -29,13 +29,13 @@ Para poder usar el ratio solo tenemos que incluirlo dentro de `.rat-2-1>.rat-con
 Adjuntamos los paddings-tops para los ratios.
 Si no existe tu ratio puedes crear nuevos ratios de esta manera.
 
-```
+```sass
 @include ratio(ancho, alto);
 ```
 
 #### Ejemplo
 
-```
+```html
 <div class='rat-2-1'>
   <div class='rat-content'>
     <img src='image.jpg' alt='Image description'>

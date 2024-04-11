@@ -1,11 +1,18 @@
-<nav class="nav-guide">
+<nav class="nav-guide text-16-r scrollcustom">
   <div class="menu-lateral sidebar">
-    {{seccion_actual}}
-    {% if page_section == "design" %}
+
+
+
+<div class="logo-zone mt-24 mb-24 fluid-6-b">
+  Holyguide
+</div>
+
+  
+
       <a target="_parent" href="/design">
-         <h6 class="mb-24"> Design </h6>
+         <div class="text-16-r  text-l nav-title "> Design </div>
       </a>
-      <ul class="list-clear text-l-b mb-32 mt-8">
+      <ul class="list-clear text-l ">
 
         {% for template in collections.design %}
               {% include 'nav-loop.njk' %}
@@ -13,34 +20,36 @@
 
 
       </ul>
-    {% endif %}
-    {% if page_section == "develop" %}
+
+
+
+
       <a target="_parent" href="/develop">
-         <h6 class="mb-24"> Develop </h6>
+         <div class=" text-l  text-14-r nav-title "> Develop </div>
       </a>
-      <ul class="list-clear text-l-b mb-32 mt-8">
+      <ul class="list-clear text-l ">
 
         {% for template in collections.develop  %}
               {% include 'nav-loop.njk' %}
             {% endfor %}
       </ul>
-    {% endif %}
-    {% if page_section == 'foundations' %}
+   
+
       <a target="_parent" href="/foundations">
-         <h6 class="mb-24"> Foundations </h6>
+         <div class=" text-l nav-title  "> Foundations </div>
       </a>
-      <ul class="list-clear text-l-b mb-32 mt-8">
+      <ul class="list-clear text-l ">
         <div class="body">
            {% for template in collections.foundations | reverse %}
               {% include 'nav-loop.njk' %}
             {% endfor %}
           </div>
         </ul>
-      {% endif %}
-      {% if page_section == 'components' %}
+
+
         <ul class="list-clear mb-32">
           <a target="_parent" href="/components">
-            <h6 class="mb-24"> Componentes </h6>
+            <div class=" text-l  nav-title "> Componentes </div>
           </a>
           <div class="body">
           {% for template in collections.components  %}
@@ -48,14 +57,14 @@
             {% endfor %}
           </div>
         </ul>
-      {% endif %}
-      {% if page_section == "templates" %}
-        <ul class="list-clear text-l-b mb-32 mt-8">
+  
+
+        <ul class="list-clear text-l ">
 
 
           <li class="mb-8 {% if page_title == 'templates' %} link-line {% endif %}">
             <a  target="_parent" href="/templates">
-               <h6 class="mb-24"> Templates </h6>
+               <div class=" text-l nav-title  "> Templates </div>
             </a>
           </li>
 
@@ -64,7 +73,7 @@
               {% include 'nav-loop.njk' %}
             {% endfor %}
         </ul>
-      {% endif %}
+
     </div>
   </nav>
   <div class="toggle-menu"></div>

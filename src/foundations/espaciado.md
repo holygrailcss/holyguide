@@ -69,7 +69,7 @@ Primero pondremos el margen en mobile y luego resetearemos si solo queremos el t
 | .xl:pt-0     |  a partir de xl ponemos a cero;   |
 
 
-``` 
+```scss 
 .logo-difference {
   mix-blend-mode: difference;
 }

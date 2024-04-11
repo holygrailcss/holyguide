@@ -49,7 +49,7 @@
     "aos": "^2.3.4",
     "eleventy-plugin-embed-everything": "^1.16.0",
     "fs": "^0.0.1-security",
-    "holygrail2": "^1.1.26",
+    "holygrail2": "^1.1.35",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",
 

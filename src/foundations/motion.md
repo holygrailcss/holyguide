@@ -3,7 +3,7 @@ layout: _paginas/foundations/_motion.njk
 permalink: /motion/
 
 titulo: motion
-descripcion: Videos tipo background
+descripcion: Clases y helpers para realizar animaciones
 
 
 date: Last Modified
@@ -20,7 +20,7 @@ image: /assets/static/components/videos.jpg
 
 ### Tipo de animación
 
-| Tipo        | Descripción de aplicación ✅                               |
+| Tipo        | Descripción de aplicación                               |
 | ------------- | -------------------------------------------- |
 | .slide-in |   El panel debe entrar o salir de la pantalla desde los lados cuando se activa un trigger (click en un enlace, mouse moves out...). Durante esta animación, se añade un overlay con color #000000 y 15% de opacidad para atenuar las capas inferiores. El panel puede cerrarse manualmente mediante un icono de cerrar o automáticamente si el mouse sale del panel.                |
 | .slide-out |                 |
@@ -32,7 +32,7 @@ image: /assets/static/components/videos.jpg
 
 ### Duración
 
-| Duración        | Css animation ✅                               |
+| Duración        | Css animation                          |
 | ------------- | -------------------------------------------- |
 | .duration-50  |   animation-duration: 50ms;                  |
 | .duration-150  |   animation-duration: 150ms;                |

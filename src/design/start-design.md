@@ -11,7 +11,7 @@ image: /assets/static/images/7.jpg
 imageAlt: Ilustración de un diseño de sistema
 ---
 
-# Sistemas de diseño
+## Sistemas de diseño
 
 Esta es la herramienta central en torno a la que gira nuestra metodología. Por ello, hemos creído oportuno dedicar un capítulo entero a explicar: qué entendemos por sistema de diseño, qué principios de diseño nos guían a la hora gestionarlo, y qué elementos componen nuestros sistemas a nivel morfológico.
 

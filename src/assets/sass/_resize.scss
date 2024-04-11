@@ -6,10 +6,16 @@
   padding: 0 0 50px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  width: 100%;
+
 
   box-sizing: border-box;
   flex-direction: column;
+
+  width: calc(100vw - 350px - 17% );
+  margin-left: 0;
+
+
+
 }
 
 .resize-resolution,
@@ -34,11 +40,16 @@
   width: 100%;
   padding: 0;
   height: 40px;
-  border: solid #eaeaea;
+  border-bottom: solid #eaeaea;
   border-width: 1px;
   box-sizing: border-box;
   vertical-align: middle;
 }
+
+.resize-mini-content{
+background-color: #eaeaea;
+}
+
 
 .resize-name {
   z-index: 100;
@@ -46,7 +57,7 @@
   float: left;
   left: 0;
   top: 0;
-  padding-left: 40px;
+
   display: flex;
   align-items: center;
 }
@@ -60,7 +71,6 @@
   top: 0;
 
   cursor: pointer;
-  border-left: 1px solid #eaeaea;
 
   @media (min-width: $break-sm) {
     height: 100%;

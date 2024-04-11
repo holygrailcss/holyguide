@@ -11,7 +11,7 @@ image: /assets/static/images/7.jpg
 imageAlt: Ilustración de un diseño de sistema
 ---
 
-# Sistemas de diseño
+## Sistemas de diseño
 
 Esta es la herramienta central en torno a la que gira nuestra metodología. Por ello, hemos creído oportuno dedicar un capítulo entero a explicar: qué entendemos por sistema de diseño, qué principios de diseño nos guían a la hora gestionarlo, y qué elementos componen nuestros sistemas a nivel morfológico.
 
@@ -20,7 +20,7 @@ Esta es la herramienta central en torno a la que gira nuestra metodología. Por 
 Esta herramienta permite al equipo establecer patrones y contar con una serie de elementos que se pueden, y deben, reutilizar para crear funcionalidades. La modularidad del sistema es lo que permite crear desde una unidad mínima hasta componentes más complejos. Establece reglas que nos ayudan a trabajar en equipo de forma alineada a través de principios.
 Además, el sistema de diseño refleja el punto de unión entre el equipo de diseño y el de desarrollo. Gracias a él, conseguimos implementar un lenguaje claro y consistente a partir del cual crear y evolucionar productos.
 
-#### Un sistema de diseño podría entenderse como:
+### Un sistema de diseño podría entenderse como:
 
 - Un lenguaje común.
 - Una balanza entre el control estricto y el caos que produce la libertad.

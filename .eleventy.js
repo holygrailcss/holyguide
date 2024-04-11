@@ -1,6 +1,10 @@
 const { DateTime } = require("luxon");
 const pluginTOC = require("eleventy-plugin-toc");
+
+
+const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+
 const embeds = require("eleventy-plugin-embed-everything");
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -53,6 +57,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(embeds);
 
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt(mdOptions)
+      .use(markdownItAnchor, mdAnchorOpts)
+  );
 
 
   eleventyConfig.addPlugin(pluginTOC);

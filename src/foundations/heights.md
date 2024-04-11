@@ -17,6 +17,8 @@ Alturas fijas o variables que permiten dar fijar estándares en los diferentes e
 
 Disponemos de alturas basadas en la altura de la pantalla, alturas fijas y alturas responsive.
 
+{% br %}
+
 | Helper              | Descripción                          |
 | ------------------- | ------------------------------------ |
 | **h-100**           | Altura de 100%;                      |

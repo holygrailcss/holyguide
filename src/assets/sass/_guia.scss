@@ -7,8 +7,6 @@ html {
 }
 .guide {
   ul {
-    margin-bottom: 20px;
-    margin-top: 20px;
     li {
       font-size: 12px;
       line-height: 1.4;
@@ -23,41 +21,51 @@ html {
     }
   }
   p {
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.5;
   }
   h1 {
     font-size: 30px;
   }
   h2 {
-    font-size: 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    border-bottom: 1px solid #ccc;
   }
   h3 {
+    text-transform: uppercase;
     font-size: 14px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   h4 {
-    font-size: 13px;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   h5 {
-    //    @include fluid-text($min_width, $break-lg, 14px, 20px, 1);
-    width: 100%;
-    line-height: 1.2;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   h6 {
-    font-size: 18px;
-    width: 100%;
-    line-height: 1;
-    @include font-bold();
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 .main-content {
-  margin-top: 71px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 8px;
   padding-left: 8px;
   width: 100%;
-  max-width: 920px;
 }
 .guide-colors {
   float: left;
@@ -66,7 +74,7 @@ html {
   width: calc(25% - 12px);
   .guide-colors-bg {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/2;
   }
   .guide-colors-text {
     padding-top: 10px;
@@ -87,7 +95,6 @@ html {
   padding-right: 20px;
   padding-left: 20px;
   position: fixed;
-  height: 70px;
   z-index: 100;
   right: 0;
   left: 0;
@@ -113,18 +120,12 @@ html {
   border: 1px solid $c-white;
   box-sizing: border-box;
 }
-
-
 @for $i from 1 through 10 {
   .item-i:nth-child(#{$i}) {
     background-color: $primary-guide;
     opacity: 1 - ($i * 0.06); // Ajusta este valor según necesites
   }
 }
-
-
-
-
 .mini-box {
   background: #eaeaea;
   color: #757171;
@@ -181,37 +182,43 @@ html {
 .code-view {
   position: relative;
   padding: 20px 20%;
-  display: flex;
-  border: 1px solid #eaeaea;
+  display: grid;
+  background-color: #E4E4E4;
   transition: 0.2s ease all;
   flex-direction: column;
+  justify-content: center;
+}
+
+.code-view.bg-dark{
+  background-color: #000;
 
 }
 .check-new {
-  width: 30px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   background-color: #28292d;
   overflow: hidden;
   border-radius: 50px;
   position: absolute;
   top: 4px;
-  right: 2px;
+  right: 4px;
   overflow: hidden;
   cursor: pointer;
-  opacity: 0.6;
+
   &:hover {
     opacity: 1;
   }
   &:after {
     content: "";
-    top: 2px;
-    right: 2px;
-    transition: 0.2s ease all;
+    top: 4px;
+
+    right: 16px;
+
     position: absolute;
     width: 12px;
     height: 12px;
     background-color: #ffffff;
-    transition: 0.2s;
+
     border-radius: 50px;
   }
   &:before {
@@ -224,7 +231,7 @@ html {
     background-color: transparent;
     z-index: 2;
     border-radius: 50px;
-    transition: 0.2s;
+
   }
   .has-light & {
     background-color: #ffffff;
@@ -243,41 +250,6 @@ html {
       background-color: #ffffff;
       z-index: 2;
     }
-  }
-}
-.nav-guide {
-  position: fixed;
-  width: $nav-width;
-  height: calc(100vh - 71px);
-  top: 70px;
-  padding: 16px;
-  color: black;
-  background-color: #ffffff;
-  border-right: 1px solid #e3e3e3;
-  z-index: 11;
-  overflow: auto;
-  .menu-lateral {
-    padding-bottom: 32px;
-  }
-  @media (max-width: 767px) {
-    transform: translateX(-250px);
-    transition: all ease-in-out 0.4s;
-    &.open-menu {
-      transform: translateX(0px);
-      transition: all ease-in-out 0.4s;
-    }
-  }
-}
-.main-widthsidebar {
-  margin-top: 71px;
-  margin-left: $nav-width;
-  width: calc(100vw - (#{$nav-width} + 16px));
-  overflow: hidden;
-  @media (max-width: 767px) {
-    width: 100%;
-    margin-top: 50px;
-    margin-left: 0px;
-    overflow: hidden;
   }
 }
 .opencode-button {
@@ -663,4 +635,92 @@ code {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(5, 5, 5, 0.06);
   border-radius: 3px;
+}
+.guide table thead {
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+}
+.innermarkdown {
+  ul {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    li {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+  }
+}
+.guide {
+
+
+
+code[class*=language-] {
+  padding: 0 0;
+}
+
+ pre[class*=language-] {
+  padding: 16px;
+}
+
+:not(pre) > code[class*=language-], pre[class*=language-] {
+  background: #000;
+}
+
+code {
+  background-color: #f1f1f1;
+  padding-left: 4px;
+  padding-right: 4px;
+
+}
+table{
+  font-size: 14px;
+}
+
+}
+
+
+
+.toc {
+  text-align: right;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 100px;
+  text-transform: uppercase;
+
+  color: $c-primary;
+  font-size: 14px;
+  margin: 0 auto 20px;
+  padding: 16px;
+  padding: 20px;
+  border-radius: 20px;
+  @media (min-width: $break-md) {
+    padding: 60px 40px 40px;
+  }
+  ol li a {
+    display: block;
+    color: $c-primary;
+    padding: 0 8px 8px 0;
+
+
+    @include font-bold();
+    &:hover{
+      opacity: .5;
+    }
+  }
+  ol {
+    list-style: none;
+    ol {
+      margin-bottom: 20px;
+    a{
+      @include font-regular();
+    } 
+      margin-left: 20px;
+      ol {
+        margin-left: 20px;
+      }
+    }
+  }
 }

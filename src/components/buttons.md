@@ -3,7 +3,8 @@ layout: _paginas/components/_buttons.njk
 permalink: /buttons/
 
 titulo: Buttons
-descripcion: Colección de botones linkables
+descripcion: Los “buttons” pueden usarse para demarcar las opciones de acciones principales que puede realizar el usuario. Las etiquetas (labels) de los botones deben ser cortos y concisos explicando de forma clara y sintetizada la acción o el lugar al que llevará dicho botón.
+descripcion2: Los botones pueden ir acompañados de iconos y disponemos de diferentes variaciones de posicionamiento para cubrir todas las necesidades de experiencia de uso.  Estos botones están provistos de feedback visual cuando se pasa por encima salvo que el botón esté en estado desactivado.
 
 date: 2023-06-19
 fecha: 19 de junio de 2023
@@ -12,6 +13,4 @@ image: /assets/static/components/buttons.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
 
-# Button
 
-El clásico botón en diferentes estilos y tamaños (Reset) btn+(Estilo )btn-primary + (Tamaño) btn--full Este es el aspecto de un botón solo con la clase .btn que lo prepara para obtener todas las clases de los botones de la guía.
