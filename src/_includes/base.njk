@@ -204,6 +204,52 @@
       // Inicializa Highlight.js
       Prism.highlightAll();
     });
+
+
+
+
+
+
+
+
   </script>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', () => {
+  const options = {
+    root: null, // se refiere al viewport
+    rootMargin: '0px 0px -80% 0px', // Solo la parte superior del elemento debe estar en el viewport
+    threshold: 0 // 10% de la sección debe estar visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const navLink = document.querySelector(`nav.toc ol li a[href="#${id}"]`);
+      if (entry.isIntersecting) {
+        const currentlyActive = document.querySelector('nav.toc ol li a.active');
+        if (currentlyActive) {
+          currentlyActive.classList.remove('active');
+        }
+        navLink.classList.add('active');
+      } else {
+        navLink.classList.remove('active');
+      }
+    });
+  }, options);
+
+  // Observa cada sección que tiene un `id`
+  document.querySelectorAll('.main-content [id]').forEach((section) => {
+    observer.observe(section);
+  });
+});
+
+
+  </script>
+
+
+
+
 </body>
 </html>

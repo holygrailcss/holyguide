@@ -14371,6 +14371,7 @@ header.interior svg path {
 }
 html {
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 .guide ul li {
@@ -14392,9 +14393,11 @@ html {
   line-height: 1.5;
 }
 .guide h1 {
+  scroll-margin-top: 50px;
   font-size: 30px;
 }
 .guide h2 {
+  scroll-margin-top: 50px;
   text-transform: uppercase;
   font-size: 16px;
   padding-bottom: 8px;
@@ -14403,24 +14406,28 @@ html {
   border-bottom: 1px solid #ccc;
 }
 .guide h3 {
+  scroll-margin-top: 50px;
   text-transform: uppercase;
   font-size: 14px;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 .guide h4 {
+  scroll-margin-top: 50px;
   text-transform: uppercase;
   font-size: 16px;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 .guide h5 {
+  scroll-margin-top: 50px;
   text-transform: uppercase;
   font-size: 16px;
   margin-top: 24px;
   margin-bottom: 24px;
 }
 .guide h6 {
+  scroll-margin-top: 50px;
   text-transform: uppercase;
   font-size: 16px;
   margin-top: 24px;
@@ -20163,8 +20170,7 @@ code {
   display: block;
   color: #000000;
   padding: 0 8px 8px 0;
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  color: gray;
 }
 .toc ol li a:hover {
   opacity: 0.5;
@@ -20182,6 +20188,10 @@ code {
 }
 .toc ol ol ol {
   margin-left: 20px;
+}
+
+.toc ol li a.active {
+  color: black; /* Este estilo es solo un ejemplo */
 }
 
 /* TYPES FIJOS */
