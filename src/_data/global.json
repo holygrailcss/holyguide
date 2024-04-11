@@ -200,7 +200,13 @@
  
  
  
- "coloresSemanticos": [ { "hex": "#b40016", "variable": "c-error", "font": "c-error", "bg": "bg-error" }, { "hex": "#b40016", "variable": "c-sale", "font": "c-sale", "bg": "bg-sale" }, { "hex": "#1a32a4", "variable": "c-info", "font": "c-info", "bg": "bg-info" }, { "hex": "#76ae4a", "variable": "c-success", "font": "c-success", "bg": "bg-success" }, { "hex": "#ffc700", "variable": "c-warning", "font": "c-warning", "bg": "bg-warning" }, { "hex": "#fb9962", "variable": "c-feel", "font": "c-feel", "bg": "bg-feel" }
+ "coloresSemanticos": [ {
+   "hex": "#ed0f2b", "variable": "c-error", "font": "c-error", "bg": "bg-error" },
+    { "hex": "#ed0f2b", "variable": "c-sale", "font": "c-sale", "bg": "bg-sale" }, 
+    { "hex": "#1a32a4", "variable": "c-info", "font": "c-info", "bg": "bg-info" }, 
+    { "hex": "#12882c", "variable": "c-success", "font": "c-success", "bg": "bg-success" },
+     { "hex": "#ffce4e", "variable": "c-warning", "font": "c-warning", "bg": "bg-warning" }, 
+     { "hex": "#000", "variable": "c-feel", "font": "c-feel", "bg": "bg-feel" }
   ],
   "coloresFeel": [
     {

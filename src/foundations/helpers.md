@@ -12,7 +12,6 @@ imageAlt: Ilustración de un diseño de sistema web
 
 Helpers que ayudan a agilizar el proceso de maquetación.
 
-# dddd
 
 ### Posicionamientos
 

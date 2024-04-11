@@ -38,7 +38,7 @@ Si no existe tu ratio puedes crear nuevos ratios de esta manera.
 ```html
 <div class='rat-2-1'>
   <div class='rat-content'>
-    <img src='image.jpg' alt='Image description'>
+    <img src='https://holygrail2.github.io/assets/placeholder/2-3.jpg' alt='Image description'>
   </div>
 </div>
 ```
