@@ -210,19 +210,19 @@
   ],
   "coloresFeel": [
     {
-      "hex": "#fb9962",
+      "hex": "#000000",
       "variable": "c-feel",
       "font": "c-feel",
       "bg": "bg-feel"
     },
     {
-      "hex": "#c94c07",
+      "hex": "#a9a9a9",
       "variable": "c-feel-dark",
       "font": "c-feel-dark",
       "bg": "bg-feel-dark"
     },
     {
-      "hex": "#fccbb0",
+      "hex": "#f0f0f0",
       "variable": "c-feel-light",
       "font": "c-feel-light",
       "bg": "bg-feel-light"
@@ -236,14 +236,14 @@
     }
     ,
     {
-      "hex": "#9dbddc",
+      "hex": "#99b0c5",
       "variable": "c-tier-platinum",
       "font": "c-tier-platinum",
       "bg": "bg-tier-platinum"
     }
     ,
     {
-      "hex": "#e0b279",
+      "hex": "#dcbe99",
       "variable": "c-tier-gold",
       "font": "c-tier-gold",
       "bg": "bg-tier-gold"

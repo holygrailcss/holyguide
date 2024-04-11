@@ -1,6 +1,12 @@
 ---
 layout: base.njk
 ---
+
+
+{% set parts = content | split('/n') %}
+
+
+
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
@@ -21,7 +27,21 @@ layout: base.njk
 <section>
   <div class="row">
     <div class="col-xs-12">
-      <div class="main-content innermarkdown ">{{ content | safe }}
+      <div class="main-content innermarkdown ">
+        
+        
+        <div class="part1">
+          parte 1
+          {{ parts[0] | safe }}
+        </div>
+
+        
+
+
+
+
+
+
         <h2>Primarios</h2>
         <div class="row">
           <div class="col-xs-12">
@@ -49,6 +69,11 @@ layout: base.njk
 
 
 
+        <div class="part2">
+          parte 2
+          {{ parts[1] | safe }}
+        </div>
+        
         <h2>Primarios Alfa</h2>
         <div class="row">
           <div class="col-xs-12">
@@ -73,7 +98,10 @@ layout: base.njk
             {% endfor %}
           </div>
         </div>
-
+        <div class="part2">
+          {{ parts[2] | safe }}
+        </div>
+        
 
         <h2>Semánticos</h2>
         <div class="row">
@@ -99,6 +127,12 @@ layout: base.njk
             {% endfor %}
           </div>
         </div>
+
+parte 3
+
+          {{ parts[3] | safe }}
+
+        
         <h2>Feel</h2>
         <div class="row">
           <div class="col-xs-12">

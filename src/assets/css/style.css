@@ -14775,7 +14775,7 @@ html {
 }
 
 .tabguide-content {
-  padding: 20px;
+  font-size: 10px;
   overflow: hidden;
   min-height: 300px;
   display: flex;
@@ -20119,12 +20119,6 @@ code {
   border-radius: 3px;
 }
 
-.guide table thead {
-  text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
-}
-
 .innermarkdown ul {
   margin-top: 20px;
   margin-left: 20px;
@@ -20141,8 +20135,11 @@ code {
 }
 .guide pre[class*=language-] {
   padding: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.guide :not(pre) > code[class*=language-], .guide pre[class*=language-] {
+.guide :not(pre) > code[class*=language-],
+.guide pre[class*=language-] {
   background: #000;
 }
 .guide code {
@@ -20150,13 +20147,11 @@ code {
   padding-left: 4px;
   padding-right: 4px;
 }
-.guide table {
-  font-size: 14px;
-}
 
 .toc {
   text-align: right;
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
+  /* Safari */
   position: sticky;
   top: 100px;
   text-transform: uppercase;
@@ -20191,7 +20186,39 @@ code {
 }
 
 .toc ol li a.active {
-  color: black; /* Este estilo es solo un ejemplo */
+  color: black;
+  /* Este estilo es solo un ejemplo */
+}
+
+.guide table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.guide table thead {
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+}
+.guide table th {
+  color: #000;
+  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.guide table tr td {
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: none;
+}
+.guide table thead tr th,
+.guide table thead tr td,
+.guide table tbody tr th,
+.guide table tbody tr td,
+.guide table tfoot tr th,
+.guide table tfoot tr td {
+  padding: 10px;
+  vertical-align: top;
+  border: none;
 }
 
 /* TYPES FIJOS */
@@ -26954,12 +26981,6 @@ ul {
   bottom: 16px;
 }
 
-table tr td {
-  padding: 10px;
-  vertical-align: top;
-  border-bottom: 1px solid #eaeaea;
-}
-
 .form-btn {
   display: flex;
   flex-wrap: wrap;
@@ -27352,9 +27373,4 @@ table tr td {
 .box-text {
   position: absolute;
   bottom: 0px;
-}
-
-.hljs {
-  padding: 16px;
-  font-size: 12px;
 }

@@ -8,14 +8,7 @@ layout: base.njk
       
 
     <section class="mb-32 mt-32">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="title-s c-dark-grey">
-                    Es la base de la distribución de todos los elementos en en nuestras
-                    maquetas.
-                </div>
-            </div>
-        </div>
+
 
                 <p class="title-m">
                     Flexbox viene de “Flexible Box Layout“, que se puede traducir como
@@ -51,6 +44,9 @@ layout: base.njk
     </section>
 
           {{ content | safe }}
+
+
+
     <section class="mb-100 mt-32">
         <div class="row">
             <div class="col-xs-12">
@@ -124,13 +120,13 @@ layout: base.njk
 
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Mostrar</div>
-                        <div class="text-l">Habilita flex para todos sus hijos</div>
+                        <div class="h2">Mostrar</div>
+                        <div class="text-12-r">Habilita flex para todos sus hijos</div>
                     </div>
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="text-l">.is-flex</h5>
+                        <div class="text-12-r">.is-flex</div>
                         <div class="item-w is-flex" onclick="isFlex(this)">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -140,7 +136,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="text-l">.is-flexinline</h5>
+                        <div class="text-12-r">.is-flexinline</div>
                         <div class="item-w is-flexinline" onclick="isFlexInline()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -151,7 +147,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-center</h5>
+                            <div class="text-12-r">.align-center</div>
                             <div class="item-w is-flex align-center" onclick="isFlexAlignCenter()">
                                 <div class="item-i"></div>
                             </div>
@@ -160,15 +156,15 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Eje</div>
-                        <div class="text-l">
+                        <div class="h2">Eje</div>
+                        <div class="text-12-r">
                             Establece el eje principal.Requiere de .is-flex
                         </div>
                     </div>
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="text-l">.flex-row</h5>
+                        <div class="text-12-r">.flex-row</div>
                         <div class="item-w is-flex flex-row" onclick="isFlexRow()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -178,7 +174,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="text-l">.flex-column</h5>
+                        <div class="text-12-r">.flex-column</div>
                         <div class="item-w is-flex flex-column" onclick="isFlexColumn()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -190,8 +186,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Envoltura flex</div>
-                        <div class="text-l">
+                        <div class="h2">Envoltura flex</div>
+                        <div class="text-12-r">
                             Envuelve elementos si no se pueden hacer todos para que quepan en
                             una línea.Requiere de is-flex
                         </div>
@@ -199,7 +195,7 @@ layout: base.njk
                 </div>
                 <div class="row mb-64">
                     <div class="col-xs-2">
-                        <h5 class="text-l">.flex-wrap</h5>
+                        <div class="text-12-r">.flex-wrap</div>
                         <div class="item-w is-flex flex-wrap" onclick="isFlexWrap()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -212,7 +208,7 @@ layout: base.njk
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <h5 class="text-l">.flex-nowrap</h5>
+                        <div class="text-12-r">.flex-nowrap</div>
                         <div class="item-w is-flex flex-nowrap" onclick="isFlexNoWrap()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -227,8 +223,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Justificar-contenido</div>
-                        <div class="text-l">
+                        <div class="h2">Justificar-contenido</div>
+                        <div class="text-12-r">
                             Intenta distribuir espacio adicional en el eje principal. Requiere
                             .is-flex
                         </div>
@@ -237,7 +233,7 @@ layout: base.njk
                 <div class="row mb-64">
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.content-start</h5>
+                            <div class="text-12-r">.content-start</div>
                             <div class="item-w is-flex content-start" onclick="isFlexContentStart()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -247,7 +243,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.content-end</h5>
+                            <div class="text-12-r">.content-end</div>
                             <div class="item-w is-flex content-end" onclick="isFlexContentEnd()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -257,7 +253,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.content-center</h5>
+                            <div class="text-12-r">.content-center</div>
                             <div class="item-w is-flex content-center" onclick="isFlexContentCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -267,7 +263,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.content-sp-between</h5>
+                            <div class="text-12-r">.content-sp-between</div>
                             <div class="item-w is-flex content-sp-between" onclick="isFlexContentBetween()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -277,7 +273,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.content-sp-around</h5>
+                            <div class="text-12-r">.content-sp-around</div>
                             <div class="item-w is-flex content-sp-around" onclick="isFlexContentAround()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -287,7 +283,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div>
-                            <h5 class="text-l">.content-sp-evenly</h5>
+                            <div class="text-12-r">.content-sp-evenly</div>
                             <div class="item-w is-flex content-sp-evenly" onclick="isFlexContentEvenly()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -298,8 +294,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Alinear-elementos</div>
-                        <div class="text-l">
+                        <div class="h2">Alinear-elementos</div>
+                        <div class="text-12-r">
                             Determina cómo se disponen los elementos en el eje transversal.
                         </div>
                     </div>
@@ -307,7 +303,7 @@ layout: base.njk
                 <div class="row mb-64">
 
                     <div class="col-xs-2">
-                        <h5 class="text-l">.align-top</h5>
+                        <div class="text-12-r">.align-top</div>
                         <div class="item-w is-flex align-top" onclick="isFlexAlignTop()">
                             <div class="item-i"></div>
                             <div class="item-i"></div>
@@ -319,7 +315,7 @@ layout: base.njk
 
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-middle</h5>
+                            <div class="text-12-r">.align-middle</div>
                             <div class="item-w is-flex align-middle" onclick="isFlexAlignMiddle()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -331,7 +327,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-bottom</h5>
+                            <div class="text-12-r">.align-multi-bottom</div>
                             <div class="item-w is-flex align-multi-bottom" onclick="isFlexAlignMultiBottom()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -346,7 +342,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-items-center</h5>
+                            <div class="text-12-r">.align-items-center</div>
                             <div class="item-w is-flex align-items-center" onclick="isFlexAlignItemsCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -357,7 +353,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-vertical</h5>
+                            <div class="text-12-r">.align-vertical</div>
                             <div class="item-w is-flex align-vertical" onclick="isFlexAlignVertical()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -369,8 +365,8 @@ layout: base.njk
                 </div>
                 <div class="row pt-40 pb-40">
                     <div class="col-xs-12">
-                        <div class="title-s">Alinear-contenido</div>
-                        <div class="text-l">
+                        <div class="h2">Alinear-contenido</div>
+                        <div class="text-12-r">
                             Solo tiene efecto con más de una línea de contenido. Los ejemplos
                             que se muestran aquí usan envoltura flexible.
                         </div>
@@ -379,7 +375,7 @@ layout: base.njk
                 <div class="row">
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-top</h5>
+                            <div class="text-12-r">.align-multi-top</div>
                             <div class="item-w is-flex align-multi-top" onclick="isFlexAlignMultiTop()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -394,7 +390,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-bottom</h5>
+                            <div class="text-12-r">.align-bottom</div>
                             <div class="item-w is-flex align-bottom" onclick="isFlexAlignBottom()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -406,7 +402,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-center</h5>
+                            <div class="text-12-r">.align-multi-center</div>
                             <div class="item-w is-flex align-multi-center" onclick="isFlexAlignMultiCenter()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -421,7 +417,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-between</h5>
+                            <div class="text-12-r">.align-multi-between</div>
                             <div class="item-w is-flex align-multi-between" onclick="isFlexAlignMultiBetween()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -436,7 +432,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-around</h5>
+                            <div class="text-12-r">.align-multi-around</div>
                             <div class="item-w is-flex align-multi-around" onclick="isFlexAlignMultiAround()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>
@@ -451,7 +447,7 @@ layout: base.njk
                     </div>
                     <div class="col-xs-2">
                         <div class="">
-                            <h5 class="text-l">.align-multi-stretch</h5>
+                            <div class="text-12-r">.align-multi-stretch</div>
                             <div class="item-w is-flex align-multi-stretch" onclick="isFlexAlignMultiStretch()">
                                 <div class="item-i"></div>
                                 <div class="item-i"></div>

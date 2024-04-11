@@ -27,6 +27,7 @@ const mdAnchorOpts = {
 };
 
 module.exports = function (eleventyConfig) {
+
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("src/pages", "pages");
@@ -34,7 +35,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPlugin(syntaxHighlight);
 
-
+  eleventyConfig.addFilter("split", function(content, delimiter) {
+    return content.split(delimiter);
+  });
 
 
   eleventyConfig.addShortcode("br", function () { //  ✅ se usa poniendo esto--> {% br %}

@@ -23,7 +23,8 @@ seccion3: Owners
 url3: /enlace3
 ---
 
-## Unica fuente de la verdad
+## Empezando
+Unica fuente de la verdad
 
 ##### Nuestro objetivo es convertir una de las empresas minoristas más grandes del mundo en una organización digital de primer orden. Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
 
@@ -38,7 +39,7 @@ Si bien algunas de las herramientas de desarrollo, como SASS , son obligatorias 
 - [Gráficos en ascii](https://asciiflow.com/#/)
 - [SWIPER slider](https://swiperjs.com/)
 
-## Boilerplate
+### Boilerplate
 
 Aprende a maquetar desde cero con el sistema holygrail
 
@@ -50,7 +51,7 @@ Crea un entorno de desarrollo desde cero
 Boilerplate
 Crea un proyecto completo con parcel y gulp en tu local.
 
-## Debug
+### Debug
 
 Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debugear mientras maquetamos.
 
@@ -70,9 +71,11 @@ Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debu
 @include debug-all(); // depuración de todos a la vez
 ```
 
+## Inicialización
 Configuración del archivo setup.scss
-Antes de nada configuraremos la guia, con ella generaremos el siguiente archivo de setup.scss. Después copiaremos y sustituiremos en nuestro archivo setup las diferentes variables, de esta forma, tanto la documentación como el proyecto estarán alineados.
 
+### Font family
+ Configuración de fuentes y grosores 
 ```scss
 $font-family-regular:"dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-medium:"dutti-daily-light",Helvetica,arial,sans-serif;
@@ -83,14 +86,20 @@ $font-family-2-bold:"dutti-extended-extrabold",Helvetica,arial,sans-serif;
 $font-family-3-regular:"massimo-daily-regular",ms-serif,serif;
 $font-family-3-medium:"massimo-daily-light",ms-serif,serif;
 $font-family-3-bold:"massimo-daily-bold",ms-serif,serif;
-
+```
+### Grosores
+Configuración de grosores
+```scss
 $font-weight-light: inherit;
 $font-weight-regular: inherit;
 $font-weight-medium: inherit;
 $font-weight-bold: inherit;
 $font-family-form-placeholder: "dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-form: "dutti-daily-regular",Helvetica,arial,sans-serif;
-
+```
+### Varios Elementos
+Configuración de elementos varios
+```scss
 $totalCols:12px;
 $padding-global:8px;
 $padding-mobile:24px;
@@ -100,8 +109,10 @@ $padding-btn:16px;
 $height-inputs:48px;
 $btn-radius:8px;
 $c-primary:#000000;
-
-
+```
+### Containers
+Configuración de containers
+```scss
 $container-full:800px;
 $container-fluid:full;
 $container:800px;
@@ -115,13 +126,19 @@ $container-8:395px;
 $container-9:798px;
 $container-10:432px;
 $container-11:1080px;
+```
+### Configuración de breakpoints
 
+```scss
 $break-xs:1px;
 $break-sm:768px;
 $break-md:992px;
 $break-lg:1280px;
 $break-xl:1500px;
+```
 
+### Configuración de alturas
+```scss
 $h-100:100%;
 $height-100:100%;
 $height-xs:80px;
@@ -132,24 +149,27 @@ $height-xl:450px;
 $hero-big: 300px ;
 $hero-medium:200px ;
 $hero-mini: 100px ;
-$hero-big-sm:500px //falta implementar;
+$hero-big-sm:500px     //falta implementar;
 $hero-medium-sm:400px  //falta implementar;
-$hero-mini-sm: 300px  //falta implementar;
-
+$hero-mini-sm: 300px   //falta implementar;
+```
+### Configuración de modales
+```scss
 $modalx-xs:295px;
 $modalx-sm:445px;
 $modalx-md:595px;
 $modalx-lg:899px;
 $modalx-xl:995px;
 
-
+```
+### Tamaños tipográficos
+*Obsoleto* ❌❌
+```scss
 $headers: (
   tit-m: ( 14px, 14px, 16px, 16px, 1.2, 'medium', ),
   tit-s: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
   tit-xs: ( 11px, 11px, 11px, 11px, 1.2, 'medium', ),
-
   p-m-b: ( 12px, 12px, 13px, 13px, 1.2, 'bold', ),
-
   p-m: ( 12px, 12px, 13px, 13px, 1.2, 'regular', ),
   p-m-m: ( 12px, 12px, 13px, 13px, 1.2, 'medium', ),
   p-s: ( 12px, 12px, 12px, 12px, 1.2, 'regular', ),
@@ -157,31 +177,30 @@ $headers: (
   p-s-b: ( 12px, 12px, 13px, 13px, 1.3, 'bold', ),
   p-xs-b: ( 11px, 11px, 12px, 12px, 1.3, 'bold', ),
   p-xxs-b: ( 9px, 9px, 9px, 9px, 1.3, 'bold', ),
-
   p-tag: ( 8px, 8px, 10px, 10px, 1.3, 'bold', )
 ) !default;
+```
+### Tamaños tipograficos actuales
 
-/* hay que eliminar headers y quedarnos con minheaders */
+```scss
+
 $minheaders: (
   tit-m: ( 14px, 16px, 1.2, 'medium', ),  // siempre mayus   36 ✅
   tit-s: ( 12px, 13px, 1.2, 'medium', ),  // siempre mayus   84 lo vamos a borrar y sustiuir por p-m ❌
   tit-xs: ( 11px, 11px, 1.2, 'medium', ), // siempre mayus   77
-
-  p-m-b: ( 12px, 13px, 1.2, 'bold', ),  // 146  es semibold aunque ponga bold
-
-
+  p-m-b: ( 12px, 13px, 1.2, 'bold', ),    // 146  es semibold aunque ponga bold
   p-m: ( 12px, 13px, 1.2, 'regular', ),   // 384 pasa a ser medium y borramos tit-s ❌
   p-m-m: ( 12px, 13px, 1.2, 'medium', ),  // 3
   p-s: ( 12px, 12px, 1.2, 'regular', ),   //598  ❌
   p-xs: ( 11px, 11px, 1.2, 'regular', ),  //169
-  p-s-b: ( 12px, 13px, 1.3, 'bold', ),     //0 borramos y pasa a ser p-m-b  ✅
+  p-s-b: ( 12px, 13px, 1.3, 'bold', ),    //0 borramos y pasa a ser p-m-b  ✅
   p-xs-b: ( 11px, 12px, 1.3, 'bold', ),   // 35
   p-xxs-b: ( 9px, 9px, 1.3, 'bold', ),    // 6
-
-  p-tag: ( 8px, 10px, 1.3, 'regular', )    //  siempre en mayus
-
+  p-tag: ( 8px, 10px, 1.3, 'regular', )   //  siempre en mayus
 ) !default;
-
+```
+### Tipografias Fijas
+```scss
  $headersFixers: (
 14: (14px ,1.5),
 16: (16px ,1.5),
@@ -191,7 +210,10 @@ $minheaders: (
 32: (32px ,1.5),
 40: (40px ,1.5),
  );
-
+```
+### Tipografias Fluidas
+Tipografias que se adaptan con los anchos del viewport
+```scss
 $headersFluids: (
  12: (12px ,12px ,0.9),
  14: (14px ,14px ,0.9),
@@ -205,7 +227,7 @@ $headersFluids: (
 
 ```
 
-### 02. Creando la estructura
+##  Creando la estructura
 
 Como si se tratase de una construcción, empezaremos por los cimientos y la estructura responsive donde más adelante insertaremos los componentes flexibles.
 Sections

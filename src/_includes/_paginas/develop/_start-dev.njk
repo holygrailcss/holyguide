@@ -5,6 +5,20 @@ layout: base.njk
 <div class="container-fluid">
     {% include '_website/hero.njk' %}
 </div>
+
+{% set parts = content | split('/n') %}
+
+
 <div class="main-content innermarkdown ">
-    {{ content | safe }}
+
+
+    {{ parts[0] | safe }}
+
+
+
+    {{ parts[1] | safe }}
+
+    {{ parts[2] | safe }}
+
+
 </div>
