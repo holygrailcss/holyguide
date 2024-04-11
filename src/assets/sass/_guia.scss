@@ -693,12 +693,10 @@ table{
   color: $c-primary;
   font-size: 14px;
   margin: 0 auto 20px;
-  padding: 16px;
-  padding: 20px;
+
+  padding: 32px;
   border-radius: 20px;
-  @media (min-width: $break-md) {
-    padding: 60px 40px 40px;
-  }
+
   ol li a {
     display: block;
     color: $c-primary;

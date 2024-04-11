@@ -30,7 +30,7 @@ Además, el sistema de diseño refleja el punto de unión entre el equipo de dis
 
 El sistema de diseño tiene que ser flexible y mantenerse vivo a largo plazo. Un sistema de diseño no es estático, sino dinámico. Evoluciona con el producto y su diseño.
 
-### 1.1 ¿Qué valor aporta?
+### 1 ¿Qué valor aporta?
 
 Utilizar un sistema de diseño garantiza la consistencia de nuestros productos. Esto repercute de manera positiva en la experiencia del usuario y acorta significativamente los tiempos de ideación, desarrollo y elaboración de productos. Por otra parte, los sistemas de diseño son una herramienta especialmente útil para conseguir crear productos digitales capaces de escalar y crecer rápidamente de una forma controlada. Por último, pero no menos importante, un valor que aporta es que permite dedicar menos tiempo a pensar en detalles superfluos y más a pensar en producto.
 
@@ -47,7 +47,7 @@ A la hora de tomar decisiones relacionadas con la gestión de sistemas de diseñ
 - **Comprensible**. Nuestro reto es realizar productos autoexplicativos.
   Estos principios tienen también una influencia clara a lo largo de nuestro proceso productivo.
 
-### 2.1 Principios específicos
+#### 2.1 Principios específicos
 
 Más allá de las reglas generales que nos sirven como premisa a la hora de utilizar un sistema de diseño, también dotamos a cada uno de una serie de principios particulares. Estos tienen el fin de proporcionar una personalidad única y propia al sistema. Por ejemplo, un sistema de diseño para una entidad pública podría establecer como principio la imparcialidad. Quien maneje este sistema debería ceñirse a esta máxima a la hora de crear funcionalidades que no influencien la toma de decisiones del usuario.
 
@@ -140,7 +140,7 @@ Todo sistema está por definición compuesto de elementos que lo articulan y le 
 > - Modules
 > - Templates
 
-#### 4.1 01 Fragmentos
+#### 4.1 Fragmentos
 
 Un fragmento, como su nombre indica, es algo incompleto que sólo cobra sentido cuando se asocia con otros fragmentos para generar un significado o con un componente para añadírselo.
 Por poner un ejemplo más bajado a tierra, un fragmento podría ser un icono de error dentro de una alerta debido a que en el diseño nunca va a ir solo, siempre irá acompañado por otro elemento, el texto, de ir solo, carecería de sentido o estaría mal aplicado.
@@ -151,7 +151,7 @@ Otro ejemplo de fragmentos serían los items que forman parte de un conjunto y n
 - Contenedores
 - Items (como lista, tabla o pestañas)
 
-#### 4.2 02 Componentes
+#### 4.2 Componentes
 
 Un componente sería un elemento que tiene sentido en sí mismo, es decir, está completo y no necesita acompañarse de otros elementos. Se sirven de ellos mismos para cumplir una función específica.
 Es importante que un componente deba cumplir una única función, en el caso de que cumpla más de una función, en el momento en que se incumple esta regla ese componente no debe ser considerado como tal y pasará a ser parte de una categoría de elementos más compleja como módulos o Templates.
@@ -170,7 +170,7 @@ Por poner un ejemplo, un componente sería un botón. Un botón no necesita de o
 - Listas
 - Tablas
 
-#### 4.3 03 Módulos
+#### 4.3 Módulos
 
 Un módulo o sección es un conjunto de componentes que se unen para adoptar una función a un nivel más global, por ejemplo, un campo de texto permite introducir datos (tiene sentido por si mismo) pero en el momento de combinarse con otros datos, botones, etc. puede generar un módulo que adquiere una función más global, como un formulario de registro. Otro ejemplo sería un pie de página, a menudo se conforma de enlaces que en si mismos tienen sentido como links a otras páginas pero en su unión adoptan una funcionalidad más global que es la de navegación. Algunos ejemplos de módulos:
 
@@ -188,7 +188,7 @@ La nomenclatura de nuestro sistema está basada en los grupos diferenciados en e
 
 A continuación se muestran algunos ejemplos como lista de referencia ante la creación de un nuevo sistema de diseño en un proyecto. Hay proyectos en los que no aparezcan todos los componentes que se listan a continuación, y otros proyectos en los que surjan nuevos. La idea es adaptar las bases, y que producto y sistema de diseño evolucionen juntos.
 
-#### 5.1 01 Fragmentos
+#### 5.1  Fragmentos
 
 - Iconos
   **_01 Fragments / Icon / [Tamaño]px / [Nombre del icono]_**
@@ -197,7 +197,7 @@ A continuación se muestran algunos ejemplos como lista de referencia ante la cr
 - Contenedores
   **_01 Fragments / Container / [Tipo de contenedor]_**
 
-#### 5.2 02 Componentes
+#### 5.2  Componentes
 
 - Botones
   02 Components / Button / [Tipo de botón] / [Estado]
