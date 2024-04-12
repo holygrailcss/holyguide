@@ -61,3 +61,13 @@
         }
     }
 }
+
+.ncc-arrow{
+    opacity: 1;
+    transition: 150ms opacity ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        opacity: .6;
+    }
+}

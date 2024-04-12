@@ -25548,6 +25548,15 @@ code {
   transition: 150ms opacity ease-in-out;
 }
 
+.ncc-arrow {
+  opacity: 1;
+  transition: 150ms opacity ease-in-out;
+  cursor: pointer;
+}
+.ncc-arrow:hover {
+  opacity: 0.6;
+}
+
 .nav {
   position: absolute;
   top: 0px;
