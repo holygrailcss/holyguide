@@ -1,0 +1,127 @@
+{% import "_macros/_product.njk" as product %}
+<li class="grid-product grid-product-view-new  ncc">
+  <div class="template-name" id="ncc">ncc</div>
+  <studio-single-product-template>
+    <div class="ncc-container">
+      <div class="ncc-content">
+        <div class="ncc-header">
+          <div class="title-l">1/6 PRODUCTS</div>
+          <div>
+
+
+         <div class="is-flex">
+           <div id="prevArrow" class="ncc-arrow-prev pr-20 pl-20">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.64652 0.955078L6.35363 1.66218L1.70718 6.30863L6.35363 10.9551L5.64652 11.6622L0.292969 6.30863L5.64652 0.955078Z" fill="black"/>
+              </svg>
+           
+           </div>
+           <div id="nextArrow" class="ncc-arrow-next  pr-20 pl-20">
+            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29098 6.30863L0.644531 1.66218L1.35164 0.955078L6.70519 6.30863L1.35164 11.6622L0.644531 10.9551L5.29098 6.30863Z" fill="black"/>
+              </svg>
+           
+           </div>
+         </div>
+          </div>
+        </div>
+        <ul id="list" class="ncc-wrap">
+          <div class="ncc-inner mt-40">
+            <li class="ncc-inner-list is-active">
+              <div class="ncc-item-header mx-auto mb-24 text-l"> Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Fusce est lectus, volutpat eu porttitor ut, finibus pellentesque nibh. Fusce tristique non purus
+                in laoreet. Fusce suscipit magna non nibh mattis efficitur ac a arcu. </div>
+              <div class="ncc-item sk-load2"> {% call product.ratio('3-4','no-text') %} {% endcall %}</div>
+              <div class="ncc-footer pt-40 pb-40 is-flex align-center flex-column ">
+                <div class="title-m">TEXTURED CROPPED JACKET</div>
+                <div class="title-m">39,95 EUR</div>
+                <div class="title-m c-dark-grey">NEW</div>
+                <div class="title-m mt-16">111111</div>
+              </div>
+            </li>
+
+
+
+
+            <li class="ncc-inner-list">
+              <div class="ncc-item-header mx-auto mb-24 text-l"> Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Fusce est lectus, volutpat eu porttitor ut, finibus pellentesque nibh. Fusce tristique non purus
+                in laoreet. Fusce suscipit magna non nibh mattis efficitur ac a arcu. </div>
+              <div class="ncc-item sk-load2"> {% call product.ratio('3-4','no-text') %} {% endcall %}</div>
+              <div class="ncc-footer pt-40 pb-40 is-flex align-center flex-column ">
+                <div class="title-m">TEXTURED CROPPED JACKET</div>
+                <div class="title-m">39,95 EUR</div>
+                <div class="title-m c-dark-grey">NEW</div>
+                <div class="title-m mt-16">2222222</div>
+              </div>
+            </li>
+
+
+
+
+
+            <li class="ncc-inner-list">
+              <div class="ncc-item-header mx-auto mb-24 text-l"> Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Fusce est lectus, volutpat eu porttitor ut, finibus pellentesque nibh. Fusce tristique non purus
+                in laoreet. Fusce suscipit magna non nibh mattis efficitur ac a arcu. </div>
+              <div class="ncc-item sk-load2"> {% call product.ratio('3-4','no-text') %} {% endcall %}</div>
+              <div class="ncc-footer pt-40 pb-40 is-flex align-center flex-column ">
+                <div class="title-m">TEXTURED CROPPED JACKET</div>
+                <div class="title-m">39,95 EUR</div>
+                <div class="title-m c-dark-grey">NEW</div>
+                <div class="title-m mt-16">3333333</div>
+              </div>
+            </li>
+
+
+
+
+            <li class="ncc-inner-list">
+              <div class="ncc-item-header mx-auto mb-24 text-l"> Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Fusce est lectus, volutpat eu porttitor ut, finibus pellentesque nibh. Fusce tristique non purus
+                in laoreet. Fusce suscipit magna non nibh mattis efficitur ac a arcu. </div>
+              <div class="ncc-item sk-load2"> {% call product.ratio('3-4','no-text') %} {% endcall %}</div>
+              <div class="ncc-footer pt-40 pb-40 is-flex align-center flex-column ">
+                <div class="title-m">TEXTURED CROPPED JACKET</div>
+                <div class="title-m">39,95 EUR</div>
+                <div class="title-m c-dark-grey">NEW</div>
+                <div class="title-m mt-16">4444444</div>
+              </div>
+            </li>
+
+
+          </div>
+      </div>
+      </ul>
+    </div>
+    </div>
+  </studio-single-product-template>
+
+
+
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const list = document.getElementById('list');
+  const items = list.getElementsByTagName('li');
+  let activeIndex = 0;
+
+  function updateActiveItem(newIndex) {
+    items[activeIndex].classList.remove('is-active');
+    activeIndex = newIndex;
+    items[activeIndex].classList.add('is-active');
+  }
+
+  document.getElementById('prevArrow').addEventListener('click', function() {
+    const newIndex = activeIndex > 0 ? activeIndex - 1 : items.length - 1;
+    updateActiveItem(newIndex);
+  });
+
+  document.getElementById('nextArrow').addEventListener('click', function() {
+    const newIndex = activeIndex < items.length - 1 ? activeIndex + 1 : 0;
+    updateActiveItem(newIndex);
+  });
+});
+
+  </script>

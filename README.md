@@ -173,3 +173,14 @@ You can also use words, to fit your writing style more closely[^note].
 
 
 {% br %}
+
+/n para splitear contenidos
+hay que añadir sets y parts
+
+
+para crear una nueva parrilla. 
+
+Crear un sass en parrillas tipo _ncc.scss
+importarlo en all.scss de parrillas
+
+templates / parrillas  crear _ncc.njk

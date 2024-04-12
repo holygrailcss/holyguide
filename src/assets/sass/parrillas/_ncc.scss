@@ -1,0 +1,63 @@
+@import "../abstract/_all.scss";
+@import "../abstract/_gridNEW.scss";
+.ncc {
+    @include sp-wraps('.n4f');
+}
+.ncc-container {
+    display: grid;
+    justify-items: center;
+}
+.ncc-wrap {
+    list-style: none;
+    .sk-load2:before{
+        background-color: transparent;
+    }
+}
+.ncc-content {
+    max-width: 675px;
+    width: 100%;
+    background-color: #F0F0F0;
+}
+.ncc-header {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-bottom: var(--line-width) solid $c-dark-grey;
+    @media (min-width: $break-sm) {
+        padding: 10px 40px;
+    }
+}
+.ncc-item-header {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+.ncc-item {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.ncc-footer {
+    border-top: var(--line-width) solid $c-dark-grey;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+.ncc-inner {
+    aspect-ratio: 675 / 1000;
+    @media (min-width: $break-sm) {
+        aspect-ratio: 675 / 715;
+    }
+    .ncc-inner-list {
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+        transition: 50ms opacity ease-in-out;
+        &.is-active {
+            opacity: 1;
+            transition: 150ms opacity ease-in-out;
+        }
+    }
+}
