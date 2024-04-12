@@ -25513,6 +25513,7 @@ code {
 .ncc-item-header {
   text-align: center;
   width: 100%;
+  height: 50px;
   max-width: 400px;
 }
 
@@ -25542,6 +25543,7 @@ code {
   width: 100%;
   position: absolute;
   transition: 50ms opacity ease-in-out;
+  transition-delay: 70ms;
 }
 .ncc-inner .ncc-inner-list.is-active {
   opacity: 1;
