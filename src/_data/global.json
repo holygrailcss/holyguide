@@ -31,8 +31,6 @@
   "ciudad": " barcelona",
   "provincia": "Barcelona",
   "actividad": " Estructuras modulares",
-  "c_primary": "#000000",
-  "c_secondary": "#000000",
   "bg_dark": "#161616",
   "c_bg_dark": "#f7f6f5",
   "bg_light": "#efefef",
@@ -324,5 +322,18 @@
     { "size": "btn--full" },
     { "size": "btn--xxl" }
 
-  ]
+  ],
+
+
+  "c_primary": "#000 ",
+  "c_secondary": "#000 ",
+  "c_accent":" #ed0f2b ",
+  "c_error": "#ed0f2b ",
+  "c_sale": "#ffce4e ",
+  "c_info": "#1a32a4 ",
+  "c_valid": "#12882c ",
+  "c_warning": "#ffce4e ",
+  "c_orange":" #e5740b "
+
+
 }

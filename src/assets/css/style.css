@@ -5514,7 +5514,7 @@ mark {
 }
 
 .c-sale {
-  color: #ed0f2b;
+  color: #ffce4e;
 }
 
 .c-info {
@@ -5612,6 +5612,10 @@ mark {
 
 .bg-black {
   background-color: #000000;
+}
+
+.bg-sale {
+  background-color: #ffce4e;
 }
 
 .bg-error {
@@ -9985,6 +9989,76 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   padding: 0;
 }
 
+.list-state .list-state-item {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 6px;
+  color: #8e8e8e;
+}
+.list-state .list-state-item:after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border: 1px solid black;
+  background-color: #fff;
+  top: 2px;
+  left: -5px;
+}
+.list-state .list-state-item:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed black;
+  top: 12px;
+  left: 0px;
+}
+.list-state .list-state-item.state-1 {
+  color: #000000;
+}
+.list-state .list-state-item.state-1:before {
+  content: "";
+  border-left: 1px solid black;
+}
+.list-state .list-state-item.state-1:after {
+  border: 1px solid black;
+  background-color: black;
+}
+.list-state .list-state-item.state-2 {
+  color: #000000;
+}
+.list-state .list-state-item.state-2:before {
+  content: "";
+  border-left: 1px dashed black;
+}
+.list-state .list-state-item.state-2:after {
+  border: 1px solid black;
+  background-color: black;
+}
+.list-state .list-state-item:last-child:before {
+  content: "";
+  border: none;
+}
+.is-rtl .list-state .list-state-item {
+  position: relative;
+  padding-right: 20px;
+  margin-right: 4px;
+}
+.is-rtl .list-state .list-state-item:after {
+  right: -5px;
+}
+.is-rtl .list-state .list-state-item:before {
+  border-left: none;
+  border-right: 1px dashed black;
+  top: 12px;
+  right: 0px;
+}
+.is-rtl .list-state .list-state-item:last-child:before {
+  content: "";
+  border: none;
+}
+
 /* functional */
 .progressbar {
   width: 100%;
@@ -9997,7 +10071,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   overflow: hidden;
 }
 .progressbar .progressbar-status {
-  min-width: 8px;
+  min-width: 0;
   height: 8px;
   border-radius: 0;
   background-color: #000000;

@@ -1,53 +1,104 @@
 ---
 layout: base.njk
 ---
-
 {% import "_macros/_token.njk" as tokens %}
 {% import "_macros/_insert.njk" as insert %}
-
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
 <div class="main-content innermarkdown ">{{ content | safe }}
 
-
-
-
-<section class="mb-32 mt-32">
-  <div class="row">
-
-    <div class="col-xs-12"> 
-      {% call insert.list('list-clear','Lista limpia vertical. ') %} {% endcall %} 
-      {% call insert.list('list-inline','Lista limpia horizontal. ') %} {% endcall %} 
-      {% call insert.list('list-disc','Lista con puntos iniciales . ') %} {% endcall %}
-    
-      {% call insert.list('list-breadcrumb','Lista inline con seo. ') %} {% endcall %}</div>
-  </div>
-</section>
-
-
-<section class="mb-32 mt-32">
-  <div class="row">
-
-    <div class="col-xs-12  title-l"> Listas con estilos</div>
-    <div class="col-xs-12"> 
-      
-
-{% call insert.listButton('list-button','Lista con estilo de botón usada para desplegables o acordeones. ') %} {% endcall %}
-{% call insert.listButton('list-button list-icons','Puedes usar iconos en el botón agregando la case list-icons, y agregando los svg-icon') %} {% endcall %} 
-
-<p class="mt-24">Usado en el template  <a href="/06-worldwide.html" class="link-line">Worldwide</a></p>
-
-
-    
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12">
+        {% call insert.list('list-clear','Lista limpia vertical. ') %} {% endcall %}
+        {% call insert.list('list-inline','Lista limpia horizontal. ') %} {% endcall %}
+        {% call insert.list('list-disc','Lista con puntos iniciales . ') %} {% endcall %}
+        {% call insert.list('list-breadcrumb','Lista inline con seo. ') %} {% endcall %}</div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
+  <section > 
+    <div class="row">
+      <div class="col-xs-12  title-l mb-32"> LISTAS CON ESTADOS  </div>
+      <div class="col-xs-12">
+        <div class="list-state">
+          <div class="list-state-item pb-32 state-1">
+            <div class="title-l-b">PEDIDO CONFIRMADO (state-1)</div>
+            <div class="title-m">20/05/2022 - 22:39h</div>
+            <div class="title-l">Texto para información extra.</div>
+          </div>
+          <div class="list-state-item state-2  pb-32">
+            <div class="title-l-b">PEDIDO CONFIRMADO  (state-2)</div>
+            <div class="title-m">20/05/2022 - 22:39h</div>
+            <div class="title-l">Texto para información extra.</div>
+            <div class="pt-16">
+              <div class="title-m">25/05/2022 - 08:39h</div>
+              <div class="title-m">En ruta</div>
+            </div>
+          </div>
+          <div class="list-state-item state-3  pb-32">
+            <div class="title-l-b">PEDIDO CONFIRMADO</div>
+            <div class="title-m">20/05/2022 - 22:39h</div>
+            <div class="title-l">Texto para información extra.</div>
+          </div>
+          <div class="list-state-item state-3  pb-32">
+            <div class="title-l-b">ENTREGADO</div>
+ 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <pre>
+    <code  class="language-markup ">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-12  title-l mb-32&quot;&gt; LISTAS CON ESTADOS  &lt;/div&gt;
+  &lt;div class=&quot;col-xs-12&quot;&gt;
+    &lt;div class=&quot;list-state&quot;&gt;
+      &lt;div class=&quot;list-state-item pb-32 state-1&quot;&gt;
+        &lt;div class=&quot;title-l-b&quot;&gt;PEDIDO CONFIRMADO (state-1)&lt;/div&gt;
+        &lt;div class=&quot;title-m&quot;&gt;20/05/2022 - 22:39h&lt;/div&gt;
+        &lt;div class=&quot;title-l&quot;&gt;Texto para informaci&oacute;n extra.&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-state-item state-2  pb-32&quot;&gt;
+        &lt;div class=&quot;title-l-b&quot;&gt;PEDIDO CONFIRMADO  (state-2)&lt;/div&gt;
+        &lt;div class=&quot;title-m&quot;&gt;20/05/2022 - 22:39h&lt;/div&gt;
+        &lt;div class=&quot;title-l&quot;&gt;Texto para informaci&oacute;n extra.&lt;/div&gt;
+        &lt;div class=&quot;pt-16&quot;&gt;
+          &lt;div class=&quot;title-m&quot;&gt;25/05/2022 - 08:39h&lt;/div&gt;
+          &lt;div class=&quot;title-m&quot;&gt;En ruta&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-state-item state-3  pb-32&quot;&gt;
+        &lt;div class=&quot;title-l-b&quot;&gt;PEDIDO CONFIRMADO&lt;/div&gt;
+        &lt;div class=&quot;title-m&quot;&gt;20/05/2022 - 22:39h&lt;/div&gt;
+        &lt;div class=&quot;title-l&quot;&gt;Texto para informaci&oacute;n extra.&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;list-state-item state-3  pb-32&quot;&gt;
+        &lt;div class=&quot;title-l-b&quot;&gt;ENTREGADO&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code>
+  </pre>
 
 
-
-
-  </div>
+  
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12  title-l"> Listas con estilos</div>
+      <div class="col-xs-12">
+        {% call insert.listButton('list-button','Lista con estilo de botón usada para desplegables o acordeones. ') %}
+        {% endcall %}
+        {% call insert.listButton('list-button list-icons','Puedes usar iconos en el botón agregando la case list-icons,
+        y agregando los svg-icon') %} {% endcall %}
+        <p class="mt-24">Usado en el template <a href="/06-worldwide.html" class="link-line">Worldwide</a></p>
+      </div>
+    </div>
+  </section>
+</div>

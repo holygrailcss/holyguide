@@ -5,7 +5,6 @@ $space-left: calc(((100vw - 1280px) / 2));
 $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "../../../node_modules/holygrail2/scss/style.scss";
 // -FASE 4 : OVERRIDE YOUR HOLYGRAIL
-
 @import "./prism.scss";
 @import "./header2.scss";
 @import "./template/_buscador.scss";
@@ -14,7 +13,6 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./template/_header.scss";
 @import "./template/_sidebar.scss";
 @import "./template/_filtros.scss";
-
 @import "./_menu.scss";
 @import "./_swiper.scss";
 @import "./_video.scss";
@@ -27,8 +25,6 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "parrillas/_all.scss";
 @import "template/_alltemplate.scss";
 @import "./newweb.scss";
-
-
 //@import "parrillas/*";
 $primary-color: var(--primary-color);
 $c-primary: var(--c-primary);
@@ -37,13 +33,11 @@ $bg-dark: var(--bg-dark);
 $c-bg-dark: var(--c-bg-dark);
 $bg-light: var(--bg-light);
 $c-bg-light: var(--c-bg-light);
-
 @include typesFluids($headersFluids);
 @include space($breakpoints, $padding-top, $pt);
 @include space($breakpoints, $padding-left, $pl);
 @include space($breakpoints, $padding-bottom, $pb);
 @include space($breakpoints, $padding-right, $pr);
-
 body {
   overflow-x: hidden;
   color: $primary-color;
@@ -80,13 +74,11 @@ ul {
 }
 .masonry {
   display: grid;
-
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   width: 100%;
   align-items: start;
 }
-
 .modal-container {
   display: none;
   visibility: hidden;
@@ -302,7 +294,6 @@ ul {
   left: 16px;
   bottom: 16px;
 }
-
 .form-btn {
   display: flex;
   flex-wrap: wrap;
@@ -384,7 +375,6 @@ ul {
     bottom: 4px;
   }
 }
-
 .img-cover {
   overflow: hidden;
   object-fit: cover;
@@ -516,9 +506,6 @@ ul {
     }
   }
 }
-
-
-
 .stories-list-wrap {
   border-top: var(--line-width) solid $c-primary;
   border-bottom: var(--line-width) solid $c-primary;
@@ -550,9 +537,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-
-
-
 .pdp-container {
   overflow: auto;
   display: inline-flex;
@@ -575,8 +559,6 @@ ul {
     width: 60%;
   }
 }
-
-
 .btn--color {
   width: 16px;
   height: 16px;
@@ -597,8 +579,6 @@ ul {
     }
   }
 }
-
-
 .clamp-2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -617,8 +597,6 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-
 .fixed-bottom {
   position: absolute;
   bottom: 0;
@@ -653,9 +631,6 @@ ul {
     }
   }
 }
-
-
-
 .logo-image {
   pointer-events: none;
   position: relative;
@@ -672,12 +647,8 @@ ul {
   position: absolute;
   mix-blend-mode: hue;
 }
-
-
 .box-text {
   position: absolute;
   bottom: 0px;
 }
-
-
 
