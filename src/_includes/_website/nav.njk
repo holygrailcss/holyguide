@@ -1,86 +1,72 @@
 <nav class="nav-guide text-16-r scrollcustom">
   <div class="menu-lateral sidebar">
-
-
-
-<div class="logo-zone mt-24 mb-32 fluid-6-l">
-  <a href="/">HOLYGUIDE</a>
-  <br>
-  <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
-    <img src="https://img.shields.io/npm/v/holygrail2" alt="npm" data-canonical-src="https://img.shields.io/npm/v/holygrail2.svg" style="max-width:100%;"></a>
-</div>
-
-  
-
-      <a target="_parent" href="/design">
-         <div class="text-16-r  text-l nav-title "> Design </div>
-      </a>
-      <ul class="list-clear text-l ">
-
-        {% for template in collections.design %}
-              {% include 'nav-loop.njk' %}
-            {% endfor %}
-
-
-      </ul>
-
-
-
-
-      <a target="_parent" href="/develop">
-         <div class=" text-l  text-14-r nav-title "> Develop </div>
-      </a>
-      <ul class="list-clear text-l ">
-
-        {% for template in collections.develop  %}
-              {% include 'nav-loop.njk' %}
-            {% endfor %}
-      </ul>
-   
-
-      <a target="_parent" href="/foundations">
-         <div class=" text-l nav-title  "> Foundations </div>
-      </a>
-      <ul class="list-clear text-l ">
-        <div class="body">
-           {% for template in collections.foundations | reverse %}
-              {% include 'nav-loop.njk' %}
-            {% endfor %}
-          </div>
-        </ul>
-
-
-        <ul class="list-clear mb-32">
-          <a target="_parent" href="/components">
-            <div class=" text-l  nav-title "> Componentes </div>
-          </a>
-          <div class="body">
-          {% for template in collections.components  %}
-              {% include 'nav-loop.njk' %}
-            {% endfor %}
-          </div>
-        </ul>
-  
-
-        <ul class="list-clear text-l ">
-
-
-          <li class="mb-8 {% if page_title == 'templates' %} link-line {% endif %}">
-            <a  target="_parent" href="/templates">
-               <div class=" text-l nav-title  "> Templates </div>
-            </a>
-          </li>
-
-
-          {% for template in collections.templates  %}
-              {% include 'nav-loop.njk' %}
-            {% endfor %}
-        </ul>
-
+    <div class="logo-zone mt-24 mb-32 fluid-6-l">
+      <a href="/">HOLYGUIDE</a>
+      <br>
+      <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
+        <img src="https://img.shields.io/npm/v/holygrail2" alt="npm"
+          data-canonical-src="https://img.shields.io/npm/v/holygrail2.svg" style="max-width:100%;"></a>
     </div>
-  </nav>
-  <div class="toggle-menu"></div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  {#
+
+
+
+
+
+
+      <a class="mb-8 text-l  {% if    page_section   == 'design' %} bold {% endif %}  " target="_parent" href="/design">
+
+      <div class="text-16-r  text-l nav-title "> Design </div>
+    </a>
+    <ul class="list-clear text-l ">
+      {% for template in collections.design %}
+      {% include 'nav-loop.njk' %}
+      {% endfor %}
+    </ul>
+    <a target="_parent" href="/develop">
+
+      <a class="mb-8 text-l  {% if    page_section   == 'develop' %} bold {% endif %}  " target="_parent" href="/develop">
+
+      <div class=" text-l  text-14-r nav-title "> Develop </div>
+    </a>
+    <ul class="list-clear text-l ">
+      {% for template in collections.develop %}
+      {% include 'nav-loop.njk' %}
+      {% endfor %}
+    </ul>
+
+      <a class="mb-8 text-l  {% if    page_section   == 'foundations' %} bold {% endif %}  " target="_parent" href="/foundations">
+      <div class=" text-l nav-title  "> Foundations </div>
+    </a>
+    <ul class="list-clear text-l ">
+      <div class="body">
+        {% for template in collections.foundations | reverse %}
+        {% include 'nav-loop.njk' %}
+        {% endfor %}
+      </div>
+    </ul>
+    <ul class="list-clear mb-32">
+
+        <a class="mb-8 text-l  {% if    page_section   == 'components' %} bold {% endif %}  " target="_parent" href="/components">
+        <div class=" text-l  nav-title "> Componentes </div>
+      </a>
+      <div class="body">
+        {% for template in collections.components %}
+        {% include 'nav-loop.njk' %}
+        {% endfor %}
+      </div>
+    </ul>
+    <ul class="list-clear ">
+      <a class="mb-8 text-l  {% if    page_section   == 'templates' %} bold {% endif %}  " target="_parent" href="/templates">
+        <div class=" nav-title  "> Templates </div>
+      </a>
+      {% for template in collections.templates %}
+      {% include 'nav-loop.njk' %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+<div class="toggle-menu"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{#
 <script src="/js/nav-interactions.js"></script>
 <script src="/js/rtl-action-components.js"></script> #}

@@ -10,7 +10,7 @@ $(document).ready(function () {
   initvideo();
 
   $(".resize-code").on("click", function (e) {
-      $(this).closest('.code-container').toggleClass("opencode-button");
+      $(this).closest('.resize-container').toggleClass("opencode-button");
       e.preventDefault();
   });
 

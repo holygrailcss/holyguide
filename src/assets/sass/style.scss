@@ -224,12 +224,13 @@ ul {
 }
 .template-box {
   border: 1px solid #eaeaea;
-  padding: 16px;
+  padding: 8px;
   transition: all 0.5s;
   .template-box-icon {
-    width: 50px;
+ margin-right: 8px;
+    width: 30px;
     float: left;
-    margin-right: 16px;
+
   }
   &:hover {
     box-shadow: 0 6px 16px -8px #00000014, 0 9px 28px #0000000d,
