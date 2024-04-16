@@ -1,33 +1,35 @@
 ---
 layout: base-clean.njk
 ---
-<div class="body-fake">
-    <div class="container-total pr-body pl-body">
-        <div class="row  ">
-            <div class="col-xs-4 text-left is-flex content-start pt-16">
-                <div class="pr-40">
-                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="0.5" x2="14" y2="0.5" stroke="white"></line>
-                        <line y1="9.5" x2="14" y2="9.5" stroke="white"></line>
-                    </svg>
+<div class="fake-body">
+    <div class="fake-header">
+        <div class="container-total pr-body pl-body ">
+            <div class="row  ">
+                <div class="col-xs-4 text-left is-flex content-start pt-16">
+                    <div class="pr-40">
+                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="0.5" x2="14" y2="0.5" stroke="black"></line>
+                            <line y1="9.5" x2="14" y2="9.5" stroke="black"></line>
+                        </svg>
+                    </div>
+                    <div class="tabs sm:hidden mt-2">
+                        <ul class="  list-clear  ">
+                            <li> <a class=" text-l" href="/"> WOMEN </a> </li>
+                            <li class="is-active  text-l"><a class="text-l" href="/parrillas2"> MEN </a> </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="tabs sm:hidden">
-                    <ul class="  list-clear  has-light ">
-                        <li> <a class=" text-m" href="/"> WOMEN </a> </li>
-                        <li class="is-active  text-m"><a href="/parrillas2"> MEN </a> </li>
+                <div class="col-xs-4 text-center">
+                    <div class="search-bar  sm:hidden mt-16 text-m"> SEARCH</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <ul class="  list-clear   text-right is-flex  content-end  pt-16">
+                        <li class="pr-40"> <a class="" href="/">SIGN IN </a>
+                        </li>
+                        <li> <a class=" " href="/parrillas2"> BAG </a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-            <div class="col-xs-4 text-center">
-                <div class="search-bar  sm:hidden mt-16 text-m"> SEARCH</div>
-            </div>
-            <div class="col-xs-4 text-center">
-                <ul class="  list-clear   text-right is-flex  content-end  pt-16">
-                    <li class="pr-40"> <a class="" href="/">SIGN IN </a>
-                    </li>
-                    <li> <a class=" " href="/parrillas2"> BAG </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -88,7 +90,7 @@ layout: base-clean.njk
                     </ul>
                 </li>
             </ul>
-            <ul class="mn-list list-check ttu text-l has-light bg-dark">
+            <ul class="mn-list list-check ttu text-l bg-dark">
                 <li>
                     <a class="mn-list-item" href=""> LABEL</a>
                     <hr class="border-b2 mb-16">
@@ -175,8 +177,8 @@ layout: base-clean.njk
             <div class="col-xs-12 col-md-9 is-flex content-start">
                 <div class="mtr-16-32 mbr-8-24 pr-body pl-body w-100">
                     <div class='tabs ttu text-l pt-16 pb-16'>
-                        <ul>
-                            <li class='is-active '><a>Pictures</a></li>
+                        <ul class="tab-first">
+                            <li class='is-active '><a class="pl-0">Pictures</a></li>
                             <li><a class="">Music</a></li>
                             <li><a class="">Videos</a></li>
                             <li><a class="">Documents</a></li>
@@ -197,7 +199,7 @@ layout: base-clean.njk
                         <div class="pr-body pl-body">
                             <div class="display-filters">
                                 <div class="is-flex content-end mtr-16-32 mbr-16-32">
-                                    <div class="category-tool-filter mx-16">
+                                    <div class="category-tool-filter mx-16 align-center mt-2">
                                         <div class="text-l leading-1 ttu text-right is-flex blend-link text-nowrap">
                                             FILTROS </div>
                                     </div>
@@ -232,7 +234,7 @@ layout: base-clean.njk
        
                                 <div  class="min-scrollcustom-x">
                                     <div  class="is-flex tabs tabs-resetfirst pt-16 pb-16">
-                                        <ul  class=" pbr-8-24 ptr-16-32">
+                                        <ul  class=" pbr-8-24 ptr-16-32 tab-first">
                                             <li class="is-active" >
                                                 <button
                                                      type="button"
@@ -267,9 +269,9 @@ layout: base-clean.njk
                 </div>
                 <div  class="col-xs-12 filter-results sm:order-last"></div>
                 
-                <div  class="col-xs-12 col-md-4 mtr-16-32 mbr-16-32">
-                    <div  class="pr-body pl-body is-flex clean-panel">
-                        <div  class="btn-tertiary text-l ttu blend-link disabled">
+                <div  class="col-xs-12 col-md-4 mtr-16-32 mbr-16-32 align-middle content-end">
+                    <div  class="pr-body pl-body is-flex clean-panel is-flex content-end  ">
+                        <div  class="btn-tertiary text-l ttu blend-link disabled pr-16">
                             BORRAR FILTROS </div>
                         <div  class="text-m ttu link-raw">
                             <div 
@@ -308,7 +310,7 @@ layout: base-clean.njk
         </div>
     </div>
 </div>
-<div class="footer has-light bg-black pt-32">
+<div class="footer bg-black pt-32 has-light">
     <div class="container-body">
         <div class="row">
             <div class="col-xs-12 col-md-4 mdmax:mb-42 ">
