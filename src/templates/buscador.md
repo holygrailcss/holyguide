@@ -2,6 +2,7 @@
 layout: _paginas/templates/buscador.njk
 permalink: /buscador/
 page_section: templates
+page_separator: Global
 titulo: buscador
 descripcion: buscador
 image: /assets/static/images/buscador.jpg

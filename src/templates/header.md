@@ -2,6 +2,7 @@
 layout: _paginas/templates/header.njk
 permalink: /header/
 page_section: templates
+page_separator: Global
 titulo: header
 descripcion: header
 image: /assets/static/images/header.jpg

@@ -2,6 +2,7 @@
 layout: _paginas/templates/fichasticky.njk
 permalink: /fichasticky/
 page_section: templates
+page_separator: Global
 titulo: fichasticky
 descripcion: fichasticky
 image: /assets/static/images/fichasticky.jpg

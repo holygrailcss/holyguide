@@ -2,6 +2,7 @@
 layout: _paginas/templates/_footer.njk
 permalink: /footer/
 page_section: templates
+page_separator: Global
 
 titulo: Footer
 descripcion: Plantillas para el footer

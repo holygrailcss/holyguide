@@ -2,6 +2,7 @@
 layout: _paginas/templates/_product.njk
 permalink: /product/
 page_section: templates
+page_separator: Global
 
 titulo: Product
 descripcion: Plantilla para el Product view

@@ -27731,3 +27731,7 @@ ul {
   cursor: pointer;
   text-decoration: none;
 }
+
+.full-grid {
+  grid-column: 1/-1;
+}

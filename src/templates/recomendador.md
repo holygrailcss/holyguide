@@ -2,6 +2,7 @@
 layout: _paginas/templates/recomendador.njk
 permalink: /recomendador/
 page_section: templates
+page_separator: Global
 titulo: recomendador
 descripcion: recomendador
 image: /assets/static/images/recomendador.jpg

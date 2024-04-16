@@ -2,6 +2,8 @@
 layout: _paginas/templates/runway.njk
 permalink: /runway/
 page_section: templates
+page_separator: Global
+
 titulo: runway
 descripcion: runway
 image: /assets/static/images/runway.jpg

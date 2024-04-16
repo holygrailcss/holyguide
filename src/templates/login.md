@@ -2,6 +2,7 @@
 layout: _paginas/templates/login.njk
 permalink: /login/
 page_section: templates
+page_separator: Global
 titulo: login
 descripcion: login
 image: /assets/static/images/login.jpg

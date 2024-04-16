@@ -13,9 +13,45 @@ layout: base.njk
       <div class="main-content innermarkdown">
         {{ content | safe }}
         <div class="list-grid pt-24">
+
+
+
+
+
+          <div class="full-grid text-16-b">
+            Global
+          </div>
           {% for template in collections.templates | reverse %}
-            {% include 'template-loop.njk' %}
-          {% endfor %}
+
+
+                {% if template.data.page_separator == 'Global' %}
+                  <!-- Sección A -->
+
+                  {% include 'template-loop.njk' %}
+        
+                  {% endif %}
+        {% endfor %}
+
+
+
+        <div class="full-grid text-16-b">
+  Feel
+</div>
+
+        {% for template in collections.templates | reverse %}
+
+
+        {% if template.data.page_separator == 'Feel' %}
+          <!-- Sección A -->
+
+          {% include 'template-loop.njk' %}
+
+        {% endif %}
+{% endfor %}
+
+
+
+          
         </div>
       </div>
     </div>

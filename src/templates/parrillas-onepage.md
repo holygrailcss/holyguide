@@ -2,6 +2,7 @@
 layout: _paginas/templates/_parrillas/_parrillas-onepage.njk
 permalink: /parrillas-onepage/
 page_section: templates
+page_separator: Global
 
 titulo: Parrillas onepage
 descripcion: Todas las parrillas en una página

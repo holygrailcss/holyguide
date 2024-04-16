@@ -2,6 +2,7 @@
 layout: _paginas/templates/_parrillas/_parrillas-index.njk
 permalink: /parrillas-index/
 page_section: templates
+page_separator: Global
 
 titulo: Parrillas Index
 descripcion: Parrillas colección

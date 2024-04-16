@@ -2,6 +2,7 @@
 layout: _paginas/templates/grid-stories.njk
 permalink: /grid-stories/
 page_section: templates
+page_separator: Global
 titulo: grid-stories
 descripcion: grid-stories
 image: /assets/static/images/grid-stories.jpg

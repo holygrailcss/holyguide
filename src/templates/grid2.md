@@ -2,6 +2,7 @@
 layout: _paginas/templates/grid2.njk
 permalink: /grid2/
 page_section: templates
+page_separator: Global
 titulo: grid2
 descripcion: grid2
 image: /assets/static/images/grid2.jpg

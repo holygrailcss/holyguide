@@ -2,6 +2,7 @@
 layout: _paginas/templates/menulateral.njk
 permalink: /menulateral/
 page_section: templates
+page_separator: Global
 titulo: menulateral
 descripcion: menulateral
 image: /assets/static/images/menulateral.jpg
