@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   $(".resize-rules").on("click", function () {
       console.log("esto no funciona");
-      $(this).closest('.rules-container').toggleClass("openRules");
+      $(this).closest('html').toggleClass("openRules");
   });
 
   $(".btn-anim").click(function () {
@@ -110,6 +110,25 @@ $(document).ready(function () {
   $(".to-top").on("click", function () {
       $(window).scrollTop(0);
   });
+
+
+
+  $('.accordion-toggle').click(function(e) {
+    e.preventDefault();
+
+    var $this = $(this);
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        $this.parent().parent().find('li .accordion-content').removeClass('show');
+        $this.parent().parent().find('li .accordion-content').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
+});
+
+
 });
 
 function initvideo() {

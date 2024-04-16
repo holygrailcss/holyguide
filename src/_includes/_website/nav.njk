@@ -13,55 +13,88 @@
 
 
 
-      <a class="mb-8 text-l  {% if    page_section   == 'design' %} bold {% endif %}  " target="_parent" href="/design">
+      <a class="mb-8 text-l  accordion-toggle {% if    page_section   == 'design' %} bold {% endif %}  " target="_parent" href="/design">
 
       <div class="text-16-r  text-l nav-title "> Design </div>
     </a>
-    <ul class="list-clear text-l ">
+       <ul class="list-clear text-l accordion-content {% if    page_section   == 'design' %} show bold {% endif %}   "   style= "{% if    page_section   == 'design' %} display:block {% endif %} "  >
       {% for template in collections.design %}
       {% include 'nav-loop.njk' %}
       {% endfor %}
     </ul>
     <a target="_parent" href="/develop">
 
-      <a class="mb-8 text-l  {% if    page_section   == 'develop' %} bold {% endif %}  " target="_parent" href="/develop">
+      <a  class="mb-8 text-l  accordion-toggle {% if    page_section   == 'develop' %} bold {% endif %}  " target="_parent" href="/develop">
 
       <div class=" text-l  text-14-r nav-title "> Develop </div>
     </a>
-    <ul class="list-clear text-l ">
+    <ul class="list-clear text-l accordion-content {% if    page_section   == 'develop' %} show bold {% endif %}   "   style= "{% if    page_section   == 'develop' %} display:block {% endif %} "  >
+     
+     
+     
+
+     
       {% for template in collections.develop %}
       {% include 'nav-loop.njk' %}
       {% endfor %}
     </ul>
 
-      <a class="mb-8 text-l  {% if    page_section   == 'foundations' %} bold {% endif %}  " target="_parent" href="/foundations">
+      <a class="mb-8 text-l  accordion-toggle {% if    page_section   == 'foundations' %} bold {% endif %}  " target="_parent" href="/foundations">
       <div class=" text-l nav-title  "> Foundations </div>
     </a>
-    <ul class="list-clear text-l ">
-      <div class="body">
+    <ul class="list-clear text-l accordion-content {% if    page_section   == 'foundations' %} show bold {% endif %}   "   style= "{% if    page_section   == 'foundations' %} display:block {% endif %} " >
+     
+     
+
+      <li class="mb-8">    
+        <a class="mb-8 text-l " target="_parent" href="/foundations">
+          <div class=" "> Get Started </div>
+        </a>
+      </li>
+
         {% for template in collections.foundations | reverse %}
         {% include 'nav-loop.njk' %}
         {% endfor %}
-      </div>
+    
     </ul>
     <ul class="list-clear mb-32">
 
-        <a class="mb-8 text-l  {% if    page_section   == 'components' %} bold {% endif %}  " target="_parent" href="/components">
+        <a class="mb-8 text-l  accordion-toggle {% if    page_section   == 'components' %} bold {% endif %}  " target="_parent" href="/components">
         <div class=" text-l  nav-title "> Componentes </div>
       </a>
-      <div class="body">
-        {% for template in collections.components %}
+
+         <ul class="list-clear text-l accordion-content {% if    page_section   == 'components' %} show bold {% endif %}   "  style= "{% if    page_section   == 'components' %} display:block {% endif %} " >
+      
+       
+       
+      <li class="mb-8">    
+        <a class="mb-8 text-l " target="_parent" href="/components">
+          <div class=" "> Get Started </div>
+        </a>
+      </li>
+       
+          {% for template in collections.components %}
         {% include 'nav-loop.njk' %}
         {% endfor %}
-      </div>
+      </ul>
+
+
     </ul>
     <ul class="list-clear ">
-      <a class="mb-8 text-l  {% if    page_section   == 'templates' %} bold {% endif %}  " target="_parent" href="/templates">
+      <a class="mb-8 text-l  accordion-toggle {% if    page_section   == 'templates' %} bold {% endif %}  " target="_parent" href="/templates">
         <div class=" nav-title  "> Templates </div>
       </a>
-      {% for template in collections.templates %}
-      {% include 'nav-loop.njk' %}
-      {% endfor %}
+
+      <ul class="list-clear text-l accordion-content {% if    page_section   == 'templates' %} show bold {% endif %}   "  style= "{% if    page_section   == 'templates' %} display:block {% endif %} "    >
+        <li class="mb-8">    
+        <a class="mb-8 text-l " target="_parent" href="/templates">
+          <div class=" "> Get Started </div>
+        </a>
+      </li>
+        {% for template in collections.templates %}
+        {% include 'nav-loop.njk' %}
+        {% endfor %}
+      </ul>
     </ul>
   </div>
 </nav>

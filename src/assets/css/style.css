@@ -8813,6 +8813,7 @@ fieldset[disabled] .form-control {
   color: #000000;
   max-width: 100%;
   width: 100%;
+  background-color: transparent;
 }
 .input.validation-error,
 .textarea.validation-error,
@@ -9398,22 +9399,27 @@ input::input-placeholder {
   color: #ffffff;
 }
 .has-light .form-input-label > label,
+.has-light .form-input-label-2 > label,
 .has-light .form-input-prefix > label {
   color: #ffffff;
 }
 .has-light .form-input-label input::input-placeholder,
+.has-light .form-input-label-2 input::input-placeholder,
 .has-light .form-input-prefix input::input-placeholder {
   color: transparent;
 }
 .has-light .form-input-label input:input-placeholder,
+.has-light .form-input-label-2 input:input-placeholder,
 .has-light .form-input-prefix input:input-placeholder {
   color: transparent;
 }
 .has-light .form-input-label input::placeholder,
+.has-light .form-input-label-2 input::placeholder,
 .has-light .form-input-prefix input::placeholder {
   color: transparent;
 }
 .has-light .form-input-label input:not(:placeholder-shown) ~ label,
+.has-light .form-input-label-2 input:not(:placeholder-shown) ~ label,
 .has-light .form-input-prefix input:not(:placeholder-shown) ~ label {
   color: #ffffff;
 }
@@ -9426,6 +9432,15 @@ input::input-placeholder {
 .has-light .form-input-label select:-webkit-autofill,
 .has-light .form-input-label select:-webkit-autofill:hover,
 .has-light .form-input-label select:-webkit-autofill:focus,
+.has-light .form-input-label-2 input:-webkit-autofill,
+.has-light .form-input-label-2 input:-webkit-autofill:hover,
+.has-light .form-input-label-2 input:-webkit-autofill:focus,
+.has-light .form-input-label-2 textarea:-webkit-autofill,
+.has-light .form-input-label-2 textarea:-webkit-autofill:hover,
+.has-light .form-input-label-2 textarea:-webkit-autofill:focus,
+.has-light .form-input-label-2 select:-webkit-autofill,
+.has-light .form-input-label-2 select:-webkit-autofill:hover,
+.has-light .form-input-label-2 select:-webkit-autofill:focus,
 .has-light .form-input-prefix input:-webkit-autofill,
 .has-light .form-input-prefix input:-webkit-autofill:hover,
 .has-light .form-input-prefix input:-webkit-autofill:focus,
@@ -9442,6 +9457,9 @@ input::input-placeholder {
 .has-light .form-input-label .input,
 .has-light .form-input-label .textarea,
 .has-light .form-input-label .select select,
+.has-light .form-input-label-2 .input,
+.has-light .form-input-label-2 .textarea,
+.has-light .form-input-label-2 .select select,
 .has-light .form-input-prefix .input,
 .has-light .form-input-prefix .textarea,
 .has-light .form-input-prefix .select select {
@@ -10076,6 +10094,68 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   border-radius: 0;
   background-color: #000000;
   transition: all 0.2s ease;
+}
+
+/* functional */
+.sidebar-container {
+  z-index: 2000;
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  max-width: 425px;
+  top: 0px;
+  right: 0;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform: translateX(435px);
+}
+.sidebar-container.custom-sidebar {
+  padding: 0 20px 40px;
+}
+@media (min-width: 768px) {
+  .sidebar-container.custom-sidebar {
+    padding: 0 20px 40px;
+  }
+}
+.sidebar-container.close-mini-wish {
+  transform: translateX(100vw);
+}
+[dir=rtl] .sidebar-container.close-mini-wish {
+  transform: translateX(-100vw);
+}
+
+.sidebar-close {
+  padding: 15px 16px;
+  position: absolute;
+  right: 0;
+  z-index: 1999;
+  cursor: pointer;
+}
+.sidebar-close:hover {
+  opacity: 0.6;
+}
+
+.sidebar-close.sidebar-custom-close {
+  padding: 24px 0px 56px 0px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar-out {
+  z-index: 1999;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.15;
+}
+
+.body-sidebar-open .sidebar-container {
+  transform: translateX(0);
 }
 
 /* functional */
@@ -14455,7 +14535,6 @@ html {
 
 .guide ul li {
   font-size: 12px;
-  line-height: 1.4;
 }
 .guide hr {
   margin-top: 20px;
@@ -14697,7 +14776,6 @@ html {
   background-color: #E4E4E4;
   transition: 0.2s ease all;
   flex-direction: column;
-  justify-content: center;
 }
 
 .code-view.bg-dark {
@@ -14769,10 +14847,22 @@ html {
 #loopicons4,
 #loopicons5,
 #loopicons6 {
-  display: flex;
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+}
+@media (min-width: 768px) {
+  #loopicons,
+  #loopicons2,
+  #loopicons3,
+  #loopicons4,
+  #loopicons5,
+  #loopicons6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 #loopicons article,
 #loopicons2 article,
@@ -14780,14 +14870,13 @@ html {
 #loopicons4 article,
 #loopicons5 article,
 #loopicons6 article {
-  width: calc(50% - 8px);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin: 4px;
   padding: 8px;
   border-radius: 4px;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 #loopicons article span,
 #loopicons2 article span,
@@ -14796,6 +14885,14 @@ html {
 #loopicons5 article span,
 #loopicons6 article span {
   text-align: center;
+}
+#loopicons article div,
+#loopicons2 article div,
+#loopicons3 article div,
+#loopicons4 article div,
+#loopicons5 article div,
+#loopicons6 article div {
+  margin-left: 8px;
 }
 #loopicons article .myspan,
 #loopicons2 article .myspan,
@@ -14815,16 +14912,6 @@ html {
 #loopicons6 article svg {
   max-width: 100%;
   height: 100%;
-}
-@media (min-width: 768px) {
-  #loopicons article,
-  #loopicons2 article,
-  #loopicons3 article,
-  #loopicons4 article,
-  #loopicons5 article,
-  #loopicons6 article {
-    width: calc(10% - 8px);
-  }
 }
 
 .has-error svg-icon path {
@@ -14868,10 +14955,6 @@ html {
   align-items: center;
   flex-direction: column;
 }
-.tabguide-content svg-icon {
-  margin-bottom: 8px;
-}
-
 .btncode {
   position: absolute;
   top: 0;
@@ -27608,4 +27691,14 @@ ul {
 .box-text {
   position: absolute;
   bottom: 0px;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-toggle {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
 }

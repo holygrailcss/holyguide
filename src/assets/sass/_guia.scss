@@ -10,7 +10,7 @@ html {
   ul {
     li {
       font-size: 12px;
-      line-height: 1.4;
+
     }
   }
   hr {
@@ -66,12 +66,10 @@ html {
     margin-top: 24px;
     margin-bottom: 24px;
   }
-
-.h8{
-  font-size: 24px;
-  @include font-bold;
-}
-
+  .h8 {
+    font-size: 24px;
+    @include font-bold;
+  }
 }
 .main-content {
   margin-left: auto;
@@ -199,7 +197,7 @@ html {
   background-color: #E4E4E4;
   transition: 0.2s ease all;
   flex-direction: column;
-  justify-content: center;
+
 }
 .code-view.bg-dark {
   background-color: #000;
@@ -270,21 +268,28 @@ html {
 #loopicons4,
 #loopicons5,
 #loopicons6 {
-  display: flex;
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8px;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
   article {
-    width: calc(50% - 8px);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     margin: 4px;
     padding: 8px;
     border-radius: 4px;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
     span {
       text-align: center;
+    }
+    div {
+      margin-left: 8px;
     }
     .myspan {
       font-size: 12px;
@@ -294,11 +299,6 @@ html {
     svg {
       max-width: 100%;
       height: 100%;
-    }
-  }
-  @media (min-width: 768px) {
-    article {
-      width: calc(10% - 8px);
     }
   }
 }
@@ -355,9 +355,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  svg-icon {
-    margin-bottom: 8px;
-  }
+  svg-icon {}
 }
 .btncode {
   position: absolute;
@@ -712,16 +710,11 @@ code {
   color: black;
   /* Este estilo es solo un ejemplo */
 }
-
-
-
 .guide {
-
-  table{
+  table {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   table thead {
     text-transform: uppercase;
     background-color: #fff;
