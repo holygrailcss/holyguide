@@ -115,3 +115,21 @@ Helpers que ayudan a agilizar el proceso de maquetación.
 | .sm:min-text-center | Centrado desde sm - 1     |
 | .md:min-text-center | Centrado desde md - 1     |
 | .lg:min-text-center | Centrado desde lg - 1     |
+
+
+
+
+### Espaciado
+
+| Helper              | Descripción               |
+| ------------------- | ------------------------- |
+| .xs:text-center     | Centrado hasta max sm - 1 |
+| .sm:text-center     | Centrado hasta sm max - 1 |
+| .md:text-center     | Centrado hasta md max - 1 |
+| .lg:text-center     | Centrado hasta lg max - 1 |
+| .sm:min-text-center | Centrado desde sm - 1     |
+| .md:min-text-center | Centrado desde md - 1     |
+| .lg:min-text-center | Centrado desde lg - 1     |
+
+
+

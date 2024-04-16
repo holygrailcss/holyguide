@@ -20233,7 +20233,6 @@ html {
 
 .code-zone {
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
   transition: all ease 0.2s;
   cursor: pointer;
 }
@@ -20301,7 +20300,7 @@ code {
 }
 .guide pre[class*=language-] {
   padding: 16px;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 .guide :not(pre) > code[class*=language-],

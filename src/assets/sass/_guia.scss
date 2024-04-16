@@ -592,9 +592,11 @@ html {
 }
 .code-zone {
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
+
   transition: all ease 0.2s;
   cursor: pointer;
+
+
   .code-title {
     transition: all ease 0.2s;
     height: 30px;
@@ -658,7 +660,7 @@ code {
   }
   pre[class*=language-] {
     padding: 16px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
   :not(pre)>code[class*=language-],

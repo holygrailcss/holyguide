@@ -24,7 +24,6 @@ url3: /enlace3
 ---
 
 ## Empezando
-Unica fuente de la verdad
 
 ##### Nuestro objetivo es convertir una de las empresas minoristas más grandes del mundo en una organización digital de primer orden. Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
 
@@ -37,19 +36,19 @@ Si bien algunas de las herramientas de desarrollo, como SASS , son obligatorias 
 - [Mindmaps para hacer ideas mentales](https://www.mindmaps.app/)
 - [Creador de snippets](https://snippet-generator.app/)
 - [Gráficos en ascii](https://asciiflow.com/#/)
-- [SWIPER slider](https://swiperjs.com/)
+- [API SWIPER slider](https://swiperjs.com/)
 
 ### Boilerplate
 
-Aprende a maquetar desde cero con el sistema holygrail
+Aprende a maquetar desde cero con el sistema holygrail. Para ello hemos preparado un Playground para que practiques en local. Tambien se puede utilizar como Boilerplate.
 
-- [Codesandbox](https://codesandbox.io/s/origen-holygrail-ktq12)
-  
-Crea un fork para crear componente o una maqueta con holygrail en la nube.
-Github
-Crea un entorno de desarrollo desde cero
-Boilerplate
-Crea un proyecto completo con parcel y gulp en tu local.
+Descarga tu boilerplate [Codesandbox](https://codesandbox.io/s/origen-holygrail-ktq12)
+
+- Crea un fork para crear componente o una maqueta con holygrail en la nube.
+- Github
+- Crea un entorno de desarrollo desde cero
+- Boilerplate
+- Crea un proyecto completo con parcel y gulp en tu local.
 
 ### Debug
 
@@ -72,7 +71,7 @@ Antes de nada, vamos a elegir que herramientas vamos a necesitar para poder debu
 ```
 
 ## Inicialización
-Configuración del archivo setup.scss
+## Configuración 
 
 ### Font family
  Configuración de fuentes y grosores 
@@ -98,7 +97,8 @@ $font-family-form-placeholder: "dutti-daily-regular",Helvetica,arial,sans-serif;
 $font-family-form: "dutti-daily-regular",Helvetica,arial,sans-serif;
 ```
 ### Varios Elementos
-Configuración de elementos varios
+Configuración de diversos elementos que se utilizan a lo largo del proyecto:
+
 ```scss
 $totalCols:12px;
 $padding-global:8px;
@@ -111,7 +111,8 @@ $btn-radius:8px;
 $c-primary:#000000;
 ```
 ### Containers
-Configuración de containers
+Configuración de contenedores con dimensiones específicas:
+
 ```scss
 $container-full:800px;
 $container-fluid:full;
@@ -128,6 +129,8 @@ $container-10:432px;
 $container-11:1080px;
 ```
 ### Configuración de breakpoints
+Establecimiento de puntos de ruptura para diseño responsive:
+
 
 ```scss
 $break-xs:1px;
@@ -138,6 +141,9 @@ $break-xl:1500px;
 ```
 
 ### Configuración de alturas
+Con estas alturas controlaremos los tamaños mínimos de alturas
+Variables como $h-100 y $height-100, ambas al 100%, definen alturas relativas al contenedor padre.
+$height-xs a $height-xl y variables de $hero- especifican alturas fijas para componentes como cabeceras de hero, adaptadas a diferentes tamaños de pantalla.
 ```scss
 $h-100:100%;
 $height-100:100%;
@@ -154,6 +160,8 @@ $hero-medium-sm:400px  //falta implementar;
 $hero-mini-sm: 300px   //falta implementar;
 ```
 ### Configuración de modales
+
+
 ```scss
 $modalx-xs:295px;
 $modalx-sm:445px;
