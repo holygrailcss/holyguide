@@ -20231,6 +20231,10 @@ html {
   bottom: -160px;
 }
 
+.sass-zone .code-zone {
+  height: 30px;
+}
+
 .code-zone {
   overflow: hidden;
   transition: all ease 0.2s;
@@ -25625,44 +25629,44 @@ code {
   padding-top: 133.25%;
 }
 
-.ncc_0 .n4f-wrap {
+.ncc_0 .ncc-wrap {
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  .ncc_0 .n4f-wrap {
+  .ncc_0 .ncc-wrap {
     margin-top: 0;
   }
 }
 @media (min-width: 1280px) {
-  .ncc_0 .n4f-wrap {
+  .ncc_0 .ncc-wrap {
     margin-top: 0;
   }
 }
-.ncc_1 .n4f-wrap {
+.ncc_1 .ncc-wrap {
   margin-bottom: 8px;
 }
 @media (min-width: 768px) {
-  .ncc_1 .n4f-wrap {
+  .ncc_1 .ncc-wrap {
     margin-bottom: 12px;
   }
 }
 @media (min-width: 1280px) {
-  .ncc_1 .n4f-wrap {
+  .ncc_1 .ncc-wrap {
     margin-bottom: 24px;
   }
 }
-.ncc_2 .n4f-wrap {
+.ncc_2 .ncc-wrap {
   margin-top: 8px;
   margin-bottom: 8px;
 }
 @media (min-width: 768px) {
-  .ncc_2 .n4f-wrap {
+  .ncc_2 .ncc-wrap {
     margin-top: 12px;
     margin-bottom: 12px;
   }
 }
 @media (min-width: 1280px) {
-  .ncc_2 .n4f-wrap {
+  .ncc_2 .ncc-wrap {
     margin-top: 24px;
     margin-bottom: 24px;
   }

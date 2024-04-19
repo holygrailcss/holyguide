@@ -1,5 +1,5 @@
 ---
-layout: /_tokens/_templates/parrillas/n3c.njk
+layout: /_tokens/_templates/parrillas/template-n3c.njk
 permalink: /n3c/
 page_section: templates
 

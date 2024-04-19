@@ -1,12 +1,12 @@
 ---
-layout: /_tokens/_templates/parrillas/nt2.njk
-permalink: /nt2/
+layout: /_tokens/_templates/parrillas/template-n2d.njk
+permalink: /n2d/
 page_section: templates
 
-titulo: nt2
+titulo: n2d
 descripcion: Es un template de parrilla studio
 
-image: /assets/static/nt2.jpg
+image: /assets/static/n2d.jpg
 
 tags: ["page"]
 imageAlt: Contacta

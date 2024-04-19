@@ -1,12 +1,12 @@
 ---
-layout: /_tokens/_templates/parrillas/n2c.njk
-permalink: /n2c/
+layout: /_tokens/_templates/parrillas/template-n2b.njk
+permalink: /n2b/
 page_section: templates
 
-titulo: n2c
+titulo: n2b
 descripcion: Es un template de parrilla studio
 
-image: /assets/static/n2c.jpg
+image: /assets/static/n2b.jpg
 
 tags: ["page"]
 imageAlt: Contacta

@@ -12,18 +12,14 @@ layout: base.njk
         <h3 id="h3">ANGULAR  COMPONENT</h3>
       </div>
       <div class="col-xs-12">
-        <div class="title-s c-dark-grey mb-24">
+        <div class=" c-dark-grey mb-24">
           En el proyecto contamos con un componente que crea iconos basados en svg
           llamado <b><i>svg-icon</i></b>.
         </div>
         <div class="text-l  mb-32">
           Es importante asegurarse que tenemos importado el modulo de svg en el componente </b>.
         </div>
-        <pre>
-        <code class="language-js">
-import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
-        </code>
-       </pre>
+        <pre> <code class="language-js">import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module'; </code> </pre>
       </div>
     </div>
   </section>
@@ -91,9 +87,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
               alt="" />
           </div>
-          <pre>
-                    <code class="language-markup">{{ "<svg-icon src='alert'></svg-icon>" | escape }}</code>
-                </pre>
+          <pre> <code class="language-markup">{{ "<svg-icon src='alert'></svg-icon>" | escape }}</code> </pre>
         </div>
         <h3 class="mb-16">Variante de color</h3>
         <p class="text-l mb-16">
@@ -112,11 +106,7 @@ import { UiSvgIconModule } from '@shared/ui/svg-icon/svg-icon.module';
               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iI0I0MDAxNiIvPgo8L3N2Zz4="
               alt="" />
           </div>
-          <pre>
-                  <code class="language-markup">{{ "<svg-icon src='alert' class='ico-white'></svg-icon>
-<svg-icon src='alert' class='ico-success'></svg-icon>
-<svg-icon src='alert' class='ico-error'></svg-icon>" | escape }}</code>
-                </pre>
+          <pre> <code class="language-markup">{{ "<svg-icon src='alert' class='ico-white'></svg-icon> <svg-icon src='alert' class='ico-success'></svg-icon> <svg-icon src='alert' class='ico-error'></svg-icon>" | escape }}</code> </pre>
         </div>
       </div>
     </div>

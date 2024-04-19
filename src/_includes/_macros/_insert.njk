@@ -2136,6 +2136,9 @@
   </div>
 </div>
 {% endmacro %}
+
+
+
 {% macro sass(name = '', description = '') %}
 
 
@@ -2150,6 +2153,30 @@
   <pre><code class=" language-css">{{standardcode}}</code></pre>
 </div>
 {% endmacro %}
+
+
+
+
+{% macro sass2(name = '', description = '') %}
+
+
+
+{% set standardcode %}{% include 'src/assets/sass/parrillas/_'+ name +'.scss' %}{% endset %}
+<div class="code-zone">
+  <div class="code-title" onclick="cerrarDiv(this)">{{ name }}
+    <div class="code-title-description">
+      {{description}}
+    </div>
+  </div>
+  <pre><code class=" language-css">{{standardcode}}</code></pre>
+</div>
+{% endmacro %}
+
+
+
+
+
+
 {% macro sassMixin() %}
 {% set standardcode %}{% include 'src/assets/sass/abstract/_gridNEW.scss' %}{% endset %}
 <div class="code-zone resize-large">

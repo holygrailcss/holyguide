@@ -1,7 +1,7 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .ncc {
-    @include sp-wraps('.n4f');
+    @include sp-wraps('.ncc');
 }
 .ncc-container {
     display: grid;
