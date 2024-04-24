@@ -11,7 +11,9 @@ image: /assets/static/components/helpers.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
 Tipos de containers y anchos máximos
-### Containers
+
+**Tenemos que unificar tamaños centrar con mx-auto los elementos centrados duplicados** 
+### Variables de containers
 | Clases           | Description ✅    |
 | ---------------- | ---------------- |
 | $container:      | 800px   |
