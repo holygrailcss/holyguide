@@ -1,5 +1,5 @@
 {% macro template(ruta = '', component = '', size = '', componentfigma = "", descripcion = '') %}
-<section class=" ">
+<section >
   <div class="resize-container">
     <div class="resize-bar title-m">
       <div class="resize-name">
@@ -80,44 +80,37 @@
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
-
-
-
-
 {% macro list(listClass = '', explicacion = '') %}
 <h3 class="my-16 title-l">{{ listClass }}</h3>
 <p class="title-m">{{ explicacion }}</p>
-
-
-
 {% if listClass == 'list-breadcrumb' %}
-
 <ul class="{{ listClass  }} p-0">
   <li>
     <a href="">{{ listClass }}</a>
   </li>
-  <li class="list-breadcrumb-divider"><span>   
-
-    <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>  
-
-      </span></li>
+  <li class="list-breadcrumb-divider"><span>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg>
+    </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
-  <li class="list-breadcrumb-divider"><span>       <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>        </span></li>
+  <li class="list-breadcrumb-divider"><span> <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg> </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
-  <li class="list-breadcrumb-divider"><span>       <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>        </span></li>
+  <li class="list-breadcrumb-divider"><span> <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg> </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
@@ -128,78 +121,72 @@
     <a href="">{{ listClass }}</a>
   </li>
   <li class="list-breadcrumb-divider"><span>
-    <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>
-  </span></li>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg>
+    </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
   <li class="list-breadcrumb-divider"><span>
-    <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>
-  </span></li>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg>
+    </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
   <li class="list-breadcrumb-divider"><span>
-    <svg width="16" height="16" viewBox="0 0 16 16">
-    <g stroke-width="1" fill="none" stroke="#212121" >
-      <circle cx="8" cy="8" r="7.5"></circle></g>
-    </svg>
-  </span></li>
+      <svg width="16" height="16" viewBox="0 0 16 16">
+        <g stroke-width="1" fill="none" stroke="#212121">
+          <circle cx="8" cy="8" r="7.5"></circle>
+        </g>
+      </svg>
+    </span></li>
   <li>
     <a href="">{{ listClass }}</a>
   </li>
 </ul>
 {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
-
 {% else%}
-
 <ul>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
 </ul>
 {% set standardcode %}
 <ul class="{{ listClass  }}">
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
-<li>
-  <a href="">{{ listClass }}</a>
-</li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
+  <li>
+    <a href="">{{ listClass }}</a>
+  </li>
 </ul>
 {% endset %}
 <pre><code class="language-markup">{{standardcode}} </code></pre>
-
 {% endif %}
 {% endmacro %}
-
-
-
-
-
-
 {% macro listButton(listClass = '', explicacion = '') %}
 <h3 class="my-16 title-l">{{ listClass | capitalize }}</h3>
 <p class="title-m">{{ explicacion }}</p>
@@ -300,13 +287,6 @@
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
-
-
-
-
-
-
-
 {% macro banner(bannerClass = '', descipcion = '') %}
 <h3 class="my-16 title-l">{{descipcion}}</h3>
 <p>{{bannerClass}}</p>
@@ -1211,10 +1191,11 @@
             <svg-icon src="check-mini" ng-reflect-src="check-mini">
               <div>
                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                    fill="white"></path>
                 </svg>
               </div>
-
             </svg-icon>
           </i>
           <div class=" checkbox-item-img-text p-16 border-1">
@@ -1234,10 +1215,11 @@
           <svg-icon src="check-mini" ng-reflect-src="check-mini">
             <div>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                  fill="white"></path>
               </svg>
             </div>
-
           </svg-icon>
         </i>
         <div class=" checkbox-item-img-text p-16 border-1">
@@ -1266,10 +1248,11 @@
             <svg-icon src="check-mini" ng-reflect-src="check-mini">
               <div>
                 <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                    fill="white"></path>
                 </svg>
               </div>
-
             </svg-icon>
           </i>
         </label>
@@ -1285,10 +1268,11 @@
           <svg-icon src="check-mini" ng-reflect-src="check-mini">
             <div>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                  fill="white"></path>
               </svg>
             </div>
-
           </svg-icon>
         </i>
       </label>
@@ -1314,10 +1298,11 @@
           <svg-icon src="check-mini" ng-reflect-src="check-mini">
             <div>
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                  fill="white"></path>
               </svg>
             </div>
-
           </svg-icon>
         </i>
         <span class="title-m">
@@ -1334,10 +1319,11 @@
         <svg-icon src="check-mini" ng-reflect-src="check-mini">
           <div>
             <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z"
+                fill="white"></path>
             </svg>
           </div>
-
         </svg-icon>
       </i>
       <span class="title-m">
@@ -2136,13 +2122,7 @@
   </div>
 </div>
 {% endmacro %}
-
-
-
 {% macro sass(name = '', description = '') %}
-
-
-
 {% set standardcode %}{% include 'src/assets/sass/parrillas/_grid-'+ name +'.scss' %}{% endset %}
 <div class="code-zone">
   <div class="code-title" onclick="cerrarDiv(this)">{{ name }}
@@ -2153,14 +2133,7 @@
   <pre><code class=" language-css">{{standardcode}}</code></pre>
 </div>
 {% endmacro %}
-
-
-
-
 {% macro sass2(name = '', description = '') %}
-
-
-
 {% set standardcode %}{% include 'src/assets/sass/parrillas/_'+ name +'.scss' %}{% endset %}
 <div class="code-zone">
   <div class="code-title" onclick="cerrarDiv(this)">{{ name }}
@@ -2171,12 +2144,6 @@
   <pre><code class=" language-css">{{standardcode}}</code></pre>
 </div>
 {% endmacro %}
-
-
-
-
-
-
 {% macro sassMixin() %}
 {% set standardcode %}{% include 'src/assets/sass/abstract/_gridNEW.scss' %}{% endset %}
 <div class="code-zone resize-large">
