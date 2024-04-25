@@ -14,3 +14,14 @@ imageAlt: Ilustración de un diseño de sistema web
 ---
 
 # Tooltip
+
+
+    Tooltips con dirección.
+
+    tooltip-tl   Expande el tooltip hacia top-left
+    
+    tooltip-tr  Expande el tooltip hacia top-right
+    
+    tooltip-bl Expande el tooltip hacia bottom-left
+    
+    tooltip-brE  xpande el tooltip hacia bottom-right
