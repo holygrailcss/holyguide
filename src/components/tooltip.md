@@ -18,10 +18,13 @@ imageAlt: Ilustración de un diseño de sistema web
 
     Tooltips con dirección.
 
-    tooltip-tl   Expande el tooltip hacia top-left
+    `tooltip-tl`   Expande el tooltip hacia top-left
     
-    tooltip-tr  Expande el tooltip hacia top-right
+    `tooltip-tr`  Expande el tooltip hacia top-right
     
-    tooltip-bl Expande el tooltip hacia bottom-left
+    `tooltip-bl` Expande el tooltip hacia bottom-left
     
-    tooltip-brE  xpande el tooltip hacia bottom-right
+    `tooltip-br`  Expande el tooltip hacia bottom-right
+
+
+    
