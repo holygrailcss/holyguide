@@ -33,6 +33,25 @@ $(document).ready(function () {
       e.preventDefault();
   });
 
+  $(".check-rtl").on("click", function (e) {
+    console.log("Esto funciona");
+    
+    // Obtener el elemento más cercano con la clase 'code-view'
+    var $codeView = $(this).closest('.code-view');
+    
+    // Alternar la clase 'is-rtl'
+    $codeView.toggleClass("is-rtl");
+    
+    // Verificar si el elemento ya tiene dir="rtl" y alternarlo
+    if ($codeView.attr('dir') === 'rtl') {
+        $codeView.attr('dir', 'ltr');
+    } else {
+        $codeView.attr('dir', 'rtl');
+    }
+
+    e.preventDefault();
+});
+
   // Enseñamos el primero ocultamos el resto
   $("#tabguide-nav li:first-child").addClass("active");
   $(".tabguide-content").hide().first().show();

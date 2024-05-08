@@ -256,6 +256,22 @@ html {
     }
   }
 }
+
+
+.check-rtl{
+  width: 10px;
+  height: 5px;
+  background-color: white;
+  overflow: hidden;
+
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
 .opencode-button {
   .viewcode {
     height: 400px;
