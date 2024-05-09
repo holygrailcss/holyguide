@@ -13403,20 +13403,18 @@ header.interior svg path {
 .btn-menuwrap {
   position: absolute;
   width: 100%;
-  height: 400px;
   transform: translateY(0);
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   z-index: -1;
   left: 0;
-  padding: 16px;
+  padding-bottom: 110px;
   border-top: var(--line-width) solid #000000;
   transition: 0.5s ease-in-out all;
 }
 
 .btn-mobile-open .btn-menuwrap {
-  height: 400px;
   transform: translateY(-100%);
 }
 
@@ -13438,6 +13436,15 @@ header.interior svg path {
   position: fixed;
   top: 0;
   z-index: 100;
+}
+
+.list-size {
+  width: 100%;
+  display: flex;
+  row-gap: 20px;
+  column-gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .swiper-pagination-progressbar {
