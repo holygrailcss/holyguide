@@ -171,33 +171,54 @@ $c-special: #b99d6b; //gold
 
 $pt: 'padding-top';
 $padding-top: (
-   ptr-24-120: ( 24px, 24px, 120px, 120px, ),
-   ptr-120: ( 64px, 64px, 120px, 120px, ),
-   ptr-112: ( 80px, 80px,112px, 112px  ),
-) !default;
+    ptr-160: (64px, 64px, 160px, 160px, ),
+    ptr-136: (48px, 48px, 136px, 136px, ),
+    ptr-120: (64px, 64px, 120px, 120px, ),
+    ptr-20-120: (20px, 20px, 120px, 120px, ),
+    ptr-112: (80px, 80px, 112px, 112px),
+    ptr-96: (64px, 64px, 96px, 96px),
+    ptr-80: (48px, 48px, 80px, 80px),
+    ptr-64: (32px, 32px, 64px, 64px),
+    ptr-24:  (16px, 16px, 24px, 24px)
+);
+
 
 $pb: 'padding-bottom';
 $padding-bottom: (
+    pbr-160: (64px, 64px, 160px, 160px, ),
+    pbr-136: (64px, 64px, 136px, 136px, ),
+    pbr-120: (64px, 64px, 120px, 120px, ),
+    pbr-20-120: (20px, 20px, 120px, 120px, ),
+    pbr-112: (80px, 80px, 112px, 112px),
+    pbr-96: (64px, 64px, 96px, 96px),
+    pbr-80: (48px, 48px, 80px, 80px),
+    pbr-64: (32px, 32px, 64px, 64px),
+    pbr-24:  (16px, 16px, 24px, 24px)
+);
 
-   pbr-120: ( 64px, 64px, 120px, 120px, ),
-   pbr-112: ( 80px, 80px, 112px, 112px ),
-   
-   ) !default;
+
+$pl: 'padding-left';
+$padding-left: (
+    pl-body: (20px, 20px, 40px, 40px, ),
+    );
+
+    
+$pr: 'padding-right';
+$padding-right: (
+    pr-body: (20px, 20px, 40px, 40px, ),
+    );
 
 
-   $pl: 'padding-left';
-   $padding-left: (
+$mb: 'margin-bottom';
+$margin-bottom: (
+    mbr-16-32: (16px, 16px, 32px, 32px, ),
+    mbr-8-24: (8px, 8px, 24px, 24px, )
+);
 
-   pl-body: ( 20px, 20px, 40px, 40px, ),
-   
-   ) ;
-   $pr: 'padding-right';
-   $padding-right: (
-
-   pr-body: ( 20px, 20px, 40px, 40px, ),
-   
-   ) ;
-
+$mt: 'margin-top';
+$margin-top: (
+    mtr-16-32: (16px, 16px, 32px, 32px, )
+);
 
 
    $heights: (

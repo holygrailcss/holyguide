@@ -55,6 +55,83 @@ layout: base.njk
           {% call insert.spacer('24 - 32','mbr-32') %}{% endcall %}
           {% call insert.spacer('16 - 24','mbr-24') %}{% endcall %}
         </div>
+
+
+        <div class="is-flex w-100  mb-48">
+          {% call insert.spacer('64 - 128 ','pbr-160') %}{% endcall %}
+          {% call insert.spacer('64 - 136','pbr-136') %}{% endcall %}
+          {% call insert.spacer('64 - 120','pbr-120') %}{% endcall %}
+          {% call insert.spacer('20 - 120','pbr-20-120') %}{% endcall %}
+          {% call insert.spacer('80 - 112','pbr-112') %}{% endcall %}
+          {% call insert.spacer('64 - 96','pbr-96') %}{% endcall %}
+          {% call insert.spacer('48 - 80','pbr-80') %}{% endcall %}
+          {% call insert.spacer('32 - 64','pbr-64') %}{% endcall %}
+          {% call insert.spacer('16 - 24','pbr-24') %}{% endcall %}
+        </div>
+
+
+        <div class="is-flex w-100  mb-48">
+          {% call insert.spacer('64 - 128 ','ptr-160') %}{% endcall %}
+          {% call insert.spacer('64 - 136','ptr-136') %}{% endcall %}
+          {% call insert.spacer('64 - 120','ptr-120') %}{% endcall %}
+          {% call insert.spacer('20 - 120','ptr-20-120') %}{% endcall %}
+          {% call insert.spacer('80 - 112','ptr-112') %}{% endcall %}
+          {% call insert.spacer('64 - 96','ptr-96') %}{% endcall %}
+          {% call insert.spacer('48 - 80','ptr-80') %}{% endcall %}
+          {% call insert.spacer('32 - 64','ptr-64') %}{% endcall %}
+          {% call insert.spacer('16 - 24','ptr-24') %}{% endcall %}
+        </div>
+
+
+<div>
+  <h5>Añadir espaciados responsive en el proyecto</h5>
+<pre class="language-css">
+  <code>
+
+
+$pt: 'padding-top';
+$padding-top: (
+    ptr-160: (64px, 64px, 160px, 160px, ),
+    ptr-136: (48px, 48px, 136px, 136px, ),
+    ptr-120: (64px, 64px, 120px, 120px, ),
+    ptr-20-120: (20px, 20px, 120px, 120px, ),
+    ptr-112: (80px, 80px, 112px, 112px),
+    ptr-96: (64px, 64px, 96px, 96px),
+    ptr-80: (48px, 48px, 80px, 80px),
+    ptr-64: (32px, 32px, 64px, 64px),
+    ptr-24:  (16px, 16px, 24px, 24px)
+);
+
+
+$pb: 'padding-bottom';
+$padding-bottom: (
+    pbr-160: (64px, 64px, 160px, 160px, ),
+    pbr-136: (64px, 64px, 136px, 136px, ),
+    pbr-120: (64px, 64px, 120px, 120px, ),
+    pbr-20-120: (20px, 20px, 120px, 120px, ),
+    pbr-112: (80px, 80px, 112px, 112px),
+    pbr-96: (64px, 64px, 96px, 96px),
+    pbr-80: (48px, 48px, 80px, 80px),
+    pbr-64: (32px, 32px, 64px, 64px),
+    pbr-24:  (16px, 16px, 24px, 24px)
+);
+
+$mb: 'margin-bottom';
+$margin-bottom: (
+  mbr-16-32: (16px, 16px, 32px, 32px, ),
+  mbr-8-24: (8px, 8px, 24px, 24px, )
+);
+
+$mt: 'margin-top';
+$margin-top: (
+  mtr-16-32: (16px, 16px, 32px, 32px, )
+);
+
+    
+  </code>
+</pre>
+</div>
+
         {{ content | safe }}
       </div>
     </div>
