@@ -27602,7 +27602,6 @@ ul {
 .clean-box-wrap .clean-box {
   box-sizing: border-box;
   width: 100px;
-  height: 100px;
   background-color: #dcfbfe;
   border: 1px dashed #348c95;
   position: relative;
