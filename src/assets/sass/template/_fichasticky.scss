@@ -194,59 +194,58 @@
   background-color: #fff;
   padding: 24px 16px;
   border-top: var(--line-width) solid $c-light-grey;
+  @media (min-width: 1280px) {
+    border: none;
+  }
 }
 .btn-menuwrap {
   position: absolute;
   width: 100%;
-
   transform: translateY(0);
   background-color: rgba(255, 255, 255, .9);
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   z-index: -1;
   left: 0;
-
   padding-bottom: 110px;
   border-top: var(--line-width) solid $c-primary;
   transition: .5s ease-in-out all;
+  @media (min-width: 1280px) {
+    border: none;
+  }
 }
 .btn-mobile-open {
   .btn-menuwrap {
-  
     transform: translateY(-100%);
   }
-
 }
-.ficha-sticky{
-
+.ficha-sticky {
   .guide-inspect {
     display: none;
   }
 }
-
-
 .button-zone-container {
   z-index: 1000;
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
+  @media (min-width: 1280px) {
+    position: relative;
+  }
 }
-
-.header-dummy{
+.header-dummy {
   left: 0;
   right: 0;
-  position:fixed;
-  top:0;
+  position: fixed;
+  top: 0;
   z-index: 100;
-
 }
-
-.list-size{
+.list-size {
   width: 100%;
-    display: flex;
-    row-gap: 20px;
-    column-gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  row-gap: 20px;
+  column-gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
 }

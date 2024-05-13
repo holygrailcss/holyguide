@@ -13399,6 +13399,11 @@ header.interior svg path {
   padding: 24px 16px;
   border-top: var(--line-width) solid #f0f0f0;
 }
+@media (min-width: 1280px) {
+  .button-zone {
+    border: none;
+  }
+}
 
 .btn-menuwrap {
   position: absolute;
@@ -13412,6 +13417,11 @@ header.interior svg path {
   padding-bottom: 110px;
   border-top: var(--line-width) solid #000000;
   transition: 0.5s ease-in-out all;
+}
+@media (min-width: 1280px) {
+  .btn-menuwrap {
+    border: none;
+  }
 }
 
 .btn-mobile-open .btn-menuwrap {
@@ -13428,6 +13438,11 @@ header.interior svg path {
   bottom: 0;
   right: 0;
   left: 0;
+}
+@media (min-width: 1280px) {
+  .button-zone-container {
+    position: relative;
+  }
 }
 
 .header-dummy {
@@ -28051,4 +28066,37 @@ ul {
 
 .full-grid {
   grid-column: 1/-1;
+}
+
+.cursor {
+  position: fixed;
+  z-index: 100;
+  opacity: 1;
+  cursor: none;
+  pointer-events: none;
+  width: 80px;
+  height: 80px;
+  transition: all 0.1s;
+  transform-origin: center;
+  transform: scale(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.cursor .cursor-inner {
+  width: 80px;
+  height: 80px;
+  transform-origin: center;
+  background-color: black;
+  transform: scale(1);
+  border-radius: 50%;
+  color: white;
+  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
 }
