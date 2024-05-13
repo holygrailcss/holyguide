@@ -50,6 +50,25 @@ layout: base.njk
         </div>
         <div class="height-sm"></div>
         <h5>Padding Responsive </h5>
+
+<p class="p1 mb-32">
+  Las clases de espaciado responsivo están diseñadas para simplificar la gestión de paddings y margins
+   en diferentes dispositivos, eliminando la necesidad de escribir manualmente clases específicas 
+   como <b> sm:pt-16 md:pt-64 lg:pt-80  xl:pt-122</b>. <br> <br>Al utilizar una única clase, como <b>ptr-64</b>, se define el padding tanto para dispositivos móviles como para escritorio, integrando ambos valores en una sola clase. Esto no solo mantiene la coherencia con el design system, sino que también facilita el proceso de desarrollo, asegurando que los diseños se mantengan uniformes y consistentes sin esfuerzo adicional. Además, al evitar la creación de clases personalizadas, se respeta y refuerza el design system preestablecido.
+  <br>  <br>  <br>
+<B>
+  PTR-: PADDING TOP RESPONSIVE
+  <br>
+  PBR-: PADDING BOTTOM RESPONSIVE
+  <br>
+  MTR-: MARGIN BOTTOM RESPONSIVE
+  <br>
+  MBR-: MARGIN BOTTOM RESPONSIVE
+</B>
+<br>
+
+</p>
+
         <div class="is-flex w-100  mb-48">
           {% call insert.spacer('64 - 128 ','mbr-128') %}{% endcall %}
           {% call insert.spacer('24 - 32','mbr-32') %}{% endcall %}
