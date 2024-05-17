@@ -711,3 +711,15 @@ ul {
 }
 
 }
+
+.grid-svg{
+  article{
+    max-width: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    svg{
+      width: 100%;
+    }
+  }
+}
+

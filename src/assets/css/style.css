@@ -28116,3 +28116,12 @@ ul {
   align-content: center;
   opacity: 0;
 }
+
+.grid-svg article {
+  max-width: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.grid-svg article svg {
+  width: 100%;
+}
