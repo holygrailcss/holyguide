@@ -723,9 +723,9 @@ ul {
   }
 }
 
-.banner-app{
-  left: 0px;
-  @media (min-width: 768px) {
-    left: 96px;
-  }
+.is-fixed{
+  position: fixed;
+}
+.demo-banner{
+  position: relative;
 }

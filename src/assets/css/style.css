@@ -12660,8 +12660,8 @@ div.card9-wrap .rat-content:hover .card9-add {
   margin-left: 8px;
 }
 .is-rtl .btn-social {
-  padding-right: 48px;
-  padding-left: 0;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 .is-rtl .btn-social svg-icon,
 .is-rtl .btn-social svg-icon2 {
@@ -28197,11 +28197,10 @@ ul {
   width: 100%;
 }
 
-.banner-app {
-  left: 0px;
+.is-fixed {
+  position: fixed;
 }
-@media (min-width: 768px) {
-  .banner-app {
-    left: 96px;
-  }
+
+.demo-banner {
+  position: relative;
 }
