@@ -1,20 +1,16 @@
 ---
 layout: base.njk
 ---
-
 {% import "_macros/_token.njk" as tokens %}
 {% import "_macros/_insert.njk" as insert %}
-
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
 <div class="main-content innermarkdown ">{{ content | safe }}
-
   <div class="row">
-
     <div class="col-xs-12">
-
-      {% call insert.banner('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de personalización') %}
+      {% call insert.banner('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de
+      personalización') %}
       {% endcall %}
       {% call insert.banner('bg-warning is-flex p-16' ,'Banner warning') %}
       {% endcall %}
@@ -28,13 +24,31 @@ layout: base.njk
       {% endcall %}
       {% call insert.banner('bg-limited is-flex p-16' ,'Banner limited') %}
       {% endcall %}
+      {% call insert.bannerActions('link-line' ,'Banner con enlace de texto a la derecha') %} {% endcall %}
+      {% call insert.bannerActions('ico-link' ,'Banner con enlace de icono a la derecha') %} {% endcall %}
+      {% call insert.bannerActions('ico-context' ,'Banner con icono contextual a la izquierda') %} {% endcall %}
+      {% call insert.bannerActions('ico-app' ,'Banner descarga la app') %} {% endcall %}
+      {% call insert.bannerActions('ico-warning' ,'Banner warning') %} {% endcall %}
 
-      {% call insert.bannerActions('link-line' ,'Banner con enlace de texto a la derecha') %}  {% endcall %}
-      {% call insert.bannerActions('ico-link' ,'Banner con enlace de icono a la derecha') %}  {% endcall %}
-      {% call insert.bannerActions('ico-context' ,'Banner con icono contextual a la izquierda') %}  {% endcall %}
-      {% call insert.bannerActions('ico-app' ,'Banner descarga la app') %}  {% endcall %}
-      {% call insert.bannerActions('ico-warning' ,'Banner warning') %}  {% endcall %}
+      <h3 class="my-16 title-l">Banner app</h3>
 
+      <div class=" banner-app container-375 border-1 p-20">
+        <div class="title-l ttu mb-16">10% off your first app orders</div>
+        <p class="title-l">Shop through our app for 10% off your first order with code APPio. T&Cs apply.</p>
+        <button class="btn btn-primary btn--full mt-20 "> DOWNLOAD APP</button>
+      </div>
+
+      <div class="mt-24">
+        <pre class="language-markup">
+        <code>
+        &lt;div class=&quot;container-375 border-1 p-20&quot;&gt;
+          &lt;div class=&quot;title-l ttu mb-16&quot;&gt;10% off your first app orders&lt;/div&gt;
+          &lt;p class=&quot;title-l&quot;&gt;Shop through our app for 10% off your first order with code APPio. T&amp;Cs apply.&lt;/p&gt;
+          &lt;button class=&quot;btn btn-primary btn--full mt-20 &quot;&gt; DOWNLOAD APP&lt;/button&gt;
+        &lt;/div&gt;
+        </code>
+        </pre>
+      </div>
     </div>
   </div>
 </div>
