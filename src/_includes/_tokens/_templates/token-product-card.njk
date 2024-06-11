@@ -1,0 +1,67 @@
+---
+layout: base-clean.njk
+---
+<!-- Contenido de la plantilla product-card.njk -->
+
+
+<div class="container-3 text-center mt-24">
+    <button class="btn btn-primary" id="loadingButton">is-loading</button>
+    <button class="btn btn-secondary" id="loadedButton">is-loaded</button>
+</div>
+
+
+
+
+<div class="content-product-card">
+
+
+    <div  id="productCard" class="product-card">
+
+
+        <div class="skeleton-media">
+            <div class="skeleton-img ar-3-4"> </div>
+            <div class="skeleton-txt"> </div>
+            
+        </div>
+
+
+        <figure class="product-card-figure">
+            <a href="">
+                <div class="product-card-img ar-3-4">
+                    <img class="mb-8" src="  https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+                </div>
+                <div class="product-card-info">
+                    <div class="title-m ttu product-title name-width-product has-ellipsis mb-4 product-with-colors"> <a
+                            class="pointer" href=""> Polo manga corta mezcla lino </a></div>
+                    <div class="flex-wrap is-flex text-nowrap">
+                        <div class="text-nowrap title-m"> 35,95 € </div>
+                    </div>
+                    <div class="tag-wrapper grid-product-list"><span class="product-tag text-m pr-8 mt-4"> NEW </span>
+                    </div>
+                </div>
+            </a>
+        </figure>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+    document.getElementById('loadingButton').addEventListener('click', function() {
+        var card = document.getElementById('productCard');
+        card.classList.add('is-loading');
+        card.classList.remove('is-loaded');
+    });
+
+    document.getElementById('loadedButton').addEventListener('click', function() {
+        var card = document.getElementById('productCard');
+        card.classList.remove('is-loading');
+        card.classList.add('is-loaded');
+    });
+</script>

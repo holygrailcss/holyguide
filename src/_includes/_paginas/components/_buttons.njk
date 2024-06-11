@@ -206,10 +206,22 @@ layout: base.njk
 
   <div class="row">
     <div class="col-xs-12">
-      <h3  id="Secondary" class="h2"> Botón Social</h3>
-      <p class="p1 mb-24"> Botón Social</p>
+      <h3  id="Secondary" class="h2"> Botón Separate</h3>
+      <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
       {% call helper.insert(elementType='button',['btn btn-secondary btn-separate']) %}
       {% endcall %}
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h3  id="Secondary" class="h2"> Botón Separate</h3>
+      <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
+      {% call helper.insert(elementType='button',['btn btn-secondary btn-social ']) %}
+      {% endcall %}
+    </div>
+  </div>
+
+
+
 </div>

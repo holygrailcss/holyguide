@@ -13,4 +13,4 @@ tags: ["token-templates"]
 imageAlt: orderConfirmation
 ---
 
-# orderConfirmation
+# order Confirmation

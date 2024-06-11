@@ -19,11 +19,13 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./_blog.scss";
 @import "./_brands.scss";
 @import "./_resize.scss";
+
 @import "./_dummyproduct.scss";
 @import "./guia.scss";
 @import "./theme.scss";
 @import "parrillas/_all.scss";
 @import "template/_alltemplate.scss";
+@import "template/_product-card.scss";
 @import "./newweb.scss";
 //@import "parrillas/*";
 $primary-color: var(--primary-color);

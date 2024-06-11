@@ -3234,13 +3234,13 @@ mark {
 }
 @media (min-width: 320px) {
   .fluid-2-l {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-l {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -3255,13 +3255,13 @@ mark {
 }
 @media (min-width: 320px) {
   .fluid-2-r {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-r {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -3276,13 +3276,13 @@ mark {
 }
 @media (min-width: 320px) {
   .fluid-2-m {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-m {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -3297,13 +3297,13 @@ mark {
 }
 @media (min-width: 320px) {
   .fluid-2-sb {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-sb {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -3318,13 +3318,13 @@ mark {
 }
 @media (min-width: 320px) {
   .fluid-2-b {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-b {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -26192,6 +26192,75 @@ code {
   }
 }
 
+.content-product-card {
+  position: relative;
+  width: 300px;
+  margin: 100px auto;
+}
+
+.is-loading .skeleton-media {
+  position: relative;
+  opacity: 1;
+}
+.is-loading .product-card-figure {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+}
+
+.is-loaded .skeleton-media {
+  position: absolute;
+  top: 0;
+}
+.is-loaded .product-card-figure {
+  opacity: 1;
+  position: relative;
+}
+
+.skeleton-media {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transition: opacity ease 0.5s;
+  opacity: 0;
+}
+.skeleton-media .skeleton-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-position: 0 0;
+  background-color: #E0E0E0;
+}
+.skeleton-media .skeleton-txt {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #E0E0E0;
+}
+.skeleton-media .skeleton-txt:before {
+  float: left;
+  content: "";
+  width: 70%;
+  height: 10px;
+  background-color: #E0E0E0;
+  margin-top: 8px;
+}
+.skeleton-media .skeleton-txt:after {
+  content: "";
+  width: 20%;
+  height: 10px;
+  background-color: #E0E0E0;
+  clear: both;
+  float: left;
+  margin-top: 6px;
+}
+
+.product-card-figure {
+  position: absolute;
+  transition: opacity ease 0.5s;
+  opacity: 0;
+}
+
 /* TYPES FIJOS */
 .grid-product-view-new {
   flex-basis: 100%;
@@ -26361,13 +26430,13 @@ code {
 }
 @media (min-width: 320px) {
   .fluid-2-l {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-l {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -26382,13 +26451,13 @@ code {
 }
 @media (min-width: 320px) {
   .fluid-2-r {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-r {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -26403,13 +26472,13 @@ code {
 }
 @media (min-width: 320px) {
   .fluid-2-m {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-m {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -26424,13 +26493,13 @@ code {
 }
 @media (min-width: 320px) {
   .fluid-2-sb {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-sb {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }
@@ -26445,13 +26514,13 @@ code {
 }
 @media (min-width: 320px) {
   .fluid-2-b {
-    font-size: calc(40px + 60 * (100vw - 320px) / 1180);
+    font-size: calc(40px + 40 * (100vw - 320px) / 1180);
     line-height: 0.9;
   }
 }
 @media (min-width: 1500px) {
   .fluid-2-b {
-    font-size: 100px;
+    font-size: 80px;
     line-height: 0.9;
   }
 }

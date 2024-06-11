@@ -99,10 +99,12 @@
         
         {{ content | safe }}
       </div>
-      <div class="col-xs-4">
 
+      {% if content | toc | safe != 0 %}
+      <div class="col-xs-4">
         {{ content | toc | safe }}
       </div>
+    {% endif %}
     </div>
   </main>
 

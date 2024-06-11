@@ -25,7 +25,6 @@ nunjucks.configure({
 
 // Datos que deseas pasar a las plantillas
 
-
 // Fecha actual en formato YYYY-MM-DD
 const currentDate = new Date().toISOString().slice(0, 10);
 
@@ -54,20 +53,45 @@ layout: base-clean.njk
 <!-- Contenido de la plantilla ${fileName}.njk -->
 `;
 
-// Renderizar la plantilla con los datos y guardar el archivo Markdown
-fs.writeFile(targetMarkdownFilePath, nunjucks.renderString(markdownTemplate), (err) => {
-  if (err) {
-    console.error("Error al crear el archivo Markdown:", err);
-  } else {
-    console.log(`El archivo Markdown "${targetMarkdownFilePath}" se ha creado correctamente.`);
-  }
-});
+// Crear los directorios necesarios antes de escribir los archivos
+const createDirectories = (filePath) => {
+  return new Promise((resolve, reject) => {
+    fs.mkdir(path.dirname(filePath), { recursive: true }, (err) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
+  });
+};
 
-// Guardar el archivo Nunjucks con el nombre sin la extensión .md
-fs.writeFile(targetNunjucksFilePath, nunjucksTemplate, (err) => {
-  if (err) {
-    console.error("Error al crear el archivo Nunjucks:", err);
-  } else {
-    console.log(`El archivo Nunjucks "${targetNunjucksFilePath}" se ha creado correctamente.`);
-  }
-});
+// Guardar el archivo Markdown
+createDirectories(targetMarkdownFilePath)
+  .then(() => {
+    fs.writeFile(targetMarkdownFilePath, nunjucks.renderString(markdownTemplate), (err) => {
+      if (err) {
+        console.error("Error al crear el archivo Markdown:", err);
+      } else {
+        console.log(`El archivo Markdown "${targetMarkdownFilePath}" se ha creado correctamente.`);
+      }
+    });
+  })
+  .catch((err) => {
+    console.error("Error al crear directorios para el archivo Markdown:", err);
+  });
+
+// Guardar el archivo Nunjucks
+createDirectories(targetNunjucksFilePath)
+  .then(() => {
+    fs.writeFile(targetNunjucksFilePath, nunjucksTemplate, (err) => {
+      if (err) {
+        console.error("Error al crear el archivo Nunjucks:", err);
+      } else {
+        console.log(`El archivo Nunjucks "${targetNunjucksFilePath}" se ha creado correctamente.`);
+      }
+    });
+  })
+  .catch((err) => {
+    console.error("Error al crear directorios para el archivo Nunjucks:", err);
+  });
