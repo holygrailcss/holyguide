@@ -6,59 +6,63 @@ permalink: /index/
   <div class="video-bg">
     {# <img width="100%" height="100%" src="{{global.imageDir}}_home/home2.webp" alt="{{global.empresa}}"> #}
   </div>
-  <div class="container-full ptr-120 pbr-120">
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="height-md is-flex flex-column content-center">
-          <div class="mb-24">
-            <div data-aos-delay="300" class=" fluid-4-b mb-16">
-              Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
-            </div>
-            <div data-aos-delay="300" class="fluid-8-r c-dark-grey">Desde su implementación, los nuevos
-              desarrollos se crearon un 80 % más rápido .
-            </div>
-          </div>
-          <div class="mb-16" data-aos-delay="400">
-            <a href="/foundations"><button class="btn btn-primary btn--small">Foundations</button></a>
-            <a href="/components"><button class="btn btn-secondary btn--small">Componentes</button></a>
-            <a href="/templates"><button class="btn btn-secondary btn--small">Templates</button></a>
-          </div>
+  <div class="zona-img">
+    <div class="zona-img-1">
 
-          <div class="mb-16" data-aos-delay="800">
-            <a href="/foundations"><button class="btn btn-primary btn--small"><div class="mr-8">Figma</div>  
-              
-              
-              <img alt="File:Figma-logo.svg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/400px-Figma-logo.svg.png?20190122211436" 
-              decoding="async" width="12" height="20"
-               srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/600px-Figma-logo.svg.png?20190122211436 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/800px-Figma-logo.svg.png?20190122211436 2x" data-file-width="1667" data-file-height="2500"></button></a>
-
-          </div>
-
-
-          <div class="code-install mb-24" data-aos-delay="500">
-            npm <b>install</b> holygrail2
-          </div>
-          <div data-aos-delay="100" class="is-flex mb-24">
-            <a href="https://www.npmjs.com/package/holygrail2" target="_blank" rel="nofollow">
-              <img src="https://img.shields.io/npm/dm/holygrail2.svg">
-            </a>
-            <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
-              <img src="https://img.shields.io/npm/v/holygrail2" alt="npm"
-                data-canonical-src="https://img.shields.io/npm/v/holygrail2.svg" style="max-width:100%;"></a>
-          </div>
+      <img width="100%" src="/assets/static/images/pdp1.jpg" alt="">
+    </div>
+    <div class="zona-img-2">
+           <img width="100%"  src="/assets/static/images/pdp3.jpg" alt="">
+    </div>
+    <div class="zona-img-3">
+           <img width="100%"  src="/assets/static/images/pdp2.jpg" alt="">
+    </div>
+  </div>
+  <div class="hero-text">
+    <div class="height-md content-center">
+      <div class="mb-24">
+        <div data-aos-delay="300" class=" fluid-8-r mb-16">
+          Holyguide
+        </div>
+        <div data-aos-delay="300" class=" fluid-4-r mb-16">
+          SISTEMATIZANDO RESULTADOS
+        </div>
+        <div data-aos-delay="300" class="fluid-8-r c-dark-grey">Creamos la primera biblioteca de componentes
+          totalmente receptiva para la marca.
         </div>
       </div>
+      <div class="mb-16" data-aos-delay="400">
+        <a href="/foundations"><button class="btn btn-primary btn--small">Foundations</button></a>
+        <a href="/components"><button class="btn btn-secondary btn--small">Componentes</button></a>
+        <a href="/templates"><button class="btn btn-secondary btn--small">Templates</button></a>
+      </div>
+      <div class="mb-16" data-aos-delay="800">
+        <a href="/foundations"><button class="btn btn-primary btn--small">
+            <div class="mr-8">Figma</div>
+      </div>
+      <div class="code-install mb-24" data-aos-delay="500">
+        npm <b>install</b> holygrail2
+      </div>
+      <div data-aos-delay="100" class="is-flex mb-24">
+        <a href="https://www.npmjs.com/package/holygrail2" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/npm/dm/holygrail2.svg">
+        </a>
+        <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
+          <img src="https://img.shields.io/npm/v/holygrail2" alt="npm"
+            data-canonical-src="https://img.shields.io/npm/v/holygrail2.svg" style="max-width:100%;"></a>
+      </div>
     </div>
+  </div>
 </section>
 <section class="front-section bg-light pt-32 pb-64">
-  <div class="container-3">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <a href="/templates" class="mb-40">
+        <a href="/templates" >
           <h2>Nuestros últimos templates</h2>
         </a>
-        <ul role="list" class="list-clear blog-intro-inner w-100">
-          <div class="list-grid">
+        <ul role="list" class="list-clear blog-intro-inner w-100 pt-32 pb-32">
+          <div class="grid-5">
             {% for component in collections.templates | reverse %}
             {% include 'token-loop-list.njk' %}
             {% endfor %}
@@ -69,21 +73,21 @@ permalink: /index/
   </div>
 </section>
 <section class="front-section bg-white height-full-2 front-section ptr-128 pbr-128">
-  <div class="container-3  pb-64  pt-64">
+  <div class="container  pb-64  pt-64">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-7">
         <div class="fluid-5-r">
           <b>Para creadores, por creadores </b>.
-          El framework completo para programadores y grupos de artistas. <br> Genera, comparte y emplea conceptos de una
-          forma fresca, atrayente y eficiente. Agiliza y simplifica la creación de una página web para todas las
-          personas, con cualquier contenido en cualquier pantalla.
+          Para creadores, por creadores .
+          El framework completo para programadores,
+          grupos de artistas y diseñadores.
         </div>
       </div>
     </div>
   </div>
 </section>
 <section class="front-section bg-white height-full-2 front-section mtr-64 mbr-64">
-  <div class="container-3 mb-64">
+  <div class="container mb-64">
     <div class="row  pt-64 pb-64">
       <div class="col-xs-6 ">
         <a data-aos-once="true" data-aos-delay="500" class="link-line" href="/start-design/">
@@ -108,6 +112,30 @@ permalink: /index/
             </div>
           </div>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-light mb-64">
+  <div class="container ">
+    <div class="row height-sm  align-middle ">
+      <div class="col-xs-6">
+        <div class="text-16-b ttu">¿Necesitas ayuda?</div>
+        <p class="text-18-r">
+          Pónte en contacto con nosotros
+          y te daremos soporte en lo que necesites.
+        </p>
+      </div>
+      <div class="col-xs-6 is-flex align-end">
+        <button class="btn btn-primary"> CONTACT US</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">       <img width="100%"  src="/assets/static/images/imgs.png" alt="">
       </div>
     </div>
   </div>

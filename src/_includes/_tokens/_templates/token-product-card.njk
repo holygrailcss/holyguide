@@ -7,6 +7,8 @@ layout: base-clean.njk
 <div class="container-3 text-center mt-24">
     <button class="btn btn-primary" id="loadingButton">is-loading</button>
     <button class="btn btn-secondary" id="loadedButton">is-loaded</button>
+
+    <button class="btn btn-secondary" id="anim2">anim-2</button>
 </div>
 
 
@@ -27,8 +29,19 @@ layout: base-clean.njk
 
         <figure class="product-card-figure">
             <a href="">
-                <div class="product-card-img ar-3-4">
+                <div class="product-card-media ar-3-4">
+
+            <div class="anim-media"> 
                     <img class="mb-8" src="  https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+
+                    <video muted autoplay src="https://static.massimodutti.net/3/static2/media/2019/home/assets/lookbook/header_man.mp4"></video>
+
+
+                </div>
+
+
+      
+
                 </div>
                 <div class="product-card-info">
                     <div class="title-m ttu product-title name-width-product has-ellipsis mb-4 product-with-colors"> <a
@@ -63,5 +76,12 @@ layout: base-clean.njk
         var card = document.getElementById('productCard');
         card.classList.remove('is-loading');
         card.classList.add('is-loaded');
+    });
+
+
+    document.getElementById('anim2').addEventListener('click', function() {
+        var card = document.getElementById('productCard');
+        card.classList.remove('is-loading');
+        card.classList.add('is-loaded anim-2');
     });
 </script>

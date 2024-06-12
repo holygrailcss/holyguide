@@ -14370,9 +14370,6 @@ header.interior svg path {
     opacity: 0;
   }
 }
-.guide {
-  padding-bottom: 40px;
-}
 .guide table {
   width: 100%;
   text-align: left;
@@ -26207,6 +26204,9 @@ code {
   opacity: 0;
   top: 0;
 }
+.is-loading.anim-1 .anim-media video {
+  opacity: 1;
+}
 
 .is-loaded .skeleton-media {
   position: absolute;
@@ -26216,7 +26216,6 @@ code {
   opacity: 1;
   position: relative;
 }
-
 .skeleton-media {
   position: relative;
   overflow: hidden;
@@ -26259,6 +26258,17 @@ code {
   position: absolute;
   transition: opacity ease 0.5s;
   opacity: 0;
+  overflow: hidden;
+}
+
+.anim-media video {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* TYPES FIJOS */
@@ -27552,7 +27562,6 @@ body {
 
 .header-img {
   position: relative;
-  background-image: url("../../assets/static/holycup.jpg");
   background-position: top right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -28272,4 +28281,56 @@ ul {
 
 .demo-banner {
   position: relative;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.zona-img {
+  transform: translateX(150%);
+  aspect-ratio: 1/1;
+  width: 40%;
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.zona-img-1,
+.zona-img-2,
+.zona-img-3 {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0px 6.955px 20.864px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.zona-img-1 {
+  width: 48%;
+  transform: translateY(-60%);
+}
+
+.zona-img-2 {
+  width: 48%;
+  right: 0;
+}
+
+.zona-img-3 {
+  width: 28%;
+  left: 20%;
+  transform: translateY(100%);
+}
+
+.hero-text {
+  max-width: 1440px;
+  margin-left: calc((100vw - 1440px) / 2);
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 30%;
 }
