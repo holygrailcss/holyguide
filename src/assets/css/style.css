@@ -28292,12 +28292,19 @@ ul {
 }
 
 .zona-img {
-  transform: translateX(150%);
   aspect-ratio: 1/1;
-  width: 40%;
+  width: 100%;
   position: relative;
   top: 0;
   right: 0;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .zona-img {
+    width: 40%;
+    position: absolute;
+    overflow: inherit;
+  }
 }
 
 .zona-img-1,
@@ -28324,6 +28331,19 @@ ul {
   width: 28%;
   left: 20%;
   transform: translateY(100%);
+}
+
+.zona-img-4,
+.zona-img-5,
+.zona-img-6,
+.zona-img-7 {
+  width: 7%;
+}
+.zona-img-4 img,
+.zona-img-5 img,
+.zona-img-6 img,
+.zona-img-7 img {
+  width: 100%;
 }
 
 .zona-img-4 {
@@ -28354,13 +28374,4 @@ ul {
   left: -100px;
   left: 62%;
   transform: translateY(100%);
-}
-
-.hero-text {
-  max-width: 1440px;
-  margin-left: calc((100vw - 1440px) / 2);
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  width: 30%;
 }
