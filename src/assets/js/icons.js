@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: '/assets/js/jsons/essential.json', title: 'Essential' },
         { url: '/assets/js/jsons/position.json', title: 'Position' },
         { url: '/assets/js/jsons/product.json', title: 'Product' },
+        { url: '/assets/js/jsons/product1.json', title: 'Product 1' },
         { url: '/assets/js/jsons/services.json', title: 'Services' },
         { url: '/assets/js/jsons/status.json', title: 'Status' }
     ];
