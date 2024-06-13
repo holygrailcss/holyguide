@@ -34,16 +34,22 @@ document.addEventListener('DOMContentLoaded', () => {
     Promise.all(jsonFiles.map(file => loadJSON(file.url)))
         .then(jsonArray => {
             jsonArray.forEach((jsonObj, index) => {
-                populateSection(jsonFiles[index].title, jsonObj);
+                populateSection(jsonFiles[index].title, jsonObj, jsonFiles[index].url);
             });
         })
         .catch(error => {
             console.error('Error loading one or more JSON files:', error);
         });
 
-    function populateSection(title, jsonObj) {
+    function populateSection(title, jsonObj, url) {
         const header = document.createElement('h2');
-        header.textContent = title;
+        const link = document.createElement('a');
+        link.textContent = `${title}.json`;
+        link.href = url;
+        link.target = '_blank'; // Esto hará que el enlace se abra en una nueva pestaña
+        link.download = `${title}.json`; // Esto permite descargar el archivo JSON
+
+        header.appendChild(link);
 
         const section = document.createElement('section');
         section.classList.add('grid-6', 'grid-svg');
