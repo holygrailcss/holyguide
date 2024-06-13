@@ -14754,8 +14754,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.guide ul {
+  margin-bottom: 20px;
+}
 .guide ul li {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 .guide hr {
   margin-top: 20px;

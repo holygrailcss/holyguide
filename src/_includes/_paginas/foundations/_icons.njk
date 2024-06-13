@@ -12,7 +12,57 @@ layout: base.njk
       <div class="col-xs-12">
         <h3 id="COMOUSAR">COMO USAR</h3>
       </div>
-      <div class="col-xs-12">
+      <div class="col-xs-12 text-l">
+
+            <h1>Guía de Uso del Componente <code>svg-icon2</code> en Angular</h1>
+            <p>En nuestro proyecto de Angular, utilizaremos el nuevo componente <code>svg-icon2</code> para manejar los íconos SVG de manera más eficiente. Este componente extrae los íconos directamente de los archivos JSON, lo que nos permite evitar el uso de imágenes que realizan peticiones adicionales y ralentizan el proceso de carga cuando hay muchos íconos. Con <code>svg-icon2</code>, podemos reducir el peso del DOM y mejorar el rendimiento general de la aplicación.</p>
+            
+            <h2>Ventajas del Componente <code>svg-icon2</code>:</h2>
+              <ul class="list-clear text-l">
+                <li class="text-l"><strong>Eficiencia en la carga</strong>: Al no depender de imágenes externas, se eliminan las peticiones adicionales al servidor.</li>
+                <li><strong>Rendimiento optimizado</strong>: La carga de íconos se realiza más rápidamente, mejorando la velocidad de la aplicación.</li>
+                <li><strong>Facilidad de uso</strong>: Los íconos se manejan de manera centralizada desde los archivos JSON.</li>
+            </ul>
+        
+            <h2>Uso del Componente</h2>
+            <p>Para utilizar <code>svg-icon2</code>, es necesario especificar la categoría a la que pertenece el ícono, que generalmente coincide con el nombre del archivo JSON, y el nombre del ícono. A continuación, se muestra un ejemplo de uso:</p>
+            <pre class="language-markup"><code> &lt;svg-icon2 category="common" src="check"&gt;&lt;/svg-icon2&gt;</code></pre>
+            <p>En este ejemplo:</p>
+                    <ul class="list-clear text-l">
+                <li><code>category="common"</code>: Indica que el ícono pertenece a la categoría "common", que es el nombre del archivo JSON.</li>
+                <li><code>src="check"</code>: Especifica el nombre del ícono dentro del archivo JSON.</li>
+            </ul>
+        
+            <h3>Ejemplo Completo</h3>
+            <p>Supongamos que tenemos un archivo JSON llamado <code>common.json</code> que contiene varios íconos. Para utilizar el ícono "check" de este archivo, simplemente utilizamos el siguiente código en nuestro template:</p>
+            <pre class="language-markup"><code>&lt;svg-icon2 category="common" src="check"&gt;&lt;/svg-icon2&gt;</code></pre>
+        
+            <h2>Actualización o Introducción de Nuevos Íconos</h2>
+            <p>Cuando se requiera actualizar o introducir un nuevo ícono, el proceso es el siguiente:</p>
+                   <ul class="list-clear text-l">
+                <li><strong>Contacto con el Diseñador</strong>: Acude al responsable de diseño especializado en la creación de diseños. Él nos proporcionará el código SVG del ícono.</li>
+                <li><strong>Conversión a Base64</strong>: Utiliza el plugin de Visual Studio Code <code>vscode-base64</code> para convertir el código SVG a formato Base64.</li>
+                <li><strong>Actualización del JSON</strong>: Copia el código en Base64 y pégalo en el archivo JSON correspondiente utilizando el formato:
+                    <pre class="language-json"><code>{ "nombreicono": "icono en base 64" }</code></pre>
+                </li>
+                <li><strong>Ordena Alfabeticamente</strong>: Usa el plugin de Visual Studio Code <code>Alphabetical Sorter</code> para ordenar el archivo JSON.</li>
+
+                <li><strong>Incorporación en el Proyecto</strong>: Añade el nuevo ícono en el proyecto.</li>
+                <li><strong>Notificación</strong>: Notifica al Lead de UX Layout que el nuevo ícono ya está disponible y especifica en qué rama se ha colocado.</li>
+              </ul>
+        
+            <h2>Consideraciones Adicionales</h2>
+                  <ul class="list-clear text-l">
+                <li><strong>Organización de los JSON</strong>: Asegúrate de mantener una estructura organizada en tus archivos JSON para facilitar la búsqueda y el mantenimiento de los íconos.</li>
+                <li><strong>Nombres descriptivos</strong>: Utiliza nombres de íconos descriptivos y coherentes con su uso en la aplicación.</li>
+                <li><strong>Actualización de íconos</strong>: Al actualizar un ícono en el archivo JSON, todos los lugares donde se utiliza este ícono se actualizarán automáticamente.</li>
+            </ul>
+        
+            <p>Con estas prácticas y el uso del componente <code>svg-icon2</code>, optimizaremos la gestión de íconos SVG en nuestro proyecto de Angular, mejorando tanto el rendimiento como la mantenibilidad del código.</p>
+    
+        
+
+
         <p class="text-l mb-16">
           Al usar el componente solo hay que asignar el parámetro
           <b><i>src</i></b> con el icono a usar, que a su vez deberá estar en el
@@ -35,7 +85,7 @@ layout: base.njk
               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguNSA4VjguNUg3LjVWOEg4LjVaTTcuNSA1VjQuNUg4LjVWNUg3LjVaTTguNSAxMUM4LjUgMTEuMjc2MSA4LjI3NjE0IDExLjUgOCAxMS41QzcuNzIzODYgMTEuNSA3LjUgMTEuMjc2MSA3LjUgMTFIOC41Wk03LjUgMTAuNUM3LjUgMTAuMjIzOSA3LjcyMzg2IDEwIDggMTBDOC4yNzYxNCAxMCA4LjUgMTAuMjIzOSA4LjUgMTAuNUg3LjVaTTE0LjUgOEMxNC41IDQuNDEwMTUgMTEuNTg5OSAxLjUgOCAxLjVWMC41QzEyLjE0MjEgMC41IDE1LjUgMy44NTc4NiAxNS41IDhIMTQuNVpNOCAxLjVDNC40MTAxNSAxLjUgMS41IDQuNDEwMTUgMS41IDhIMC41QzAuNSAzLjg1Nzg2IDMuODU3ODYgMC41IDggMC41VjEuNVpNMS41IDhDMS41IDExLjU4OTkgNC40MTAxNSAxNC41IDggMTQuNVYxNS41QzMuODU3ODYgMTUuNSAwLjUgMTIuMTQyMSAwLjUgOEgxLjVaTTggMTQuNUMxMS41ODk5IDE0LjUgMTQuNSAxMS41ODk5IDE0LjUgOEgxNS41QzE1LjUgMTIuMTQyMSAxMi4xNDIxIDE1LjUgOCAxNS41VjE0LjVaTTcuNSA4VjVIOC41VjhINy41Wk03LjUgMTFWMTAuNUg4LjVWMTFINy41WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg=="
               alt="" />
           </div>
-          <pre> <code class="language-markup">{{ "<svg-icon src='alert'></svg-icon>" | escape }}</code> </pre>
+          <pre class="language-markup"><code> &lt;svg-icon2 category="common" src="check"&gt;&lt;/svg-icon2&gt;</code></pre>
         </div>
         <h3 class="mb-16">Variante de color</h3>
         <p class="text-l mb-16">
@@ -62,10 +112,10 @@ layout: base.njk
   <section class="mb-32 mt-32">
     <div class="row">
       <div class="col-xs-12">
-        <div class="title-l">Incluir iconos al inventario</div>
+        <div class="h2">Incluir iconos al inventario</div>
       </div>
       <div class="col-xs-12">
-        <div class="title-s c-dark-grey mb-32">
+        <div class=" mb-32">
           Cuando necesites incorporar un nuevo icono en la lista sigue atentamente
           estas recomendaciones:
         </div>
@@ -76,23 +126,10 @@ layout: base.njk
         <p class="text-l mb-24">
           Cuando exportes el SVG, ábrelo en un editor de código y valida que:
         </p>
-        <ul class="mb-24">
-          <ol>
-            <b>1 –</b>
-            No tenga etiquetas ID en su estructura
-          </ol>
-          <ol>
-            <b>2 –</b>
-            Debe contener elementos path y no rect, circle...
-          </ol>
-        </ul>
+
         <div class="tip">
-          <div class="title-s"><b> truco </b></div>
-          A la hora de incluirlo en el json, recuerda mantener el orden alfabético
-          para mantener el orden. Usaremos la extensión de visual studio
-          <b>Alphabetical Sorter</b>
-        </div>
-        <p class="text-l mt-48">Guia para incluir iconos desde Figma:</p>
+ 
+        <p class="text-l mb-48 mt-32">Video tutorial para incluir iconos desde Figma:</p>
         <div style="position: relative; padding-bottom: 62.5%; height: 0">
           <iframe src="https://www.loom.com/embed/31072d083792468f842532573d080bf2" frameborder="0"
             webkitallowfullscreen mozallowfullscreen allowfullscreen
