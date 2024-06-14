@@ -47,9 +47,26 @@ document.addEventListener('DOMContentLoaded', () => {
         link.textContent = `${title}.json`;
         link.href = url;
         link.target = '_blank'; // Esto hará que el enlace se abra en una nueva pestaña
-        link.download = `${title}.json`; // Esto permite descargar el archivo JSON
+
+        const icon = document.createElement('img');
+        icon.src = '/assets/static/download.svg'; // Asegúrate de tener este icono en tu proyecto
+        icon.alt = 'Download Icon';
+        icon.classList.add('download-icon'); // Añadir una clase para estilo adicional si es necesario
+        icon.style.marginLeft = '16px'; // Añadir el margen a la izquierda
+
+        // Establecer el evento de clic en el icono para descargar el JSON
+        icon.addEventListener('click', (event) => {
+            event.preventDefault();
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${title}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
 
         header.appendChild(link);
+        header.appendChild(icon);
 
         const section = document.createElement('section');
         section.classList.add('grid-6', 'grid-svg');
