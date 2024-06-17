@@ -1797,6 +1797,10 @@ svg-icon path,
 svg-icon2 path {
   fill: #000000;
 }
+.is-rtl svg-icon.i-arrow,
+.is-rtl svg-icon2.i-arrow {
+  transform: scaleX(-1);
+}
 svg-icon.c-invert,
 svg-icon2.c-invert {
   fill: #ffffff;
@@ -7114,9 +7118,11 @@ strong {
   left: auto;
   right: auto;
   bottom: 0;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .banner-app {
+    max-width: 375px;
     bottom: 0;
     left: 96px;
   }
@@ -7143,7 +7149,7 @@ button {
   border: none;
   white-space: nowrap;
   cursor: pointer;
-  padding: 8px 32px;
+  padding: 10px 32px 8px 32px;
   background-color: transparent;
   height: 40px;
   font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
@@ -7762,9 +7768,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
   position: relative;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.168), 0 0 1px rgba(0, 0, 0, 0.084);
 }
 .btn-social svg-icon,
 .btn-social svg-icon2 {
@@ -7774,8 +7778,9 @@ button {
   align-items: center;
   border-radius: 0;
   margin-top: -2px;
-  top: 0;
-  left: 1px;
+  top: 13px;
+  left: 16px;
+  position: absolute;
 }
 .btn-social svg-icon div,
 .btn-social svg-icon2 div {
@@ -7794,13 +7799,7 @@ button {
 .has-light .btn-google {
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #ffffff;
-}
-.btn-google svg-icon,
-.btn-google svg-icon2,
-.has-light .btn-google svg-icon,
-.has-light .btn-google svg-icon2 {
-  top: 1px;
+  border: var(--line-width) solid #000000;
 }
 .btn-google:focus, .btn-google.focus, .btn-google:hover, .btn-google.hover, .btn-google:visited, .btn-google:active, .btn-google.active,
 .has-light .btn-google:focus,
@@ -7810,7 +7809,7 @@ button {
 .has-light .btn-google:visited,
 .has-light .btn-google:active,
 .has-light .btn-google.active {
-  border: 1px solid #f0f0f0;
+  border: var(--line-width) solid #f0f0f0;
   opacity: 1;
 }
 
@@ -7886,7 +7885,7 @@ button {
 .has-light .btn-naver {
   background-color: #03cf5d;
   color: #ffffff;
-  padding-left: 40px;
+  padding-inline: 40px;
   border: 1px solid #03cf5d;
 }
 .btn-naver:focus, .btn-naver.focus, .btn-naver:hover, .btn-naver.hover, .btn-naver:visited, .btn-naver:active, .btn-naver.active,
@@ -7912,7 +7911,7 @@ button {
 .has-light .btn-wechat {
   background-color: #2dc100;
   color: #ffffff;
-  padding-left: 40px;
+  padding-inline: 40px;
   border: 1px solid #2dc100;
 }
 .btn-wechat:focus, .btn-wechat.focus, .btn-wechat:hover, .btn-wechat.hover, .btn-wechat:visited, .btn-wechat:active, .btn-wechat.active,
@@ -8212,6 +8211,7 @@ button {
 .btn-grid {
   display: grid;
   grid-gap: 0;
+  padding-inline: 1px;
 }
 .btn-grid .btn {
   border: 1px solid #000000;
@@ -8950,7 +8950,7 @@ input::input-placeholder {
   border-top: 0;
   content: " ";
   height: 8px;
-  margin-top: -6px;
+  margin-top: -8px;
   pointer-events: none;
   position: absolute;
   top: 50%;
@@ -10758,6 +10758,23 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   transform: rotate(0deg);
   transition: 0.6s;
 }
+.form-input-label.datalist::after,
+.form-input-label-2.datalist::after {
+  border: 1px solid #000000;
+  border-radius: 0;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  height: 8px;
+  margin-top: -8px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  width: 8px;
+}
 .form-input-label.datalist .validation-error-messages,
 .form-input-label-2.datalist .validation-error-messages {
   color: #b40016;
@@ -12288,23 +12305,23 @@ div.card9-wrap .rat-content:hover .card9-add {
   }
 }
 .is-rtl .select select:not([multiple]) {
-  padding-right: 16px;
-  padding-left: 45px;
+  padding-right: 0;
+  padding-left: 20px;
 }
 .is-rtl .select-size select:not([multiple]) {
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 0;
+  padding-left: 20px;
 }
 .is-rtl .select:not(.is-multiple, .is-loading)::after {
   right: inherit;
-  left: 20px;
+  left: 0;
 }
 .is-rtl .select.select-label select {
   padding-right: 100px;
 }
 .is-rtl .select.select-label label {
   left: inherit;
-  right: 16px;
+  right: 0;
 }
 .is-rtl .select:not(.is-multiple, .is-loading).select-box::after {
   left: 8px;
@@ -12639,21 +12656,28 @@ div.card9-wrap .rat-content:hover .card9-add {
   left: initial;
   right: 5px;
 }
-.is-rtl .btn.btn-separate svg-icon,
-.is-rtl .btn.btn-separate svg-icon2 {
-  transform: scaleX(-1);
-}
 .is-rtl .btn.btn-world .btn-world-center {
   text-align: right;
 }
 .is-rtl .btn.btn-world .btn-world-right {
   transform: rotateY(180deg);
 }
+.is-rtl .btn-group > :not(:first-child, :last-child) {
+  border-radius: 0;
+  margin-right: -1px;
+  margin-left: 0px;
+}
 .is-rtl .btn-group .btn:first-child() {
   border-radius: 0 0 0 0;
 }
 .is-rtl .btn-group .btn:last-child() {
   border-radius: 0 0 0 0;
+}
+.is-rtl .btn-group [class^=btn--]:last-child,
+.is-rtl .btn-group [class*=" btn--"]:last-child {
+  margin-right: -1px;
+  margin-left: 0px;
+  outline: none;
 }
 .is-rtl .btn-social-login svg {
   margin-right: 0;
@@ -12665,18 +12689,8 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 .is-rtl .btn-social svg-icon,
 .is-rtl .btn-social svg-icon2 {
-  right: 1px;
+  right: 16px;
   left: auto;
-  margin-right: 0;
-  margin-left: 16px;
-}
-.is-rtl .btn-social.btn-google {
-  padding-right: 60px;
-  padding-left: 0;
-}
-.is-rtl .btn-social.btn-naver {
-  padding-right: 80px;
-  padding-left: 0;
 }
 .is-rtl .checkbox-item [type=checkbox]:not(:checked),
 .is-rtl .checkbox-item [type=checkbox]:checked {
@@ -12766,6 +12780,10 @@ div.card9-wrap .rat-content:hover .card9-add {
 .is-rtl .form-input-label-2.datalist .validation-error-messages svg {
   left: auto;
 }
+.is-rtl .form-input-label.datalist::after,
+.is-rtl .form-input-label-2.datalist::after {
+  left: 4px;
+}
 .is-rtl .form-prefix input {
   text-align: right;
 }
@@ -12774,7 +12792,7 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 .is-rtl .select.select-box::after {
   left: 6px;
-  right: auto;
+  right: inherit;
 }
 .is-rtl .select.select-flat label {
   left: auto;
