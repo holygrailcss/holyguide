@@ -37,9 +37,7 @@ layout: base-clean.njk
                     <img height="100vh"
                         src="https://static.massimodutti.net/3/photos/2024/V/0/2/p/0912/338/401/0912338401_2_7_16.jpg?t=1714396098134&impolicy=massimodutti-itxmediumhigh&imformat=chrome&imwidth=700"
                         alt="">
-                    <img height="100vh"
-                        src="https://static.massimodutti.net/3/photos/2024/V/0/2/p/0912/338/401/0912338401_2_8_16.jpg?t=1714396098134&impolicy=massimodutti-itxmediumhigh&imformat=chrome&imwidth=700"
-                        alt="">
+
                 </div>
             </div>
         </div>
@@ -85,10 +83,10 @@ layout: base-clean.njk
             <p>Pagos: VISA, MasterCard, American Express, Paypal, Transferencia Bancaria</p>
         </div>
     </div>
-    <div class="button-zone-container sm:visible">
+    <div class="button-zone-container sm:visible button-zone-sticky">
         <div class="button-zone">
             <button id="btn-menumobile" class="btn btn-secondary btn--full  btn-add">
-                <div>AÑADIR A LA CESTA </div>
+                <div>AÑADIR A LA CESTA sticky </div>
             </button>
         </div>
     </div>
@@ -149,16 +147,7 @@ layout: base-clean.njk
                 </div>
             </div>
         </div>
-        <div class="sk-load3">
-            <div class="p-view">
-                <div class="rat-3-4">
-                    <div class="rat-content">
-                        <img src="https://static.massimodutti.net/3/photos/2024/V/0/2/p/0912/338/401/0912338401_2_6_16.jpg?t=1714396098134&impolicy=massimodutti-itxmediumhigh&imformat=chrome&imwidth=700"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="sk-load3">
             <div class="p-view">
                 <div class="rat-3-4">
@@ -173,17 +162,6 @@ layout: base-clean.njk
             <div class="p-view">
                 <div class="rat-3-4">
                     <div class="rat-content">
-                        <img src="https://static.massimodutti.net/3/photos/2024/V/0/2/p/0912/338/401/0912338401_2_8_16.jpg?t=1714396098134&impolicy=massimodutti-itxmediumhigh&imformat=chrome&imwidth=700"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sk-load3">
-            <div class="p-view">
-                <div class="rat-3-4">
-                    <div class="rat-content">
                         <img src="https://static.massimodutti.net/3/photos/2024/V/0/2/p/0912/338/401/0912338401_2_1_16.jpg?t=1714044564833&impolicy=massimodutti-itxmediumhigh&imformat=chrome&imwidth=700"
                             alt="">
                     </div>
@@ -193,34 +171,50 @@ layout: base-clean.njk
     </div>
 </div>
 <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Añade la clase 'ficha-sticky' al elemento <body>
         document.body.classList.add("ficha-sticky");
+    
+        // Obtén los elementos del DOM
+        const btnMenuMobile = document.getElementById("btn-menumobile");
+        const btnMenuOverlay = document.getElementById("pdp-extra-info-overlay");
+        const buttonZoneContainer = document.querySelector('.button-zone-sticky');
+    
+        // Función para obtener la posición respecto al bottom de la ventana
+        const getPositionFromBottom = () => {
+            const rect = buttonZoneContainer.getBoundingClientRect();
+            return window.innerHeight - rect.bottom;
+        };
+    
+        // Función para alternar la clase en el cuerpo del documento y hacer scroll al inicio si se cumple la condición
+        const toggleExtraInfoAndScroll = () => {
+            document.body.classList.toggle("is-pdp-extra-info-open");
+            const positionFromBottom = getPositionFromBottom();
+            if (positionFromBottom > 10) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+    
+        // Función para eliminar la clase 'is-pdp-extra-info-open' cuando el navegador se ensancha
+        const handleResize = () => {
+            if (document.body.classList.contains("is-pdp-extra-info-open")) {
+                document.body.classList.remove("is-pdp-extra-info-open");
+            }
+        };
+    
+        // Agrega el event listener para los clics en los botones
+        btnMenuMobile.addEventListener("click", toggleExtraInfoAndScroll);
+        btnMenuOverlay.addEventListener("click", toggleExtraInfoAndScroll);
+    
+        // Agrega el event listener para el cambio de tamaño de la ventana
+        window.addEventListener("resize", handleResize);
+    
+        // Agrega un event listener para mostrar la posición respecto al bottom en consola
+        window.addEventListener('scroll', () => {
+            const positionFromBottom = getPositionFromBottom();
+            console.log('Posición respecto al bottom:', positionFromBottom);
+        });
     });
-    // Obtén los elementos del DOM
-    const btnMenuMobile = document.getElementById("btn-menumobile");
-    const btnMenuOverlay = document.getElementById("pdp-extra-info-overlay");
-    // Función para alternar la clase en el cuerpo del documento y hacer scroll al inicio si se cumple la condición
-    const toggleExtraInfoAndScroll = () => {
-        document.body.classList.toggle("is-pdp-extra-info-open");
-        // Verifica si la altura scrolleada es mayor o igual a la altura del viewport
-        if (window.scrollY >= window.innerHeight) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    };
-    // Función para eliminar la clase 'is-pdp-extra-info-open' cuando el navegador se ensancha
-    const handleResize = () => {
-        if (document.body.classList.contains("is-pdp-extra-info-open")) {
-            document.body.classList.remove("is-pdp-extra-info-open");
-        }
-    };
-    // Agrega el event listener para los clics en los botones
-    btnMenuMobile.addEventListener("click", toggleExtraInfoAndScroll);
-    btnMenuOverlay.addEventListener("click", toggleExtraInfoAndScroll);
-    // Agrega el event listener para el cambio de tamaño de la ventana
-    window.addEventListener("resize", handleResize);
-
-
-
-</script>
+    </script>
