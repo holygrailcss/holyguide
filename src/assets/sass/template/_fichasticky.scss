@@ -193,10 +193,8 @@
 .button-zone {
   background-color: #fff;
   padding: 24px 16px;
-  border-top: var(--line-width) solid $c-light-grey;
-  @media (min-width: 1280px) {
-    border: none;
-  }
+
+
 }
 .btn-menuwrap {
   position: absolute;
@@ -226,7 +224,7 @@
 }
 .button-zone-container {
   z-index: 1000;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   right: 0;
   left: 0;

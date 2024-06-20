@@ -49,11 +49,11 @@ layout: base-clean.njk
         </div>
     </div>
     <div class="cc-descripcion">
-        <div class="container-4 ptr-24-120">
+        <div class="container-pdp ptr-24-120">
             <div class="title-l mb-4">CÁRDIGAN PUNTO TRENZADO MANGA CORTA</div>
             <div class="title-l ">59,95 €</div>
         </div>
-        <div class="container-4 ptr-24-120">
+        <div class="container-pdp ptr-24-120">
             <div class="text-l  mb-64">Tejido de punto. Confeccionado con tejido en mezcla de algodón. Manga corta.
             </div>
             <div class="row">
@@ -73,58 +73,11 @@ layout: base-clean.njk
                     </ul>
                 </div>
             </div>
-            <div class="button-zone-container">
-                <div class="button-zone">
-                    <button id="btn-menumobile" class="btn btn-secondary btn--full  btn-add">
-                        <div>AÑADIR A LA CESTA </div>
-                 
-                    </button>
-                </div>
-                <div class="btn-menuwrap">
-                    <div class="row mb-32 pt-16">
-                        <div class="col-xs-12 text-center">
-                            <div class="mb-16">
-                                <div class="title-s  mb-16">GRIS | REF. 5651/624</div>
-                                <button class="btn-tertiary btn--color ml-8 mr-8 is-active" title="MARRÓN">
-                                    <div class="is-flex color-selector-2">
-                                        <img src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/5308/748/700/5308748700_3_1_7.jpg?t=1698329466502&amp;impolicy=massimodutti-itxmediumhigh&amp;imformat=chrome&amp;imwidth=100"
-                                            alt="MARRÓN">
-                                    </div>
-                                </button>
-                            </div>
-
-                            <hr class="border-t sm:visible mb-24">
-                            <ul class="list-clear list-inline text-center  list-size">
-                                <li>XS</li>
-                                <li>S</li>
-                                <li>M</li>
-                                <li>L</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row text-center mb-32">
-                        <div class="col-xs-12">
-                            <div class="text-m">
-                                Este producto talla más grande de lo habitual. <br>
-                                La modelo lleva la talla M y mide 177 cm.
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="border-t sm:visible mb-24">
-                    <div class="pr-16 pl-16">
-                        <div class="row  ">
-                            <div class="col-xs-6"> GUIA DE TALLAS</div>
-                            <div class="col-xs-6 text-right"> ENCUENTRA TU TALLA </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
             <div class=" pt-0 pb-64 align-items-center content-sp-between">
-                <div class="">GUÍA DE TALLAS</div>
-                <div class="">RECOMENDADOR DE TALLA</div>
+                <div class="">GUÍA DE TALLAS menu</div>
+                <div class="">RECOMENDADOR DE TALLA menu</div>
             </div>
             <p class="mb-40 text-l">Envío gratuito a domicilio en pedidos superiores a 80,00 €.</p>
             <div class="title-l mb-24">DISPONIBILIDAD EN TIENDA </div>
@@ -133,6 +86,64 @@ layout: base-clean.njk
             <p>Pagos: VISA, MasterCard, American Express, Paypal, Transferencia Bancaria</p>
         </div>
     </div>
+
+    <div class="button-zone-container">
+        <div class="button-zone">
+            <button id="btn-menumobile" class="btn btn-secondary btn--full  btn-add">
+                <div>AÑADIR A LA CESTA </div>
+         
+            </button>
+        </div>
+
+    </div>
+
+    
+    <div class="pdp-extra-info ">
+        <div class="row mb-32 pt-16">
+            <div class="col-xs-12 text-center">
+                <div class="mb-16">
+                    <div class="title-s  mb-16">GRIS | REF. 5651/624</div>
+                    <button class="btn-tertiary btn--color ml-8 mr-8 is-active" title="MARRÓN">
+                        <div class="is-flex color-selector-2">
+                            <img src="https://static.massimodutti.net/3/photos/2024/V/0/1/p/5308/748/700/5308748700_3_1_7.jpg?t=1698329466502&amp;impolicy=massimodutti-itxmediumhigh&amp;imformat=chrome&amp;imwidth=100"
+                                alt="MARRÓN">
+                        </div>
+                    </button>
+                </div>
+
+                <hr class="border-t sm:visible mb-24">
+                <ul class="list-clear list-inline text-center  list-size">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row text-center mb-32">
+            <div class="col-xs-12">
+                <div class="text-m">
+                    Este producto talla más grande de lo habitual. <br>
+                    La modelo lleva la talla M y mide 177 cm.
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-t sm:visible mb-24">
+        <div class="pr-16 pl-16">
+            <div class="row  ">
+                <div class="col-xs-6"> GUIA DE TALLAS</div>
+                <div class="col-xs-6 text-right"> ENCUENTRA TU TALLA </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdp-extra-info-overlay" class="pdp-extra-info-overlay">
+       
+    </div>
+
+
+
 </div>
 <div class="container-fluid bleed-0 ptr-120">
     <div class="row pb-48">
@@ -213,13 +224,22 @@ layout: base-clean.njk
         document.body.classList.add("ficha-sticky");
     });
     // Selecciona el botón
-    const btnMenuMobile = document.getElementById("btn-menumobile");
-    // Agrega un event listener para el clic en el botón
-    btnMenuMobile.addEventListener("click", function () {
-        // Añade la clase 'btn-mobile-open' al elemento <body>
-        document.body.classList.toggle("btn-mobile-open");
-    });
 
+const btnMenuMobile = document.getElementById("btn-menumobile");
+const btnMenuOverlay = document.getElementById("pdp-extra-info-overlay");
+
+// Función para alternar la clase en el cuerpo del documento
+const toggleExtraInfo = () => {
+    document.body.classList.toggle("is-pdp-extra-info-open");
+    
+    if (window.scrollY >= window.innerHeight) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+};
+
+// Agrega el event listener para los clics en los botones
+btnMenuMobile.addEventListener("click", toggleExtraInfo);
+btnMenuOverlay.addEventListener("click", toggleExtraInfo);
 
 
     function cursor() {
