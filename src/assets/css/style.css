@@ -28404,7 +28404,7 @@ ul {
     z-index: 9;
     left: 0;
     padding-bottom: 90px;
-    transition: 0.3s ease-in-out all;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .is-pdp-extra-info-open {
     overflow: hidden;

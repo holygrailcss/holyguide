@@ -786,58 +786,53 @@ ul {
   transform: translateY(100%);
 }
 
-@media (max-width: #{$break-md - 1} ) {
+
+
+@media (max-width: #{$break-md - 1}) {
   .pdp-extra-info {
-      position: fixed;
-      width: 100%;
-      transform: translateY(100%);
-      background-color: white;
-      bottom: 0;
-      -webkit-backdrop-filter: blur(25px);
-      backdrop-filter: blur(25px);
-      z-index: 9;
-      left: 0;
-      padding-bottom: 90px;
-      transition: 0.3s ease-in-out all;
+    position: fixed;
+    width: 100%;
+    transform: translateY(100%);
+    background-color: white;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    z-index: 9;
+    left: 0;
+    padding-bottom: 90px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
 
 
+  .is-pdp-extra-info-open {
+    overflow: hidden;
 
-    }
-  
-    .is-pdp-extra-info-open{
-      overflow: hidden;
-    }
-    
-    .is-pdp-extra-info-open .pdp-extra-info {
+    .pdp-extra-info {
       transform: translateY(0);
     }
-
-    .is-pdp-extra-info-open .pdp-extra-info-overlay {
+    
+    .pdp-extra-info-overlay {
       pointer-events: all;
       opacity: .6;
     }
-
-    
-
-
-    .pdp-extra-info-overlay{
-      opacity: .0;
-      pointer-events: none;
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      content: '';
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: black;
-      transition: all ease .5s;
-   
-    }
-  
   }
-  
+
+
+  .pdp-extra-info-overlay {
+    opacity: .0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    transition: all ease .5s;
+  }
+}
 .container-pdp {
   padding-right: 20px;
   padding-left: 20px;
@@ -846,10 +841,9 @@ ul {
   position: relative;
   width: 100%;
   max-width: 600px;
-
   @media (min-width: $break-sm) {
-      padding-right: 16px;
-      padding-left: 16px;
-      max-width: $container-4;
+    padding-right: 16px;
+    padding-left: 16px;
+    max-width: $container-4;
   }
 }
