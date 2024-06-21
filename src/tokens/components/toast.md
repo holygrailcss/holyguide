@@ -12,7 +12,7 @@ imageAlt: toast
 ---
 
 ### Descripción
-Un **Toast** es una notificación temporal que aparece sobre el contenido actual para informar brevemente al usuario sin interrumpir su flujo de trabajo. En Massimo Dutti, el diseño del Toast incluye un fondo negro y texto blanco, con opciones para cerrar la notificación o realizar una acción como "Deshacer". [Figma DS](https://www.figma.com/design/wVoW0EaNl1c7Mn7VBEuSGQ/DESIGN-SYSTEM-2024?node-id=1005-90032&t=MAQx0HVQE6zJp7Pv-11)
+
 
 ### Uso
 - **Cuándo usar**:
@@ -20,7 +20,7 @@ Un **Toast** es una notificación temporal que aparece sobre el contenido actual
   - Para proporcionar información relevante de manera no intrusiva.
   - Para permitir al usuario deshacer una acción reciente.
 - **Cuándo no usar**:
-  - Para mensajes que requieren confirmación del usuario (usar un Modal dialog [Figma Modal Dialog](https://www.figma.com/design/wVoW0EaNl1c7Mn7VBEuSGQ/DESIGN-SYSTEM-2024?node-id=4166-176635&t=MAQx0HVQE6zJp7Pv-11)).
+
   - Para notificaciones que bloquean la acción del usuario.
   - Para mensajes que deben permanecer visibles hasta que el usuario tome una acción específica.
 ### Propiedades
