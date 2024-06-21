@@ -6,9 +6,9 @@ titulo: token-login
 descripcion: token-login
 image: /assets/static/images/login.jpg
 author: autor
-date: 2024-01-12 
+date: 2024-01-12
 tags: ["token-templates"]
 imageAlt: login
 ---
-# login
 
+# login

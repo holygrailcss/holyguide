@@ -113,99 +113,99 @@
 }
 @mixin col-24-24 {
   flex: 0 0 95.83333333333334%;
-  max-width: 95.83333333333334%
+  max-width: 95.83333333333334%;
 }
 @mixin col-24-23 {
   flex: 0 0 95.83333333333334%;
-  max-width: 95.83333333333334%
+  max-width: 95.83333333333334%;
 }
 @mixin col-24-22 {
   flex: 0 0 91.66666666666666%;
-  max-width: 91.66666666666666%
+  max-width: 91.66666666666666%;
 }
 @mixin col-24-21 {
   flex: 0 0 87.5%;
-  max-width: 87.5%
+  max-width: 87.5%;
 }
 @mixin col-24-20 {
   flex: 0 0 83.33333333333334%;
-  max-width: 83.33333333333334%
+  max-width: 83.33333333333334%;
 }
 @mixin col-24-19 {
   flex: 0 0 79.16666666666666%;
-  max-width: 79.16666666666666%
+  max-width: 79.16666666666666%;
 }
 @mixin col-24-18 {
   flex: 0 0 75%;
-  max-width: 75%
+  max-width: 75%;
 }
 @mixin col-24-17 {
   flex: 0 0 70.83333333333334%;
-  max-width: 70.83333333333334%
+  max-width: 70.83333333333334%;
 }
 @mixin col-24-16 {
   flex: 0 0 66.66666666666666%;
-  max-width: 66.66666666666666%
+  max-width: 66.66666666666666%;
 }
 @mixin col-24-15 {
   flex: 0 0 62.5%;
-  max-width: 62.5%
+  max-width: 62.5%;
 }
 @mixin col-24-14 {
   flex: 0 0 58.333333333333336%;
-  max-width: 58.333333333333336%
+  max-width: 58.333333333333336%;
 }
 @mixin col-24-13 {
   flex: 0 0 54.166666666666664%;
-  max-width: 54.166666666666664%
+  max-width: 54.166666666666664%;
 }
 @mixin col-24-12 {
   flex: 0 0 50%;
-  max-width: 50%
+  max-width: 50%;
 }
 @mixin col-24-11 {
   flex: 0 0 45.83333333333333%;
-  max-width: 45.83333333333333%
+  max-width: 45.83333333333333%;
 }
 @mixin col-24-10 {
   flex: 0 0 41.66666666666667%;
-  max-width: 41.66666666666667%
+  max-width: 41.66666666666667%;
 }
 @mixin col-24-9 {
   flex: 0 0 37.5%;
-  max-width: 37.5%
+  max-width: 37.5%;
 }
 @mixin col-24-8 {
   flex: 0 0 33.33333333333333%;
-  max-width: 33.33333333333333%
+  max-width: 33.33333333333333%;
 }
 @mixin col-24-7 {
   flex: 0 0 29.166666666666668%;
-  max-width: 29.166666666666668%
+  max-width: 29.166666666666668%;
 }
 @mixin col-24-6 {
   flex: 0 0 25%;
-  max-width: 25%
+  max-width: 25%;
 }
 @mixin col-24-5 {
   flex: 0 0 20.833333333333336%;
-  max-width: 20.833333333333336%
+  max-width: 20.833333333333336%;
 }
 @mixin col-24-4 {
   flex: 0 0 16.666666666666664%;
-  max-width: 16.666666666666664%
+  max-width: 16.666666666666664%;
 }
 @mixin col-24-3 {
   flex: 0 0 12.5%;
-  max-width: 12.5%
+  max-width: 12.5%;
 }
 @mixin col-24-2 {
   flex: 0 0 8.333333333333332%;
-  max-width: 8.333333333333332%
+  max-width: 8.333333333333332%;
 }
 @mixin col-24-1 {
   flex: 0 0 4.166666666666666%;
-  max-width: 4.166666666666666%
+  max-width: 4.166666666666666%;
 }
 @mixin col-6-1 {
   -webkit-box-flex: 0;
@@ -410,7 +410,7 @@
       }
     }
   }
-  &_1   {
+  &_1 {
     #{$template}-wrap {
       margin-bottom: 8px;
       @media (min-width: $break-sm) {
@@ -421,7 +421,7 @@
       }
     }
   }
-  &_2   {
+  &_2 {
     #{$template}-wrap {
       margin-top: 8px;
       margin-bottom: 8px;
@@ -466,9 +466,6 @@
   }
 }
 
-
-
-
 @mixin sp-contents-sm-0 {
   @media (min-width: $break-sm) {
     li .card9-contents {
@@ -484,16 +481,13 @@
     li:nth-child(3n - 2) .card9-contents {
       padding-left: 12px;
       padding-right: 0;
-
     }
     li:nth-child(3n) .card9-contents {
       padding-left: 0;
       padding-right: 12px;
-
     }
   }
 }
-
 
 @mixin sp-contents-sm-4 {
   //espaciados en los lados
@@ -501,7 +495,6 @@
     li:nth-child(4n - 3) .card9-contents {
       padding-left: 12px;
       padding-right: 0;
-
     }
     li:nth-child(4n) .card9-contents {
       padding-left: 0;
@@ -509,8 +502,6 @@
     }
   }
 }
-
-
 
 //espaciados en desktop a los lados
 @mixin sp-contents-sm-1 {
@@ -526,7 +517,6 @@
   }
 }
 
-
 .grid-product-list {
   .sk-load2::before {
     padding-top: calc(133.25% + 76px);
@@ -536,13 +526,10 @@
   }
 }
 
-
 @mixin sp-gapnodetails($template) {
-
   #{$template}_0 {
     #{$template}-wrap {
       gap: 0;
     }
-  
   }
 }

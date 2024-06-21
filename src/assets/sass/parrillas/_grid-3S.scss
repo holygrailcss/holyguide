@@ -1,5 +1,5 @@
-@import '../abstract/_all.scss';
-@import '../abstract/_categoryGrid.scss';
+@import "../abstract/_all.scss";
+@import "../abstract/_categoryGrid.scss";
 
 $grid-cols--3S: 3;
 $margin-grid-cols--3S: 20px;
@@ -50,12 +50,12 @@ $margin-grid-cols--3S: 20px;
 
 //         margin-top: $sm-grid-top-margin;
 //         margin-bottom: $sm-grid-bottom-margin;
-    
+
 //         @media (min-width: $break-sm) {
 //             margin-top: $grid-top-margin;
 //             margin-bottom: $grid-bottom-margin;
 //         }
-    
+
 //         display: flex;
 //         align-items: baseline;
 //         flex-direction: row;
@@ -87,17 +87,17 @@ $margin-grid-cols--3S: 20px;
 // }
 
 .grid-product-wrap--3S {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 8px;
-    @include details-pmobile-pdesktop;
-    @include colors-pmobile-pdesktop;
-    @media (min-width: $break-sm) {
-        gap: 16px;
-        grid-template-columns: repeat(12, 1fr);
-        .grid-product-list--3S {
-            grid-column: span 4;
-        }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 8px;
+  @include details-pmobile-pdesktop;
+  @include colors-pmobile-pdesktop;
+  @media (min-width: $break-sm) {
+    gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+    .grid-product-list--3S {
+      grid-column: span 4;
     }
+  }
 }

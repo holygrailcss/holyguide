@@ -19,9 +19,10 @@ Para poder usar el ratio solo tenemos que incluirlo dentro de `.ar-2-1` para que
 Adjuntamos los paddings-tops para los ratios.
 Si no existe tu ratio puedes crear nuevos ratios de esta manera. `@include ratio(ancho, alto);`
 
- {% br %} 
+{% br %}
+
 ```html
-<div class='ar-2-1'>
-  <img src='image.jpg' alt='Image description'>
+<div class="ar-2-1">
+  <img src="image.jpg" alt="Image description" />
 </div>
 ```

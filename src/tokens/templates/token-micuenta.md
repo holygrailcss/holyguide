@@ -6,9 +6,9 @@ titulo: token-micuenta
 descripcion: token-micuenta
 image: /assets/static/images/micuenta.jpg
 author: autor
-date: 2023-12-21 
+date: 2023-12-21
 tags: ["token-templates"]
 imageAlt: micuenta
 ---
-# Micuenta
 
+# Micuenta

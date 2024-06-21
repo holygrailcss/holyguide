@@ -2,15 +2,12 @@
 @import "../abstract/_gridNEW.scss";
 .n1d {
   .n1d-wrap {
-    margin: 0 ;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
 
-
     @include sp-contents-xs;
-
-
 
     @media (min-width: $break-md) {
       margin: 0 40px;

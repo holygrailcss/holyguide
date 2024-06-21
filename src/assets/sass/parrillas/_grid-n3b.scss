@@ -1,18 +1,18 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .n3b {
-    @include sp-wraps('.n3b');
+  @include sp-wraps(".n3b");
 }
 .n3b-wrap {
-    display: grid;
-    @include m-body-bleed;
-    @include sp-contents-xs-1;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    @media (min-width: $break-sm) {
-        @include sp-contents-sm-3;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 72px;
-    }
+  display: grid;
+  @include m-body-bleed;
+  @include sp-contents-xs-1;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  @media (min-width: $break-sm) {
+    @include sp-contents-sm-3;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 72px;
+  }
 }

@@ -1,34 +1,29 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
-
 .n2b {
-  @include sp-wraps('.n2b') ;
+  @include sp-wraps(".n2b");
 }
-  .n2b-wrap {
-    @include m-body;
-    display: flex;
-    justify-content: center;
-    @include gap-20;
+.n2b-wrap {
+  @include m-body;
+  display: flex;
+  justify-content: center;
+  @include gap-20;
 
-  li:first-child{
-
-  .product-view-info{
-    margin-right: 8px;
+  li:first-child {
+    .product-view-info {
+      margin-right: 8px;
+    }
   }
-  }
+}
+.n2b-item {
+  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+  @include col-24-12;
 
-
-  }
-  .n2b-item {
-    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+  @media (min-width: $break-md) {
     @include col-24-12;
- 
-
-    @media (min-width: $break-md) {
-      @include col-24-12;
-    }
-    @media (min-width: $break-xl) {
-      @include col-24-8;
-    }
   }
+  @media (min-width: $break-xl) {
+    @include col-24-8;
+  }
+}

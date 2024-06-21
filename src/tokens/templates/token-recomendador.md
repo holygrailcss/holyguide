@@ -6,9 +6,9 @@ titulo: token-recomendador
 descripcion: token-recomendador
 image: /assets/static/images/recomendador.jpg
 author: autor
-date: 2024-02-14 
+date: 2024-02-14
 tags: ["token-templates"]
 imageAlt: recomendador
 ---
-# recomendador
 
+# recomendador

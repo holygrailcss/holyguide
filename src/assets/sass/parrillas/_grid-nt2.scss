@@ -1,26 +1,27 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .nt2 {
-    .nt2-wrap {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        @media (min-width: $break-sm) {
-            padding-top: 48px;
-            padding-bottom: 48px;
-        }
-        @media (min-width: $break-xl) {}
+  .nt2-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @media (min-width: $break-sm) {
+      padding-top: 48px;
+      padding-bottom: 48px;
     }
-    .nt2-item {
-        //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-        padding: 0 10px;
-        @media (min-width: $break-sm) {
-            padding: 0 120px;
-        }
-        @media (min-width: $break-xl) {
-            padding: 0 240px;
-        }
+    @media (min-width: $break-xl) {
     }
+  }
+  .nt2-item {
+    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+    padding: 0 10px;
+    @media (min-width: $break-sm) {
+      padding: 0 120px;
+    }
+    @media (min-width: $break-xl) {
+      padding: 0 240px;
+    }
+  }
 }

@@ -1,5 +1,3 @@
-
-
 header {
   position: fixed;
   top: 0;
@@ -18,8 +16,6 @@ header {
     padding-bottom: 0;
     height: 60px;
   }
-
-
 }
 header ul.list-clear li {
   margin: 0;
@@ -27,7 +23,6 @@ header ul.list-clear li {
 header a {
   color: white;
 }
-
 
 header.interior a {
   color: #212121;
@@ -69,8 +64,6 @@ header.interior svg path {
   }
 }
 
-
-
 .search-bar {
   position: relative;
 }
@@ -83,5 +76,5 @@ header.interior svg path {
   background-color: #fff;
   width: 100%;
   max-width: 250px;
-  height: var(--line-width) ;
+  height: var(--line-width);
 }

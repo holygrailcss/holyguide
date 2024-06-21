@@ -188,7 +188,7 @@ La nomenclatura de nuestro sistema está basada en los grupos diferenciados en e
 
 A continuación se muestran algunos ejemplos como lista de referencia ante la creación de un nuevo sistema de diseño en un proyecto. Hay proyectos en los que no aparezcan todos los componentes que se listan a continuación, y otros proyectos en los que surjan nuevos. La idea es adaptar las bases, y que producto y sistema de diseño evolucionen juntos.
 
-#### 5.1  Fragmentos
+#### 5.1 Fragmentos
 
 - Iconos
   **_01 Fragments / Icon / [Tamaño]px / [Nombre del icono]_**
@@ -197,7 +197,7 @@ A continuación se muestran algunos ejemplos como lista de referencia ante la cr
 - Contenedores
   **_01 Fragments / Container / [Tipo de contenedor]_**
 
-#### 5.2  Componentes
+#### 5.2 Componentes
 
 - Botones
   02 Components / Button / [Tipo de botón] / [Estado]

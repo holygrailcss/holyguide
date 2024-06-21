@@ -21,8 +21,4 @@ Holygrail es una biblioteca CSS y una libreria de componentes . Esto significa q
 
 Puede importar el archivo scss a través de jsdeliver :
 
-
-
-
-
 Crearemos una versión rtl exclusiva aqui

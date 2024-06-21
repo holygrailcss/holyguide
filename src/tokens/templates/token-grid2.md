@@ -6,9 +6,9 @@ titulo: token-grid2
 descripcion: token-grid2
 image: /assets/static/images/grid2.jpg
 author: autor
-date: 2024-01-15 
+date: 2024-01-15
 tags: ["token-templates"]
 imageAlt: grid2
 ---
-# grid2
 
+# grid2

@@ -13,7 +13,6 @@ $breakpointscols: (
   xl: 1440px,
 ) !default;
 
-
 $colBreakpoints: length($breakpoints);
 
 $break-xs: nth(map-values($breakpoints), 1);

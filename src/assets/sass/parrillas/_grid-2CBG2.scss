@@ -135,16 +135,16 @@ $xl-grid-2CBG2-padding: 260px;
 
 .grid-product-wrap--2CBG2 {
   @media (min-width: $break-sm) {
-      padding-top: $grid-2CBG2-padding;
-      padding-bottom: $grid-2CBG2-padding;
-      margin: $grid-2CBG2-margin auto;
+    padding-top: $grid-2CBG2-padding;
+    padding-bottom: $grid-2CBG2-padding;
+    margin: $grid-2CBG2-margin auto;
   }
 
   @media (min-width: $break-xl) {
-      padding-top: $xl-grid-2CBG2-padding;
-      padding-bottom: $xl-grid-2CBG2-padding;
-      margin: $xl-grid-2CBG2-margin auto;
-      max-width: $xl-grid-2CBG2-max-width;
+    padding-top: $xl-grid-2CBG2-padding;
+    padding-bottom: $xl-grid-2CBG2-padding;
+    margin: $xl-grid-2CBG2-margin auto;
+    max-width: $xl-grid-2CBG2-max-width;
   }
   display: grid;
   grid-template-columns: 1fr;
@@ -154,36 +154,36 @@ $xl-grid-2CBG2-padding: 260px;
   @include colors-pmobile-0;
 
   @media (min-width: $break-sm) {
-      gap: 16px;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: auto;
-      .grid-product-list--2CBG2 {
-          &:nth-child(odd) {
-              grid-column: 2 / span 4;
-          }
-          &:nth-child(even) {
-              grid-column: 8 / span 4;
-          }
+    gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    .grid-product-list--2CBG2 {
+      &:nth-child(odd) {
+        grid-column: 2 / span 4;
       }
+      &:nth-child(even) {
+        grid-column: 8 / span 4;
+      }
+    }
   }
 
   :host(.card9-wrap-details) {
-      padding: 0;
+    padding: 0;
   }
 
   .card9 {
-      product-view-details {
-          .card9-wrap-details {
-              background-color: transparent; //TODO holygrail
-          }
+    product-view-details {
+      .card9-wrap-details {
+        background-color: transparent; //TODO holygrail
       }
+    }
   }
 
   product-view.p-view {
-      background-color: transparent;
+    background-color: transparent;
   }
 
   .sk-load2:before {
-      background-color: transparent;
+    background-color: transparent;
   }
 }

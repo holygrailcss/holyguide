@@ -16,10 +16,10 @@ imageAlt: Ilustración de un diseño de sistema web
 
 En ocasiones necesitaremos posicionar imágenes para ver las futuras maquetas, para ello usaremos esta colección de placeholders.
 
- La ruta para incorporar imagenes placeholders.
+La ruta para incorporar imagenes placeholders.
 
 ```scss
-https://holygrail2.github.io/assets/placeholder/2-3.jpg
+https: ; //holygrail2.github.io/assets/placeholder/2-3.jpg
 ```
 
 ### Como se usa
@@ -36,9 +36,12 @@ Si no existe tu ratio puedes crear nuevos ratios de esta manera.
 ### Ejemplo
 
 ```html
-<div class='rat-2-1'>
-  <div class='rat-content'>
-    <img src='https://holygrail2.github.io/assets/placeholder/2-3.jpg' alt='Image description'>
+<div class="rat-2-1">
+  <div class="rat-content">
+    <img
+      src="https://holygrail2.github.io/assets/placeholder/2-3.jpg"
+      alt="Image description"
+    />
   </div>
 </div>
 ```

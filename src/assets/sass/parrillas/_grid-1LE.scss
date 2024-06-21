@@ -1,16 +1,12 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_categoryGrid.scss";
 
-
-
-
 .grid-product-wrap--1LE {
-    display: grid;
-    margin-bottom: 16px;
-    @media (min-width: $break-sm) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        margin-bottom: 50px;
-    }
+  display: grid;
+  margin-bottom: 16px;
+  @media (min-width: $break-sm) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+  }
 }
-

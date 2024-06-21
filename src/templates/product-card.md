@@ -7,8 +7,9 @@ titulo: product-card
 descripcion: product-card
 image: /assets/static/images/product-card.jpg
 author: autor
-date: 2024-06-11 
+date: 2024-06-11
 tags: ["templates"]
 imageAlt: product-card
 ---
+
 # product-card

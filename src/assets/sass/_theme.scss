@@ -86,15 +86,13 @@
 
   grid-template-columns: repeat(6, 1fr);
 
-  @include space-20-40 ;
+  @include space-20-40;
 
   @media (min-width: $break-sm) {
     gap: 20px;
 
     grid-template-columns: repeat(12, 1fr);
   }
-
-
 
   @media (min-width: $break-md) {
     gap: 20px;
@@ -103,11 +101,8 @@
   }
 
   @media (min-width: $break-xl) {
-
     grid-template-columns: repeat(24, 1fr);
   }
-
-
 
   .overlayclip {
     background-color: red;
@@ -266,39 +261,24 @@
   }
 }
 
-.overlay{
-
-
-div:nth-of-type(n+7) {
+.overlay {
+  div:nth-of-type(n + 7) {
     display: none;
- 
-}
+  }
 
   @media (min-width: $break-sm) {
-
-
-    div:nth-of-type(n+7) {
+    div:nth-of-type(n + 7) {
       display: block;
-   
-  }
+    }
 
-    div:nth-of-type(n+13) {
+    div:nth-of-type(n + 13) {
       display: none;
-  }
-
+    }
   }
 
   @media (min-width: $break-xl) {
-
-
-
-
-    div:nth-of-type(n+12) {
+    div:nth-of-type(n + 12) {
       display: block;
+    }
   }
-
-
-
-
-
-  }}
+}

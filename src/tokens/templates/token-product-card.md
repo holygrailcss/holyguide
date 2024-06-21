@@ -7,9 +7,9 @@ titulo: token-product-card
 descripcion: token-product-card
 image: /assets/static/images/product-card.jpg
 author: autor
-date: 2024-06-11 
+date: 2024-06-11
 tags: ["token-templates"]
 imageAlt: product-card
 ---
-# product-card
 
+# product-card

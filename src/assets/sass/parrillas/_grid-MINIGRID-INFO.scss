@@ -26,15 +26,15 @@ $MINIGRID-INFO-GUTTER-SM: 8px;
 
   @include details-pmobile-0;
   @include colors-pmobile-0;
-  .grid-product-list--MINIGRID-INFO:nth-child(3n+1) {
+  .grid-product-list--MINIGRID-INFO:nth-child(3n + 1) {
     @include details-pmobile-pdesktop;
-}
-.grid-product-list--MINIGRID-INFO:nth-child(3n) {
-  @include colors-pmobile-pdesktop;
-}
+  }
+  .grid-product-list--MINIGRID-INFO:nth-child(3n) {
+    @include colors-pmobile-pdesktop;
+  }
 
   @media (min-width: $break-sm) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 }

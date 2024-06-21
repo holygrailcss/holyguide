@@ -8,26 +8,83 @@ $padding-mobile: 16px;
 $text-input-m: 12px;
 $text-input-d: 12px;
 
-$height-sm: 150px ;
+$height-sm: 150px;
 
 $minheaders: (
+  guia-1: (
+    12px,
+    18px,
+    1.4,
+    "regular",
+  ),
+  p-1: (
+    12px,
+    12px,
+    1.4,
+    "regular",
+  ),
 
-  guia-1: (12px, 18px, 1.4, "regular", ),
-  p-1: (12px, 12px, 1.4, "regular", ),
+  p-tag: (
+    8px,
+    10px,
+    1.3,
+    "regular",
+  ),
+  h2: (
+    18px,
+    24px,
+    1.2,
+    "bold",
+  ),
 
-
-  p-tag: ( 8px, 10px, 1.3, "regular", ),
-  h2: ( 18px, 24px, 1.2, "bold", ), 
-
-  title-l: (12px, 12px, 1.4, "regular", ),
-  title-l-l: (12px, 12px, 1.4, "light", ),
-  title-l-b: (12px, 12px, 1.4, "medium", ),
-  title-m: (11px, 11px, 1.4, "regular", ),
-  title-s: (10px, 10px, 1.4, "regular", ),
-  text-l: (12px, 12px, 1.5, "regular", ),
-  text-l-l: (12px, 12px, 1.5, "light", ),
-  text-m: (11px, 11px, 1.5, "regular", ),
-
+  title-l: (
+    12px,
+    12px,
+    1.4,
+    "regular",
+  ),
+  title-l-l: (
+    12px,
+    12px,
+    1.4,
+    "light",
+  ),
+  title-l-b: (
+    12px,
+    12px,
+    1.4,
+    "medium",
+  ),
+  title-m: (
+    11px,
+    11px,
+    1.4,
+    "regular",
+  ),
+  title-s: (
+    10px,
+    10px,
+    1.4,
+    "regular",
+  ),
+  text-l: (
+    12px,
+    12px,
+    1.5,
+    "regular",
+  ),
+  text-l-l: (
+    12px,
+    12px,
+    1.5,
+    "light",
+  ),
+  text-m: (
+    11px,
+    11px,
+    1.5,
+    "regular",
+  ),
 );
 
 /* TYPES FIJOS */
@@ -68,19 +125,52 @@ $headersFixers: (
 );
 
 $headersFluids: (
-
-1: ( 60px, 160px, 0.8, ), 
-2: ( 40px, 80px, 0.9, ), 
-3: ( 40px, 100px, 0.9, ),
- 4: ( 40px, 60px, 0.9, ), 
- 5: ( 20px, 40px, 0.9, ), 
- 6: ( 18px, 24px, 0.9, ), 
- 7: ( 18px, 24px, 0.9, ), 
- 8: ( 18px, 24px, 0.9, ), 
- 18: ( 18px, 24px, 1.4, ),
+  1: (
+    60px,
+    160px,
+    0.8,
+  ),
+  2: (
+    40px,
+    80px,
+    0.9,
+  ),
+  3: (
+    40px,
+    100px,
+    0.9,
+  ),
+  4: (
+    40px,
+    60px,
+    0.9,
+  ),
+  5: (
+    20px,
+    40px,
+    0.9,
+  ),
+  6: (
+    18px,
+    24px,
+    0.9,
+  ),
+  7: (
+    18px,
+    24px,
+    0.9,
+  ),
+  8: (
+    18px,
+    24px,
+    0.9,
+  ),
+  18: (
+    18px,
+    24px,
+    1.4,
+  ),
 ) !default;
-
-
 
 $font-family-a-l: "dutti-daily-light", Helvetica, arial, sans-serif;
 $font-family-a-r: "dutti-daily-regular", Helvetica, arial, sans-serif;
@@ -107,7 +197,6 @@ $font-family-form: "dutti-daily-regular", Helvetica, arial, sans-serif;
 
 $btn-radius: 0;
 
-
 $c-white: #ffffff;
 $c-black: #000000;
 
@@ -125,62 +214,175 @@ $c-feel: #fb9962;
 $c-feel-dark: #c94c07;
 $c-special: #b99d6b; //gold
 
-
-
-$pt: 'padding-top';
+$pt: "padding-top";
 $padding-top: (
-    ptr-160: (64px, 64px, 160px, 160px, ),
-    ptr-136: (48px, 48px, 136px, 136px, ),
-    ptr-120: (64px, 64px, 120px, 120px, ),
-    ptr-20-120: (20px, 20px, 120px, 120px, ),
-    ptr-24-120:(24px, 24px, 120px, 120px, ),
-    ptr-112: (80px, 80px, 112px, 112px),
-    ptr-96: (64px, 64px, 96px, 96px),
-    ptr-80: (48px, 48px, 80px, 80px),
-    ptr-64: (32px, 32px, 64px, 64px),
-    ptr-24:  (16px, 16px, 24px, 24px)
+  ptr-160: (
+    64px,
+    64px,
+    160px,
+    160px,
+  ),
+  ptr-136: (
+    48px,
+    48px,
+    136px,
+    136px,
+  ),
+  ptr-120: (
+    64px,
+    64px,
+    120px,
+    120px,
+  ),
+  ptr-20-120: (
+    20px,
+    20px,
+    120px,
+    120px,
+  ),
+  ptr-24-120: (
+    24px,
+    24px,
+    120px,
+    120px,
+  ),
+  ptr-112: (
+    80px,
+    80px,
+    112px,
+    112px,
+  ),
+  ptr-96: (
+    64px,
+    64px,
+    96px,
+    96px,
+  ),
+  ptr-80: (
+    48px,
+    48px,
+    80px,
+    80px,
+  ),
+  ptr-64: (
+    32px,
+    32px,
+    64px,
+    64px,
+  ),
+  ptr-24: (
+    16px,
+    16px,
+    24px,
+    24px,
+  ),
 );
 
-
-$pb: 'padding-bottom';
+$pb: "padding-bottom";
 $padding-bottom: (
-    pbr-160: (64px, 64px, 160px, 160px, ),
-    pbr-136: (64px, 64px, 136px, 136px, ),
-    pbr-120: (64px, 64px, 120px, 120px, ),
-    pbr-20-120: (20px, 20px, 120px, 120px, ),
-    pbr-112: (80px, 80px, 112px, 112px),
-    pbr-96: (64px, 64px, 96px, 96px),
-    pbr-80: (48px, 48px, 80px, 80px),
-    pbr-64: (32px, 32px, 64px, 64px),
-    pbr-24:  (16px, 16px, 24px, 24px)
+  pbr-160: (
+    64px,
+    64px,
+    160px,
+    160px,
+  ),
+  pbr-136: (
+    64px,
+    64px,
+    136px,
+    136px,
+  ),
+  pbr-120: (
+    64px,
+    64px,
+    120px,
+    120px,
+  ),
+  pbr-20-120: (
+    20px,
+    20px,
+    120px,
+    120px,
+  ),
+  pbr-112: (
+    80px,
+    80px,
+    112px,
+    112px,
+  ),
+  pbr-96: (
+    64px,
+    64px,
+    96px,
+    96px,
+  ),
+  pbr-80: (
+    48px,
+    48px,
+    80px,
+    80px,
+  ),
+  pbr-64: (
+    32px,
+    32px,
+    64px,
+    64px,
+  ),
+  pbr-24: (
+    16px,
+    16px,
+    24px,
+    24px,
+  ),
 );
 
-
-$pl: 'padding-left';
+$pl: "padding-left";
 $padding-left: (
-    pl-body: (20px, 20px, 40px, 40px, ),
-    );
+  pl-body: (
+    20px,
+    20px,
+    40px,
+    40px,
+  ),
+);
 
-    
-$pr: 'padding-right';
+$pr: "padding-right";
 $padding-right: (
-    pr-body: (20px, 20px, 40px, 40px, ),
-    );
+  pr-body: (
+    20px,
+    20px,
+    40px,
+    40px,
+  ),
+);
 
-
-$mb: 'margin-bottom';
+$mb: "margin-bottom";
 $margin-bottom: (
-    mbr-16-32: (16px, 16px, 32px, 32px, ),
-    mbr-8-24: (8px, 8px, 24px, 24px, )
+  mbr-16-32: (
+    16px,
+    16px,
+    32px,
+    32px,
+  ),
+  mbr-8-24: (
+    8px,
+    8px,
+    24px,
+    24px,
+  ),
 );
 
-$mt: 'margin-top';
+$mt: "margin-top";
 $margin-top: (
-    mtr-16-32: (16px, 16px, 32px, 32px, )
+  mtr-16-32: (
+    16px,
+    16px,
+    32px,
+    32px,
+  ),
 );
 
-
-   $heights: (
+$heights: (
   height-xs: (
     80px,
     80px,

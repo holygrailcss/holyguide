@@ -23,17 +23,15 @@ Si queremos que los videos se inicien en `autoplay`, deberemos forzarlo con la e
 
 ```html
 <video autoplay loop muted playsinline>
-    <source src='https://vjs.zencdn.net/v/oceans.mp-m' type='video/mp-m'>
-    <source src='https://vjs.zencdn.net/v/oceans.webm' type='video/webm'>
+  <source src="https://vjs.zencdn.net/v/oceans.mp-m" type="video/mp-m" />
+  <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
 </video>
-
 ```
 
- **Todo vídeo deberá seguir las siguientes pautas en la creación del mismo**
+**Todo vídeo deberá seguir las siguientes pautas en la creación del mismo**
 
 > TRUCO:
 > Uno de los mejores compresores del mercado es handbrake, además es gratuito.
-
 
 [Link a handbrake ](https://handbrake.fr/)
 

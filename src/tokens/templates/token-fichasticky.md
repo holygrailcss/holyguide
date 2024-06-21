@@ -6,9 +6,9 @@ titulo: token-fichasticky
 descripcion: token-fichasticky
 image: /assets/static/images/fichasticky.jpg
 author: autor
-date: 2024-03-12 
+date: 2024-03-12
 tags: ["token-templates"]
 imageAlt: fichasticky
 ---
-# fichasticky
 
+# fichasticky

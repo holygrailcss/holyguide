@@ -11,7 +11,6 @@ html {
     li {
       font-size: 14px;
       line-height: 1.5;
-
     }
     margin-bottom: 20px;
   }
@@ -196,10 +195,9 @@ html {
   position: relative;
   padding: 20px 20%;
   display: grid;
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   transition: 0.2s ease all;
   flex-direction: column;
-
 }
 .code-view.bg-dark {
   background-color: #000;
@@ -259,8 +257,7 @@ html {
   }
 }
 
-
-.check-rtl{
+.check-rtl {
   width: 10px;
   height: 5px;
   background-color: white;
@@ -272,7 +269,6 @@ html {
   overflow: hidden;
   cursor: pointer;
 }
-
 
 .opencode-button {
   .viewcode {
@@ -373,7 +369,8 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  svg-icon {}
+  svg-icon {
+  }
 }
 .btncode {
   position: absolute;
@@ -608,13 +605,10 @@ html {
     }
   }
 }
-.sass-zone{
-
-
-.code-zone{
-  height: 30px;
-
-}
+.sass-zone {
+  .code-zone {
+    height: 30px;
+  }
 }
 
 .code-zone {
@@ -622,7 +616,6 @@ html {
 
   transition: all ease 0.2s;
   cursor: pointer;
-
 
   .code-title {
     transition: all ease 0.2s;
@@ -682,16 +675,16 @@ code {
   }
 }
 .guide {
-  code[class*=language-] {
+  code[class*="language-"] {
     padding: 0 0;
   }
-  pre[class*=language-] {
+  pre[class*="language-"] {
     padding: 16px;
     margin-top: 0px;
     margin-bottom: 20px;
   }
-  :not(pre)>code[class*=language-],
-  pre[class*=language-] {
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
     background: #000;
   }
   code {
@@ -718,7 +711,7 @@ code {
     padding: 0 8px 8px 0;
     color: gray;
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
   ol {
@@ -771,20 +764,13 @@ code {
   }
 }
 
-
-.fake-body{
-
-    height: 100vh;
-    background-color: red;
-
-  
-
+.fake-body {
+  height: 100vh;
+  background-color: red;
 }
 
-.fake-header{
+.fake-header {
   z-index: 1000;
-
-
 
   width: 100%;
   height: 80px;
@@ -793,9 +779,8 @@ code {
   justify-content: space-between;
   margin-top: var(--top-notification-height, 0px);
 
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
   position: relative;
-
 
   .search-bar:after {
     position: absolute;
@@ -805,14 +790,12 @@ code {
     content: "";
     height: 1px;
     background-color: black;
-
+  }
 }
 
-}
-
-.tab-first{
-  li:first-child a ,  li:first-child button{
+.tab-first {
+  li:first-child a,
+  li:first-child button {
     padding-left: 0px;
   }
-
 }

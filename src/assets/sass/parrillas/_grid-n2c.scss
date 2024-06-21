@@ -1,10 +1,8 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
-
-
 .n2c {
-  @include sp-wraps('.n2c');
+  @include sp-wraps(".n2c");
 }
 .n2c-wrap {
   display: grid;
@@ -15,8 +13,8 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
   @media (min-width: $break-sm) {
-      margin-inline: 10%;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
+    margin-inline: 10%;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
   }
 }

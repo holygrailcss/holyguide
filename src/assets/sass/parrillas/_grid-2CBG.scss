@@ -17,55 +17,55 @@ $xl-grid-2CBG-margin: 50px;
 $xl-grid-2CBG-padding: 160px;
 
 .grid-product-wrap--2CBG {
-    @media (min-width: $break-sm) {
-        padding-top: $grid-2CBG-padding;
-        padding-bottom: $grid-2CBG-padding;
-        margin: $grid-2CBG-margin auto;
-    }
+  @media (min-width: $break-sm) {
+    padding-top: $grid-2CBG-padding;
+    padding-bottom: $grid-2CBG-padding;
+    margin: $grid-2CBG-margin auto;
+  }
 
-    @media (min-width: $break-xl) {
-        padding-top: $xl-grid-2CBG-padding;
-        padding-bottom: $xl-grid-2CBG-padding;
-        margin: $xl-grid-2CBG-margin auto;
-        max-width: $xl-grid-2CBG-max-width;
-    }
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
-    @include details-pmobile-0;
-    @include colors-pmobile-0;
+  @media (min-width: $break-xl) {
+    padding-top: $xl-grid-2CBG-padding;
+    padding-bottom: $xl-grid-2CBG-padding;
+    margin: $xl-grid-2CBG-margin auto;
+    max-width: $xl-grid-2CBG-max-width;
+  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  @include details-pmobile-0;
+  @include colors-pmobile-0;
 
-    @media (min-width: $break-sm) {
-        gap: 16px;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto;
-        .grid-product-list--2CBG {
-            &:nth-child(odd) {
-                grid-column: 2 / span 4;
-            }
-            &:nth-child(even) {
-                grid-column: 8 / span 4;
-            }
-        }
+  @media (min-width: $break-sm) {
+    gap: 16px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    .grid-product-list--2CBG {
+      &:nth-child(odd) {
+        grid-column: 2 / span 4;
+      }
+      &:nth-child(even) {
+        grid-column: 8 / span 4;
+      }
     }
+  }
 
-    :host(.card9-wrap-details) {
-        padding: 0;
-    }
+  :host(.card9-wrap-details) {
+    padding: 0;
+  }
 
-    .card9 {
-        product-view-details {
-            .card9-wrap-details {
-                background-color: transparent; //TODO holygrail
-            }
-        }
+  .card9 {
+    product-view-details {
+      .card9-wrap-details {
+        background-color: transparent; //TODO holygrail
+      }
     }
+  }
 
-    product-view.p-view {
-        background-color: transparent;
-    }
+  product-view.p-view {
+    background-color: transparent;
+  }
 
-    .sk-load2:before {
-        background-color: transparent;
-    }
+  .sk-load2:before {
+    background-color: transparent;
+  }
 }

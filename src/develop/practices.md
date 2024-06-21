@@ -6,12 +6,13 @@ tags: ["Estructuras modulares", "develop", ""]
 titulo: Buenas Practicas
 descripcion: Buenas prácticas
 ---
+
 ### Intro
 
 Los mínimos mandamientos a seguir en maqueta.
 {% br %}
 
-## No realizar nunca  ❌
+## No realizar nunca ❌
 
 No Usar clases para hacer querySelector
 
@@ -29,8 +30,7 @@ No usaremos /_ xxx _/ para comentar el HTML
 
 No usaremos class="bg-light" para comentar crear un selector en javascript.
 
-
-## Buenas practicas  ✅
+## Buenas practicas ✅
 
 Usar clases nativas de Angular para seleccionar elementos (ViewChild, ElementRef)importar todas las clases al inicio del sass abstract/all
 
@@ -44,4 +44,4 @@ Los botones estarán habilitados para saber que nos falta por rellenar al hacer 
 
 Usaremos // xxx para poder debugar la maqueta
 
- Usaremos // .js-loquesea para poder identificar que es una clase selector via js.
+Usaremos // .js-loquesea para poder identificar que es una clase selector via js.

@@ -7,8 +7,9 @@ titulo: grid2
 descripcion: grid2
 image: /assets/static/images/grid2.jpg
 author: autor
-date: 2024-01-15 
+date: 2024-01-15
 tags: ["templates"]
 imageAlt: grid2
 ---
+
 # grid2

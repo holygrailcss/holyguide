@@ -1,34 +1,23 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 
-
 .n6b {
+  @include sp-wraps(".n6b");
+}
+.n6b-wrap {
+  @include m-body-0;
+  @include gap-1;
+  @include sp-contents-xs;
+  @include sp-contents-sm;
 
-    @include sp-wraps('.n6b') ;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+
+  display: grid;
+  @media (min-width: $break-md) {
+    grid-template-columns: repeat(6, 1fr);
   }
-  .n6b-wrap {
-    @include m-body-0;
-    @include gap-1;
-    @include sp-contents-xs;
-    @include sp-contents-sm;
-
-
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    display: grid;
-    @media (min-width: $break-md) {
-      grid-template-columns: repeat(6, 1fr);
-   
-    }
- 
-  }
-  .n6b-item {
-    //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
-
-
-
-
-  }
-
-
+}
+.n6b-item {
+  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
+}

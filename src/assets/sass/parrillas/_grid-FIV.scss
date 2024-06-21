@@ -1,9 +1,8 @@
-@import '../abstract/_all.scss';
+@import "../abstract/_all.scss";
 @import "../abstract/_categoryGrid.scss";
 
-
 .grid-product-wrap--FIV {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }

@@ -7,15 +7,11 @@
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 
-
   box-sizing: border-box;
   flex-direction: column;
 
-  width: calc(100vw - 350px - 17% );
+  width: calc(100vw - 350px - 17%);
   margin-left: 0;
-
-
-
 }
 
 .resize-resolution,
@@ -46,10 +42,9 @@
   vertical-align: middle;
 }
 
-.resize-mini-content{
-background-color: #eaeaea;
+.resize-mini-content {
+  background-color: #eaeaea;
 }
-
 
 .resize-name {
   z-index: 100;
@@ -172,8 +167,6 @@ background-color: #eaeaea;
     }
   }
 }
-
-
 
 .resize-mini {
   overflow: hidden;

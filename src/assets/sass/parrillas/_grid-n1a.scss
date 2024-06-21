@@ -1,7 +1,7 @@
 @import "../abstract/_all.scss";
 @import "../abstract/_gridNEW.scss";
 .n1a {
-  @include sp-wraps('.n1a');
+  @include sp-wraps(".n1a");
 }
 .n1a-wrap {
   display: grid;

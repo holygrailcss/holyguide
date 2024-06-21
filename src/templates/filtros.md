@@ -7,8 +7,9 @@ titulo: filtros
 descripcion: filtros
 image: /assets/static/images/filtros.jpg
 author: autor
-date: 2024-02-20 
+date: 2024-02-20
 tags: ["templates"]
 imageAlt: filtros
 ---
+
 # filtros

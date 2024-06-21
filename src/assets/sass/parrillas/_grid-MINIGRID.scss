@@ -1,4 +1,4 @@
-@import '../abstract/_all.scss';
+@import "../abstract/_all.scss";
 
 $grid-cols--MINIGRID: 3;
 
@@ -54,20 +54,20 @@ $grid-cols--MINIGRID: 3;
 // }
 
 .grid-product-wrap--MINIGRID {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 8px;
 
-    @include details-pmobile-first;
-    .grid-product-list--MINIGRID-INFO:first-child {
-        .card9-wrap-details {
-            padding-left: 16px;
-        }
+  @include details-pmobile-first;
+  .grid-product-list--MINIGRID-INFO:first-child {
+    .card9-wrap-details {
+      padding-left: 16px;
     }
+  }
 
-    @media (min-width: $break-sm) {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
+  @media (min-width: $break-sm) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
 }

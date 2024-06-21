@@ -1,8 +1,6 @@
-.swiper-pagination-progressbar{
+.swiper-pagination-progressbar {
   display: none;
 }
-
-
 
 @media (min-width: 980px) {
   .swiper-slide:hover {
@@ -29,38 +27,23 @@
   transform-origin: left top;
 }
 
-
-
 @media (max-width: 1700px) {
-
-  
 }
 
-
 @media (max-width: 1700px) {
-
-
-
-  
-
-  .cc-imagen-item .swiper-slide img{
+  .cc-imagen-item .swiper-slide img {
     object-fit: unset;
   }
 
-
   .cc-imagen-item {
     width: 100%;
-
-
-
   }
   .cc-imagen-collection-swiper.swiper .swiper-wrapper {
     overflow: auto;
   }
 }
 @media (min-width: 1700px) {
-
-  .swiper-pagination-progressbar{
+  .swiper-pagination-progressbar {
     display: block;
   }
   .cc-imagen-item {
@@ -68,8 +51,5 @@
   }
 }
 
-
-
-.cc-imagen-collection-swiper{
-
+.cc-imagen-collection-swiper {
 }

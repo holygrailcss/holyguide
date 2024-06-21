@@ -6,9 +6,9 @@ titulo: token-filtros
 descripcion: token-filtros
 image: /assets/static/images/filtros.jpg
 author: autor
-date: 2024-02-20 
+date: 2024-02-20
 tags: ["token-templates"]
 imageAlt: filtros
 ---
-# filtros
 
+# filtros

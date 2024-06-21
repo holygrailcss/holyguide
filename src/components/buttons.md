@@ -12,5 +12,3 @@ tags: ["Estructuras modulares", "web design", "components"]
 image: /assets/static/components/buttons.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
-
-
