@@ -159,7 +159,7 @@
 			"                    <!-- img derecha  -->",
 			"                    <div class=\"row\">",
 			"                        <div class=\"col-xs-12 col-sm-6 p-50\">",
-			"                            <h3 class=\"h3\"> [h3.h3] Tiendas Massimo Dutti",
+			"                            <h3 class=\"h3\"> [h3.h3] Tiendas MD",
 			"                            </h3>",
 			"                            <p class=\"p1\">[p.p1]ttttt.</p>",
 			"                            <h4 class=\"h4\">",

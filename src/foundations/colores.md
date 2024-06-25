@@ -16,7 +16,7 @@ imageAlt: Ilustración de un diseño de sistema web
 
 ## COLORES PRIMARIOS
 
-En el Sistema de Diseño de Massimo Dutti, los colores primitivos son la selección básica y esencial de colores que se utilizan como base para crear una paleta de colores coherente y armoniosa sobre la que después se construirán los diferentes tokens de color, en los que separamos las tipologías de uso de los colores primitivos para un mayor control (background, bordes, textos, etc.)
+En el Sistema de Diseño de MD, los colores primitivos son la selección básica y esencial de colores que se utilizan como base para crear una paleta de colores coherente y armoniosa sobre la que después se construirán los diferentes tokens de color, en los que separamos las tipologías de uso de los colores primitivos para un mayor control (background, bordes, textos, etc.)
 
 /n
 

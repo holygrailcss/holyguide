@@ -70,4 +70,4 @@ imageAlt: toast
 
 - **Pausar en hover**: Pausar el temporizador del Toast cuando el usuario pase el cursor sobre él.
 
-## Casos de uso en Massimo Dutti
+## Casos de uso en MD
