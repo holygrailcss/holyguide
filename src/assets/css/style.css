@@ -8159,7 +8159,6 @@ button {
 .btn-selector {
   position: relative;
   display: flex;
-  border-color: red;
 }
 .btn-selector > :not(:first-child, :last-child) {
   border-radius: 0;
@@ -8167,10 +8166,20 @@ button {
 }
 .btn-selector [class^=btn--],
 .btn-selector [class*=" btn--"] {
+  height: initial;
+  border-color: #e3e3e3;
+  color: #8e8e8e;
   position: relative;
   border-radius: 0;
   float: left;
   margin-right: 0;
+}
+.btn-selector [class^=btn--].is-active,
+.btn-selector [class*=" btn--"].is-active {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+  z-index: 10;
 }
 .btn-selector [class^=btn--]:first-child,
 .btn-selector [class*=" btn--"]:first-child {
@@ -8181,6 +8190,12 @@ button {
   margin-left: -1px;
   outline: none;
 }
+.btn-selector [class^=btn--]:hover,
+.btn-selector [class*=" btn--"]:hover {
+  color: #000000;
+  border-color: #000000;
+  z-index: 11;
+}
 .btn-selector .btn {
   border-radius: 0;
 }
@@ -8189,6 +8204,12 @@ button {
 }
 .btn-selector .btn:last-child {
   border-radius: 0 0 0 0;
+}
+.btn-selector .is-active {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+  z-index: 10;
 }
 
 .btn-group > .btn {
