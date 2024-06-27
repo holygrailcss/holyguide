@@ -8156,6 +8156,41 @@ button {
   border-radius: 0 0 0 0;
 }
 
+.btn-selector {
+  position: relative;
+  display: flex;
+  border-color: red;
+}
+.btn-selector > :not(:first-child, :last-child) {
+  border-radius: 0;
+  margin-left: -1px;
+}
+.btn-selector [class^=btn--],
+.btn-selector [class*=" btn--"] {
+  position: relative;
+  border-radius: 0;
+  float: left;
+  margin-right: 0;
+}
+.btn-selector [class^=btn--]:first-child,
+.btn-selector [class*=" btn--"]:first-child {
+  margin-left: 0;
+}
+.btn-selector [class^=btn--]:last-child,
+.btn-selector [class*=" btn--"]:last-child {
+  margin-left: -1px;
+  outline: none;
+}
+.btn-selector .btn {
+  border-radius: 0;
+}
+.btn-selector .btn:first-child {
+  border-radius: 0 0 0 0;
+}
+.btn-selector .btn:last-child {
+  border-radius: 0 0 0 0;
+}
+
 .btn-group > .btn {
   flex: 1;
 }
