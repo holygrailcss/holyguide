@@ -49,7 +49,7 @@ layout: base.njk
 
   <div class="row">
     <div class="col-xs-12">
-      <h4 id="tamaños" class="h3"> Tamaños de Button</h4>
+      <h2 id="tamaños" class="h3"> Tamaños de Button</h2>
     </div>
   </div>
   <div class="row bg-light p-16">
@@ -62,7 +62,7 @@ layout: base.njk
 
 <div class="row">
   <div class="col-xs-12">
-    <h2 id="alineaciones" class="h2"> Alineaciones</h2>
+    <h2 id="btnalineaciones" class="h2"> Alineaciones</h2>
   </div>
 </div>
 
@@ -72,7 +72,9 @@ layout: base.njk
       <section class="mb-32 mt-32">
         <div class="row">
           <div class="col-xs-12">
-            <h3>Grupo de botones alineados</h3>
+  
+
+            <h3 id="btnalineaciones" class="h2"> Grupo de botones alineados</h3>
             <p class="text-l mb-32"> Contenedor para agrupar botones conservando su aspecto
               <code>.btn-group-inline</code>.
             </p>
@@ -98,7 +100,8 @@ layout: base.njk
             </div>
             <div class="row">
               <div class="col-xs-12">
-                <h3>Agrupación conjunta</h3>
+
+                <h3 id="conjunta" class="h2"> Agrupación conjunta</h3>
                 <p class="title-m mb-24">Grupo de botones , pueden ir a sangre con la clase btn-group-bleed. </p>
                 <p class="title-m mb-24">Activador con .is-active </p>
                 <p><code>.btn-group-bleed</code></p>
@@ -157,7 +160,7 @@ layout: base.njk
         <div class="row">
           <div class="col-xs-12">
 
-            <h2 id="animaciones" class="h2"> Animaciones</h2>
+            <h3 id="animaciones" class="h2"> Animaciones</h3>
 
             <p class="title-s c-dark-grey  mb-32"> Botón animado con loading cuando haces clic.</p>
             <p class="title-m mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear
@@ -206,7 +209,7 @@ layout: base.njk
 
   <div class="row">
     <div class="col-xs-12">
-      <h3  id="Secondary" class="h2"> Botón Separate</h3>
+      <h3  id="separate" class="h2"> Botón Separate</h3>
       <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
       {% call helper.insert(elementType='button',['btn btn-secondary btn-separate']) %}
       {% endcall %}
@@ -215,7 +218,7 @@ layout: base.njk
 
   <div class="row">
     <div class="col-xs-12">
-      <h3  id="Secondary" class="h2"> Botón Separate</h3>
+      <h3  id="Social" class="h2"> Botón Social</h3>
       <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
       {% call helper.insert(elementType='button',['btn btn-secondary btn-social ']) %}
       {% endcall %}
