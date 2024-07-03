@@ -845,4 +845,28 @@ ul {
 }
 
 
+.btn-selector-wrap{
+
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+  white-space: nowrap; 
+  
+  &.btn-selector .btn {
+    border-radius: 0;
+    white-space: normal; 
+    min-height: 50px;
+    flex: none;
+    max-width: 60px;
+    padding-inline: 4px;
+    min-width: 50px;
+  
+  }
+}
+
+
+
+
+
+
 

@@ -13,6 +13,7 @@ layout: base.njk
        <div class="text-underline ">VER LISTA</div>
         </div>
 </div>
+<button id="toggleButton">Toggle Appear</button>
 
 
 <div class="main-content innermarkdown ">   {{ content | safe }}</div>
@@ -21,3 +22,10 @@ layout: base.njk
 
 
 </div>
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+    var toastElement = document.querySelector('.toast');
+    toastElement.classList.toggle('appear');
+});
+</script>
