@@ -851,7 +851,7 @@ ul {
   flex-wrap: nowrap; 
   overflow-x: auto; 
   white-space: nowrap; 
-  
+
   &.btn-selector .btn {
     border-radius: 0;
     white-space: normal; 
@@ -860,6 +860,26 @@ ul {
     max-width: 60px;
     padding-inline: 4px;
     min-width: 50px;
+  
+  }
+}
+
+
+
+.btn-selector-wrap2{
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+  list-style: none;
+  margin: 0;
+  white-space: normal;
+  
+  &.btn-selector .btn {
+    align-items: center;
+    display: flex;
+    justify-content: center;
   
   }
 }
