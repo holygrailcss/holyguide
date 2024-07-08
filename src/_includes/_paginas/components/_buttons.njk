@@ -7,16 +7,9 @@ layout: base.njk
   {% include '_website/hero.njk' %}
 </div>
 <div class="main-content innermarkdown ">{{ content | safe }}
-
-
   <h2 id="anatomia" class="h3"> Anatomia General </h2>
-
-
   <img width="100%" src="/assets/static/images/boton2.svg" alt="">
-
   <h2 id="estados" class="h3"> ESTADOS</h2>
-
-
   <p class="p1">Todos los botones tienen los mismos estados de “Default”, “Hover” y “Disabled”.</p>
   <br>
   <img width="100%" src="/assets/static/images/botones.svg" alt="">
@@ -26,27 +19,19 @@ layout: base.njk
  &lt;button class=&quot;btn btn-feel&quot;&gt;btn btn-feel&lt;/button&gt;
  &lt;button class=&quot;btn btn-blue&quot;&gt;btn btn-blue&lt;/button&gt;</code>
   </pre>
-
-
   <h3 id="primary" class="h2"> Button primary</h3>
   <p class="p1 mb-24"> El botón principal con relleno de color se utiliza para las acciones más importantes en una
     página o en una vista. Los botones primarios están disponibles en blanco y negro.</p>
   {% call helper.insert(elementType='button',['btn btn-primary']) %}
   {% endcall %}
-
-
-  <h3  id="Secondary" class="h2"> Botón Secondary</h3>
+  <h3 id="Secondary" class="h2"> Botón Secondary</h3>
   <p class="p1 mb-24"> Botón outline</p>
   {% call helper.insert(elementType='button',['btn btn-secondary']) %}
   {% endcall %}
-
-
-  <h3  id="tertiary" class="h2"> Botón Tertiary</h3>
+  <h3 id="tertiary" class="h2"> Botón Tertiary</h3>
   <p class="p1 mb-24"> Botón simulando un link básico - no necesita .btn para resetear</p>
   {% call helper.insert(elementType='button',['btn-tertiary']) %}
   {% endcall %}
-
-
   <div class="row">
     <div class="col-xs-12">
       <h2 id="tamaños" class="h3"> Tamaños de Button</h2>
@@ -59,21 +44,16 @@ layout: base.njk
       {% endfor %}
     </div>
   </div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <h2 id="btnalineaciones" class="h2"> Alineaciones</h2>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 id="btnalineaciones" class="h2"> Alineaciones</h2>
+    </div>
   </div>
-</div>
-
-
   <div class="row">
     <div class="col-xs-12">
       <section class="mb-32 mt-32">
         <div class="row">
           <div class="col-xs-12">
-  
-
             <h3 id="btnalineaciones" class="h2"> Grupo de botones alineados</h3>
             <p class="text-l mb-32"> Contenedor para agrupar botones conservando su aspecto
               <code>.btn-group-inline</code>.
@@ -100,7 +80,6 @@ layout: base.njk
             </div>
             <div class="row">
               <div class="col-xs-12">
-
                 <h3 id="conjunta" class="h2"> Agrupación conjunta</h3>
                 <p class="title-m mb-24">Grupo de botones , pueden ir a sangre con la clase btn-group-bleed. </p>
                 <p class="title-m mb-24">Activador con .is-active </p>
@@ -151,37 +130,26 @@ layout: base.njk
     &lt;button class=&apos;btn btn-secondary btn--large&apos;&gt; large&lt;/button&gt;
 &lt;/div&gt;
                   </code></pre>
-
-
-
-  
-
-
-
-
               </div>
             </div>
           </div>
         </div>
       </section>
-          <section>
-              <div class="container">
-                  <div class="row">
-                      <div class="col-xs-12"> 
-                        
-                      
-                      
-                  <p><code>.btn-selector</code></p>
-                  <div class="pre-show mb-24">
-                    <div class="btn-selector">
-                      <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
-                      <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
-                      <button class="btn btn-secondary  btn--mini leading-1 "> 
-                        XS (CN 165/84A)
-                         </button>
-                    </div>
-                  </div>
-                  <pre class="language-markup" tabindex="0"><code class="language-markup">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <p><code>.btn-selector</code></p>
+              <div class="pre-show mb-24">
+                <div class="btn-selector">
+                  <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
+                  <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
+                  <button class="btn btn-secondary  btn--mini leading-1 ">
+                    XS (CN 165/84A)
+                  </button>
+                </div>
+              </div>
+              <pre class="language-markup" tabindex="0"><code class="language-markup">
   &lt;div class=&apos;btn-selector&apos;&gt;
       &lt;button class=&apos;btn btn-secondary btn--mini leading-1&apos;&gt;  XS <br> XXL&lt;/button&gt;
       &lt;button class=&apos;btn btn-secondary btn--mini leading-1&apos;&gt; LG&lt;/button&gt;
@@ -190,86 +158,62 @@ layout: base.njk
        &lt;/button&gt;
   &lt;/div&gt;
                     </code></pre>
-                      
-                      </div>
-                  </div>
-              </div>
-          </section>
-    
-    
-    
-          <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12"> 
-                      
-                      <h2>Documentación del Componente .btn-selector-wrap</h2>
-
-  <h3>Descripción</h3>
-  <p>El componente <code>.btn-selector-wrap</code> está diseñado para presentar múltiples opciones en una línea horizontal, permitiendo a los usuarios desplazarse horizontalmente si hay más botones de los que caben en la vista.</p>
-
-  <h3>Estilos y Funcionalidad</h3>
-  <h3>Contenedor Principal</h3>
-  <ul>
-    <li><strong>Diseño Horizontal y Flexible:</strong> Organiza los botones en una sola línea horizontal, manteniendo una presentación limpia y uniforme.</li>
-    <li><strong>Desplazamiento Horizontal:</strong> Habilita el desplazamiento cuando hay más botones de los que caben en el contenedor.</li>
-    <li><strong>Espaciado Consistente:</strong> Alineación horizontal uniforme sin desbordamientos desorganizados.</li>
-  </ul>
-
-  <h3>Botones Individuales</h3>
-  <ul>
-    <li><strong>Forma Rectangular:</strong> Esquinas rectas para un aspecto moderno y limpio.</li>
-    <li><strong>Adaptabilidad del Texto:</strong> Permite saltos de línea para acomodar textos largos sin romper la estructura visual.</li>
-    <li><strong>Tamaño Consistente:</strong> Altura mínima y ancho máximo para mantener uniformidad visual.</li>
-    <li><strong>Espaciado Interno Adecuado:</strong> Espaciado suficiente para mejorar la legibilidad y la experiencia táctil.</li>
-  </ul>
-
-  <h3>Uso Sugerido</h3>
-  <p class="mb-32">Ideal para menús de opciones o barras de navegación en aplicaciones web responsivas, donde el espacio horizontal es limitado.</p>
-
-                    
-                <p class="mb-32"><code>.btn-selector-wrap</code></p>
-                <div class="pre-show mb-24">
-                  <div class="btn-selector btn-selector-wrap">
-                    <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
-                    <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
-                    <button class="btn btn-secondary  btn--mini leading-1 "> 
-                      XS (CN 165/84A)
-                       </button>
-                       <button class="btn btn-secondary  btn--mini leading-1 "> 
-                        XS (CN 165/84A)
-                         </button>
-                         <button class="btn btn-secondary  btn--mini leading-1 "> 
-                          XS (CN 165/84A AAABBB)
-                           </button>
-                           <button class="btn btn-secondary  btn--mini leading-1 "> 
-                            XS (CN 165/84A)
-                             </button>
-                             <button class="btn btn-secondary  btn--mini leading-1 "> 
-                              XS (CN 165/84A)
-                               </button>
-                               <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                XS (CN 165/84A)
-                                 </button>
-                                 <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                  XS (CN 165/84A)
-                                   </button>
-                                   <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                    XS (CN 165/84A)
-                                     </button>
-                                     <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                      XS (CN 165/84A)
-                                       </button>
-                                       <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                        XS (CN 165/84A)
-                                         </button>
-                                         <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                          XS (CN 165/84A)
-                                           </button>
-                  </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>Documentación del Componente .btn-selector-wrap</h2>
+              <h3>Descripción</h3>
+              <p>El componente <code>.btn-selector-wrap</code> está diseñado para presentar múltiples opciones en una
+                línea horizontal, permitiendo a los usuarios desplazarse horizontalmente si hay más botones de los que
+                caben en la vista.</p>
+              <h3>Estilos y Funcionalidad</h3>
+              <h3>Contenedor Principal</h3>
+              <ul>
+                <li><strong>Diseño Horizontal y Flexible:</strong> Organiza los botones en una sola línea horizontal,
+                  manteniendo una presentación limpia y uniforme.</li>
+                <li><strong>Desplazamiento Horizontal:</strong> Habilita el desplazamiento cuando hay más botones de los
+                  que caben en el contenedor.</li>
+                <li><strong>Espaciado Consistente:</strong> Alineación horizontal uniforme sin desbordamientos
+                  desorganizados.</li>
+              </ul>
+              <h3>Botones Individuales</h3>
+              <ul>
+                <li><strong>Forma Rectangular:</strong> Esquinas rectas para un aspecto moderno y limpio.</li>
+                <li><strong>Adaptabilidad del Texto:</strong> Permite saltos de línea para acomodar textos largos sin
+                  romper la estructura visual.</li>
+                <li><strong>Tamaño Consistente:</strong> Altura mínima y ancho máximo para mantener uniformidad visual.
+                </li>
+                <li><strong>Espaciado Interno Adecuado:</strong> Espaciado suficiente para mejorar la legibilidad y la
+                  experiencia táctil.</li>
+              </ul>
+              <h3>Uso Sugerido</h3>
+              <p class="mb-32">Ideal para menús de opciones o barras de navegación en aplicaciones web responsivas,
+                donde el espacio horizontal es limitado.</p>
+              <p class="mb-32"><code>.btn-selector-wrap</code></p>
+              <div class="pre-show mb-24">
+                <div class="btn-selector btn-selector-wrap">
+                      <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button> 
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A AAABBB) </button> 
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button> 
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button> 
+                      <button class="btn btn-secondary  btn--mini leading-1 "> XS (CN 165/84A) </button>
                 </div>
-                <pre class="language-markup" tabindex="0"><code class="language-markup">
-&lt;div class=&apos;btn-selector&apos;&gt;
+              </div>
+              <pre class="language-markup" tabindex="0"><code class="language-markup">
+&lt;div class=&apos;btn-selector btn-selector-wrap&apos;&gt;
     &lt;button class=&apos;btn btn-secondary btn--mini leading-1&apos;&gt;  XS <br> XXL&lt;/button&gt;
     &lt;button class=&apos;btn btn-secondary btn--mini leading-1&apos;&gt; LG&lt;/button&gt;
     &lt;button class=&apos;btn btn-secondary btn--mini leading-1&apos;&gt; 
@@ -277,70 +221,102 @@ layout: base.njk
      &lt;/button&gt;
 &lt;/div&gt;
                   </code></pre>
-                    
-                    </div>
-                </div>
             </div>
-        </section>
-
-
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12"> 
-                  
-                
-                
-                  <div class="btn-selector btn-selector-wrap2">
-                    <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
-                    <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
-                    <button class="btn btn-secondary  btn--mini leading-1 "> 
-                      XS (CN 165/84A)
-                       </button>
-                       <button class="btn btn-secondary  btn--mini leading-1 "> 
-                        XS (CN 165/84A)
-                         </button>
-                         <button class="btn btn-secondary  btn--mini leading-1 "> 
-                          XS (CN 165/84A AAABBB)
-                           </button>
-                           <button class="btn btn-secondary  btn--mini leading-1 "> 
-                            XS (CN 165/84A)
-                             </button>
-                             <button class="btn btn-secondary  btn--mini leading-1 "> 
-                              XS (CN 165/84A)
-                               </button>
-                               <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                XS (CN 165/84A)
-                                 </button>
-                                 <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                  XS (CN 165/84A)
-                                   </button>
-                                   <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                    XS (CN 165/84A)
-                                     </button>
-                                     <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                      XS (CN 165/84A)
-                                       </button>
-                                       <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                        XS (CN 165/84A)
-                                         </button>
-                                         <button class="btn btn-secondary  btn--mini leading-1 "> 
-                                          XS (CN 165/84A)
-                                           </button>
-                  </div>
-                
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="btn-selector btn-selector-wrap2">
+                <button class="btn btn-secondary btn--mini leading-1"> XS <br> XXL </button>
+                <button class="btn btn-secondary  btn--mini leading-1 is-active "> LG</button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A AAABBB)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+                <button class="btn btn-secondary  btn--mini leading-1 ">
+                  XS (CN 165/84A)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
 
-    
-          <section>
+Listado con grid, falta el control del grab en desktop , no aplica ningun tipo de clase para controlar.
+
+              <ul class="zds-nav-row__list zds-nav-row__list--row">
+                <li
+                  class="zds-nav-row__list-item zds-nav-row__list-item--row zds-nav-row__list-item--active zrc-size-guide-size-selector__size-item">
+                  <button aria-label="XS" class="zds-nav-row__list-item-wrapper" aria-current="page">XS</button></li>
+                <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                  <button aria-label="S" class="zds-nav-row__list-item-wrapper">S</button></li>
+                <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                  <button aria-label="M" class="zds-nav-row__list-item-wrapper">M</button></li>
+                <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                  <button aria-label="L" class="zds-nav-row__list-item-wrapper">L</button></li>
+                <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                  <button aria-label="XL" class="zds-nav-row__list-item-wrapper">XL</button></li>
+                  <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                    <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>             <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                      <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>
+
+
+                  <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                    <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>
+
+
+                    <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                      <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>
+
+
+                      <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                        <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>
+
+
+                        <li class="zds-nav-row__list-item zds-nav-row__list-item--row zrc-size-guide-size-selector__size-item">
+                          <button aria-label="XXL" class="zds-nav-row__list-item-wrapper">XXL</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
         <div class="row">
           <div class="col-xs-12">
-
             <h3 id="animaciones" class="h2"> Animaciones</h3>
-
             <p class="title-s c-dark-grey  mb-32"> Botón animado con loading cuando haces clic.</p>
             <p class="title-m mb-32">Añadiremos la clase <code>.btn-anim</code> y <code>.no-focus</code> para fixear
               error
@@ -384,26 +360,20 @@ layout: base.njk
       </section>
     </div>
   </div>
-
-
   <div class="row">
     <div class="col-xs-12">
-      <h3  id="separate" class="h2"> Botón Separate</h3>
+      <h3 id="separate" class="h2"> Botón Separate</h3>
       <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
       {% call helper.insert(elementType='button',['btn btn-secondary btn-separate']) %}
       {% endcall %}
     </div>
   </div>
-
   <div class="row">
     <div class="col-xs-12">
-      <h3  id="Social" class="h2"> Botón Social</h3>
+      <h3 id="Social" class="h2"> Botón Social</h3>
       <p class="p1 mb-24"> Botón con elementos separados en el interior</p>
       {% call helper.insert(elementType='button',['btn btn-secondary btn-social ']) %}
       {% endcall %}
     </div>
   </div>
-
-
-
 </div>

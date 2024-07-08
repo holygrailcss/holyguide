@@ -1,14 +1,9 @@
 const { DateTime } = require("luxon");
 const pluginTOC = require("eleventy-plugin-toc");
-
-
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-
 const embeds = require("eleventy-plugin-embed-everything");
-
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-
 const eleventyWebcPlugin = require("@11ty/eleventy-plugin-webc");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 
@@ -20,10 +15,12 @@ const mdOptions = {
 };
 
 const mdAnchorOpts = {
-  permalink: true,
-  permalinkClass: "",
-  permalinkSymbol: "",
   level: [1, 2, 3, 4],
+  permalink: markdownItAnchor.permalink.linkInsideHeader({
+    symbol: '¶',
+    placement: 'before',
+    class: 'header-anchor',
+  }),
 };
 
 module.exports = function (eleventyConfig) {
@@ -39,24 +36,17 @@ module.exports = function (eleventyConfig) {
     return content.split(delimiter);
   });
 
-
-  eleventyConfig.addShortcode("br", function () { //  ✅ se usa poniendo esto--> {% br %}
-    return `
-  <br>
-`;
-  });
-  eleventyConfig.addShortcode("br2", function () { //  ✅ se usa poniendo esto-->  {% br %}
-    return `
-  <br><br>
-`;
-  });
-  eleventyConfig.addShortcode("br3", function () { //  ✅ se usa poniendo esto-->  {% br %}
-    return `
-  <br><br><br>
-`;
+  eleventyConfig.addShortcode("br", function () {
+    return `<br>`;
   });
 
+  eleventyConfig.addShortcode("br2", function () {
+    return `<br><br>`;
+  });
 
+  eleventyConfig.addShortcode("br3", function () {
+    return `<br><br><br>`;
+  });
 
   eleventyConfig.addPlugin(embeds);
 
@@ -65,7 +55,6 @@ module.exports = function (eleventyConfig) {
     markdownIt(mdOptions)
       .use(markdownItAnchor, mdAnchorOpts)
   );
-
 
   eleventyConfig.addPlugin(pluginTOC);
 
@@ -76,6 +65,7 @@ module.exports = function (eleventyConfig) {
   function getIndex(collection, currentSlug) {
     return collection.findIndex((page) => page.fileSlug === currentSlug);
   }
+
   eleventyConfig.addFilter("nextInCollection", (collection, currentSlug) => {
     const currentIndex = getIndex(collection, currentSlug);
     const pages = collection.filter((page, index) => {
@@ -102,21 +92,14 @@ module.exports = function (eleventyConfig) {
   // WebC
   eleventyConfig.addPlugin(eleventyWebcPlugin, {
     components: [
-      // …
-      // Add as a global WebC component
       "npm:@11ty/eleventy-img/*.webc",
     ],
   });
 
   eleventyConfig.addPlugin(eleventyImagePlugin, {
-    // Set global default options
     formats: ["webp"],
     urlPath: "/assets/static/",
     outputDir: "public/assets/static/",
-
-    // Notably `outputDir` is resolved automatically
-    // to the project output directory  npm install eleventy-plugin-seo --save falta este
-
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
