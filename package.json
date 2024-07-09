@@ -51,7 +51,7 @@
     "eleventy-plugin-embed-everything": "^1.16.0",
     "fs": "^0.0.1-security",
     "googleapis": "^140.0.0",
-    "holygrail2": "^1.1.84",
+    "holygrail2": "^1.1.87",
     "http": "^0.0.1-security",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.6",

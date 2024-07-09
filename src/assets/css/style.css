@@ -1875,6 +1875,10 @@ svg-icon.ico-error path,
 svg-icon2.ico-error path {
   fill: #b40016;
 }
+svg-icon.ico-error.ico-reset path,
+svg-icon2.ico-error.ico-reset path {
+  fill: #000000;
+}
 svg-icon.ico-success path,
 svg-icon2.ico-success path {
   fill: #12882c;
@@ -8212,6 +8216,27 @@ button {
   z-index: 10;
 }
 
+.btn-selector-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.btn-selector-wrap.btn-selector .btn {
+  border-radius: 0;
+  white-space: normal;
+  min-height: 50px;
+  flex: none;
+  max-width: 70px;
+  padding-inline: 4px;
+  min-width: 50px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .btn-group > .btn {
   flex: 1;
 }
@@ -9665,6 +9690,12 @@ input::input-placeholder {
 }
 .is-error svg path {
   fill: #b40016 !important;
+}
+.is-error svg.ico-default g {
+  stroke: #000000 !important;
+}
+.is-error svg.ico-default path {
+  fill: #000000 !important;
 }
 
 .ok-input .input,
@@ -29014,22 +29045,6 @@ ul {
     padding-left: 16px;
     max-width: 360px;
   }
-}
-
-.btn-selector-wrap {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.btn-selector-wrap.btn-selector .btn {
-  border-radius: 0;
-  white-space: normal;
-  min-height: 50px;
-  flex: none;
-  max-width: 60px;
-  padding-inline: 4px;
-  min-width: 50px;
 }
 
 .btn-selector-wrap2 {
