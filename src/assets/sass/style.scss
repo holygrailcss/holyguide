@@ -298,10 +298,10 @@ ul {
   flex-wrap: wrap;
   gap: 8px;
 }
-.form-btn > :nth-child(1) {
+.form-btn> :nth-child(1) {
   flex: 1;
 }
-.form-btn > :nth-child(2) {
+.form-btn> :nth-child(2) {
   flex: 100%;
   @media (min-width: 600px) {
     flex: 0 0 auto;
@@ -785,7 +785,6 @@ ul {
   left: 62%;
   transform: translateY(100%);
 }
-
 @media (max-width: #{$break-md - 1}) {
   .pdp-extra-info {
     position: fixed;
@@ -800,20 +799,16 @@ ul {
     padding-bottom: 90px;
     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
-
   .is-pdp-extra-info-open {
     overflow: hidden;
-
     .pdp-extra-info {
       transform: translateY(0);
     }
-
     .pdp-extra-info-overlay {
       pointer-events: all;
       opacity: 0.6;
     }
   }
-
   .pdp-extra-info-overlay {
     opacity: 0;
     pointer-events: none;
@@ -843,13 +838,7 @@ ul {
     max-width: $container-4;
   }
 }
-
-
-
-
-
-.btn-selector-wrap2{
-
+.btn-selector-wrap2 {
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
@@ -857,17 +846,14 @@ ul {
   list-style: none;
   margin: 0;
   white-space: normal;
-
   -ms-overflow-style: none;
   overflow-x: auto;
   padding: 0;
   scrollbar-width: none;
-  
   &.btn-selector .btn {
     align-items: center;
     display: flex;
     justify-content: center;
-
     box-sizing: border-box;
     cursor: pointer;
     flex: 0 0 auto;
@@ -880,16 +866,8 @@ ul {
     -ms-user-select: none;
     user-select: none;
     min-width: initial;
-  
   }
 }
-
-
-
-
-
-
-
 .zds-nav-row__list--row {
   display: grid;
   grid-auto-columns: 1fr;
@@ -898,17 +876,13 @@ ul {
   list-style: none;
   margin: 0;
   white-space: normal;
-
   -ms-overflow-style: none;
   overflow-x: auto;
   padding: 0;
   scrollbar-width: none;
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
-.zds-nav-row__list {
-
-}
-
+.zds-nav-row__list {}
 .zrc-size-guide-size-selector__size-item .zds-nav-row__list-item-wrapper {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -920,3 +894,163 @@ ul {
   width: 100%;
 }
 
+
+.stories-menu {
+  position: fixed;
+  z-index: 20;
+  color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(0 0 0 / 50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+  height: 141px;
+
+
+
+.stories-menu-btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  a{
+    flex: 1;
+    .btn{
+      border: none;
+    }
+
+    &:first-child{
+      border-right:  1px solid #ccc;
+    }
+  }
+
+
+}
+
+
+}
+.flex-1 {
+  flex: 1;
+}
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 52px;
+  width: 100%;
+  align-items: start;
+}
+.stories-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 16px;
+}
+.ar-9-16 {
+  aspect-ratio: 9 / 16;
+}
+
+.stories-load{
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blend-text {
+  font-size: 20px;
+  color: white;
+  mix-blend-mode: exclusion;/* Puedes cambiar 'multiply' por otros modos de mezcla como 'screen', 'overlay', etc. */
+}
+
+
+
+.stories-supercontainer-wrap{
+width: 100vw;
+overflow: auto;
+
+}
+.stories-supercontainer{
+  width: 300vw;
+  display: flex;
+  transform:translateX(-100vw);
+ 
+
+  .container-fluid{
+    flex: 1;
+  }
+}
+
+.has-storiecenter{
+  overflow: hidden;
+  height: 100vh;
+
+
+}
+
+
+
+.container-absolute{
+  position: absolute;
+  z-index: 10;
+
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 16px;
+}
+
+.stories-fullwidth{
+  height: 100vh ;
+  overflow: auto;
+}
+
+.stories-menu-controls{
+  opacity: 1;
+  transform: translate(0px, 0px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.stories-menu-wrap{
+
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+
+
+
+.stories-watermark {
+  overflow: hidden;
+  position: fixed;
+  pointer-events: none;
+  width: 30%; 
+  height: calc(100vh - 120px);
+
+  svg{
+    width: 100%;
+    height: auto;
+
+  }
+}

@@ -6383,70 +6383,6 @@ strong {
   text-transform: uppercase;
 }
 
-/*  Todos los idiomas que no tienen uppercase porque son Capital sensitive, lo dejamos en minúsculas */
-[lang^=de] .ttu,
-[lang^=de] .btn-primary,
-[lang^=de] .btn--full,
-[lang^=de] .btn-secondary,
-[lang^=de] .form-input-label-2 label,
-[lang^=zh] .ttu,
-[lang^=zh] .btn-primary,
-[lang^=zh] .btn--full,
-[lang^=zh] .btn-secondary,
-[lang^=zh] .form-input-label-2 label,
-[lang^=zo] .ttu,
-[lang^=zo] .btn-primary,
-[lang^=zo] .btn--full,
-[lang^=zo] .btn-secondary,
-[lang^=zo] .form-input-label-2 label,
-[lang^=eu] .ttu,
-[lang^=eu] .btn-primary,
-[lang^=eu] .btn--full,
-[lang^=eu] .btn-secondary,
-[lang^=eu] .form-input-label-2 label,
-[lang^=el] .ttu,
-[lang^=el] .btn-primary,
-[lang^=el] .btn--full,
-[lang^=el] .btn-secondary,
-[lang^=el] .form-input-label-2 label,
-[lang^=tr] .ttu,
-[lang^=tr] .btn-primary,
-[lang^=tr] .btn--full,
-[lang^=tr] .btn-secondary,
-[lang^=tr] .form-input-label-2 label,
-[lang^=ru] .ttu,
-[lang^=ru] .btn-primary,
-[lang^=ru] .btn--full,
-[lang^=ru] .btn-secondary,
-[lang^=ru] .form-input-label-2 label,
-[lang^=sr] .ttu,
-[lang^=sr] .btn-primary,
-[lang^=sr] .btn--full,
-[lang^=sr] .btn-secondary,
-[lang^=sr] .form-input-label-2 label,
-[lang^=uk] .ttu,
-[lang^=uk] .btn-primary,
-[lang^=uk] .btn--full,
-[lang^=uk] .btn-secondary,
-[lang^=uk] .form-input-label-2 label,
-[lang^=bg] .ttu,
-[lang^=bg] .btn-primary,
-[lang^=bg] .btn--full,
-[lang^=bg] .btn-secondary,
-[lang^=bg] .form-input-label-2 label,
-[lang^=ar] .ttu,
-[lang^=ar] .btn-primary,
-[lang^=ar] .btn--full,
-[lang^=ar] .btn-secondary,
-[lang^=ar] .form-input-label-2 label,
-[lang^=nl] .ttu,
-[lang^=nl] .btn-primary,
-[lang^=nl] .btn--full,
-[lang^=nl] .btn-secondary,
-[lang^=nl] .form-input-label-2 label {
-  text-transform: none;
-}
-
 .product-fadein {
   animation-delay: 1s;
   animation-duration: 3s;
@@ -6650,16 +6586,16 @@ strong {
 }
 
 @media (max-width: 991px) {
-  .md\:reset-body {
-    margin-left: -16px;
-    margin-right: -16px;
+  .mdmax\:reset-body {
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 
 @media (max-width: 767px) {
-  .sm\:reset-body {
-    margin-left: -16px;
-    margin-right: -16px;
+  .smmax\:reset-body {
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 
@@ -6850,6 +6786,98 @@ strong {
 .mx-auto {
   margin-right: auto;
   margin-left: auto;
+}
+
+/*  Todos los idiomas que no tienen uppercase porque son Capital sensitive, lo dejamos en minúsculas */
+[lang^=de] body,
+[lang^=zh] body,
+[lang^=zo] body,
+[lang^=eu] body,
+[lang^=el] body,
+[lang^=tr] body,
+[lang^=ru] body,
+[lang^=sr] body,
+[lang^=uk] body,
+[lang^=bg] body,
+[lang^=ar] body,
+[lang^=nl] body {
+  font-family: Helvetica, "Arial", sans-serif !important;
+}
+[lang^=de] .ttu,
+[lang^=de] .btn-primary,
+[lang^=de] .btn--full,
+[lang^=de] .btn-secondary,
+[lang^=de] .form-input-label-2 label,
+[lang^=zh] .ttu,
+[lang^=zh] .btn-primary,
+[lang^=zh] .btn--full,
+[lang^=zh] .btn-secondary,
+[lang^=zh] .form-input-label-2 label,
+[lang^=zo] .ttu,
+[lang^=zo] .btn-primary,
+[lang^=zo] .btn--full,
+[lang^=zo] .btn-secondary,
+[lang^=zo] .form-input-label-2 label,
+[lang^=eu] .ttu,
+[lang^=eu] .btn-primary,
+[lang^=eu] .btn--full,
+[lang^=eu] .btn-secondary,
+[lang^=eu] .form-input-label-2 label,
+[lang^=el] .ttu,
+[lang^=el] .btn-primary,
+[lang^=el] .btn--full,
+[lang^=el] .btn-secondary,
+[lang^=el] .form-input-label-2 label,
+[lang^=tr] .ttu,
+[lang^=tr] .btn-primary,
+[lang^=tr] .btn--full,
+[lang^=tr] .btn-secondary,
+[lang^=tr] .form-input-label-2 label,
+[lang^=ru] .ttu,
+[lang^=ru] .btn-primary,
+[lang^=ru] .btn--full,
+[lang^=ru] .btn-secondary,
+[lang^=ru] .form-input-label-2 label,
+[lang^=sr] .ttu,
+[lang^=sr] .btn-primary,
+[lang^=sr] .btn--full,
+[lang^=sr] .btn-secondary,
+[lang^=sr] .form-input-label-2 label,
+[lang^=uk] .ttu,
+[lang^=uk] .btn-primary,
+[lang^=uk] .btn--full,
+[lang^=uk] .btn-secondary,
+[lang^=uk] .form-input-label-2 label,
+[lang^=bg] .ttu,
+[lang^=bg] .btn-primary,
+[lang^=bg] .btn--full,
+[lang^=bg] .btn-secondary,
+[lang^=bg] .form-input-label-2 label,
+[lang^=ar] .ttu,
+[lang^=ar] .btn-primary,
+[lang^=ar] .btn--full,
+[lang^=ar] .btn-secondary,
+[lang^=ar] .form-input-label-2 label,
+[lang^=nl] .ttu,
+[lang^=nl] .btn-primary,
+[lang^=nl] .btn--full,
+[lang^=nl] .btn-secondary,
+[lang^=nl] .form-input-label-2 label {
+  text-transform: none;
+}
+
+[lang^=zh] body,
+[lang^=zn] body,
+[lang^=ko] body,
+[lang^=vi] body,
+[lang^=el] body,
+[lang^=tr] body,
+[lang^=ru] body,
+[lang^=sr] body,
+[lang^=uk] body,
+[lang^=bg] body,
+[lang^=ar] body {
+  font-family: Helvetica, "Arial", sans-serif !important;
 }
 
 /* prettier-ignore */
@@ -8235,6 +8263,22 @@ button {
   text-align: center;
   display: inline-block;
   vertical-align: middle;
+}
+
+[lang^=zh] .btn-selector-wrap,
+[lang^=zn] .btn-selector-wrap,
+[lang^=ko] .btn-selector-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+[lang^=zh] .btn-selector-wrap.btn-selector .btn,
+[lang^=zn] .btn-selector-wrap.btn-selector .btn,
+[lang^=ko] .btn-selector-wrap.btn-selector .btn {
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .btn-group > .btn {
@@ -9691,10 +9735,10 @@ input::input-placeholder {
 .is-error svg path {
   fill: #b40016 !important;
 }
-.is-error svg.ico-default g {
+.is-error .ico-default svg g {
   stroke: #000000 !important;
 }
-.is-error svg.ico-default path {
+.is-error .ico-default svg path {
   fill: #000000 !important;
 }
 
@@ -29102,4 +29146,145 @@ ul {
   text-wrap: nowrap;
   white-space: nowrap;
   width: 100%;
+}
+
+.stories-menu {
+  position: fixed;
+  z-index: 20;
+  color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 100%;
+  height: 141px;
+}
+.stories-menu .stories-menu-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+}
+.stories-menu .stories-menu-btn a {
+  flex: 1;
+}
+.stories-menu .stories-menu-btn a .btn {
+  border: none;
+}
+.stories-menu .stories-menu-btn a:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 52px;
+  width: 100%;
+  align-items: start;
+}
+
+.stories-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 16px;
+}
+
+.ar-9-16 {
+  aspect-ratio: 9/16;
+}
+
+.stories-load {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.blend-text {
+  font-size: 20px;
+  color: white;
+  mix-blend-mode: exclusion; /* Puedes cambiar 'multiply' por otros modos de mezcla como 'screen', 'overlay', etc. */
+}
+
+.stories-supercontainer-wrap {
+  width: 100vw;
+  overflow: auto;
+}
+
+.stories-supercontainer {
+  width: 300vw;
+  display: flex;
+  transform: translateX(-100vw);
+}
+.stories-supercontainer .container-fluid {
+  flex: 1;
+}
+
+.has-storiecenter {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container-absolute {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 16px;
+}
+
+.stories-fullwidth {
+  height: 100vh;
+  overflow: auto;
+}
+
+.stories-menu-controls {
+  opacity: 1;
+  transform: translate(0px, 0px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.stories-menu-wrap {
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.stories-watermark {
+  overflow: hidden;
+  position: fixed;
+  pointer-events: none;
+  width: 30%;
+  height: calc(100vh - 120px);
+}
+.stories-watermark svg {
+  width: 100%;
+  height: auto;
 }
