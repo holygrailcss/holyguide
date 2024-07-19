@@ -455,12 +455,13 @@ ul {
   }
 }
 .stories-list {
-  &:last-child {
-    border-bottom: var(--line-width) solid transparent;
-  }
+
   padding: 16px 0;
   border-bottom: var(--line-width) solid $c-primary;
   display: flex;
+  &:last-child {
+    border-bottom: var(--line-width) solid transparent;
+  }
   .stories-item-1 {
     width: 10%;
     min-width: 40px;
