@@ -17,6 +17,9 @@ $xl-grid-2CBG-margin: 50px;
 $xl-grid-2CBG-padding: 160px;
 
 .grid-product-wrap--2CBG {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
   @media (min-width: $break-sm) {
     padding-top: $grid-2CBG-padding;
     padding-bottom: $grid-2CBG-padding;
@@ -29,9 +32,7 @@ $xl-grid-2CBG-padding: 160px;
     margin: $xl-grid-2CBG-margin auto;
     max-width: $xl-grid-2CBG-max-width;
   }
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+
   @include details-pmobile-0;
   @include colors-pmobile-0;
 

@@ -134,6 +134,9 @@ $xl-grid-2CBG2-padding: 260px;
 // }
 
 .grid-product-wrap--2CBG2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
   @media (min-width: $break-sm) {
     padding-top: $grid-2CBG2-padding;
     padding-bottom: $grid-2CBG2-padding;
@@ -146,9 +149,7 @@ $xl-grid-2CBG2-padding: 260px;
     margin: $xl-grid-2CBG2-margin auto;
     max-width: $xl-grid-2CBG2-max-width;
   }
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+
   @include space-pmobile-pdesktop;
   @include details-pmobile-0;
   @include colors-pmobile-0;

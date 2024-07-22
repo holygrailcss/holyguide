@@ -11,7 +11,7 @@
 
   .nav-title {
     padding-left: 0;
-    border-bottom: 1px solid rgb(61, 61, 61);
+    border-bottom: 1px solid rgb(23, 17, 17);
     padding-bottom: 8px;
     padding-top: 3px;
     margin-bottom: 8px;
@@ -78,6 +78,8 @@
   border-right: 1px solid #000;
   z-index: 11;
   overflow: auto;
+  background: #000;
+  color: #fff;
   .menu-lateral {
     padding-bottom: 32px;
   }
@@ -89,8 +91,6 @@
       transition: all ease-in-out 0.4s;
     }
   }
-  background: #000;
-  color: #fff;
 
   a {
     color: #fff;

@@ -104,7 +104,7 @@ Código
 At the command prompt, type `nano`.
 
 Markdown HTML Rendered Output
-`` Use `code` in your Markdown file. ``
+``Use `code` in your Markdown file.``
 
 Lineas horizontales
 

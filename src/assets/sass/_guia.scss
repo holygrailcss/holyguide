@@ -8,11 +8,11 @@ html {
 }
 .guide {
   ul {
+    margin-bottom: 20px;
     li {
       font-size: 14px;
       line-height: 1.5;
     }
-    margin-bottom: 20px;
   }
   hr {
     margin-top: 20px;
@@ -471,14 +471,14 @@ html {
         color: #76ae4a;
         width: 100%;
         height: 8px;
+        bottom: 0;
+        text-align: center;
         @media (min-width: $break-sm) {
           height: 12px;
         }
         @media (min-width: $break-lg) {
           height: 24px;
         }
-        bottom: 0;
-        text-align: center;
       }
       &:before {
         font-size: 9px;
@@ -489,14 +489,14 @@ html {
         color: #76ae4a;
         width: 100%;
         height: 8px;
+        top: 0;
+        text-align: center;
         @media (min-width: $break-sm) {
           height: 12px;
         }
         @media (min-width: $break-lg) {
           height: 24px;
         }
-        top: 0;
-        text-align: center;
       }
     }
     .n1a-1,
@@ -718,10 +718,11 @@ code {
     list-style: none;
     ol {
       margin-bottom: 20px;
+      margin-left: 20px;
       a {
         @include font-regular();
       }
-      margin-left: 20px;
+
       ol {
         margin-left: 20px;
       }

@@ -41,8 +41,12 @@
 
   outline: none;
   font-weight: bold;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease,
-    visibility 0.25s ease, background-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    background-color 0.25s ease;
   outline: none;
   border: none;
   cursor: pointer;
@@ -145,8 +149,12 @@
     border-radius: 50%;
     outline: none;
     font-weight: bold;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease,
-      visibility 0.25s ease, background-color 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      background-color 0.25s ease;
     outline: none;
     border: none;
     cursor: pointer;
@@ -187,7 +195,9 @@
     color: rgba(255, 255, 255, 0.6);
     opacity: 1;
     background: rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease, color 0.5s ease;
+    transition:
+      all 0.5s ease,
+      color 0.5s ease;
   }
   /* Swiper custom pagination */
   .swiper-pagination-bullet:hover {

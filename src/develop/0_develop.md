@@ -387,7 +387,7 @@ $minheaders: (
       1.3,
       "regular",
     )
-    //  siempre en mayus,,
+    //  siempre en mayus,,,,
 ) !default;
 ```
 

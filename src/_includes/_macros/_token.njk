@@ -12,3 +12,25 @@
   <pre><code class=" ">{{standardcode }} </code></pre>
 {% endmacro %}
 
+
+
+{% macro swiperSlide(videoSrc, slideData, slidePrice) %}
+<div class="swiper-slide"      data-info="{{ slideData }} "  data-price="{{ slidePrice }} "  >
+    <video class="video-cover"
+
+     src="{{ videoSrc }}" 
+     
+     autoplay muted videoinline></video>
+
+
+</div>
+{% endmacro %}
+
+{% macro videoCard(title, videoSrc) %}
+<div class="ar-9-16 o-hidden p-relative">
+    <div id="moveCenter" class="js-resetPosition stories-text text-16-r">{{ title }}</div>
+    <video class="video-cover"
+        src="{{ videoSrc }}"
+        autoplay muted videoinline></video>
+</div>
+{% endmacro %}
