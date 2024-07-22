@@ -897,3 +897,8 @@ ul {
   white-space: nowrap;
   width: 100%;
 }
+
+.header-fake{
+  position: fixed;
+  z-index: 2000;
+}

@@ -176,7 +176,11 @@
 }
 
 .blend-text {
-  font-size: 20px;
   color: white;
   mix-blend-mode: exclusion; /* Puedes cambiar 'multiply' por otros modos de mezcla como 'screen', 'overlay', etc. */
+}
+
+.blend-mode {
+  mix-blend-mode: difference;
+  background-blend-mode: difference;
 }
