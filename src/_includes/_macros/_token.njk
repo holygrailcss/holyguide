@@ -15,7 +15,7 @@
 
 
 {% macro swiperSlide(videoSrc, slideData, slidePrice, viewImgMini) %}
-<div class="swiper-slide"      data-info="{{ slideData }} "  data-price="{{ slidePrice }} " data-miniImg="{{ viewImgMini }} "  >
+<div class="swiper-slide"      data-info="{{ slideData }} "  data-price="{{ slidePrice }} " data-miniImg="{{ viewImgMini }} "  data-history="slide-{{ slideData }} " >
     <video class="video-cover"
 
      src="{{ videoSrc }}" 

@@ -14713,6 +14713,7 @@ header.interior svg path {
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .modal-qr {
