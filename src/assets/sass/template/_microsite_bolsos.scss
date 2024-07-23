@@ -1,18 +1,27 @@
 /* Estructura */
-.stories-menu {
+.stories-menu-fixed {
   position: fixed;
   z-index: 20;
-  color: white;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 0;
+  max-width: 500px;
+  width: 100vw;
+  height: 141px;
+  display: flex;
+}
+.stories-img-extra {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background-color: #fff;
+  margin-right: 4px;
+}
+.stories-menu {
+  color: white;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  max-width: 400px;
-  width: 100%;
-  height: 141px;
-
   .stories-menu-btn {
     position: absolute;
     bottom: 0;
@@ -21,33 +30,27 @@
     display: flex;
     align-content: space-around;
     justify-content: space-between;
-
     a {
       flex: 1;
-
       .btn {
         border: none;
       }
-
       &:first-child {
         border-right: 1px solid #ccc;
       }
     }
   }
 }
-
 .stories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 52px;
   width: 100%;
   align-items: start;
-
   @media (min-width: $break-sm) {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-
 .stories-text {
   width: 100%;
   text-align: center;
@@ -55,7 +58,6 @@
   z-index: 1;
   bottom: 16px;
 }
-
 .stories-load {
   position: fixed;
   z-index: 100;
@@ -68,27 +70,22 @@
   justify-content: center;
   text-align: center;
 }
-
 .stories-supercontainer-wrap {
   width: 100vw;
   overflow: hidden;
 }
-
 .stories-supercontainer {
   width: 300vw;
   display: flex;
   transform: translateX(-100vw);
-
   .container-fluid {
     flex: 1;
   }
 }
-
 .has-storiecenter {
   overflow: hidden;
   height: 100vh;
 }
-
 .container-absolute {
   position: absolute;
   z-index: 10;
@@ -98,13 +95,12 @@
   transform: translateY(-50%);
   padding: 16px;
 }
-
 .stories-fullwidth {
   height: 100vh;
   overflow: auto;
 }
-
 .stories-menu-controls {
+  display: none;
   opacity: 1;
   transform: translate(0px, 0px);
   position: absolute;
@@ -112,7 +108,6 @@
   right: 0;
   left: 0;
 }
-
 .stories-menu-wrap {
   height: 50px;
   position: absolute;
@@ -121,35 +116,29 @@
   right: 0;
   overflow: hidden;
 }
-
 .stories-watermark {
   overflow: hidden;
   position: fixed;
   pointer-events: none;
   width: 50vw;
   height: calc(100vh - 120px);
-
   svg {
     width: 100%;
     height: auto;
   }
 }
-
 .stories-swiper {
   height: 100vh;
   width: 100vw;
-
   &.swiper {
     height: 100vh;
     max-width: 100%;
   }
-
   .swiper-slide {
     width: 100%;
     height: 100vh;
   }
 }
-
 .move-left,
 .move-right {
   position: absolute;
@@ -157,30 +146,89 @@
   transform: translateY(-50%);
   padding: 20px;
 }
-
 .move-left {
   left: 0;
 }
-
 .move-right {
   right: 0;
 }
-
 /* Helpers */
 .flex-1 {
   flex: 1;
 }
-
 .ar-9-16 {
   aspect-ratio: 9 / 16;
 }
-
 .blend-text {
   color: white;
-  mix-blend-mode: exclusion; /* Puedes cambiar 'multiply' por otros modos de mezcla como 'screen', 'overlay', etc. */
+  mix-blend-mode: exclusion;
+  /* Puedes cambiar 'multiply' por otros modos de mezcla como 'screen', 'overlay', etc. */
 }
-
 .blend-mode {
   mix-blend-mode: difference;
   background-blend-mode: difference;
+}
+.stories-creators {
+  display: block;
+}
+
+
+.stories-products {
+  display: none;
+}
+
+
+
+.fromrightposition {
+  .stories-creators {
+    display: none;
+  }
+  .stories-products {
+    display: block;
+  }
+}
+.fromleftposition {
+  .stories-creators {
+    display: block;
+  }
+  .stories-products {
+    display: none;
+  }
+}
+
+.btn-augmented{
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  bottom: 165px;
+  font-size: 12px;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-qr{
+  position: absolute;
+  z-index: 1000;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: rgb(0 0 0 / 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+opacity: 0;
+pointer-events: none;
+transition: all ease .2s;
+
+}
+
+.has-modal-qr{
+
+  .modal-qr{
+    pointer-events: all;
+opacity: 1;
+  }
+
 }
