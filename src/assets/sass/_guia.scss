@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 .guide {
+
+  .todo{
+    background-color: $c-guide ; color: white;
+  }
   ul {
     margin-bottom: 20px;
     li {
@@ -663,14 +667,14 @@ code {
   border-radius: 3px;
 }
 .innermarkdown {
+  font-size: 14px;
   ul {
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
     li {
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 8px;
+
+
     }
   }
 }

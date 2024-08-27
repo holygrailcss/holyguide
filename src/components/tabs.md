@@ -2,8 +2,8 @@
 layout: _paginas/components/_tabs.njk
 permalink: /tabs/
 
-titulo: Tabs
-descripcion: Nuevos tabs con dots
+titulo: Tabs2
+descripcion: Nuevos tabs2 unificados
 
 date: 2023-06-19
 fecha: 19 de junio de 2023

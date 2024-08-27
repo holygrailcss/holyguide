@@ -52,3 +52,11 @@
     url("/assets/fonts/dutti/dutti-extended-regular.woff2") format("woff2"),
     url("/assets/fonts/dutti/dutti-extended-regular.woff") format("woff");
 }
+
+@font-face {
+  font-family: "massimo-daily-regular";
+  font-weight: 500;
+  font-display: swap;
+  src: local("massimo-daily-regular"), url("/assets/fonts/suisse/SuisseWorks-Regular-WebXL.woff2") format("woff2"),
+      url("/assets/fonts/suisse/SuisseWorks-Regular-WebXL.woff2") format("woff");
+}
