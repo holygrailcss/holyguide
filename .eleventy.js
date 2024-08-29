@@ -23,7 +23,7 @@ const mdAnchorOpts = {
   permalink: markdownItAnchor.permalink.ariaHidden({
     placement: 'before',
     class: 'anchor-link',
-    symbol: '#',
+    symbol: '',
   })
 };
 

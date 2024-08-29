@@ -98,6 +98,37 @@ layout: base.njk
             {% endfor %}
           </div>
         </div>
+
+
+
+        <h2>Secundarios Alfa</h2>
+        <div class="row bg-light pt-40">
+          <div class="col-xs-12">
+            {% for color in global.coloresSecundariosAlfa %}
+              <div class="guide-colors text-center">
+                <div class="guide-colors-bg text-center" style="background-color:{{ color.hex }};"></div>
+                <div class="guide-colors-text">
+                  <div class="title-m">
+                    <span>Hex:</span>
+                    {{ color.hex }}
+                  </div>
+                  <div class="title-m">
+                    <span>Variable Color:</span> ${{ color.variable }}
+                  </div>
+                  <div class="title-m">
+                    <span>Font color:</span> .{{ color.font }}</div>
+                  <div class="title-m">
+                    <span >Background Color:</span>
+                    .{{ color.bg }}</div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+
+
+
         <div class="part2">
           {{ parts[2] | safe }}
         </div>

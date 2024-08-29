@@ -211,18 +211,23 @@
 
   "coloresPrimariosAlfa": [
 
-
-
-
-
 { "hex": "rgba(0, 0, 0, 0.3)", "variable": "c-primary-3", "font": "c-primary-3", "bg": ".bg-primary-3" }, 
 { "hex": "rgba(0, 0, 0, 0.15)", "variable": "c-primary-15", "font": "c-primary-15", "bg": ".bg-primary-15" }, 
 { "hex": "rgba(0, 0, 0, 0.30)", "variable": "c-primary-30", "font": "c-primary-30", "bg":  ".bg-primary-30" }, 
 { "hex": "rgba(0, 0, 0, 0.60)", "variable": "c-primary-60", "font": "c-primary-60", "bg":  ".bg-primary-60"},
  { "hex": "rgba(0, 0, 0, 0.97)", "variable": "c-primary-97", "font": "c-primary-97", "bg":  ".bg-primary-97" }
 
-
 ], 
+
+"coloresSecundariosAlfa": [
+
+  { "hex": "rgba(255, 255, 255, 0.3)", "variable": "c-secondary-3", "font": "c-secondary-3", "bg": ".bg-secondary-3" }, 
+  { "hex": "rgba(255, 255, 255, 0.15)", "variable": "c-secondary-15", "font": "c-secondary-15", "bg": ".bg-secondary-15" }, 
+  { "hex": "rgba(255, 255, 255, 0.30)", "variable": "c-secondary-30", "font": "c-secondary-30", "bg":  ".bg-secondary-30" }, 
+  { "hex": "rgba(255, 255, 255, 0.60)", "variable": "c-secondary-60", "font": "c-secondary-60", "bg":  ".bg-secondary-60"},
+   { "hex": "rgba(255, 255, 255, 0.97)", "variable": "c-secondary-97", "font": "c-secondary-97", "bg":  ".bg-secondary-97" }
+  
+  ], 
  
  
  
