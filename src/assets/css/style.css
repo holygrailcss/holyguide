@@ -382,32 +382,26 @@ button {
 }
 
 .slide-in {
-  -webkit-animation: slide-right 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-right 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .slide-out {
-  -webkit-animation: slide-left 300ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: slide-left 300ms cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .fade-in {
-  -webkit-animation: fade-in 300ms ease-in-out both;
   animation: fade-in 300ms ease-in-out both;
 }
 
 .fade-out {
-  -webkit-animation: fade-out 150ms ease-in-out both;
   animation: fade-out 150ms ease-in-out both;
 }
 
 .expand-top {
-  -webkit-animation: scale-up-top 700ms ease-in-out both;
   animation: scale-up-top 700ms ease-in-out both;
 }
 
 .collapse-top {
-  -webkit-animation: scale-down-top 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale-down-top 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -3269,7 +3263,6 @@ mark {
     line-height: 1.2;
   }
 }
-/* todo una vez incluida */
 .fluid-1-l {
   font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
   font-weight: 100;
@@ -6406,18 +6399,18 @@ strong {
 }
 
 .ov-custom::-webkit-scrollbar-track {
-  background-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.1);
 }
 .ov-custom::-webkit-scrollbar-track:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.1);
 }
 .ov-custom::-webkit-scrollbar-thumb {
-  background-color: #8e8e8e;
+  background-color: rgba(142, 142, 142, 0.6);
   border-radius: 16px;
   border: 3px solid #ffffff;
 }
 .ov-custom::-webkit-scrollbar-thumb:hover {
-  background-color: #8e8e8e;
+  background-color: rgba(142, 142, 142, 0.6);
   border: 2px solid #f0f0f0;
 }
 .ov-custom::-webkit-scrollbar-button {
@@ -6669,8 +6662,6 @@ strong {
 
 .scrollcustom {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .scrollcustom::-webkit-scrollbar {
   width: 5px;
@@ -6678,22 +6669,15 @@ strong {
 }
 .scrollcustom::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 .scrollcustom::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.scrollcustom::-webkit-scrollbar-thumb:window-inactive {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .min-scrollcustom-y {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .min-scrollcustom-y::-webkit-scrollbar {
   width: 1px;
@@ -6701,77 +6685,57 @@ strong {
 }
 .min-scrollcustom-y::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 10px;
   border-radius: 0;
 }
 .min-scrollcustom-y::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.min-scrollcustom-y::-webkit-scrollbar-thumb:window-inactive {
+  border-radius: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .min-scrollcustom-hover {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .min-scrollcustom-hover::-webkit-scrollbar {
   width: 0;
 }
 .min-scrollcustom-hover::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 10px;
   border-radius: 0;
 }
 .min-scrollcustom-hover::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.min-scrollcustom-hover::-webkit-scrollbar-thumb:window-inactive {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .min-scrollcustom-x {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .min-scrollcustom-x::-webkit-scrollbar {
   height: 5px;
 }
 .min-scrollcustom-x::-webkit-scrollbar-track {
-  background: #fff;
-  -webkit-border-radius: 10px;
+  background: #ffffff;
   border-radius: 0;
 }
 .min-scrollcustom-x::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #999;
+  background: #e3e3e3;
 }
 .min-scrollcustom-x::-webkit-scrollbar-thumb:window-inactive {
-  background: #999;
+  background: #e3e3e3;
 }
 
 .min-scrollcustom-x.has-dark {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .min-scrollcustom-x.has-dark::-webkit-scrollbar {
   height: 5px;
 }
 .min-scrollcustom-x.has-dark::-webkit-scrollbar-track {
   background: #e3e3e3;
-  -webkit-border-radius: 10px;
   border-radius: 0;
 }
 .min-scrollcustom-x.has-dark::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #000000;
 }
@@ -7268,8 +7232,6 @@ strong {
   bottom: 0;
   right: 0;
   color: #000000;
-  display: box;
-  display: flexbox;
   display: flex;
   opacity: 1;
   -webkit-box-align: end;
@@ -7278,7 +7240,6 @@ strong {
   transition: opacity 0.3s ease;
   z-index: 6;
 }
-
 .arrow-cover svg {
   animation: bounce 0.8s infinite alternate;
 }
@@ -8770,8 +8731,6 @@ button {
   font-weight: normal;
   font-size: 12px;
   text-align: initial;
-  display: box;
-  display: flexbox;
   display: flex;
 }
 .checkbox-item [type=checkbox]:not(:checked) + label::before,
@@ -8859,8 +8818,6 @@ button {
   font-weight: normal;
   font-size: 12px;
   text-align: initial;
-  display: box;
-  display: flexbox;
   display: flex;
 }
 .checkbox-item-2 [type=checkbox]:not(:checked) + label::before,
@@ -8936,8 +8893,6 @@ button {
   font-weight: normal;
   font-size: 12px;
   text-align: initial;
-  display: box;
-  display: flexbox;
   display: flex;
   flex-direction: column;
   float: none;
@@ -9060,7 +9015,6 @@ button {
   transform: rotate(50deg);
   background-color: #000000;
 }
-.checkbox-item-img [type=checkbox] + label::after,
 .checkbox-item-img [type=checkbox] + label::after {
   width: 80px;
   height: 80px;
@@ -9201,10 +9155,10 @@ button {
 .check-center .box3-content {
   padding-left: 30px;
 }
-.check-center.checkbox-radio [type=radio]:checked + label .border-1-grey, .check-center.checkbox-radio [type=radio]:checked + label .border-1-grey {
+.check-center.checkbox-radio [type=radio]:checked + label .border-1-grey {
   border: 1px solid #000000;
 }
-.check-center.checkbox-radio [type=radio]:checked + label .border-1, .check-center.checkbox-radio [type=radio]:checked + label .border-1 {
+.check-center.checkbox-radio [type=radio]:checked + label .border-1 {
   border: 1px solid #000000;
 }
 
@@ -10869,7 +10823,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   align-items: center;
   vertical-align: top;
   cursor: pointer;
-  padding: 0 20px 0;
+  padding: 0 20px;
   line-height: 1;
 }
 .tabs li.is-active a, .tabs li.is-active span, .tabs li.is-active .tab {
@@ -10966,62 +10920,6 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   align-items: flex-end;
 }
 .tabs2 .list-equal li {
-  flex-grow: 1;
-}
-
-.tabs-inline ul {
-  display: flex;
-  margin: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-.tabs-inline ul.content-start {
-  justify-content: flex-start;
-}
-.tabs-inline ul.content-center {
-  align-items: center;
-}
-.tabs-inline li {
-  display: block;
-  margin: 0;
-}
-.tabs-inline li::after {
-  display: none;
-}
-.tabs-inline li a,
-.tabs-inline li span,
-.tabs-inline li .tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: top;
-  cursor: pointer;
-}
-.tabs-inline li.is-active a, .tabs-inline li.is-active span, .tabs-inline li.is-active .tab {
-  position: relative;
-}
-.tabs-inline li.is-active a::after, .tabs-inline li.is-active span::after, .tabs-inline li.is-active .tab::after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: #000000;
-  bottom: 0;
-}
-.tabs-inline.is-center ul {
-  justify-content: center;
-}
-.tabs-inline.is-around ul {
-  justify-content: space-around;
-}
-.tabs-inline.is-around ul li {
-  flex: 1;
-}
-.tabs-inline .list-equal {
-  display: flex;
-  align-items: flex-end;
-}
-.tabs-inline .list-equal li {
   flex-grow: 1;
 }
 
@@ -12099,8 +11997,6 @@ ul.list-clear li.list-box:last-child {
 }
 
 .row1 {
-  /* no se usa */
-  display: box;
   display: flex;
   flex-flow: row wrap;
   flex-shrink: 0;
@@ -12552,7 +12448,6 @@ div.card9-wrap .rat-content:hover .card9-add {
 /* prettier-ignore */
 /* prettier-ignore */
 .box3 {
-  /* no se usa */
   position: relative;
   width: 100%;
   min-height: 58px;
@@ -12667,7 +12562,6 @@ div.card9-wrap .rat-content:hover .card9-add {
 /* prettier-ignore */
 /* prettier-ignore */
 @media (max-width: 767px) {
-  /* no se usa */
   .header-account-logo {
     display: none;
   }
@@ -12985,7 +12879,6 @@ div.card9-wrap .rat-content:hover .card9-add {
 }
 .nativescroll .inner-nativescroll div {
   background: #ccc;
-  /* float: left; */
   width: 22vw;
 }
 @media (min-width: 992px) {
@@ -13202,7 +13095,7 @@ div.card9-wrap .rat-content:hover .card9-add {
 .header-new .search-bar {
   position: relative;
 }
-.header-new .search-bar:after {
+.header-new .search-bar::after {
   position: absolute;
   bottom: -4px;
   left: 50%;
@@ -22930,6 +22823,17 @@ code {
   background-color: transparent;
 }
 
+@media (max-width: 767px) {
+  .is-rtl .grid-product-wrap--2CBG2 .grid-product-list--2CBG2:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .is-rtl .grid-product-wrap--2CBG2 .grid-product-list--2CBG2:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+
 /* TYPES FIJOS */
 .grid-product-view-new {
   flex-basis: 100%;
@@ -24290,10 +24194,10 @@ code {
 }
 
 .grid-product-wrap--limitedSeparator {
-  width: calc(100% + 16px);
-  margin-left: -8px;
   height: 100%;
   max-height: 120px;
+  width: calc(100% + 16px);
+  margin-left: -8px;
 }
 @media (min-width: 992px) {
   .grid-product-wrap--limitedSeparator {

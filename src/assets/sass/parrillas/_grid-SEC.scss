@@ -4,10 +4,9 @@
 $separator-height--limitedSeparator: 12.5%;
 
 .grid-product-wrap--limitedSeparator {
-  @include grid-product-view-bleed;
-
-  height: 100%;
+  height: 100%; // Movido antes de la anidación
   max-height: 120px;
+  @include grid-product-view-bleed;
 
   .grid-product-list--limitedSeparator {
     height: 100%;

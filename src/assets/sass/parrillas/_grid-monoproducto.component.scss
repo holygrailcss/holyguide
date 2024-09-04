@@ -173,14 +173,13 @@ $grid-cols--1A: 3;
   }
 
   & + .grid-swiper-wrap {
+    width: auto;
+    margin-left: inherit;
     .sk-wrap-2-3 {
       .sk-text-zone {
         display: none;
       }
     }
-
-    width: auto;
-    margin-left: inherit;
   }
 }
 
