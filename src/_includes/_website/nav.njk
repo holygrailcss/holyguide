@@ -1,6 +1,23 @@
+<button id="mostrarSidebar" class="btn  btn-link mt-16 ml-24"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="
+  http://www.w3.org/2000/svg">
+  <path d="M14 3H2V2H14V3Z" fill="#000000"></path>
+  <path d="M14 14H2V13H14V14Z" fill="#000000"></path>
+  <path d="M2 8.5H14V7.5H2V8.5Z" fill="#000000"></path>
+  </svg></button>
+<button id="ocultarSidebar" class="btn  btn-link mt-16 ml-24">
+  
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L8 7.29289L14.6464 0.646447C14.8417 0.451184 15.1583 0.451184 15.3536 0.646447C15.5488 0.841709 15.5488 1.15829 15.3536 1.35355L8.70711 8L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L8 8.70711L1.35355 15.3536C1.15829 15.5488 0.841709 15.5488 0.646447 15.3536C0.451184 15.1583 0.451184 14.8417 0.646447 14.6464L7.29289 8L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z" fill="#ffffff"></path>
+    </svg>
+
+</button>
+
 <nav class="nav-guide text-16-r scrollcustom">
   <div class="menu-lateral sidebar">
-    <div class="logo-zone mt-24 mb-32 fluid-6-l">
+
+
+
+    <div class="logo-zone mt-40 mb-32 fluid-6-l">
       <a href="/">HOLYGUIDE</a>
       <br>
       <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
@@ -101,3 +118,39 @@
 {#
 <script src="/js/nav-interactions.js"></script>
 <script src="/js/rtl-action-components.js"></script> #}
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.querySelector('.sidebar');
+    const mostrarSidebar = document.getElementById('mostrarSidebar');
+    const ocultarSidebar = document.getElementById('ocultarSidebar');
+
+    mostrarSidebar.addEventListener('click', function() {
+
+      document.body.classList.add('abrirmenu');
+      document.body.classList.remove('quitarmenu');
+    });
+
+    ocultarSidebar.addEventListener('click', function() {
+
+      document.body.classList.add('quitarmenu');
+      document.body.classList.remove('abrirmenu');
+
+    });
+
+    // Definir las animaciones
+    const estiloAnimacion = document.createElement('style');
+    estiloAnimacion.textContent = `
+      @keyframes deslizarEntrada {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+      }
+      @keyframes deslizarSalida {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+      }
+    `;
+    document.head.appendChild(estiloAnimacion);
+  });
+</script>

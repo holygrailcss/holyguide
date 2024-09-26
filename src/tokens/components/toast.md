@@ -36,7 +36,7 @@ imageAlt: toast
 | action      | function | Función para la acción del Toast                 |
 | dismissible | boolean  | Si el Toast puede ser cerrado por el usuario.    |
 
-### Estilos Específicos
+## Estilos Específicos
 
 - **Fondo**: #000000 (negro). Token color: **bg-primary**
 - **Texto**: #ffffff (blanco). Token color: **t-secondary**
@@ -45,7 +45,7 @@ imageAlt: toast
 - **Sombra**: Sin sombra
 - **Animación**: Entrada y salida con animaciones de deslizamiento personalizadas.
 
-### Animaciones
+## Animaciones
 
 - **Entrada**:
   - **Efecto**: Deslizamiento desde la izquierda.
@@ -56,7 +56,7 @@ imageAlt: toast
   - **Curva de Bézier**: `cubic-bezier(0.39, 0.575, 0.565, 1)`
   - **Duración**: 300ms
 
-### Buenas Prácticas
+## Buenas Prácticas
 
 - **Hacer**:
 
@@ -66,8 +66,8 @@ imageAlt: toast
 
 - **No Hacer**:
 
-### Accesibilidad
+## Accesibilidad
 
 - **Pausar en hover**: Pausar el temporizador del Toast cuando el usuario pase el cursor sobre él.
 
-## Casos de uso en MD
+

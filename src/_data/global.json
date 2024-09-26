@@ -238,6 +238,7 @@
     { "hex": "#1a32a4", "variable": "c-info", "font": "c-info", "bg": "bg-info" }, 
     { "hex": "#12882c", "variable": "c-success", "font": "c-success", "bg": "bg-success" },
      { "hex": "#ffce4e", "variable": "c-warning", "font": "c-warning", "bg": "bg-warning" }, 
+     { "hex": "#E5740B", "variable": "c-notice", "font": "c-notice", "bg": "bg-notice" }, 
      { "hex": "#000", "variable": "c-feel", "font": "c-feel", "bg": "bg-feel" }
   ],
   "coloresFeel": [

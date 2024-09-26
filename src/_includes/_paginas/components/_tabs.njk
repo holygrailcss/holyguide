@@ -20,7 +20,7 @@ layout: base.njk
       <div class="col-xs-12 "></div>
       <div class="col-xs-12">
           <div class="title-s c-dark-grey ">
-       Tabs2 , selectables entre listas y en línea. 
+       .Tabs2 , selectables entre listas y en línea. 
 
 
           </div>
@@ -43,10 +43,10 @@ layout: base.njk
       <h3> Left Tabs</h3>
       <div class="tabs2 mb-40">
         <ul>
-          <li class="is-active"><span>Pictures</span></li>
-          <li><span>Music</span></li>
-          <li><span>Videos</span></li>
-          <li><span>Documents</span></li>
+          <li class="is-active"><span class="tab">Pictures</span></li>
+          <li><span  class="tab">Music</span></li>
+          <li><span  class="tab">Videos</span></li>
+          <li><span  class="tab">Documents</span></li>
         </ul>
       </div>
       <div class="resize-mini">
@@ -65,20 +65,20 @@ layout: base.njk
  <h3> Center Tabs</h3>
       <div class="tabs2 is-center mb-40">
         <ul>
-          <li class="is-active"><a>Pictures</a></li>
-          <li><a>Music</a></li>
-          <li><a>Videos</a></li>
-          <li><a>Documents</a></li>
+          <li class="is-active"><a class="tab">Pictures</a></li>
+          <li><a class="tab">Music</a></li>
+          <li><a class="tab">Videos</a></li>
+          <li><a class="tab">Documents</a></li>
         </ul>
       </div>
 
       <div class="resize-mini">
       <pre><code class="language-markup">{{"<div class='tabs2 is-center'>
     <ul>
-        <li class='is-active'><a>Pictures</a></li>
-        <li><a>Music</a></li>
-        <li><a>Videos</a></li>
-        <li><a>Documents</a></li>
+        <li class='is-active'><a class='tab'>Pictures</a></li>
+        <li><a class='tab'>Music</a></li>
+        <li><a class='tab'>Videos</a></li>
+        <li><a class='tab'>Documents</a></li>
     </ul>
   </div> "| escape  }} 
 </code></pre> 
@@ -172,6 +172,35 @@ layout: base.njk
 </div>
 
 {# /Element #}
+
+
+{# Element #} <h3> Button Tabs-resetfirst</h3>
+<p class="title-m"> Se distribuyen el espacio las tabs. Ideal para dos selectores. </p>
+<div class="tabs2 tabs-resetfirst mb-40">
+  <ul >
+    <li class="is-active"><button class="btn-tertiary tab">Pictures</button></li>
+    <li><button class="btn-tertiary tab"> Music </button></li>
+    <li><button class="btn-tertiary tab"> Videos </button></li>
+    <li><button class="btn-tertiary tab"> Documents </button></li>
+  </ul>
+</div>
+
+<div class="resize-mini">
+
+<pre><code class="language-markup">{{"<div class='tabs2  tabs-resetfirst  '>
+  <ul >
+    <li class='is-active'><button class='btn-tertiary tab '> Pictures </button></li>
+    <li><button class='btn-tertiary tab'> Music </button></li>
+    <li><button class='btn-tertiary tab'> Videos </button></li>
+    <li><button class='btn-tertiary tab'> Documents </button></li>
+  </ul>
+</div> "| escape  }} 
+</code></pre>
+</div>
+
+{# /Element #}
+
+
 
 
 

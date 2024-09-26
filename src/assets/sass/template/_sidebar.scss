@@ -84,7 +84,7 @@
     padding-bottom: 32px;
   }
   @media (max-width: 767px) {
-    transform: translateX(-250px);
+    transform: translateX(-100%);
     transition: all ease-in-out 0.4s;
     &.open-menu {
       transform: translateX(0px);
@@ -98,11 +98,11 @@
 }
 
 .main-widthsidebar {
-  padding-left: 350px;
-
-  @media (max-width: 767px) {
+  padding-left: 0;
+  width: 100%;
+  @media (min-width: 767px) {
     width: 100%;
-
+    padding-left: 350px;
     margin-left: 0px;
   }
 }

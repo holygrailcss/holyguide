@@ -95,15 +95,15 @@
 
 
   <main class="main-widthsidebar">
-    <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-7">
+    <div class="row smmax:reverse">
+      <div class="col-xs-12 col-md-1"></div>
+      <div class="col-xs-12 col-md-7">
         
         {{ content | safe }}
       </div>
 
       {% if content | toc | safe != 0 %}
-      <div class="col-xs-4">
+      <div class="col-xs-12  col-md-4">
         {{ content | toc | safe }}
       </div>
     {% endif %}
