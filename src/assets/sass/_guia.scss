@@ -667,10 +667,12 @@ code {
   border-radius: 3px;
 }
 .innermarkdown {
+  list-style: none;
   font-size: 14px;
-  ul {
+  ul,ol {
     margin-top: 20px;
     margin-bottom: 20px;
+    padding-left: 20px;
 
   }
 }
@@ -713,6 +715,14 @@ code {
     &:hover {
       opacity: 0.5;
     }
+
+    &:after{
+      content: "";
+      margin-left: 0;
+      transition: all ease 0.2s;
+    }
+
+
   }
   ol {
     list-style: none;
@@ -731,6 +741,14 @@ code {
 }
 .toc ol li a.active {
   color: black;
+
+  &:hover{
+    opacity: 0.5;
+  }
+  &:after{
+    content: "_";
+    margin-left: 8px;
+  }
   /* Este estilo es solo un ejemplo */
 }
 .guide {

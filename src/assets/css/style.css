@@ -21620,11 +21620,13 @@ code {
 }
 
 .innermarkdown {
+  list-style: none;
   font-size: 14px;
 }
-.innermarkdown ul {
+.innermarkdown ul, .innermarkdown ol {
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .guide code[class*=language-] {
@@ -21667,6 +21669,11 @@ code {
 .toc ol li a:hover {
   opacity: 0.5;
 }
+.toc ol li a:after {
+  content: "";
+  margin-left: 0;
+  transition: all ease 0.2s;
+}
 .toc ol {
   list-style: none;
 }
@@ -21685,6 +21692,13 @@ code {
 .toc ol li a.active {
   color: black;
   /* Este estilo es solo un ejemplo */
+}
+.toc ol li a.active:hover {
+  opacity: 0.5;
+}
+.toc ol li a.active:after {
+  content: "_";
+  margin-left: 8px;
 }
 
 .guide table {

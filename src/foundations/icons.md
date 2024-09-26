@@ -13,15 +13,16 @@ imageAlt: Ilustración de un diseño de sistema web
 ---
 
 
-## Proceso de incorporación de nuevos íconos
+## Proceso de añadir ícono
 
  > **Contacto con el Diseñador**: Acude al responsable de diseño especializado en la creación de diseños. Él nos proporcionará el código SVG del ícono.
 
-# Guía de Uso del Componente `svg-icon2` en Angular
+
+##### Guía de Uso del Componente `svg-icon2` en Angular
 
 En nuestro proyecto de Angular, utilizaremos el nuevo componente `svg-icon2` para manejar los íconos SVG de manera más eficiente. Este componente extrae los íconos directamente de los archivos JSON, lo que nos permite evitar el uso de imágenes que realizan peticiones adicionales y ralentizan el proceso de carga cuando hay muchos íconos. Con `svg-icon2`, podemos reducir el peso del DOM y mejorar el rendimiento general de la aplicación.
 
-## Ventajas del Componente `svg-icon2`:
+## Ventajas de  `svg-icon2`
 
 - **Eficiencia en la carga**: Al no depender de imágenes externas, se eliminan las peticiones adicionales al servidor.
 - **Rendimiento optimizado**: La carga de íconos se realiza más rápidamente, mejorando la velocidad de la aplicación.
