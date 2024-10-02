@@ -126,3 +126,50 @@ Helpers que ayudan a agilizar el proceso de maquetación.
 | .scrollcustom-x      | **.scroll-x-custom**       | Scroll horizontal personalizado                |
 | .min-scrollcustom-x  | **.scroll-x-custom-min**    | Scroll horizontal mínimo personalizado         |
 
+
+### Opacidad
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .opacity-50          | **.opacity-50**          | Opacidad del 50%                               |
+| .opacity-70          | **.opacity-70**          | Opacidad del 70%                               |
+
+### Cursor
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .cursor-pointer      | **.cursor-pointer**      | Cambia el cursor a un puntero                  |
+
+### Overflow
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .ov-scroll           | **.scroll-overflow**     | Desplazamiento con overflow automático         |
+| .scrollcustom        | **.scroll-custom**       | Estilo de barra de desplazamiento personalizada|
+| .min-scrollcustom-x  | **.scroll-x-custom-min** | Scroll horizontal mínimo personalizado         |
+
+### Flexbox
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .flex-1              | **.flex-1**              | Flex grow 1, shrink 1, basis 0%                |
+| .flex-auto           | **.flex-auto**           | Flex grow 1, shrink 1, basis auto              |
+| .flex-initial        | **.flex-initial**        | Flex grow 0, shrink 1, basis auto              |
+| .flex-none           | **.flex-none**           | Flex grow 0, shrink 0, basis auto              |
+
+### Eventos
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .pe-none             | **.events-none**         | Deshabilita eventos de puntero                 |
+
+### Fuentes
+
+| Helper               | Propuesta                | Descripción                                    |
+| -------------------- | ------------------------ | ---------------------------------------------- |
+| .font-l              | **.font-light**          | Fuente light                                   |
+| .font-r              | **.font-regular**        | Fuente regular                                 |
+| .font-m              | **.font-medium**         | Fuente medium                                  |
+| .font-b              | **.font-bold**           | Fuente bold                                    |
+| .font-sb             | **.font-semibold**       | Fuente semibold                                |
+
