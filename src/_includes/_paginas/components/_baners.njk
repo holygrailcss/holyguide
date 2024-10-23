@@ -6,24 +6,64 @@ layout: base.njk
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
-<div class="main-content innermarkdown ">{{ content | safe }}
+<div class="main-content innermarkdown ">  {{ content | safe }}
+<div class="row">
+  <div class="col-xs-12">
+    <h2 id="banner-basic">BANNER-BASIC</h2>
+
+  </div>
+</div>
+
+
+  <div class="row ">
+
+
+    <div class="col-xs-12 grid-3 gap-16">
+      <div class="mb-32 p-16 text-l text-center bg-warning"> <b>.bg-warning </b><br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+      
+         <div class="mb-32 p-16 text-l text-center bg-info">  .bg-info <br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+      
+         <div class="mb-32 p-16 text-l text-center bg-success">  .bg-success <br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+      
+         <div class="mb-32 p-16 text-l text-center bg-error has-light">  .bg-error <br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+      
+         <div class="mb-32 p-16 text-l text-center bg-feel has-light">  .bg-feel <br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+      
+      
+         <div class="mb-32 p-16 text-l text-center bg-light-grey">  .bg-limited <br>
+        Nullam justo eros, tincidunt sed aliquam at, venenatis eget ipsum. Mauris iaculis ac libero non consectetur.
+      </div>
+    </div>
+  </div>
+
+
+
   <div class="row">
     <div class="col-xs-12">
+
+      {% call insert.banner('bg-warning is-flex p-16' ,'Banner warning') %}
+      {% endcall %}
+
+
+
+
+
+
       {% call insert.banner('marketing-spot' ,'Usado en cesta y checkout para mensajes de freeshiping y alerta de
       personalización') %}
       {% endcall %}
-      {% call insert.banner('bg-warning is-flex p-16' ,'Banner warning') %}
-      {% endcall %}
-      {% call insert.banner('bg-info is-flex p-16' ,'Banner info') %}
-      {% endcall %}
-      {% call insert.banner('bg-success is-flex p-16' ,'Banner valid') %}
-      {% endcall %}
-      {% call insert.banner('bg-error is-flex p-16 has-light' ,'Banner alert') %}
-      {% endcall %}
-      {% call insert.banner('bg-feel is-flex p-16' ,'Banner feel') %}
-      {% endcall %}
-      {% call insert.banner('bg-limited is-flex p-16' ,'Banner limited') %}
-      {% endcall %}
+
+      
       {% call insert.bannerActions('link-line' ,'Banner con enlace de texto a la derecha') %} {% endcall %}
       {% call insert.bannerActions('ico-link' ,'Banner con enlace de icono a la derecha') %} {% endcall %}
       {% call insert.bannerActions('ico-context' ,'Banner con icono contextual a la izquierda') %} {% endcall %}
@@ -53,4 +93,6 @@ layout: base.njk
       </div>
     </div>
   </div>
+
+
 </div>

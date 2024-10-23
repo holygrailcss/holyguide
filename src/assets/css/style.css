@@ -5796,7 +5796,7 @@ mark {
 }
 
 .c-feel {
-  color: #fb9962;
+  color: #000000;
 }
 
 .c-feel-dark {
@@ -5907,7 +5907,7 @@ mark {
 }
 
 .bg-feel {
-  background-color: #fb9962;
+  background-color: #000000;
 }
 
 .bg-dark {
@@ -7393,7 +7393,7 @@ strong {
   padding: 24px 16px;
   margin-top: 16px;
   text-align: center;
-  background-color: #fb9962;
+  background-color: #000000;
   color: #000000;
 }
 
@@ -7514,7 +7514,7 @@ button {
 .btn.btn-feel-invert {
   color: #000000;
   background-color: transparent;
-  border: 1px solid #fb9962;
+  border: 1px solid #000000;
 }
 .btn.btn-feel-invert svg g {
   fill: #000000;
@@ -7526,7 +7526,7 @@ button {
 .btn.btn-feel-invert:focus, .btn.btn-feel-invert.focus, .btn.btn-feel-invert:hover, .btn.btn-feel-invert.hover, .btn.btn-feel-invert:active, .btn.btn-feel-invert.active {
   color: #000000;
   opacity: 1;
-  border-color: rgba(251, 153, 98, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 .btn.btn-feel-invert[disabled], .btn.btn-feel-invert:disabled, .btn.btn-feel-invert.disabled {
   opacity: 1;
@@ -7843,7 +7843,7 @@ button {
 
 .btn-primary-feel {
   color: #000000;
-  background-color: #fb9962;
+  background-color: #000000;
 }
 .btn-primary-feel svg g {
   fill: #000000;
@@ -7858,7 +7858,7 @@ button {
 .btn-primary-feel:focus, .btn-primary-feel.focus, .btn-primary-feel:hover, .btn-primary-feel.hover, .btn-primary-feel:active, .btn-primary-feel.active {
   color: #000000;
   opacity: 1;
-  background-color: rgba(251, 153, 98, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .btn-primary-feel:disabled, .btn-primary-feel[disabled], .btn-primary-feel.disabled {
   pointer-events: none;
@@ -8473,8 +8473,8 @@ button {
 }
 
 .btn-feel {
-  background-color: #fb9962;
-  border: 1px solid #fb9962;
+  background-color: #000000;
+  border: 1px solid #000000;
   color: #000000;
 }
 .btn-feel:hover, .btn-feel.hover, .btn-feel:focus, .btn-feel.focus {
@@ -8490,8 +8490,8 @@ button {
   opacity: 1;
 }
 .has-light .btn-feel {
-  background-color: #fb9962;
-  border: 1px solid #fb9962;
+  background-color: #000000;
+  border: 1px solid #000000;
   color: #000000;
 }
 .has-light .btn-feel:hover, .has-light .btn-feel.hover, .has-light .btn-feel:focus, .has-light .btn-feel.focus {
@@ -8582,9 +8582,9 @@ button {
   border: 1px solid #ffffff;
 }
 .has-light .btn-primary-feel:hover, .has-light .btn-primary-feel.hover, .has-light .btn-primary-feel:focus, .has-light .btn-primary-feel.focus {
-  background-color: rgba(251, 153, 98, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #8e8e8e;
-  border-color: rgba(251, 153, 98, 0.6);
+  border-color: rgba(0, 0, 0, 0.6);
 }
 .has-light .btn-primary-feel[disabled], .has-light .btn-primary-feel:disabled, .has-light .btn-primary-feel.disabled {
   opacity: 1;
@@ -10258,7 +10258,7 @@ a:hover {
   background-image: linear-gradient(transparent calc(100% - 1px), #8e8e8e 10px);
 }
 .link-line.c-feel {
-  background-image: linear-gradient(transparent calc(100% - 1px), #fb9962 10px);
+  background-image: linear-gradient(transparent calc(100% - 1px), #000000 10px);
 }
 .link-line.is-error, .link-line.c-error {
   background-image: linear-gradient(transparent calc(100% - 1px), #b40016 10px);
@@ -11104,7 +11104,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
 }
 
 .tag-feel {
-  background-color: #fb9962;
+  background-color: #000000;
   color: #ffffff;
   padding: 6px;
   line-height: 1;

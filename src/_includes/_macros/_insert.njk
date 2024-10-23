@@ -2132,6 +2132,54 @@
 </div>
 {% endmacro %}
 {# TODO END #}
+
+{% macro textarea(elementType = '', explicacion = '') %}
+<h3 class="my-16 title-l">{{ elementType }}
+</h3>
+<p class="title-m">{{ explicacion }}</p>
+<div class="mb-32 ">
+  <div class="code-view ">
+    <div class="check-new"></div>
+    <div class="check-rtl"></div>
+    {# ---------- #}
+    <form novalidate="" class="is-flex flex-wrap">
+      <div class="col-xs-12 ">
+        <div class="form-input-label-2">
+          <textarea id="comments" formcontrolname="comments" class="form-control input" ></textarea>
+          <label for="comments">Comentarios</label>
+          <div class="help">
+            <div class="title-m c-dark-grey">Ej: Tus comentarios aquí</div>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+    {# ---------- #}
+  </div>
+  {% set standardcode %}
+  <form novalidate="" class="is-flex flex-wrap">
+    <div class="col-xs-12 col-sm-7">
+      <div class="form-input-label-2">
+        <textarea id="comments" formcontrolname="comments" class="form-control input" placeholder="Escribe tus comentarios"></textarea>
+        <label for="comments">Comentarios</label>
+        <div class="help">
+          <div class="title-m c-dark-grey">Ej: Tus comentarios aquí</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </form>
+  {% endset %}
+  <div class="code-zone">
+    <pre><code class=" language-markup">{{standardcode}}</code></pre>
+  </div>
+</div>
+{% endmacro %}
+
+
+
 {% macro inputBtn(elementType = '', explicacion = '') %}
 <h3 class="my-16 title-l">{{ elementType }}
 </h3>
@@ -2149,6 +2197,7 @@
             <div class="title-m c-dark-grey">Ej: 34567890722</div>
           </div>
         </div>
+
       </div>
       <div class="col-xs-12 col-sm-5"><button
           class="btn btn-primary btn--full btn-separate"><span>Consultar</span><svg-icon src="arrow-right">
