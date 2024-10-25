@@ -61,7 +61,7 @@
     "decap-cms-app": "^3.1.10",
     "eleventy-plugin-embed-everything": "^1.18.2",
     "gsap": "3.11.0",
-    "holygrail2": "^1.2.19-alpha",
+    "holygrail2": "^1.2.28",
     "image-size": "^1.1.1",
     "lenis": "^1.1.5",
     "locomotive-scroll": "^4.1.4",
