@@ -2448,3 +2448,29 @@
     </pre>
 </div>
 {% endmacro %}
+
+
+
+
+
+{% macro customButton(buttonName = '', functionName = '') %}
+<h3 class="my-16 title-l">{{ buttonName | capitalize }}</h3>
+<p class="text-l">
+  <span class="bold mr-8"> .btn--{{buttonName }}
+  </span>
+  Este botón ejecutará la función <code>{{ functionName }}</code> cuando se haga clic.
+</p>
+<div class="resize-mini">
+  <div class="resize-mini-content">
+    <button class="btn btn--{{buttonName }}" onclick="toggleOpenSidebar('{{ functionName }}')">
+      {{ buttonName | capitalize }}
+    </button>
+  </div>
+  {% set standardcode %}
+  <button class="btn btn--{{buttonName }}" onclick="toggleOpenSidebar('{{ functionName }}')">
+    {{ buttonName | capitalize }}
+  </button>
+  {% endset %}
+  <pre><code class="language-markup">{{standardcode}} </code></pre>
+</div>
+{% endmacro %}
