@@ -5,21 +5,35 @@ layout: base.njk
 <div class="container-fluid">
     {% include '_website/hero.njk' %}
     {{ content | safe }}
+
+
+
     <pre class="language-markup">
     <code class="language-markup">
         &lt;div class=&quot;drawer &quot;&gt;
+
             &lt;div class=&quot;drawer-header&quot;&gt;
                 &lt;div class=&quot;drawer-title&quot;&gt;T&iacute;tulo del drawer&lt;/div&gt;
                 &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; aria-label=&quot;Close&quot; onclick=&quot;toggleCloseSidebar()&quot;&gt;
-                    &lt;svg-icon name=&quot;close&quot;&gt;&lt;/svg-icon&gt;
+                    &lt;svg-icon2 name=&quot;close&quot;&gt;&lt;/svg-icon&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
+
             &lt;div class=&quot;drawer-body&quot;&gt;
                 &lt;p&gt;Introduciremos aqu&iacute; el contenido del drawer&lt;/p&gt;
             &lt;/div&gt;
+
+            &lt;div class=&quot;drawer-footer &quot;&gt;
+                &lt;button class=&quot;btn btn-secondary btn--full &quot;&gt;btn-secondary&lt;/button&gt;
+                &lt;button class=&quot;btn btn-primary btn--full &quot;&gt;btn-primary&lt;/button&gt;
+            &lt;/div&gt;
+
+
         &lt;/div&gt;
     </code>
 </pre>
+
+
     <h2 class="my-32">Tamaños</h2>
     {{ insert.customButton('drawer-sm', 'drawer-sm', 'Este es un drawer de tamaño pequeño con un ancho máximo de 424px')
     }}
