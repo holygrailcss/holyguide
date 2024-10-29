@@ -27,11 +27,13 @@
       {{ element }}
       {% endif %}
     </{{ elementType }}>
+
+    </button>
     {% endfor %}
   </div>
   {% set standardcode %}
   {% for element in elements %}
-  <button class="btn {{ element }}">
+  <button class="btn sdsdsd{{ element }}">
     {% if elementType == 'icon' %}
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 8.24264C3.5 7.9665 3.72386 7.74264 4 7.74264L7.74264 7.74264L7.74264 4C7.74264 3.72386 7.9665 3.5 8.24264 3.5C8.51878 3.5 8.74264 3.72386 8.74264 4L8.74264 7.74264H12.4853C12.7614 7.74264 12.9853 7.9665 12.9853 8.24264C12.9853 8.51878 12.7614 8.74264 12.4853 8.74264H8.74264L8.74264 12.4853C8.74264 12.7614 8.51878 12.9853 8.24264 12.9853C7.9665 12.9853 7.74264 12.7614 7.74264 12.4853L7.74264 8.74264L4 8.74264C3.72386 8.74264 3.5 8.51878 3.5 8.24264Z" fill="#292929"></path></svg>
@@ -39,6 +41,7 @@
     {{ element }}
     {% endif %}
   </{{ elementType }}>
+</button>
   {% endfor %} {% endset %}
   <div class="code-zone">
     <pre><code class=" language-markup">{{standardcode }} </code></pre>

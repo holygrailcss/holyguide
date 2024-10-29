@@ -5,21 +5,13 @@ layout: base.njk
 <div class="container-fluid">
     {% include '_website/hero.njk' %}
     {{ content | safe }}
-
-
-
-
-
-
-<pre class="language-markup">
+    <pre class="language-markup">
     <code class="language-markup">
         &lt;div class=&quot;drawer &quot;&gt;
             &lt;div class=&quot;drawer-header&quot;&gt;
                 &lt;div class=&quot;drawer-title&quot;&gt;T&iacute;tulo del drawer&lt;/div&gt;
                 &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; aria-label=&quot;Close&quot; onclick=&quot;toggleCloseSidebar()&quot;&gt;
-              
                     &lt;svg-icon name=&quot;close&quot;&gt;&lt;/svg-icon&gt;
-                             
                 &lt;/button&gt;
             &lt;/div&gt;
             &lt;div class=&quot;drawer-body&quot;&gt;
@@ -28,11 +20,11 @@ layout: base.njk
         &lt;/div&gt;
     </code>
 </pre>
-
-
-
-    {{ insert.customButton('drawer-sm', 'drawer-sm') }}
-    {{ insert.customButton('drawer-xl', 'drawer-xl') }}
+    <h2 class="my-32">Tamaños</h2>
+    {{ insert.customButton('drawer-sm', 'drawer-sm', 'Este es un drawer de tamaño pequeño con un ancho máximo de 424px')
+    }}
+    {{ insert.customButton('drawer-xl', 'drawer-xl','Este es un drawer de tamaño grande con un ancho máximo de 720px')
+    }}
 
 
     <div class="drawer-overlay"></div>
@@ -41,18 +33,31 @@ layout: base.njk
             <div class="drawer-title">Título del drawer</div>
             <button type="button" class="btn btn-link" aria-label="Close" onclick="toggleCloseSidebar()">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29287 8.00004L2.64642 3.35359L3.35353 2.64648L7.99998 7.29293L12.6464 2.64648L13.3535 3.35359L8.70708 8.00004L13.3535 12.6465L12.6464 13.3536L7.99998 8.70714L3.35353 13.3536L2.64642 12.6465L7.29287 8.00004Z" fill="black"/>
-                    </svg>
-                    
-                    
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.29287 8.00004L2.64642 3.35359L3.35353 2.64648L7.99998 7.29293L12.6464 2.64648L13.3535 3.35359L8.70708 8.00004L13.3535 12.6465L12.6464 13.3536L7.99998 8.70714L3.35353 13.3536L2.64642 12.6465L7.29287 8.00004Z"
+                        fill="black" />
+                </svg>
             </button>
         </div>
         <div class="drawer-body">
-            <p>Introduciremos aquí el contenido del drawer</p>
+            .drawer-body
+        </div>
+        <div> .drawer-footer</div>
+        <div class="drawer-footer py-24 pl-body pr-body">
+            <button class="btn btn-primary btn--full ">btn-primary</button>
+        </div>
+        <div class="drawer-footer ">
+            <button class="btn btn-secondary btn--full ">btn-secondary</button>
+            <button class="btn btn-primary btn--full ">btn-primary</button>
         </div>
     </div>
 </div>
 </div>
+
+
+
+
+
 <script>
     function toggleOpenSidebar(drawerClass) {
         if (!document.body.classList.contains('open-drawer')) {
@@ -82,6 +87,5 @@ layout: base.njk
             }
         }
     }
-
     document.querySelector('.drawer-overlay').addEventListener('click', toggleCloseSidebar);
 </script>

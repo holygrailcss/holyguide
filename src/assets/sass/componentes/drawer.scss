@@ -64,7 +64,7 @@ $drawer-width-sm: 425px;
 .drawer-overlay {
     position: fixed;
     pointer-events: none;
-
+z-index: 1000;
     opacity: 0;
     top: 0;
     left: 0;
@@ -102,13 +102,18 @@ $drawer-width-sm: 425px;
     padding: 24px 32px;
     overflow-y: auto;
 }
+.drawer-footer{
 
+        display: flex;
+        align-items: center;
+   
+}
 
 .drawer-sm {
     top: 0;
     right: 0;
     width: 100%;
-    max-width: 400px;
+    max-width: 424px;
     border-left: 1px solid rgba(0, 0, 0, .2);
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
@@ -120,7 +125,7 @@ $drawer-width-sm: 425px;
     top: 0;
     right: 0;
     width: 100%;
-    max-width: 768px;
+    max-width: 720px;
     border-left: 1px solid rgba(0, 0, 0, .2);
     transition: transform 0.5s ease-in-out;
     transform: translateX(100%);

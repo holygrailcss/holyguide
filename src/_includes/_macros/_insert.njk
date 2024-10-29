@@ -2453,24 +2453,41 @@
 
 
 
-{% macro customButton(buttonName = '', functionName = '') %}
-<h3 class="my-16 title-l">{{ buttonName | capitalize }}</h3>
-<p class="text-l">
-  <span class="bold mr-8"> .btn--{{buttonName }}
-  </span>
-  Este botón ejecutará la función <code>{{ functionName }}</code> cuando se haga clic.
-</p>
+{% macro customButton(buttonName = '', functionName = '', descripcion='') %}
+
+
+<h3 class="my-16 ">{{ buttonName | capitalize }}</h3>
+
+<div class=" mb-24">
+  <p class=" text-l bold mr-8"> Clase : {{buttonName }}
+  </p>
+<p>     {{ descripcion }}   </p>
+</div>
+
+
+<div class="image-zone">
+  
+  <img width="500px" src="/assets/static/images/{{buttonName}}.png" alt="">
+</div>
+
+
+
 <div class="resize-mini">
   <div class="resize-mini-content">
     <button class="btn btn--{{buttonName }}" onclick="toggleOpenSidebar('{{ functionName }}')">
       {{ buttonName | capitalize }}
+
+  
     </button>
   </div>
   {% set standardcode %}
-  <button class="btn btn--{{buttonName }}" onclick="toggleOpenSidebar('{{ functionName }}')">
-    {{ buttonName | capitalize }}
-  </button>
-  {% endset %}
+{{ buttonName | capitalize }}
+
+<div class="drawer-body"> Contenido del drawer </div>
+  <div class="drawer-footer  pl-body pr-body">
+    Zona de botones fixed, puede o no  ser a sangre
+      <button class="btn btn-primary btn--full ">btn-primary</button>
+</div>{% endset %}
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>
 {% endmacro %}
