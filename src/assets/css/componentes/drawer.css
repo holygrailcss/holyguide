@@ -139,10 +139,6 @@
   transform: translateX(100%);
 }
 
-body.open-drawer {
-  overflow: hidden;
-  padding-right: 16px;
-}
 body.open-drawer .drawer {
   transform: translateX(0);
 }
