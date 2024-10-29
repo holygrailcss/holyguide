@@ -139,10 +139,14 @@
   transform: translateX(100%);
 }
 
-.open-drawer .drawer {
+body.open-drawer {
+  overflow: hidden;
+  padding-right: 16px;
+}
+body.open-drawer .drawer {
   transform: translateX(0);
 }
-.open-drawer .drawer-overlay {
+body.open-drawer .drawer-overlay {
   pointer-events: auto;
   opacity: 1;
 }

@@ -5,6 +5,8 @@
 @import "../abstract/_gridNEW.scss";
 
 $drawer-width-sm: 425px;
+$scrollbar-width: 16px; // El espacio del scroll lateral en Chrome es de aproximadamente 17px
+
 
 
 @keyframes opendrawer {
@@ -132,14 +134,24 @@ z-index: 1000;
 }
 
 
-.open-drawer {
-    .drawer {
-        transform: translateX(0);
+
+body{
+
+
+    &.open-drawer {
+        overflow: hidden;
+        padding-right: $scrollbar-width;
+
+        .drawer {
+            transform: translateX(0);
+        }
+    
+        .drawer-overlay{
+       
+       pointer-events: auto;
+            opacity: 1;
+        }
     }
 
-    .drawer-overlay{
-   
-   pointer-events: auto;
-        opacity: 1;
-    }
+
 }
