@@ -29903,7 +29903,8 @@ ul {
   align-items: end;
 }
 
-#mostrarSidebar, #ocultarSidebar {
+#mostrarSidebar,
+#ocultarSidebar {
   position: fixed;
   z-index: 2000;
 }
@@ -29938,4 +29939,50 @@ ul {
   justify-content: center;
   padding: 24px;
   background-color: #F0F0F0;
+}
+
+.bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.bottom-sheet::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--c-primary);
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-sheet .clean-botton {
+  border-width: var(--line-width) 0 0 0;
+}
+.bottom-sheet .border-clean-l {
+  border-width: var(--line-width) var(--line-width) var(--line-width) 0;
+}
+.bottom-sheet .border-clean-r {
+  border: solid var(--c-primary);
+  border-width: var(--line-width) 0 var(--line-width) 0;
+}
+.bottom-sheet .bs-group-colors {
+  padding-top: 10px;
+  height: 40px;
+  padding-right: 20px;
+  padding-left: 16px;
+}
+.bottom-sheet .bs-custom-btn {
+  border-width: 0 0 var(--line-width) 0;
+}
+.is-rtl .bottom-sheet .border-clean-l {
+  border-width: var(--line-width) 0 var(--line-width) var(--line-width);
+}
+.is-rtl .bottom-sheet .border-clean-r {
+  border: solid var(--c-primary);
+  border-width: var(--line-width) 0 var(--line-width) 0;
+}
+.is-rtl .bottom-sheet .bs-group-colors {
+  padding-left: 20px;
+  padding-right: 16px;
 }
