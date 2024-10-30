@@ -33,7 +33,7 @@ layout: base-clean.njk
                 <div id="viewportInfo" style="margin-top: 20px; font-size: 16px;"></div>
 
             </div>
-            <div class="pr-20">
+            <div id="wishlist" class="pr-20 ">
                 <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M4.66667 9.54545L9.33333 14V0H0V14L4.66667 9.54545ZM1 11.663L4.66667 8.16301L8.33333 11.663V1H1V11.663Z"
@@ -84,7 +84,8 @@ layout: base-clean.njk
     const ancho = window.innerWidth;
     const alto = window.innerHeight;
     const viewportInfo = document.getElementById('viewportInfo');
-    viewportInfo.textContent = `El viewport visible es de ${ancho}px de ancho y ${alto}px de alto.`;
+    const scrollY = window.scrollY;
+    viewportInfo.textContent = `El viewport visible es de ${ancho}px de ancho y ${alto}px de alto. Has scrolleado ${scrollY}px.`;
 
     const bottomSheetExtra = document.querySelector('.bottom-sheet-extra');
     const buttonZoneContainer = document.querySelector('.bottom-sheet');
@@ -93,7 +94,14 @@ layout: base-clean.njk
       const buttonZoneHeight = buttonZoneContainer.offsetHeight;
       bottomSheetExtra.style.top = `${alto - buttonZoneHeight}px`;
     }
+
+  const carouselContainer = document.getElementById('carouselContainer');
+  if (carouselContainer && buttonZoneContainer) {
+    const buttonZoneHeight = buttonZoneContainer.offsetHeight;
+    carouselContainer.style.paddingBottom = `${buttonZoneHeight}px`;
+  }
   }
 
+  
   window.addEventListener('load', mostrarViewport);
 </script>
