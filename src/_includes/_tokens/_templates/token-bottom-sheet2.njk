@@ -18,8 +18,12 @@ layout: base-clean.njk
     </div>
 </div>
 
+
+
+
 <!-- Contenedor Extra con Espaciado Superior Dinámico -->
-<div class="bottom-sheet-extra" id="extraContainer" style="top: calc(100vh - 163px);">
+<div class="bottom-sheet-extra" id="extraContainer" >
+
     <div id="buttonZoneContainer" class="bottom-sheet bg-white">
         <div class="is-flex pt-16">
             <div class="pr-20 pl-20 pb-16 flex-1 ttu">
@@ -82,7 +86,18 @@ layout: base-clean.njk
     const alto = window.innerHeight;
     const viewportInfo = document.getElementById('viewportInfo');
     viewportInfo.textContent = `El viewport visible es de ${ancho}px de ancho y ${alto}px de alto.`;
+
+
+  const bottomSheetExtra = document.querySelector('.bottom-sheet-extra');
+  const buttonZoneContainer = document.querySelector('.bottom-sheet');
+
+  if (bottomSheetExtra && buttonZoneContainer) {
+    const buttonZoneHeight = buttonZoneContainer.offsetHeight;
+    bottomSheetExtra.style.top = `${alto - buttonZoneHeight}px`;
+    
+    
   }
+}
 
   window.addEventListener('resize', mostrarViewport);
   window.addEventListener('load', mostrarViewport);
