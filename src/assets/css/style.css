@@ -12016,6 +12016,61 @@ ul.list-clear li.list-box:last-child {
 /* prettier-ignore */
 /* prettier-ignore */
 /* prettier-ignore */
+.bottom-sheet::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--c-primary);
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bottom-sheet .clean-botton {
+  border-width: var(--line-width) 0 0 0;
+}
+.bottom-sheet .border-clean-l {
+  border-width: var(--line-width) var(--line-width) var(--line-width) 0;
+}
+.bottom-sheet .border-clean-r {
+  border: solid #000000;
+  border-width: var(--line-width) 0 var(--line-width) 0;
+}
+.bottom-sheet .bs-group-colors {
+  padding-top: 10px;
+  height: 40px;
+  padding-right: 20px;
+  padding-left: 16px;
+}
+.bottom-sheet .bs-custom-btn {
+  border-width: 0 0 var(--line-width) 0;
+}
+.is-rtl .bottom-sheet .border-clean-l {
+  border-width: var(--line-width) 0 var(--line-width) var(--line-width);
+}
+.is-rtl .bottom-sheet .border-clean-r {
+  border: solid #000000;
+  border-width: var(--line-width) 0 var(--line-width) 0;
+}
+.is-rtl .bottom-sheet .bs-group-colors {
+  padding-left: 20px;
+  padding-right: 16px;
+}
+
+/* prettier-ignore */
+/* functional */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
 .row1-wrap {
   overflow: hidden;
 }
@@ -29941,48 +29996,43 @@ ul {
   background-color: #F0F0F0;
 }
 
-.bottom-sheet {
+.bottom-sheet-dummy {
   position: fixed;
+  top: 0;
   bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bottom-sheet-dummy .swiper {
   width: 100%;
+  aspect-ratio: 3/4;
+  height: auto;
 }
-.bottom-sheet::after {
+.bottom-sheet-dummy .imgdemo {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-sheet-dummy .imgdemo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 3/4;
+}
+.bottom-sheet-dummy .swiper-wrapper {
+  padding-bottom: 20px;
+}
+
+.bottom-sheet-extra {
   position: absolute;
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: var(--c-primary);
-  top: -7px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.bottom-sheet .clean-botton {
-  border-width: var(--line-width) 0 0 0;
-}
-.bottom-sheet .border-clean-l {
-  border-width: var(--line-width) var(--line-width) var(--line-width) 0;
-}
-.bottom-sheet .border-clean-r {
-  border: solid var(--c-primary);
-  border-width: var(--line-width) 0 var(--line-width) 0;
-}
-.bottom-sheet .bs-group-colors {
-  padding-top: 10px;
-  height: 40px;
-  padding-right: 20px;
-  padding-left: 16px;
-}
-.bottom-sheet .bs-custom-btn {
-  border-width: 0 0 var(--line-width) 0;
-}
-.is-rtl .bottom-sheet .border-clean-l {
-  border-width: var(--line-width) 0 var(--line-width) var(--line-width);
-}
-.is-rtl .bottom-sheet .border-clean-r {
-  border: solid var(--c-primary);
-  border-width: var(--line-width) 0 var(--line-width) 0;
-}
-.is-rtl .bottom-sheet .bs-group-colors {
-  padding-left: 20px;
-  padding-right: 16px;
+  top: calc(100vh - 163px);
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 3000px;
+  background-color: #F0F0F0;
 }

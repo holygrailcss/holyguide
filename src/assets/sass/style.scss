@@ -838,55 +838,51 @@ ul {
 }
 
 
-
-
-
-.bottom-sheet {
+.bottom-sheet-dummy{
   position: fixed;
+  top: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 1px;
-    background-color: var(--c-primary);
-    top: -7px;
-    left: 50%;
-    transform: translateX(-50%);
+    .swiper {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      height: auto;
+
+    }
+    
+    .imgdemo {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .imgdemo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    
+    
+    .swiper-wrapper {
+      padding-bottom: 20px;
+    }
+    
+
 }
 
-  .clean-botton {
-    border-width: var(--line-width) 0 0 0;
-  }
-  .border-clean-l {
-    border-width: var(--line-width) var(--line-width) var(--line-width) 0;
-  }
-  .border-clean-r {
-    border: solid $c-primary;
-    border-width: var(--line-width) 0 var(--line-width) 0;
-  }
-  .bs-group-colors {
-    padding-top: 10px;
-    height: 40px;
-    padding-right: 20px;
-    padding-left: 16px;
-  }
-  .bs-custom-btn {
-    border-width: 0 0 var(--line-width) 0;
-  }
-  .is-rtl & {
-    .border-clean-l {
-      border-width: var(--line-width) 0 var(--line-width) var(--line-width);
-    }
-    .border-clean-r {
-      border: solid $c-primary;
-      border-width: var(--line-width) 0 var(--line-width) 0;
-    }
-    .bs-group-colors {
-      padding-left: 20px;
-      padding-right: 16px;
-    }
-  }
+.bottom-sheet-extra{
+  position: absolute;
+  top: calc(100vh - 163px);
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 3000px;
+  background-color: #F0F0F0;
 }
