@@ -30044,5 +30044,5 @@ ul {
 
 .bottom-sheet-extra {
   top: 100vh;
-  transition: top 0.3s ease-in-out;
+  transition: top 0.5s ease-in-out;
 }
