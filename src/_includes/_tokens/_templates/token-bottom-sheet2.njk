@@ -105,8 +105,8 @@ layout: base-clean.njk
     function updateButtonZoneHeight() {
       const buttonZoneContainer = document.getElementById('buttonZoneContainer');
       if (buttonZoneContainer) {
-        const height = buttonZoneContainer.offsetHeight;
-        document.documentElement.style.setProperty('--buttonZoneContainer-height', `${height}px`);
+        const viewportHeight = window.innerHeight;
+        document.documentElement.style.setProperty('--buttonZoneContainer-viewport-height', `${viewportHeight}px`);
       }
     }
   
