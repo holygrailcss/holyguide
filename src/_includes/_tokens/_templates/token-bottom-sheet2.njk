@@ -79,7 +79,6 @@ layout: base-clean.njk
 
 </style>
 
-
 <script>
   function mostrarViewport() {
     const ancho = window.innerWidth;
@@ -87,19 +86,14 @@ layout: base-clean.njk
     const viewportInfo = document.getElementById('viewportInfo');
     viewportInfo.textContent = `El viewport visible es de ${ancho}px de ancho y ${alto}px de alto.`;
 
+    const bottomSheetExtra = document.querySelector('.bottom-sheet-extra');
+    const buttonZoneContainer = document.querySelector('.bottom-sheet');
 
-  const bottomSheetExtra = document.querySelector('.bottom-sheet-extra');
-  const buttonZoneContainer = document.querySelector('.bottom-sheet');
-
-  if (bottomSheetExtra && buttonZoneContainer) {
-    const buttonZoneHeight = buttonZoneContainer.offsetHeight;
-    bottomSheetExtra.style.top = `${alto - buttonZoneHeight}px`;
-    
-    
+    if (bottomSheetExtra && buttonZoneContainer) {
+      const buttonZoneHeight = buttonZoneContainer.offsetHeight;
+      bottomSheetExtra.style.top = `${alto - buttonZoneHeight}px`;
+    }
   }
-}
 
-  window.addEventListener('resize', mostrarViewport);
   window.addEventListener('load', mostrarViewport);
 </script>
-
