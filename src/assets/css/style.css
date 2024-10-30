@@ -30029,10 +30029,9 @@ ul {
 
 .bottom-sheet-extra {
   position: absolute;
-  top: calc(100vh - 163px);
   width: 100%;
   left: 0;
   right: 0;
   height: 3000px;
-  background-color: #F0F0F0;
+  background-color: #fff;
 }
