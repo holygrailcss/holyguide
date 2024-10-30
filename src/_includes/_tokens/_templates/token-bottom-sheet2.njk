@@ -1,116 +1,93 @@
 ---
 layout: base-clean.njk
 ---
-<!-- Contenido de la plantilla bottom-sheet.njk -->
-
-<style>
- :root {
-    --buttonZoneContainer-height: 0px; /* valor inicial, se actualizará con JavaScript */
-  }
-
-  .bottom-sheet-extra {
-
-
-    top: calc(100vh - var(--buttonZoneContainer-height));
-  }
-</style>
-
 <link async rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<div class="bottom-sheet-dummy ">
+
+<!-- Contenedor Principal -->
+<div class="bottom-sheet-dummy">
     <div class="row">
         <div class="col-xs-12">
-                <div class="bottom-sheet-carousel" style="padding-bottom: var(--buttonZoneContainer-height)">
-                    <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt=""> 
-                    <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt=""> 
-                    <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt=""> 
-                    <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt=""> 
-
-                </div>
-       
-
-
+            <!-- Carousel con Padding Inferior Dinámico -->
+            <div class="bottom-sheet-carousel" id="carouselContainer">
+                <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+                <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+                <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+                <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Contenedor Extra con Espaciado Superior Dinámico -->
+<div class="bottom-sheet-extra" id="extraContainer">
+    <div id="buttonZoneContainer" class="bottom-sheet bg-white">
+        <div class="is-flex pt-16">
+            <div class="pr-20 pl-20 pb-16 flex-1 ttu">
+                <div>Jersey cuello cisne mezcla lana 44  </div>
+                <div>49,95 €</div>
+                <div>del 5.11 al 12.12</div>
+                <div id="viewportInfo" style="margin-top: 20px; font-size: 16px;"></div>
 
-
-
-<div class="bottom-sheet-extra" style="top: calc(100vh - var(--buttonZoneContainer-height));">
-
-            <div id="buttonZoneContainer" class="bottom-sheet bg-white">
-    
-    
-                <div class="is-flex pt-16">
-                    <div class="pr-20 pl-20 pb-16 flex-1 ttu ">
-                        <div> Jersey cuello cisne mezcla lana 44 </div>
-                        <div> 49,95 €</div>
-                        <div> del 5.11 al 12.12</div>
-                    </div>
-                    <div class=" pr-20">
-                        <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M4.66667 9.54545L9.33333 14V0H0V14L4.66667 9.54545ZM1 11.663L4.66667 8.16301L8.33333 11.663V1H1V11.663Z"
-                                fill="black" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="ma-btn-zone">
-                    <div class="prices">
-                        <div class="btn-container is-flex">
-                            <button id="btnAddToCart"
-                                class="btn btn-secondary border-clean-l btn--full btn-anim ttu no-focus size-not-selected"><span
-                                    id="addToShopCart" class="btn-submit text-l text-add-to-shop-cart">
-                                    Añadir a la cesta </span><span id="sizeChoose"
-                                    class="btn-loading text-l text-size-choose"> ELIGE UNA TALLA
-                                </span></button>
-                            <div class="bs-colors">
-                        
-                                        <div class="is-flex border-clean-r bs-group-colors ">
-                                            <button class="btn--color btn-tertiary mb-20 mx-8 is-active" title="NEGRO">
-                                                <div class="is-flex color-selector-2"><img loading="lazy"
-                                                        src="https://static.massimodutti.net/assets/public/62a8/c3a5/cff34b60964c/94ed7e402449/00930340800-r/00930340800-r.jpg?ts=1720083745736&amp;w=100"
-                                                        alt="NEGRO"></div>
-                                            </button>
-                                            <button class="btn--color btn-tertiary mb-20 mx-8" title="KAKI OSCURO">
-                                                <div class="is-flex color-selector-2"><img loading="lazy"
-                                                        src="https://static.massimodutti.net/assets/public/edfe/3c61/69554369ba09/b26f55ca582d/00930340507-r/00930340507-r.jpg?ts=1720083737519&amp;w=100"
-                                                        alt="KAKI OSCURO"></div>
-                                            </button>
-                                            <div class="ml-16">+4</div>
-                                        </div>
-                             
-                            </div>
+            </div>
+            <div class="pr-20">
+                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.66667 9.54545L9.33333 14V0H0V14L4.66667 9.54545ZM1 11.663L4.66667 8.16301L8.33333 11.663V1H1V11.663Z"
+                        fill="black" />
+                </svg>
+            </div>
+        </div>
+        <div class="ma-btn-zone">
+            <div class="prices">
+                <div class="btn-container is-flex">
+                    <button id="btnAddToCart"
+                        class="btn btn-secondary border-clean-l btn--full btn-anim ttu no-focus size-not-selected"><span
+                            id="addToShopCart" class="btn-submit text-l text-add-to-shop-cart">
+                            Añadir a la cesta </span><span id="sizeChoose"
+                            class="btn-loading text-l text-size-choose"> ELIGE UNA TALLA
+                        </span></button>
+                    <div class="bs-colors">
+                        <div class="is-flex border-clean-r bs-group-colors">
+                            <button class="btn--color btn-tertiary mb-20 mx-8 is-active" title="NEGRO">
+                                <div class="is-flex color-selector-2"><img loading="lazy"
+                                        src="https://static.massimodutti.net/assets/public/62a8/c3a5/cff34b60964c/94ed7e402449/00930340800-r/00930340800-r.jpg?ts=1720083745736&amp;w=100"
+                                        alt="NEGRO"></div>
+                            </button>
+                            <button class="btn--color btn-tertiary mb-20 mx-8" title="KAKI OSCURO">
+                                <div class="is-flex color-selector-2"><img loading="lazy"
+                                        src="https://static.massimodutti.net/assets/public/edfe/3c61/69554369ba09/b26f55ca582d/00930340507-r/00930340507-r.jpg?ts=1720083737519&amp;w=100"
+                                        alt="KAKI OSCURO"></div>
+                            </button>
+                            <div class="ml-16">+4</div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button class="btn btn-secondary btn--full  bs-custom-btn"> Personalización</button>
-                </div>
             </div>
-
+        </div>
+        <div>
+            <button class="btn btn-secondary btn--full bs-custom-btn"> Personalización</button>
+        </div>
+    </div>
 </div>
-<!-- ¿Qué más falta? -->
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<style>
+  /* Ajuste de posición inicial sin valores fijos */
+  .bottom-sheet-dummy,
+  .bottom-sheet-extra {
+      position: relative;
+  }
+</style>
+
+
 <script>
-    // Inicialización de Swiper
-    const swiper = new Swiper(".mySwiper2", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      direction: 'vertical'
-    });
-  
-    // Calcular y asignar la altura
-    function updateButtonZoneHeight() {
-      const buttonZoneContainer = document.getElementById('buttonZoneContainer');
-      if (buttonZoneContainer) {
-        const viewportHeight = window.innerHeight;
-        document.documentElement.style.setProperty('--buttonZoneContainer-viewport-height', `${viewportHeight}px`);
-      }
-    }
-  
-    // Actualizar la altura al cargar y al redimensionar la ventana
-    window.addEventListener('load', updateButtonZoneHeight);
-    window.addEventListener('resize', updateButtonZoneHeight);
-  </script>
+  function mostrarViewport() {
+    const ancho = window.innerWidth;
+    const alto = window.innerHeight;
+    const viewportInfo = document.getElementById('viewportInfo');
+    viewportInfo.textContent = `El viewport visible es de ${ancho}px de ancho y ${alto}px de alto.`;
+  }
+
+  window.addEventListener('resize', mostrarViewport);
+  window.addEventListener('load', mostrarViewport);
+</script>
+
