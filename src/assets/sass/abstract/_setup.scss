@@ -280,6 +280,9 @@ $padding-top: (
     24px,
     24px,
   ),
+
+
+
 );
 
 $pb: "padding-bottom";
@@ -348,6 +351,13 @@ $padding-left: (
     40px,
     40px,
   ),
+
+  plr-20-0: (
+    20px,
+    20px,
+    0px,
+    0px,
+  ),
 );
 
 $pr: "padding-right";
@@ -358,6 +368,14 @@ $padding-right: (
     40px,
     40px,
   ),
+  prr-20-0: (
+    20px,
+    20px,
+    0px,
+    0px,
+  ),
+
+
 );
 
 $mb: "margin-bottom";

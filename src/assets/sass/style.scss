@@ -9,6 +9,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./header2.scss";
 @import "./template/_buscador.scss";
 @import "./template/_fichasticky.scss";
+@import "./template/_bs-ficha.scss";
 @import "./template/_fichaswiper.scss";
 @import "./template/_header.scss";
 @import "./template/_sidebar.scss";
@@ -723,8 +724,8 @@ ul {
   }
 }
 .container-pdp {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
   position: relative;

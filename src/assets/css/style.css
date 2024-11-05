@@ -8651,16 +8651,9 @@ button {
 .btn-square {
   background-color: rgba(255, 255, 255, 0.3);
   border: none;
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   padding: 2px;
-}
-@media (min-width: 768px) {
-  .btn-square {
-    width: 18px;
-    height: 18px;
-    padding: 2px;
-  }
 }
 .btn-square:focus, .btn-square.focus, .btn-square:hover, .btn-square.hover, .btn-square:active, .btn-square.active {
   background-color: #8e8e8e;
@@ -14479,6 +14472,98 @@ header.interior svg path {
 
 .cc-imagen-collection:hover {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>zoom-in</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" transform="translate(0.5 0.5)" fill="none" stroke="%23212121" stroke-miterlimit="10"><line x1="10" y1="7" x2="10" y2="13" stroke="%23212121"></line> <line x1="13" y1="10" x2="7" y2="10" stroke="%23212121"></line> <line x1="22" y1="22" x2="15.656" y2="15.656"></line> <circle cx="10" cy="10" r="8"></circle></g></svg>') 12 12, auto;
+}
+
+.bs-container {
+  background-color: rgb(255, 189, 189);
+  width: 100%;
+  padding: 0;
+}
+@media (min-width: 1280px) {
+  .bs-container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1700px) {
+  .bs-container {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.bs-logo {
+  display: none;
+}
+@media (min-width: 1700px) {
+  .bs-logo {
+    width: 50%;
+    margin: 0 auto;
+    width: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bs-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 1280px) {
+  .bs-image {
+    position: relative;
+  }
+}
+.bs-image .bs-image-inner {
+  width: 100%;
+  height: 100dvh;
+  overflow: auto;
+  padding-bottom: var(--bs-detail-header-height);
+  grid-template-columns: 1fr;
+  display: grid;
+  align-items: flex-end;
+  justify-items: flex-end;
+}
+@media (min-width: 1280px) {
+  .bs-image .bs-image-inner {
+    padding-bottom: 0;
+    width: initial;
+    aspect-ratio: 3/4;
+    height: 100vh;
+  }
+}
+@media (min-width: 1700px) {
+  .bs-image .bs-image-inner {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-items: flex-end;
+  }
+}
+
+.bs-detail {
+  margin-top: calc(var(--bs-detail-header-top) - 20px);
+  background-color: blue;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.52);
+}
+@media (min-width: 1280px) {
+  .bs-detail {
+    margin-top: 0;
+    position: relative;
+  }
+}
+
+.bs-recommendations {
+  position: relative;
 }
 
 .swiper-pagination-progressbar {
@@ -28971,9 +29056,15 @@ blockquote {
   .pl-body {
     padding-left: 20px;
   }
+  .plr-20-0 {
+    padding-left: 20px;
+  }
 }
 @media (min-width: 768px) {
   .pl-body {
+    padding-left: 20px;
+  }
+  .plr-20-0 {
     padding-left: 20px;
   }
 }
@@ -28981,11 +29072,17 @@ blockquote {
   .pl-body {
     padding-left: 40px;
   }
+  .plr-20-0 {
+    padding-left: 0px;
+  }
 }
 @media (min-width: 1280px) {
   .pl-body {
     padding-left: 40px;
   }
+  .plr-20-0 {
+    padding-left: 0px;
+  }
 }
 @media (min-width: 1px) {
   .pbr-160 {
@@ -29107,9 +29204,15 @@ blockquote {
   .pr-body {
     padding-right: 20px;
   }
+  .prr-20-0 {
+    padding-right: 20px;
+  }
 }
 @media (min-width: 768px) {
   .pr-body {
+    padding-right: 20px;
+  }
+  .prr-20-0 {
     padding-right: 20px;
   }
 }
@@ -29117,10 +29220,16 @@ blockquote {
   .pr-body {
     padding-right: 40px;
   }
+  .prr-20-0 {
+    padding-right: 0px;
+  }
 }
 @media (min-width: 1280px) {
   .pr-body {
     padding-right: 40px;
+  }
+  .prr-20-0 {
+    padding-right: 0px;
   }
 }
 body {
@@ -29875,8 +29984,8 @@ ul {
   }
 }
 .container-pdp {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
   position: relative;

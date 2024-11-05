@@ -1,6 +1,13 @@
 ---
 layout: base-clean.njk
 ---
+
+<style>
+    :host{
+        --bs-detail-header-top: 206px;
+         --bs-detail-header-height: 0;
+    }
+</style>
 <div class="cursor">
     <div class="cursor-inner">
     </div>
@@ -18,203 +25,272 @@ layout: base-clean.njk
         </div>
     </div>
 </div>
+
+
+
+
 <!-- Contenido de la plantilla fichasticky.njk -->
-<div class="container-fluid cc-container">
-    <div class="ficha-content">
-        <div class="cc-imagen">
-            <div class="cc-imagen-logo">
-                <svg width="267" height="39" viewBox="0 0 267 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                </svg>
-            </div>
-            <div data-text="ZOOM" class="cc-imagen-item ">
-                <div class="cc-imagen-collection scrollcustom">
-                    <img height="100vh"
-                        src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg "
-                        alt="">
-                    <img height="100vh"
-                        src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg "
-                        alt="">
-                    <img height="100vh"
-                        src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                        alt="">
+<div class="bs-container ">
 
-                </div>
-            </div>
+    <div class="bs-image is-flex flex-row">
+        <div class="bs-logo"> bs logo </div>
+        <div class="bs-image-inner scrollcustom" >
+            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
+            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg" alt="">
         </div>
     </div>
-    <div class="cc-descripcion">
-        <div class="container-pdp ptr-24-120">
-            <div class="title-l mb-4">CÁRDIGAN PUNTO TRENZADO MANGA CORTA</div>
-            <div class="title-l ">59,95 €</div>
-        </div>
-        <div class="container-pdp ptr-24-120">
-            <div class="text-l  mb-64">Tejido de punto. Confeccionado con tejido en mezcla de algodón. Manga corta.
-            </div>
-            <div class="row">
-                <div class="col-xs-12 text-center">
-                    <div class="title-s  mb-16">GRIS | REF. 5651/624</div>
-                    <button class="btn-tertiary btn--color ml-8 mr-8 mb-64 is-active" title="MARRÓN">
-                        <div class="is-flex color-selector-2">
-                            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                                alt="MARRÓN">
+    <div class="bs-detail">
+
+        <div class="bs-detail-content">
+            <div class="container-pdp ptr-20-120">
+                <div class="row product-page-product-details">
+                    <div class="col-xs-12">
+
+                        <div class="bs-detail-header "> 
+
+                            <div class="plr-20-0 prr-20-0">
+                                <div class="grid-product-list product-page-product"></div>
+                                <div id="productName" class="is-flex content-sp-between align-top product-name-container">
+                                    <h1 class="product-name title-l mb-4 ttu">Chaqueta acolchada detalle pana</h1>
+                                    <button type="button" class="is-flex align-top linkWishlist btn-tertiary pt-8">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66667 10.5455L12.3333 15V1H3V15L7.66667 10.5455ZM4 12.663L7.66667 9.16301L11.3333 12.663V2H4V12.663Z" fill="black"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="pdp-prices">
+                                    <div class="product-price">
+                                        <div class="title-l">
+                                            <div class="column-gap-8 is-flex flex-wrap text-nowrap"></div>
+                                            <div class="flex-wrap is-flex text-nowrap">
+                                                <div class="text-nowrap title-l">159,00 €</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ma-btn-zone sm:visible">aafdfdsf
+                                <div class="prices">
+                                    <div class="btn-container is-flex">
+                                        <button id="btnAddToCart" class="btn btn-secondary border-clean-l btn--full btn-anim ttu no-focus size-not-selected"><span id="addToShopCart" class="btn-submit text-l text-add-to-shop-cart">
+                                                Añadir a la cesta </span><span id="sizeChoose" class="btn-loading text-l text-size-choose"> ELIGE UNA TALLA
+                                            </span></button>
+                                        <div class="bs-colors">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="is-flex border-clean-r bs-group-colors ">
+                                                        <button class="btn--color btn-tertiary mb-20 mx-8 is-active" title="NEGRO">
+                                                            <div class="is-flex color-selector-2"><img loading="lazy" src="https://static.massimodutti.net/assets/public/62a8/c3a5/cff34b60964c/94ed7e402449/00930340800-r/00930340800-r.jpg?ts=1720083745736&amp;w=100" alt="NEGRO"></div>
+                                                        </button>
+                                                        <button class="btn--color btn-tertiary mb-20 mx-8" title="KAKI OSCURO">
+                                                            <div class="is-flex color-selector-2"><img loading="lazy" src="https://static.massimodutti.net/assets/public/edfe/3c61/69554369ba09/b26f55ca582d/00930340507-r/00930340507-r.jpg?ts=1720083737519&amp;w=100" alt="KAKI OSCURO"></div>
+                                                        </button>
+                                                        <div class="ml-16">+4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                         </div>
-                    </button>
-                    <ul class="list-clear list-inline text-center mb-64 list-size sm:hidden ">
-                        <li>XS</li>
-                        <li>S</li>
-                        <li>M</li>
-                        <li>L</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="button-zone-container sm:hidden mb-16">
-                <button class="btn btn-secondary btn--full  btn-add">
-                    <div>AÑADIR A LA CESTA </div>
-                </button>
-            </div>
-            <div class=" pt-0 pb-64 align-items-center content-sp-between sm:hidden ">
-                <div class="text-m">GUÍA DE TALLAS </div>
-                <div class="text-m">RECOMENDADOR DE TALLA </div>
-            </div>
-            <p class="mb-40 text-l">Envío gratuito a domicilio en pedidos superiores a 80,00 €.</p>
-            <div class="title-l mb-24">DISPONIBILIDAD EN TIENDA </div>
-            <div class="title-l mb-64">ENVÍOS, CAMBIOS Y DEVOLUCIONES</div>
-            <div class="title-l mb-64">COMPOSICIÓN Y CUIDADOS</div>
-            <p>Pagos: VISA, MasterCard, American Express, Paypal, Transferencia Bancaria</p>
-        </div>
-    </div>
-    <div class="button-zone-container sm:visible button-zone-sticky">
-        <div class="button-zone">
-            <button id="btn-menumobile" class="btn btn-secondary btn--full  btn-add">
-                <div>AÑADIR A LA CESTA sticky </div>
-            </button>
-        </div>
-    </div>
-    <div class="pdp-extra-info sm:visible ">
-        <div class="row mb-32 pt-16">
-            <div class="col-xs-12 text-center">
-                <div class="mb-16">
-                    <div class="title-s  mb-16">GRIS | REF. 5651/624</div>
-                    <button class="btn-tertiary btn--color ml-8 mr-8 is-active" title="MARRÓN">
-                        <div class="is-flex color-selector-2">
-                            <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                                alt="MARRÓN">
+
+                        
+                        <div class="row mb-56">
+                            <div class="col-xs-12">
+                                <div class="product-info-detail">
+                                    <div class="row mt-8 product-page-product-info">
+                                        <div class="col-xs-12">
+                                            <div class="info ma-product-ac-inner">
+                                                <div class="toggle-pdp-description">
+                                                    <p class="text-l">Chaqueta acolchada con relleno interior de plumas. Detalle con tejido de pana en cuello y bolsillos. Cuello alto con botonadura tipo snap. Cierre mediante cremallera de doble carro. Bajo con aberturas laterales con cremallera.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </button>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="product-color-selector">
+                                    <div class="row mb-32">
+                                        <p class="col-xs-12 mb-16 title-s ttu is-flex content-center mr-8">
+                                            <span>Negro</span>
+                                            <span class="pl-8 pr-8"> | </span>
+                                            <span>Ref. 6732/922</span>
+                                        </p>
+                                        <div class="col-xs-12">
+                                            <div class="is-flex list-clear content-center flex-wrap">
+                                                <button class="btn--color btn-tertiary mb-20 mx-8 is-active" title="NEGRO">
+                                                    <div class="is-flex color-selector-2">
+                                                        <img loading="lazy" src="https://static.massimodutti.net/assets/public/cf13/8c67/4d504b1e838f/04bacc9130e2/06732922800-r/06732922800-r.jpg?ts=1726835874319&amp;w=100" alt="NEGRO">
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sizes" class="sm:hidden row height-xs is-flex align-multi-top">
+                                <div class="col-xs-12 mb-16">
+                                    <div class="tabs product-size-selector">
+                                        <ul class="list-clear product-size-selector__ul content-center">
+                                            <li class="product-size-selector__li">
+                                                <span class="product-size-selector__button is-flex">
+                                                    <div class="product-size-selector-name is-flex align-middle text-l">XS</div>
+                                                </span>
+                                            </li>
+                                            <li class="product-size-selector__li">
+                                                <span class="product-size-selector__button is-flex">
+                                                    <div class="product-size-selector-name is-flex align-middle text-l">S</div>
+                                                </span>
+                                            </li>
+                                            <li class="product-size-selector__li">
+                                                <span class="product-size-selector__button is-flex">
+                                                    <div class="product-size-selector-name is-flex align-middle text-l">M</div>
+                                                </span>
+                                            </li>
+                                            <li class="product-size-selector__li">
+                                                <span class="product-size-selector__button is-flex">
+                                                    <div class="product-size-selector-name is-flex align-middle text-l">L</div>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 mb-16">
+                                    <div class="col-xs-12 text-center">
+                                        <div class="text-center">
+                                            <span class="text-m c-dark-grey">La modelo lleva la talla S y mide 181 cm.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prices sm:hidden mb-20">
+                                <div class="btn-container">
+                                    <button id="btnAddToCart" class="btn btn-secondary btn--full btn-anim ttu no-focus size-not-selected">
+                                        <span id="addToShopCart" class="btn-submit text-l text-add-to-shop-cart">Añadir a la cesta</span>
+                                        <span id="sizeChoose" class="btn-loading text-l text-size-choose">ELIGE UNA TALLA</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="is-flex flex-column flex-column-reverse">
+                                <div class="row">
+                                    <div class="col-xs-12 sm:hidden">
+                                        <div class="mb-48 row">
+                                            <div class="col-xs-12">
+                                                <div class="text-l">
+                                                    <div class="pt-0 pb-0 align-items-center content-sp-between">
+                                                        <div class="align-middle d-inline">
+                                                            <button type="button" id="btnSizeGuide" class="is-flex align-top btn btn-clear ttu btn-tertiary">
+                                                                <span class="text-l">Guía de tallas</span>
+                                                            </button>
+                                                        </div>
+                                                        <div>
+                                                            <button class="btn btn-clear ttu btn-tertiary text-l">Tu talla es la S</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="row mb-48">
+                                                    <div class="col-xs-12">
+                                                        <div class="border-t border-b pt-12 pb-12">
+                                                            <div class="text-m">
+                                                                <div class="title-s pb-4">ENVÍO GRATUITO</div>
+                                                                <div>
+                                                                    <span>Envío gratuito a tiendas, y a domicilio por pedidos superiores a 89,00 €.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <ul class="accordion list-clear">
+                                                    <li>
+                                                        <div class="text-l ttu cursor-pointer pb-20 is-flex content-sp-between">
+                                                            <span>COMPOSICIÓN Y CUIDADOS</span>
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.64645 1.64645C4.45118 1.84171 4.45118 2.15829 4.64645 2.35355L10.2929 8L4.64645 13.6464C4.45118 13.8417 4.45119 14.1583 4.64645 14.3536C4.84171 14.5488 5.15829 14.5488 5.35355 14.3536L11.7071 8L5.35355 1.64645C5.15829 1.45118 4.84171 1.45118 4.64645 1.64645Z" fill="#292929"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="text-l ttu cursor-pointer pb-20 is-flex content-sp-between">
+                                                            <span>ENVÍOS, CAMBIOS&nbsp;Y DEVOLUCIONES</span>
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.64645 1.64645C4.45118 1.84171 4.45118 2.15829 4.64645 2.35355L10.2929 8L4.64645 13.6464C4.45118 13.8417 4.45119 14.1583 4.64645 14.3536C4.84171 14.5488 5.15829 14.5488 5.35355 14.3536L11.7071 8L5.35355 1.64645C5.15829 1.45118 4.84171 1.45118 4.64645 1.64645Z" fill="#292929"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </li>
+                                                    <li class="text-l ttu cursor-pointer pb-20">
+                                                        <div class="cursor-pointer ttu is-flex content-sp-between">
+                                                            <span>Disponibilidad en tienda</span>
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.64645 1.64645C4.45118 1.84171 4.45118 2.15829 4.64645 2.35355L10.2929 8L4.64645 13.6464C4.45118 13.8417 4.45119 14.1583 4.64645 14.3536C4.84171 14.5488 5.15829 14.5488 5.35355 14.3536L11.7071 8L5.35355 1.64645C5.15829 1.45118 4.84171 1.45118 4.64645 1.64645Z" fill="#292929"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="title-m extended-info mb-20"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="buttonZoneContainer" class="pdp-sticky pdp-buttons sm:visible">
+                                <div class="ma-btn-zone">
+                                    <div class="prices">
+                                        <div class="btn-container">
+                                            <button id="btnAddToCart" class="btn btn-secondary btn--full btn-anim ttu no-focus size-not-selected">
+                                                <span id="addToShopCart" class="btn-submit text-l text-add-to-shop-cart">Añadir a la cesta</span>
+                                                <span id="sizeChoose" class="btn-loading text-l text-size-choose">ELIGE UNA TALLA</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr class="border-t sm:visible mb-24">
-                <ul class="list-clear list-inline text-center  list-size">
-                    <li>XS</li>
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
-                </ul>
             </div>
         </div>
-        <div class="row text-center mb-32">
-            <div class="col-xs-12">
-                <div class="text-m">
-                    Este producto talla más grande de lo habitual. <br>
-                    La modelo lleva la talla M y mide 177 cm.
-                </div>
-            </div>
-        </div>
-        <hr class="border-t sm:visible mb-24">
-        <div class="pr-16 pl-16">
-            <div class="row  ">
-                <div class="col-xs-6"> GUIA DE TALLAS</div>
-                <div class="col-xs-6 text-right"> ENCUENTRA TU TALLA </div>
-            </div>
-        </div>
-    </div>
-    <div id="pdp-extra-info-overlay" class="pdp-extra-info-overlay">
     </div>
 </div>
-<div class="container-fluid bleed-0 ptr-120">
-    <div class="row pb-48">
-        <div class="col-xs-12 text-center">
-            <div class="title-l">YOU MIGHT BE INTERESTED IN</div>
-        </div>
-    </div>
-    <div class="grid-6">
-        <div class="sk-load3">
-            <div class="p-view">
-                <div class="rat-3-4">
-                    <div class="rat-content">
-                        <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="sk-load3">
-            <div class="p-view">
-                <div class="rat-3-4">
-                    <div class="rat-content">
-                        <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sk-load3">
-            <div class="p-view">
-                <div class="rat-3-4">
-                    <div class="rat-content">
-                        <img src="https://holygrailcss.github.io/assets/placeholder/3-4.jpg"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="bs-recommendations height-xs">
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione natus aliquid non, obcaecati corporis fuga odit atque exercitationem delectus iste expedita, sit culpa eligendi. Dolores praesentium vitae dolore error consectetur.
 </div>
+
 <script src=" https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js "></script>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Añade la clase 'ficha-sticky' al elemento <body>
-        document.body.classList.add("ficha-sticky");
+document.addEventListener("DOMContentLoaded", function() {
+    const bsDetailHeader = document.querySelector('.bs-detail-header');
+    const bsDetailHeaderHeight = bsDetailHeader.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const bsImageHeight = viewportHeight - bsDetailHeaderHeight;
+
+    console.log('--bs-detail-header-top:', `${bsImageHeight}px`);
+    console.log('--bs-detail-header-height:', `${bsDetailHeaderHeight}px`);
     
-        // Obtén los elementos del DOM
-        const btnMenuMobile = document.getElementById("btn-menumobile");
-        const btnMenuOverlay = document.getElementById("pdp-extra-info-overlay");
-        const buttonZoneContainer = document.querySelector('.button-zone-sticky');
-    
-        // Función para obtener la posición respecto al bottom de la ventana
-        const getPositionFromBottom = () => {
-            const rect = buttonZoneContainer.getBoundingClientRect();
-            return window.innerHeight - rect.bottom;
-        };
-    
-        // Función para alternar la clase en el cuerpo del documento y hacer scroll al inicio si se cumple la condición
-        const toggleExtraInfoAndScroll = () => {
-            document.body.classList.toggle("is-pdp-extra-info-open");
-            const positionFromBottom = getPositionFromBottom();
-            if (positionFromBottom > 10) {
-               window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        };
-    
-        // Función para eliminar la clase 'is-pdp-extra-info-open' cuando el navegador se ensancha
-        const handleResize = () => {
-            if (document.body.classList.contains("is-pdp-extra-info-open")) {
-                document.body.classList.remove("is-pdp-extra-info-open");
-            }
-        };
-    
-        // Agrega el event listener para los clics en los botones
-        btnMenuMobile.addEventListener("click", toggleExtraInfoAndScroll);
-        btnMenuOverlay.addEventListener("click", toggleExtraInfoAndScroll);
-    
-        // Agrega el event listener para el cambio de tamaño de la ventana
-        window.addEventListener("resize", handleResize);
-    
-        // Agrega un event listener para mostrar la posición respecto al bottom en consola
-        window.addEventListener('scroll', () => {
-            const positionFromBottom = getPositionFromBottom();
-            console.log('Posición respecto al bottom:', positionFromBottom);
-        });
-    });
-    </script>
+    document.documentElement.style.setProperty('--bs-detail-header-top', `${bsImageHeight}px`);  
+    document.documentElement.style.setProperty('--bs-detail-header-height', `${bsDetailHeaderHeight}px`);
+});
+
+
+</script>
