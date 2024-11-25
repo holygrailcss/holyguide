@@ -3126,6 +3126,12 @@ mark {
     font-size: 12px;
     line-height: 1.4;
   }
+  .title-1 {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+  }
   .title-l-l {
     font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
     font-weight: 100;
@@ -3204,6 +3210,10 @@ mark {
   .title-l {
     font-size: 12px;
     line-height: 1.4;
+  }
+  .title-1 {
+    font-size: 12px;
+    line-height: 1;
   }
   .title-l-l {
     font-size: 12px;

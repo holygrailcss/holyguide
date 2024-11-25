@@ -142,3 +142,26 @@ Helpers que ayudan a agilizar el proceso de maquetación.
 | .font-m  | **.font-medium**   | Fuente medium   |
 | .font-b  | **.font-bold**     | Fuente bold     |
 | .font-sb | **.font-semibold** | Fuente semibold |
+
+### Visibilidad
+
+| Helper       | Propuesta      | Descripción             |
+| ------------ | -------------- | ----------------------- |
+| .hidden      | **.hidden**    | Oculta completamente el elemento usando `display: none !important`. |
+| .sm:hidden   |                | Oculta en pantallas pequeñas (`sm`). |
+| .md:hidden   |                | Oculta en pantallas medianas (`md`). |
+| .lg:hidden   |                | Oculta en pantallas grandes (`lg`). |
+| .xl:hidden   |                | Oculta en pantallas extra grandes (`xl`). |
+
+### Extras
+
+| Helper                | Descripción                                             |
+| --------------------- | ------------------------------------------------------- |
+| .relative             | Posiciona el elemento de manera relativa.               |
+| .absolute-middle      | Centra el elemento verticalmente usando posición absoluta. |
+| .sm:flex              | Aplica `display: flex` en pantallas pequeñas.           |
+| .md:flex              | Aplica `display: flex` en pantallas medianas.           |
+| .lg:flex              | Aplica `display: flex` en pantallas grandes.            |
+| .xl:flex              | Aplica `display: flex` en pantallas extra grandes.      |
+| .scroll-x-custom-min  | Scroll horizontal mínimo personalizado.                 |
+| .align-end            | Alinea el contenido verticalmente al final.             |
