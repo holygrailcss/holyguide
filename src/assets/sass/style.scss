@@ -15,6 +15,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./template/_header3.scss";
 @import "./template/_sidebar.scss";
 @import "./componentes/drawer.scss";
+@import "./componentes/stepper.scss";
 @import "./template/_filtros.scss";
 @import "./template/_modal.scss";
 @import "./template/_microsite_bolsos.scss";
