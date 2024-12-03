@@ -5,17 +5,17 @@
 }
 .n1a-wrap {
   display: grid;
+  grid-template-columns: 100%;
   @include m-body-0;
   @include gap-0;
   @include sp-contents-xs;
-  grid-template-columns: 100%;
+
   @media (min-width: $break-sm) {
     @include m-body;
     grid-template-columns: 25% 50% 25%;
   }
 }
 .n1a-item {
-  //width: calc(((100% - ((($var-cols ) * 20px) + 6px)) / 24) * $var-cols   );
   @media (min-width: $break-sm) {
     grid-column: 2 / 3;
   }

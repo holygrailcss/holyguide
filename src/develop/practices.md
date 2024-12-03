@@ -29,6 +29,7 @@ No Usaremos disabled en botones a no ser que sea un caso excepcional.
 No usaremos /_ xxx _/ para comentar el HTML
 
 No usaremos class="bg-light" para comentar crear un selector en javascript.
+**No usaremos
 
 ## Buenas practicas ✅
 

@@ -1,1 +1,13 @@
+/* TYPES FIJOS */
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
 
+.grid-product-list .sk-load2::before {
+  padding-top: calc(133.25% + 76px);
+}
+.grid-product-list .sk-nodetail.sk-load2::before {
+  padding-top: 133.25%;
+}

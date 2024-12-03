@@ -10274,41 +10274,6 @@ input::input-placeholder {
   font-size: 10px;
 }
 
-.stepper {
-  display: flex;
-  align-items: center;
-  border: 0.5px solid #000000;
-  width: 98px;
-  height: 32px;
-}
-
-.stepper-btn {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-.stepper-btn:hover {
-  opacity: 0.6;
-}
-
-.stepper-btn:active {
-  background-color: #ddd;
-}
-
-.stepper-input {
-  width: 32px;
-  height: 30px;
-  text-align: center;
-  border: none;
-  outline: none;
-}
-
 /* prettier-ignore */
 /* functional */
 /* prettier-ignore */
@@ -12162,6 +12127,59 @@ ul.list-clear li.list-box:last-child {
 .is-rtl .bottom-sheet .bs-group-colors {
   padding-left: 20px;
   padding-right: 16px;
+}
+
+/* prettier-ignore */
+/* functional */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+/* prettier-ignore */
+.stepper {
+  align-items: center;
+  border: 0.5px solid #000000;
+  display: flex;
+  height: 32px;
+  width: 98px;
+}
+
+.stepper-btn {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+.stepper-btn:hover {
+  opacity: 0.6;
+}
+
+.stepper-btn:active {
+  background-color: #ddd;
+}
+
+.stepper-input {
+  border: none;
+  height: 30px;
+  outline: none;
+  text-align: center;
+  width: 32px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* prettier-ignore */
@@ -15126,6 +15144,20 @@ body.open-drawer .drawer-overlay {
   opacity: 1;
 }
 
+/* TYPES FIJOS */
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+
+.grid-product-list .sk-load2::before {
+  padding-top: calc(133.25% + 76px);
+}
+.grid-product-list .sk-nodetail.sk-load2::before {
+  padding-top: 133.25%;
+}
+
 .category-tool-wrap {
   padding-top: 100px;
   background-color: #fff;
@@ -16534,6 +16566,7 @@ html {
   padding-right: 8px;
   padding-left: 8px;
   width: 100%;
+  padding-bottom: 200px;
 }
 
 .guide-colors {
@@ -26042,10 +26075,10 @@ blockquote {
 
 .n1a-wrap {
   display: grid;
+  grid-template-columns: 100%;
   margin: 0;
   gap: 0px;
   grid-column-gap: 0px;
-  grid-template-columns: 100%;
 }
 .n1a-wrap .p-view {
   width: 100%;

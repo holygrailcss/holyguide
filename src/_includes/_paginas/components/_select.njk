@@ -176,8 +176,8 @@ layout: base.njk
                                             <button class="stepper-btn" aria-label="Decrease" onclick="decreaseValue()">
                                                 <div class="minus-icon"></div>
                                             </button>
-                                            <input type="number" class="stepper-input title-m" id="stepperValue"
-                                                value="1" min="0" max="100" step="1" aria-label="Quantity" />
+                                            <div type="number" class="stepper-input title-m" id="stepperValue"
+                                                value="1" min="0" max="100" step="1" aria-label="Quantity"> 123 </div>
                                             <button class="stepper-btn" aria-label="Increase" onclick="increaseValue()">
                                                 <div class="plus-icon"></div>
                                             </button>
@@ -192,7 +192,7 @@ layout: base.njk
         <div class='minus-icon'></div>
     </button>
 
-    <input
+    <div
     type='number'
     class='stepper-input title-m'
     id='stepperValue'
@@ -201,7 +201,10 @@ layout: base.njk
     max='100'
     step='1'
     aria-label='Quantity'
-    />
+    >
+    123
+    </div>
+
 
     <button class='stepper-btn' aria-label='Increase' onclick='increaseValue()'>
         <div class='plus-icon'></div>
