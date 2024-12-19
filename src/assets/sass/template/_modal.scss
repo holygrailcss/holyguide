@@ -1,4 +1,4 @@
-@import '../abstract/_all';
+@import "../abstract/_all";
 
 .modalx-transparent.modalx-backdrop {
   pointer-events: none;
@@ -49,10 +49,8 @@
 }
 
 .modalx-16 {
-
-
-
-  .modalx-content,.modalx-close {
+  .modalx-content,
+  .modalx-close {
     padding-inline: 16px;
 
     @media (min-width: $break-sm) {
@@ -62,24 +60,27 @@
 }
 
 .modalx-16-16 {
-  .modalx-content,.modalx-close {
-        padding-inline: 16px;
+  .modalx-content,
+  .modalx-close {
+    padding-inline: 16px;
   }
 }
 
 .modalx-24 {
-  .modalx-content,.modalx-close {
-        padding-inline: 16px;
+  .modalx-content,
+  .modalx-close {
+    padding-inline: 16px;
 
     @media (min-width: $break-sm) {
-          padding-inline:  24px;
+      padding-inline: 24px;
     }
   }
 }
 
 .modalx-32 {
-  .modalx-content,.modalx-close {
-    padding-inline:  16px;
+  .modalx-content,
+  .modalx-close {
+    padding-inline: 16px;
 
     @media (min-width: $break-sm) {
       padding-inline: 32px;
@@ -88,21 +89,23 @@
 }
 
 .modalx-40 {
-  .modalx-content,.modalx-close {
+  .modalx-content,
+  .modalx-close {
     padding-inline: 16px;
 
     @media (min-width: $break-sm) {
-      padding-inline:40px;
+      padding-inline: 40px;
     }
   }
 }
 
 .modalx-0-24 {
-  .modalx-content,.modalx-close {
+  .modalx-content,
+  .modalx-close {
     padding: 0;
 
     @media (min-width: $break-sm) {
-      padding-inline:  24px ;
+      padding-inline: 24px;
     }
   }
 }

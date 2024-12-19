@@ -26,7 +26,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./_brands.scss";
 @import "./_resize.scss";
 @import "./_dummyproduct.scss";
-@import "./guia.scss";
+
 @import "./theme.scss";
 @import "parrillas/_all.scss";
 @import "template/_alltemplate.scss";
@@ -199,10 +199,10 @@ ul {
   flex-wrap: wrap;
   gap: 8px;
 }
-.form-btn> :nth-child(1) {
+.form-btn > :nth-child(1) {
   flex: 1;
 }
-.form-btn> :nth-child(2) {
+.form-btn > :nth-child(2) {
   flex: 100%;
   @media (min-width: 600px) {
     flex: 0 0 auto;
@@ -837,50 +837,45 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
-
-.bottom-sheet-dummy{
+.bottom-sheet-dummy {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 
-    .swiper {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      height: auto;
+  .swiper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+  }
 
-    }
-    
-    .imgdemo {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .imgdemo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      aspect-ratio: 3/4;
-    }
-    
-    
-    .swiper-wrapper {
-      padding-bottom: 20px;
-    }
-    
+  .imgdemo {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .imgdemo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+
+  .swiper-wrapper {
+    padding-bottom: 20px;
+  }
 }
 
-.bottom-sheet-extra{
+.bottom-sheet-extra {
   position: absolute;
 
   width: 100%;
@@ -890,14 +885,13 @@ ul {
   background-color: #fff;
 }
 
-.bottom-sheet-carousel{
+.bottom-sheet-carousel {
   width: 100%;
   height: 100dvh;
   overflow: auto;
 }
 
-.bottom-sheet-extra{
+.bottom-sheet-extra {
   top: 100vh;
   transition: top 0.5s ease-in-out;
-
 }

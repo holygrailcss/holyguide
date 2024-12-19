@@ -172,9 +172,7 @@
   display: block;
 }
 
-
-
-.btn-augmented{
+.btn-augmented {
   display: flex;
   gap: 8px;
   position: absolute;
@@ -186,7 +184,7 @@
   cursor: pointer;
 }
 
-.modal-qr{
+.modal-qr {
   position: absolute;
   z-index: 1000;
   color: #fff;
@@ -197,17 +195,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-opacity: 0;
-pointer-events: none;
-transition: all ease .2s;
-
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.2s;
 }
 
-.has-modal-qr{
-
-  .modal-qr{
+.has-modal-qr {
+  .modal-qr {
     pointer-events: all;
-opacity: 1;
+    opacity: 1;
   }
-
 }

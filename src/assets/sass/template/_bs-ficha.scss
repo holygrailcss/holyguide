@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1fr;
   }
   @media (min-width: 1700px) {
-    grid-template-columns:  1.5fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
   }
 }
 .bs-logo {
@@ -51,17 +51,12 @@
       height: 100vh;
     }
 
-
     @media (min-width: 1700px) {
-       grid-template-columns: 1fr 1fr;
-    display: flex;
-    align-items: center;
-    justify-items: flex-end;
+      grid-template-columns: 1fr 1fr;
+      display: flex;
+      align-items: center;
+      justify-items: flex-end;
     }
-
-
-
-
   }
 }
 .bs-detail {

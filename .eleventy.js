@@ -30,6 +30,7 @@ const mdAnchorOpts = {
 module.exports = function (eleventyConfig) {
   // Passthrough Copies
   eleventyConfig.addPassthroughCopy("./src/css/style.css");
+  eleventyConfig.addPassthroughCopy("./src/css/docs.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("src/pages", "pages");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");

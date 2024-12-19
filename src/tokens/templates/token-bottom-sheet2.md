@@ -6,11 +6,9 @@ titulo: token-bottom-sheet2
 descripcion: token-bottom-sheet2
 image: /assets/static/images/bottom-sheet2.jpg
 author: autor
-date: 2024-10-30 
+date: 2024-10-30
 tags: ["token-templates"]
 imageAlt: bottom-sheet2
 ---
+
 # bottom-sheet2
-
-
-

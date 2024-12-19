@@ -18,4 +18,5 @@ imageAlt: Ilustración de un diseño de sistema web
 Los botones disponibles en el sistema están diseñados para ofrecer una amplia variedad de estilos y funcionalidades. A continuación se describen todas las clases disponibles para los botones, así como sus variantes y modificaciones de tamaño y estado.
 
 ## Clases Principales de Botones
+
 ---

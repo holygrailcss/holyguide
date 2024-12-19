@@ -6,8 +6,9 @@ titulo: bottom-sheet
 descripcion: bottom-sheet
 image: /assets/static/images/bottom-sheet.jpg
 author: autor
-date: 2024-10-30 
+date: 2024-10-30
 tags: ["templates"]
 imageAlt: bottom-sheet
 ---
+
 # bottom-sheet

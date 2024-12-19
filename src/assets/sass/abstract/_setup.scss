@@ -92,9 +92,24 @@ $minheaders: (
     "regular",
   ),
 
-  suisse-1: ( 16px, 24px, 1.5, "regular3", ), 
-  suisse-2: ( 13px, 16px, 1.1, "regular3", ),
-  suisse-body: ( 10px, 12px, 1.1, "regular3", ),
+  suisse-1: (
+    16px,
+    24px,
+    1.5,
+    "regular3",
+  ),
+  suisse-2: (
+    13px,
+    16px,
+    1.1,
+    "regular3",
+  ),
+  suisse-body: (
+    10px,
+    12px,
+    1.1,
+    "regular3",
+  ),
 );
 
 /* TYPES FIJOS */
@@ -286,9 +301,6 @@ $padding-top: (
     24px,
     24px,
   ),
-
-
-
 );
 
 $pb: "padding-bottom";
@@ -380,8 +392,6 @@ $padding-right: (
     0px,
     0px,
   ),
-
-
 );
 
 $mb: "margin-bottom";

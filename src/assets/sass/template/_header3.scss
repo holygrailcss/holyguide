@@ -1,31 +1,26 @@
-
-
-.header_3{
-    position: sticky;
-    top: 0;
-
+.header_3 {
+  position: sticky;
+  top: 0;
 }
 
-.header3_inner{
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-
+.header3_inner {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
-
-.header_3_marketing{
-    width: 100%;
-    min-height: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+.header_3_marketing {
+  width: 100%;
+  min-height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
-.container_3{
-    height: 3000px;
-    background-color: orange;
+.container_3 {
+  height: 3000px;
+  background-color: orange;
 }

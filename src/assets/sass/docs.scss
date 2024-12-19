@@ -1,15 +1,21 @@
+@import "abstract/_all.scss";
+@import "../../../node_modules/holygrail2/scss/abstract/all";
+
 $nav-width: 250px;
 $c-secondary: orange;
 $nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
+
+$primary-guide: red;
+
 html {
   font-size: 12px;
   scroll-behavior: smooth;
 }
 .guide {
-
-  .todo{
-    background-color: $c-guide ; color: white;
+  .todo {
+    background-color: $c-guide;
+    color: white;
   }
   ul {
     margin-bottom: 20px;
@@ -41,7 +47,6 @@ html {
     padding-bottom: 8px;
     margin-bottom: 24px;
     margin-top: 24px;
-
   }
   h3 {
     scroll-margin-top: 50px;
@@ -672,32 +677,14 @@ code {
 .innermarkdown {
   list-style: none;
   font-size: 14px;
-  ul,ol {
+  ul,
+  ol {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 20px;
+  }
+}
 
-  }
-}
-.guide {
-  code[class*="language-"] {
-    padding: 0 0;
-  }
-  pre[class*="language-"] {
-    padding: 16px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-  :not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
-    background: #000;
-  }
-  code {
-    background-color: #f1f1f1;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-}
 .toc {
   text-align: right;
   position: -webkit-sticky;
@@ -719,13 +706,11 @@ code {
       opacity: 0.5;
     }
 
-    &:after{
+    &:after {
       content: "";
       margin-left: 0;
       transition: all ease 0.2s;
     }
-
-
   }
   ol {
     list-style: none;
@@ -745,10 +730,10 @@ code {
 .toc ol li a.active {
   color: black;
 
-  &:hover{
+  &:hover {
     opacity: 0.5;
   }
-  &:after{
+  &:after {
     content: "_";
     margin-left: 8px;
   }
@@ -822,9 +807,6 @@ code {
   }
 }
 
-
-
-
 .modal-container {
   display: none;
   visibility: hidden;
@@ -870,15 +852,8 @@ code {
       background-color: $c-white;
       max-height: calc(100vh - 24px);
       overflow-x: auto;
-
-
-
-
-
     }
   }
-
-
 
   .sidebar-options {
     display: none;
@@ -890,15 +865,13 @@ code {
     padding: 24px;
     height: 100%;
 
-    &.visible { display: block; }
-
-
-
+    &.visible {
+      display: block;
+    }
   }
 }
 
-
-blockquote{
+blockquote {
   padding: 16px;
   background-color: #f1f1f1;
   border-radius: 4px;
