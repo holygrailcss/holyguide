@@ -285,11 +285,32 @@
 
   "tipografias": [
     {
+      "name": "p-tag",
+      "xs": "8px",
+      "lg": "10px",
+      "line": "1.3",
+      "weight": "regular"
+    },
+    {
+      "name": "h2",
+      "xs": "18px",
+      "lg": "24px",
+      "line": "1.2",
+      "weight": "bold"
+    },
+    {
       "name": "title-l",
       "xs": "12px",
       "lg": "12px",
       "line": "1.4",
       "weight": "regular"
+    },
+    {
+      "name": "title-l-l",
+      "xs": "12px",
+      "lg": "12px",
+      "line": "1.4",
+      "weight": "light"
     },
     {
       "name": "title-l-b",
@@ -303,7 +324,7 @@
       "xs": "11px",
       "lg": "11px",
       "line": "1.4",
-      "weight": "medium"
+      "weight": "regular"
     },
     {
       "name": "title-s",
@@ -313,14 +334,6 @@
       "weight": "regular"
     },
     {
-      "name": "title-xs",
-      "xs": "11px",
-      "lg": "11px",
-      "line": "1.4",
-      "weight": "regular"
-    },
-
-    {
       "name": "text-l",
       "xs": "12px",
       "lg": "12px",
@@ -328,11 +341,39 @@
       "weight": "regular"
     },
     {
+      "name": "text-l-l",
+      "xs": "12px",
+      "lg": "12px",
+      "line": "1.5",
+      "weight": "light"
+    },
+    {
       "name": "text-m",
       "xs": "11px",
       "lg": "11px",
       "line": "1.5",
       "weight": "regular"
+    },
+    {
+      "name": "suisse-1",
+      "xs": "16px",
+      "lg": "20px",
+      "line": "1.5",
+      "weight": "regular3"
+    },
+    {
+      "name": "suisse-2",
+      "xs": "13px",
+      "lg": "14px",
+      "line": "1.1",
+      "weight": "regular3"
+    },
+    {
+      "name": "suisse-body",
+      "xs": "10px",
+      "lg": "12px",
+      "line": "1.1",
+      "weight": "regular3"
     }
   ],
   "ButtonType": [
