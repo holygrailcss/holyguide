@@ -3149,18 +3149,6 @@ mark {
 }
 
 @media (min-width: 1px) {
-  .guia-1 {
-    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.4;
-  }
-  .p-1 {
-    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.4;
-  }
   .p-tag {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
@@ -3178,12 +3166,6 @@ mark {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.4;
-  }
-  .title-1 {
-    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1;
   }
   .title-l-l {
     font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
@@ -3244,14 +3226,6 @@ mark {
   }
 }
 @media (min-width: 992px) {
-  .guia-1 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-  .p-1 {
-    font-size: 12px;
-    line-height: 1.4;
-  }
   .p-tag {
     font-size: 10px;
     line-height: 1.3;
@@ -3263,10 +3237,6 @@ mark {
   .title-l {
     font-size: 12px;
     line-height: 1.4;
-  }
-  .title-1 {
-    font-size: 12px;
-    line-height: 1;
   }
   .title-l-l {
     font-size: 12px;
@@ -3297,11 +3267,11 @@ mark {
     line-height: 1.5;
   }
   .suisse-1 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
   }
   .suisse-2 {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.1;
   }
   .suisse-body {

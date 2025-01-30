@@ -82,7 +82,8 @@ layout: base.njk
         <div class="col-xs-2">Mobile (xs) </div>
         <div class="col-xs-2">Desktop (md) +992px</div>
         <div class="col-xs-4">FAMILY</div>
-        <div class="col-xs-2">LINE</div>
+        <div class="col-xs-1">Ex.</div>
+        <div class="col-xs-1">LINE</div>
 
       </div>
       {% for tipo in global.tipografias %}
@@ -91,15 +92,18 @@ layout: base.njk
         <div class="col-xs-2 text-l">{{tipo.xs}}</div>
         <div class="col-xs-2 text-l">{{tipo.lg}}</div>
         <div class="col-xs-4 {{tipo.weight}} ">
-          {% if tipo.weight == 'regular' %} dutti-daily-regular - regular
+          {% if tipo.weight == 'light' %} dutti-daily-light - light
+          {% elif tipo.weight == 'regular' %} dutti-daily-regular - regular
           {% elif tipo.weight == 'medium' %} dutti-daily-medium - medium
           {% elif tipo.weight == 'bold' %} dutti-daily-semibold - semibold
           {% elif tipo.weight == 'bold3' %} massimo-daily-medium - bold3
           {% elif tipo.weight == 'bold' %} massimo-daily-medium - bold
           {% endif %}
         </div>
-        <div class="col-xs-2 text-l">{{tipo.line}}</div>
+        <div class="col-xs-1 {{tipo.name}} "> Aa</div>
+        <div class="col-xs-1 text-l">{{tipo.line}} </div>
       </div>
+      <div class="border-b2 mb-16"> </div>
       {% endfor %}
     </div>
   </div>

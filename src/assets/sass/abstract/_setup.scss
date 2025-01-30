@@ -11,105 +11,20 @@ $text-input-d: 12px;
 $height-sm: 150px;
 
 $minheaders: (
-  guia-1: (
-    12px,
-    18px,
-    1.4,
-    "regular",
-  ),
-  p-1: (
-    12px,
-    12px,
-    1.4,
-    "regular",
-  ),
+    p-tag: (8px, 10px, 1.3, "regular", ),
+    h2: (18px, 24px, 1.2, "bold", ),
+    title-l: (12px, 12px, 1.4, "regular", ),
+    title-l-l: (12px, 12px, 1.4, "light", ),
+    title-l-b: (12px, 12px, 1.4, "medium", ),
+    title-m: (11px, 11px, 1.4, "regular", ),
+    title-s: (10px, 10px, 1.4, "regular", ),
+    text-l: (12px, 12px, 1.5, "regular", ),
+    text-l-l: (12px, 12px, 1.5, "light", ),
+    text-m: (11px, 11px, 1.5, "regular", ),
 
-  p-tag: (
-    8px,
-    10px,
-    1.3,
-    "regular",
-  ),
-  h2: (
-    18px,
-    24px,
-    1.2,
-    "bold",
-  ),
-
-  title-l: (
-    12px,
-    12px,
-    1.4,
-    "regular",
-  ),
-  title-1: (
-    12px,
-    12px,
-    1,
-    "regular",
-  ),
-  title-l-l: (
-    12px,
-    12px,
-    1.4,
-    "light",
-  ),
-  title-l-b: (
-    12px,
-    12px,
-    1.4,
-    "medium",
-  ),
-  title-m: (
-    11px,
-    11px,
-    1.4,
-    "regular",
-  ),
-  title-s: (
-    10px,
-    10px,
-    1.4,
-    "regular",
-  ),
-  text-l: (
-    12px,
-    12px,
-    1.5,
-    "regular",
-  ),
-  text-l-l: (
-    12px,
-    12px,
-    1.5,
-    "light",
-  ),
-  text-m: (
-    11px,
-    11px,
-    1.5,
-    "regular",
-  ),
-
-  suisse-1: (
-    16px,
-    24px,
-    1.5,
-    "regular3",
-  ),
-  suisse-2: (
-    13px,
-    16px,
-    1.1,
-    "regular3",
-  ),
-  suisse-body: (
-    10px,
-    12px,
-    1.1,
-    "regular3",
-  ),
+    suisse-1: ( 16px, 20px, 1.5, "regular3", ),
+    suisse-2: ( 13px, 14px, 1.1, "regular3", ),
+    suisse-body: ( 10px, 12px, 1.1, "regular3", ),
 );
 
 /* TYPES FIJOS */
