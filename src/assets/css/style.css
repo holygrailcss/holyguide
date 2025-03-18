@@ -14650,6 +14650,8 @@ body.open-drawer .drawer-overlay {
 .md-layout-header {
   align-items: start;
   display: grid;
+  padding-left: 16px;
+  padding-right: 16px;
   grid-template-columns: 1fr 2fr;
   position: sticky;
   background-color: #fff;
@@ -14662,6 +14664,8 @@ body.open-drawer .drawer-overlay {
 }
 @media (min-width: 992px) {
   .md-layout-header {
+    padding-left: 24px;
+    padding-right: 24px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -14726,13 +14730,25 @@ body.open-drawer .drawer-overlay {
 }
 
 .md-layout-footer {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 992px) {
+  .md-layout-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .md-layout-subfooter {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 992px) {
+  .md-layout-subfooter {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 /* Estructura */

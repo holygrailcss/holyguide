@@ -1,102 +1,84 @@
 $padding: 8px;
-
-
-.md-layout-header{
+.md-layout-header {
   align-items: start;
   display: grid;
-  grid-template-columns:  1fr 2fr;
-
+  padding-left: 16px;
+  padding-right: 16px;
+  grid-template-columns: 1fr 2fr;
   @media (min-width: $break-md) {
-    grid-template-columns:  1fr 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: 1fr 1fr;
   }
-
   position: sticky;
   background-color: #fff;
-
-
   top: 0;
   width: 100%;
   z-index: 10;
   border: .5px solid black;
-  border-width:  0 0  .5px 0  ;
+  border-width: 0 0 .5px 0;
   padding: $padding;
 }
-
-
-.md-header-logo{
+.md-header-logo {
   width: 124px;
   height: 100%;
-
-
   @media (min-width: $break-md) {
     width: 224px;
   }
-
-
 }
-
-
-.md-layout-body{
-  background-color:  white;
-      padding: 0;
-      border-bottom: .5px solid black;
-
+.md-layout-body {
+  background-color: white;
+  padding: 0;
+  border-bottom: .5px solid black;
 }
-.md-layout-footer{
+.md-layout-footer {
   align-items: start;
-  display: grid
-;
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-
   row-gap: px;
-
   width: 100%;
-
   @media (min-width: $break-sm) {
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
   }
-
   @media (min-width: $break-md) {
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-
   @media (min-width: $break-lg) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-
   div {
-    border:  .5px solid black;
-    border-width:  0px  .5px 0  .5px;
+    border: .5px solid black;
+    border-width: 0px .5px 0 .5px;
     padding: 8px;
-    padding:  $padding;
+    padding: $padding;
     height: 100%; // Ocupando todo el alto
-    div{
+    div {
       border-width: 0;
       padding: 0px;
       height: 100%; // Ocupando todo el alto
     }
   }
-
   div:not(:first-child) {
     border-left: 0 solid black;
   }
 }
-
-.md-layout-subfooter{
+.md-layout-subfooter {
   align-items: start;
 }
-
-
-.md-layout-footer{
-  padding-left: 24px;
-  padding-right: 24px;
+.md-layout-footer {
+  padding-left: 16px;
+  padding-right: 16px;
+  @media (min-width: $break-md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
-
-.md-layout-subfooter{
-  padding-left: 24px;
-  padding-right: 24px;
+.md-layout-subfooter {
+  padding-left: 16px;
+  padding-right: 16px;
+  @media (min-width: $break-md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
-
-
-
