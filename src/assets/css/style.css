@@ -14693,6 +14693,8 @@ body.open-drawer .drawer-overlay {
   grid-template-rows: 1fr;
   row-gap: px;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 @media (min-width: 768px) {
   .md-layout-footer {
@@ -14701,6 +14703,8 @@ body.open-drawer .drawer-overlay {
 }
 @media (min-width: 992px) {
   .md-layout-footer {
+    padding-left: 24px;
+    padding-right: 24px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -14709,12 +14713,23 @@ body.open-drawer .drawer-overlay {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
+.md-layout-footer > div:nth-child(odd) {
+  border-right: 0.5px solid black;
+}
+.md-layout-footer > div:nth-child(even) {
+  border-right: 0.5px solid black;
+}
 .md-layout-footer div {
-  border: 0.5px solid black;
-  border-width: 0px 0.5px 0 0.5px;
   padding: 8px;
   padding: 8px;
   height: 100%;
+}
+@media (min-width: 1280px) {
+  .md-layout-footer div {
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 0.5px 0 0.5px;
+  }
 }
 .md-layout-footer div div {
   border-width: 0;
@@ -14724,17 +14739,6 @@ body.open-drawer .drawer-overlay {
 .md-layout-footer div:not(:first-child) {
   border-left: 0 solid black;
 }
-.md-layout-footer {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-@media (min-width: 992px) {
-  .md-layout-footer {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 .md-layout-subfooter {
   align-items: start;
   padding-left: 16px;

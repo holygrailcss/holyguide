@@ -38,21 +38,36 @@ $padding: 8px;
   grid-template-rows: 1fr;
   row-gap: px;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
   @media (min-width: $break-sm) {
     grid-template-columns: 1fr 1fr;
   }
   @media (min-width: $break-md) {
+    padding-left: 24px;
+    padding-right: 24px;
     grid-template-columns: 1fr 1fr 1fr;
   }
   @media (min-width: $break-lg) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+  >div:nth-child(odd) {
+    border-right: .5px solid black;
+  }
+  >div:nth-child(even) {
+    border-right: .5px solid black;
+  }
   div {
-    border: .5px solid black;
-    border-width: 0px .5px 0 .5px;
     padding: 8px;
     padding: $padding;
     height: 100%; // Ocupando todo el alto
+    @media (min-width: $break-sm) {}
+    @media (min-width: $break-md) {}
+    @media (min-width: $break-lg) {
+      border-color: black;
+      border-style: solid;
+      border-width: 0px .5px 0 .5px;
+    }
     div {
       border-width: 0;
       padding: 0px;
@@ -62,20 +77,9 @@ $padding: 8px;
   div:not(:first-child) {
     border-left: 0 solid black;
   }
-
-  .is-rtl &{
-
-  }
+  .is-rtl & {}
 }
-
-.md-layout-footer {
-  padding-left: 16px;
-  padding-right: 16px;
-  @media (min-width: $break-md) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
+.md-layout-footer {}
 .md-layout-subfooter {
   align-items: start;
   padding-left: 16px;
