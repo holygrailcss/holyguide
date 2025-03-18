@@ -14650,17 +14650,17 @@ body.open-drawer .drawer-overlay {
 .md-layout-header {
   align-items: start;
   display: grid;
-  padding-left: 16px;
-  padding-right: 16px;
-  grid-template-columns: 1fr 2fr;
   position: sticky;
-  background-color: #fff;
   top: 0;
   width: 100%;
   z-index: 10;
+  background-color: #fff;
   border: 0.5px solid black;
   border-width: 0 0 0.5px 0;
   padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  grid-template-columns: 1fr 2fr;
 }
 @media (min-width: 992px) {
   .md-layout-header {
@@ -14689,12 +14689,12 @@ body.open-drawer .drawer-overlay {
 .md-layout-footer {
   align-items: start;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  row-gap: px;
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: px;
 }
 @media (min-width: 768px) {
   .md-layout-footer {
@@ -14713,14 +14713,11 @@ body.open-drawer .drawer-overlay {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
-.md-layout-footer > div:nth-child(odd) {
-  border-right: 0.5px solid black;
-}
+.md-layout-footer > div:nth-child(odd),
 .md-layout-footer > div:nth-child(even) {
   border-right: 0.5px solid black;
 }
 .md-layout-footer div {
-  padding: 8px;
   padding: 8px;
   height: 100%;
 }
