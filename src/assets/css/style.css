@@ -14689,7 +14689,7 @@ body.open-drawer .drawer-overlay {
 .md-layout-footer {
   align-items: start;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   row-gap: px;
   width: 100%;
@@ -14724,11 +14724,6 @@ body.open-drawer .drawer-overlay {
 .md-layout-footer div:not(:first-child) {
   border-left: 0 solid black;
 }
-
-.md-layout-subfooter {
-  align-items: start;
-}
-
 .md-layout-footer {
   padding-left: 16px;
   padding-right: 16px;
@@ -14741,6 +14736,7 @@ body.open-drawer .drawer-overlay {
 }
 
 .md-layout-subfooter {
+  align-items: start;
   padding-left: 16px;
   padding-right: 16px;
 }
