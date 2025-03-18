@@ -4,7 +4,11 @@ $padding: 8px;
 .md-layout-header{
   align-items: start;
   display: grid;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns:  1fr 2fr;
+
+  @media (min-width: $break-md) {
+    grid-template-columns:  1fr 1fr;
+  }
 
   position: sticky;
   background-color: #fff;
@@ -17,6 +21,20 @@ $padding: 8px;
   border-width:  0 0  .5px 0  ;
   padding: $padding;
 }
+
+
+.md-header-logo{
+  width: 124px;
+  height: 100%;
+
+
+  @media (min-width: $break-md) {
+    width: 224px;
+  }
+
+
+}
+
 
 .md-layout-body{
   background-color:  white;

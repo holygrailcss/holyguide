@@ -14650,7 +14650,7 @@ body.open-drawer .drawer-overlay {
 .md-layout-header {
   align-items: start;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   position: sticky;
   background-color: #fff;
   top: 0;
@@ -14659,6 +14659,21 @@ body.open-drawer .drawer-overlay {
   border: 0.5px solid black;
   border-width: 0 0 0.5px 0;
   padding: 8px;
+}
+@media (min-width: 992px) {
+  .md-layout-header {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.md-header-logo {
+  width: 124px;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  .md-header-logo {
+    width: 224px;
+  }
 }
 
 .md-layout-body {
