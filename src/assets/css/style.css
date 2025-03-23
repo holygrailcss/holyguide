@@ -15285,19 +15285,19 @@ body {
   align-items: start;
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 @media (min-width: 992px) {
   .md-layout-footer {
     grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 992px) {
-  .md-layout-footer {
     padding-left: 24px;
     padding-right: 24px;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .md-layout-footer > div:nth-child(odd),
+  .md-layout-footer > div:nth-child(even) {
+    border-right: 0.5px solid black;
   }
 }
 @media (min-width: 1280px) {
@@ -15305,12 +15305,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
-.md-layout-footer > div:nth-child(odd),
-.md-layout-footer > div:nth-child(even) {
-  border-right: 0.5px solid black;
-}
 .md-layout-footer div {
-  padding: 8px;
+  padding: 0 8px;
   height: 100%;
 }
 @media (min-width: 1280px) {
@@ -15328,6 +15324,7 @@ body {
 .md-layout-footer div:not(:first-child) {
   border-left: 0 solid black;
 }
+
 .md-layout-subfooter {
   align-items: start;
   padding-left: 16px;
@@ -15372,6 +15369,12 @@ body {
   line-height: 1;
   min-width: 24px;
   padding-inline: 0;
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .btn-tertiary {
+    font-size: 12px;
+  }
 }
 
 .gap-8 {
@@ -15574,6 +15577,36 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.md-layout-footer-title {
+  border-bottom: 0.5px solid black;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.md-layout-footer-title:hover {
+  border-bottom: 0.5px solid black;
+}
+@media (min-width: 992px) {
+  .md-layout-footer-title {
+    border-top: none;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.md-layout-footer-hr {
+  border-top: 0.5px solid black;
+  margin-top: 20px;
+}
+@media (min-width: 992px) {
+  .md-layout-footer-hr {
+    display: none;
+  }
 }
 
 /* Estructura */
@@ -23661,6 +23694,10 @@ body {
   overflow-x: hidden;
   color: var(--primary-color);
   scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 .header-img {
