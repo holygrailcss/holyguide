@@ -181,7 +181,7 @@ ul {
 }
 .guide-inspect {
   position: fixed;
-  bottom: 0;
+  bottom: 100px;
   z-index: 10000;
   .is-rtl & {
     left: 0;
