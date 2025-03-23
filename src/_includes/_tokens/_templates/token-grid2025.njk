@@ -7,7 +7,7 @@ title: "Grid 2025"
     <div class="is-flex  align-items-center  ">
 
     
-            <svg class="mr-16 js-abrir-menu-men" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="mr-16 js-abrir-menu-men2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <line x1="6.5" y1="6.5" x2="17.5" y2="6.5" stroke="black"/>
                 <line x1="6.5" y1="16.5" x2="17.5" y2="16.5" stroke="black"/>
                 </svg>
@@ -312,16 +312,21 @@ title: "Grid 2025"
 
   <div class=" md-layout-body-block  is-flex p-relative">
         <div class="home-preview-wrap">
-            <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN</button></div>
+            <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN</button>  </div>
         </div>
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto1-mobile.jpg">
             <img width="100%" src="/assets/static/home/foto1.jpg" alt="Home Grid">
         </picture>
+
+
+
+
+        
     </div>
     <div class="md-layout-body-block is-flex p-relative">
         <div class="home-preview-wrap">
-            <div class="home-preview"> SECCIÓN</div>
+            <div class="home-preview"> <button class="btn btn-tertiary">ACCESORIOS > VER TODO</button>  </div>
         </div>
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto2-mobile.jpg">
@@ -330,7 +335,7 @@ title: "Grid 2025"
     </div>
     <div class="md-layout-body-block is-flex p-relative">
         <div class="home-preview-wrap">
-            <div class="home-preview"> SECCIÓN</div>
+            <div class="home-preview"> <button class="btn btn-tertiary">BOLSOS > VER COLECCIÓN</button>  </div>
         </div>
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto3-mobile.jpg">
@@ -339,7 +344,7 @@ title: "Grid 2025"
     </div>
     <div class="md-layout-body-block is-flex p-relative">
         <div class="home-preview-wrap">
-            <div class="home-preview"> SECCIÓN</div>
+            <div class="home-preview"> <button class="btn btn-tertiary">   NEW IN > VER COLECCIÓN</button>  </div>
         </div>
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto4-mobile.jpg">
@@ -483,6 +488,20 @@ title: "Grid 2025"
         const firstButton = sectionMen.querySelector('button');
         firstButton.setAttribute('tabindex', '0');
         firstButton.focus();
+    });
+
+    document.querySelector('.js-abrir-menu-men2').addEventListener('click', function () {
+        if (document.body.classList.contains('has-section-men')) {
+            document.body.className = '';
+        } else {
+            document.body.classList.add('has-menu');
+            document.body.classList.remove('has-section-woman', 'has-section-accessories', 'has-section-explore');
+            document.body.classList.add('has-section-men');
+            const sectionMen = document.querySelector('.section-men');
+            const firstButton = sectionMen.querySelector('button');
+            firstButton.setAttribute('tabindex', '0');
+            firstButton.focus();
+        }
     });
     document.querySelector('.js-abrir-menu-woman').addEventListener('click', function () {
         document.body.classList.add('has-menu');
