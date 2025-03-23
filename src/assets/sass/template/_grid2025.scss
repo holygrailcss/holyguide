@@ -285,16 +285,18 @@ opacity: 0;
 }
 
 .home-preview{
-  padding: 4px 12px;
+  padding: 3px 12px;
   width: 100%;
   height: 30px;
   position: sticky;
-  display: inline;
+  display: flex;
   bottom: 0;
   left: 0;
   z-index: 10;
   box-sizing: border-box;
-  background-color:#fff;
+  background-color: #fff;
+  align-items: center;
+
   @media (min-width: $break-md) {
     width: calc(50vw - 6px);
   }
