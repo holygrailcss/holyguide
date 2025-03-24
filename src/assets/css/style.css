@@ -15639,8 +15639,10 @@ body {
   display: none;
 }
 
-.has-menu .md-layout-menu-overlay {
-  display: block;
+@media (min-width: 992px) {
+  .has-menu .md-layout-menu-overlay {
+    display: block;
+  }
 }
 
 @media (max-width: 992px) {
@@ -15648,6 +15650,9 @@ body {
     display: flex;
     gap: 16px;
     padding-top: 14px;
+    overflow: auto;
+    width: calc(100vw - 12px);
+    padding-right: 12px;
   }
 }
 
