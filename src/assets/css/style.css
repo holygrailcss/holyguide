@@ -15246,7 +15246,6 @@ body {
 }
 
 .md-layout-header {
-  align-items: start;
   display: grid;
   position: sticky;
   top: 0;
@@ -15290,7 +15289,6 @@ body {
 }
 @media (min-width: 992px) {
   .md-layout-footer {
-    grid-template-columns: 1fr 1fr;
     padding-left: 24px;
     padding-right: 24px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -15403,26 +15401,6 @@ body {
   }
 }
 
-.align-start {
-  align-items: start;
-}
-
-.content-sp-between {
-  justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-  .md\:content-sp-between {
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 992px) {
-  .mdmax\:content-end {
-    justify-content: flex-end;
-  }
-}
-
 .section-men {
   display: none;
 }
@@ -15486,28 +15464,18 @@ body {
 }
 @media (min-width: 992px) {
   .md-layout-menu-inner {
-    padding: 0 0 64px;
+    padding: 4px 0 64px 4px;
     width: calc(50vw - 16px);
     height: calc(100dvh - 120px);
   }
 }
-
-.md-layout-menu-inner::-webkit-scrollbar {
-  width: 1px;
-}
-.md-layout-menu-inner::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-.md-layout-menu-inner::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 0px;
-}
-.md-layout-menu-inner::-webkit-scrollbar-thumb:hover {
-  background: #c6c6c6;
-}
-
-.no-relative {
-  position: inherit;
+.md-layout-menu-inner:after {
+  content: "";
+  height: 500px;
+  width: 3px;
+  background-color: black;
+  position: absolute;
+  top: 0;
 }
 
 .md-layout-menu-services {
@@ -15608,6 +15576,44 @@ body {
   .md-layout-footer-hr {
     display: none;
   }
+}
+
+.align-start {
+  align-items: start;
+}
+
+.content-sp-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .md\:content-sp-between {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 992px) {
+  .mdmax\:content-end {
+    justify-content: flex-end;
+  }
+}
+
+.md-layout-menu-inner::-webkit-scrollbar {
+  width: 1px;
+}
+.md-layout-menu-inner::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.md-layout-menu-inner::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 0px;
+}
+.md-layout-menu-inner::-webkit-scrollbar-thumb:hover {
+  background: #c6c6c6;
+}
+
+.no-relative {
+  position: inherit;
 }
 
 /* Estructura */

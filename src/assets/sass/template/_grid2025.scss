@@ -5,7 +5,7 @@ body {
   overscroll-behavior-x: none;
 }
 .md-layout-header {
-  align-items: start;
+
   display: grid;
   position: sticky;
   top: 0;
@@ -41,7 +41,7 @@ body {
   grid-template-rows: 1fr;
 
   @media (min-width: $break-md) {
-    grid-template-columns: 1fr 1fr;
+
     >div:nth-child(odd),
     >div:nth-child(even) {
       border-right: .5px solid black;
@@ -141,22 +141,7 @@ body {
 
   }
 }
-.align-start {
-  align-items: start;
-}
-.content-sp-between {
-  justify-content: space-between;
-}
-.md\:content-sp-between {
-  @media (min-width: $break-md) {
-    justify-content: space-between;
-  }
-}
-.mdmax\:content-end {
-  @media (max-width: $break-md) {
-    justify-content: flex-end;
-  }
-}
+
 .section-men {
   display: none;
 }
@@ -222,34 +207,22 @@ body {
 
 
   @media (min-width: $break-md) {
-    padding: 0 0 64px;
+    padding: 4px 0 64px 4px;
     width: calc(50vw - 16px);
     height: calc(100dvh - 120px);
   }
 
+  &:after{
+    content: '';
+    height: 500px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+  }
 
 }
 
-.md-layout-menu-inner {
-  &::-webkit-scrollbar {
-    width: 1px;
-
-  }
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #000;
-    border-radius: 0px;
-
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #c6c6c6;
-  }
-}
-.no-relative {
-  position: inherit;
-}
 .md-layout-menu-services {
 
   display: flex;
@@ -354,4 +327,45 @@ opacity: 0;
   @media (min-width: $break-md) {
  display: none;
  }
+}
+
+
+
+.align-start {
+  align-items: start;
+}
+.content-sp-between {
+  justify-content: space-between;
+}
+.md\:content-sp-between {
+  @media (min-width: $break-md) {
+    justify-content: space-between;
+  }
+}
+.mdmax\:content-end {
+  @media (max-width: $break-md) {
+    justify-content: flex-end;
+  }
+}
+
+
+.md-layout-menu-inner {
+  &::-webkit-scrollbar {
+    width: 1px;
+
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 0px;
+
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #c6c6c6;
+  }
+}
+.no-relative {
+  position: inherit;
 }
