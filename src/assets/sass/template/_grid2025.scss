@@ -124,7 +124,10 @@ body {
   padding-right: 12px;
   background-color: white;
   overflow: auto;
+
+
   @media (min-width: $break-md) {
+    height: 100%;
     margin-top: -95px;
     width: 50%;
     padding-left: 0;

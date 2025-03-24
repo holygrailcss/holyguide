@@ -15393,6 +15393,7 @@ body {
 }
 @media (min-width: 992px) {
   .md-layout-menu {
+    height: 100%;
     margin-top: -95px;
     width: 50%;
     padding-left: 0;
