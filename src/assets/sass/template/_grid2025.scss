@@ -402,3 +402,13 @@ display: block;
   }
 
 }
+
+.md-menu-mobile{
+
+
+  @media (max-width: $break-md) {
+    display: flex;
+            gap: 16px;
+            padding-top: 14px;
+    }
+}

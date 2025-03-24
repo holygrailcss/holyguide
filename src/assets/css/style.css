@@ -15643,6 +15643,14 @@ body {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .md-menu-mobile {
+    display: flex;
+    gap: 16px;
+    padding-top: 14px;
+  }
+}
+
 /* Estructura */
 .stories-menu-fixed {
   position: fixed;
