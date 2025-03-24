@@ -15477,11 +15477,11 @@ body {
 
 .md-layout-menu-inner {
   position: absolute;
-  top: 112px;
+  top: 120px;
   left: 0;
   right: 0;
-  padding: 12px 12px 64px;
-  height: calc(100dvh - 112px);
+  padding: 16px 12px 64px;
+  height: calc(100dvh - 120px);
   overflow: auto;
 }
 @media (min-width: 992px) {

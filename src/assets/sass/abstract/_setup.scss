@@ -157,10 +157,10 @@ $c-special: #b99d6b; //gold
 $pt: "padding-top";
 $padding-top: (
   ptr-160: (
-    64px,
-    64px,
-    160px,
-    160px,
+    64px,// mobile
+    64px, // tablet
+    160px, //desktop
+    160px,  //long desktop
   ),
   ptr-136: (
     48px,
@@ -380,4 +380,4 @@ $heights: (
     calc(100vh - 80px),
     calc(100vh - 80px),
   ),
-) !default;
+) ;
