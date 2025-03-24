@@ -15348,7 +15348,6 @@ body {
 }
 
 .btn-search {
-  /* Buscador */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15496,6 +15495,66 @@ body {
   }
 }
 
+.md-layout-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  pointer-events: none;
+  display: none;
+}
+@media (min-width: 992px) {
+  .has-menu .md-layout-menu-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .md-menu-mobile {
+    display: flex;
+    gap: 16px;
+    padding-top: 14px;
+    overflow: auto;
+    width: calc(100vw - 20px);
+    padding-right: 12px;
+  }
+}
+
+.align-start {
+  align-items: start;
+}
+
+.content-sp-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .md\:content-sp-between {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 992px) {
+  .mdmax\:content-end {
+    justify-content: flex-end;
+  }
+}
+
+.dummy-grid {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-letters-anim {
   position: fixed;
   top: 50%;
@@ -15578,26 +15637,6 @@ body {
   }
 }
 
-.align-start {
-  align-items: start;
-}
-
-.content-sp-between {
-  justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-  .md\:content-sp-between {
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 992px) {
-  .mdmax\:content-end {
-    justify-content: flex-end;
-  }
-}
-
 .md-layout-menu-inner::-webkit-scrollbar {
   width: 1px;
 }
@@ -15616,47 +15655,14 @@ body {
   position: inherit;
 }
 
-.dummy-grid {
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.md-layout-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  pointer-events: none;
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .has-menu .md-layout-menu-overlay {
-    display: block;
-  }
-}
-
-@media (max-width: 992px) {
-  .md-menu-mobile {
-    display: flex;
-    gap: 16px;
-    padding-top: 14px;
-    overflow: auto;
-    width: calc(100vw - 20px);
-    padding-right: 12px;
-  }
-}
-
+/*
+Comentarios principales incluidos:
+Cosas a tener en cuenta:
+-La maqueta debe ser seo friendly, manteniendo el orden de los elementos y las clases semanticas.
+-la maqueta debe ser responsive, adaptandose a cualquier dispositivo sin usar displays nones. 
+-la maqueta debe ser accesible, usando alt y title en las imágenes y etiquetas semanticas.
+-la maqueta debe tener el order focus tal y como se especifica en el diseño. 
+*/
 /* Estructura */
 .stories-menu-fixed {
   position: fixed;
