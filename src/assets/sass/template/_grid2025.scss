@@ -119,7 +119,7 @@ body {
   z-index: 1000;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100dvh - 100px);
   padding-left: 12px;
   padding-right: 12px;
   background-color: white;
@@ -185,12 +185,14 @@ body {
 }
 .md-layout-menu-inner {
   position: absolute;
-  top: 120px;
+  bottom: 0;
   left: 0;
   right: 0;
   padding: 16px 12px 64px;
-  height: calc(100dvh - 120px);
+
   overflow: auto;
+  height: calc(100dvh - 157px);
+
   @media (min-width: $break-md) {
     padding: 4px 0 64px 4px;
     width: calc(50vw - 16px);
@@ -361,7 +363,7 @@ body {
             gap: 16px;
             padding-top: 14px;
             overflow: auto;
-            width: calc(100vw - 12px);
+            width: calc(100vw - 20px);
             padding-right: 12px;
   }
 }
