@@ -142,7 +142,7 @@
    overflow: auto;
    @media (min-width: $break-md) {
      height: 100%;
-     margin-top: -95px;
+     margin-top: 0;
      width: 50%;
      padding-left: 0;
      padding-right: 19px;
@@ -218,12 +218,7 @@
      height: calc(100dvh - 120px);
    }
    &:after {
-     content: '';
-     height: 500px;
-     width: 3px;
-     background-color: black;
-     position: absolute;
-     top: 0;
+    display: none;
    }
  }
  // Sección de 'Servicios' dentro del menú, posicionada a la derecha y con display flex
