@@ -302,6 +302,7 @@
  }
  // Imagen fija flotante de letras (decoración)
  .home-letters-anim {
+  pointer-events: none;
    position: fixed;
    top: 50%;
    opacity: 1;
@@ -406,3 +407,46 @@ Cosas a tener en cuenta:
 -la maqueta debe ser accesible, usando alt y title en las imágenes y etiquetas semanticas.
 -la maqueta debe tener el order focus tal y como se especifica en el diseño. 
 */
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sm\:grid-1 { 
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.sm\:grid-2 {
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.sm\:grid-3 {
+
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+
+
+
