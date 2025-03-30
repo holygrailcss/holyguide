@@ -5,24 +5,21 @@
   --md-layout-menu-bg: #{$c-white};
   --md-layout-menu-z-index: 1000;
   --md-layout-menu-inner-top: calc(var(--md-layout-dummy-height) + var(--md-layout-header-height) + var(--md-layout-menu-height));
-
   @media (min-width: $break-md) {
     --md-layout-dummy-height: 50px;
-    --md-layout-header-height: 120px;
+
+    --distancia-header: 50px;
+    --md-layout-header-height: 96px;
     --md-layout-menu-inner-top: var(--md-layout-header-height);
   }
 }
-
-
 $padding: 8px;
-
-// Deshabilita el comportamiento de overscroll, útil en algunos navegadores y dispositivos (ej: iOS)
 body {
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
 }
 
-// Encabezado principal (header) que se fija (sticky) en la parte superior al hacer scroll
+
 .md-layout-header {
   display: grid;
   position: sticky;
@@ -30,102 +27,34 @@ body {
   width: 100%;
   z-index: 100;
   background-color: $c-white;
-  border-width: 0 0 .5px 0;
+  border-width: 0 0 var(--line-width) 0;
   grid-template-columns: 1fr 1fr;
   min-height: var(--md-layout-header-height);
   align-items: center;
 
+  
   @media (min-width: $break-md) {
     align-items: flex-start;
     grid-template-columns: 1fr 1fr;
   }
 }
-
-// Logo principal en el header, ajusta su tamaño dependiendo del viewport
 .md-header-logo {
   width: 124px;
   height: 100%;
-
   @media (min-width: $break-md) {
     width: 224px;
   }
 }
 
-// Contenedor general del cuerpo de la página
 .md-layout-body {
-  background-color: white;
+  background-color: $c-white;
   padding: 0;
-  border-bottom: .5px solid black;
+  border-bottom: var(--line-width) solid $c-black;
 }
 
-// Footer principal. Se organiza en una cuadrícula y reparte los bloques de contenido
-.md-layout-footer {
-  align-items: start;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-
-  // Para viewport a partir de 'break-md', el footer se ajusta en 3 columnas
-  @media (min-width: $break-md) {
-
-    >div:nth-child(odd),
-    >div:nth-child(even) {
-      border-right: .5px solid black;
-    }
-
-    padding-left: 24px;
-    padding-right: 24px;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  // A partir de 'break-lg', se ajusta en 6 columnas
-  @media (min-width: $break-lg) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-
-  // Estilo individual de cada bloque (div) en el footer
-  div {
-    padding: 0 $padding;
-    height: 100%; // Forzamos que cada columna ocupe todo el alto
-
-    @media (min-width: $break-lg) {
-      border-color: black;
-      border-style: solid;
-      border-width: 0px .5px 0 .5px;
-    }
-
-    // Aseguramos que los div hijos no repitan bordes internamente
-    div {
-      border-width: 0;
-      padding: 0px;
-      height: 100%;
-    }
-  }
-
-  // Quitamos la línea divisoria izquierda en los siguientes hijos
-  div:not(:first-child) {
-    border-left: 0 solid black;
-  }
-}
-
-// Footer secundario (subfooter) con pequeños ajustes de paddings
-.md-layout-subfooter {
-  align-items: start;
-  padding-left: 16px;
-  padding-right: 16px;
-
-  @media (min-width: $break-md) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-// Contenedor del carrito y buscador en el header. Se encarga de alinear elementos en la parte derecha
 .md-header-cart {
   display: flex;
   justify-content: end;
-
   @media (min-width: $break-md) {
     min-width: 50%;
     display: flex;
@@ -133,67 +62,26 @@ body {
   }
 }
 
-// Estilos para el botón de buscador
-.btn-search {
-  // Buscador
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 0px 7px;
-  line-height: 1;
-  width: 152px;
-  height: 24px;
-  border-bottom: 0.5px solid #000000;
-  justify-content: flex-start;
-}
-
-// Botón con estilo "terciario", generalmente sin fondo y bordes mínimos
-.btn-tertiary {
-  height: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  line-height: 1;
-  min-width: 24px;
-  padding-inline: 0;
-  font-size: 14px;
-
-  @media (min-width: $break-md) {
-    font-size: 12px;
-  }
-}
-
-// Clase para manejar espacios de 8px entre elementos (gap)
-.gap-8 {
-  gap: 8px;
-}
-
-// Menú lateral principal (mobile y desktop), oculto por defecto. Se muestra cuando el body tiene la clase 'has-menu'
 .md-layout-menu {
   display: none;
-
-  @media (max-width: ($break-md - 1)) {
-    background-color: var(--md-layout-menu-bg);
-    display: none;
-    margin: 0;
-    min-height: var(--md-layout-menu-height);
-    min-width: 100%;
-    overflow: auto;
-    padding: 0;
-  }
+  background-color: var(--md-layout-menu-bg);
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: calc(var(--md-layout-dummy-height) + var(--md-layout-header-height));
 
   @media (min-width: $break-md) {
-    background-color: var(--md-layout-menu-bg);
     bottom: 0;
-    left: 50%;
+    padding-right: 17px;
+    width: calc(50% + 9px);
     min-width: auto;
     overflow: auto;
-    position: fixed;
     right: 0;
     top: var(--md-layout-dummy-height);
     z-index: var(--md-layout-menu-z-index);
   }
 }
-
 .md-layout-menu-header {
   @media (min-width: $break-md) {
     align-items: flex-start;
@@ -202,65 +90,37 @@ body {
     flex-flow: row nowrap;
     height: var(--md-layout-header-height);
     justify-content: flex-start;
-    padding: 12px 0 0 0;
+    padding: 0;
   }
 }
-
 .md-layout-menu-nav {
   display: block;
   flex: 0 1 50%;
   position: static;
-}
-
-.md-layout-menu-list {
-  @media (max-width: ($break-md - 1)) {
-    align-items: flex-start;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    overflow-x: auto;
-    padding: 0;
-    position: static;
-
-    .level-0 {
-      &:not(:first-child) {
-        margin-left: -1px;
-      }
-    }
+  padding-left: 12px;
+  padding-right: 12px;  
+  @media (min-width: $break-md) {
+    padding-left: 0;
+    padding-right: 0;
   }
+}
+.md-layout-menu-list {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0;
+  position: static;
 
   @media (min-width: $break-md) {
     display: grid;
     grid-template-columns: 1fr;
-    list-style: none;
-    margin: 0;
     padding: 0 4px;
-    position: static;
-  }
-
-  .btn-level-0 {
-    @media (max-width: ($break-md - 1)) {
-      border-color: $c-black;
-      border-style: solid;
-      border-width: 1px;
-      height: var(--md-layout-menu-height);
-      padding: 0 20px;
-    }
-
-    @media (min-width: ($break-md)) {
-      height: 24px;
-    }
-
-    &:hover,
-    &:active,
-    &.is-active {
-      text-decoration: underline;
-    }
   }
 }
-
 .md-layout-menu-append {
   flex: 1 1 auto;
   display: flex;
@@ -270,31 +130,258 @@ body {
   padding-right: 12px;
   gap: 8px
 }
-
 // Secciones específicas del menú (Hombre, Mujer, Accesorios, Explorar) inicialmente ocultas
-.section-men {
-  display: none;
-}
-
-.section-woman {
-  display: none;
-}
-
-.section-accessories {
-  display: none;
-}
-
+.section-men,
+.section-woman,
+.section-accessories,
 .section-explore {
   display: none;
 }
-
 // Cuando el body tiene la clase 'has-menu', se muestra el menú. Dependiendo de qué sección tenga el body (has-section-men, etc.), se muestra esa parte
+
+// Contenedor interno de cada sección del menú (ejemplo: .section-men). Posee scroll propio
+.md-layout-menu-inner {
+  @media (max-width: ($break-md - 1)) {
+    align-items: stretch;
+    background-color: var(--md-layout-menu-bg);
+    bottom: 0;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    left: 0;
+    overflow: auto;
+    padding: 32px 0;
+    position: fixed;
+    right: 0;
+    top: var(--md-layout-menu-inner-top);
+    z-index: var(--md-layout-menu-z-index);
+  }
+  @media (min-width: $break-sm) {
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  @media (min-width: $break-md) {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    top: var(--md-layout-menu-inner-top);
+    z-index: var(--md-layout-menu-z-index);
+  }
+  .md-submenu-content {
+    flex: 0 1 50%;
+    padding: 0 12px;
+    @media (min-width: $break-md) {
+      padding: 0 4px;
+    }
+  }
+
+  .md-submenu-content--aside {
+    @media (min-width: $break-sm) {
+      position: relative;
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--line-width);
+        height: 100%;
+        background-color: $c-black;
+      }
+    }
+  }
+  .btn-level-1 {
+    min-height: 32px;
+    &:hover,
+    &:active,
+    &.is-active {
+      text-decoration: underline;
+    }
+  }
+  .level-1 {
+    ul {
+      margin-bottom: 40px;
+      margin-inline-start: 36px;
+    }
+  }
+}
+.md-layout-menu-label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 32px;
+}
+// Sección de 'Servicios' dentro del menú, posicionada a la derecha y con display flex
+.md-layout-menu-services {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  @media (min-width: $break-md) {
+    padding-top: 0;
+    position: absolute;
+    top: 0;
+    right: 12px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+// Componente visual que se superpone (overlay) cuando se abre el menú en desktop
+.md-layout-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  pointer-events: none;
+  display: none;
+}
+
+
+// Adaptación en mobile para que los botones del menú aparezcan en un scroll horizontal
+.md-menu-mobile {
+  @media (max-width: $break-md) {
+    display: flex;
+    gap: 16px;
+    padding-top: 14px;
+    overflow: auto;
+    width: calc(100vw - 20px);
+    padding-right: 12px;
+  }
+}
+
+
+// Imagen fija flotante de letras (decoración)
+.home-letters-anim {
+  position: fixed;
+  top: 50%;
+  opacity: 1;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+  z-index: 10;
+}
+// Cuando se hace scroll más allá de 50px, las letras se ocultan
+
+
+// FOOTER
+.md-layout-footer {
+  align-items: start;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  // Para viewport a partir de 'break-md', el footer se ajusta en 3 columnas
+  @media (min-width: $break-md) {
+    >div:nth-child(odd),
+    >div:nth-child(even) {
+      border-right: var(--line-width) solid $c-black;
+    }
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  // A partir de 'break-lg', se ajusta en 6 columnas
+  @media (min-width: $break-lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  // Estilo individual de cada bloque (div) en el footer
+  div {
+    padding: 0 $padding;
+    height: 100%; // Forzamos que cada columna ocupe todo el alto
+    @media (min-width: $break-lg) {
+      border-color: $c-black;
+      border-style: solid;
+      border-width: 0px var(--line-width) 0 var(--line-width);
+    }
+    // Aseguramos que los div hijos no repitan bordes internamente
+    div {
+      border-width: 0;
+      padding: 0px;
+      height: 100%;
+    }
+  }
+  // Quitamos la línea divisoria izquierda en los siguientes hijos
+  div:not(:first-child) {
+    border-left: 0 solid $c-black;
+  }
+}
+
+.md-layout-subfooter {
+  align-items: start;
+  padding-left: 16px;
+  padding-right: 16px;
+  @media (min-width: $break-md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.md-layout-footer-title {
+  border-bottom: var(--line-width) solid $c-black;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  &:hover {
+    border-bottom: var(--line-width) solid $c-black;
+  }
+  @media (min-width: $break-md) {
+    border-top: none;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.md-layout-footer-hr {
+  border-top: var(--line-width)  solid $c-black;
+  margin-top: 20px;
+  @media (min-width: $break-md) {
+    display: none;
+  }
+}
+
+/*
+Comentarios principales incluidos:
+Cosas a tener en cuenta:
+-La maqueta debe ser seo friendly, manteniendo el orden de los elementos y las clases semanticas.
+-la maqueta debe ser responsive, adaptandose a cualquier dispositivo sin usar displays nones. 
+-la maqueta debe ser accesible, usando alt y title en las imágenes y etiquetas semanticas.
+-la maqueta debe tener el order focus tal y como se especifica en el diseño. 
+*/
+
+
+
 .has-menu {
   overflow: hidden;
-
+  margin-right: 17px;
   .md-layout-menu {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
     display: block;
+
+
+    @media (min-width: $break-md) {
+      display: block;
+      padding-right: 17px;
+      width: calc(50% + 9px);
+    }
   }
+
+  .md-layout-menu-overlay {
+    @media (min-width: $break-md) {
+      display: block;
+    }
+  }
+
 
   &.has-section-men .md-layout-menu {
     .section-men {
@@ -326,197 +413,173 @@ body {
     .section-explore {
       display: flex;
     }
+  
+}
+}
+.has-scroll {
+  .home-letters-anim {
+    opacity: 0;
   }
 }
 
-// Contenedor interno de cada sección del menú (ejemplo: .section-men). Posee scroll propio
-.md-layout-menu-inner {
-  @media (max-width: ($break-md - 1)) {
-    align-items: stretch;
-    background-color: var(--md-layout-menu-bg);
-    bottom: 0;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+
+.is-rtl {
+  .md-layout-menu {
+    right: initial;
     left: 0;
-    overflow: auto;
-    padding: 32px 0;
-    position: fixed;
-    right: 0;
-    top: var(--md-layout-menu-inner-top);
-    z-index: var(--md-layout-menu-z-index);
+
   }
-
-  @media (min-width: $break-sm) {
-    flex-flow: row wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-  }
-
-  @media (min-width: $break-md) {
-    bottom: 0;
-    left: 0;
-    overflow: auto;
-    padding: 20px 0;
-    position: absolute;
-    right: 0;
-    top: var(--md-layout-menu-inner-top);
-    z-index: var(--md-layout-menu-z-index);
-  }
-
-  .md-submenu-content {
-    flex: 0 1 50%;
-    padding: 0 12px;
-
-    @media (min-width: $break-md) {
-      padding: 0 4px;
+  &.has-menu {
+    margin-left: 17px;
+    .md-layout-menu {
+      padding-left: 17px;
+      padding-right: 0;
     }
   }
-
-  .md-submenu-content--main {
-    order: -1
-  }
-
-  .md-submenu-content--aside {
-    @media (min-width: $break-sm) {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: var(--line-width);
-        height: 100%;
-        background-color: $c-black;
-      }
-    }
-  }
-
-  .btn-level-1 {
-    min-height: 32px;
-
-    &:hover,
-    &:active,
-    &.is-active {
-      text-decoration: underline;
-    }
-  }
-
-  .level-1 {
-    ul {
-      margin-bottom: 40px;
-      margin-inline-start: 36px;
-    }
-  }
-}
-
-
-.md-layout-menu-label {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 32px;
-}
-
-// Sección de 'Servicios' dentro del menú, posicionada a la derecha y con display flex
-.md-layout-menu-services {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 32px;
-
-  @media (min-width: $break-md) {
-    padding-top: 0;
-    position: absolute;
-    top: 0;
-    right: 12px;
-    width: 50%;
-    position: absolute;
-    top: 0;
+  .md-layout-menu-inner .md-submenu-content--aside::before {
+    left: initial;
     right: 0;
   }
-}
-
-// Componente visual que se superpone (overlay) cuando se abre el menú en desktop
-.md-layout-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  pointer-events: none;
-  display: none;
-
-  // Si el body tiene la clase 'has-menu', en desktop se muestra el overlay
-  .has-menu & {
-    @media (min-width: $break-md) {
-      display: block;
-    }
+  .mr-32 {
+    margin-right: initial;
+    margin-left: 32px;
   }
 }
 
-// Adaptación en mobile para que los botones del menú aparezcan en un scroll horizontal
-.md-menu-mobile {
-  @media (max-width: $break-md) {
-    display: flex;
-    gap: 16px;
-    padding-top: 14px;
-    overflow: auto;
-    width: calc(100vw - 20px);
-    padding-right: 12px;
-  }
-}
 
-// Clases de apoyo para alinear elementos
+
+// HELPERS
 .align-start {
   align-items: start;
 }
-
 .content-sp-between {
   justify-content: space-between;
 }
-
 .md\:content-sp-between {
   @media (min-width: $break-md) {
     justify-content: space-between;
   }
 }
-
 .mdmax\:content-end {
   @media (max-width: $break-md) {
     justify-content: flex-end;
   }
 }
 
-// Barra o franja negra al inicio (ejemplo "MARKETING SPOT")
-.dummy-grid {
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: white;
-  padding: 12px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+// En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
+.no-relative {
+  position: inherit;
 }
 
-// Imagen fija flotante de letras (decoración)
-.home-letters-anim {
-  position: fixed;
-  top: 50%;
-  opacity: 1;
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
-  z-index: 10;
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-// Cuando se hace scroll más allá de 50px, las letras se ocultan
-.has-scroll {
-  .home-letters-anim {
-    opacity: 0;
+.sm\:grid-1 { 
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
+.sm\:grid-2 {
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.sm\:grid-3 {
+
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.btn-tertiary {
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1;
+  min-width: 24px;
+  padding-inline: 0;
+  font-size: 14px;
+  @media (min-width: $break-md) {
+    font-size: 12px;
+  }
+}
+// Clase para manejar espacios de 8px entre elementos (gap)
+.gap-8 {
+  gap: 8px;
+}
+
+.btn-search {
+  // Buscador
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px 7px;
+  line-height: 1;
+  width: 152px;
+  height: 24px;
+  border-bottom: var(--line-width) solid $c-black;
+  justify-content: flex-start;
+}
+
+//los nombres deben empezar por.md- ya que estamos en transición de webs
+//nunca usamos selectores del tipo div , img etc. siempre clases semanticas
+//intentaremos siempre usar media queries mobile first , desde el init subiendo por min. 
+//Siempre usaremos variables si ya existen en el archivo de variables.
+//no modificaremos ningun elemento core, por ejemplo btn-tertiary. lo podemos extender pero no modificar.
+//hay que revisar rtl siempre, muchas veces poniendo inherit o initial a valores anteriores y dandoselo a su contrario. 
+
+
+
+
+.md-layout-menu-list{
+  .btn--menu-primary {
+    border-color: $c-black;
+    border-style: solid;
+    padding-inline: 20px;
+    border-width: 1px 1px 1px 0;
+    height: var(--md-layout-menu-height);
+    @media (min-width: ($break-md)) {
+      height: 24px;
+    }
+    &:hover,
+    &:active,
+    &.is-active {
+      text-decoration: underline;
+    }
+
+    @media (min-width: $break-md) {
+      padding-inline: 0;
+      border-width: 0;
+    }
+  }
+  li:first-of-type .btn--menu-primary {
+    border-left-width: 1px;
+    @media (min-width: $break-md) {
+      border-left-width: 0;
+    }
+  }
+}
+
+///DUMMY HOME PREVIEW
+
 
 // Contenedor de vista previa (home-preview) dentro de cada bloque del cuerpo
 .home-preview {
@@ -529,14 +592,24 @@ body {
   left: 0;
   z-index: 10;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: $c-white;
   align-items: center;
-
   @media (min-width: $break-md) {
     width: calc(50vw - 6px);
   }
 }
-
+// Barra o franja negra al inicio (ejemplo "MARKETING SPOT")
+.dummy-grid {
+  width: 100%;
+  height: 50px;
+  background-color: $c-black;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 // Ayuda a posicionar el bloque de home-preview sobre la imagen
 .home-preview-wrap {
   align-items: flex-end;
@@ -546,12 +619,10 @@ body {
   padding: 0px;
   position: absolute;
 }
-
 // Cada bloque del body (foto principal, etc.) ocupa toda la altura de la ventana
 .md-layout-body-block {
-  height: 100vh;
-
-  img {
+  height: 100dvh;
+  img {   
     position: absolute;
     top: 0;
     left: 0;
@@ -561,47 +632,5 @@ body {
   }
 }
 
-// Estilo de los títulos de cada sección del footer que despliegan o colapsan contenido en mobile
-.md-layout-footer-title {
-  border-bottom: 0.5px solid black;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
 
-  &:hover {
-    border-bottom: 0.5px solid black;
-  }
 
-  @media (min-width: $break-md) {
-    border-top: none;
-    border-bottom: none;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-// Línea divisoria en el footer para mobile
-.md-layout-footer-hr {
-  border-top: .5px solid black;
-  margin-top: 20px;
-
-  @media (min-width: $break-md) {
-    display: none;
-  }
-}
-
-// En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
-.no-relative {
-  position: inherit;
-}
-
-/*
-Comentarios principales incluidos:
-Cosas a tener en cuenta:
--La maqueta debe ser seo friendly, manteniendo el orden de los elementos y las clases semanticas.
--la maqueta debe ser responsive, adaptandose a cualquier dispositivo sin usar displays nones. 
--la maqueta debe ser accesible, usando alt y title en las imágenes y etiquetas semanticas.
--la maqueta debe tener el order focus tal y como se especifica en el diseño. 
-*/
