@@ -1,3 +1,13 @@
+:root {
+  --md-layout-dummy-height-mobile: 50px;
+  --md-layout-header-height-mobile: 48px;
+  --md-layout-menu-height-mobile: 42px;
+  --md-layout-menu-bg: #{$c-white};
+  --md-layout-menu-z-index: 1000;
+  --md-layout-menu-inner-top-mobile: calc(var(--md-layout-header-height-mobile) + var(--md-layout-menu-height-mobile));
+  --md-layout-menu-inner-top-mobile: calc(var(--md-layout-dummy-height-mobile) + var(--md-layout-header-height-mobile) + var(--md-layout-menu-height-mobile));
+}
+
 
  $padding: 8px;
  // Deshabilita el comportamiento de overscroll, útil en algunos navegadores y dispositivos (ej: iOS)
@@ -12,7 +22,7 @@
    top: 0;
    width: 100%;
    z-index: 100;
-   background-color: #fff;
+   background-color: $c-white;
    border-width: 0 0 .5px 0;
    grid-template-columns: 1fr 1fr;
    min-height: 48px;
@@ -130,16 +140,14 @@
  }
  // Menú lateral principal (mobile y desktop), oculto por defecto. Se muestra cuando el body tiene la clase 'has-menu'
  .md-layout-menu {
-   display: none;
-   position: fixed;
-   z-index: 1000;
-   right: 0;
-   width: 100%;
-   height: calc(100dvh - 100px);
-   padding-left: 12px;
-   padding-right: 12px;
-   background-color: white;
-   overflow: auto;
+  background-color: var(--md-layout-menu-bg);
+  display: none;
+  grid-column: 1 / -1;
+  margin: 0;
+  min-height: var(--md-layout-menu-height-mobile);
+  min-width: 100%;
+  overflow: auto;
+   
    @media (min-width: $break-md) {
      height: 100%;
      margin-top: -95px;
@@ -148,6 +156,48 @@
      padding-right: 19px;
    }
  }
+
+.md-layout-menu-nav {
+  display: block;
+  position: static;
+}
+
+.md-layout-menu-list {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0;
+  position: static;
+
+  .level-0 {
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
+
+  .btn-level-0 {
+    border-color: $c-black;
+    border-style: solid;
+    border-width: 1px;
+    height: var(--md-layout-menu-height-mobile);
+    padding: 0 20px;
+
+    &:hover,
+    &:active,
+    &.is-active {
+      text-decoration: underline;
+    }
+  }
+}
+
+ .md-layout-menu-append {
+  display: none;
+ }
+
  // Secciones específicas del menú (Hombre, Mujer, Accesorios, Explorar) inicialmente ocultas
  .section-men {
    display: none;
@@ -194,38 +244,43 @@
      }
    }
  }
- // Línea divisoria (hr) del menú principal en mobile. Se oculta en pantallas grandes
- .md-layout-menu-hr {
-   width: auto;
-   margin-right: -12px;
-   margin-left: -12px;
-   @media (min-width: $break-md) {
-     display: none;
-   }
- }
+
  // Contenedor interno de cada sección del menú (ejemplo: .section-men). Posee scroll propio
  .md-layout-menu-inner {
-   position: absolute;
+   background-color: var(--md-layout-menu-bg);
    bottom: 0;
    left: 0;
-   right: 0;
-   padding: 16px 12px 64px;
    overflow: auto;
-   height: calc(100dvh - 157px);
-   @media (min-width: $break-md) {
-     padding: 4px 0 64px 4px;
-     width: calc(50vw - 16px);
-     height: calc(100dvh - 120px);
-   }
-   &:after {
-     content: '';
-     height: 500px;
-     width: 3px;
-     background-color: black;
-     position: absolute;
-     top: 0;
-   }
+   padding: 32px 12px;
+   position: fixed;
+   right: 0;
+   top: var(--md-layout-menu-inner-top-mobile);
+   z-index: var(--md-layout-menu-z-index);
+
+  .btn-level-1 {
+    min-height: 32px;
+
+    &:hover,
+    &:active,
+    &.is-active {
+      text-decoration: underline;
+    }
+  }
+
+  .level-1 {
+    ul {
+      margin: 0 0 40px 36px;
+    }
+  }
  }
+
+ .md-layout-menu-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 32px;
+ }
+
  // Sección de 'Servicios' dentro del menú, posicionada a la derecha y con display flex
  .md-layout-menu-services {
    display: flex;
@@ -379,22 +434,7 @@
      display: none;
    }
  }
- // Ajustes del scroll personalizado en los contenedores .md-layout-menu-inner
- .md-layout-menu-inner {
-   &::-webkit-scrollbar {
-     width: 1px;
-   }
-   &::-webkit-scrollbar-track {
-     background: #f1f1f1;
-   }
-   &::-webkit-scrollbar-thumb {
-     background: #000;
-     border-radius: 0px;
-   }
-   &::-webkit-scrollbar-thumb:hover {
-     background: #c6c6c6;
-   }
- }
+ 
  // En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
  .no-relative {
    position: inherit;
