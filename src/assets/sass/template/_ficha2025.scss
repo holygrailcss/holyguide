@@ -14,6 +14,100 @@
   }
 }
 $padding: 8px;
+
+// HELPERS
+.align-start {
+  align-items: start;
+}
+.content-sp-between {
+  justify-content: space-between;
+}
+.md\:content-sp-between {
+  @media (min-width: $break-md) {
+    justify-content: space-between;
+  }
+}
+.mdmax\:content-end {
+  @media (max-width: $break-md) {
+    justify-content: flex-end;
+  }
+}
+
+// En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
+.no-relative {
+  position: inherit;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.sm\:grid-1 { 
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.sm\:grid-2 {
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.sm\:grid-3 {
+
+  @media (min-width: $break-sm) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.btn-tertiary {
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1;
+  min-width: 24px;
+  padding-inline: 0;
+  font-size: 14px;
+  @media (min-width: $break-md) {
+    font-size: 12px;
+  }
+}
+// Clase para manejar espacios de 8px entre elementos (gap)
+.gap-8 {
+  gap: 8px;
+}
+
+.btn-search {
+  // Buscador
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 0px 7px;
+  line-height: 1;
+  width: 152px;
+  height: 24px;
+  border-bottom: var(--line-width) solid $c-black;
+  justify-content: flex-start;
+}
+
+
+
 body {
   overscroll-behavior-y: none;
   overscroll-behavior-x: none;
@@ -282,12 +376,9 @@ body {
   grid-template-rows: 1fr;
   // Para viewport a partir de 'break-md', el footer se ajusta en 3 columnas
   @media (min-width: $break-md) {
-    >div:nth-child(odd),
-    >div:nth-child(even) {
-      border-right: var(--line-width) solid $c-black;
-    }
-    padding-left: 24px;
-    padding-right: 24px;
+
+    padding-left: 12px;
+    padding-right: 12px;
     grid-template-columns: 1fr 1fr 1fr;
   }
   // A partir de 'break-lg', se ajusta en 6 columnas
@@ -295,24 +386,42 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   // Estilo individual de cada bloque (div) en el footer
-  div {
+
+
+  .md-layout-footer-column {
     padding: 0 $padding;
     height: 100%; // Forzamos que cada columna ocupe todo el alto
+    @media (min-width: $break-md) {
+      padding-bottom: 24px;
+
+      border-right: var(--line-width) solid $c-black;
+    &:nth-child(1),
+    &:nth-child(4) {
+      border-left: var(--line-width) solid $c-black;
+    }
+    }
+
     @media (min-width: $break-lg) {
-      border-color: $c-black;
-      border-style: solid;
-      border-width: 0px var(--line-width) 0 var(--line-width);
+      padding-bottom: 24px;
+
+      border-right: var(--line-width) solid $c-black;
+    &:nth-child(1) {
+      border-left: var(--line-width) solid $c-black;
     }
-    // Aseguramos que los div hijos no repitan bordes internamente
-    div {
-      border-width: 0;
-      padding: 0px;
-      height: 100%;
+    &:nth-child(4) {
+      border-left:none;
     }
+
+
+
+    }
+
+
+
   }
   // Quitamos la línea divisoria izquierda en los siguientes hijos
-  div:not(:first-child) {
-    border-left: 0 solid $c-black;
+  .md-layout-footer-column:not(:first-child) {
+
   }
 }
 
@@ -326,14 +435,14 @@ body {
   }
 }
 .md-layout-footer-title {
-  border-bottom: var(--line-width) solid $c-black;
+  border-bottom: 0.5px solid black;
   padding-top: 22px;
   padding-bottom: 22px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   &:hover {
-    border-bottom: var(--line-width) solid $c-black;
+    border-bottom: 0.5px solid black;
   }
   @media (min-width: $break-md) {
     border-top: none;
@@ -342,12 +451,17 @@ body {
     padding-bottom: 0;
   }
 }
-
 .md-layout-footer-hr {
   border-top: var(--line-width)  solid $c-black;
   margin-top: 20px;
   @media (min-width: $break-md) {
     display: none;
+  }
+}
+.md-layout-footer-column{
+  padding-bottom: 24px;
+  @media (min-width: $break-md) {
+    padding-bottom: 24px;
   }
 }
 
@@ -451,97 +565,6 @@ Cosas a tener en cuenta:
 }
 
 
-
-// HELPERS
-.align-start {
-  align-items: start;
-}
-.content-sp-between {
-  justify-content: space-between;
-}
-.md\:content-sp-between {
-  @media (min-width: $break-md) {
-    justify-content: space-between;
-  }
-}
-.mdmax\:content-end {
-  @media (max-width: $break-md) {
-    justify-content: flex-end;
-  }
-}
-
-// En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
-.no-relative {
-  position: inherit;
-}
-
-.grid-1 {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.grid-3 {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.grid-4 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.sm\:grid-1 { 
-  @media (min-width: $break-sm) {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-.sm\:grid-2 {
-  @media (min-width: $break-sm) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.sm\:grid-3 {
-
-  @media (min-width: $break-sm) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-
-.btn-tertiary {
-  height: auto;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  line-height: 1;
-  min-width: 24px;
-  padding-inline: 0;
-  font-size: 14px;
-  @media (min-width: $break-md) {
-    font-size: 12px;
-  }
-}
-// Clase para manejar espacios de 8px entre elementos (gap)
-.gap-8 {
-  gap: 8px;
-}
-
-.btn-search {
-  // Buscador
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 0px 7px;
-  line-height: 1;
-  width: 152px;
-  height: 24px;
-  border-bottom: var(--line-width) solid $c-black;
-  justify-content: flex-start;
-}
 
 //los nombres deben empezar por.md- ya que estamos en transición de webs
 //nunca usamos selectores del tipo div , img etc. siempre clases semanticas
