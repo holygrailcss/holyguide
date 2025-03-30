@@ -165,15 +165,16 @@ title: "Ficha 2025"
 
 
 <div class="md-layout-body mb-64">
+
+
+
     <div class="home-letters-anim">
         <img width="100%" src="/assets/static/home/letras.png" alt="Home Grid">
     </div>
 
 
   <div class=" md-layout-body-block  is-flex p-relative">
-        <div class="home-preview-wrap">
-            <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN</button>  </div>
-        </div>
+
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto1-mobile.jpg">
             <img width="100%" src="/assets/static/home/foto1.jpg" alt="Home Grid">
@@ -185,32 +186,38 @@ title: "Ficha 2025"
         
     </div>
     <div class="md-layout-body-block is-flex p-relative">
-        <div class="home-preview-wrap">
-            <div class="home-preview"> <button class="btn btn-tertiary">ACCESORIOS > VER TODO</button>  </div>
-        </div>
+
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto2-mobile.jpg">
             <img width="100%" src="/assets/static/home/foto2.jpg" alt="Home Grid">
         </picture>
     </div>
     <div class="md-layout-body-block is-flex p-relative">
-        <div class="home-preview-wrap">
-            <div class="home-preview"> <button class="btn btn-tertiary">BOLSOS > VER COLECCIÓN</button>  </div>
-        </div>
+
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto3-mobile.jpg">
             <img width="100%" src="/assets/static/home/foto3.jpg" alt="Home Grid">
         </picture>
     </div>
     <div class="md-layout-body-block is-flex p-relative">
-        <div class="home-preview-wrap">
-            <div class="home-preview"> <button class="btn btn-tertiary">   NEW IN > VER COLECCIÓN</button>  </div>
-        </div>
+
         <picture>
             <source media="(max-width: 767px)" srcset="/assets/static/home/foto4-mobile.jpg">
             <img width="100%" src="/assets/static/home/foto4.jpg" alt="Home Grid">
         </picture>
     </div>
+
+    <div class="home-preview-wrap">
+
+<div class="home-preview-wrap-inner">
+    
+    <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN 11</button>  </div>
+    <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN 22</button>  </div>
+    <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN 33</button>  </div>
+    <div class="home-preview"> <button class="btn btn-tertiary">MUJER > VER COLECCIÓN 44</button>  </div>
+</div>
+    </div>
+
 
 </div>
 
@@ -458,5 +465,28 @@ title: "Ficha 2025"
     // Llamar a la función al cargar la página y al hacer scroll
     window.addEventListener('load', calcularDistanciaHeader);
     window.addEventListener('scroll', calcularDistanciaHeader);
+
+
+    // Crear un IntersectionObserver para detectar cuando un .md-layout-body-block está al 60% en pantalla
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const index = Array.from(document.querySelectorAll('.md-layout-body-block')).indexOf(entry.target) + 1;
+                console.log(`El bloque .md-layout-body-block ${index} está al 60% en pantalla.`);
+
+            const wrapInner = document.querySelector('.home-preview-wrap-inner');
+            wrapInner.style.transition = 'transform 0.4s';
+            wrapInner.style.transform = `translateY(${(index - 1) * -30}px)`;
+            }
+        });
+    }, {
+        threshold: [0.1]
+    });
+
+    // Observar todos los elementos .md-layout-body-block
+    document.querySelectorAll('.md-layout-body-block').forEach(block => {
+        observer.observe(block);
+    });
+
 
 </script>

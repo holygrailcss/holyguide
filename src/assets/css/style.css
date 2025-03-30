@@ -15827,7 +15827,6 @@ Cosas a tener en cuenta:
   padding: 3px 12px;
   width: 100%;
   height: 30px;
-  position: sticky;
   display: flex;
   bottom: 0;
   left: 0;
@@ -15835,11 +15834,6 @@ Cosas a tener en cuenta:
   box-sizing: border-box;
   background-color: #ffffff;
   align-items: center;
-}
-@media (min-width: 992px) {
-  .home-preview {
-    width: calc(50vw - 6px);
-  }
 }
 
 .dummy-grid {
@@ -15857,10 +15851,16 @@ Cosas a tener en cuenta:
 .home-preview-wrap {
   align-items: flex-end;
   display: flex;
+  height: 30px;
   inset: 0;
   justify-content: flex-start;
   padding: 0px;
-  position: absolute;
+  position: sticky;
+  bottom: 0;
+  width: 50%;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
 }
 
 .md-layout-body-block {

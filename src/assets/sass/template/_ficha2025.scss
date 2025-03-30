@@ -621,7 +621,7 @@ Cosas a tener en cuenta:
   padding: 3px 12px;
   width: 100%;
   height: 30px;
-  position: sticky;
+
   display: flex;
   bottom: 0;
   left: 0;
@@ -629,9 +629,7 @@ Cosas a tener en cuenta:
   box-sizing: border-box;
   background-color: $c-white;
   align-items: center;
-  @media (min-width: $break-md) {
-    width: calc(50vw - 6px);
-  }
+
 }
 // Barra o franja negra al inicio (ejemplo "MARKETING SPOT")
 .dummy-grid {
@@ -648,11 +646,18 @@ Cosas a tener en cuenta:
 // Ayuda a posicionar el bloque de home-preview sobre la imagen
 .home-preview-wrap {
   align-items: flex-end;
-  display: flex;
+  display: flex
+;    height: 30px;
   inset: 0;
   justify-content: flex-start;
   padding: 0px;
-  position: absolute;
+  position: sticky;
+  bottom: 0;
+  width: 50%;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: hidden;
+  
 }
 // Cada bloque del body (foto principal, etc.) ocupa toda la altura de la ventana
 .md-layout-body-block {
