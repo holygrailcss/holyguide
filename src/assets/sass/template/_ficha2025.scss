@@ -65,13 +65,14 @@ body {
 .md-layout-menu {
   display: none;
   background-color: var(--md-layout-menu-bg);
-  height: 100vh;
+  height: calc(100dvh - var(--md-layout-dummy-height));
   position: fixed;
   width: 100%;
   z-index: 1000;
   top: calc(var(--md-layout-dummy-height) + var(--md-layout-header-height));
 
   @media (min-width: $break-md) {
+    height: calc(100dvh - var(--md-layout-dummy-height));
     bottom: 0;
     padding-right: 17px;
     width: calc(50% + 9px);
@@ -362,7 +363,7 @@ Cosas a tener en cuenta:
   overflow: hidden;
   margin-right: 17px;
   .md-layout-menu {
-    height: 100vh;
+
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -574,6 +575,13 @@ Cosas a tener en cuenta:
     border-left-width: 1px;
     @media (min-width: $break-md) {
       border-left-width: 0;
+    }
+  }
+
+  .is-rtl li:last-of-type .btn--menu-primary {
+    border-right-width: 1px;
+    @media (min-width: $break-md) {
+      border-right-width: 0;
     }
   }
 }

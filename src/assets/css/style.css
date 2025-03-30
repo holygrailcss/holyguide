@@ -15312,7 +15312,7 @@ body {
 .md-layout-menu {
   display: none;
   background-color: var(--md-layout-menu-bg);
-  height: 100vh;
+  height: calc(100dvh - var(--md-layout-dummy-height));
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -15320,6 +15320,7 @@ body {
 }
 @media (min-width: 992px) {
   .md-layout-menu {
+    height: calc(100dvh - var(--md-layout-dummy-height));
     bottom: 0;
     padding-right: 17px;
     width: calc(50% + 9px);
@@ -15616,7 +15617,6 @@ Cosas a tener en cuenta:
   margin-right: 17px;
 }
 .has-menu .md-layout-menu {
-  height: 100vh;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -15800,6 +15800,14 @@ Cosas a tener en cuenta:
 @media (min-width: 992px) {
   .md-layout-menu-list li:first-of-type .btn--menu-primary {
     border-left-width: 0;
+  }
+}
+.md-layout-menu-list .is-rtl li:last-of-type .btn--menu-primary {
+  border-right-width: 1px;
+}
+@media (min-width: 992px) {
+  .md-layout-menu-list .is-rtl li:last-of-type .btn--menu-primary {
+    border-right-width: 0;
   }
 }
 
