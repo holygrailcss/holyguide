@@ -419,57 +419,60 @@ title: "Ficha 2025"
 
 
 <script>
-    // Botones para cerrar menú
+    // Function to handle menu closing
+    function closeMenu() {
+        document.body.className = '';
+    }
+
+    // Function to handle menu opening
+    function openMenu(sectionClass, activeButtonClass) {
+        document.body.classList.add('has-menu');
+        document.body.classList.remove('has-section-men', 'has-section-accessories', 'has-section-explore', 'has-section-woman');
+        document.body.classList.add(sectionClass);
+        if (activeButtonClass) {
+            const section = document.querySelector(`.${sectionClass}`);
+            const firstButton = section.querySelector('button');
+            document.querySelector(activeButtonClass).classList.add('is-active');
+            firstButton.setAttribute('tabindex', '0');
+            firstButton.focus();
+        }
+    }
+
+    // Event listeners for menu buttons
     document.querySelectorAll('#cerrar-menu').forEach(button => {
-        button.addEventListener('click', function () {
-            document.body.className = '';
-        });
+        button.addEventListener('click', closeMenu);
     });
 
     document.querySelector('.js-abrir-menu-woman2').addEventListener('click', function () {
         if (document.body.classList.contains('has-section-woman')) {
-            document.body.className = '';
+            closeMenu();
         } else {
-            document.body.classList.add('has-menu');
-            document.body.classList.remove('has-section-men', 'has-section-accessories', 'has-section-explore');
-            document.body.classList.add('has-section-woman');
-            const sectionWoman = document.querySelector('.section-woman');
-            const firstButton = sectionWoman.querySelector('button');
-            document.querySelector('.js-abrir-menu-woman').classList.add('is-active');
-            firstButton.setAttribute('tabindex', '0');
-            firstButton.focus();
+            openMenu('has-section-woman', '.js-abrir-menu-woman');
         }
     });
+
     document.querySelector('.js-abrir-menu-woman').addEventListener('click', function () {
-        document.body.classList.add('has-menu');
-        document.body.classList.remove('has-section-men', 'has-section-accessories', 'has-section-explore');
-        document.body.classList.add('has-section-woman');
+        openMenu('has-section-woman');
     });
+
     document.querySelector('.js-abrir-menu-men').addEventListener('click', function () {
-        document.body.classList.add('has-menu');
-        document.body.classList.remove('has-section-woman', 'has-section-accessories', 'has-section-explore');
-        document.body.classList.add('has-section-men');
+        openMenu('has-section-men');
     });
+
     document.querySelector('.js-abrir-menu-accessories').addEventListener('click', function () {
-        document.body.classList.add('has-menu');
-        document.body.classList.remove('has-section-men', 'has-section-woman', 'has-section-explore');
-        document.body.classList.add('has-section-accessories');
+        openMenu('has-section-accessories');
     });
+
     document.querySelector('.js-abrir-menu-explore').addEventListener('click', function () {
-        document.body.classList.add('has-menu');
-        document.body.classList.remove('has-section-men', 'has-section-woman', 'has-section-accessories');
-        document.body.classList.add('has-section-explore');
+        openMenu('has-section-explore');
     });
+
+    // Scroll event listener to toggle 'has-scroll' class
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            document.body.classList.add('has-scroll');
-        } else {
-            document.body.classList.remove('has-scroll');
-        }
+        document.body.classList.toggle('has-scroll', window.scrollY > 50);
     });
 
-
-    // Función para calcular la distancia entre md-layout-header y el borde superior de la vista
+    // Function to calculate the distance between md-layout-header and the top of the viewport
     function calcularDistanciaHeader() {
         const header = document.querySelector('.md-layout-header');
         const distancia = header.getBoundingClientRect().top;
@@ -478,25 +481,18 @@ title: "Ficha 2025"
         }
     }
 
-    // Llamar a la función al cargar la página, al hacer scroll y al redimensionar la ventana
-    window.addEventListener('load', calcularDistanciaHeader);
-    window.addEventListener('scroll', calcularDistanciaHeader);
-    window.addEventListener('resize', calcularDistanciaHeader);
+    // Event listeners for calculating header distance
+    ['load', 'scroll', 'resize'].forEach(event => {
+        window.addEventListener(event, calcularDistanciaHeader);
+    });
 
-    // Llamar a la función al cargar la página y al hacer scroll
-    window.addEventListener('load', calcularDistanciaHeader);
-    window.addEventListener('scroll', calcularDistanciaHeader);
-
-
-    // Crear un IntersectionObserver para detectar cuando un .md-layout-body-block está al 60% en pantalla
+    // IntersectionObserver to detect when a .md-layout-body-block is 60% in view
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const index = Array.from(document.querySelectorAll('.md-layout-body-block')).indexOf(entry.target) + 1;
-                console.log(`El bloque .md-layout-body-block ${index} está al 60% en pantalla.`);
-
                 const wrapInner = document.querySelector('.home-preview-wrap-inner');
-                wrapInner.style.transition = 'transform 0.4s';
+                wrapInner.style.transition = 'transform 0.2s';
                 wrapInner.style.transform = `translateY(${(index - 1) * -30}px)`;
             }
         });
@@ -504,10 +500,9 @@ title: "Ficha 2025"
         threshold: [0.1]
     });
 
-    // Observar todos los elementos .md-layout-body-block
+    // Observe all .md-layout-body-block elements
     document.querySelectorAll('.md-layout-body-block').forEach(block => {
         observer.observe(block);
     });
-
 
 </script>
