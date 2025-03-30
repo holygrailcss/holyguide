@@ -141,6 +141,8 @@ body {
 // Cuando el body tiene la clase 'has-menu', se muestra el menú. Dependiendo de qué sección tenga el body (has-section-men, etc.), se muestra esa parte
 
 // Contenedor interno de cada sección del menú (ejemplo: .section-men). Posee scroll propio
+
+
 .md-layout-menu-inner {
   @media (max-width: ($break-md - 1)) {
     align-items: stretch;
@@ -201,6 +203,7 @@ body {
     &:active,
     &.is-active {
       text-decoration: underline;
+    text-underline-offset: 4px;
     }
   }
   .level-1 {
@@ -564,6 +567,7 @@ Cosas a tener en cuenta:
     &:active,
     &.is-active {
       text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     @media (min-width: $break-md) {
@@ -642,3 +646,24 @@ Cosas a tener en cuenta:
 
 
 
+
+.btn-nuevo:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  bottom: 4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .2s ease-in-out;
+}
+
+
+@media (hover: hover) {
+  .btn-nuevo:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}

@@ -15457,6 +15457,7 @@ body {
 }
 .md-layout-menu-inner .btn-level-1:hover, .md-layout-menu-inner .btn-level-1:active, .md-layout-menu-inner .btn-level-1.is-active {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .md-layout-menu-inner .level-1 ul {
   margin-bottom: 40px;
@@ -15787,6 +15788,7 @@ Cosas a tener en cuenta:
 }
 .md-layout-menu-list .btn--menu-primary:hover, .md-layout-menu-list .btn--menu-primary:active, .md-layout-menu-list .btn--menu-primary.is-active {
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 @media (min-width: 992px) {
   .md-layout-menu-list .btn--menu-primary {
@@ -15863,6 +15865,25 @@ Cosas a tener en cuenta:
   object-fit: cover;
 }
 
+.btn-nuevo:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  bottom: 4px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (hover: hover) {
+  .btn-nuevo:hover:before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+}
 /* Estructura */
 .stories-menu-fixed {
   position: fixed;
