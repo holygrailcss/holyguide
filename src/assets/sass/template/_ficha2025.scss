@@ -350,6 +350,39 @@ body {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
+
+  .icon {
+    display: inline-flex;
+    width: 24px;
+    height: 24px;
+    text-indent: -1000px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--md-color-severity-accent);
+      transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+      opacity: 1;
+    } 
+    
+    &::before {
+      width: 14px;
+      height: var(--line-width);
+    }
+    
+    &::after {
+      height: 14px;
+      width: var(--line-width);
+    }
+  }
 }
 
 .md-collapsible-submenu-body {
@@ -366,6 +399,18 @@ body {
 }
 
 .is-open.md-collapsible-submenu {
+  .md-collapsible-submenu-toggle {
+    .icon {
+      
+      &::before {
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        opacity: 0;
+      }
+    }
+  }
   .md-collapsible-submenu-body {
     grid-template-rows: 1fr;
   }
