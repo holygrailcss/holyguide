@@ -1,13 +1,21 @@
 :root {
+  --md-color-severity-accent: #DD2D01;
+
+  --md-transition-duration-fast: 0.15s;
+  --md-transition-duration-medium: 0.3s;
+  --md-transition-duration-slow: 0.5s;
+
+  --md-transition-timing-primary: ease-in-out;
+
   --md-layout-dummy-height: 50px;
   --md-layout-header-height: 48px;
   --md-layout-menu-height: 42px;
   --md-layout-menu-bg: #{$c-white};
   --md-layout-menu-z-index: 1000;
   --md-layout-menu-inner-top: calc(var(--md-layout-dummy-height) + var(--md-layout-header-height) + var(--md-layout-menu-height));
+  
   @media (min-width: $break-md) {
     --md-layout-dummy-height: 50px;
-
     --distancia-header: 50px;
     --md-layout-header-height: 96px;
     --md-layout-menu-inner-top: var(--md-layout-header-height);
@@ -88,6 +96,10 @@ $padding: 8px;
     font-size: 12px;
   }
 }
+
+.btn-tertiary--accent {
+  color: var(--md-color-severity-accent);
+}
 // Clase para manejar espacios de 8px entre elementos (gap)
 .gap-8 {
   gap: 8px;
@@ -132,6 +144,7 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 .md-header-logo {
   width: 124px;
   height: 100%;
@@ -307,28 +320,61 @@ body {
     }
   }
 }
+
 .md-layout-menu-label {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 32px;
+  min-height: 32px;  
 }
-// Sección de 'Servicios' dentro del menú, posicionada a la derecha y con display flex
-.md-layout-menu-services {
+
+.md-layout-menu-label--accent {
+  color: var(--md-color-severity-accent)
+}
+
+.md-collapsible-submenu {
   display: flex;
+  flex-direction: column;
+  padding: 0 12px;  
+}
+
+.md-collapsible-submenu-toggle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
   justify-content: space-between;
-  padding-top: 32px;
-  @media (min-width: $break-md) {
-    padding-top: 0;
-    position: absolute;
-    top: 0;
-    right: 12px;
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 }
+
+.md-collapsible-submenu-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr;
+  transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+}
+
+.md-collapsible-submenu-content {
+  overflow: hidden;
+  padding: 0 var(--core-spacing-300);
+  transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+}
+
+.is-open.md-collapsible-submenu {
+  .md-collapsible-submenu-body {
+    grid-template-rows: 1fr;
+  }
+  
+  .md-collapsible-submenu-content {
+    padding-bottom: var(--core-spacing-300);
+  }
+}
+
 // Componente visual que se superpone (overlay) cuando se abre el menú en desktop
 .md-layout-menu-overlay {
   position: fixed;
@@ -341,20 +387,6 @@ body {
   pointer-events: none;
   display: none;
 }
-
-
-// Adaptación en mobile para que los botones del menú aparezcan en un scroll horizontal
-.md-menu-mobile {
-  @media (max-width: $break-md) {
-    display: flex;
-    gap: 16px;
-    padding-top: 14px;
-    overflow: auto;
-    width: calc(100vw - 20px);
-    padding-right: 12px;
-  }
-}
-
 
 // Imagen fija flotante de letras (decoración)
 .home-letters-anim {
@@ -411,14 +443,9 @@ body {
     &:nth-child(4) {
       border-left:none;
     }
-
-
-
     }
-
-
-
   }
+
   // Quitamos la línea divisoria izquierda en los siguientes hijos
   .md-layout-footer-column:not(:first-child) {
 
@@ -434,6 +461,7 @@ body {
     padding-right: 24px;
   }
 }
+
 .md-layout-footer-title {
   border-bottom: 0.5px solid black;
   padding-top: 22px;
@@ -451,6 +479,7 @@ body {
     padding-bottom: 0;
   }
 }
+
 .md-layout-footer-hr {
   border-top: var(--line-width)  solid $c-black;
   margin-top: 20px;
@@ -458,6 +487,7 @@ body {
     display: none;
   }
 }
+
 .md-layout-footer-column{
   padding-bottom: 24px;
   @media (min-width: $break-md) {
@@ -473,8 +503,6 @@ Cosas a tener en cuenta:
 -la maqueta debe ser accesible, usando alt y title en las imágenes y etiquetas semanticas.
 -la maqueta debe tener el order focus tal y como se especifica en el diseño. 
 */
-
-
 
 .has-menu {
   overflow: hidden;
@@ -531,9 +559,9 @@ Cosas a tener en cuenta:
     .section-explore {
       display: flex;
     }
-  
+  }
 }
-}
+
 .has-scroll {
   .home-letters-anim {
     opacity: 0;
@@ -659,6 +687,7 @@ Cosas a tener en cuenta:
   overflow: hidden;
   
 }
+
 // Cada bloque del body (foto principal, etc.) ocupa toda la altura de la ventana
 .md-layout-body-block {
   height: 100dvh;

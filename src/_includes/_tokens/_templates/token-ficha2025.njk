@@ -116,6 +116,20 @@ title: "Ficha 2025"
                                 </ul>
                             </li>
                         </ul>
+                        <ul class="list-clear">
+                            <li class="level-1 md-collapsible-submenu is-open">
+                                <span class="md-layout-menu-label md-layout-menu-label--accent title btn-level-1-l md-collapsible-submenu-toggle">
+                                    <span class="txt">Special prices</span>
+                                    <span class="icon">Special prices</span>
+                                </span>
+                                <div class="md-collapsible-submenu-body">
+                                    <ul class="list-clear md-collapsible-submenu-content">
+                                        <li><button class="btn btn-tertiary btn-tertiary--accent btn-level-1">Camisetas</button></li>
+                                        <li><button class="btn btn-tertiary btn-tertiary--accent btn-level-1">Vestidos</button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="md-submenu-content md-submenu-content--aside">
                         <ul class="list-clear md-layout-menu-floating-item">
@@ -503,6 +517,23 @@ title: "Ficha 2025"
     // Observe all .md-layout-body-block elements
     document.querySelectorAll('.md-layout-body-block').forEach(block => {
         observer.observe(block);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los elementos con la clase .md-collapsible-submenu
+    const collapsibleSubmenus = document.querySelectorAll('.md-collapsible-submenu');
+
+    collapsibleSubmenus.forEach(submenu => {
+        // Selecciona el botón toggle dentro de cada submenu
+        const toggle = submenu.querySelector('.md-collapsible-submenu-toggle');
+
+        if (toggle) {
+        toggle.addEventListener('click', () => {
+            // Alterna la clase .is-open en el submenu
+            submenu.classList.toggle('is-open');
+        });
+        }
+    });
     });
 
 </script>
