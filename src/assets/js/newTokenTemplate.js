@@ -36,6 +36,7 @@ permalink: /token-${fileName}/
 page_section: token-templates
 titulo: token-${fileName}
 descripcion: token-${fileName}
+page_separator: Global
 image: /assets/static/images/${fileName}.jpg
 author: autor
 date: ${currentDate} 

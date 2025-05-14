@@ -18,7 +18,9 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./componentes/stepper.scss";
 @import "./template/_filtros.scss";
 @import "./template/_modal.scss";
-//@import "./template/_grid2025.scss";
+  @import "./template/_header2025.scss";    
+  @import "./template/_grid2025.scss";  
+  @import "./template/_pdp1.scss";
 @import "./template/_ficha2025.scss";
 @import "./template/_microsite_bolsos.scss";
 @import "./_menu.scss";
@@ -900,4 +902,13 @@ ul {
 .bottom-sheet-extra {
   top: 100vh;
   transition: top 0.5s ease-in-out;
+}
+
+
+
+.theme-keyboard-accesible {
+
+
+
+
 }

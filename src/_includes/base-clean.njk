@@ -40,6 +40,8 @@
 <body class="contain theme-keyboard-accesible ">
   <main>
     {{ content | safe }}
+
+{% if guides != 0 %}
 <div class="guide-inspect">   
 <button class="resize-rules  btn btn-secondary  ">  
 	<div class="">
@@ -58,6 +60,9 @@
 </button>
 <button class=" btn btn-secondary rtl-inspect" onclick="rtlChange()">RTL</button>
 </div>
+{% endif %}
+
+
   </main>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
