@@ -116,12 +116,12 @@ title: "Ficha 2025"
                             </li>
                         </ul>
                         <ul class="list-clear">
-                            <li class="level-1 md-collapsible-submenu is-open">
-                                <span class="md-layout-menu-label md-layout-menu-label--accent title btn-level-1-l md-collapsible-submenu-toggle">
+                            <li class="level-1 md-collapsible-submenu md-expandable is-open">
+                                <span class="md-layout-menu-label md-layout-menu-label--accent title btn-level-1-l md-collapsible-submenu-toggle md-expandable-toggle">
                                     <span class="txt">Special prices</span>
-                                    <i class="icon">Toggle menu</i>
+                                    <i class="icon-toggle is-open">Toggle menu</i>
                                 </span>
-                                <div class="md-collapsible-submenu-body">
+                                <div class="md-collapsible-submenu-body md-expandable-body">
                                     <ul class="list-clear md-collapsible-submenu-content">
                                         <li><a href="#" class="btn btn-tertiary btn-tertiary--accent btn-level-1">Camisetas</a></li>
                                         <li><a href="#" class="btn btn-tertiary btn-tertiary--accent btn-level-1">Vestidos</a></li>
@@ -258,8 +258,8 @@ title: "Ficha 2025"
 
 
 
-<div class="md-layout-footerseo mt-64 mb-64">
-    <ul class="list-clear is-flex flex-wrap gap-8 pr-body pl-body">
+<div class="md-layout-footer-seo">
+    <ul class="md-seo-cloud list-clear">
         <li><button class="btn btn-tertiary pr-4 pl-4">Bolsos</button></li>
         <li><button class="btn btn-tertiary pr-4 pl-4">Accesorios</button></li>
         <li><button class="btn btn-tertiary pr-4 pl-4">Studio</button></li>
@@ -300,33 +300,46 @@ title: "Ficha 2025"
         <li><button class="btn btn-tertiary pr-4 pl-4">Tendencias</button></li>
     </ul>
 </div>
+<div class="md-layout-footer-newsletter">
+    <div class="md-newsletter-subscription">
+        <p class="md-newsletter-subscription-short title-l">Suscríbete a nuestra Newsletter y te enviaremos información sobre novedades y tendencias.</p>
+        <button class="btn btn-secondary md-newsletter-subscription-action">Suscríbete</button>
+    </div>
+    <div class="md-newsletter-unsubscribe">
+        <button class="btn btn-tertiary md-newsletter-unsubscribe-action">Darme de baja</button>
+    </div>
+</div>
+<div class="md-layout-prefooter">
+    
+</div>
 
 
-<hr class="mb-32">
 
-
-
-<div class="md-layout-prefooter"></div>
-
-
-
-<div class="mb-64 text-l pr-body pl-body">
-    <div class="md-layout-footer ">
-        <div class="md-layout-footer-column">
-            <ul class="list-clear">
-                <li class="mb-24">App Massimo Dutti</li>
-                <li><button class="btn btn-secondary btn--full">Descarga la app</button></li>
-            </ul>
-        </div>
-        <div class="md-layout-footer-column">
-            <hr class="md-layout-footer-hr">
-            <ul class="list-clear">
-                <li>
-                    <button class="btn btn-tertiary md-layout-footer-title md:visible">
+<div class="md-layout-footer">
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-footer-column--app">
+                <div class="md-footer-column-header">
+                    <p class="title ">App Massimo Dutti</p>
+                </div>
+                <div class="md-footer-column-body">
+                    <button class="btn btn-secondary btn--full">Descarga la app</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-expandable">
+                <div class="md-footer-column-header">
+                    <button class="btn btn-tertiary md-footer-column-toggle md-layout-footer-title md:visible md-expandable-toggle">
                         <h6 class="">Ayuda</h6>
+                        <i class="icon-toggle">Toggle menu</i>
                     </button>
-                    <h6 class="md:hidden"> Ayuda</h6>
-                    <ul class="mt-24 ml-24 md:hidden ">
+                    <h6 class="title md:hidden">Ayuda</h6>
+                </div>
+                <div class="md-footer-column-body md-expandable-body">
+                    <ul class="list-clear">
                         <li><button class="btn btn-tertiary">WhatsApp</button></li>
                         <li><button class="btn btn-tertiary">Contacto</button></li>
                         <li><button class="btn btn-tertiary">Preguntas frecuentes</button></li>
@@ -336,79 +349,98 @@ title: "Ficha 2025"
                         <li><button class="btn btn-tertiary">Ticket factura</button></li>
                         <li><button class="btn btn-tertiary">Información de envío</button></li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="md-layout-footer-column">
-            <ul class="list-clear">
-                <li>
-                    <button class="btn btn-tertiary md-layout-footer-title md:visible">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-expandable">
+                <div class="md-footer-column-header">
+                    <button class="btn btn-tertiary md-footer-column-toggle  md-layout-footer-title md:visible md-expandable-toggle">
                         <h6 class=""> Social</h6>
+                        <i class="icon-toggle">Toggle menu</i>
                     </button>
-                    <h6 class="md:hidden"> Social</h6>
-                    <ul class="mt-24 ml-24 md:hidden ">
+                    <h6 class="title md:hidden"> Social</h6>
+                </div>
+                <div class="md-footer-column-body md-expandable-body">
+                    <ul class="list-clear">
                         <li><button class="btn btn-tertiary">Instagram</button></li>
                         <li><button class="btn btn-tertiary">TikTok</button></li>
                         <li><button class="btn btn-tertiary">Facebook</button></li>
                         <li><button class="btn btn-tertiary">Pinterest</button></li>
                         <li><button class="btn btn-tertiary">YouTube</button></li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="md-layout-footer-column">
-            <ul class="list-clear">
-                <li>
-                    <button class="btn btn-tertiary md-layout-footer-title md:visible">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-expandable">
+                <div class="md-footer-column-header">
+                    <button class="btn btn-tertiary md-footer-column-toggle  md-layout-footer-title md:visible md-expandable-toggle">
                         <h6 class=""> Servicios</h6>
+                        <i class="icon-toggle">Toggle menu</i>
                     </button>
-                    <h6 class="md:hidden"> Servicios</h6>
-                    <ul class="mt-24 ml-24 md:hidden ">
+                    <h6 class="title md:hidden"> Servicios</h6>
+                </div>
+                <div class="md-footer-column-body md-expandable-body">
+                    <ul class="list-clear">
                         <li><button class="btn btn-tertiary">Cuidado del producto</button></li>
                         <li><button class="btn btn-tertiary">Asesor de estilo</button></li>
                         <li><button class="btn btn-tertiary">Massimo Dutti Feel</button></li>
                         <li><button class="btn btn-tertiary">Personal tailoring</button></li>
                         <li><button class="btn btn-tertiary">Join Life</button></li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="md-layout-footer-column">
-            <ul class="list-clear">
-                <li>
-                    <button class="btn btn-tertiary md-layout-footer-title md:visible">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-expandable">
+                <div class="md-footer-column-header">
+                    <button class="btn btn-tertiary md-footer-column-toggle  md-layout-footer-title md:visible md-expandable-toggle">
                         <h6 class=""> Empresa</h6>
+                        <i class="icon-toggle">Toggle menu</i>
                     </button>
-                    <h6 class="md:hidden"> Empresa</h6>
-                    <ul class="mt-24 ml-24 md:hidden ">
+                    <h6 class="title md:hidden"> Empresa</h6>
+                </div>
+                <div class="md-footer-column-body md-expandable-body">
+                    <ul class="list-clear">
                         <li><button class="btn btn-tertiary">Sobre Massimo Dutti</button></li>
                         <li><button class="btn btn-tertiary">Localizador de tiendas</button></li>
                         <li><button class="btn btn-tertiary">Prensa</button></li>
                         <li><button class="btn btn-tertiary">Carreras</button></li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="md-layout-footer-column">
-            <ul class="list-clear">
-                <li>
-                    <button class="btn btn-tertiary md-layout-footer-title  md:visible">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="md-layout-footer-column">
+        <ul class="list-clear">
+            <li class="md-footer-column md-expandable">
+                <div class="md-footer-column-header">
+                    <button class="btn btn-tertiary md-footer-column-toggle  md-layout-footer-title md:visible md-expandable-toggle">
                         <h6 class=""> Legal</h6>
+                        <i class="icon-toggle">Toggle menu</i>
                     </button>
-                    <h6 class="md:hidden"> Legal</h6>
-                    <ul class="mt-24 ml-24 md:hidden ">
+                    <h6 class="title md:hidden"> Legal</h6>
+                </div>
+                <div class="md-footer-column-body md-expandable-body">
+                    <ul class="list-clear">
                         <li><button class="btn btn-tertiary">Condiciones de compra</button></li>
                         <li><button class="btn btn-tertiary">Política de privacidad</button></li>
                         <li><button class="btn btn-tertiary">Política de devoluciones</button></li>
                         <li><button class="btn btn-tertiary">Información sobre cookies</button></li>
                         <li><button class="btn btn-tertiary">Configuración de cookies</button></li>
                     </ul>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
-
 <div class="md-layout-subfooter">
     <div>
         <svg width="100%" viewBox="0 0 1355 199" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -418,7 +450,7 @@ title: "Ficha 2025"
         </svg>
     </div>
 </div>
-<div class="md-layout-subfooter pb-120 ptr-24">
+<div class="md-layout-subfooter pb-120">
     Cambiar de mercado:
     <button class=" ml-8 btn btn-tertiary">España (€)</button>
     <ul class="list-clear list-inline">
@@ -519,20 +551,25 @@ title: "Ficha 2025"
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los elementos con la clase .md-collapsible-submenu
-    const collapsibleSubmenus = document.querySelectorAll('.md-collapsible-submenu');
+        // Selecciona todos los elementos con la clase .md-expandable
+        const expandableItems = document.querySelectorAll('.md-expandable');
 
-    collapsibleSubmenus.forEach(submenu => {
-        // Selecciona el botón toggle dentro de cada submenu
-        const toggle = submenu.querySelector('.md-collapsible-submenu-toggle');
+        expandableItems.forEach(expandableToggle => {
+            // Selecciona el botón toggle dentro de cada expandableToggle
+            const toggle = expandableToggle.querySelector('.md-expandable-toggle');
+            const iconToggle = toggle.querySelector('.icon-toggle'); // Selecciona el icono dentro del botón
 
-        if (toggle) {
-        toggle.addEventListener('click', () => {
-            // Alterna la clase .is-open en el submenu
-            submenu.classList.toggle('is-open');
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    // Alterna la clase .is-open en el expandableToggle
+                    expandableToggle.classList.toggle('is-open');
+                    // Alterna la clase .is-open en el icono
+                    if (iconToggle) {
+                        iconToggle.classList.toggle('is-open');
+                    }
+                });
+            }
         });
-        }
-    });
     });
 
 </script>

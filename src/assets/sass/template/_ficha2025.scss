@@ -21,7 +21,6 @@
     --md-layout-menu-inner-top: var(--md-layout-header-height);
   }
 }
-$padding: 8px;
 
 // HELPERS
 .align-start {
@@ -39,6 +38,48 @@ $padding: 8px;
   @media (max-width: $break-md) {
     justify-content: flex-end;
   }
+}
+.icon-toggle {
+  --icon-toggle-border-color: #{$c-black};
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  text-indent: -1000px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--icon-toggle-border-color);
+    transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+    opacity: 1;
+  } 
+  
+  &::before {
+    width: 14px;
+    height: var(--line-width);
+  }
+  
+  &::after {
+    height: 14px;
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: var(--line-width);
+  }
+  
+  &.is-open {
+    &::after {
+        transform: translate(-50%, -50%) rotate(-90deg);
+        opacity: 0;
+      }
+    }
 }
 
 // En mobile, eliminamos la posición relativa para que ciertos elementos no colapsen
@@ -351,37 +392,8 @@ body {
     text-underline-offset: 4px;
   }
 
-  .icon {
-    display: inline-flex;
-    width: 24px;
-    height: 24px;
-    text-indent: -1000px;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: var(--md-color-severity-accent);
-      transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
-      opacity: 1;
-    } 
-    
-    &::before {
-      width: 14px;
-      height: var(--line-width);
-    }
-    
-    &::after {
-      height: 14px;
-      width: var(--line-width);
-    }
+  .icon-toggle {
+    --icon-toggle-border-color: var(--md-color-severity-accent);
   }
 }
 
@@ -394,29 +406,12 @@ body {
 
 .md-collapsible-submenu-content {
   overflow: hidden;
-  padding: 0 var(--core-spacing-300);
   transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
 }
 
 .is-open.md-collapsible-submenu {
-  .md-collapsible-submenu-toggle {
-    .icon {
-      
-      &::before {
-      }
-
-      &::after {
-        transform: translate(-50%, -50%) rotate(-90deg);
-        opacity: 0;
-      }
-    }
-  }
   .md-collapsible-submenu-body {
     grid-template-rows: 1fr;
-  }
-  
-  .md-collapsible-submenu-content {
-    padding-bottom: var(--core-spacing-300);
   }
 }
 
@@ -445,100 +440,190 @@ body {
 
 
 // FOOTER
+.md-layout-footer-seo {
+  margin: 0 0 40px;
+  padding: 0 12px 94px;
+
+  @media (min-width: $break-sm) {
+    margin-bottom: 32px;
+  }
+}
+
+.md-seo-cloud {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2px 16px;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.md-layout-footer-newsletter {
+  margin: 0 0 40px;
+  padding: 0 12px 24px;
+
+  @media (min-width: $break-sm) {
+    margin-inline-start: 50%;
+    padding-inline-start: 4px;
+  }
+  
+  @media (min-width: $break-md) {
+    column-gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-inline-start: 33.3333%;
+  }
+
+  @media (min-width: $break-lg) {
+    margin-inline-start: 50%;
+  }
+}
+
+.md-newsletter-subscription {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+
+  @media (min-width: $break-md) {
+    grid-column: auto / span 6;
+    padding-top: 4px;
+  }
+}
+
+.md-newsletter-subscription-short {
+  margin: 0 0 24px;
+}
+
+.md-newsletter-subscription-subscribe {
+  flex: 1 1 100%;
+}
+
+.md-newsletter-unsubscribe {
+  @media (min-width: $break-sm) {
+    grid-column: 9 / span 3;
+  }
+}
+
 .md-layout-footer {
-  align-items: start;
+  align-items: stretch;
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  margin: 0 12px 40px;
+  
   // Para viewport a partir de 'break-md', el footer se ajusta en 3 columnas
   @media (min-width: $break-md) {
-
-    padding-left: 12px;
-    padding-right: 12px;
+    border-top: solid var(--line-width) $c-black;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 0;
+    margin-bottom: 32px;
+    padding-top: 32px;
   }
+  
   // A partir de 'break-lg', se ajusta en 6 columnas
   @media (min-width: $break-lg) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-  // Estilo individual de cada bloque (div) en el footer
+}
 
-
-  .md-layout-footer-column {
-    padding: 0 $padding;
-    height: 100%; // Forzamos que cada columna ocupe todo el alto
-    @media (min-width: $break-md) {
-      padding-bottom: 24px;
-
-      border-right: var(--line-width) solid $c-black;
-    &:nth-child(1),
-    &:nth-child(4) {
-      border-left: var(--line-width) solid $c-black;
-    }
-    }
-
-    @media (min-width: $break-lg) {
-      padding-bottom: 24px;
-
-      border-right: var(--line-width) solid $c-black;
-    &:nth-child(1) {
-      border-left: var(--line-width) solid $c-black;
-    }
-    &:nth-child(4) {
-      border-left:none;
-    }
-    }
+// Estilo individual de cada bloque (div) en el footer
+.md-layout-footer-column {
+  border-top: solid var(--line-width) $c-black;
+  padding: 16px 0;
+  
+  @media (min-width: $break-md) {
+    border-left: var(--line-width) solid $c-black;
+    border-top: none;
+    padding: 0 4px 24px;
   }
 
-  // Quitamos la línea divisoria izquierda en los siguientes hijos
-  .md-layout-footer-column:not(:first-child) {
+  @media (min-width: $break-lg) {
+    padding-bottom: 24px;
+  }
+}
 
+.md-footer-column-header {
+  .title {
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 36px;
+    
+    @media (min-width: $break-md) {
+      min-height: 24px;
+    }
+  }
+}
+
+.btn-tertiary.md-footer-column-toggle {
+  display: flex;
+  justify-content: space-between;
+  min-height: 32px;
+  width: 100%;
+}
+
+.md-footer-column-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr;
+  transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+
+  @media screen and (min-width: $break-md) {
+    grid-template-rows: 1fr;    
+  }
+
+  .list-clear {
+    margin: 0 0 0 40px;
+    overflow: hidden;
+    padding: 0;
+    transition: all var(--md-transition-duration-fast) var(--md-transition-timing-primary);
+
+    @media screen and (min-width: $break-md) {
+      margin-top: 8px;
+    }
+  }
+}
+
+.is-open.md-footer-column {
+  .md-footer-column-body {
+    grid-template-rows: 1fr;
+
+    .list-clear {
+      margin-top: 8px;
+    }
+  }
+}
+
+.md-footer-column--app.md-footer-column {
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+
+  .md-footer-column-header {
+    margin-bottom: 20px;
+  }
+
+  .md-footer-column-body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 8px;
   }
 }
 
 .md-layout-subfooter {
   align-items: start;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 40px;
   @media (min-width: $break-md) {
-    padding-left: 24px;
-    padding-right: 24px;
+    margin-bottom: 32px;
   }
 }
-
-.md-layout-footer-title {
-  border-bottom: 0.5px solid black;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  &:hover {
-    border-bottom: 0.5px solid black;
-  }
-  @media (min-width: $break-md) {
-    border-top: none;
-    border-bottom: none;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-.md-layout-footer-hr {
-  border-top: var(--line-width)  solid $c-black;
-  margin-top: 20px;
-  @media (min-width: $break-md) {
-    display: none;
-  }
-}
-
-.md-layout-footer-column{
-  padding-bottom: 24px;
-  @media (min-width: $break-md) {
-    padding-bottom: 24px;
-  }
-}
+// /FOOTER
 
 /*
 Comentarios principales incluidos:
