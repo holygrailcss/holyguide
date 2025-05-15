@@ -2,7 +2,6 @@
 layout: base-clean.njk
 guides: 0
 ---
----
 <!-- Contenido de la plantilla pdp1.njk -->
 {% include '_tokens/_templates/token-header2025.njk' %}
 
@@ -21,40 +20,13 @@ guides: 0
     </svg>
 </div>
 
-
+<div> 
 <div class="ar-3-4 bg-light mb-32">
-    <img src="/assets/static/images/pdp/pdp-1.jpg">
+    <img  width="100%" width="100%" src="/assets/static/images/pdp/pdp-1.jpg">
 </div>
-<div class="subinfo-box">
-    <div class="is-flex justify-between pr-body pl-body  content-sp-between ">
-        <div>
-            <div class="ttu pb-4">Americana cruzada 100% lino</div>
-            <div>199,00 €</div>
-        </div>
-        <div>
-            <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-                    fill="black" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-                    fill="black" fill-opacity="0.2" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-                    fill="black" fill-opacity="0.2" />
-            </svg>
-        </div>
-    </div>
 
-    <div class="is-flex pt-16  ">
-        <button class=" btn btn-secondary btn--full">
-        INFORMACIÓN
-        </button>
-        <button class=" btn btn-primary btn--full">
-    AÑADIR A LA CESTA    </button>
-    </div>
 
-</div>
+
 
 <div class="is-flex justify-between pr-body pl-body  content-sp-between mb-24">
     <div>
@@ -75,7 +47,7 @@ guides: 0
         </svg>
     </div>
 </div>
-<div class=" pr-body pl-body">
+<div class=" pr-body pl-body pb-16">
     <div class="is-flex content-sp-between pb-16 ">
         <div>
             COLOR
@@ -93,15 +65,22 @@ guides: 0
         <div class="boxcolorfake-item"></div>
     </div>
 </div>
-<div class="is-flex pt-32 pb-32 ">
-    <button class=" btn btn-secondary btn--full">
-    INFORMACIÓN
-    </button>
-    <button class=" btn btn-primary btn--full">
-AÑADIR A LA CESTA    </button>
+
+
+<div class="subinfo-boxsticky" >
+
+    <div class="is-flex">
+        <button class="btn btn-secondary btn--full">
+        INFORMACIÓN
+        </button>
+        <button class="btn btn-primary btn--full">
+    AÑADIR A LA CESTA    </button>
+    </div>
+
 </div>
+
 <div class="ar-3-4 bg-light mb-32 m-16">
-    <img src="/assets/static/images/pdp/pdp-2.jpg">
+    <img  width="100%" src="/assets/static/images/pdp/pdp-2.jpg">
 </div>
 <div class="is-flex flex-column gap-48 pl-body pr-body">
     <div>
@@ -137,10 +116,10 @@ AÑADIR A LA CESTA    </button>
     </div>
 </div>
 <div class="ar-3-4 bg-light m-16">
-    <img src="/assets/static/images/pdp/pdp-3.jpg">
+    <img  width="100%" src="/assets/static/images/pdp/pdp-3.jpg">
 </div>
 <div class="ar-3-4 bg-light  m-16">
-    <img src="/assets/static/images/pdp/pdp-4.jpg">
+    <img  width="100%" src="/assets/static/images/pdp/pdp-4.jpg">
 </div>
 
 <div class="is-flex content-sp-between pr-16 pl-16 pb-48">
@@ -153,6 +132,24 @@ AÑADIR A LA CESTA    </button>
  
 </div>
 
+</div>
+
+
+<div class="grid-2">
+
+    {% include '_tokens/_components/minificha.njk' %}
+    {% include '_tokens/_components/minificha.njk' %}
+    {% include '_tokens/_components/minificha.njk' %}
+    {% include '_tokens/_components/minificha.njk' %}
+
+
+  
+</div>
+
+<div class="height-sm"></div>
+
+
+
 <script>
     window.addEventListener('scroll', function() {
         if (window.scrollY > document.querySelector('.subheader-logo').offsetHeight - 50) {
@@ -161,4 +158,17 @@ AÑADIR A LA CESTA    </button>
             document.body.classList.remove('has-logomini');
         }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.subinfo-boxsticky');
+  if (!el) return console.warn('No encuentro .subinfo-boxsticky en el DOM');
+  const topOffset = el.offsetTop - 48;
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= topOffset) {
+      el.classList.add('is-sticky');
+    } else {
+      el.classList.remove('is-sticky');
+    }
+  });
+});
 </script>

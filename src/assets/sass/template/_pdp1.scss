@@ -20,7 +20,7 @@ background-color: #000;
     }
 }
 .subinfo-box{
-    padding-top: 16px;
+
     position:fixed;
     bottom: 0;
     left: 0;
@@ -29,6 +29,26 @@ background-color: #000;
     background-color: #fff;
     
 }
+
+.subinfo-boxsticky{
+
+    position:sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    
+}
 .mt-58{
     margin-top: 58px;
+}
+
+
+.subinfo-boxsticky.is-sticky{
+
+    position:sticky;
+    top: 48px;
+
+    
 }
