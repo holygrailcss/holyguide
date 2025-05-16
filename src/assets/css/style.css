@@ -15394,11 +15394,11 @@ body.open-drawer .drawer-overlay {
   text-align: right;
 }
 
-.header-logo {
+.header-logo-anim {
   transform: translateY(60px);
   transition: transform 0.3s ease;
 }
-.has-logomini .header-logo {
+.has-logomini .header-logo-anim {
   transform: translateY(0);
 }
 
@@ -15924,6 +15924,15 @@ Cosas a tener en cuenta:
   background-color: #fff;
 }
 
+.subinfo-boxstickypdp3 {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
 .mt-58 {
   margin-top: 58px;
 }
@@ -15943,6 +15952,15 @@ Cosas a tener en cuenta:
   border-radius: 0;
   height: auto;
   min-height: auto;
+}
+
+.subinfo-boxstickytop {
+  position: sticky;
+  top: 48px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
 }
 
 :root {
