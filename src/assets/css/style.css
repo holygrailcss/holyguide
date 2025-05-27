@@ -15963,7 +15963,7 @@ Cosas a tener en cuenta:
   background-color: #fff;
 }
 
-main {
+.md-pdp4-main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -15976,7 +15976,7 @@ main {
   border: solid 1px #000;
 }
 @media (min-width: 769px) {
-  main {
+  .md-pdp4-main {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
