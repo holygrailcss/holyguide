@@ -15963,6 +15963,115 @@ Cosas a tener en cuenta:
   background-color: #fff;
 }
 
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 2rem;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+  background-color: #a9a9a9;
+  width: 800px;
+  max-width: 100%;
+  padding: 8px;
+  border: solid 1px #000;
+}
+@media (min-width: 769px) {
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.md-column {
+  display: contents;
+}
+@media (min-width: 769px) {
+  .md-column {
+    position: sticky;
+    top: 0;
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    background: #fff;
+    padding: 8px;
+    border: solid 1px #000;
+  }
+}
+
+.md-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #666;
+  min-height: 4rem;
+  padding: 8px;
+  border: solid 1px #000;
+}
+.md-box__counter {
+  font-size: 4rem;
+}
+.md-box__cta {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .md-box__cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background: #fff;
+    z-index: 100;
+  }
+}
+.md-box__cta button {
+  flex: 1 1 auto;
+}
+@media (max-width: 768px) {
+  .md-box.md-box--main-info {
+    order: -50;
+  }
+  .md-box.md-box--secondary-info {
+    order: -15;
+  }
+  .md-box.md-box--media-first {
+    order: -100;
+  }
+  .md-box.md-box--media-second {
+    order: -25;
+  }
+}
+@media (min-width: 769px) {
+  .md-box.md-box--main-info {
+    order: -100;
+  }
+  .md-box.md-box--secondary-info {
+    order: -50;
+  }
+  .md-box.md-box--media-fourth {
+    order: -75;
+  }
+}
+
 :root {
   --md-color-severity-accent: #DD2D01;
   --md-transition-duration-fast: 0.15s;
