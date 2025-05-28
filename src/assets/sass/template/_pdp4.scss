@@ -1,50 +1,40 @@
 
+@import "../abstract/_all";
 
 .md-pdp4-main {
+  align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: stretch;
+  margin-block-start: $spacer-600;
+  margin-inline: $spacer-200;
   
-  @media (min-width: 769px) {
+  @media (min-width: #{map-get($breakpoints, sm)}) {
+    align-items: flex-start;
+    column-gap: $spacer-200;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start;
   }
 }
 
 .md-pdp4-column {
   display: contents;
   
-  @media (min-width: 769px) {
-    position: sticky;
-    top: 0;
-    flex: 0 1 50%;
+  @media (min-width: #{map-get($breakpoints, sm)}) {
+    flex: 0 1 650px;
+    max-width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 8px;
-    background: #fff;
-    padding: 8px;
-    border: solid 1px #000;
   }
 }
 
 .md-pdp4-box {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
-  color: #fff;
-  background-color: #666;
-  min-height: 4rem;
-  padding: 8px;
-  border: solid 1px #000;
-  
-  &__counter {
-    font-size: 4rem;
-  }
   
   &__cta {
     display: flex;
@@ -52,8 +42,7 @@
     justify-content: center;
     align-items: center;
     
-    @media (max-width: 768px) {
-      position: fixed;
+    @media (min-width: #{map-get($breakpoints, sm)}) {      position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
@@ -85,7 +74,7 @@
     }
   }
   
-  @media (min-width: 769px) {
+  @media (min-width: #{map-get($breakpoints, sm)}) {
     &.md-pdp4-box--main-info {
       order: -100;
     }

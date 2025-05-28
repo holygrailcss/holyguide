@@ -15963,58 +15963,56 @@ Cosas a tener en cuenta:
   background-color: #fff;
 }
 
+/* TYPES FIJOS */
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+
+.grid-product-list .sk-load2::before {
+  padding-top: calc(133.25% + 76px);
+}
+.grid-product-list .sk-nodetail.sk-load2::before {
+  padding-top: 133.25%;
+}
+
 .md-pdp4-main {
+  align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  align-items: stretch;
-  gap: 8px;
-  background-color: #a9a9a9;
-  width: 800px;
-  max-width: 100%;
-  padding: 8px;
-  border: solid 1px #000;
+  margin-block-start: 48px;
+  margin-inline: 16px;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .md-pdp4-main {
+    align-items: flex-start;
+    column-gap: 16px;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start;
   }
 }
 
 .md-pdp4-column {
   display: contents;
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .md-pdp4-column {
-    position: sticky;
-    top: 0;
-    flex: 0 1 50%;
+    flex: 0 1 650px;
+    max-width: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 8px;
-    background: #fff;
-    padding: 8px;
-    border: solid 1px #000;
   }
 }
 
 .md-pdp4-box {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
-  color: #fff;
-  background-color: #666;
-  min-height: 4rem;
-  padding: 8px;
-  border: solid 1px #000;
-}
-.md-pdp4-box__counter {
-  font-size: 4rem;
 }
 .md-pdp4-box__cta {
   display: flex;
@@ -16022,7 +16020,7 @@ Cosas a tener en cuenta:
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .md-pdp4-box__cta {
     position: fixed;
     bottom: 0;
@@ -16050,7 +16048,7 @@ Cosas a tener en cuenta:
     order: -25;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .md-pdp4-box.md-pdp4-box--main-info {
     order: -100;
   }
