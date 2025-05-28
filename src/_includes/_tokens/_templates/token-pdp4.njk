@@ -1,10 +1,12 @@
 ---
 layout: base-clean.njk
+guides: 0
+logoheader: false
 ---
 <!-- Contenido de la plantilla pdp4.njk -->
 
-
-<div class="md-pdp4-main">
+{% include '_tokens/_templates/token-header2025.njk' %}
+<section class="md-pdp4-main bg-light mb-32 mt-48">
   <div class="md-pdp4-column">
     <article class="md-pdp4-box md-pdp4-box--media-first">
       <span class="md-pdp4-box__counter">1</span>
@@ -45,4 +47,5 @@ layout: base-clean.njk
       <span class="md-pdp4-box__counter">9</span>
     </article>
   </div>
-</.>
+</section>
+{% include '_tokens/_templates/token-footer.njk' %}
