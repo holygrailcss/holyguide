@@ -1,6 +1,37 @@
 
 @import "../abstract/_all";
 
+// Componente global precio
+.md-product-pricebox {
+  align-items: center;
+  column-gap: $spacer-50;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.md-product-price {
+  &--old {
+    order: -100;
+  }
+  &--new {
+    color: $c-accent;
+  }
+  &--label {
+    color: $c-accent;
+    order: -50;
+  }
+}
+
+// Componente global opciones de producto
+.md-product-options {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+// Estilos para el PDP4
 .md-pdp4-main {
   align-items: stretch;
   display: flex;
@@ -98,29 +129,21 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-block-end: $spacer-300;
+  margin-block-end: $spacer-200;
 
   @media (min-width: #{map-get($breakpoints, sm)}) {
-    margin-block-end: $spacer-400;
+    margin-block-end: $spacer-200;
   }
 }
 
-.md-product-pricebox {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: $spacer-50;
+.md-pdp4-pricebox {
+  margin-block-end: $spacer-200;
+
+  @media (min-width: #{map-get($breakpoints, sm)}) {
+    margin-block-end: $spacer-300;
+  }
 }
-.md-product-price {
-  &--old {
-    order: -100;
-  }
-  &--new {
-    color: $c-accent;
-  }
-  &--label {
-    color: $c-accent;
-    order: -50;
-  }
+
+.md-pdp4-product-options {
+  margin-block-end: $spacer-500;
 }

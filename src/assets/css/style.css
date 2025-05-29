@@ -15977,6 +15977,32 @@ Cosas a tener en cuenta:
   padding-top: 133.25%;
 }
 
+.md-product-pricebox {
+  align-items: center;
+  column-gap: 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.md-product-price--old {
+  order: -100;
+}
+.md-product-price--new {
+  color: #B40016;
+}
+.md-product-price--label {
+  color: #B40016;
+  order: -50;
+}
+
+.md-product-options {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
 .md-pdp4-main {
   align-items: stretch;
   display: flex;
@@ -16072,31 +16098,25 @@ Cosas a tener en cuenta:
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-block-end: 24px;
+  margin-block-end: 16px;
 }
 @media (min-width: 768px) {
   .md-pdp4-header {
-    margin-block-end: 32px;
+    margin-block-end: 16px;
   }
 }
 
-.md-product-pricebox {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 4px;
+.md-pdp4-pricebox {
+  margin-block-end: 16px;
+}
+@media (min-width: 768px) {
+  .md-pdp4-pricebox {
+    margin-block-end: 24px;
+  }
 }
 
-.md-product-price--old {
-  order: -100;
-}
-.md-product-price--new {
-  color: #B40016;
-}
-.md-product-price--label {
-  color: #B40016;
-  order: -50;
+.md-pdp4-product-options {
+  margin-block-end: 40px;
 }
 
 :root {
