@@ -14,6 +14,7 @@
     column-gap: $spacer-200;
     flex-flow: row nowrap;
     justify-content: space-between;
+    margin-inline: $spacer-200;
   }
 }
 
@@ -21,71 +22,70 @@
   display: contents;
   
   @media (min-width: #{map-get($breakpoints, sm)}) {
-    flex: 0 1 650px;
-    max-width: 100%;
+    align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
+    flex: 0 1 650px;
     justify-content: flex-start;
-    align-items: stretch;
+    max-width: 100%;
   }
 }
 
 .md-pdp4-box {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  
-  &__cta {
+  &--media {
+    align-items: stretch;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    
-    @media (min-width: #{map-get($breakpoints, sm)}) {      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 8px;
-      background: #fff;
-      z-index: 100;
-    }
-    
-    button {
-      flex: 1 1 auto;
-    }
+    flex-flow: column nowrap;
+    justify-content: flex-start;
   }
-  
-  @media (max-width: 768px) {
-    &.md-pdp4-box--main-info {
-      order: -50;
-    }
 
-    &.md-pdp4-box--secondary-info {
-      order: -15;
-    }
-    
-    &.md-pdp4-box--media-first {
-      order: -100;
-    }
-    
-    &.md-pdp4-box--media-second {
-      order: -25;
+  &--media-model-1 {
+    margin-inline-end: -$spacer-200;
+    margin-inline-start: -$spacer-200;
+    order: -100;
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      order: 0;
     }
   }
   
-  @media (min-width: #{map-get($breakpoints, sm)}) {
-    &.md-pdp4-box--main-info {
+  &--main-info {
+    order: -50;
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
       order: -100;
     }
-    
-    &.md-pdp4-box--secondary-info {
-      order: -50;
+  }
+
+  &--media-model-2 {
+    order: -25;
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      order: 0;
     }
-    
-    &.md-pdp4-box--media-fourth {
-      order: -75;
+  }
+  
+  &--secondary-info {
+    order: -15;
+  }
+  
+  &--media-detail-1 {
+    order: 0;
+
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      order: -50;
     }
   }
 }
 
+.md-pdp4-box-figure {
+  display: block;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

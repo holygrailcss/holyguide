@@ -15991,6 +15991,7 @@ Cosas a tener en cuenta:
     column-gap: 16px;
     flex-flow: row nowrap;
     justify-content: space-between;
+    margin-inline: 16px;
   }
 }
 
@@ -15999,65 +16000,68 @@ Cosas a tener en cuenta:
 }
 @media (min-width: 768px) {
   .md-pdp4-column {
-    flex: 0 1 650px;
-    max-width: 100%;
+    align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
+    flex: 0 1 650px;
     justify-content: flex-start;
-    align-items: stretch;
+    max-width: 100%;
   }
 }
 
-.md-pdp4-box {
-  align-items: center;
+.md-pdp4-box--media {
+  align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.md-pdp4-box__cta {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .md-pdp4-box__cta {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 8px;
-    background: #fff;
-    z-index: 100;
-  }
-}
-.md-pdp4-box__cta button {
-  flex: 1 1 auto;
-}
-@media (max-width: 768px) {
-  .md-pdp4-box.md-pdp4-box--main-info {
-    order: -50;
-  }
-  .md-pdp4-box.md-pdp4-box--secondary-info {
-    order: -15;
-  }
-  .md-pdp4-box.md-pdp4-box--media-first {
-    order: -100;
-  }
-  .md-pdp4-box.md-pdp4-box--media-second {
-    order: -25;
-  }
+.md-pdp4-box--media-model-1 {
+  margin-inline-end: -16px;
+  margin-inline-start: -16px;
+  order: -100;
 }
 @media (min-width: 768px) {
-  .md-pdp4-box.md-pdp4-box--main-info {
+  .md-pdp4-box--media-model-1 {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    order: 0;
+  }
+}
+.md-pdp4-box--main-info {
+  order: -50;
+}
+@media (min-width: 768px) {
+  .md-pdp4-box--main-info {
     order: -100;
   }
-  .md-pdp4-box.md-pdp4-box--secondary-info {
+}
+.md-pdp4-box--media-model-2 {
+  order: -25;
+}
+@media (min-width: 768px) {
+  .md-pdp4-box--media-model-2 {
+    order: 0;
+  }
+}
+.md-pdp4-box--secondary-info {
+  order: -15;
+}
+.md-pdp4-box--media-detail-1 {
+  order: 0;
+}
+@media (min-width: 768px) {
+  .md-pdp4-box--media-detail-1 {
     order: -50;
   }
-  .md-pdp4-box.md-pdp4-box--media-fourth {
-    order: -75;
-  }
+}
+
+.md-pdp4-box-figure {
+  display: block;
+}
+.md-pdp4-box-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 :root {
