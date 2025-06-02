@@ -16127,6 +16127,126 @@ Cosas a tener en cuenta:
   margin-block-end: 40px;
 }
 
+/* TYPES FIJOS */
+.grid-product-view-new {
+  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  width: 100%;
+}
+
+.grid-product-list .sk-load2::before {
+  padding-top: calc(133.25% + 76px);
+}
+.grid-product-list .sk-nodetail.sk-load2::before {
+  padding-top: 133.25%;
+}
+
+.md-product-pricebox {
+  align-items: center;
+  column-gap: 4px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.md-product-price--old {
+  order: -100;
+}
+.md-product-price--new {
+  color: #B40016;
+}
+.md-product-price--label {
+  color: #B40016;
+  order: -50;
+}
+
+.md-product-figure {
+  display: block;
+}
+.md-product-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.md-product-options-title {
+  margin-block-end: 8px;
+}
+.md-product-options-list {
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .md-pdp5-main {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin-block-start: 48px;
+    margin-inline: 16px;
+  }
+  .md-pdp5-column {
+    display: contents;
+  }
+  .md-pdp5-box.md-pdp5-box--media-img-model-1 {
+    margin-inline-end: -16px;
+    margin-inline-start: -16px;
+    order: -100;
+  }
+  .md-pdp5-box.md-pdp5-box--info-sku {
+    order: -90;
+  }
+  .md-pdp5-box.md-pdp5-box--info-short {
+    order: -80;
+  }
+  .md-pdp5-box.md-pdp5-box--media-img-model-2 {
+    order: -70;
+  }
+  .md-pdp5-box.md-pdp5-box--info-shipping {
+    order: -60;
+  }
+  .md-pdp5-box.md-pdp5-box--info-excerpt {
+    order: -50;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta {
+    bottom: 0;
+    order: 100;
+    position: sticky;
+  }
+}
+@media (min-width: 768px) {
+  .md-pdp5-main {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    margin-inline: 16px;
+  }
+  .md-pdp5-column {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 auto;
+  }
+  .md-pdp5-column--media {
+    grid-column: 2/span 11;
+    order: -1;
+  }
+  .md-pdp5-column--info {
+    grid-column: 16/span 6;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta {
+    order: -100;
+    margin-block-start: 20dvh;
+  }
+  .md-pdp5-box.md-pdp5-box--info-sku {
+    order: -90;
+  }
+  .md-pdp5-box.md-pdp5-box--info-img-detail-1 {
+    order: -80;
+  }
+  .md-pdp5-box.md-pdp5-box--info-short {
+    order: -70;
+  }
+}
 :root {
   --md-color-severity-accent: #DD2D01;
   --md-transition-duration-fast: 0.15s;
