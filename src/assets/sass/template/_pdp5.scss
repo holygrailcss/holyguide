@@ -10,6 +10,7 @@
   position: sticky;
   top: $spacer-600;
   transition: grid-template-rows .1s ease-in-out;
+  z-index: 1000;
   
   @media (min-width: #{map-get($breakpoints, sm)} ) {
     margin-inline: $spacer-200;
