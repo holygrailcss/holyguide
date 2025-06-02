@@ -15996,11 +15996,11 @@ Cosas a tener en cuenta:
   order: -50;
 }
 
-.md-product-options {
-  align-items: stretch;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
+.md-product-options-title {
+  margin-block-end: 8px;
+}
+.md-product-options-list {
+  list-style: none;
 }
 
 .md-pdp4-main {
@@ -16014,10 +16014,11 @@ Cosas a tener en cuenta:
 @media (min-width: 768px) {
   .md-pdp4-main {
     align-items: flex-start;
-    column-gap: 16px;
     flex-flow: row nowrap;
+    gap: 0;
     justify-content: space-between;
     margin-inline: 16px;
+    margin-inline: 0;
   }
 }
 
@@ -16029,9 +16030,16 @@ Cosas a tener en cuenta:
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
-    flex: 0 1 650px;
-    justify-content: flex-start;
-    max-width: 100%;
+    flex: 0 1 auto;
+    justify-content: space-evenly;
+  }
+  .md-pdp4-column--media {
+    flex: 0 0 50%;
+    padding-inline-start: 7vw;
+    margin-inline-end: auto;
+  }
+  .md-pdp4-column--info {
+    flex: 0 1 40%;
   }
 }
 
@@ -16092,17 +16100,13 @@ Cosas a tener en cuenta:
   object-fit: cover;
 }
 
-.md-pdp4-header {
-  align-items: flex-start;
+.md-pdp4-product-short {
   column-gap: 16px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  margin-block-end: 16px;
+  margin-block-end: 8px;
 }
 @media (min-width: 768px) {
-  .md-pdp4-header {
-    margin-block-end: 16px;
+  .md-pdp4-product-short {
+    margin-block-end: 8px;
   }
 }
 
@@ -16116,6 +16120,10 @@ Cosas a tener en cuenta:
 }
 
 .md-pdp4-product-options {
+  margin-block-end: 40px;
+}
+
+.md-pdp4-product-cta {
   margin-block-end: 40px;
 }
 

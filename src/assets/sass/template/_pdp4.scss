@@ -25,10 +25,13 @@
 
 // Componente global opciones de producto
 .md-product-options {
-  align-items: stretch;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
+  &-title {
+    margin-block-end: $spacer-100;
+  }
+
+  &-list {
+    list-style: none;
+  }
 }
 
 // Estilos para el PDP4
@@ -42,10 +45,11 @@
   
   @media (min-width: #{map-get($breakpoints, sm)}) {
     align-items: flex-start;
-    column-gap: $spacer-200;
     flex-flow: row nowrap;
+    gap: 0;
     justify-content: space-between;
     margin-inline: $spacer-200;
+    margin-inline: 0;
   }
 }
 
@@ -56,9 +60,17 @@
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
-    flex: 0 1 650px;
-    justify-content: flex-start;
-    max-width: 100%;
+    flex: 0 1 auto;
+    justify-content: space-evenly;
+
+    &--media {
+      flex: 0 0 50%;
+      padding-inline-start: 7vw;
+      margin-inline-end: auto;
+    }
+    &--info {
+      flex: 0 1 40%;
+    }
   }
 }
 
@@ -123,16 +135,12 @@
   }
 }
 
-.md-pdp4-header {
-  align-items: flex-start;
+.md-pdp4-product-short {
   column-gap: $spacer-200;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  margin-block-end: $spacer-200;
+  margin-block-end: $spacer-100;
 
   @media (min-width: #{map-get($breakpoints, sm)}) {
-    margin-block-end: $spacer-200;
+    margin-block-end: $spacer-100;
   }
 }
 
@@ -147,3 +155,162 @@
 .md-pdp4-product-options {
   margin-block-end: $spacer-500;
 }
+
+.md-pdp4-product-cta {
+  margin-block-end: $spacer-500;
+}
+
+
+
+
+
+
+
+.md-footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  min-height: 600px;
+  color: white;
+}
+
+.md-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+  background-color: #a9a9a9;
+  padding: 8px;
+  
+  @media (min-width: 769px) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.md-column {
+  display: contents;
+  
+  @media (min-width: 769px) {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    background: #fff;
+    padding: 8px;
+    border: solid 1px #000;
+  }
+    
+  &--media {
+    display: none;
+    @media (min-width: 769px) {
+      order: -1;
+    }
+  }
+
+  &--info {}
+}
+
+.md-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #666;
+  min-height: 4rem;
+  padding: 8px;
+  border: solid 1px #000;
+  
+  &__counter {
+    font-size: 4rem;
+  }
+  
+  &__cta {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    button {
+      flex: 1 1 auto;
+    }
+  }
+  
+  &.md-box--media-1-mobile {
+    order: -100;
+    min-height: calc(100dvh - 116px);
+      
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  
+  &.md-box--info-cta {
+    order: 100;
+    position: sticky;
+    bottom: 0;
+    
+    @media (min-width: 769px) {
+      order: 0;
+      postion: static;
+    }
+  }
+  
+  &.md-box--info-sku {
+    order: -90;
+    
+    @media (min-width: 769px) {
+      order: 0;
+    }
+  }
+  
+  &.md-box--info-short {
+    order: -80;
+    
+    @media (min-width: 769px) {
+      order: 0;
+    }
+  }
+  
+  &.md-box--media-model-2-mobile {
+    order: -70;
+    
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  
+  &.md-box--media-info-shipping {
+    order: -60;
+    
+    @media (min-width: 769px) {
+      order: 0;
+    }
+  }
+  
+  &.md-box--media-info-excerpt {
+    order: -50;
+    
+    @media (min-width: 769px) {
+      order: 0;
+    }
+  }
+  
+  &.md-box--media-model-3-mobile {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  &.md-box--media-model-2 {
+  }
+  
+}
+
