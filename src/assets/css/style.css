@@ -16180,7 +16180,7 @@ Cosas a tener en cuenta:
 .md-breadcrumb.md-breadcrumb--expandable > ol {
   overflow: hidden;
 }
-.scrolled .md-breadcrumb.md-breadcrumb--expandable {
+.scroll-up .md-breadcrumb.md-breadcrumb--expandable {
   grid-template-rows: 1fr;
 }
 

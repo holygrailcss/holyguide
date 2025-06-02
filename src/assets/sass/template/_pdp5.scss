@@ -45,7 +45,7 @@
       overflow: hidden;
     }
 
-    @at-root .scrolled & {
+    @at-root .scroll-up & {
       grid-template-rows: 1fr;
     }
   }
