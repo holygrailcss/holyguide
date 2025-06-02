@@ -182,6 +182,8 @@
     
     &--info {
       grid-column: 16/span 6;
+      max-width: 350px;
+      justify-self: center;
     }
   }
 

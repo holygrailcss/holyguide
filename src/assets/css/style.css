@@ -16290,6 +16290,8 @@ Cosas a tener en cuenta:
   }
   .md-pdp5-column--info {
     grid-column: 16/span 6;
+    max-width: 350px;
+    justify-self: center;
   }
   .md-pdp5-box[class*=md-pdp5-box--info-img] {
     margin-block-end: 80px;
