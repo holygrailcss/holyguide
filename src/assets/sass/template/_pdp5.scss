@@ -4,7 +4,6 @@
 // Componente breadcrumb
 .md-breadcrumb {
   display: grid;
-  grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
   margin-block-start: $spacer-600;
   position: sticky;
@@ -23,13 +22,11 @@
     flex-flow: row nowrap;
     list-style: none;
     margin: 0;
-    padding-inline: $spacer-200;
+    padding-inline: $spacer-250;
     transition: grid-template-rows .1s ease-in-out;
-    grid-column: 1 / span 24;
     
     @media (min-width: #{map-get($breakpoints, sm)} ) {
-      grid-column: 2 / span 23;
-      padding: 0;
+      padding-inline: $spacer-50;
     }
 
     > li {

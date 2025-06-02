@@ -16143,7 +16143,6 @@ Cosas a tener en cuenta:
 
 .md-breadcrumb {
   display: grid;
-  grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
   margin-block-start: 48px;
   position: sticky;
@@ -16163,14 +16162,12 @@ Cosas a tener en cuenta:
   flex-flow: row nowrap;
   list-style: none;
   margin: 0;
-  padding-inline: 16px;
+  padding-inline: 20px;
   transition: grid-template-rows 0.1s ease-in-out;
-  grid-column: 1/span 24;
 }
 @media (min-width: 768px) {
   .md-breadcrumb > ol {
-    grid-column: 2/span 23;
-    padding: 0;
+    padding-inline: 4px;
   }
 }
 .md-breadcrumb > ol > li:not(:last-child)::after {
