@@ -1,6 +1,72 @@
 
 @import "../abstract/_all";
 
+// Componente breadcrumb
+.md-breadcrumb {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-block-start: $spacer-600;
+  position: sticky;
+  top: $spacer-600;
+  transition: grid-template-rows .1s ease-in-out;
+  
+  @media (min-width: #{map-get($breakpoints, sm)} ) {
+    margin-inline: $spacer-200;
+  }
+  
+  > ol {
+    align-items: center;
+    background-color: $c-white;
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: grid-template-rows .1s ease-in-out;
+  padding-inline: $spacer-200;
+
+    > li {
+
+      &:not(:last-child)::after {
+        content: ">";
+        margin-inline-start: $spacer-50;
+      }
+    }
+  }
+
+  &.md-breadcrumb--expandable {
+    grid-template-rows: 0fr;
+  
+    > ol {
+      overflow: hidden;
+    }
+
+    @at-root .scrolled & {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.md-breadcrumb-link {
+  min-height: $spacer-500;
+  align-items: center;
+  column-gap: $spacer-150;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.md-breadcrumb-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.md-breadcrumb-txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 // Componente global precio
 .md-product-pricebox {
   align-items: center;
@@ -10,17 +76,17 @@
   justify-content: flex-start;
 }
 
-.md-product-price {
-  &--old {
-    order: -100;
-  }
-  &--new {
-    color: $c-accent;
-  }
-  &--label {
-    color: $c-accent;
-    order: -50;
-  }
+.md-product-price--old {
+  order: -100;
+}
+
+.md-product-price--new {
+  color: $c-accent;
+}
+
+.md-product-price--label {
+  color: $c-accent;
+  order: -50;
 }
 
 // Componente figure
@@ -102,7 +168,6 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin-block-start: $spacer-600;
     margin-inline: $spacer-200;
   }
 
@@ -174,17 +239,17 @@
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 auto;
+  }
 
-    &--media {
-      grid-column: 2 / span 11;
-      order: -1;
-    }
-    
-    &--info {
-      grid-column: 16/span 6;
-      max-width: 350px;
-      justify-self: center;
-    }
+  .md-pdp5-column--media {
+    grid-column: 2 / span 11;
+    order: -1;
+  }
+  
+  .md-pdp5-column--info {
+    grid-column: 16 / span 6;
+    justify-self: center;
+    max-width: 350px;
   }
 
   .md-pdp5-box {
@@ -220,9 +285,7 @@
     
     &.md-pdp5-box--info-excerpt {
       margin-block-end: $spacer-1000;
-    }
-
-    
+    }    
   }
 }
 

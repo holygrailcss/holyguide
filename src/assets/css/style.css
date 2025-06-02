@@ -16141,6 +16141,64 @@ Cosas a tener en cuenta:
   padding-top: 133.25%;
 }
 
+.md-breadcrumb {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-block-start: 48px;
+  position: sticky;
+  top: 48px;
+  transition: grid-template-rows 0.1s ease-in-out;
+}
+@media (min-width: 768px) {
+  .md-breadcrumb {
+    margin-inline: 16px;
+  }
+}
+.md-breadcrumb > ol {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: grid-template-rows 0.1s ease-in-out;
+  padding-inline: 16px;
+}
+.md-breadcrumb > ol > li:not(:last-child)::after {
+  content: ">";
+  margin-inline-start: 4px;
+}
+.md-breadcrumb.md-breadcrumb--expandable {
+  grid-template-rows: 0fr;
+}
+.md-breadcrumb.md-breadcrumb--expandable > ol {
+  overflow: hidden;
+}
+.scrolled .md-breadcrumb.md-breadcrumb--expandable {
+  grid-template-rows: 1fr;
+}
+
+.md-breadcrumb-link {
+  min-height: 40px;
+  align-items: center;
+  column-gap: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.md-breadcrumb-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.md-breadcrumb-txt {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .md-product-pricebox {
   align-items: center;
   column-gap: 4px;
@@ -16152,9 +16210,11 @@ Cosas a tener en cuenta:
 .md-product-price--old {
   order: -100;
 }
+
 .md-product-price--new {
   color: #B40016;
 }
+
 .md-product-price--label {
   color: #B40016;
   order: -50;
@@ -16226,7 +16286,6 @@ Cosas a tener en cuenta:
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin-block-start: 48px;
     margin-inline: 16px;
   }
   .md-pdp5-column {
@@ -16290,8 +16349,8 @@ Cosas a tener en cuenta:
   }
   .md-pdp5-column--info {
     grid-column: 16/span 6;
-    max-width: 350px;
     justify-self: center;
+    max-width: 350px;
   }
   .md-pdp5-box[class*=md-pdp5-box--info-img] {
     margin-block-end: 80px;
