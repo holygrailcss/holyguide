@@ -16180,7 +16180,7 @@ Cosas a tener en cuenta:
 .md-breadcrumb.md-breadcrumb--expandable > ol {
   overflow: hidden;
 }
-.scroll-up .md-breadcrumb.md-breadcrumb--expandable {
+.has-breadcrumb .md-breadcrumb.md-breadcrumb--expandable {
   grid-template-rows: 1fr;
 }
 
@@ -16333,6 +16333,7 @@ Cosas a tener en cuenta:
     padding-block: 16px;
     padding-inline: 20px;
     position: sticky;
+    z-index: 1000;
   }
 }
 @media (min-width: 768px) {

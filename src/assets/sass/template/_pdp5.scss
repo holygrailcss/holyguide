@@ -45,7 +45,7 @@
       overflow: hidden;
     }
 
-    @at-root .scroll-up & {
+    @at-root .has-breadcrumb & {
       grid-template-rows: 1fr;
     }
   }
@@ -225,6 +225,7 @@
       padding-block: $spacer-200;
       padding-inline: $spacer-250;
       position: sticky;
+      z-index: 1000;
     } 
   }
 }
