@@ -159,11 +159,11 @@ logoheader: false
 
 <script>
 window.addEventListener('scroll', function() {
-  const mainElement = document.querySelector('main');
+  const bodyElement = document.querySelector('body');
   if (window.scrollY > 50) {
-    mainElement.classList.add('has-breadcrumb');
+    bodyElement.classList.add('has-breadcrumb');
   } else {
-    mainElement.classList.remove('has-breadcrumb');
+    bodyElement.classList.remove('has-breadcrumb');
   }
 });
 </script>
