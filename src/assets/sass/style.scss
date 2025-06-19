@@ -1,3 +1,4 @@
+@import "./abstract/_0debug.scss";
 @import "base/_animations.scss";
 @import "base/_fonts.scss";
 @import "abstract/_setup.scss";
@@ -19,6 +20,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./template/_filtros.scss";
 @import "./template/_modal.scss";
   @import "./template/_header2025.scss";    
+  @import "./template/_header2025_v2.scss";    
   @import "./template/_grid2025.scss";  
   @import "./template/_pdp1.scss";
     @import "./template/_pdp4.scss";
