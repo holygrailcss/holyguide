@@ -7569,7 +7569,8 @@ button {
   padding-right: 16px;
   padding-left: 16px;
   font-size: 12px;
-  height: 40px;
+  height: auto;
+  min-height: 40px;
 }
 
 .btn--round {
@@ -7743,7 +7744,8 @@ button {
 }
 
 .btn-limited {
-  height: 40px;
+  height: auto;
+  min-height: 40px;
   color: #ffffff;
   background-color: #000;
   border: 1px solid #000;
@@ -7993,7 +7995,8 @@ button {
 }
 
 .btn-social {
-  height: 40px;
+  height: auto;
+  min-height: 40px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -8334,7 +8337,8 @@ button {
 }
 
 .btn-anim {
-  height: 40px;
+  height: auto;
+  min-height: 40px;
   display: flex;
   flex-flow: column nowrap;
   align-content: center;
@@ -8495,7 +8499,8 @@ button {
   border-radius: 0;
   border: 1px solid #000000;
   padding: 9px 2px 4px;
-  height: 32px;
+  height: auto;
+  min-height: 32px;
   min-width: 100px;
   text-align: center;
   background: none;
@@ -8504,7 +8509,8 @@ button {
 @media (min-width: 768px) {
   .btn.btn-secondary-rd {
     padding: 16px 2px 14px;
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     font-size: 12px;
     min-width: 120px;
   }
@@ -8552,8 +8558,10 @@ button {
 }
 
 .btn--color {
-  width: 42px;
-  height: 42px;
+  width: auto;
+  min-width: 42px;
+  height: auto;
+  min-height: 42px;
   position: relative;
 }
 .btn--color:hover {
@@ -8574,14 +8582,18 @@ button {
 
 .btn-square {
   border: none;
-  width: 33px;
-  height: 33px;
+  width: auto;
+  min-width: 33px;
+  height: auto;
+  min-height: 33px;
   padding: 12px;
 }
 @media (min-width: 768px) {
   .btn-square {
-    width: 37px;
-    height: 37px;
+    width: auto;
+    min-width: 37px;
+    height: auto;
+    min-height: 37px;
     padding: 12px;
   }
 }
@@ -8640,8 +8652,10 @@ button {
 }
 .has-light .btn-square {
   border: none;
-  width: 37px;
-  height: 37px;
+  width: auto;
+  min-width: 37px;
+  height: auto;
+  min-height: 37px;
   padding: 12px;
 }
 .has-light .btn-square.btn {
@@ -10467,9 +10481,11 @@ a:hover {
   background-image: linear-gradient(transparent calc(100% - 1px), #000000 10px);
 }
 .link-line.is-error, .link-line.c-error {
+  color: #b40016;
   background-image: linear-gradient(transparent calc(100% - 1px), #b40016 10px);
 }
 .is-error .link-line {
+  color: #b40016;
   background-image: linear-gradient(transparent calc(100% - 1px), #b40016 10px);
 }
 .link-linebutton {
@@ -16236,8 +16252,19 @@ Cosas a tener en cuenta:
 .md-product-options-title {
   margin-block-end: 8px;
 }
+
 .md-product-options-list {
   list-style: none;
+}
+
+.md-product-options .btn {
+  align-items: center;
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0;
+  padding: 8px;
 }
 
 .md-product-heading {
@@ -16261,19 +16288,40 @@ Cosas a tener en cuenta:
     margin-block-end: 40px;
   }
 }
+
 .md-product-heading-content {
   flex: 1 1 auto;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .md-product-heading-content {
     margin-block-end: 40px;
   }
 }
-.md-product-heading-prepend, .md-product-heading-append {
+
+.md-product-heading-prepend,
+.md-product-heading-append {
   flex: 0 0 auto;
 }
-.md-product-heading .md-product-heading-title:not(:last-child) {
+
+.md-product-heading-title {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0 4px;
+  justify-content: flex-start;
+}
+.md-product-heading-title:not(:last-child) {
   margin-block-end: 4px;
+}
+
+.md-product-heading-title-txt {
+  flex: 1 1 auto;
+}
+
+.md-product-heading-title-prepend,
+.md-product-heading-title-append {
+  flex: 0 0 auto;
 }
 
 .md-product-excerpt-list {
@@ -16282,6 +16330,70 @@ Cosas a tener en cuenta:
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.md-color-selector-body {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  column-gap: 8px;
+}
+
+.md-color-selector-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+.md-color-selector-item.md-color-selector-item--more {
+  margin-inline-end: 8px;
+}
+
+.md-color-selector-btn {
+  align-items: center;
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  width: auto;
+  overflow: visible;
+}
+.md-color-selector-btn::after {
+  background: #000000;
+  content: "";
+  display: block;
+  height: 0.0625rem;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition: all 0.1s ease-in-out;
+  z-index: 1;
+}
+.md-color-selector-btn img {
+  border: solid var(--line-width) #B40016;
+  display: block;
+  height: auto;
+  position: relative;
+  width: 1.125rem;
+  z-index: 2;
+}
+.md-color-selector-btn.is-active::after {
+  opacity: 1;
+  top: calc(100% + 4px);
 }
 
 @media (max-width: 767px) {
@@ -16330,7 +16442,8 @@ Cosas a tener en cuenta:
     margin-left: -16px;
     margin-right: -16px;
     order: 100;
-    padding-block: 16px;
+    padding-block-start: 12px;
+    padding-block-end: 12px;
     padding-inline: 20px;
     position: sticky;
     z-index: 1000;

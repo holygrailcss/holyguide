@@ -49,21 +49,56 @@ logoheader: false
     <article class="md-pdp5-box md-pdp5-box--info-cta">
       <div class="md-product-heading">
         <div class="md-product-heading-content">
-          <h1 class="md-product-heading-title ttu title-l-l">Americana cruzada 100% lino</h1>
-          <p class="md-product-pricebox">
-            <span class="md-product-price md-product-price--new title-l-l" aria-label="Precio con descuento">
-              <span aria-describedby="priceInfo">*</span>
-              <span>49,95 €</span>
-            </span>
-            <label class="md-product-price md-product-price--label title-l-l" aria-label="Descuento aplicado"> -25% </label>
-            <del class="md-product-price md-product-price--old title-l-l" aria-label="Precio original">69,95 €</del>
-          </p>
+          <div class="md-product-heading-title">
+            <h1 class="md-product-heading-title-txt ttu title-l-l has-ellipsis">Americana cruzada 100% lino</h1>
+            <div class="md-product-heading-title-append">
+              <button type="button" class="btn btn-tertiary" aria-label="Añadir a la wishlist"
+                aria-selected="false"><!----><md-icon name="bookmark">
+                  <div class="icon-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="#000000"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.66667 10.5455L12.3333 15V1H3V15L7.66667 10.5455ZM4 12.663L7.66667 9.16301L11.3333 12.663V2H4V12.663Z"
+                        fill="inherit"></path>
+                    </svg></div>
+                </md-icon><!----></button>
+            </div>
+          </div>
+          <div class="md-product-prices">
+            <p class="md-product-pricebox">
+              <span class="md-product-price title-l-l">
+                <span>1.200.888 COP</span>
+              </span>
+            </p>
+            <p class="md-product-pricebox">
+              <span class="md-product-price title-l-l">
+                <span>1.200.888 COP</span>
+              </span>
+            </p>
+          </div>
         </div>
         <div class="md-product-heading-append">
-          <ul class="md-product-options-list is-flex flex-row content-start gap-8">
-            <li><div class="boxcolorfake-item" aria-label="Color opción 1" tabindex="0"></div></li>
-            <li><div class="boxcolorfake-item" aria-label="Color opción 2" tabindex="0"></div></li>
-          </ul>
+          <div class="md-color-selector">
+            <div class="md-color-selector-header">header</div>
+            <div class="md-color-selector-body">
+              <ul class="md-color-selector-list" role="listbox">
+                <li class="md-color-selector-item is-active">
+                  <button type="button" role="option" aria-selected="true" class="btn md-color-selector-btn is-active" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item md-color-selector-item--more">
+                  <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="MARRÓN, Ref. 6893/116">
+                    +2
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="md-pdp5-box__cta">
