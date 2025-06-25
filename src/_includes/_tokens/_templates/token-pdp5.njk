@@ -50,9 +50,9 @@ logoheader: false
       <div class="md-product-heading">
         <div class="md-product-heading-content">
           <div class="md-product-heading-title">
-            <h1 class="md-product-heading-title-txt ttu title-l-l has-ellipsis">Americana cruzada 100% lino</h1>
+            <h1 class="md-product-heading-title-txt ttu title-l-l">Americana cruzada 100% lino</h1>
             <div class="md-product-heading-title-append">
-              <button type="button" class="btn btn-tertiary" aria-label="Añadir a la wishlist"
+              <button type="button" class="btn btn-tertiary btn--wishlist" aria-label="Añadir a la wishlist"
                 aria-selected="false"><!----><md-icon name="bookmark">
                   <div class="icon-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="#000000"
                       xmlns="http://www.w3.org/2000/svg">
@@ -64,16 +64,32 @@ logoheader: false
             </div>
           </div>
           <div class="md-product-prices">
+            <p class="md-product-pricebox c-dark-grey">
+              <del class="md-product-pricebox-price title-l-l">
+                <span>1.200.888 COP</span>
+              </del>
+            </p>
             <p class="md-product-pricebox">
-              <span class="md-product-price title-l-l">
+              <del class="md-product-pricebox-price title-l-l">
+                <span>1.200.888 COP</span>
+              </del>
+            </p>
+            <p class="md-product-pricebox c-error">
+              <span class="md-product-pricebox-label  title-l-l">-30% *</span>
+              <span class="md-product-pricebox-price title-l-l">
                 <span>1.200.888 COP</span>
               </span>
             </p>
-            <p class="md-product-pricebox">
-              <span class="md-product-price title-l-l">
+            <p class="md-product-pricebox md-product-pricebox--highlight-sales">
+              <span class="md-product-pricebox-label  title-l-l">-20% *</span>
+              <span class="md-product-pricebox-price title-l-l">
                 <span>1.200.888 COP</span>
               </span>
+              <span class="md-product-pricebox-label  title-l-l">27/11 a las 20H</span>
             </p>
+          </div>
+          <div class="md-product-heading-extra">
+            <p class="title-l c-dark-grey">149,00 PLN / 100ml</p>
           </div>
         </div>
         <div class="md-product-heading-append">
@@ -101,14 +117,15 @@ logoheader: false
           </div>
         </div>
       </div>
-      <div class="md-pdp5-box__cta">
-        <button class="btn btn-secondary btn--full" type="button">Añadir a la cesta</button>  
+      <div class="md-product-cta">
+        <button class="btn btn-secondary" type="button">Personalizar (+3,50 €)</button>  
+        <button class="btn btn-secondary" type="button">Añadir a la cesta</button>  
       </div>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info-sku">
-      <div class="is-flex content-sp-between gap-16" class="ttu title-l-l">
-        <span class="title-l-l flex-auto">Beige | Ref. 6761/201</span>
-        <button class="btn-link is-flex" aria-label="Añadir a la wishlist" tabindex="0">
+      <div class="is-flex content-start gap-16">
+        <span class="text-l flex-grow-0">Beige | Ref. 6761/201</span>
+        <button class="btn btn-link is-flex sm:hidden" aria-label="Añadir a la wishlist" tabindex="0">
           <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
@@ -124,7 +141,7 @@ logoheader: false
       </p>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info-short">
-      <p class="title-l-l">Capa confeccionada en tejido 100% seda morera. Cuello barco. Parte posterior más larga que la delantera. Tejido semi transparente.</p>
+      <p class="text-l">Capa confeccionada en tejido 100% seda morera. Cuello barco. Parte posterior más larga que la delantera. Tejido semi transparente.</p>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info-shipping">
       <p class="title-l-l">Envío a tienda: Gratis | Envío a domicilio: Gratis por pedidos superiores a 89,00 €.</p>
@@ -134,25 +151,41 @@ logoheader: false
         <li>
           <button tabindex="0" class="btn-link2 is-flex content-sp-between ttu btn--full" aria-label="Composición y cuidados, expandir">
               <div class="title-l-l">Ver tabla de medidas</div>
-              <div class="title-l-l" aria-hidden="true">+</div>
+              <div class="title-l-l" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29293 8.00004L4.64648 3.35359L5.35359 2.64648L10.7071 8.00004L5.35359 13.3536L4.64648 12.6465L9.29293 8.00004Z" fill="black"></path>
+                </svg>
+              </div>
           </button>
         </li>
         <li>
           <button tabindex="0" class="btn-link2 is-flex content-sp-between ttu btn--full" aria-label="Composición y cuidados, expandir">
               <div class="title-l-l">Composición y cuidados</div>
-              <div class="title-l-l" aria-hidden="true">+</div>
+              <div class="title-l-l" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29293 8.00004L4.64648 3.35359L5.35359 2.64648L10.7071 8.00004L5.35359 13.3536L4.64648 12.6465L9.29293 8.00004Z" fill="black"></path>
+                </svg>
+              </div>
           </button>
         </li>
         <li>
           <button tabindex="0" class="btn-link2 is-flex content-sp-between ttu btn--full" aria-label="Composición y cuidados, expandir">
               <div class="title-l-l">Envíos, cambios y devoluciones</div>
-              <div class="title-l-l" aria-hidden="true">+</div>
+              <div class="title-l-l" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29293 8.00004L4.64648 3.35359L5.35359 2.64648L10.7071 8.00004L5.35359 13.3536L4.64648 12.6465L9.29293 8.00004Z" fill="black"></path>
+                </svg>
+              </div>
           </button>
         </li>
         <li>
           <button tabindex="0" class="btn-link2 is-flex content-sp-between ttu btn--full" aria-label="Composición y cuidados, expandir">
               <div class="title-l-l">Disponiblidad y reserva en tienda</div>
-              <div class="title-l-l" aria-hidden="true">+</div>
+              <div class="title-l-l" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.29293 8.00004L4.64648 3.35359L5.35359 2.64648L10.7071 8.00004L5.35359 13.3536L4.64648 12.6465L9.29293 8.00004Z" fill="black"></path>
+                </svg>
+              </div>
           </button>
         </li>
       </ul>
