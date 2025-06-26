@@ -383,7 +383,7 @@
       padding-block-start: $spacer-150;
       padding-inline: $spacer-250;
       position: sticky;
-      z-index: 1000;
+      z-index: 999;
 
       .md-product-heading-append {
         .md-color-selector-item {
