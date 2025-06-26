@@ -11,10 +11,7 @@
   top: $spacer-600;
   transition: grid-template-rows .1s ease-in-out;
   z-index: 1000;
-  
-  @media (min-width: #{map-get($breakpoints, sm)} ) {
-    margin-inline: $spacer-200;
-  }
+
   
   > ol {
     align-items: center;
@@ -25,10 +22,6 @@
     margin: 0;
     padding-inline: $spacer-250;
     transition: grid-template-rows .1s ease-in-out;
-    
-    @media (min-width: #{map-get($breakpoints, sm)} ) {
-      padding-inline: $spacer-50;
-    }
 
     > li {
 
@@ -89,7 +82,7 @@
 
   &.md-product-pricebox--highlight-sales {
     background-color: $c-sale;
-    padding: $spacer-50;
+    padding: ($spacer-50 + 1) $spacer-50 ($spacer-50 - 1);
   }
 }
 
@@ -154,10 +147,6 @@
 .md-product-heading-prepend,
 .md-product-heading-append {
   flex: 0 0 auto;
-  
-  @media (min-width: #{map-get($breakpoints, sm)} ) {
-  margin-block-start: $spacer-500;
-  }
 }
 
 .md-product-heading-title {
@@ -209,10 +198,6 @@
   justify-content: flex-start;
   margin-block-start: $spacer-250;
   row-gap: $spacer-200;
-    
-  @media (min-width: #{map-get($breakpoints, sm)} ) {
-    margin-block-start: $spacer-500;
-  }
 }
 
 // Componente global excerpt list
@@ -225,11 +210,7 @@
 }
 
 // Componente global color selector
-.md-color-selector {}
-
-.md-color-selector-header {}
-
-.md-color-selector-body {
+.md-color-selector {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
@@ -249,6 +230,11 @@
 }
 
 .md-color-selector-item {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
   &.md-color-selector-item--more {
     margin-inline-end: $spacer-100;
   }
@@ -300,6 +286,39 @@
   }
 }
 
+.md-pdp5-box {
+  &.md-pdp5-box--img {
+    position: relative;
+  }
+}
+
+.md-pdp5-box-fixed-actions {
+  position: absolute;
+  z-index: 2;
+
+  &.bottom {
+    bottom: $spacer-250;
+  }
+  
+  &.left {
+    left: $spacer-250;
+  }
+  
+  &.right {
+    right: $spacer-250;
+  }
+  
+  &.top {
+    top: $spacer-250;
+  }
+
+  .btn-look {
+    background-color: transparent;
+    padding: ($spacer-50 + 1) $spacer-200 ($spacer-50 - 1);
+    min-height: $spacer-300;
+  }
+}
+
 // Estilos PDP5 MOBILE
 @media (max-width: #{map-get($breakpoints, sm) - 1px} ) {
   .md-pdp5-main {
@@ -315,8 +334,7 @@
   }
 
   .md-pdp5-box {
-    &[class*="md-pdp5-box--media-img"],
-    &[class*="md-pdp5-box--info-img"] {
+    &.md-pdp5-box--img {
       margin-block-start: $spacer-200;
     }
 
@@ -368,10 +386,6 @@
       z-index: 1000;
 
       .md-product-heading-append {
-        .md-color-selector-header {
-          display: none;
-        }
-
         .md-color-selector-item {
           display: none;
 
@@ -381,7 +395,6 @@
           }
         }
       }
-
     } 
   }
 }
@@ -413,38 +426,61 @@
   }
 
   .md-pdp5-box {
-    &[class*="md-pdp5-box--info-img"] {
-      margin-block-end: $spacer-1000;
+    &.md-pdp5-box--img {
+      margin-block-start: $spacer-1000;
     }
     
     &.md-pdp5-box--info-cta {
-      margin-block-end: $spacer-500;
-      margin-block-start: 25dvh;
-      order: -100;
+      display: contents;
+
+      .md-product-heading {
+        display: contents;
+      }
+      
+      .md-product-heading-content {
+        margin-block-start: 15dvh;
+        order: -200;
+      }
+      
+      .md-product-heading-append {
+        order: -180;
+        margin-block-start: $spacer-200;
+
+        .md-color-selector-item {
+          &.md-color-selector-item--more {
+            display: none;
+          }
+        }
+      }
+
+      .md-product-cta {
+        margin-block-start: $spacer-500;
+        order: -160;
+      }
     }
     
     &.md-pdp5-box--info-shipping {
-      margin-block-end: 25dvh;
       order: -90;
+      margin-block-start: $spacer-500;
     }
     
     &.md-pdp5-box--info-img-detail-1 {
-      margin-block-end: $spacer-1000;
+      margin-block-start: 15dvh;
       order: -80;
     }
     
     &.md-pdp5-box--info-sku {
-      margin-block-end: $spacer-300;
-      order: -70;
+      margin-block-start: $spacer-500;
+      order: -190;
     }
 
     &.md-pdp5-box--info-short {
-      margin-block-end: $spacer-1000;
+      margin-block-start: $spacer-1000;
       order: -60;
     }
     
     &.md-pdp5-box--info-excerpt {
-      margin-block-end: $spacer-1000;
+      margin-block-start: $spacer-1000;
     }    
   }
 }

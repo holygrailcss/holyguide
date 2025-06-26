@@ -146,6 +146,10 @@
   src: local("massimo-daily-regular"), url("/assets/fonts/suisse/SuisseWorks-Regular-WebXL.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseWorks-Regular-WebXL.woff2") format("woff");
 }
 /* TYPES FIJOS */
+[dir=rtl] .md-rtl-flip {
+  transform: scaleX(-1);
+}
+
 *,
 *::before,
 *::after {
@@ -506,10 +510,6 @@ button {
   justify-content: center;
 }
 
-.content-sp-between {
-  justify-content: space-between;
-}
-
 .content-sp-around {
   justify-content: space-around;
 }
@@ -582,6 +582,7 @@ button {
 .align-end {
   display: flex;
   align-items: end;
+  justify-content: end;
 }
 
 .align-center {
@@ -749,59 +750,77 @@ button {
   }
 }
 
+.align-start {
+  align-items: start;
+}
+
+.content-sp-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .md\:content-sp-between {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 992px) {
+  .mdmax\:content-end {
+    justify-content: flex-end;
+  }
+}
 .container-full {
-  position: relative;
-  padding-inline: 8px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   max-width: 1500px;
+  padding-inline: 8px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .container-full {
+    max-width: 768px;
     padding-inline: 8px;
     width: 90%;
-    max-width: 768px;
   }
 }
 @media (min-width: 992px) {
   .container-full {
-    width: 80%;
     max-width: 992px;
+    width: 80%;
   }
 }
 @media (min-width: 1280px) {
   .container-full {
-    width: 80%;
     max-width: 1280px;
+    width: 80%;
   }
 }
 
 .container-total {
-  position: relative;
-  margin-right: 0;
   margin-left: 0;
-  width: 100%;
+  margin-right: 0;
   max-width: 100%;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 992px) {
   .container-total {
-    width: 100%;
     max-width: 100%;
+    width: 100%;
   }
 }
 
 .container-bleed {
-  position: relative;
-  padding-inline: 0;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  padding-inline: 0;
+  position: relative;
 }
 
 .container-fluid {
-  position: relative;
-  padding-inline: 8px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  padding-inline: 8px;
+  position: relative;
 }
 
 .container-body {
@@ -816,8 +835,8 @@ button {
 }
 
 .container-body2 {
-  padding-left: 16px;
   overflow: hidden;
+  padding-left: 16px;
 }
 @media (min-width: 992px) {
   .container-body2 {
@@ -829,55 +848,55 @@ button {
 }
 
 .container {
-  position: relative;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 800px;
   padding-inline: 8px;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .container {
+    max-width: 768px;
     padding-inline: 8px;
     width: 90%;
-    max-width: 768px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 80%;
     max-width: 992px;
+    width: 80%;
   }
 }
 @media (min-width: 1280px) {
   .container {
-    width: 80%;
     max-width: 1280px;
+    width: 80%;
   }
 }
 @media (min-width: 1440px) {
   .container {
-    width: 100%;
     max-width: 1440px;
+    width: 100%;
   }
 }
 
 .container-2 {
-  position: relative;
-  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 700px;
   padding-inline: 8px;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+  width: 90%;
 }
 
 .container-3 {
-  position: relative;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 900px;
   padding-inline: 24px;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .container-3 {
@@ -886,20 +905,20 @@ button {
 }
 
 .container-4 {
-  position: relative;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 360px;
   padding-inline: 16px;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+  width: 100%;
 }
 
 .container-5 {
-  position: relative;
-  width: 100%;
+  margin: 0 auto;
   max-width: 800px;
   padding: 0 8px;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 1280px) {
   .container-5 {
@@ -909,25 +928,25 @@ button {
 }
 
 .container-6 {
+  margin: 0 auto;
+  max-width: 442px;
+  padding: 0 8px;
   position: relative;
   width: 100%;
-  max-width: 442px;
-  margin: 0 auto;
-  padding: 0 8px;
 }
 
 .container-7 {
+  margin: 0 auto;
+  max-width: 295px;
+  padding: 0 16px;
   position: relative;
   width: 100%;
-  max-width: 295px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 @media (min-width: 768px) {
   .container-7 {
     max-width: 460px;
-    padding-right: 8px;
     padding-left: 8px;
+    padding-right: 8px;
   }
 }
 @media (min-width: 992px) {
@@ -942,19 +961,19 @@ button {
 }
 
 .container-8 {
+  margin: 0 auto;
+  max-width: 395px;
+  padding: 0 8px;
   position: relative;
   width: 100%;
-  max-width: 395px;
-  margin: 0 auto;
-  padding: 0 8px;
 }
 
 .container-9 {
+  margin: 0 auto;
+  max-width: 798px;
+  padding: 0 16px;
   position: relative;
   width: 100%;
-  max-width: 798px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 @media (min-width: 768px) {
   .container-9 {
@@ -963,16 +982,16 @@ button {
 }
 
 .container-10 {
-  position: relative;
   max-width: 200px;
+  position: relative;
 }
 
 .container-11 {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 16px;
   position: relative;
   width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 @media (min-width: 768px) {
   .container-11 {
@@ -981,10 +1000,10 @@ button {
 }
 
 .container-12 {
-  position: relative;
-  width: 100%;
   max-width: 1080px;
   padding: 0 16px;
+  position: relative;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .container-12 {
@@ -993,53 +1012,53 @@ button {
 }
 
 .container-360 {
-  width: 100%;
   max-width: 360px;
+  width: 100%;
 }
 
 .container-496 {
-  width: 100%;
   max-width: 496px;
+  width: 100%;
 }
 
 .container-512 {
-  width: 100%;
   max-width: 512px;
+  width: 100%;
 }
 
 .container-640 {
-  width: 100%;
   max-width: 640px;
+  width: 100%;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -8px;
   margin-left: -8px;
+  margin-right: -8px;
 }
 @media (min-width: 768px) {
   .row {
-    margin-right: -8px;
     margin-left: -8px;
+    margin-right: -8px;
   }
 }
 @media (min-width: 992px) {
   .row {
-    margin-right: -8px;
     margin-left: -8px;
+    margin-right: -8px;
   }
 }
 @media (min-width: 1280px) {
   .row {
-    margin-right: -8px;
     margin-left: -8px;
+    margin-right: -8px;
   }
 }
 @media (min-width: 1440px) {
   .row {
-    margin-right: -8px;
     margin-left: -8px;
+    margin-right: -8px;
   }
 }
 
@@ -1343,10 +1362,10 @@ button {
 }
 [class*=col-] {
   box-sizing: border-box;
-  position: relative;
   min-height: 1px;
-  padding-right: 8px;
   padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
 }
 
 .col {
@@ -1525,11 +1544,16 @@ button {
 }
 .list-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  width: 100%;
-  max-width: 1200px;
+  grid-template-columns: repeat(4, 1fr);
   margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .grid-2 {
@@ -1542,8 +1566,17 @@ button {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .colgap-16 {
   column-gap: 16px;
+}
+
+.gap-8 {
+  gap: 8px;
 }
 
 .colgap-8 {
@@ -1564,12 +1597,12 @@ button {
 }
 
 .grid-8 {
+  align-items: start;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  width: 100%;
-  align-items: start;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 .grid-8 img {
   border: 1px solid #eaeaea;
@@ -1577,17 +1610,31 @@ button {
 
 @media (min-width: 768px) {
   .grid-2-desktop {
+    align-items: end;
+    column-gap: 16px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-    align-items: end;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm\:grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 768px) {
   .sm\:grid-2 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .sm\:grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -1621,21 +1668,21 @@ button {
 }
 
 .grid-3-6-8 {
+  column-gap: 6px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 6px;
   max-width: 100%;
 }
 @media (min-width: 992px) {
   .grid-3-6-8 {
-    grid-template-columns: repeat(6, 1fr);
     column-gap: 16px;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 @media (min-width: 1280px) {
   .grid-3-6-8 {
-    grid-template-columns: repeat(8, 1fr);
     column-gap: 16px;
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
@@ -7142,12 +7189,21 @@ strong {
   flex-grow: 1;
 }
 
+.flex-grow {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
 .grow-0 {
   flex-grow: 0;
 }
 
 .no-cursor {
   cursor: default;
+}
+
+.no-relative {
+  position: inherit;
 }
 
 .theme-keyboard-accesible *:focus,
@@ -7897,6 +7953,25 @@ button {
   background-color: transparent;
 }
 
+.btn-tertiary {
+  height: auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1;
+  min-width: 24px;
+  padding-inline: 0;
+  font-size: 14px;
+}
+
+.btn-tertiary.active {
+  border-bottom: 0.5px solid #000000;
+}
+
+@media (min-width: 992px) {
+  .btn-tertiary {
+    font-size: 12px;
+  }
+}
 .btn-text {
   background-color: transparent;
   border-color: transparent;
@@ -16229,11 +16304,6 @@ Cosas a tener en cuenta:
   transition: grid-template-rows 0.1s ease-in-out;
   z-index: 1000;
 }
-@media (min-width: 768px) {
-  .md-breadcrumb {
-    margin-inline: 16px;
-  }
-}
 .md-breadcrumb > ol {
   align-items: center;
   background-color: #ffffff;
@@ -16243,11 +16313,6 @@ Cosas a tener en cuenta:
   margin: 0;
   padding-inline: 20px;
   transition: grid-template-rows 0.1s ease-in-out;
-}
-@media (min-width: 768px) {
-  .md-breadcrumb > ol {
-    padding-inline: 4px;
-  }
 }
 .md-breadcrumb > ol > li:not(:last-child)::after {
   content: ">";
@@ -16299,7 +16364,7 @@ Cosas a tener en cuenta:
 }
 .md-product-pricebox.md-product-pricebox--highlight-sales {
   background-color: #ffce4e;
-  padding: 4px;
+  padding: 5px 4px 3px;
 }
 
 .md-product-pricebox-price {
@@ -16359,12 +16424,6 @@ Cosas a tener en cuenta:
 .md-product-heading-append {
   flex: 0 0 auto;
 }
-@media (min-width: 768px) {
-  .md-product-heading-prepend,
-  .md-product-heading-append {
-    margin-block-start: 40px;
-  }
-}
 
 .md-product-heading-title {
   align-items: flex-start;
@@ -16416,11 +16475,6 @@ Cosas a tener en cuenta:
   margin-block-start: 20px;
   row-gap: 16px;
 }
-@media (min-width: 768px) {
-  .md-product-cta {
-    margin-block-start: 40px;
-  }
-}
 
 .md-product-excerpt-list {
   display: flex;
@@ -16430,7 +16484,7 @@ Cosas a tener en cuenta:
   padding: 0;
 }
 
-.md-color-selector-body {
+.md-color-selector {
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
@@ -16449,6 +16503,12 @@ Cosas a tener en cuenta:
   gap: 16px;
 }
 
+.md-color-selector-item {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
 .md-color-selector-item.md-color-selector-item--more {
   margin-inline-end: 8px;
 }
@@ -16494,6 +16554,32 @@ Cosas a tener en cuenta:
   top: calc(100% + 4px);
 }
 
+.md-pdp5-box.md-pdp5-box--img {
+  position: relative;
+}
+
+.md-pdp5-box-fixed-actions {
+  position: absolute;
+  z-index: 2;
+}
+.md-pdp5-box-fixed-actions.bottom {
+  bottom: 20px;
+}
+.md-pdp5-box-fixed-actions.left {
+  left: 20px;
+}
+.md-pdp5-box-fixed-actions.right {
+  right: 20px;
+}
+.md-pdp5-box-fixed-actions.top {
+  top: 20px;
+}
+.md-pdp5-box-fixed-actions .btn-look {
+  background-color: transparent;
+  padding: 5px 16px 3px;
+  min-height: 24px;
+}
+
 @media (max-width: 767px) {
   .md-pdp5-main {
     align-items: stretch;
@@ -16505,7 +16591,7 @@ Cosas a tener en cuenta:
   .md-pdp5-column {
     display: contents;
   }
-  .md-pdp5-box[class*=md-pdp5-box--media-img], .md-pdp5-box[class*=md-pdp5-box--info-img] {
+  .md-pdp5-box.md-pdp5-box--img {
     margin-block-start: 16px;
   }
   .md-pdp5-box.md-pdp5-box--media-img-model-1 {
@@ -16549,9 +16635,6 @@ Cosas a tener en cuenta:
     position: sticky;
     z-index: 1000;
   }
-  .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading-append .md-color-selector-header {
-    display: none;
-  }
   .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading-append .md-color-selector-item {
     display: none;
   }
@@ -16580,32 +16663,48 @@ Cosas a tener en cuenta:
     justify-self: center;
     max-width: 350px;
   }
-  .md-pdp5-box[class*=md-pdp5-box--info-img] {
-    margin-block-end: 80px;
+  .md-pdp5-box.md-pdp5-box--img {
+    margin-block-start: 80px;
   }
   .md-pdp5-box.md-pdp5-box--info-cta {
-    margin-block-end: 40px;
-    margin-block-start: 25dvh;
-    order: -100;
+    display: contents;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading {
+    display: contents;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading-content {
+    margin-block-start: 15dvh;
+    order: -200;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading-append {
+    order: -180;
+    margin-block-start: 16px;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta .md-product-heading-append .md-color-selector-item.md-color-selector-item--more {
+    display: none;
+  }
+  .md-pdp5-box.md-pdp5-box--info-cta .md-product-cta {
+    margin-block-start: 40px;
+    order: -160;
   }
   .md-pdp5-box.md-pdp5-box--info-shipping {
-    margin-block-end: 25dvh;
     order: -90;
+    margin-block-start: 40px;
   }
   .md-pdp5-box.md-pdp5-box--info-img-detail-1 {
-    margin-block-end: 80px;
+    margin-block-start: 15dvh;
     order: -80;
   }
   .md-pdp5-box.md-pdp5-box--info-sku {
-    margin-block-end: 24px;
-    order: -70;
+    margin-block-start: 40px;
+    order: -190;
   }
   .md-pdp5-box.md-pdp5-box--info-short {
-    margin-block-end: 80px;
+    margin-block-start: 80px;
     order: -60;
   }
   .md-pdp5-box.md-pdp5-box--info-excerpt {
-    margin-block-end: 80px;
+    margin-block-start: 80px;
   }
 }
 :root {

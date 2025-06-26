@@ -10,7 +10,7 @@ logoheader: false
   <ol>
     <li>
       <a href=”/category” class="md-breadcrumb-link" aria-label="Ir a la categoría">
-        <svg class="md-breadcrumb-icon" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="md-breadcrumb-icon md-rtl-flip" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3.21107 8.16138L7.85753 3.51491L7.15043 2.8078L1.29688 8.66135L7.15043 14.5149L7.85753 13.8078L3.21111 9.16138H14.0039V8.16138H3.21107Z" fill="black"/>
         </svg>
         <span class="md-breadcrumb-txt title-s ttu pt-2">Chaquetas y abrigos</span>
@@ -20,15 +20,18 @@ logoheader: false
 </nav>
 <main class="md-pdp5-main">
   <div class="md-pdp5-column md-pdp5-column--media">
-    <article class="md-pdp5-box md-pdp5-box--media-img-model-1">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--media-img-model-1">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-1.jpg" 
           alt="Americana cruzada 100% lino, vista frontal sobre fondo neutro"
         >
       </figure>
+      <div class="md-pdp5-box-fixed-actions bottom left">
+        <button class="btn btn-secondary btn-look">Ver look</button>
+      </div>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--media-img-model-2">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--media-img-model-2">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-2.jpg" 
@@ -36,7 +39,7 @@ logoheader: false
         >
       </figure>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--media-img-model-3">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--media-img-model-3">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-3.jpg"
@@ -52,15 +55,14 @@ logoheader: false
           <div class="md-product-heading-title">
             <h1 class="md-product-heading-title-txt ttu title-l-l">Americana cruzada 100% lino</h1>
             <div class="md-product-heading-title-append">
-              <button type="button" class="btn btn-tertiary btn--wishlist" aria-label="Añadir a la wishlist"
-                aria-selected="false"><!----><md-icon name="bookmark">
-                  <div class="icon-container"><svg width="16" height="16" viewBox="0 0 16 16" fill="#000000"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M7.66667 10.5455L12.3333 15V1H3V15L7.66667 10.5455ZM4 12.663L7.66667 9.16301L11.3333 12.663V2H4V12.663Z"
-                        fill="inherit"></path>
-                    </svg></div>
-                </md-icon><!----></button>
+              <button type="button" class="btn btn-tertiary btn--wishlist" aria-label="Añadir a la wishlist" aria-selected="false">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="#000000"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.66667 10.5455L12.3333 15V1H3V15L7.66667 10.5455ZM4 12.663L7.66667 9.16301L11.3333 12.663V2H4V12.663Z"
+                    fill="inherit"></path>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="md-product-prices">
@@ -94,26 +96,73 @@ logoheader: false
         </div>
         <div class="md-product-heading-append">
           <div class="md-color-selector">
-            <div class="md-color-selector-header">header</div>
-            <div class="md-color-selector-body">
-              <ul class="md-color-selector-list" role="listbox">
-                <li class="md-color-selector-item is-active">
-                  <button type="button" role="option" aria-selected="true" class="btn md-color-selector-btn is-active" title="MARRÓN, Ref. 6893/116">
-                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
-                  </button>
-                </li>
-                <li class="md-color-selector-item">
-                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
-                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
-                  </button>
-                </li>
-                <li class="md-color-selector-item md-color-selector-item--more">
-                  <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="MARRÓN, Ref. 6893/116">
-                    +2
-                  </button>
-                </li>
-              </ul>
-            </div>
+            <ul class="md-color-selector-list" role="listbox">
+              <li class="md-color-selector-item is-active">
+                <button type="button" role="option" aria-selected="true" class="btn md-color-selector-btn is-active" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item">
+                <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                  <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                </button>
+              </li>
+              <li class="md-color-selector-item md-color-selector-item--more">
+                <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="MARRÓN, Ref. 6893/116">
+                  +2
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -125,19 +174,6 @@ logoheader: false
     <article class="md-pdp5-box md-pdp5-box--info-sku">
       <div class="is-flex content-start gap-16">
         <span class="text-l flex-grow-0">Beige | Ref. 6761/201</span>
-        <button class="btn btn-link is-flex sm:hidden" aria-label="Añadir a la wishlist" tabindex="0">
-          <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-              fill="black" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-              fill="black" fill-opacity="0.2" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M5.33268 9.69584L9.99935 14.1504V0.150391H0.666016V14.1504L5.33268 9.69584ZM1.66602 11.8134L5.33268 8.3134L8.99935 11.8134V1.15039H1.66602V11.8134Z"
-              fill="black" fill-opacity="0.2" />
-          </svg>
-        </button>
       </p>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info-short">
@@ -190,7 +226,7 @@ logoheader: false
         </li>
       </ul>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--info-img-detail-1">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--info-img-detail-1">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-4.jpg"
@@ -198,7 +234,7 @@ logoheader: false
         >
       </figure>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--info-img-detail-2">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--info-img-detail-2">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-5.jpg"
@@ -206,7 +242,7 @@ logoheader: false
         >
       </figure>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--info-img-detail-3">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--info-img-detail-3">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-6.jpg"
@@ -214,7 +250,7 @@ logoheader: false
         >
       </figure>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--info-img-detail-3">
+    <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--info-img-detail-3">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
         <img 
           src="/assets/static/images/pdp/pdp-7.jpg"
