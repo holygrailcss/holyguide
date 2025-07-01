@@ -102,63 +102,63 @@ logoheader: false
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item">
+              <li class="md-color-selector-item sm:hidden">
                 <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
                   <img src="https://placehold.co/16x16" alt="MARRÓN" />
                 </button>
               </li>
-              <li class="md-color-selector-item md-color-selector-item--more">
-                <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="MARRÓN, Ref. 6893/116">
+              <li class="md-color-selector-item md-color-selector-item--more" aria-hidden="true">
+                <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="Mostrar todas las opciones de color">
                   +2
                 </button>
               </li>
@@ -167,6 +167,7 @@ logoheader: false
         </div>
       </div>
       <div class="md-product-cta">
+        <button class="btn btn-secondary" type="button">Sin stock - ver similares</button>  
         <button class="btn btn-secondary" type="button">Personalizar (+3,50 €)</button>  
         <button class="btn btn-secondary" type="button" onclick="toggleBottomSheet()">Añadir a la cesta</button>  
       </div>
@@ -275,7 +276,7 @@ window.addEventListener('scroll', function() {
 
 function toggleBottomSheet() {
   const bodyElement = document.body;
-  const existing = document.querySelector('.md-bottom-sheet-wrapper');
+  const existing = document.querySelector('.md-bottom-sheet-sizes-wrapper');
   if (existing) {
     // Añade la clase de salida para activar la transición
     existing.classList.add('is-leaving');
@@ -289,18 +290,18 @@ function toggleBottomSheet() {
   } else {
     // Crea el HTML del bottom sheet como string
     const html = `
-      <section class="md-bottom-sheet-wrapper">
+      <section class="md-bottom-sheet-sizes-wrapper">
         <div
-          class="md-bottom-sheet"
+          class="md-bottom-sheet-sizes"
           role="dialog"
           aria-modal="true"
           aria-labelledby="addToCartBottomSheetTitle"
         >
-          <div class="md-bottom-sheet-header">
-            <div class="md-bottom-sheet-header-main">
+          <div class="md-bottom-sheet-sizes-header">
+            <div class="md-bottom-sheet-sizes-header-main">
               <p class="text-l">Selecciona para añadir</p>  
             </div>
-            <div class="md-bottom-sheet-header-append">
+            <div class="md-bottom-sheet-sizes-header-append">
               <button
                 type="button"
                 class="btn btn-tertiary"
@@ -313,24 +314,131 @@ function toggleBottomSheet() {
               </button>
             </div>
           </div>
-          <div class="md-bottom-sheet-body">
-            <h2 id="addToCartBottomSheetTitle" class="title-l-l">¿Cómo puedo personalizar mi producto?</h2>
-            <p class="text-l">Puedes personalizar tu producto añadiendo bordados, estampados o detalles únicos. Selecciona la opción de personalización al añadir el producto a tu cesta.</p>
+          <div class="md-bottom-sheet-sizes-body">
+            <div class="md-color-selector sm:visible">
+              <div class="md-color-selector-header">
+                <p class="md-color-selector-title text-l">Color: Marrón</p>
+              </div>
+              <ul class="md-color-selector-list" role="listbox">
+                <li class="md-color-selector-item is-active">
+                  <button type="button" role="option" aria-selected="true" class="btn md-color-selector-btn is-active" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item">
+                  <button type="button" role="option" class="btn md-color-selector-btn" title="MARRÓN, Ref. 6893/116">
+                    <img src="https://placehold.co/16x16" alt="MARRÓN" />
+                  </button>
+                </li>
+                <li class="md-color-selector-item md-color-selector-item--more hidden" aria-hidden="true">
+                  <button type="button" role="option" class="btn md-color-selector-btn md-color-selector-btn--more" title="MARRÓN, Ref. 6893/116">
+                    +2
+                  </button>
+                </li>
+              </ul>
             </div>
-          <div class="md-bottom-sheet-footer">
-            <button class="btn btn-secondary" type="button">Más información</button>
+            <hr class="md-bottom-sheet-sizes-divider sm:visible" />
+            <div class="md-size-selector">
+              <ul class="md-size-selector-list" role="listbox">
+                <li class="md-size-selector-item">
+                  <button type="button" role="option" aria-selected="true" class="btn md-size-selector-btn is-active" title="Talla 36">
+                    <span class="md-size-selector-btn-main text-l">
+                      <span class="md-size-selector-btn-title text-l">38 (170/88A)</span>
+                    </span>
+                    <span class="md-size-selector-btn-append">
+                      <span class="md-size-selector-btn-label text-l">[label]</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="md-size-selector-item is-active">
+                  <button type="button" role="option" aria-selected="true" class="btn md-size-selector-btn is-active" title="Talla 36">
+                    <span class="md-size-selector-btn-main text-l">
+                      <span class="md-size-selector-btn-title text-l">38 (170/88A)</span>
+                      <span class="md-size-selector-btn-hint text-l c-dark-grey">[Recomendada]</span>
+                    </span>
+                    <span class="md-size-selector-btn-append">
+                      <span class="md-size-selector-btn-label text-l">[label]</span>
+                    </span>
+                  </button>
+                </li>
+                <li class="md-size-selector-item">
+                  <button type="button" role="option" aria-selected="true" class="btn md-size-selector-btn is-active" title="Talla 36">
+                    <span class="md-size-selector-btn-main text-l">
+                      <span class="md-size-selector-btn-title text-l">38 (170/88A)</span>
+                    </span>
+                    <span class="md-size-selector-btn-append">
+                      <span class="md-size-selector-btn-label text-l">[label]</span>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md-bottom-sheet-sizes-footer">
+            <button class="btn btn-secondary" type="button">
+              Más información
+            </button>
           </div>
         </div>
         <button
           type="button"
           onclick="toggleBottomSheet()"
           aria-label="Cerrar panel"
-          class="md-overlay md-bottom-sheet-overlay focus:inset"></button>
+          class="md-overlay md-bottom-sheet-sizes-overlay focus:inset"></button>
       </section>
     `;
-    document.body.insertAdjacentHTML('beforeend', html);
+    document.querySelector('.md-product-cta').insertAdjacentHTML('beforeend', html);
     // Añade la clase al body cuando se abre el bottom sheet
-    bodyElement.classList.add('is-pdp-extra-info-open');
   }
 }
 </script>
