@@ -2,6 +2,16 @@
 @use "../../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
 @import "../abstract/_all";
 
+:root {
+  --md-offset-body: 48px; // Altura del header
+  --md-bottom-sheet-z-index: 2000;
+  --md-bottom-sheet-overlay-z-index: 1999;
+  --md-bottom-sheet-transition-duration: .1s;
+  --md-overlay-background-opacity: 0.15;
+  --md-overlay-background-color: #{$c-black};
+  
+}
+
 // Componente breadcrumb
 .md-breadcrumb {
   display: grid;
@@ -286,6 +296,119 @@
   }
 }
 
+// Componente global bottom sheet
+.md-bottom-sheet-wrapper {
+  display: contents;
+}
+
+.md-bottom-sheet-overlay {
+  align-items: center;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: var(--md-bottom-sheet-overlay-z-index);
+
+  @starting-style {
+    top: 0
+  }
+  
+  &::before {
+    background-color: var(--md-overlay-background-color);
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    opacity: var(--md-overlay-background-opacity);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity var(--md-bottom-sheet-transition-duration) ease-in-out;
+
+    @starting-style {
+      opacity: 0;
+    }
+  }
+}
+
+.md-bottom-sheet {
+  align-items: stretch;
+  background-color: $c-white;
+  bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  left: 0;
+  max-height: 95dvh;
+  position: fixed;
+  right: 0;
+  transform: translateY(0);
+  transition: transform var(--md-bottom-sheet-transition-duration) ease-in-out;
+  z-index: var(--md-bottom-sheet-z-index);
+  
+  @starting-style {
+    transform: translateY(100%);
+  }
+}
+
+.md-bottom-sheet-header {
+  align-items: center;
+  column-gap: $spacer-200;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: $spacer-200 $spacer-250;
+}
+
+.md-bottom-sheet-header-prepend,
+.md-bottom-sheet-header-append {
+  flex: 0 0 auto;
+}
+
+.md-bottom-sheet-header-main {
+  flex: 1 1 auto;
+}
+
+.md-bottom-sheet-body {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.md-bottom-sheet-footer {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+
+.md-bottom-sheet-wrapper.is-leaving {
+
+  .md-bottom-sheet-overlay {
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  .md-bottom-sheet {
+    transform: translateY(100%);
+  }
+}
+
+// PDP5 box
 .md-pdp5-box {
   &.md-pdp5-box--img {
     position: relative;

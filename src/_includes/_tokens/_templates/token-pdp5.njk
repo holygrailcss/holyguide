@@ -168,7 +168,7 @@ logoheader: false
       </div>
       <div class="md-product-cta">
         <button class="btn btn-secondary" type="button">Personalizar (+3,50 €)</button>  
-        <button class="btn btn-secondary" type="button">Añadir a la cesta</button>  
+        <button class="btn btn-secondary" type="button" onclick="toggleBottomSheet()">Añadir a la cesta</button>  
       </div>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info-sku">
@@ -261,6 +261,8 @@ logoheader: false
   </div>
 </main>
 
+
+
 <script>
 window.addEventListener('scroll', function() {
   const bodyElement = document.querySelector('body');
@@ -270,5 +272,66 @@ window.addEventListener('scroll', function() {
     bodyElement.classList.remove('has-breadcrumb');
   }
 });
+
+function toggleBottomSheet() {
+  const bodyElement = document.body;
+  const existing = document.querySelector('.md-bottom-sheet-wrapper');
+  if (existing) {
+    // Añade la clase de salida para activar la transición
+    existing.classList.add('is-leaving');
+    // Espera a que termine la transición antes de eliminar el elemento
+    existing.addEventListener('transitionend', function handler(e) {
+        existing.removeEventListener('transitionend', handler);
+        existing.remove();
+        // Quita la clase del body cuando se cierra el bottom sheet
+        bodyElement.classList.remove('is-pdp-extra-info-open');
+    });
+  } else {
+    // Crea el HTML del bottom sheet como string
+    const html = `
+      <section class="md-bottom-sheet-wrapper">
+        <div
+          class="md-bottom-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="addToCartBottomSheetTitle"
+        >
+          <div class="md-bottom-sheet-header">
+            <div class="md-bottom-sheet-header-main">
+              <p class="text-l">Selecciona para añadir</p>  
+            </div>
+            <div class="md-bottom-sheet-header-append">
+              <button
+                type="button"
+                class="btn btn-tertiary"
+                aria-label="Cerrar panel"
+                onclick="toggleBottomSheet()"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29293 8.00004L2.64648 3.35359L3.35359 2.64648L8.00004 7.29293L12.6465 2.64648L13.3536 3.35359L8.70714 8.00004L13.3536 12.6465L12.6465 13.3536L8.00004 8.70714L3.35359 13.3536L2.64648 12.6465L7.29293 8.00004Z" fill="black"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="md-bottom-sheet-body">
+            <h2 id="addToCartBottomSheetTitle" class="title-l-l">¿Cómo puedo personalizar mi producto?</h2>
+            <p class="text-l">Puedes personalizar tu producto añadiendo bordados, estampados o detalles únicos. Selecciona la opción de personalización al añadir el producto a tu cesta.</p>
+            </div>
+          <div class="md-bottom-sheet-footer">
+            <button class="btn btn-secondary" type="button">Más información</button>
+          </div>
+        </div>
+        <button
+          type="button"
+          onclick="toggleBottomSheet()"
+          aria-label="Cerrar panel"
+          class="md-overlay md-bottom-sheet-overlay focus:inset"></button>
+      </section>
+    `;
+    document.body.insertAdjacentHTML('beforeend', html);
+    // Añade la clase al body cuando se abre el bottom sheet
+    bodyElement.classList.add('is-pdp-extra-info-open');
+  }
+}
 </script>
 {% include '_tokens/_templates/token-footer.njk' %}
