@@ -519,19 +519,19 @@
   z-index: 2;
 
   &.bottom {
-    bottom: $spacer-250;
+    inset-block-end: $spacer-250;
   }
   
   &.left {
-    left: $spacer-250;
+    inset-inline-start: $spacer-250;
   }
   
   &.right {
-    right: $spacer-250;
+    inset-inline-end: $spacer-250;
   }
   
   &.top {
-    top: $spacer-250;
+    inset-block-start: $spacer-250;
   }
 
   .btn-look {

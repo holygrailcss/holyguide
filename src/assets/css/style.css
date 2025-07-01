@@ -16778,16 +16778,16 @@ Cosas a tener en cuenta:
   z-index: 2;
 }
 .md-pdp5-box-fixed-actions.bottom {
-  bottom: 20px;
+  inset-block-end: 20px;
 }
 .md-pdp5-box-fixed-actions.left {
-  left: 20px;
+  inset-inline-start: 20px;
 }
 .md-pdp5-box-fixed-actions.right {
-  right: 20px;
+  inset-inline-end: 20px;
 }
 .md-pdp5-box-fixed-actions.top {
-  top: 20px;
+  inset-block-start: 20px;
 }
 .md-pdp5-box-fixed-actions .btn-look {
   background-color: transparent;
