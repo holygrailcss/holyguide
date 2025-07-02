@@ -309,8 +309,6 @@
   display: contents;
 }
 
-
-
 .md-bottom-sheet-sizes-overlay {
   align-items: center;
   background-color: transparent;
@@ -419,7 +417,6 @@
   overflow: auto;
   padding: $spacer-200 $spacer-250;
 
-
   @media (min-width: #{map-get($breakpoints, sm)} ) {
     padding: $spacer-100 $spacer-200;
   }
@@ -436,6 +433,24 @@
 .md-bottom-sheet-sizes-divider {
   margin: $spacer-200 ($spacer-250 * -1);
   width: auto;
+
+  @media (min-width: #{map-get($breakpoints, sm)} ) {
+    margin-inline-end: -$spacer-200;
+    margin-inline-start: -$spacer-200;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+.md-bottom-sheet-sizes-actions {
+  &:last-child {
+    @media (min-width: #{map-get($breakpoints, sm)} ) {
+      margin-block-end: $spacer-100;
+    }
+  }
 }
 
 .md-bottom-sheet-sizes-wrapper.is-leaving {
@@ -452,6 +467,35 @@
       transform: translateY(-100%);
     }
   }
+}
+
+// Componente global list actions
+.md-list-actions {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  row-gap: $spacer-100;
+
+  > li {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+}
+
+.btn.md-list-action {
+  text-align: start;
+  white-space: normal;
+  align-items: center;
+  column-gap: $spacer-100;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: space-between;
+  min-height: $spacer-300;
+  padding: 0;
 }
 
 // Componente size selector
@@ -489,7 +533,7 @@
   overflow: visible;
   padding: 0;
   position: relative;
-  text-align: left;
+  text-align: start;
   width: auto;
 }
 
@@ -559,6 +603,10 @@
     &.md-pdp5-box--img {
       margin-block-start: $spacer-200;
     }
+    
+    &.md-pdp5-box--info {
+      margin-block-start: $spacer-500;
+    }
 
     &.md-pdp5-box--media-img-model-1 {
       margin-block-start: 0;
@@ -596,6 +644,7 @@
     &.md-pdp5-box--info-cta {
       background-color: $c-white;
       bottom: 0;
+      margin-block-start: 0;
       margin-left: -$spacer-250;
       margin-right: -$spacer-250;
       max-height: calc(90dvh - (48px + 40px));
@@ -639,6 +688,10 @@
   .md-pdp5-box {
     &.md-pdp5-box--img {
       margin-block-start: $spacer-1000;
+    }
+
+    &.md-pdp5-box--media-img-model-1 {
+      margin-block-start: 0;
     }
     
     &.md-pdp5-box--info-cta {
