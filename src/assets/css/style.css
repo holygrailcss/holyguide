@@ -16365,6 +16365,14 @@ Cosas a tener en cuenta:
   justify-content: flex-start;
 }
 
+.md-product-pricegroup {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4px 12px;
+  justify-content: flex-start;
+}
+
 .md-product-pricebox {
   align-items: center;
   column-gap: 8px;
@@ -16373,8 +16381,18 @@ Cosas a tener en cuenta:
   justify-content: flex-start;
 }
 .md-product-pricebox.md-product-pricebox--highlight-sales {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
   background-color: #ffce4e;
   padding: 5px 4px 3px;
+}
+
+.md-product-pricebox-amount {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  justify-content: flex-start;
 }
 
 .md-product-pricebox-price {

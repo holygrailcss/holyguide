@@ -78,23 +78,42 @@
 // Componente global precio
 .md-product-prices {
   align-items: center;
-  gap: $spacer-50  $spacer-150;
+  gap: $spacer-50 $spacer-150;
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.md-product-pricegroup {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: $spacer-50 $spacer-150;
   justify-content: flex-start;
 }
 
 .md-product-pricebox {
   align-items: center;
   column-gap: $spacer-100;
+  
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 
   &.md-product-pricebox--highlight-sales {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
     background-color: $c-sale;
     padding: ($spacer-50 + 1) $spacer-50 ($spacer-50 - 1);
   }
+}
+
+.md-product-pricebox-amount {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-100;
+  justify-content: flex-start;
 }
 
 .md-product-pricebox-price {
