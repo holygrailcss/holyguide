@@ -16386,6 +16386,15 @@ Cosas a tener en cuenta:
   background-color: #ffce4e;
   padding: 5px 4px 3px;
 }
+.md-product-pricebox.md-product-pricebox--original-price {
+  color: #8e8e8e;
+}
+.md-product-pricebox.md-product-pricebox--old-price {
+  color: #000000;
+}
+.md-product-pricebox.md-product-pricebox--on-sales {
+  color: #b40016;
+}
 
 .md-product-pricebox-amount {
   align-items: center;

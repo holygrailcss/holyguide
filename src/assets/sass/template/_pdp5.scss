@@ -95,7 +95,6 @@
 .md-product-pricebox {
   align-items: center;
   column-gap: $spacer-100;
-  
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -105,6 +104,18 @@
     grid-auto-columns: minmax(0, 1fr);
     background-color: $c-sale;
     padding: ($spacer-50 + 1) $spacer-50 ($spacer-50 - 1);
+  }
+
+  &.md-product-pricebox--original-price {
+    color: $c-dark-grey;
+  }
+
+  &.md-product-pricebox--old-price {
+    color: $c-black;
+  }
+
+  &.md-product-pricebox--on-sales {
+    color: $c-error;
   }
 }
 
