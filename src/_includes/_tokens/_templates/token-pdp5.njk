@@ -27,7 +27,7 @@ logoheader: false
           alt="Americana cruzada 100% lino, vista frontal sobre fondo neutro"
         >
       </figure>
-      <div class="md-pdp5-box-fixed-actions bottom left">
+      <div class="md-pdp5-box-fixed-actions">
         <button class="btn btn-secondary btn-look">Ver look</button>
       </div>
     </article>
@@ -52,6 +52,7 @@ logoheader: false
     <article class="md-pdp5-box md-pdp5-box--info md-pdp5-box--info-cta">
       <div class="md-product-heading">
         <div class="md-product-heading-content">
+          <p class="title-l c-dark-grey">Nuevo</p>
           <div class="md-product-heading-title">
             <h1 class="md-product-heading-title-txt ttu title-l-l">Americana cruzada 100% lino</h1>
             <div class="md-product-heading-title-append">
@@ -168,8 +169,10 @@ logoheader: false
       </div>
       <div class="md-product-cta">
         <button class="btn btn-secondary" type="button">Sin stock - ver similares</button>  
-        <button class="btn btn-secondary" type="button">Personalizar (+3,50 €)</button>  
-        <button class="btn btn-secondary" type="button" onclick="toggleBottomSheet()">Añadir a la cesta</button>  
+        <button class="btn btn-secondary" type="button">Personalizar (+3,50 €)</button>
+        <div class="md-product-cta-main-action">
+          <button class="btn btn-secondary" type="button" onclick="toggleBottomSheet()">Añadir a la cesta</button>  
+        </div>
       </div>
     </article>
     <article class="md-pdp5-box md-pdp5-box--info md-pdp5-box--info-sku">
@@ -219,8 +222,8 @@ logoheader: false
         </li>
       </ul>
     </article>
-    <article class="md-pdp5-box md-pdp5-box--info">
-      <p class="text-l">Este artículo tiene condiciones especiales de devolución.</p>
+    <article class="md-pdp5-box md-pdp5-box--info md-pdp5-box--info-special-returns">
+      <p class="text-l">Este artículo tiene <button type="button" class="link-line title-l"> condiciones especiales de devolución</button>.</p>
     </article>
     <article class="md-pdp5-box md-pdp5-box--img md-pdp5-box--info-img-detail-1">
       <figure class="md-product-figure focus:inset" role="button" tabindex="0">
@@ -279,8 +282,7 @@ function toggleBottomSheet() {
     existing.addEventListener('transitionend', function handler(e) {
         existing.removeEventListener('transitionend', handler);
         existing.remove();
-        // Quita la clase del body cuando se cierra el bottom sheet
-        bodyElement.classList.remove('is-pdp-extra-info-open');
+        bodyElement.classList.remove('md-bottom-sheet-sizes--top', 'md-bottom-sheet-sizes--bottom');
     });
   } else {
     // Crea el HTML del bottom sheet como string
@@ -444,8 +446,26 @@ function toggleBottomSheet() {
           class="md-overlay md-bottom-sheet-sizes-overlay focus:inset"></button>
       </section>
     `;
-    document.querySelector('.md-product-cta').insertAdjacentHTML('beforeend', html);
-    // Añade la clase al body cuando se abre el bottom sheet
+    const ctaMainAction = document.querySelector('.md-product-cta-main-action');
+    if (ctaMainAction) {
+      ctaMainAction.insertAdjacentHTML('beforeend', html);
+
+      // Obtener el wrapper recién insertado
+      const wrapper = ctaMainAction.querySelector('.md-bottom-sheet-sizes-wrapper');
+      if (wrapper) {
+        // Obtener la posición top respecto al viewport
+        const rect = ctaMainAction.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        // Limpiar clases previas
+        wrapper.classList.remove('md-bottom-sheet-sizes--to-top', 'md-bottom-sheet-sizes--to-bottom');
+        // Si el top está por encima del 50% del área visible, añade la clase correspondiente
+        if (rect.top < viewportHeight / 2) {
+          wrapper.classList.add('md-bottom-sheet-sizes--top');
+        } else {
+          wrapper.classList.add('md-bottom-sheet-sizes--bottom');
+        }
+      }
+    }
   }
 }
 </script>

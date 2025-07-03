@@ -5,7 +5,8 @@
 :root {
   --md-offset-body: 48px; // Altura del header
   --md-bottom-sheet-sizes-z-index: 2000;
-  --md-bottom-sheet-sizes-transition-duration: .1s;
+  --md-bottom-sheet-sizes-transition-duration: .278s;
+  --md-bottom-sheet-sizes-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
   --md-bottom-sheet-sizes-overlay-z-index: 1999;
   --md-bottom-sheet-sizes-overlay-background-opacity: 0.15;
   --md-bottom-sheet-sizes-overlay-background-color: #{$c-black};
@@ -210,6 +211,13 @@
   row-gap: $spacer-200;
 }
 
+.md-product-cta-main-action {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
 // Componente global excerpt list
 .md-product-excerpt-list {
   display: flex;
@@ -343,7 +351,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: opacity var(--md-bottom-sheet-sizes-transition-duration) ease-in-out;
+    transition: opacity var(--md-bottom-sheet-sizes-transition-duration) var(--md-bottom-sheet-sizes-transition-timing-function);
 
     @starting-style {
       opacity: 0;
@@ -364,20 +372,23 @@
   justify-content: flex-start;
   left: 0;
   max-height: 95dvh;
+  opacity: 1;
   position: fixed;
   right: 0;
-  transform: translateY(0);
-  transition: transform var(--md-bottom-sheet-sizes-transition-duration) ease-in-out;
+  transition: all var(--md-bottom-sheet-sizes-transition-duration) var(--md-bottom-sheet-sizes-transition-timing-function);
   z-index: var(--md-bottom-sheet-sizes-z-index);
-  
+    
   @starting-style {
+    opacity: 0;
     transform: translateY(100%);
   }
+  
 
   @media (min-width: #{map-get($breakpoints, sm)} ) {
     border: solid var(--line-width) $c-black;
     bottom: auto;
     left: 0;
+    max-height: 60dvh;
     position: absolute;
     right: 0;
     top: 0;
@@ -462,6 +473,7 @@
 
   .md-bottom-sheet-sizes {
     transform: translateY(100%);
+    opacity: 0;
     
     @media (min-width: #{map-get($breakpoints, sm)} ) {
       transform: translateY(-100%);
@@ -561,22 +573,8 @@
 .md-pdp5-box-fixed-actions {
   position: absolute;
   z-index: 2;
-
-  &.bottom {
-    inset-block-end: $spacer-250;
-  }
-  
-  &.left {
-    inset-inline-start: $spacer-250;
-  }
-  
-  &.right {
-    inset-inline-end: $spacer-250;
-  }
-  
-  &.top {
-    inset-block-start: $spacer-250;
-  }
+  inset-block-end: $spacer-250;
+  inset-inline-start: $spacer-250;
 
   .btn-look {
     background-color: transparent;
@@ -636,9 +634,13 @@
     }
     
     &.md-pdp5-box--info-excerpt {
-      margin-block-start: $spacer-500;
-      margin-block-end: $spacer-350;
+      margin-block-start: $spacer-700;
       order: -50;
+    }
+    
+    &.md-pdp5-box--info-special-returns {
+      margin-block-start: $spacer-500;
+      order: -40;
     }
   
     &.md-pdp5-box--info-cta {
@@ -655,7 +657,11 @@
       padding-inline: $spacer-250;
       position: sticky;
       z-index: 999;
-    } 
+    }
+
+    &.md-pdp5-box--media-img-model-3 {
+      margin-block-start: $spacer-500;
+    }
   }
 }
 
@@ -714,6 +720,9 @@
       .md-product-cta {
         margin-block-start: $spacer-300;
         order: -160;
+      }
+      
+      .md-product-cta-main-action {
         position: relative;
       }
     }
@@ -740,10 +749,10 @@
     
     &.md-pdp5-box--info-excerpt {
       margin-block-start: $spacer-1000;
-    }    
+    }
+
+    &.md-pdp5-box--info-special-returns {
+      margin-block-start: $spacer-500;
+    }
   }
 }
-
-
-
-
