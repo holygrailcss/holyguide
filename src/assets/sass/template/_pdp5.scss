@@ -100,10 +100,13 @@
   justify-content: flex-start;
 
   &.md-product-pricebox--highlight-sales {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    background-color: $c-sale;
-    padding: ($spacer-50 + 1) $spacer-50 ($spacer-50 - 1);
+    gap: 0;
+
+    > .md-product-pricebox-amount,
+    > .md-product-pricebox-label {
+      background-color: $c-sale;
+      padding: ($spacer-50 + 1) $spacer-50 ($spacer-50 - 1);
+    }
   }
 
   &.md-product-pricebox--original-price {
@@ -599,6 +602,23 @@
   flex: 0 0 auto;
 }
   
+.btn.btn-look {
+  background-color: transparent;
+  padding: ($spacer-50 + 1) $spacer-200 ($spacer-50 - 1);
+  min-height: $spacer-300;
+}
+
+.btn.btn-3d-view {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  row-gap: $spacer-100;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: ($spacer-50 + 1) $spacer-200 ($spacer-50 - 1);
+  text-align: center;
+}
 
 // PDP5 box
 .md-pdp5-box {
@@ -610,13 +630,31 @@
 .md-pdp5-box-fixed-actions {
   position: absolute;
   z-index: 2;
-  inset-block-end: $spacer-250;
-  inset-inline-start: $spacer-250;
 
-  .btn-look {
-    background-color: transparent;
-    padding: ($spacer-50 + 1) $spacer-200 ($spacer-50 - 1);
-    min-height: $spacer-300;
+  &--bottom {
+    inset-block-end: $spacer-250;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--inline-start {
+    inset-inline-start: $spacer-250;
+  }
+
+  &--inline-end {
+    inset-inline-end: $spacer-250;
+  }
+
+  &--block-end {
+    inset-block-end: $spacer-250;
+  }
+
+  &--block-start {
+    inset-block-start: $spacer-250;
+  }
+
+  .btn.btn-3d-view {
+    margin-block-end: $spacer-300;
   }
 }
 
@@ -747,6 +785,7 @@
       .md-product-heading-content {
         margin-block-start: 15dvh;
         order: -200;
+        flex: 0 1 auto;
       }
       
       .md-product-heading-append {
