@@ -587,6 +587,7 @@
   position: relative;
   text-align: start;
   width: auto;
+  white-space: normal;
 }
 
 .md-size-selector-btn-main {
@@ -599,7 +600,12 @@
 }
 
 .md-size-selector-btn-append {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
   flex: 0 0 auto;
+  justify-content: flex-end;
+  max-width: 100%;
 }
   
 .btn.btn-look {
@@ -624,6 +630,14 @@
 .md-pdp5-box {
   &.md-pdp5-box--img {
     position: relative;
+  }
+
+  &.md-pdp5-box--info-related-links {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    row-gap: $spacer-200;
   }
 }
 
@@ -685,21 +699,26 @@
       margin-block-start: 0;
       margin-inline-end: -$spacer-250;
       margin-inline-start: -$spacer-250;
-      order: -100;
+      order: -110;
     }
     
     &.md-pdp5-box--info-sku {
       margin-block-start: $spacer-500;
+      order: -100;
+    }
+    
+    &.md-pdp5-box--info-hint {
+      margin-block-start: $spacer-200;
       order: -90;
     }
     
     &.md-pdp5-box--info-short {
       margin-block-start: $spacer-200;
-      margin-block-end: $spacer-500;
       order: -80;
     }
     
     &.md-pdp5-box--media-img-model-2 {
+      margin-block-start: $spacer-700;
       order: -70;
     }
     
@@ -707,15 +726,20 @@
       order: -60;
       margin-block-start: $spacer-700;
     }
+
+    &.md-pdp5-box--info-related-links {
+      margin-block-start: $spacer-500;
+      order: -50;
+    }
     
     &.md-pdp5-box--info-excerpt {
       margin-block-start: $spacer-700;
-      order: -50;
+      order: -40;
     }
     
     &.md-pdp5-box--info-special-returns {
       margin-block-start: $spacer-500;
-      order: -40;
+      order: -30;
     }
   
     &.md-pdp5-box--info-cta {
@@ -808,9 +832,14 @@
       margin-block-start: $spacer-500;
     }
     
+    &.md-pdp5-box--info-hint {
+      margin-block-start: $spacer-200;
+      order: -80;
+    }
+    
     &.md-pdp5-box--info-img-detail-1 {
       margin-block-start: 15dvh;
-      order: -80;
+      order: -70;
     }
     
     &.md-pdp5-box--info-sku {
@@ -821,6 +850,11 @@
     &.md-pdp5-box--info-short {
       margin-block-start: $spacer-1000;
       order: -60;
+    }
+    
+    &.md-pdp5-box--info-related-links {
+      margin-block-start: $spacer-500;
+      order: -50;
     }
     
     &.md-pdp5-box--info-excerpt {
