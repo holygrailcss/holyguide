@@ -130,6 +130,11 @@
   --md-main-menu-gap: #{$hg-spacer-150};
   --md-main-menu-margin-inline: #{$hg-spacer-250};
   --md-main-menu-max-height: 60dvh;
+  --md-main-menu-list-columns: 3;
+
+  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
+    --md-main-menu-list-columns: 4;
+  }
 }
 
 .md-main-menu {
@@ -187,9 +192,5 @@
   float: inline-end;
   clear: inline-end;
   width: calc((100% / 10) * 8);
-  column-count: 3;
-  
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
-    column-count: 4;
-  }
+  column-count: var(--md-main-menu-list-columns);
 }
