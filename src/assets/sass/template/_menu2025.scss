@@ -179,13 +179,13 @@
 
 .md-main-menu-section-title {
   width: calc((100% / 10) * 2);
-  float: left;
-  clear: left;
+  float: inline-start;
+  clear: inine-start;
 }
 
 .md-main-menu-section-list {
-  float: right;
-  clear: right;
+  float: inline-end;
+  clear: inline-end;
   width: calc((100% / 10) * 8);
   column-count: 3;
   
