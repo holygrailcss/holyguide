@@ -1,3 +1,5 @@
+@use "../../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
+
 // Start of Selection
 .md-menu {
   display: flex;
@@ -70,4 +72,125 @@
       }
     }
   }
+}
+
+// Start of Selection
+.md-menu2025-1 {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.md-menu2025-1-header {
+  flex: 0 1 auto;
+}
+
+.md-menu2025-1-header-title {
+  margin: 0;
+}
+
+.md-menu2025-1-body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-inline: 20px;
+  flex: 1 1 auto;
+  gap: 12px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.md-menu2025-1-img {
+  grid-column: 11 / span 2;
+  text-align: center;
+}
+
+.md-menu2025-1-content {
+  border: 1px solid red;
+  grid-column: 1 / span 10;
+  position: relative;
+
+
+  .md-menu2025-1-list {
+    flex: 1 1 auto;
+    position: absolute;
+    left: 20%;
+    right: 0;
+    max-height: 100%;
+    column-count: 3;
+    column-width: auto;
+    column-fill: auto;
+    top: 0;
+  }
+}
+
+
+
+:root {
+  --md-main-menu-gap: #{$hg-spacer-150};
+  --md-main-menu-margin-inline: #{$hg-spacer-250};
+  --md-main-menu-max-height: 60dvh;
+  --md-main-menu-list-columns: 3;
+
+  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
+    --md-main-menu-list-columns: 4;
+  }
+}
+
+.md-main-menu {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  max-height: var(--md-main-menu-max-height, auto);
+  overflow: auto;
+}
+
+.md-main-menu-header {
+  column-gap: var(--md-main-menu-gap);
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  margin-inline: var(--md-main-menu-margin-inline);
+}
+
+.md-main-menu-header-title {
+  margin: 0;
+}
+
+.md-main-menu-body {
+  align-items: stretch;
+  column-gap: var(--md-main-menu-gap);
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(12, 1fr);
+  justify-items: stretch;
+  margin-inline: var(--md-main-menu-margin-inline);
+}
+
+.md-main-menu-media {
+  grid-column: 11 / span 2;
+}
+
+.md-main-menu-media-handler {
+  position: sticky;
+  top: 0;
+}
+
+.md-main-menu-content {
+  border: 1px solid red;
+  grid-column: 1 / span 10;
+}
+
+.md-main-menu-section-title {
+  width: calc((100% / 10) * 2);
+  float: inline-start;
+  clear: inline-start;
+}
+
+.md-main-menu-section-list {
+  float: inline-end;
+  clear: inline-end;
+  width: calc((100% / 10) * 8);
+  column-count: var(--md-main-menu-list-columns);
 }
