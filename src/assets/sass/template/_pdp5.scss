@@ -4,7 +4,7 @@
 
 
 :root {
-  --md-offset-body: 48px; // Altura del header
+  --md-offset-body: var(--header-height); // Altura del header
   --md-bottom-sheet-sizes-z-index: 2000;
   --md-bottom-sheet-sizes-transition-duration: var(--hg-transition-duration);
   --md-bottom-sheet-sizes-transition-timing-function: var(--hg-transition-timing-function);
@@ -12,6 +12,66 @@
   --md-bottom-sheet-sizes-overlay-background-opacity: 0.15;
   --md-bottom-sheet-sizes-overlay-background-color: #{$c-black};
 }
+
+.btn.md-media-video-control {}
+
+// Componente global pagination
+.md-pagination {
+  align-self: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $hg-spacer-50;
+  justify-content: center;
+  padding: $hg-spacer-250;
+
+  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    padding-block: $hg-spacer-500;
+  }
+}
+
+.md-pagination-pages {
+  flex: 1 1 auto;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 $hg-spacer-50;
+}
+
+.md-pagination-action {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  height: auto;
+  justify-content: center;
+  margin: 0;
+  min-height: $hg-spacer-300;
+  min-width: $hg-spacer-300;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+
+  &.md-pagination-action--prev {
+    margin-inline-end: auto;
+  }
+
+  &.md-pagination-action--next {
+    margin-inline-start: auto;
+  }
+}
+  
+
+// Tags list
+.md-tags-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: $hg-spacer-50 $hg-spacer-100;
+  justify-content: flex-start;
+}
+
 
 // Componente breadcrumb
 .md-breadcrumb {
