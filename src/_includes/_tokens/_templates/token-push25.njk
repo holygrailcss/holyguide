@@ -1,0 +1,78 @@
+---
+layout: base-clean.njk
+guides: 0
+logoheader: false
+---
+{% import '_macros/_product-card.njk' as product %}
+<!-- Contenido de la plantilla paid25.njk -->
+{% include '_tokens/_templates/token-header2025.njk' %}
+
+<main class="md-push-main">
+  <div class="md-push-column md-push-column--product">
+    <div class="md-push-box md-push-box--product">
+      <div class="md-push-product">
+        <div class="md-push-product-media">
+          <div class="md-push-product-figure-wrapper">
+            <figure class="md-push-product-figure focus:inset" role="button" tabindex="0">
+              <img 
+                class="md-push-product-figure-img"
+                src="/assets/static/images/pdp/pdp-1.jpg" 
+                alt="Americana cruzada 100% lino, vista frontal sobre fondo neutro"
+              >
+              
+            </figure>
+          </div>
+        </div>
+        <div class="md-push-product-info">
+          <div class="md-push-product-info-header">
+            <h1 class="md-push-product-title title-l">Nombre del producto con Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ratione ipsam eaque, sit eius voluptatibus incidunt tenetur error adipisci voluptatem iusto eos impedit, suscipit ex saepe recusandae beatae fugiat voluptas?</h1>
+          </div>
+          <div class="md-push-product-info-body">
+            <div class="md-product-prices">
+              <div class="md-product-pricegroup">
+                <div class="md-product-pricebox">
+                  <div class="md-product-pricebox-amount">
+                    <span class="md-product-pricebox-price title-l-l">
+                      <span>1.200.888 COP</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md-push-product-info-footer">
+            <div class="md-push-product-cta">
+              <div class="md-push-product-cta-main-action">
+                <button class="btn btn-secondary" type="button" onclick="toggleBottomSheet()">Añadir a la cesta</button>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="md-push-column md-push-column--related">
+    <div class="md-push-box md-push-box--grid-related">
+      <ul class="md-push-grid">
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Nombre del producto', '1.200.888 COP') }}
+        </li>
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Producto 2', '2.500.000 COP') }}
+        </li>
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Producto 3', '3.200.000 COP') }}
+        </li>
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Producto 4', '3.200.000 COP') }}
+        </li>
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Producto 5', '3.200.000 COP') }}
+        </li>
+        <li class="md-push-grid-item">
+          {{ product.pushProductCard('Producto 6', '3.200.000 COP') }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
