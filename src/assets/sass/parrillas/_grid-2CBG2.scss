@@ -20,25 +20,14 @@ $xl-grid-2CBG2-padding: 260px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-
-  @media (min-width: $break-sm) {
-    padding-top: $grid-2CBG2-padding;
-    padding-bottom: $grid-2CBG2-padding;
-    margin: $grid-2CBG2-margin auto;
-  }
-
-  @media (min-width: $break-xl) {
-    padding-top: $xl-grid-2CBG2-padding;
-    padding-bottom: $xl-grid-2CBG2-padding;
-    margin: $xl-grid-2CBG2-margin auto;
-    max-width: $xl-grid-2CBG2-max-width;
-  }
-
   @include space-pmobile-pdesktop;
   @include details-pmobile-0;
   @include colors-pmobile-0;
 
   @media (min-width: $break-sm) {
+    padding-top: $grid-2CBG2-padding;
+    padding-bottom: $grid-2CBG2-padding;
+    margin: $grid-2CBG2-margin auto;
     gap: 16px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -51,6 +40,13 @@ $xl-grid-2CBG2-padding: 260px;
         grid-column: 8 / span 4;
       }
     }
+  }
+
+  @media (min-width: $break-xl) {
+    padding-top: $xl-grid-2CBG2-padding;
+    padding-bottom: $xl-grid-2CBG2-padding;
+    margin: $xl-grid-2CBG2-margin auto;
+    max-width: $xl-grid-2CBG2-max-width;
   }
 
   :host(.card9-wrap-details) {

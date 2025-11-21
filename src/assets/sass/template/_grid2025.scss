@@ -55,13 +55,15 @@
    grid-template-rows: 1fr;
    // Para viewport a partir de 'break-md', el footer se ajusta en 3 columnas
    @media (min-width: $break-md) {
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    
      >div:nth-child(odd),
      >div:nth-child(even) {
        border-right: .5px solid black;
      }
-     padding-left: 24px;
-     padding-right: 24px;
-     grid-template-columns: 1fr 1fr 1fr;
+
    }
    // A partir de 'break-lg', se ajusta en 6 columnas
    @media (min-width: $break-lg) {
