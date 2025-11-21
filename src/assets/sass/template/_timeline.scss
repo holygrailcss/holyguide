@@ -65,6 +65,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    min-height: 100dvh;
   } 
 
   .md-timepoint-title {
