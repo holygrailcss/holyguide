@@ -19039,6 +19039,7 @@ Cosas a tener en cuenta:
     flex-flow: row nowrap;
     justify-content: flex-start;
     padding: 0 8% 0 2.5rem;
+    min-height: 100dvh;
   }
   .md-timepoint-title {
     bottom: 0;
