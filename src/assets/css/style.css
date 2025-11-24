@@ -18933,44 +18933,44 @@ Cosas a tener en cuenta:
   padding-top: 133.25%;
 }
 
-.md-timepoint-content-gallery {
+.md-timeline-point-content-gallery {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: baseline;
   gap: 0.5rem;
 }
-.md-timepoint-content-gallery figure {
+.md-timeline-point-content-gallery figure {
   display: block;
 }
-.md-timepoint-content-gallery img {
+.md-timeline-point-content-gallery img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.md-timepoint-title {
+.md-timeline-point-title {
   font-family: "massimo-daily-regular";
 }
 
-.md-timepoint-media {
+.md-timeline-point-media {
   align-items: flex-end;
   column-gap: 1.25rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
 }
-.md-timepoint-media figure {
+.md-timeline-point-media figure {
   display: block;
   flex: 1 1 auto;
 }
-.md-timepoint-media img {
+.md-timeline-point-media img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.md-timepoint-media-txt {
+.md-timeline-point-media-txt {
   font-size: 0.8125rem;
   flex: 0 0 auto;
 }
@@ -18987,37 +18987,37 @@ Cosas a tener en cuenta:
     padding: 5rem 0;
     row-gap: 5rem;
   }
-  .md-timepoint {
+  .md-timeline-point {
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
   }
-  .md-timepoint-title {
+  .md-timeline-point-title {
     font-size: 1.625rem;
     line-height: 1.5;
     order: -100;
     padding-inline: 2.5rem;
   }
-  .md-timepoint-content {
+  .md-timeline-point-content {
     display: contents;
   }
-  .md-timepoint-content-text {
+  .md-timeline-point-content-text {
     font-size: 0.6875rem;
     line-height: 1.5;
     margin-block-start: 1.5rem;
     order: -90;
     padding-inline: 2.5rem;
   }
-  .md-timepoint-content-gallery {
+  .md-timeline-point-content-gallery {
     order: -80;
     margin-block-start: 3.5rem;
     padding-inline: 2.5rem;
   }
-  .md-timepoint-media {
+  .md-timeline-point-media {
     margin-block-start: 3.5rem;
   }
-  .md-timepoint-media-txt {
+  .md-timeline-point-media-txt {
     display: none;
   }
 }
@@ -19033,7 +19033,7 @@ Cosas a tener en cuenta:
     padding: 0;
     row-gap: 0.5rem;
   }
-  .md-timepoint {
+  .md-timeline-point {
     align-items: flex-end;
     display: flex;
     flex-flow: row nowrap;
@@ -19041,7 +19041,7 @@ Cosas a tener en cuenta:
     padding: 0 8% 0 2.5rem;
     min-height: 100dvh;
   }
-  .md-timepoint-title {
+  .md-timeline-point-title {
     bottom: 0;
     flex: 1 0 36%;
     font-size: 4rem;
@@ -19050,7 +19050,7 @@ Cosas a tener en cuenta:
     padding-inline-start: 2.5rem;
     position: sticky;
   }
-  .md-timepoint-content {
+  .md-timeline-point-content {
     align-items: stretch;
     bottom: 0;
     display: flex;
@@ -19061,10 +19061,10 @@ Cosas a tener en cuenta:
     padding-block-end: 4rem;
     position: sticky;
   }
-  .md-timepoint-content-text {
+  .md-timeline-point-content-text {
     margin-block-start: 2.5rem;
   }
-  .md-timepoint-media {
+  .md-timeline-point-media {
     flex: 0 0 38%;
   }
 }
