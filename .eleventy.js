@@ -37,6 +37,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("./admin");
   eleventyConfig.addPassthroughCopy("dist");
+  eleventyConfig.addPassthroughCopy({ "node_modules/gsap/dist/gsap.min.js": "assets/js/vendor/gsap.min.js" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/gsap/dist/ScrollTrigger.min.js": "assets/js/vendor/ScrollTrigger.min.js" });
 
   // Shortcodes
   eleventyConfig.addShortcode("br", () => `<br>`);
