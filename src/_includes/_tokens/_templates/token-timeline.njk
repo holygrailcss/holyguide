@@ -8,6 +8,37 @@ layout: base-clean.njk
   .guide-inspect{
     display: none;
   }
+/* Animación: escala del 30% al 100% al entrar en viewport */
+@keyframes md-timeline-scale-up {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Solo si el usuario no ha activado reduce motion
+   y el navegador soporta scroll-driven animations */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+
+    /* SOLO imágenes derechas de la timeline */
+    .md-timeline .md-timeline-point-media img {
+      animation: md-timeline-scale-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+
+      /* Alineación a la izquierda del escalado */
+      transform-origin: left top;
+    }
+
+  }
+}
+
+
 </style>
 
 <div class="md-timeline" role="region" aria-label="Línea temporal de Massimo Dutti">
