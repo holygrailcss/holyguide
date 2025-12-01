@@ -19210,7 +19210,7 @@ html {
     margin-inline-start: auto;
   }
   .md-timeline2-point-media-txt {
-    flex: 0 0 auto;
+    flex: 0 0 2.5em;
   }
   .md-timeline2-point-media-figure-wrapper {
     flex: 1 1 auto;
