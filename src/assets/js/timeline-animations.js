@@ -5,6 +5,12 @@ const initTimelineAnimations = () => {
   
   if (!items.length) return;
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (prefersReducedMotion) {
+    return;
+  }
+
   items.forEach((item) => {
     const figure = item.querySelector('.md-timeline2-point-media-figure');
     const title = item.querySelector('.md-timeline2-point-title');
@@ -33,7 +39,7 @@ const initTimelineAnimations = () => {
     },{
       ease: "none",
       scale: 0.75,
-      y: -figureHeight * 0.13,
+      y: -figureHeight * 0.125,
     })
     .to(figure,{
       ease: "none",
@@ -43,7 +49,7 @@ const initTimelineAnimations = () => {
     .to(figure,{
       ease: "none",
       scale: 0.75,
-      y: figureHeight * 0.13,
+      y: figureHeight * 0.125,
     })
     .to(figure,{
       ease: "none",
@@ -58,10 +64,22 @@ const initTimelineAnimations = () => {
         trigger: item,
         start: "bottom bottom",
         end: "top top",
-        onEnter: () => gsap.set(title, { autoAlpha: 1 }),
-        onLeave: () => gsap.set(title, { autoAlpha: 0 }),
-        onEnterBack: () => gsap.set(title, { autoAlpha: 1 }),
-        onLeaveBack: () => gsap.set(title, { autoAlpha: 0 }),
+        onEnter: () => {
+          gsap.set(title, { autoAlpha: 1 });
+          item.setAttribute('aria-current', 'true');
+        },
+        onLeave: () => {
+          gsap.set(title, { autoAlpha: 0 });
+          item.removeAttribute('aria-current');
+        },
+        onEnterBack: () => {
+          gsap.set(title, { autoAlpha: 1 });
+          item.setAttribute('aria-current', 'true');
+        },
+        onLeaveBack: () => {
+          gsap.set(title, { autoAlpha: 0 });
+          item.removeAttribute('aria-current');
+        },
       });
     }
 
@@ -86,3 +104,11 @@ if (document.readyState === 'loading') {
 } else {
   initTimelineAnimations();
 }
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 250);
+});
