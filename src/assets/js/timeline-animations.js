@@ -26,8 +26,8 @@ const initTimelineAnimations = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "center bottom+=50%",
-          end: "center top-=50%",
+          start: "center bottom+=100%",
+          end: "center top-=100%",
           scrub: true,
           invalidateOnRefresh: true,
         }
@@ -35,22 +35,47 @@ const initTimelineAnimations = () => {
       
       tl.fromTo(figure, {
         scale: 0.5,
-        y: () => -figure.offsetHeight * 0.5,
+        ease: 'none',
+        y: () => -figure.offsetHeight * 0.35,
       }, {
+        scale: 0.625,
+        ease: 'none',
+        y: () => -figure.offsetHeight * 0.27,
+      })
+      .to(figure, {
         scale: 0.75,
+        ease: 'none',
         y: () => -figure.offsetHeight * 0.125,
       })
       .to(figure, {
+        scale: 0.875,
+        ease: 'none',
+        y: () => -figure.offsetHeight * 0.068,
+      })
+      .to(figure, {
         scale: 1,
+        ease: 'none',
         y: 0,
       })
       .to(figure, {
+        scale: 0.875,
+        ease: 'none',
+        y: () => figure.offsetHeight * 0.068,
+      })
+      .to(figure, {
         scale: 0.75,
+        ease: 'none',
         y: () => figure.offsetHeight * 0.125,
       })
       .to(figure, {
+        scale: 0.625,
+        ease: 'none',
+        y: () => figure.offsetHeight * 0.27,
+      })
+      .to(figure, {
         scale: 0.5,
-        y: () => figure.offsetHeight * 0.5,
+        ease: 'none',
+        y: () => figure.offsetHeight * 0.35,
       });
 
       const toggleVisibility = (element, visible, setCurrent = false) => {
@@ -65,8 +90,8 @@ const initTimelineAnimations = () => {
         
         ScrollTrigger.create({
           trigger: item,
-          start: "bottom bottom",
-          end: "top top",
+          start: "center bottom-=11%",
+          end: "center top+=11%",
           onEnter: () => toggleVisibility(title, true, true),
           onLeave: () => toggleVisibility(title, false, true),
           onEnterBack: () => toggleVisibility(title, true, true),
@@ -79,8 +104,8 @@ const initTimelineAnimations = () => {
         
         ScrollTrigger.create({
           trigger: item,
-          start: "bottom bottom",
-          end: "top top",
+          start: "center bottom-=9%",
+          end: "center top+=9%",
           onEnter: () => toggleVisibility(content, true),
           onLeave: () => toggleVisibility(content, false),
           onEnterBack: () => toggleVisibility(content, true),
