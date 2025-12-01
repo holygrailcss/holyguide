@@ -19164,8 +19164,7 @@ html {
     list-style: none;
     margin: 0;
     min-height: 100dvh;
-    padding: 0;
-    row-gap: 0.5rem;
+    padding: 25dvh 0;
   }
   .md-timeline2-point {
     align-items: flex-end;
@@ -19173,7 +19172,7 @@ html {
     flex-flow: row nowrap;
     justify-content: flex-start;
     padding: 0 8% 0 0;
-    border: solid var(--line-width) red;
+    margin-top: var(--md-timeline2-point-margin-top, 0);
   }
   .md-timeline2-point-title {
     flex: 1 0 36%;

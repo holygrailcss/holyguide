@@ -7,82 +7,77 @@ const initTimelineAnimations = () => {
 
   items.forEach((item) => {
     const figure = item.querySelector('.md-timeline2-point-media-figure');
+    const title = item.querySelector('.md-timeline2-point-title');
+    const content = item.querySelector('.md-timeline2-point-content');
     
     if (!figure) {
       return;
     }
 
     const figureHeight = figure.offsetHeight;
-    const offset = figureHeight * .77;
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        start: "center bottom+=70%",
-        end: "center top-=70%",
+        start: "center bottom+=50%",
+        end: "center top-=50%",
         scrub: true,
         invalidateOnRefresh: true,
-        onEnter: (self) => {
-          const distance = self.end - self.start;
-          console.log('Distancia total de scroll:', distance, 'px');
-        }
       }
     });
     
     tl.fromTo(figure, {
-      scale: 0.5,
-      y: -offset * 0.9,
-      borderLeft: "solid 1px black",
       ease: "none",
-    },
-            {
-              scale: 0.6666,
-              y: -offset * 0.40,
-              ease: "none",
-              borderLeft: "solid 10px red",
-            })
-                    .to(figure,{
-                      scale: 0.8,
-                      y: -offset * 0.15,
-                      ease: "none",
-                      borderLeft: "solid 1px blue",
-                    })
-                            .to(figure,{
-                              scale: 0.9,
-                              y: -offset * 0.06,
-                              ease: "none",
-                              borderLeft: "solid 10px green",
-                            })
-                                    .to(figure, {
-                                      scale: 1,
-                                      y: 0, // 0 ----------------
-                                      ease: "none",
-                                      borderLeft: "solid 1px orange",
-                                    })
-                            .to(figure, {
-                              scale: 0.9,
-                              y: offset * 0.06,
-                              ease: "none",
-                              borderLeft: "solid 10px green",
-                            })
-                    .to(figure, {
-                      scale: 0.8,
-                      y: offset * 0.15,
-                      ease: "none",
-                      borderLeft: "solid 1px blue",
-                    })
-            .to(figure, {
-              scale: 0.6666,
-              y: offset * 0.40,
-              ease: "none",
-              borderLeft: "solid 10px red",
-            })
-    .to(figure, {
       scale: 0.5,
-      y: offset * 0.9,
-      borderLeft: "solid 1px black",
+      y: -figureHeight * 0.5,
+    },{
       ease: "none",
-    });
+      scale: 0.75,
+      y: -figureHeight * 0.13,
+    })
+    .to(figure,{
+      ease: "none",
+      scale: 1,
+      y: 0,
+    })
+    .to(figure,{
+      ease: "none",
+      scale: 0.75,
+      y: figureHeight * 0.13,
+    })
+    .to(figure,{
+      ease: "none",
+      scale: 0.5,
+      y: figureHeight * 0.5,
+    })
+
+    if (title) {
+      gsap.set(title, { autoAlpha: 0 });
+      
+      ScrollTrigger.create({
+        trigger: item,
+        start: "bottom bottom",
+        end: "top top",
+        onEnter: () => gsap.set(title, { autoAlpha: 1 }),
+        onLeave: () => gsap.set(title, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.set(title, { autoAlpha: 1 }),
+        onLeaveBack: () => gsap.set(title, { autoAlpha: 0 }),
+      });
+    }
+
+    if (content) {
+      gsap.set(content, { autoAlpha: 0 });
+      
+      ScrollTrigger.create({
+        trigger: item,
+        start: "bottom bottom",
+        end: "top top",
+        onEnter: () => gsap.set(content, { autoAlpha: 1 }),
+        onLeave: () => gsap.set(content, { autoAlpha: 0 }),
+        onEnterBack: () => gsap.set(content, { autoAlpha: 1 }),
+        onLeaveBack: () => gsap.set(content, { autoAlpha: 0 }),
+      });
+    }
   });
 };
 
@@ -91,4 +86,3 @@ if (document.readyState === 'loading') {
 } else {
   initTimelineAnimations();
 }
-
