@@ -15,13 +15,16 @@ const initTimelineAnimations = () => {
     ctx.revert();
   }
 
-  ctx = gsap.context(() => {
-    items.forEach((item) => {
-      const figure = item.querySelector('.md-timeline2-point-media-figure');
-      const title = item.querySelector('.md-timeline2-point-title');
-      const content = item.querySelector('.md-timeline2-point-content');
-      
-      if (!figure) return;
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 768px)", () => {
+    ctx = gsap.context(() => {
+      items.forEach((item) => {
+        const figure = item.querySelector('.md-timeline2-point-media-figure');
+        const title = item.querySelector('.md-timeline2-point-title');
+        const content = item.querySelector('.md-timeline2-point-content');
+        
+        if (!figure) return;
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -37,45 +40,54 @@ const initTimelineAnimations = () => {
         scale: 0.5,
         ease: 'none',
         y: () => -figure.offsetHeight * 0.35,
+        zIndex: 0,
       }, {
         scale: 0.625,
         ease: 'none',
         y: () => -figure.offsetHeight * 0.27,
+        zIndex: 0,
       })
       .to(figure, {
         scale: 0.75,
         ease: 'none',
         y: () => -figure.offsetHeight * 0.125,
+        zIndex: 0,
       })
       .to(figure, {
         scale: 0.875,
         ease: 'none',
-        y: () => -figure.offsetHeight * 0.068,
+        y: () => -figure.offsetHeight * 0.063,
+        zIndex: 1,
       })
       .to(figure, {
         scale: 1,
         ease: 'none',
         y: 0,
+        zIndex: 2,
       })
       .to(figure, {
         scale: 0.875,
         ease: 'none',
-        y: () => figure.offsetHeight * 0.068,
+        y: () => figure.offsetHeight * 0.063,
+        zIndex: 1,
       })
       .to(figure, {
         scale: 0.75,
         ease: 'none',
         y: () => figure.offsetHeight * 0.125,
+        zIndex: 0,
       })
       .to(figure, {
         scale: 0.625,
         ease: 'none',
         y: () => figure.offsetHeight * 0.27,
+        zIndex: 0,
       })
       .to(figure, {
         scale: 0.5,
         ease: 'none',
         y: () => figure.offsetHeight * 0.35,
+        zIndex: 0,
       });
 
       const toggleVisibility = (element, visible, setCurrent = false) => {
@@ -90,8 +102,8 @@ const initTimelineAnimations = () => {
         
         ScrollTrigger.create({
           trigger: item,
-          start: "center bottom-=11%",
-          end: "center top+=11%",
+          start: "center bottom-=9%",
+          end: "center top+=9%",
           onEnter: () => toggleVisibility(title, true, true),
           onLeave: () => toggleVisibility(title, false, true),
           onEnterBack: () => toggleVisibility(title, true, true),
@@ -113,6 +125,7 @@ const initTimelineAnimations = () => {
         });
       }
     });
+  });
   });
 };
 

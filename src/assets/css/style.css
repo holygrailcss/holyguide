@@ -19111,17 +19111,20 @@ html {
 
 @media (max-width: 767px) {
   .md-timeline2-list {
-    align-items: stretch;
+    align-items: flex-start;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     list-style: none;
     margin: 0;
     min-height: 100vh;
-    padding: 5rem 0;
+    min-width: 100dvw;
+    padding: 1.5rem 0;
     row-gap: 5rem;
+    overflow: auto;
   }
   .md-timeline2-point {
+    flex: 1 0 100dvw;
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
@@ -19130,7 +19133,8 @@ html {
   .md-timeline2-point-title {
     font-size: 1.625rem;
     line-height: 1.5;
-    order: -100;
+    order: -30;
+    margin-block-start: 2.5rem;
     padding-inline: 2.5rem;
   }
   .md-timeline2-point-content {
@@ -19139,20 +19143,46 @@ html {
   .md-timeline2-point-content-text {
     font-size: 0.6875rem;
     line-height: 1.5;
-    margin-block-start: 1.5rem;
-    order: -90;
+    margin-block-start: 0.75rem;
+    order: -20;
     padding-inline: 2.5rem;
   }
   .md-timeline2-point-content-gallery {
-    order: -80;
-    margin-block-start: 3.5rem;
+    margin-block-start: 2.5rem;
     padding-inline: 2.5rem;
   }
   .md-timeline2-point-media {
-    margin-block-start: 3.5rem;
+    align-items: stretch;
+    align-self: center;
+    column-gap: 1.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    order: -40;
+    row-gap: 0.5rem;
   }
-  .md-timeline2-point-media-txt {
-    display: none;
+  .md-timeline2-point-media-figure-wrapper {
+    flex: 1 1 auto;
+  }
+  .md-timeline2-point-media-figure-wrapper figure {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center center;
+    width: 140px;
+    max-width: 100dvw;
+    aspect-ratio: 3/4;
+    margin: 0 auto;
+  }
+  .md-timeline2-point-media-figure-wrapper img {
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
 }
 @media (min-width: 768px) {
