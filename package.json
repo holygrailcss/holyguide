@@ -23,7 +23,7 @@
     "tokentemplate": "npm run generate-token-template",
     "generate-token-template": "node src/assets/js/newTokenTemplate.js",
     "parrilla": "npm run generate-template",
-    "generate-parrilla": "node src/assets/js/newParrilla.js"
+    "generate-parrilla": "node src/assets/js/newPlantilla.js"
   },
   "repository": {
     "type": "git",
