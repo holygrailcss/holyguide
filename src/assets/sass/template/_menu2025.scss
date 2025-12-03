@@ -16,10 +16,6 @@
   align-items: flex-start;
 }
 
-.md-menu-header-title {
-  margin: 0;
-}
-
 // =============================================================================
 // LAYOUT COMPONENTS
 // =============================================================================
@@ -27,7 +23,6 @@
 .md-menu-content {
   display: flex;
   position: relative;
-  flex-direction: row;
   width: 100%;
   gap: 16px;
   flex: 1;
@@ -60,7 +55,6 @@
 
 .md-menu-group {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   
   .md-menu-col {
@@ -73,18 +67,17 @@
 }
 
 .md-menu-col {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   height: 250px;
   overflow: auto;
-  display: none;
   width: 100%;
 }
 
 .md-menu-list {
   a {
-    padding: 4px 4px;
+    padding: 4px;
     display: inline-block;
   }
 }
