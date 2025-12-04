@@ -1,186 +1,214 @@
-# Blog personal JAMStack: Archivos iniciales
+# HolyGuide - Sistema de Diseño
 
-Estos son los archivos de inicio utilizados por [Manuel Ruiz](https://digitalstrategy.es) para crear un blog personal utilizando JAMStack para el desafío [DevProjects](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb) de [Codementor](https://www.codementor.io/). Eres libre de utilizarlos como desees para comenzar con el desafío, si deseas comenzar a trabajar en la creación del sitio sin preocuparte por el contenido en sí mismo.
+Sistema de diseño completo construido con **Eleventy** y **Nunjucks** que proporciona todas las herramientas necesarias para diseñar y desarrollar productos digitales, desde componentes reutilizables hasta documentación completa para diseñadores y desarrolladores.
 
-Los archivos proporcionados son páginas terminadas utilizando HTML y CSS regular. Los archivos HTML se pueden descomponer y utilizar para construir las diferentes plantillas y archivos parciales utilizando el lenguaje de plantillas de tu elección.
+## 📋 Descripción
 
-La estilización de las páginas ya está completa. Dicho esto, la carpeta `design-files` contiene un archivo Figma y un archivo .webp de un diseño si deseas intentar construirlo desde cero. No es necesario utilizar este diseño en absoluto, depende de cómo desees abordar el desafío.
+**HolyGuide** es un sistema de diseño agnóstico que permite crear interfaces consistentes y escalables. Incluye:
 
-La carpeta `src` contiene archivos para que puedas poner en marcha tu proyecto sin preocuparte por el contenido de las publicaciones/artículos. Esa carpeta contiene:
+- 🎨 **Componentes reutilizables** - Biblioteca completa de componentes UI
+- 📐 **Templates y layouts** - Plantillas predefinidas para diferentes casos de uso
+- 🎯 **Tokens de diseño** - Sistema de tokens para mantener consistencia
+- 📚 **Documentación completa** - Guías para diseñadores y desarrolladores
+- 🧩 **Sistema de parrillas** - Grid system flexible y responsive
+- 🌐 **Soporte RTL** - Compatibilidad con idiomas de derecha a izquierda
 
-- Archivos HTML que puedes utilizar como base para los diferentes diseños de página. Estos pueden convertirse en las plantillas que se utilizarán.
-- Archivo CSS para la estilización de las páginas.
-- 5 artículos de blog en la carpeta `blog`.
-- Imágenes y un logotipo en la carpeta `assets`.
+## 🚀 Inicio Rápido
 
-Los artículos están escritos en Markdown y contienen Front Matter. Dependiendo del Generador de Sitios Estáticos que utilices, es posible que debas modificarlos un poco si deseas utilizarlos.
+### Requisitos Previos
 
-## Desafío DevProjects
+- Node.js (versión 14 o superior)
+- npm o yarn
 
-Como se mencionó, estos archivos están aquí para ayudarte a comenzar con el desafío DevProjects. Por favor, visita la [página del desafío](#) para obtener más información sobre el mismo.
+### Instalación
 
-## Tutorial
+```bash
+# Instalar dependencias
+npm install
 
-Puedes [ver este video](https://youtu.be/4wD00RT6d-g) para ver cómo Manuel utiliza Eleventy, Netlify y Netlify CMS para crear un sitio de blog completo construido completamente con archivos estáticos.
+# Iniciar servidor de desarrollo (Eleventy + Sass)
+npm start
 
-
-https://www.tablesgenerator.com/markdown_tables
-
-## cheatsheet markdown
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
-
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style:
- `code` has `back-ticks around` it.
-
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
- 
-```python
-s = "Python syntax highlighting"
-print s
-```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
+# Compilar para producción
+npm run build
 ```
 
+El proyecto estará disponible en `http://localhost:8080`
 
-Here is a simple footnote[^1].
+## 📜 Scripts Disponibles
 
-A footnote can also have multiple lines[^2].  
+### Desarrollo
 
-You can also use words, to fit your writing style more closely[^note].
+```bash
+# Iniciar servidor de desarrollo (watch mode)
+npm start
 
-[^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
-    This footnote also has been made with a different syntax using 4 spaces for new lines.
+# Solo compilar Eleventy
+npm run watch:eleventy
 
-
-## Tipos de macros
-
-```
-{% for Type in global.ButtonType %}
-    <button class=" btn  {{Type.class}} hover  "> {{Type.class}} </button>
-{% endfor %}
-
-
-{% call helper.insert(elementType='button',['btn btn-primary', 'btn btn-limited' , 'btn btn-feel', 'btn btn-blue']) %} {% endcall %}
+# Solo compilar Sass
+npm run watch:sass
 ```
 
+### Producción
 
-## Proceso mediante iconos
+```bash
+# Compilar todo el proyecto
+npm run build
 
-✅: Finished and reviewed
-👀: In revision
-⚙️: In progress
-❌: Rejected
-⚰️: Discarded
+# Compilar solo Eleventy
+npm run build:eleventy
 
+# Compilar solo Sass
+npm run build:sass
+```
 
-⚪️ 1- To do
-✍️ 4- Work in progress
+### Generación de Componentes
 
-🔴🟣🟡⚫⚪🟢🔵🟠🟤
+```bash
+# Crear un nuevo componente
+npm run component nombreDelComponente
 
-## Creación de nuevos elementos Templates
+# Crear un nuevo token de componente
+npm run tokencomponent nombreDelToken
 
-`npm run template nombreDeLaPaginaTemplate`
-`npm run tokentemplate nombreDelToken`
+# Crear un nuevo template
+npm run template nombreDelTemplate
 
+# Crear un nuevo token de template
+npm run tokentemplate nombreDelToken
+```
 
-`npm run component nombreDeLaPaginaComponent`
-`npm run tokencomponent nombreDelcomponent`
+### Formateo
 
+```bash
+# Formatear archivos Markdown y SCSS
+npm run format
+```
 
-## Crearemos las fuentes si las necesitamos en el proyecto
+## 🏗️ Estructura del Proyecto
 
-@include typesFluids($headersFluids);
+```
+holyguide/
+├── src/
+│   ├── _includes/          # Templates y componentes Nunjucks
+│   │   ├── _components/    # Componentes reutilizables
+│   │   ├── _tokens/        # Tokens de diseño
+│   │   ├── _paginas/       # Layouts de páginas
+│   │   └── _macros/        # Macros Nunjucks
+│   ├── assets/
+│   │   ├── sass/           # Estilos SCSS
+│   │   ├── js/             # JavaScript
+│   │   └── static/         # Imágenes y recursos estáticos
+│   ├── components/         # Componentes del sistema
+│   ├── templates/          # Templates del sistema
+│   ├── tokens/             # Tokens de diseño
+│   ├── foundations/        # Fundamentos del diseño
+│   ├── design/             # Documentación para diseñadores
+│   └── develop/            # Documentación para desarrolladores
+└── public/                 # Archivos generados (build)
+```
 
+## 🎨 Tecnologías Utilizadas
 
-{% br %}
+- **[Eleventy](https://www.11ty.dev/)** - Generador de sitios estáticos
+- **[Nunjucks](https://mozilla.github.io/nunjucks/)** - Motor de plantillas
+- **[Sass](https://sass-lang.com/)** - Preprocesador CSS
+- **[Holygrail2](https://www.npmjs.com/package/holygrail2)** - Framework CSS base
+- **[GSAP](https://greensock.com/gsap/)** - Animaciones
+- **[Swiper](https://swiperjs.com/)** - Sliders y carruseles
 
-/n para splitear contenidos
-hay que añadir sets y parts
+## 📖 Documentación
 
+### Para Diseñadores
 
-para crear una nueva parrilla. 
+Visita la sección de [Design](/start-design/) para conocer los principios de diseño, la nomenclatura y cómo trabajar con el sistema.
 
-Crear un sass en parrillas tipo _ncc.scss
-importarlo en all.scss de parrillas
+### Para Desarrolladores
 
-templates / parrillas  crear _ncc.njk
+Visita la sección de [Develop](/develop/) para aprender a usar el sistema, crear componentes y seguir las mejores prácticas.
+
+## 🧩 Componentes y Templates
+
+El sistema incluye una amplia gama de componentes y templates:
+
+- **Headers** - Diferentes variantes de cabeceras
+- **Menús** - Sistemas de navegación
+- **Productos** - Componentes para PDP (Product Detail Pages)
+- **Formularios** - Inputs, selects, checkboxes, etc.
+- **Modales** - Ventanas modales y overlays
+- **Timeline** - Componentes de línea de tiempo
+- **Grids** - Sistemas de parrillas y layouts
+
+## 🎯 Características Principales
+
+- ✅ **Sistema de diseño modular** - Componentes reutilizables y escalables
+- ✅ **Documentación completa** - Guías para diseñadores y desarrolladores
+- ✅ **Responsive design** - Diseño adaptable a todos los dispositivos
+- ✅ **RTL Support** - Soporte para idiomas de derecha a izquierda
+- ✅ **Animaciones** - Integración con GSAP para animaciones avanzadas
+- ✅ **Accesibilidad** - Componentes accesibles y semánticos
+- ✅ **Performance** - Optimizado para velocidad y SEO
+
+## 🔧 Configuración
+
+### Variables de Entorno
+
+El proyecto utiliza variables de Sass definidas en `src/assets/sass/abstract/_variables.scss` y breakpoints en `src/assets/sass/abstract/_breakpoints.scss`.
+
+### Personalización
+
+Puedes personalizar el sistema modificando:
+
+- Variables de Sass en `src/assets/sass/abstract/`
+- Templates en `src/_includes/`
+- Componentes en `src/components/`
+
+## 📝 Notas de Desarrollo
+
+### Proceso mediante Iconos
+
+- ✅: Finalizado y revisado
+- 👀: En revisión
+- ⚙️: En progreso
+- ❌: Rechazado
+- ⚰️: Descartado
+- ⚪: Por hacer
+- ✍️: Trabajo en progreso
+
+### Creación de Parrillas
+
+Para crear una nueva parrilla:
+
+1. Crear un archivo SCSS en `src/assets/sass/parrillas/` tipo `_ncc.scss`
+2. Importarlo en `all.scss` de parrillas
+3. Crear template en `src/templates/parrillas/` como `_ncc.njk`
+
+## 🤝 Contribuir
+
+Este es un proyecto interno. Para contribuir, sigue las guías de diseño y desarrollo incluidas en la documentación.
+
+## 📄 Licencia
+
+ISC
+
+## 👤 Autor
+
+[Manuel Ruiz](https://digitalstrategy.es)
+
+---
+
+## 📚 Referencias Útiles
+
+- [Eleventy Documentation](https://www.11ty.dev/docs/)
+- [Nunjucks Documentation](https://mozilla.github.io/nunjucks/)
+- [Sass Documentation](https://sass-lang.com/documentation)
+- [GSAP Documentation](https://greensock.com/docs/)
+- [Swiper Documentation](https://swiperjs.com/)
+
+## 🔗 Enlaces de Interés
+
+- [Mindmaps](https://www.mindmaps.app/) - Crea mapas mentales visuales
+- [Snippet Generator](https://snippet-generator.app/) - Genera snippets de código
+- [ASCII Flow](https://asciiflow.com/#/) - Crea diagramas en texto plano
+- [Tables Generator](https://www.tablesgenerator.com/markdown_tables) - Genera tablas en Markdown
