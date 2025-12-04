@@ -19335,6 +19335,10 @@ html {
   .md-timeline2-point-media-txt {
     display: none;
   }
+  .md-timeline2-point-media-figure-wrapper figure {
+    height: 66dvh;
+    transform-origin: right center;
+  }
 }
 .menu-mobile {
   display: block;
