@@ -13,6 +13,7 @@ html {
   justify-content: flex-start;
   align-items: baseline;
   gap: $hg-spacer-100;
+  overflow: hidden;
 
   figure {
     display: block;

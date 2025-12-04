@@ -19245,6 +19245,7 @@ html {
   justify-content: flex-start;
   align-items: baseline;
   gap: 0.5rem;
+  overflow: hidden;
 }
 .md-timeline2-point-content-gallery figure {
   display: block;

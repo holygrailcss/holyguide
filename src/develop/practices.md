@@ -2,47 +2,152 @@
 layout: _paginas/develop/_practices.njk
 permalink: /practices/
 page_section: develop
-tags: ["Estructuras modulares", "develop", ""]
-titulo: Buenas Practicas
-descripcion: Buenas prácticas
+tags: ["Estructuras modulares", "develop", "buenas prácticas"]
+titulo: Buenas Prácticas
+descripcion: Guía de buenas prácticas para el desarrollo con HolyGuide
 ---
 
-### Intro
+### Introducción
 
-Los mínimos mandamientos a seguir en maqueta.
+Los mínimos mandamientos a seguir en el desarrollo de componentes y templates con el sistema HolyGuide.
+
 {% br %}
 
-## No realizar nunca ❌
+## ❌ No realizar nunca
 
-No Usar clases para hacer querySelector
+### Estructura y Organización
 
-No Crear un archivo sass sin importar las variables de inicio
+- **No crear un archivo SCSS sin importar las variables de inicio** - Siempre importa las variables y mixins necesarios desde `abstract/_all.scss` o los archivos correspondientes.
 
-No Crear css para nuevos elementos sin testear, y sin pasar por UX
+- **No crear CSS para nuevos elementos sin testear** - Todos los componentes deben ser probados antes de ser incluidos en el sistema.
 
-Si no existe el componente no lo creo .
+- **No crear componentes sin pasar por UX** - El equipo de UX debe validar y crear el componente antes de su implementación.
 
-No Usaremos **:host** para usar las clases de forma global .
+- **No crear componentes que no existan en el sistema** - Si no existe el componente en el Design System, no lo crees por tu cuenta. Consulta primero con el equipo.
 
-No Usaremos disabled en botones a no ser que sea un caso excepcional.
+### Código y Selectores
 
-No usaremos /_ xxx _/ para comentar el HTML
+- **No usar clases para hacer querySelector en JavaScript** - Usa atributos `data-*` o IDs específicos para seleccionar elementos desde JavaScript.
 
-No usaremos class="bg-light" para comentar crear un selector en javascript.
-\*\*No usaremos
+- **No usar `class="bg-light"` o similares para comentar o crear selectores en JavaScript** - Usa clases específicas con prefijo `.js-` para elementos que se seleccionan desde JavaScript.
 
-## Buenas practicas ✅
+- **No usar comentarios HTML del tipo `<!-- xxx -->` para debuggear** - Usa comentarios SCSS `// xxx` para poder debugear la maqueta.
 
-Usar clases nativas de Angular para seleccionar elementos (ViewChild, ElementRef)importar todas las clases al inicio del sass abstract/all
+- **No usar `disabled` en botones a no ser que sea un caso excepcional** - Los botones deben estar habilitados para mostrar qué falta por rellenar al hacer click.
 
-Usaremos los css que ya están testeados en la guia directamente en el html
+### Nomenclatura y Estándares
 
-El equipo de ux creará el componente, y lo introducirá en el ds system de art digital
+- **No usar nomenclatura inconsistente** - Sigue las convenciones establecidas en el sistema.
 
-:host, no funciona en la web. Debemos trabajar el encapsulation: ViewEncapsulation.None
+- **No crear estilos inline** - Usa siempre clases y archivos SCSS organizados.
 
-Los botones estarán habilitados para saber que nos falta por rellenar al hacer click.
+- **No duplicar código** - Reutiliza componentes y mixins existentes.
 
-Usaremos // xxx para poder debugar la maqueta
+## ✅ Buenas Prácticas
 
-Usaremos // .js-loquesea para poder identificar que es una clase selector via js.
+### Estructura de Archivos
+
+- **Importar todas las clases al inicio del SCSS** - En `abstract/_all.scss` o en el archivo correspondiente, importa todas las dependencias necesarias.
+
+- **Organizar los archivos SCSS siguiendo el patrón establecido**:
+  ```scss
+  // =============================================================================
+  // COMPONENT NAME - Description
+  // =============================================================================
+  
+  // Imports
+  @use "../../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
+  
+  // =============================================================================
+  // BASE STYLES
+  // =============================================================================
+  
+  // =============================================================================
+  // LAYOUT COMPONENTS
+  // =============================================================================
+  
+  // =============================================================================
+  // STATES
+  // =============================================================================
+  
+  // =============================================================================
+  // RESPONSIVE
+  // =============================================================================
+  
+  // =============================================================================
+  // RTL SUPPORT
+  // =============================================================================
+  ```
+
+### Uso de Componentes
+
+- **Usar los CSS que ya están testeados en la guía directamente en el HTML** - Reutiliza las clases y componentes existentes del sistema.
+
+- **El equipo de UX creará el componente y lo introducirá en el Design System** - Sigue el proceso establecido para la creación de nuevos componentes.
+
+### JavaScript y Selectores
+
+- **Usar clases con prefijo `.js-` para elementos seleccionados desde JavaScript**:
+  ```html
+  <button class="btn js-submit-form">Enviar</button>
+  ```
+  
+  ```javascript
+  document.querySelector('.js-submit-form');
+  ```
+
+- **Usar atributos `data-*` para datos específicos**:
+  ```html
+  <div class="component" data-component-id="123">...</div>
+  ```
+
+### Comentarios y Debugging
+
+- **Usar `// xxx` para poder debugear la maqueta** - Los comentarios SCSS son útiles para debugging y documentación.
+
+- **Usar `// .js-loquesea` para identificar clases selectoras via JavaScript** - Documenta claramente qué clases se usan desde JavaScript.
+
+### Responsive y RTL
+
+- **Siempre considerar soporte responsive** - Usa los breakpoints definidos en `_breakpoints.scss`.
+
+- **Implementar soporte RTL cuando sea necesario** - Agrupa todas las reglas RTL al final del archivo SCSS usando `.is-rtl`.
+
+### Nomenclatura
+
+- **Seguir la convención BEM cuando sea apropiado** - Usa nombres descriptivos y consistentes.
+
+- **Usar prefijos consistentes**:
+  - `.md-` para componentes del menú
+  - `.token-` para tokens de diseño
+  - `.js-` para clases JavaScript
+  - `.is-` para estados (`.is-active`, `.is-rtl`)
+
+### Performance
+
+- **Evitar selectores demasiado específicos** - Mantén la especificidad baja para facilitar la sobrescritura.
+
+- **Usar variables de Sass** - No hardcodees valores, usa las variables definidas en `_variables.scss`.
+
+- **Optimizar imágenes** - Asegúrate de que las imágenes estén optimizadas antes de incluirlas.
+
+### Mantenibilidad
+
+- **Documentar código complejo** - Añade comentarios explicativos cuando el código no sea autoexplicativo.
+
+- **Mantener el código DRY (Don't Repeat Yourself)** - Reutiliza mixins, funciones y componentes.
+
+- **Revisar código antes de commitear** - Asegúrate de que el código sigue las convenciones del proyecto.
+
+## 📋 Checklist antes de crear un componente
+
+Antes de crear un nuevo componente, verifica:
+
+- [ ] ¿Existe ya un componente similar en el sistema?
+- [ ] ¿Ha sido validado por el equipo de UX?
+- [ ] ¿Está documentado correctamente?
+- [ ] ¿Sigue las convenciones de nomenclatura?
+- [ ] ¿Tiene soporte responsive?
+- [ ] ¿Tiene soporte RTL si es necesario?
+- [ ] ¿Está importado correctamente en los archivos SCSS?
+- [ ] ¿Ha sido probado en diferentes navegadores?
