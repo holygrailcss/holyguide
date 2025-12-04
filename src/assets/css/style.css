@@ -18898,12 +18898,7 @@ Cosas a tener en cuenta:
 
 .md-menu-img {
   width: calc(20% - 16px);
-  display: none;
-}
-@media (min-width: 992px) {
-  .md-menu-img {
-    display: block;
-  }
+  display: block;
 }
 
 .md-menu-inner {
@@ -18922,12 +18917,10 @@ Cosas a tener en cuenta:
   display: flex;
   align-items: flex-start;
 }
-@media (min-width: 992px) {
-  .md-menu-group .md-menu-col {
-    position: absolute;
-    top: 0;
-    left: 16.6666666667%;
-  }
+.md-menu-group .md-menu-col {
+  position: absolute;
+  top: 0;
+  left: 16.6666666667%;
 }
 
 .md-menu-col {
@@ -18948,30 +18941,12 @@ Cosas a tener en cuenta:
   display: grid;
 }
 
-@media (max-width: 992px) {
-  .md-menu-inner {
-    height: 100%;
-  }
-  .md-menu-inner .md-menu-col {
-    position: relative;
-    left: 0;
-    grid-template-columns: repeat(1, 1fr);
-    height: 100%;
-    padding-bottom: 16px;
-  }
-}
 .is-rtl .md-menu {
   align-items: flex-end;
 }
 .is-rtl .md-menu-inner .md-menu-col {
   left: auto;
   right: 16.6666666667%;
-}
-@media (max-width: 992px) {
-  .is-rtl .md-menu-inner .md-menu-col {
-    right: 0;
-    left: auto;
-  }
 }
 
 /* TYPES FIJOS */
@@ -19264,159 +19239,101 @@ html {
   font-size: 0.8125rem;
 }
 
-@media (max-width: 767px) {
-  .md-timeline2-list {
-    align-items: flex-start;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    min-height: 100vh;
-    min-width: 100dvw;
-    padding: 1.5rem 0;
-    row-gap: 5rem;
-    overflow: auto;
-  }
-  .md-timeline2-point {
-    flex: 1 0 100dvw;
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-  }
-  .md-timeline2-point-title {
-    font-size: 1.625rem;
-    line-height: 1.5;
-    order: -30;
-    margin-block-start: 2.5rem;
-    padding-inline: 2.5rem;
-  }
-  .md-timeline2-point-content {
-    display: contents;
-  }
-  .md-timeline2-point-content-text {
-    font-size: 0.6875rem;
-    line-height: 1.5;
-    margin-block-start: 0.75rem;
-    order: -20;
-    padding-inline: 2.5rem;
-  }
-  .md-timeline2-point-content-gallery {
-    margin-block-start: 2.5rem;
-    padding-inline: 2.5rem;
-  }
-  .md-timeline2-point-media {
-    align-items: stretch;
-    align-self: center;
-    column-gap: 1.25rem;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    order: -40;
-    row-gap: 0.5rem;
-  }
-  .md-timeline2-point-media-figure-wrapper {
-    flex: 1 1 auto;
-  }
-  .md-timeline2-point-media-figure-wrapper figure {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    transform-origin: center center;
-    width: 140px;
-    max-width: 100dvw;
-    aspect-ratio: 3/4;
-    margin: 0 auto;
-  }
-  .md-timeline2-point-media-figure-wrapper img {
-    display: block;
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
+.md-timeline2-list {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  min-height: 100dvh;
+  padding: 10dvh 0;
 }
-@media (min-width: 768px) {
-  .md-timeline2-list {
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    min-height: 100dvh;
-    padding: 10dvh 0;
-  }
-  .md-timeline2-point {
-    align-items: flex-end;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    padding: 0 8% 0 0;
-    margin-top: var(--md-timeline2-point-margin-top, 0);
+
+.md-timeline2-point {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 0 8% 0 0;
+  margin-top: var(--md-timeline2-point-margin-top, 0);
+}
+
+.md-timeline2-point-title {
+  flex: 1 0 36%;
+  font-size: 4rem;
+  line-height: 1.2;
+  padding-block-end: 4rem;
+  padding-inline-start: 2.5rem;
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline-start: 26%;
+}
+
+.md-timeline2-point-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  justify-content: flex-start;
+  order: -100;
+  padding-block-end: 4rem;
+  padding-inline-start: 2.5rem;
+  position: fixed;
+  width: 26%;
+}
+
+.md-timeline2-point-content-text {
+  margin-block-start: 2.5rem;
+}
+
+.md-timeline2-point-media {
+  flex: 0 0 38%;
+  align-items: flex-end;
+  column-gap: 1.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-inline-start: auto;
+}
+
+.md-timeline2-point-media-txt {
+  flex: 0 0 2.5em;
+}
+
+.md-timeline2-point-media-figure-wrapper {
+  flex: 1 1 auto;
+}
+.md-timeline2-point-media-figure-wrapper figure {
+  display: block;
+  aspect-ratio: 3/4;
+  position: relative;
+  overflow: hidden;
+  transform-origin: left center;
+  height: 82dvh;
+}
+.md-timeline2-point-media-figure-wrapper img {
+  display: block;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 1280px) {
+  .md-timeline2-point-content-gallery {
+    display: none;
   }
   .md-timeline2-point-title {
-    flex: 1 0 36%;
-    font-size: 4rem;
-    line-height: 1.2;
-    padding-block-end: 4rem;
-    padding-inline-start: 2.5rem;
-    position: fixed;
-    inset-block-end: 0;
-    inset-inline-start: 26%;
-  }
-  .md-timeline2-point-content {
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    inset-block-end: 0;
+    inset-block-start: 15%;
     inset-inline-start: 0;
-    justify-content: flex-start;
-    order: -100;
-    padding-block-end: 4rem;
-    padding-inline-start: 2.5rem;
-    position: fixed;
-    width: 26%;
-  }
-  .md-timeline2-point-content-text {
-    margin-block-start: 2.5rem;
-  }
-  .md-timeline2-point-media {
-    flex: 0 0 38%;
-    align-items: flex-end;
-    column-gap: 1.25rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    margin-inline-start: auto;
   }
   .md-timeline2-point-media-txt {
-    flex: 0 0 2.5em;
-  }
-  .md-timeline2-point-media-figure-wrapper {
-    flex: 1 1 auto;
-  }
-  .md-timeline2-point-media-figure-wrapper figure {
-    display: block;
-    aspect-ratio: 3/4;
-    position: relative;
-    overflow: hidden;
-    transform-origin: left center;
-    height: 82dvh;
-  }
-  .md-timeline2-point-media-figure-wrapper img {
-    display: block;
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+    display: none;
   }
 }
 .menu-mobile {

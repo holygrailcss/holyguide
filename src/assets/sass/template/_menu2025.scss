@@ -30,11 +30,7 @@
 
 .md-menu-img {
   width: calc(20% - 16px);
-  display: none;
-  
-  @media (min-width: $break-md) {
-    display: block;
-  }
+  display: block;
 }
 
 .md-menu-inner {
@@ -58,11 +54,9 @@
   align-items: flex-start;
   
   .md-menu-col {
-    @media (min-width: $break-md) {
-      position: absolute;
-      top: 0;
-      left: 16.6666666667%;
-    }
+    position: absolute;
+    top: 0;
+    left: 16.6666666667%;
   }
 }
 
@@ -91,24 +85,6 @@
 }
 
 // =============================================================================
-// RESPONSIVE
-// =============================================================================
-
-@media (max-width: $break-md) {
-  .md-menu-inner {
-    height: 100%;
-    
-    .md-menu-col {
-      position: relative;
-      left: 0;
-      grid-template-columns: repeat(1, 1fr);
-      height: 100%;
-      padding-bottom: 16px;
-    }
-  }
-}
-
-// =============================================================================
 // RTL SUPPORT
 // =============================================================================
 
@@ -121,13 +97,6 @@
     .md-menu-col {
       left: auto;
       right: 16.6666666667%;
-    }
-  }
-  
-  @media (max-width: $break-md) {
-    .md-menu-inner .md-menu-col {
-      right: 0;
-      left: auto;
     }
   }
 }

@@ -34,94 +34,8 @@ html {
   font-size: to-rem(13);
 }
 
-@media (max-width: #{map-get($hg-breakpoints, sm) - 1px} ) {
-  .md-timeline2-list {
-    align-items: flex-start;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    min-height: 100vh;
-    min-width: 100dvw;
-    padding: $hg-spacer-300 0;
-    row-gap: $hg-spacer-1000;
-    overflow: auto;
-  }
 
-  .md-timeline2-point {
-    flex: 1 0 100dvw;
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-  } 
 
-  .md-timeline2-point-title {
-    font-size: to-rem(26);
-    line-height: 1.5;
-    order: -30;
-    margin-block-start: $hg-spacer-500;
-    padding-inline: $hg-spacer-500;
-  }
-
-  .md-timeline2-point-content {
-    display: contents;
-  }
-
-  .md-timeline2-point-content-text {
-    font-size: to-rem(11);
-    line-height: 1.5;
-    margin-block-start: $hg-spacer-150;
-    order: -20;
-    padding-inline: $hg-spacer-500;
-  }
-
-  .md-timeline2-point-content-gallery {
-    margin-block-start: $hg-spacer-500;
-    padding-inline: $hg-spacer-500;
-  }
-
-  .md-timeline2-point-media {
-    align-items: stretch;
-    align-self: center;
-    column-gap: $hg-spacer-250;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    order: -40;
-    row-gap: $hg-spacer-100;
-  }
-
-  .md-timeline2-point-media-figure-wrapper {
-    flex: 1 1 auto;
-
-    figure {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      transform-origin: center center;
-      width: 140px;
-      max-width: 100dvw;
-      aspect-ratio: 3 / 4;
-      margin: 0 auto;
-
-    }
-
-    img {
-      display: block;
-      height: 100%;
-      left: 0;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
-  }
-}
-
-@media (min-width: #{map-get($hg-breakpoints, sm)} ) {
   .md-timeline2-list {
     align-items: stretch;
     display: flex;
@@ -208,4 +122,20 @@ html {
       z-index: 1;
     }
   }
+
+  @media (max-width: 1280px) {
+
+
+.md-timeline2-point-content-gallery{
+  display: none;
 }
+.md-timeline2-point-title{
+  inset-block-start: 15%;
+	inset-inline-start: 0;
+}
+.md-timeline2-point-media-txt{
+  display: none;
+}
+
+  }
+
