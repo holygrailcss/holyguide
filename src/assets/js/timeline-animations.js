@@ -34,11 +34,15 @@ const initTimelineAnimations = () => {
         const galleryFigures = gsap.utils.toArray('.md-timeline2-point-content-gallery figure', item);
         const textContent = item.querySelector('.md-timeline2-point-content-text');
         
-        const contentElements = [title, ...galleryFigures, textContent].filter(Boolean);
+        const contentElements = [title, ...galleryFigures].filter(Boolean);
         
         contentElements.forEach(element => {
-          gsap.set(element, { y: "50dvh", opacity: 0 });
+          gsap.set(element, { y: "20dvh", opacity: 0 });
         });
+        
+        if (textContent) {
+          gsap.set(textContent, { opacity: 0 });
+        }
         
         if (!figure) return;
 
@@ -113,18 +117,35 @@ const initTimelineAnimations = () => {
                 delay: index * ANIMATION_CONFIG.CONTENT.staggerDelay
               });
             });
+            if (textContent) {
+              gsap.killTweensOf(textContent);
+              gsap.to(textContent, {
+                opacity: 1,
+                duration: ANIMATION_CONFIG.CONTENT.duration,
+                ease: ANIMATION_CONFIG.CONTENT.easeOut,
+                delay: contentElements.length * ANIMATION_CONFIG.CONTENT.staggerDelay
+              });
+            }
           },
           onLeave: () => {
             item.removeAttribute('aria-current');
             contentElements.forEach(element => {
               gsap.killTweensOf(element);
               gsap.to(element, { 
-                y: "-50dvh", 
+                y: "-20dvh", 
                 opacity: 0, 
                 duration: ANIMATION_CONFIG.CONTENT.duration, 
                 ease: ANIMATION_CONFIG.CONTENT.easeIn 
               });
             });
+            if (textContent) {
+              gsap.killTweensOf(textContent);
+              gsap.to(textContent, { 
+                opacity: 0, 
+                duration: ANIMATION_CONFIG.CONTENT.duration, 
+                ease: ANIMATION_CONFIG.CONTENT.easeIn 
+              });
+            }
           },
           onEnterBack: () => {
             item.setAttribute('aria-current', 'true');
@@ -139,6 +160,15 @@ const initTimelineAnimations = () => {
                 delay: index * ANIMATION_CONFIG.CONTENT.staggerDelay
               });
             });
+            if (textContent) {
+              gsap.killTweensOf(textContent);
+              gsap.to(textContent, {
+                opacity: 1,
+                duration: ANIMATION_CONFIG.CONTENT.duration,
+                ease: ANIMATION_CONFIG.CONTENT.easeOut,
+                delay: contentElements.length * ANIMATION_CONFIG.CONTENT.staggerDelay
+              });
+            }
           },
           onLeaveBack: () => {
             item.removeAttribute('aria-current');
@@ -146,12 +176,20 @@ const initTimelineAnimations = () => {
             reversedElements.forEach(element => {
               gsap.killTweensOf(element);
               gsap.to(element, { 
-                y: "50dvh", 
+                y: "20dvh", 
                 opacity: 0, 
                 duration: ANIMATION_CONFIG.CONTENT.duration, 
                 ease: ANIMATION_CONFIG.CONTENT.easeIn 
               });
             });
+            if (textContent) {
+              gsap.killTweensOf(textContent);
+              gsap.to(textContent, { 
+                opacity: 0, 
+                duration: ANIMATION_CONFIG.CONTENT.duration, 
+                ease: ANIMATION_CONFIG.CONTENT.easeIn 
+              });
+            }
           }
         });
       });
