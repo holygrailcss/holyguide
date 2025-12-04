@@ -23,18 +23,18 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
   @import "./template/_header2025_v2.scss";    
   @import "./template/_grid2025.scss";  
   @import "./template/_pdp1.scss";
-    @import "./template/_pdp4.scss";
+  @import "./template/_pdp4.scss";
     @import "./template/_pdp5.scss";
 @import "./template/_ficha2025.scss";
 @import "./template/_microsite_bolsos.scss";
 @import "./template/_menu2025.scss";
 @import "./template/_push25.scss";
-@import "./template/_timeline.scss";
 @import "./template/_timeline-gsap.scss";
 @import "./_menu.scss";
 @import "./_swiper.scss";
 @import "./_video.scss";
 @import "./_blog.scss";
+@import "./_footer.scss";
 @import "./_brands.scss";
 @import "./_resize.scss";
 @import "./_dummyproduct.scss";
@@ -993,15 +993,5 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-}
-
-
-.cajas{
-  flex-wrap: wrap;
-  display: flex;
-
-  flex-basis: 50%; 
-  width: 50%;
 
 }
