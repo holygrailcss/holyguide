@@ -8,12 +8,16 @@ html {
 }
 
 .md-timeline2-point-content-gallery {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: baseline;
   gap: $hg-spacer-100;
   overflow: hidden;
+
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    display: flex;
+  }
 
   figure {
     display: block;
@@ -26,120 +30,132 @@ html {
   }
 }
 
-.md-timeline2-point-title {
-  font-family: 'massimo-daily-regular';
-}
-
 .md-timeline2-point-media-txt {
   font-size: to-rem(13);
+  display: none;
+
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    flex: 0 0 2.5em;
+    display: inline-block;
+  }
+}
+
+.md-timeline2-list {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  min-height: 100dvh;
+  padding: 33.333dvh 0;
+
+  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    padding-block: 16.6666dvh;
+  }
+
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    padding-block: 9dvh;
+  }
+}
+
+.md-timeline2-point {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin-top: var(--md-timeline2-point-margin-top, 0);
+
+  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    padding-inline-end: 8%;
+  }
+}
+
+.md-timeline2-point-title {
+  font-family: 'massimo-daily-regular';
+  flex: 1 0 36%;
+  font-size: to-rem(64);
+  line-height: 1.2;
+  padding-block-end: $hg-spacer-800;
+  padding-inline-start: $hg-spacer-100;
+  position: fixed;
+  inset-block: 15% auto; 
+  inset-inline: 0 auto;
+  
+  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    padding-inline-start: $hg-spacer-500;
+  }
+
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    inset-block: auto 0;
+    inset-inline: 26% auto;
+  }
+}
+
+.md-timeline2-point-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  justify-content: flex-start;
+  order: -100;
+  padding-block-end: $hg-spacer-800;
+  padding-inline-start: $hg-spacer-100;
+  position: fixed;
+  width: 50%;
+  
+  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    width: 26%;
+    padding-inline-start: $hg-spacer-500;
+  }
+}
+
+.md-timeline2-point-content-text {
+  margin-block-start: $hg-spacer-500;
+}
+
+.md-timeline2-point-media {
+  flex: 0 0 38%;
+  align-items: flex-end;
+  column-gap: $hg-spacer-250;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-inline-start: auto;
 }
 
 
+.md-timeline2-point-media-figure-wrapper {
+  flex: 1 1 auto;
 
-  .md-timeline2-list {
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    list-style: none;
-    margin: 0;
-    min-height: 100dvh;
-    padding: 10dvh 0;
-  }
+  figure {
+    display: block;
+    aspect-ratio: 3 / 4;
+    position: relative;
+    overflow: hidden;
+    height: 33.3333dvh;
+    transform-origin: right center;
+    
+    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+      height: 66.6666dvh;
+    }
 
-  .md-timeline2-point {
-    align-items: flex-end;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    padding: 0 8% 0 0;
-    margin-top: var(--md-timeline2-point-margin-top, 0);
-  }
-
-  .md-timeline2-point-title {
-    flex: 1 0 36%;
-    font-size: to-rem(64);
-    line-height: 1.2;
-    padding-block-end: $hg-spacer-800;
-    padding-inline-start: $hg-spacer-500;
-    position: fixed;
-    inset-block-end: 0;
-    inset-inline-start: 26%;
-  }
-
-  .md-timeline2-point-content {
-    align-items: stretch;
-    display: flex;
-    flex-flow: column nowrap;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    justify-content: flex-start;
-    order: -100;
-    padding-block-end: $hg-spacer-800;
-    padding-inline-start: $hg-spacer-500;
-    position: fixed;
-    width: 26%;
-  }
-
-  .md-timeline2-point-content-text {
-    margin-block-start: $hg-spacer-500;
-  }
-
-  .md-timeline2-point-media {
-    flex: 0 0 38%;
-    align-items: flex-end;
-    column-gap: $hg-spacer-250;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    margin-inline-start: auto;
-  }
-
-  .md-timeline2-point-media-txt {
-    flex: 0 0 2.5em;
-  }
-  
-  .md-timeline2-point-media-figure-wrapper {
-    flex: 1 1 auto;
-
-    figure {
-      display: block;
-      aspect-ratio: 3 / 4;
-      position: relative;
-      overflow: hidden;
+    @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
       transform-origin: left center;
       height: 82dvh;
     }
-
-    img {
-      display: block;
-      height: 100%;
-      left: 0;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
   }
 
-  @media (max-width: 1280px) {
-
-
-.md-timeline2-point-content-gallery{
-  display: none;
-}
-.md-timeline2-point-title{
-  inset-block-start: 15%;
-	inset-inline-start: 0;
-}
-.md-timeline2-point-media-txt{
-  display: none;
-}
-.md-timeline2-point-media-figure-wrapper figure{
-  height: 66dvh;
-  transform-origin: right center;
-}
-
+  img {
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
   }
-
+}

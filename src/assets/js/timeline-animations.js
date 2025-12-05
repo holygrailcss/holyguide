@@ -8,6 +8,19 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // =============================================================================
+// CONFIGURACIÓN DE BREAKPOINTS
+// =============================================================================
+
+const BREAKPOINTS = {
+  small: 768,    // Hasta 767px
+  medium: 1280   // Desde 768px hasta 1279px
+};
+
+const isSmall = () => window.innerWidth < BREAKPOINTS.small;
+const isMedium = () => window.innerWidth >= BREAKPOINTS.small && window.innerWidth < BREAKPOINTS.medium;
+const isLarge = () => window.innerWidth >= BREAKPOINTS.medium;
+
+// =============================================================================
 // CONFIGURACIÓN DE ANIMACIONES
 // =============================================================================
 
@@ -17,6 +30,19 @@ const ANIMATION_CONFIG = {
   easeIn: 'power2.in',   // Easing cuando los elementos desaparecen
   easeOut: 'power2.out'  // Easing cuando los elementos aparecen
 };
+
+// Configuración de ScrollTrigger por breakpoint
+const SCROLL_TRIGGER_CONFIG = {
+  small: { start: 'center bottom-=33.3333%', end: 'center top+=33.3333%' },
+  medium: { start: 'center bottom-=16.6666%', end: 'center top+=16.6666%' },
+  large: { start: 'center bottom-=9%', end: 'center top+=9%' }
+};
+
+function getScrollTriggerConfig() {
+  if (isSmall()) return SCROLL_TRIGGER_CONFIG.small;
+  if (isMedium()) return SCROLL_TRIGGER_CONFIG.medium;
+  return SCROLL_TRIGGER_CONFIG.large;
+}
 
 // =============================================================================
 // VARIABLES GLOBALES
@@ -87,6 +113,7 @@ function animateTextOut(textElement) {
 
 /**
  * Crea la animación de la imagen principal que se escala y mueve según el scroll
+ * Diferente para small (< 768px), medium (768-1279px) y large (>= 1280px)
  */
 function createFigureAnimation(figure, item) {
   const timeline = gsap.timeline({
@@ -99,19 +126,49 @@ function createFigureAnimation(figure, item) {
     }
   });
 
-  // La imagen pasa por diferentes estados de escala y posición según el scroll
-  timeline
-    .fromTo(figure, 
-      { scale: 0.5, y: () => -figure.offsetHeight * 0.35, zIndex: 0 },
-      { scale: 0.625, y: () => -figure.offsetHeight * 0.27, zIndex: 0 }
-    )
-    .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.125, zIndex: 0 })
-    .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.063, zIndex: 1 })
-    .to(figure, { scale: 1, y: 0, zIndex: 2 })  // Estado central (más grande y visible)
-    .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.063, zIndex: 1 })
-    .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.125, zIndex: 0 })
-    .to(figure, { scale: 0.625, y: () => figure.offsetHeight * 0.27, zIndex: 0 })
-    .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.35, zIndex: 0 });
+  if (isSmall()) {
+    // ANIMACIÓN PARA SMALL (< 768px)
+    timeline
+      .fromTo(figure, 
+        { scale: 0.5, y: () => -figure.offsetHeight * 0.32, zIndex: 0, ease: 'none'},
+        { scale: 0.625, y: () => -figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' }
+      )
+      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.08, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
+      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.08, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.625, y: () => figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' });
+  } else if (isMedium()) {
+    // ANIMACIÓN PARA MEDIUM (768px - 1279px)
+    timeline
+      .fromTo(figure, 
+        { scale: 0.55, y: () => -figure.offsetHeight * 0.6, zIndex: 0 },
+        { scale: 0.675, y: () => -figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' }
+      )
+      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.18, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.064, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
+      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.064, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.18, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.675, y: () => figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.6, zIndex: 0, ease: 'none' });
+  } else {
+    // ANIMACIÓN PARA LARGE (>= 1280px)
+    timeline
+      .fromTo(figure, 
+        { scale: 0.5, y: () => -figure.offsetHeight * 0.35, zIndex: 0 },
+        { scale: 0.625, y: () => -figure.offsetHeight * 0.285, zIndex: 0, ease: 'none' }
+      )
+      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.135, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.063, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
+      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.063, zIndex: 1, ease: 'none' })
+      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.135, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.625, y: () => figure.offsetHeight * 0.285, zIndex: 0, ease: 'none' })
+      .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.35, zIndex: 0, ease: 'none' });
+  }
 }
 
 // =============================================================================
@@ -136,10 +193,11 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
   }
 
   // Creamos un trigger que detecta cuando el elemento entra en la vista
+  const triggerConfig = getScrollTriggerConfig();
   ScrollTrigger.create({
     trigger: item,
-    start: "center bottom-=9%",  // Cuando el centro del elemento está cerca del 9% desde abajo
-    end: "center top+=9%",        // Hasta que el centro está cerca del 9% desde arriba
+    start: triggerConfig.start,
+    end: triggerConfig.end,
     
     // Cuando el elemento entra en la vista (scroll hacia abajo)
     onEnter: () => {
