@@ -153,8 +153,8 @@
   @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
     max-width: 100%;
     margin-inline: auto;
-    width: calc(44dvh - $hg-spacer-400);
-    gap: $hg-spacer-500 calc(#{$hg-spacer-400} + #{$hg-spacer-50});
+    max-width: to-rem(440);
+    gap: $hg-spacer-400 $hg-spacer-600;
   }
 }
 
@@ -246,7 +246,7 @@
     }
 
     &.md-push-column--related {
-      grid-column: 14 / span 10;
+      grid-column: 13 / span 12;
     }
   }
 }

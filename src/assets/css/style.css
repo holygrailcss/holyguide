@@ -19242,8 +19242,8 @@ Cosas a tener en cuenta:
   .md-push-grid {
     max-width: 100%;
     margin-inline: auto;
-    width: calc(44dvh - 2rem);
-    gap: 2.5rem calc(2rem + 0.25rem);
+    max-width: 27.5rem;
+    gap: 2rem 3rem;
   }
 }
 
@@ -19322,7 +19322,7 @@ Cosas a tener en cuenta:
     grid-column: span 12;
   }
   .md-push-column.md-push-column--related {
-    grid-column: 14/span 10;
+    grid-column: 13/span 12;
   }
 }
 /* TYPES FIJOS */
