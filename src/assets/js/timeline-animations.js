@@ -33,7 +33,7 @@ const ANIMATION_CONFIG = {
 
 // Configuración de ScrollTrigger por breakpoint
 const SCROLL_TRIGGER_CONFIG = {
-  small: { start: 'center bottom-=33.3333%', end: 'center top+=33.3333%' },
+  small: { start: 'center bottom-=25%', end: 'center top+=25%' },
   medium: { start: 'center bottom-=16.6666%', end: 'center top+=16.6666%' },
   large: { start: 'center bottom-=9%', end: 'center top+=9%' }
 };
@@ -116,58 +116,95 @@ function animateTextOut(textElement) {
  * Diferente para small (< 768px), medium (768-1279px) y large (>= 1280px)
  */
 function createFigureAnimation(figure, item) {
+  
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: item,
       start: "center bottom+=100%",
       end: "center top-=100%",
       scrub: true,              // La animación sigue el scroll
-      invalidateOnRefresh: true
+      invalidateOnRefresh: true,
     }
   });
-
+  
   if (isSmall()) {
     // ANIMACIÓN PARA SMALL (< 768px)
     timeline
       .fromTo(figure, 
-        { scale: 0.5, y: () => -figure.offsetHeight * 0.32, zIndex: 0, ease: 'none'},
-        { scale: 0.625, y: () => -figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' }
+        { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 1, ease: 'none' },
+            { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 2, ease: 'none' }
       )
-      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.08, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
-      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.08, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.625, y: () => figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.32, zIndex: 0, ease: 'none' });
+                .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 3, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 4, ease: 'none'})
+                        .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.68, zIndex: 5, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => -figure.offsetHeight * 0.375, zIndex: 6, ease: 'none' })
+                                .to(figure, { scale: 0.55, y: () => -figure.offsetHeight * 0.227, zIndex: 7, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => -figure.offsetHeight * 0.23, zIndex: 8, ease: 'none' })
+                                        .to(figure, { scale: 0.85, y: () => -figure.offsetHeight * 0.0, zIndex: 9, ease: 'none' })
+                                        
+                                            .to(figure, { scale: 1, y: 0, zIndex: 10, ease: 'none' })  // Estado central (más grande y visible)
+                                        
+                                        .to(figure, { scale: 0.85, y: () => figure.offsetHeight * 0.0, zIndex: 9, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => figure.offsetHeight * 0.23, zIndex: 8, ease: 'none' })
+                                .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.227, zIndex: 7, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => figure.offsetHeight * 0.375, zIndex: 6, ease: 'none' })
+                        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.68, zIndex: 5, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 4, ease: 'none' })
+                .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 3, ease: 'none' })
+            .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 2, ease: 'none' })
+        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 1, ease: 'none'  });
   } else if (isMedium()) {
     // ANIMACIÓN PARA MEDIUM (768px - 1279px)
     timeline
       .fromTo(figure, 
-        { scale: 0.55, y: () => -figure.offsetHeight * 0.6, zIndex: 0 },
-        { scale: 0.675, y: () => -figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' }
+        { scale: 0.40, y: () => -figure.offsetHeight * 0.72, zIndex: 1, ease: 'none' },
+            { scale: 0.40, y: () => -figure.offsetHeight * 0.72, zIndex: 2, ease: 'none' }
       )
-      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.18, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.064, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
-      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.064, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.18, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.675, y: () => figure.offsetHeight * 0.3, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.6, zIndex: 0, ease: 'none' });
+                .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.72, zIndex: 3, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.61, zIndex: 4, ease: 'none'})
+                        .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.48, zIndex: 5, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => -figure.offsetHeight * 0.3, zIndex: 6, ease: 'none' }) // Ok
+                                .to(figure, { scale: 0.55, y: () => -figure.offsetHeight * 0.2, zIndex: 7, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => -figure.offsetHeight * 0.153, zIndex: 8, ease: 'none' }) // OK
+                                        .to(figure, { scale: 0.85, y: () => -figure.offsetHeight * 0.1, zIndex: 9, ease: 'none' })
+                                        
+                                            .to(figure, { scale: 1, y: 0, zIndex: 10, ease: 'none' })  // Estado central (más grande y visible)
+                                        
+                                        .to(figure, { scale: 0.85, y: () => figure.offsetHeight * 0.1, zIndex: 9, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => figure.offsetHeight * 0.153, zIndex: 8, ease: 'none' }) // OK
+                                .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.2, zIndex: 7, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => figure.offsetHeight * 0.3, zIndex: 6, ease: 'none' }) // Ok
+                        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.48, zIndex: 5, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.61, zIndex: 4, ease: 'none' })
+                .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.72, zIndex: 3, ease: 'none' })
+            .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.72, zIndex: 2, ease: 'none' })
+        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.72, zIndex: 1, ease: 'none'  });
   } else {
     // ANIMACIÓN PARA LARGE (>= 1280px)
     timeline
       .fromTo(figure, 
-        { scale: 0.5, y: () => -figure.offsetHeight * 0.35, zIndex: 0 },
-        { scale: 0.625, y: () => -figure.offsetHeight * 0.285, zIndex: 0, ease: 'none' }
+        { scale: 0.40, y: () => -figure.offsetHeight * 0.65, zIndex: 1, ease: 'none' },
+            { scale: 0.40, y: () => -figure.offsetHeight * 0.65, zIndex: 2, ease: 'none' }
       )
-      .to(figure, { scale: 0.75, y: () => -figure.offsetHeight * 0.135, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.875, y: () => -figure.offsetHeight * 0.063, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 1, y: 0, zIndex: 2, ease: 'none' })  // Estado central (más grande y visible)
-      .to(figure, { scale: 0.875, y: () => figure.offsetHeight * 0.063, zIndex: 1, ease: 'none' })
-      .to(figure, { scale: 0.75, y: () => figure.offsetHeight * 0.135, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.625, y: () => figure.offsetHeight * 0.285, zIndex: 0, ease: 'none' })
-      .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.35, zIndex: 0, ease: 'none' });
+                .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.65, zIndex: 3, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.487, zIndex: 4, ease: 'none' })
+                        .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.313, zIndex: 5, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => -figure.offsetHeight * 0.276, zIndex: 6, ease: 'none' }) // Ok
+                                .to(figure, { scale: 0.55, y: () => -figure.offsetHeight * 0.195, zIndex: 7, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => -figure.offsetHeight * 0.178, zIndex: 8, ease: 'none' }) // OK
+                                        .to(figure, { scale: 0.85, y: () => -figure.offsetHeight * 0.1, zIndex: 9, ease: 'none' })
+                                        
+                                            .to(figure, { scale: 1, y: 0, zIndex: 10, ease: 'none' })  // Estado central (más grande y visible)
+                                        
+                                        .to(figure, { scale: 0.85, y: () => figure.offsetHeight * 0.1, zIndex: 9, ease: 'none' })
+                                    .to(figure, { scale: 0.7, y: () => figure.offsetHeight * 0.178, zIndex: 8, ease: 'none' }) // OK
+                                .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.195, zIndex: 7, ease: 'none' })
+                            .to(figure, { scale: 0.4, y: () => figure.offsetHeight * 0.276, zIndex: 6, ease: 'none' }) // Ok
+                        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.313, zIndex: 5, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.487, zIndex: 4, ease: 'none' })
+                .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.65, zIndex: 3, ease: 'none' })
+            .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.65, zIndex: 2, ease: 'none' })
+        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.65, zIndex: 1, ease: 'none' });
   }
 }
 
@@ -291,9 +328,26 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
 // =============================================================================
 
 /**
+ * Calcula y asigna la variable CSS --md-timeline2-point-margin-top
+ */
+function setTimelineMarginVariable() {
+  const timelineList = document.querySelector('.md-timeline2-list');
+  const firstPoint = document.querySelector('.md-timeline2-point');
+  
+  if (timelineList && firstPoint) {
+    const firstPointHeight = firstPoint.offsetHeight;
+    const marginTopValue = firstPointHeight * -0.3;
+    timelineList.style.setProperty('--md-timeline2-point-margin-top', `${marginTopValue}px`);
+  }
+}
+
+/**
  * Inicializa todas las animaciones del timeline
  */
 function initTimelineAnimations() {
+  // Calcular y asignar variable CSS antes de cualquier animación
+  setTimelineMarginVariable();
+  
   // Buscar todos los elementos del timeline
   const timelineItems = gsap.utils.toArray('.md-timeline2-point');
   
@@ -314,7 +368,7 @@ function initTimelineAnimations() {
   animationContext = gsap.context(() => {
     timelineItems.forEach((item) => {
       // Buscar los elementos dentro de cada item
-      const figure = item.querySelector('.md-timeline2-point-media-figure');
+      const figure = item.querySelector('.md-timeline2-point-media');
       const title = item.querySelector('.md-timeline2-point-title');
       const galleryFigures = gsap.utils.toArray('.md-timeline2-point-content-gallery figure', item);
       const textContent = item.querySelector('.md-timeline2-point-content-text');
@@ -350,6 +404,7 @@ let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
+    setTimelineMarginVariable();
     initTimelineAnimations();
   }, 250);
 });

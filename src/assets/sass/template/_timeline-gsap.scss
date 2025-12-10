@@ -32,11 +32,9 @@ html {
 
 .md-timeline2-point-media-txt {
   font-size: to-rem(13);
-  display: none;
 
   @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
     flex: 0 0 2.5em;
-    display: inline-block;
   }
 }
 
@@ -48,8 +46,8 @@ html {
   list-style: none;
   margin: 0;
   min-height: 100dvh;
-  padding: 33.333dvh 0;
-
+  padding-block: 25dvh;
+  
   @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
     padding-block: 16.6666dvh;
   }
@@ -65,31 +63,10 @@ html {
   flex-flow: row nowrap;
   justify-content: flex-start;
   padding: 0;
-  margin-top: var(--md-timeline2-point-margin-top, 0);
 
   @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
     padding-inline-end: 8%;
-  }
-}
-
-.md-timeline2-point-title {
-  font-family: 'massimo-daily-regular';
-  flex: 1 0 36%;
-  font-size: to-rem(64);
-  line-height: 1.2;
-  padding-block-end: $hg-spacer-800;
-  padding-inline-start: $hg-spacer-100;
-  position: fixed;
-  inset-block: 15% auto; 
-  inset-inline: 0 auto;
-  
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    padding-inline-start: $hg-spacer-500;
-  }
-
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
-    inset-block: auto 0;
-    inset-inline: 26% auto;
+    margin-top: 0;
   }
 }
 
@@ -102,7 +79,7 @@ html {
   justify-content: flex-start;
   order: -100;
   padding-block-end: $hg-spacer-800;
-  padding-inline-start: $hg-spacer-100;
+  padding-inline-start: $hg-spacer-200;
   position: fixed;
   width: 50%;
   
@@ -112,18 +89,37 @@ html {
   }
 }
 
+.md-timeline2-point-title {
+  font-family: 'massimo-daily-regular';
+  font-size: to-rem(26);
+  line-height: 1.2;
+  
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    font-size: to-rem(64);
+    padding-block-end: $hg-spacer-800;
+    position: fixed;
+    inset-block: auto 0;
+    inset-inline: 26% auto;
+  }
+}
+
 .md-timeline2-point-content-text {
-  margin-block-start: $hg-spacer-500;
+  margin-block-start: $hg-spacer-200;
 }
 
 .md-timeline2-point-media {
-  flex: 0 0 38%;
+  flex: 0 0 auto;
   align-items: flex-end;
-  column-gap: $hg-spacer-250;
+  column-gap: $hg-spacer-100;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   margin-inline-start: auto;
+  transform-origin: right center;
+
+  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
+    column-gap: $hg-spacer-250;
+  }
 }
 
 
@@ -132,13 +128,16 @@ html {
 
   figure {
     display: block;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 2 / 4;
     position: relative;
     overflow: hidden;
-    height: 33.3333dvh;
-    transform-origin: right center;
+    height: 50dvh;
+    border-width: $hg-spacer-50 0 $hg-spacer-50 0;
+    border-style: solid;
+    border-color: $c-white transparent $c-white transparent;
     
     @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+      aspect-ratio: 3 / 4;
       height: 66.6666dvh;
     }
 
