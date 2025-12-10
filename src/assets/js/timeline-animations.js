@@ -179,18 +179,30 @@ function createFigureAnimation(figure, item) {
  * Configura las animaciones cuando los elementos entran o salen de la vista
  */
 function setupContentAnimations(item, title, galleryFigures, textContent) {
-  // Combinamos título e imágenes de galería (ambos tienen desplazamiento)
-  const elementsWithMovement = [title, ...galleryFigures].filter(Boolean);
-  
-  // Configuramos el estado inicial: elementos ocultos y desplazados
+  const titleMoves = isLarge();
+
+  const elementsWithMovement = [...galleryFigures];
+  const elementsWithFade = [];
+
+  if (title) {
+    if (titleMoves) {
+      elementsWithMovement.push(title);
+    } else {
+      elementsWithFade.push(title);
+    }
+  }
+
+  if (textContent) {
+    elementsWithFade.push(textContent);
+  }
+
   elementsWithMovement.forEach(element => {
     gsap.set(element, { y: "20dvh", opacity: 0 });
   });
-  
-  // El texto solo tiene opacidad (sin desplazamiento)
-  if (textContent) {
-    gsap.set(textContent, { opacity: 0 });
-  }
+
+  elementsWithFade.forEach(element => {
+    gsap.set(element, { opacity: 0 });
+  });
 
   // Creamos un trigger que detecta cuando el elemento entra en la vista
   const triggerConfig = getScrollTriggerConfig();
@@ -208,11 +220,14 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
         const delay = index * ANIMATION_CONFIG.staggerDelay;
         animateElementIn(element, delay);
       });
-      
+
       // Animar el texto después de los otros elementos
-      if (textContent) {
-        const delay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
-        animateTextIn(textContent, delay);
+      if (elementsWithFade.length) {
+        const baseDelay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
+        elementsWithFade.forEach((element, index) => {
+          const delay = baseDelay + index * ANIMATION_CONFIG.staggerDelay;
+          animateTextIn(element, delay);
+        });
       }
     },
     
@@ -224,9 +239,11 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
       elementsWithMovement.forEach(element => {
         animateElementOut(element, 'up');
       });
-      
-      if (textContent) {
-        animateTextOut(textContent);
+
+      if (elementsWithFade.length) {
+        elementsWithFade.forEach(element => {
+          animateTextOut(element);
+        });
       }
     },
     
@@ -240,10 +257,14 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
         const delay = index * ANIMATION_CONFIG.staggerDelay;
         animateElementIn(element, delay);
       });
-      
-      if (textContent) {
-        const delay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
-        animateTextIn(textContent, delay);
+
+      if (elementsWithFade.length) {
+        const baseDelay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
+        const reversedFade = [...elementsWithFade].reverse();
+        reversedFade.forEach((element, index) => {
+          const delay = baseDelay + index * ANIMATION_CONFIG.staggerDelay;
+          animateTextIn(element, delay);
+        });
       }
     },
     
@@ -255,9 +276,11 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
       elementsWithMovement.forEach(element => {
         animateElementOut(element, 'down');
       });
-      
-      if (textContent) {
-        animateTextOut(textContent);
+
+      if (elementsWithFade.length) {
+        elementsWithFade.forEach(element => {
+          animateTextOut(element);
+        });
       }
     }
   });
