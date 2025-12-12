@@ -398,10 +398,10 @@ ul {
   }
   @media (min-width: $break-lg) {
     padding: 16px;
+    border-bottom: var(--line-width) solid $c-primary;
     &:last-child {
       border-bottom: var(--line-width) solid $c-primary;
     }
-    border-bottom: var(--line-width) solid $c-primary;
     .stories-item-1 {
       width: 10%;
     }

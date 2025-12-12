@@ -24212,11 +24212,11 @@ html {
 
 .n1c-wrap {
   margin: 0;
-  gap: 1px;
-  grid-column-gap: 1px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
+  gap: 1px;
+  grid-column-gap: 1px;
 }
 .n1c-wrap .p-view {
   width: 100%;
@@ -24378,11 +24378,11 @@ html {
 
 .n1e-wrap {
   margin: 0;
-  gap: 1px;
-  grid-column-gap: 1px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
+  gap: 1px;
+  grid-column-gap: 1px;
 }
 .n1e-wrap .p-view {
   width: 100%;
@@ -24478,11 +24478,11 @@ html {
 
 .n1f-wrap {
   margin: 0;
-  gap: 1px;
-  grid-column-gap: 1px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
+  gap: 1px;
+  grid-column-gap: 1px;
 }
 .n1f-wrap .p-view {
   width: 100%;
@@ -24583,6 +24583,11 @@ html {
   gap: 0px;
   grid-column-gap: 0px;
 }
+.n2a-wrap .p-view {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
 @media (max-width: 767px) {
   .n2a-wrap li .card9-contents {
     padding-left: 8px;
@@ -24594,11 +24599,6 @@ html {
     padding-left: 12px;
     padding-right: 12px;
   }
-}
-.n2a-wrap .p-view {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
 }
 @media (min-width: 768px) {
   .n2a-wrap {
@@ -24677,9 +24677,9 @@ html {
 }
 
 .n2b-wrap {
-  margin: 0 8px;
   display: flex;
   justify-content: center;
+  margin: 0 8px;
 }
 @media (min-width: 768px) {
   .n2b-wrap {
@@ -24782,10 +24782,10 @@ html {
 
 .n2c-wrap {
   display: grid;
-  margin: 0;
   flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .n2c-wrap li:nth-child(odd) .card9-contents {
@@ -25084,10 +25084,10 @@ html {
 
 .n3b-wrap {
   display: grid;
-  margin: 0;
   flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .n3b-wrap li:nth-child(odd) .card9-contents {
@@ -25215,11 +25215,11 @@ html {
 
 .n4a-wrap {
   margin: 0;
-  gap: 1px;
-  grid-column-gap: 1px;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  display: grid;
+  gap: 1px;
+  grid-column-gap: 1px;
 }
 .n4a-wrap .p-view {
   width: 100%;
@@ -25330,10 +25330,10 @@ html {
 
 .n4e-wrap {
   display: grid;
-  margin: 0;
   flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
+  margin: 0;
 }
 @media (max-width: 767px) {
   .n4e-wrap li:nth-child(odd) .card9-contents {
@@ -25541,11 +25541,11 @@ html {
 
 .n6b-wrap {
   margin: 0;
-  gap: 1px;
-  grid-column-gap: 1px;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  display: grid;
+  gap: 1px;
+  grid-column-gap: 1px;
 }
 .n6b-wrap .p-view {
   width: 100%;

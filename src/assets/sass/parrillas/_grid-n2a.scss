@@ -5,12 +5,11 @@
 }
 .n2a-wrap {
   @include m-body-0;
-  @include sp-contents-xs;
-  @include sp-contents-sm;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @include gap-0;
+  @include sp-contents-xs;
+  @include sp-contents-sm;
 
   @media (min-width: $break-sm) {
     flex-direction: row;

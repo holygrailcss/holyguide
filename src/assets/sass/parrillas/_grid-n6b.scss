@@ -6,14 +6,12 @@
 }
 .n6b-wrap {
   @include m-body-0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   @include gap-1;
   @include sp-contents-xs;
   @include sp-contents-sm;
-
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-
-  display: grid;
   @media (min-width: $break-md) {
     grid-template-columns: repeat(6, 1fr);
   }

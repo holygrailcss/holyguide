@@ -5,9 +5,9 @@
   @include sp-wraps(".n2b");
 }
 .n2b-wrap {
-  @include m-body;
   display: flex;
   justify-content: center;
+  @include m-body;
   @include gap-20;
 
   li:first-child {

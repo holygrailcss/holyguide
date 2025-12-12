@@ -5,11 +5,11 @@
 }
 .n3b-wrap {
   display: grid;
-  @include m-body-bleed;
-  @include sp-contents-xs-1;
   flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
+  @include m-body-bleed;
+  @include sp-contents-xs-1;
   @media (min-width: $break-sm) {
     @include sp-contents-sm-3;
     grid-template-columns: repeat(3, 1fr);

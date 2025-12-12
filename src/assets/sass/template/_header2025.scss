@@ -280,11 +280,11 @@
   
   .dark-menu {
     .header-button-hamburger {
+      color: $c-primary;
+      
       button {
         color: $c-primary;
       }
-  
-      color: $c-primary;
   
       button path {
         fill: $c-primary;
@@ -304,11 +304,11 @@
   
   .dark-login {
     .header-button-username {
+      color: $c-primary;
+      
       button {
         color: $c-primary;
       }
-  
-      color: $c-primary;
   
       path {
         fill: $c-primary;
@@ -318,11 +318,11 @@
   
   .dark-basket {
     .header-button-cart {
+      color: $c-primary;
+      
       button {
         color: $c-primary;
       }
-  
-      color: $c-primary;
   
       path {
         fill: $c-primary;
@@ -332,11 +332,11 @@
   
   .dark-search {
     .header-button-search {
+      color: $c-primary;
+      
       button {
         color: $c-primary;
       }
-  
-      color: $c-primary;
   
       path {
         fill: $c-primary;
@@ -364,11 +364,11 @@
   
   .white-login {
     .header-button-username {
+      color: $c-white;
+      
       button {
         color: $c-white;
       }
-  
-      color: $c-white;
   
       path {
         fill: $c-white;
@@ -378,11 +378,11 @@
   
   .white-basket {
     .header-button-cart {
+      color: $c-white;
+      
       button {
         color: $c-white;
       }
-  
-      color: $c-white;
   
       path {
         fill: $c-white;
@@ -392,11 +392,11 @@
   
   .white-search {
     .header-button-search {
+      color: $c-white;
+      
       button {
         color: $c-white;
       }
-  
-      color: $c-white;
   
       path {
         fill: $c-white;

@@ -5,12 +5,12 @@
 }
 .n1c-wrap {
   @include m-body-0;
-  @include gap-1;
-  @include sp-contents-xs;
-  @include sp-contents-sm;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
+  @include gap-1;
+  @include sp-contents-xs;
+  @include sp-contents-sm;
 }
 .n1c-item {
   grid-column: 1 / span 12;

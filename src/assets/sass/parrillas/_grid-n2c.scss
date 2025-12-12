@@ -6,12 +6,11 @@
 }
 .n2c-wrap {
   display: grid;
-  @include m-body-bleed;
-  @include sp-contents-xs-1;
-
   flex-wrap: wrap;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 8px;
+  @include m-body-bleed;
+  @include sp-contents-xs-1;
   @media (min-width: $break-sm) {
     margin-inline: 10%;
     grid-template-columns: repeat(2, 1fr);

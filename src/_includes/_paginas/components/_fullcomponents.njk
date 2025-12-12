@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+<section class="mb-32 mt-32">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="main-content innermarkdown">
+        {{ content | safe }}
+        
+        {# Lista de tokens disponibles #}
+        {% set tokenList = [
+          'drawer',
+          'fichaswiper',
+          'input',
+          'minificha',
+          'mktspot',
+          'modals',
+          'producto',
+          'productview',
+          'store-list',
+          'toast'
+        ] %}
+        
+        <div class="grid-4 grid-gap-16">
+          {% for tokenName in tokenList %}
+            <div class="mb-16">
+              {% include '_tokens/_components/' + tokenName + '.njk' %}
+            </div>
+          {% endfor %}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
