@@ -78,7 +78,7 @@ html {
   inset-inline-start: 0;
   justify-content: flex-start;
   order: -100;
-  padding-block-end: $hg-spacer-800;
+  padding-block-end: $hg-spacer-200;
   padding-inline-start: $hg-spacer-200;
   position: fixed;
   width: 50%;
@@ -97,6 +97,7 @@ html {
   @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
     font-size: to-rem(64);
     padding-block-end: $hg-spacer-800;
+    padding-inline-start: $hg-spacer-600;
     position: fixed;
     inset-block: auto 0;
     inset-inline: 26% auto;
@@ -105,6 +106,11 @@ html {
 
 .md-timeline2-point-content-text {
   margin-block-start: $hg-spacer-200;
+  min-height: to-rem(200);
+  
+  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    min-height: to-rem(120);
+  }
 }
 
 .md-timeline2-point-media {

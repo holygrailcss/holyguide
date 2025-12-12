@@ -25,8 +25,8 @@ const isLarge = () => window.innerWidth >= BREAKPOINTS.medium;
 // =============================================================================
 
 const ANIMATION_CONFIG = {
-  duration: 0.25,        // Duración de la animación en segundos
-  staggerDelay: 0.1,     // Retraso entre cada elemento (efecto cascada)
+  duration: 0.2,        // Duración de la animación en segundos
+  staggerDelay: 0,     // Retraso entre cada elemento (efecto cascada)
   easeIn: 'power2.in',   // Easing cuando los elementos desaparecen
   easeOut: 'power2.out'  // Easing cuando los elementos aparecen
 };
@@ -89,8 +89,8 @@ function animateTextIn(textElement, delay = 0) {
   gsap.killTweensOf(textElement);
   gsap.to(textElement, {
     opacity: 1,              // Solo cambia la opacidad
-    duration: ANIMATION_CONFIG.duration,
-    ease: ANIMATION_CONFIG.easeOut,
+    duration: 0,
+    ease: "none",
     delay: delay
   });
 }
@@ -102,8 +102,8 @@ function animateTextOut(textElement) {
   gsap.killTweensOf(textElement);
   gsap.to(textElement, {
     opacity: 0,              // Solo cambia la opacidad
-    duration: ANIMATION_CONFIG.duration,
-    ease: ANIMATION_CONFIG.easeIn
+    duration: 0,
+    ease: "none"
   });
 }
 
@@ -216,17 +216,11 @@ function createFigureAnimation(figure, item) {
  * Configura las animaciones cuando los elementos entran o salen de la vista
  */
 function setupContentAnimations(item, title, galleryFigures, textContent) {
-  const titleMoves = isLarge();
-
   const elementsWithMovement = [...galleryFigures];
   const elementsWithFade = [];
 
   if (title) {
-    if (titleMoves) {
-      elementsWithMovement.push(title);
-    } else {
-      elementsWithFade.push(title);
-    }
+    elementsWithFade.push(title);
   }
 
   if (textContent) {
@@ -234,7 +228,7 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
   }
 
   elementsWithMovement.forEach(element => {
-    gsap.set(element, { y: "20dvh", opacity: 0 });
+    gsap.set(element, { y: "10dvh", opacity: 0 });
   });
 
   elementsWithFade.forEach(element => {
