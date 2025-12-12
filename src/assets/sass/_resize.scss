@@ -3,15 +3,22 @@
   overflow: hidden;
   min-height: 400px;
   display: flex;
-  padding: 0 0 50px;
+  padding: 20px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 
   box-sizing: border-box;
   flex-direction: column;
 
-  width: calc(100vw - 350px - 17%);
+  width: 100%;
   margin-left: 0;
+
+ @media (min-width: $break-sm) {
+  padding: 0 0 50px;
+  width: calc(100vw - 350px - 17%);
+ }
+
+
 }
 
 .resize-resolution,
