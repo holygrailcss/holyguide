@@ -120,6 +120,7 @@ function createFigureAnimation(figure, item) {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: item,
+      scroller: ".md-timeline2-list",
       start: "center bottom+=100%",
       end: "center top-=100%",
       scrub: true,              // La animación sigue el scroll
@@ -239,6 +240,7 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
   const triggerConfig = getScrollTriggerConfig();
   ScrollTrigger.create({
     trigger: item,
+    scroller: ".md-timeline2-list",
     start: triggerConfig.start,
     end: triggerConfig.end,
     
