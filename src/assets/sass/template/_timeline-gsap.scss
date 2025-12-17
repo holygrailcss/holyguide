@@ -79,11 +79,11 @@ html {
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
-  inset-block-end: 0;
+  inset-block-start: 0;
   inset-inline-start: 0;
   justify-content: flex-start;
   order: -100;
-  padding-block-end: $hg-spacer-200;
+  padding-block-start: $hg-spacer-200;
   padding-inline-start: $hg-spacer-200;
   position: fixed;
   width: 50%;
@@ -91,6 +91,8 @@ html {
   @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
     width: 26%;
     padding-inline-start: $hg-spacer-500;
+    inset-block-start: auto;
+    inset-block-end: 0;
   }
 }
 
