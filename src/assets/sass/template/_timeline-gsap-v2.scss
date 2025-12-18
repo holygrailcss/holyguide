@@ -7,7 +7,7 @@ html {
   scroll-behavior: auto !important;
 }
 
-.md-timeline-point-content-gallery {
+.md-timeline2-point-content-gallery {
   display: none;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -30,7 +30,7 @@ html {
   }
 }
 
-.md-timeline-point-media-txt {
+.md-timeline2-point-media-txt {
   font-size: to-rem(13);
 
   @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
@@ -38,7 +38,7 @@ html {
   }
 }
 
-.md-timeline-list {
+.md-timeline2-list {
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
@@ -46,7 +46,7 @@ html {
   list-style: none;
   margin: 0;
   min-height: 100vh;
-  padding-block: 25vh;
+  padding-block: 16.6666vh;
  
   position: fixed;
   width: 100%;
@@ -62,7 +62,7 @@ html {
   }
 }
 
-.md-timeline-point {
+.md-timeline2-point {
   align-items: flex-end;
   display: flex;
   flex-flow: row nowrap;
@@ -75,7 +75,7 @@ html {
   }
 }
 
-.md-timeline-point-content {
+.md-timeline2-point-content {
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
@@ -86,7 +86,7 @@ html {
   padding-block-start: $hg-spacer-200;
   padding-inline-start: $hg-spacer-200;
   position: fixed;
-  width: 50%;
+  width: 40%;
   
   @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
     width: 26%;
@@ -96,7 +96,7 @@ html {
   }
 }
 
-.md-timeline-point-title {
+.md-timeline2-point-title {
   font-family: 'massimo-daily-regular';
   font-size: to-rem(26);
   line-height: 1.2;
@@ -111,7 +111,7 @@ html {
   }
 }
 
-.md-timeline-point-content-text {
+.md-timeline2-point-content-text {
   margin-block-start: $hg-spacer-200;
   min-height: to-rem(200);
   
@@ -120,7 +120,7 @@ html {
   }
 }
 
-.md-timeline-point-media {
+.md-timeline2-point-media {
   flex: 0 0 auto;
   align-items: flex-end;
   column-gap: $hg-spacer-100;
@@ -136,7 +136,7 @@ html {
 }
 
 
-.md-timeline-point-media-figure-wrapper {
+.md-timeline2-point-media-figure-wrapper {
   flex: 1 1 auto;
 
   figure {
@@ -144,8 +144,9 @@ html {
     aspect-ratio: 2 / 4;
     position: relative;
     overflow: hidden;
-    height: 50vh;
+    height: 66.6666vh;
     border-width: $hg-spacer-50 0 $hg-spacer-50 0;
+    border-width: 0;
     border-style: solid;
     border-color: $c-white transparent $c-white transparent;
     

@@ -33,7 +33,7 @@ const ANIMATION_CONFIG = {
 
 // Configuración de ScrollTrigger por breakpoint
 const SCROLL_TRIGGER_CONFIG = {
-  small: { start: 'center bottom-=25%', end: 'center top+=25%' },
+  small: { start: 'center bottom-=16.6666%', end: 'center top+=16.6666%' },
   medium: { start: 'center bottom-=16.6666%', end: 'center top+=16.6666%' },
   large: { start: 'center bottom-=9%', end: 'center top+=9%' }
 };
@@ -120,7 +120,7 @@ function createFigureAnimation(figure, item) {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: item,
-      scroller: ".md-timeline-list",
+      scroller: ".md-timeline2-list",
       start: "center bottom+=100%",
       end: "center top-=100%",
       scrub: true,              // La animación sigue el scroll
@@ -132,28 +132,28 @@ function createFigureAnimation(figure, item) {
     // ANIMACIÓN PARA SMALL (< 768px)
     timeline
       .fromTo(figure, 
-        { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 1, ease: 'none' },
-            { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 2, ease: 'none' }
+        { scale: 0.40, y: () => -figure.offsetHeight * 0.6, zIndex: 1, ease: 'none' },
+            { scale: 0.40, y: () => -figure.offsetHeight * 0.6, zIndex: 2, ease: 'none' }
       )
-                .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 3, ease: 'none' })
-                    .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.75, zIndex: 4, ease: 'none'})
-                        .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.68, zIndex: 5, ease: 'none' })
-                            .to(figure, { scale: 0.4, y: () => -figure.offsetHeight * 0.375, zIndex: 6, ease: 'none' })
-                                .to(figure, { scale: 0.55, y: () => -figure.offsetHeight * 0.227, zIndex: 7, ease: 'none' })
-                                    .to(figure, { scale: 0.7, y: () => -figure.offsetHeight * 0.23, zIndex: 8, ease: 'none' })
-                                        .to(figure, { scale: 0.85, y: () => -figure.offsetHeight * 0.0, zIndex: 9, ease: 'none' })
+                .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.6, zIndex: 3, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => -figure.offsetHeight * 0.5, zIndex: 4, ease: 'none'})
+                        .to(figure, { scale: 0.5, y: () => -figure.offsetHeight * 0.38, zIndex: 5, ease: 'none' })
+                            .to(figure, { scale: 0.6, y: () => -figure.offsetHeight * 0.2, zIndex: 6, ease: 'none' })
+                                .to(figure, { scale: 0.7, y: () => -figure.offsetHeight * 0.12, zIndex: 7, ease: 'none' })
+                                    .to(figure, { scale: 0.8, y: () => -figure.offsetHeight * 0.1, zIndex: 8, ease: 'none' })
+                                        .to(figure, { scale: 0.9, y: () => -figure.offsetHeight * 0.08, zIndex: 9, ease: 'none' })
                                         
                                             .to(figure, { scale: 1, y: 0, zIndex: 10, ease: 'none' })  // Estado central (más grande y visible)
                                         
-                                        .to(figure, { scale: 0.85, y: () => figure.offsetHeight * 0.0, zIndex: 9, ease: 'none' })
-                                    .to(figure, { scale: 0.7, y: () => figure.offsetHeight * 0.23, zIndex: 8, ease: 'none' })
-                                .to(figure, { scale: 0.55, y: () => figure.offsetHeight * 0.227, zIndex: 7, ease: 'none' })
-                            .to(figure, { scale: 0.4, y: () => figure.offsetHeight * 0.375, zIndex: 6, ease: 'none' })
-                        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.68, zIndex: 5, ease: 'none' })
-                    .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 4, ease: 'none' })
-                .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 3, ease: 'none' })
-            .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 2, ease: 'none' })
-        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.75, zIndex: 1, ease: 'none'  });
+                                        .to(figure, { scale: 0.9, y: () => figure.offsetHeight * 0.08, zIndex: 9, ease: 'none' })
+                                    .to(figure, { scale: 0.8, y: () => figure.offsetHeight * 0.1, zIndex: 8, ease: 'none' })
+                                .to(figure, { scale: 0.7, y: () => figure.offsetHeight * 0.12, zIndex: 7, ease: 'none' })
+                            .to(figure, { scale: 0.6, y: () => figure.offsetHeight * 0.2, zIndex: 6, ease: 'none' })
+                        .to(figure, { scale: 0.5, y: () => figure.offsetHeight * 0.38, zIndex: 5, ease: 'none' })
+                    .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.5, zIndex: 4, ease: 'none' })
+                .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.6, zIndex: 3, ease: 'none' })
+            .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.6, zIndex: 2, ease: 'none' })
+        .to(figure, { scale: 0.40, y: () => figure.offsetHeight * 0.6, zIndex: 1, ease: 'none'  });
   } else if (isMedium()) {
     // ANIMACIÓN PARA MEDIUM (768px - 1279px)
     timeline
@@ -240,7 +240,7 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
   const triggerConfig = getScrollTriggerConfig();
   ScrollTrigger.create({
     trigger: item,
-    scroller: ".md-timeline-list",
+    scroller: ".md-timeline2-list",
     start: triggerConfig.start,
     end: triggerConfig.end,
     
@@ -324,16 +324,16 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
 // =============================================================================
 
 /**
- * Calcula y asigna la variable CSS --md-timeline-point-margin-top
+ * Calcula y asigna la variable CSS --md-timeline2-point-margin-top
  */
 function setTimelineMarginVariable() {
-  const timelineList = document.querySelector('.md-timeline-list');
-  const firstPoint = document.querySelector('.md-timeline-point');
+  const timelineList = document.querySelector('.md-timeline2-list');
+  const firstPoint = document.querySelector('.md-timeline2-point');
   
   if (timelineList && firstPoint) {
     const firstPointHeight = firstPoint.offsetHeight;
     const marginTopValue = firstPointHeight * -0.3;
-    timelineList.style.setProperty('--md-timeline-point-margin-top', `${marginTopValue}px`);
+    timelineList.style.setProperty('--md-timeline2-point-margin-top', `${marginTopValue}px`);
   }
 }
 
@@ -345,7 +345,7 @@ function initTimelineAnimations() {
   setTimelineMarginVariable();
   
   // Buscar todos los elementos del timeline
-  const timelineItems = gsap.utils.toArray('.md-timeline-point');
+  const timelineItems = gsap.utils.toArray('.md-timeline2-point');
   
   // Si no hay elementos, no hacer nada
   if (!timelineItems.length) return;
@@ -364,10 +364,10 @@ function initTimelineAnimations() {
   animationContext = gsap.context(() => {
     timelineItems.forEach((item) => {
       // Buscar los elementos dentro de cada item
-      const figure = item.querySelector('.md-timeline-point-media');
-      const title = item.querySelector('.md-timeline-point-title');
-      const galleryFigures = gsap.utils.toArray('.md-timeline-point-content-gallery figure', item);
-      const textContent = item.querySelector('.md-timeline-point-content-text');
+      const figure = item.querySelector('.md-timeline2-point-media');
+      const title = item.querySelector('.md-timeline2-point-title');
+      const galleryFigures = gsap.utils.toArray('.md-timeline2-point-content-gallery figure', item);
+      const textContent = item.querySelector('.md-timeline2-point-content-text');
       
       // Si no hay imagen principal, saltar este item
       if (!figure) return;
