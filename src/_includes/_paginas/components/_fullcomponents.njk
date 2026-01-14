@@ -1,6 +1,23 @@
 ---
 layout: base.njk
 ---
+{% import "_macros/_feel.njk" as feel %}
+
+<style>
+  /* Ocultar todo el código y títulos - solo mostrar elementos visuales */
+  .fullcomponents-only .code-zone,
+  .fullcomponents-only pre,
+  .fullcomponents-only code,
+  .fullcomponents-only h2,
+  .fullcomponents-only h3,
+  .fullcomponents-only .title-m,
+  .fullcomponents-only .title-l,
+  .fullcomponents-only .title-s,
+  .fullcomponents-only .check-new,
+  .fullcomponents-only .check-rtl {
+    display: none !important;
+  }
+</style>
 
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
@@ -9,33 +26,334 @@ layout: base.njk
 <section class="mb-32 mt-32">
   <div class="row">
     <div class="col-xs-12">
-      <div class="main-content innermarkdown">
+      <div class="main-content innermarkdown fullcomponents-only">
         {{ content | safe }}
         
-        {# Lista de tokens disponibles #}
-        {% set tokenList = [
-          'drawer',
-          'fichaswiper',
-          'input',
-          'minificha',
-          'mktspot',
-          'modals',
-          'producto',
-          'productview',
-          'store-list',
-          'toast'
-        ] %}
-        
-        <div class="grid-4 grid-gap-16">
-          {% for tokenName in tokenList %}
-            <div class="mb-16">
-              {% include '_tokens/_components/' + tokenName + '.njk' %}
+        {# Todos los componentes en una grilla, solo visuales #}
+        <div class="grid-4 grid-gap-16 mb-64">
+          
+          {# Banners #}
+          <div class="mb-16">
+            <div class="bg-warning is-flex p-16">
+              <p class="title-m">Banner warning</p>
             </div>
-          {% endfor %}
+          </div>
+          <div class="mb-16">
+            <div class="bg-info is-flex p-16">
+              <p class="title-m">Banner info</p>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="mktspot has-ico-post">
+              <div class="mktspot-content">
+                <p class="mktspot-inner text-center title-m">VENTA EXCLUSIVA</p>
+              </div>
+              <svg-icon src="close-s">
+                <div class="ico-post">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round"></path>
+                  </svg>
+                </div>
+              </svg-icon>
+            </div>
+          </div>
+          
+          {# Buttons #}
+          <div class="mb-16">
+            <button class="btn btn-primary">Primary</button>
+          </div>
+          <div class="mb-16">
+            <button class="btn btn-secondary">Secondary</button>
+          </div>
+          <div class="mb-16">
+            <button class="btn btn-tertiary">Tertiary</button>
+          </div>
+          <div class="mb-16">
+            <button class="btn btn-link">Link</button>
+          </div>
+          
+          {# Checkbox #}
+          <div class="mb-16">
+            <div class="checkbox-item-box">
+              <div class="checkbox-item">
+                <input id="checkbox_1" type="checkbox" />
+                <label for="checkbox_1">
+                  <i as="label" class="icon">
+                    <svg-icon src="check-mini">
+                      <div>
+                        <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                        </svg>
+                      </div>
+                    </svg-icon>
+                  </i>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="checkbox-item">
+              <input id="checkbox_2" type="checkbox">
+              <label for="checkbox_2">
+                <i as="label" class="icon">
+                  <svg-icon src="check-mini">
+                    <div>
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05823 0.198273L9.69185 0.801721L3.5417 7.25937L0.308228 3.86422L0.941848 3.26077L3.5417 5.99062L9.05823 0.198273Z" fill="white"></path>
+                      </svg>
+                    </div>
+                  </svg-icon>
+                </i>
+                <span class="title-m">checkbox-item <a href="#">legal text</a></span>
+              </label>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="checkbox-item-2">
+              <input id="checkbox18" name="checkbox18" type="checkbox" class="ng-valid" />
+              <label for="checkbox18">
+                <div class="checkbox-circle"></div>
+                <span class="theta">checkbox-item-2</span>
+              </label>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="checkbox-radio">
+              <input id="radio1" name="gender" type="radio" value="F" />
+              <label for="radio1">
+                <i class="ico-radio"></i>
+                <span class="title-m">checkbox-radio</span>
+              </label>
+            </div>
+            <div class="checkbox-radio">
+              <input id="radio2" name="gender" type="radio" value="M" />
+              <label for="radio2">
+                <i class="ico-radio"></i>
+                <span class="title-m">checkbox-radio</span>
+              </label>
+            </div>
+          </div>
+          
+          {# Datalist #}
+          <div class="mb-16">
+            <div class="form-input-label-2 datalist">
+              <input type="text" list="statecodes" id="statecode" class="input" placeholder="Provincia" />
+              <label for="statecode">Provincia</label>
+              <datalist id="statecodes">
+                <option value="A CORUÑA">A CORUÑA</option>
+                <option value="ALAVA">ALAVA</option>
+                <option value="ALBACETE">ALBACETE</option>
+              </datalist>
+            </div>
+          </div>
+          
+          {# Input #}
+          <div class="mb-16">
+            <div class="form-input-label-2">
+              <input type="text" id="input1" class="input" placeholder="Input básico" />
+              <label for="input1">Input básico</label>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="form-input-label-2 is-error">
+              <input type="text" id="input2" class="input" placeholder="Input con error" />
+              <label for="input2">Input con error</label>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="form-input-label-2">
+              <input type="password" id="input3" class="input" placeholder="Password" />
+              <label for="input3">Password</label>
+            </div>
+          </div>
+          
+          {# Links #}
+          <div class="mb-16">
+            <a href="#" class="link-line">Link básico</a>
+          </div>
+          <div class="mb-16">
+            <a href="#" class="link-raw">Link con línea</a>
+          </div>
+          
+          {# List #}
+          <div class="mb-16">
+            <ul class="list-clear">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+            </ul>
+          </div>
+          <div class="mb-16">
+            <ul class="list-inline">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+            </ul>
+          </div>
+          <div class="mb-16">
+            <ul class="list-disc">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+          
+          {# Productview - solo el contenido visual #}
+          <div class="mb-16">
+            <div class="product-view">
+              <div class="product-image">
+                <img src="https://holygrailcss.github.io/assets/placeholder/2-1.jpg" alt="Product" />
+              </div>
+            </div>
+          </div>
+          
+          {# Select #}
+          <div class="mb-16">
+            <div class="select">
+              <select>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="select select-flat">
+              <select>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+              </select>
+            </div>
+          </div>
+          
+          {# Tabs2 #}
+          <div class="mb-16">
+            <div class="tabs2">
+              <ul>
+                <li class="is-active"><span class="tab">Tab 1</span></li>
+                <li><span class="tab">Tab 2</span></li>
+                <li><span class="tab">Tab 3</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mb-16">
+            <div class="tabs2 is-center">
+              <ul>
+                <li class="is-active"><a class="tab">Tab 1</a></li>
+                <li><a class="tab">Tab 2</a></li>
+                <li><a class="tab">Tab 3</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          {# Tags #}
+          <div class="mb-16">
+            <span class="tag-alert">Alert</span>
+          </div>
+          <div class="mb-16">
+            <span class="tag-info">Info</span>
+          </div>
+          <div class="mb-16">
+            <span class="tag-valid">Valid</span>
+          </div>
+          <div class="mb-16">
+            <span class="tag-feel">Feel</span>
+          </div>
+          
+          {# Tooltip #}
+          <div class="mb-16">
+            <div class="has-tooltip">
+              <span>Hover me</span>
+              <div class="tooltip-sm">Tooltip text</div>
+            </div>
+          </div>
+          
+          {# Feel Card #}
+          <div class="mb-16">
+            {% call feel.feelCard('') %}{% endcall %}
+          </div>
+          
+          {# Marketing spot - contenido visual extraído #}
+          <div class="mb-16">
+            <div class="mktspot has-ico-post">
+              <div class="mktspot-content">
+                <p class="mktspot-inner text-center title-m">VENTA EXCLUSIVA EL 02/02</p>
+              </div>
+              <svg-icon src="close-s">
+                <div class="ico-post">
+                  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4.81885L4 12.8188M12 12.8188L4 4.81885" stroke="#000000" stroke-miterlimit="10" stroke-linecap="round"></path>
+                  </svg>
+                </div>
+              </svg-icon>
+            </div>
+          </div>
+          
+          {# Modals - contenido visual extraído #}
+          <div class="mb-16">
+            <div class="modal modalx-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Modal</h3>
+                  <button class="btn btn-link">×</button>
+                </div>
+                <div class="modal-body">
+                  <p>Contenido del modal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {# Store list - contenido visual extraído #}
+          <div class="mb-16">
+            <div class="store-list w-100">
+              <div class="is-flex bg-line py-16">
+                <div class="flex-auto px-8">
+                  <div class="title-s mb-8">A CORUÑA</div>
+                  <div class="title-s">CC MYANMAR, LOC</div>
+                </div>
+                <div class="px-8">
+                  <div class="title-s">WOMEN & MEN</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {# Toast - contenido visual extraído #}
+          <div class="mb-16">
+            <div class="toast appear is-flex text-m">
+              <div>TOAST con clase appear</div>
+              <div>
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.20711 0.5L4.20711 3.5L7.20711 0.5L7.91421 1.20711L4.91421 4.20711L7.91421 7.20711L7.20711 7.91421L4.20711 4.91421L1.20711 7.91421L0.5 7.20711L3.5 4.20711L0.5 1.20711L1.20711 0.5Z" fill="white"/>
+                </svg>
+                <div class="text-underline">VER LISTA</div>
+              </div>
+            </div>
+          </div>
+          
+          {# Drawer - contenido visual extraído #}
+          <div class="mb-16">
+            <div class="drawer">
+              <div class="drawer-header">
+                <div class="drawer-title">Título del drawer</div>
+                <button type="button" class="btn btn-link" aria-label="Close">×</button>
+              </div>
+              <div class="drawer-body">
+                <p>Contenido del drawer</p>
+              </div>
+              <div class="drawer-footer">
+                <button class="btn btn-secondary btn--full">Cancelar</button>
+                <button class="btn btn-primary btn--full">Aceptar</button>
+              </div>
+            </div>
+          </div>
+          
         </div>
         
       </div>
     </div>
   </div>
 </section>
-

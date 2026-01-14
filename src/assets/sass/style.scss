@@ -38,6 +38,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./_brands.scss";
 @import "./_resize.scss";
 @import "./_dummyproduct.scss";
+@import "./_aspect-ratios.scss";
 
 @import "./theme.scss";
 @import "parrillas/_all.scss";

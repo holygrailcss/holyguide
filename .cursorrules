@@ -1,11 +1,13 @@
 # Reglas de Cursor para este proyecto
 
 ## Idioma
+
 - Todos los mensajes de commit deben estar en español
 - Las respuestas y explicaciones deben estar en español
 - Los comentarios en código deben estar en español cuando sea apropiado
 
 ## Mensajes de Commit
+
 - Los mensajes de commit generados por la IA deben estar siempre en español
 - Usar formato: "tipo: descripción breve en español"
 - Ejemplos:
@@ -14,8 +16,8 @@
   - "refactor: reorganizar estructura de archivos"
 
 ## Comunicación
+
 - Responder siempre en español
 - Explicar conceptos técnicos en español
 - Mantener un tono profesional pero claro
 - Explicar donde afecta
-

@@ -1,0 +1,299 @@
+---
+layout: base.njk
+---
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+<div class="main-content innermarkdown">
+  {{ content | safe }}
+</div>
+
+<div class="main-content">
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <h2 class="h2 mb-32 mt-64">Comparación visual de ratios</h2>
+        
+        <div class="grid-2 grid-gap-32 mb-64">
+          <div>
+            <h3 class="title-l mb-16">Ratio 2:3</h3>
+            <p class="title-m mb-16">Contenedor con clase <code>.aspect-2-3</code> (usa CSS aspect-ratio)</p>
+            <div class="aspect-2-3" style="background-color: #f0f0f0; border: 2px solid #333;">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                2:3
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="title-l mb-16">Ratio 3:4</h3>
+            <p class="title-m mb-16">Contenedor con clase <code>.aspect-3-4</code> (usa CSS aspect-ratio)</p>
+            <div class="aspect-3-4" style="background-color: #f0f0f0; border: 2px solid #333;">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                3:4
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Ejemplo: Imagen 3:4 en contenedor 2:3</h2>
+        <p class="title-m mb-32">Cuando insertamos una imagen con ratio 3:4 dentro de un contenedor con ratio 2:3, la imagen se recortará o se ajustará según el método de ajuste utilizado.</p>
+        <p class="title-m mb-32" style="background-color: #fff3cd; padding: 16px; border-left: 4px solid #ffc107;">
+          <strong>¿Por qué se recorta?</strong> El contenedor 2:3 es más estrecho (ratio 0.666) que la imagen 3:4 (ratio 0.75). La imagen 3:4 es un 12.5% más ancha que el contenedor 2:3.
+        </p>
+
+        <div class="grid-2 grid-gap-32 mb-64">
+          <div>
+            <h3 class="title-l mb-16">Con <code>object-fit: cover</code></h3>
+            <p class="title-m mb-16">La imagen llena el contenedor y se recorta</p>
+            <div class="aspect-2-3" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.massimodutti.net/assets/public/d033/0205/d9514868a4bf/809f1fba4bce/05132732250-o1/05132732250-o1.jpg?ts=1747839752325" 
+                alt="Imagen 3:4 en contenedor 2:3"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+            </div>
+            <div class="mt-16" style="background-color: #ffebee; padding: 12px; border-left: 4px solid #d32f2f;">
+              <p class="title-s mb-8" style="color: #d32f2f; font-weight: bold;">
+                ⚠️ Recorte lateral
+              </p>
+              <p class="title-s" style="color: #c62828;">
+                La imagen se escala para llenar la altura del contenedor. Como la imagen es más ancha que el contenedor, se recorta por los <strong>lados izquierdo y derecho</strong>. Se pierde aproximadamente un 12.5% del ancho de la imagen (las partes laterales).
+              </p>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="title-l mb-16">Con <code>object-fit: contain</code></h3>
+            <p class="title-m mb-16">La imagen se ajusta completamente sin recortar</p>
+            <div class="aspect-2-3" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.massimodutti.net/assets/public/d033/0205/d9514868a4bf/809f1fba4bce/05132732250-o1/05132732250-o1.jpg?ts=1747839752325" 
+                alt="Imagen 3:4 en contenedor 2:3"
+                style="width: 100%; height: 100%; object-fit: contain; background-color: #e0e0e0; display: block;"
+              />
+            </div>
+            <div class="mt-16" style="background-color: #e8f5e9; padding: 12px; border-left: 4px solid #388e3c;">
+              <p class="title-s mb-8" style="color: #388e3c; font-weight: bold;">
+                ✓ Sin recorte
+              </p>
+              <p class="title-s" style="color: #2e7d32;">
+                La imagen se escala para caber completamente dentro del contenedor. Como el contenedor es más estrecho, la imagen se ajusta al ancho y aparecen <strong>espacios vacíos arriba y abajo</strong> (barras negras horizontales).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Ejemplo: Imagen 2:3 en contenedor 3:4</h2>
+        <p class="title-m mb-32">Cuando insertamos una imagen con ratio 2:3 dentro de un contenedor con ratio 3:4, ocurre lo contrario.</p>
+        <p class="title-m mb-32" style="background-color: #fff3cd; padding: 16px; border-left: 4px solid #ffc107;">
+          <strong>¿Por qué se recorta?</strong> El contenedor 3:4 es más ancho (ratio 0.75) que la imagen 2:3 (ratio 0.666). La imagen 2:3 es un 12.5% más estrecha que el contenedor 3:4.
+        </p>
+
+        <div class="grid-2 grid-gap-32 mb-64">
+          <div>
+            <h3 class="title-l mb-16">Con <code>object-fit: cover</code></h3>
+            <p class="title-m mb-16">La imagen llena el contenedor y se recorta</p>
+            <div class="aspect-3-4" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.zara.net/assets/public/84b4/11a2/4904413ab6be/b6f8b4bfe0a9/03046400707-p/03046400707-p.jpg?ts=1763030435817&w=710" 
+                alt="Imagen 2:3 en contenedor 3:4"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+            </div>
+            <div class="mt-16" style="background-color: #ffebee; padding: 12px; border-left: 4px solid #d32f2f;">
+              <p class="title-s mb-8" style="color: #d32f2f; font-weight: bold;">
+                ⚠️ Recorte vertical
+              </p>
+              <p class="title-s" style="color: #c62828;">
+                La imagen se escala para llenar el ancho del contenedor. Como la imagen es más estrecha que el contenedor, se recorta por <strong>arriba y abajo</strong>. Se pierde aproximadamente un 12.5% de la altura de la imagen (las partes superior e inferior).
+              </p>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="title-l mb-16">Con <code>object-fit: contain</code></h3>
+            <p class="title-m mb-16">La imagen se ajusta completamente sin recortar</p>
+            <div class="aspect-3-4" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.zara.net/assets/public/84b4/11a2/4904413ab6be/b6f8b4bfe0a9/03046400707-p/03046400707-p.jpg?ts=1763030435817&w=710" 
+                alt="Imagen 2:3 en contenedor 3:4"
+                style="width: 100%; height: 100%; object-fit: contain; background-color: #e0e0e0; display: block;"
+              />
+            </div>
+            <div class="mt-16" style="background-color: #e8f5e9; padding: 12px; border-left: 4px solid #388e3c;">
+              <p class="title-s mb-8" style="color: #388e3c; font-weight: bold;">
+                ✓ Sin recorte
+              </p>
+              <p class="title-s" style="color: #2e7d32;">
+                La imagen se escala para caber completamente dentro del contenedor. Como el contenedor es más ancho, la imagen se ajusta a la altura y aparecen <strong>espacios vacíos a los lados izquierdo y derecho</strong> (barras negras verticales).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Comparación lado a lado</h2>
+        <p class="title-m mb-32">Comparación directa de ambos ratios con la misma imagen para ver la diferencia.</p>
+
+        <div class="grid-2 grid-gap-32 mb-64">
+          <div>
+            <h3 class="title-l mb-16">Contenedor 2:3</h3>
+            <div class="aspect-2-3" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.massimodutti.net/assets/public/d033/0205/d9514868a4bf/809f1fba4bce/05132732250-o1/05132732250-o1.jpg?ts=1747839752325" 
+                alt="Imagen en contenedor 2:3"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="title-l mb-16">Contenedor 3:4</h3>
+            <div class="aspect-3-4" style="background-color: #f0f0f0; border: 2px solid #333; overflow: hidden;">
+              <img 
+                src="https://static.massimodutti.net/assets/public/d033/0205/d9514868a4bf/809f1fba4bce/05132732250-o1/05132732250-o1.jpg?ts=1747839752325" 
+                alt="Imagen en contenedor 3:4"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Proceso de migración: De imágenes 3:4 a 3:2</h2>
+        <p class="title-m mb-32">Cuando necesites migrar las imágenes de ratio 3:4 a 3:2, manteniendo los contenedores en 3:4, puedes hacerlo de forma gradual. Con <code>object-fit: cover</code>, las imágenes 3:2 se verán correctamente dentro de contenedores 3:4.</p>
+
+        <div class="mb-64" style="background-color: #e3f2fd; padding: 24px; border-radius: 8px; border-left: 4px solid #2196f3;">
+          <h3 class="title-l mb-16">Proceso: Cambiar imágenes de 3:4 a 3:2 (manteniendo contenedores 3:4)</h3>
+          <p class="title-m mb-16">El proceso consiste en ir cambiando las imágenes de ratio 3:4 por imágenes de ratio 3:2, manteniendo los contenedores en <code>.aspect-3-4</code>. Con <code>object-fit: cover</code>, las imágenes 3:2 se verán bien dentro de los contenedores 3:4.</p>
+          
+          <div class="mb-24" style="background-color: white; padding: 16px; border-radius: 4px;">
+            <h4 class="title-m mb-12" style="font-weight: bold;">Pasos a seguir:</h4>
+            <ol style="padding-left: 24px; line-height: 1.8;">
+              <li class="mb-8">Mantener todos los contenedores en <code>.aspect-3-4</code> (no cambiar los contenedores).</li>
+              <li class="mb-8">Asegurarse de que todas las imágenes tengan <code>object-fit: cover</code> para que se ajusten correctamente.</li>
+              <li class="mb-8">Ir convirtiendo las imágenes de ratio 3:4 a ratio 3:2 de forma gradual (una por una o por lotes).</li>
+              <li class="mb-8">Actualizar las URLs de las imágenes en el código para apuntar a las nuevas versiones 3:2.</li>
+              <li class="mb-8">Las imágenes 3:2 se recortarán por arriba y abajo dentro del contenedor 3:4, pero se verán bien gracias a <code>object-fit: cover</code>.</li>
+            </ol>
+          </div>
+
+          <div class="mb-24">
+            <h4 class="title-m mb-12" style="font-weight: bold;">¿Por qué funciona?</h4>
+            <p class="title-m mb-16">El contenedor 3:4 es más vertical (ratio 0.75) que la imagen 3:2 (ratio 1.5). La imagen 3:2 es más ancha y menos alta. Con <code>object-fit: cover</code>, la imagen se escala para llenar el ancho del contenedor, y se recorta por arriba y abajo, pero el resultado visual es correcto.</p>
+          </div>
+
+          <div class="mb-24">
+            <h4 class="title-m mb-12" style="font-weight: bold;">Ejemplo visual durante la migración:</h4>
+            <div class="aspect-3-4" style="background-color: #f0f0f0; border: 2px solid #2196f3; overflow: hidden; max-width: 300px;">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); transform: scale(1.5, 1);"></div>
+                <span style="position: relative; z-index: 1;">3:2 en 3:4</span>
+              </div>
+            </div>
+            <p class="title-s mt-16" style="color: #1976d2;">
+              ✓ Contenedor: <code>.aspect-3-4</code> | Imagen: 3:2 | <code>object-fit: cover</code> | Se recorta por arriba y abajo (se ve bien)
+            </p>
+          </div>
+
+          <div style="background-color: #c8e6c9; padding: 16px; border-radius: 4px; border-left: 4px solid #4caf50;">
+            <p class="title-s mb-0" style="color: #2e7d32;">
+              <strong>✓ Ventaja:</strong> Puedes ir cambiando las imágenes de forma gradual sin necesidad de cambiar los contenedores. El sistema funciona correctamente durante toda la migración.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-64" style="background-color: #f5f5f5; padding: 24px; border-radius: 8px;">
+          <h3 class="title-l mb-16">Resumen del proceso</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background-color: #333;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Estado</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Contenedor</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Imagen</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">object-fit</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: white;">
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Inicial</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"><code>.aspect-3-4</code></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">3:4</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">cover</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">✓ Sin recortes</td>
+              </tr>
+              <tr style="background-color: #e3f2fd;">
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Durante migración</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"><code>.aspect-3-4</code></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">3:2</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">cover</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">✓ Se recorta arriba/abajo (se ve bien)</td>
+              </tr>
+              <tr style="background-color: #e8f5e9;">
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Final</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;"><code>.aspect-3-4</code></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">3:2</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">cover</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">✓ Todas las imágenes migradas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Resumen de recortes</h2>
+        <div class="mb-32" style="background-color: #f5f5f5; padding: 24px; border-radius: 8px;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background-color: #333;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Imagen</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Contenedor</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Con <code style="color: #ffffff !important;">object-fit: cover</code></th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd; color: #ffffff !important;">Con <code style="color: #ffffff !important;">object-fit: contain</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: white;">
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>3:4</strong> (más ancha)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>2:3</strong> (más estrecho)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Se recorta por <strong>izquierda y derecha</strong> (lados laterales)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Espacios vacíos <strong>arriba y abajo</strong></td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>2:3</strong> (más estrecha)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>3:4</strong> (más ancho)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Se recorta por <strong>arriba y abajo</strong> (partes superior e inferior)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Espacios vacíos <strong>izquierda y derecha</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="h2 mb-32 mt-64">Recomendaciones</h2>
+        <div class="mb-32">
+          <ul class="list-disc" style="padding-left: 24px;">
+            <li class="mb-16">
+              <strong>Usa el mismo ratio para imagen y contenedor:</strong> Si tu imagen es 3:4, usa un contenedor <code>.aspect-3-4</code> para evitar recortes.
+            </li>
+            <li class="mb-16">
+              <strong>object-fit: cover:</strong> Úsalo cuando quieras que la imagen llene completamente el contenedor, aceptando que se recorte. Recuerda que se recortará por donde la imagen sea más grande que el contenedor.
+            </li>
+            <li class="mb-16">
+              <strong>object-fit: contain:</strong> Úsalo cuando necesites mostrar la imagen completa sin recortes, aceptando espacios vacíos. Los espacios aparecerán donde la imagen sea más pequeña que el contenedor.
+            </li>
+            <li class="mb-16">
+              <strong>Ratio 2:3:</strong> Más estrecho (ratio 0.666), ideal para imágenes muy verticales o cuando necesitas ahorrar espacio horizontal.
+            </li>
+            <li class="mb-16">
+              <strong>Ratio 3:4:</strong> Más ancho (ratio 0.75), ideal para la mayoría de imágenes de producto y tarjetas estándar.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

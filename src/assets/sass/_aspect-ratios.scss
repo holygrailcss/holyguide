@@ -1,0 +1,14 @@
+// Clases de aspect-ratio usando CSS aspect-ratio (nuevo método)
+// Estas clases reemplazan a las antiguas que usaban padding-top
+
+.aspect-2-3 {
+  aspect-ratio: 2 / 3;
+}
+
+.aspect-3-4 {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-3-2 {
+  aspect-ratio: 3 / 2;
+}
