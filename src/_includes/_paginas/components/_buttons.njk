@@ -19,7 +19,7 @@ layout: base.njk
   <img width="100%" src="/assets/static/images/botones.svg" alt="Estados de los botones">
 
   <pre><code class="language-markup">
-    &lt;button class="btn btn-primary"&gt;btn btn-primary&lt;/button&gt;
+    &lt;button class="btn btn-primary text-m"&gt;btn btn-primary text-m&lt;/button&gt;
     &lt;button class="btn btn-limited"&gt;btn btn-limited&lt;/button&gt;
     &lt;button class="btn btn-feel"&gt;btn btn-feel&lt;/button&gt;
     &lt;button class="btn btn-blue"&gt;btn btn-blue&lt;/button&gt;
@@ -27,11 +27,11 @@ layout: base.njk
 
   <h3 id="primary" class="h2">Button primary</h3>
   <p class="p1 mb-24">El botón principal con relleno de color se utiliza para las acciones más importantes en una página o en una vista. Los botones primarios están disponibles en blanco y negro.</p>
-  {% call helper.insert(elementType='button',['btn btn-primary']) %}{% endcall %}
+  {% call helper.insert(elementType='button',['btn btn-primary text-m']) %}{% endcall %}
 
   <h3 id="Secondary" class="h2">Botón Secondary</h3>
   <p class="p1 mb-24">Botón outline</p>
-  {% call helper.insert(elementType='button',['btn btn-secondary']) %}{% endcall %}
+  {% call helper.insert(elementType='button',['btn btn-secondary text-m']) %}{% endcall %}
 
   <h3 id="tertiary" class="h2">Botón Tertiary</h3>
   <p class="p1 mb-24">Botón simulando un link básico - no necesita .btn para resetear</p>
@@ -52,7 +52,7 @@ layout: base.njk
   <div class="row bg-light p-16">
     <div class="col-xs-12 mb-32">
       {% for Size in global.ButtonSize %}
-        <button class="btn btn-primary {{Size.size}} mb-16">{{Size.size}}</button><br>
+        <button class="btn btn-primary text-m {{Size.size}} mb-16">{{Size.size}}</button><br>
       {% endfor %}
     </div>
   </div>
@@ -63,15 +63,15 @@ layout: base.njk
   <p class="text-l mb-32">Contenedor para agrupar botones conservando su aspecto <code>.btn-group-inline</code>.</p>
   <div class="pre-show">
     <div class="btn-group-inline">
-      <div class="btn btn-secondary btn--medium">Boton 1</div>
-      <div class="btn btn-secondary btn--medium">Boton 2</div>
+      <div class="btn btn-secondary text-m btn--medium">Boton 1</div>
+      <div class="btn btn-secondary text-m btn--medium">Boton 2</div>
     </div>
   </div>
 
   <pre><code class="language-markup">
     &lt;div class='btn-group-inline'&gt;
-      &lt;div class='btn btn-secondary btn--medium'&gt;Boton 1&lt;/div&gt;
-      &lt;div class='btn btn-secondary btn--medium'&gt;Boton 2&lt;/div&gt;
+      &lt;div class='btn btn-secondary text-m btn--medium'&gt;Boton 1&lt;/div&gt;
+      &lt;div class='btn btn-secondary text-m btn--medium'&gt;Boton 2&lt;/div&gt;
     &lt;/div&gt;
   </code></pre>
 
@@ -82,32 +82,32 @@ layout: base.njk
 
   <div class="btn-group-bleed mb-64">
     <div class="btn-group">
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--mini is-active">.is-active</button>
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini is-active">.is-active</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
     </div>
     <div class="btn-group m--1">
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
     </div>
   </div>
 
   <pre><code class="language-markup">
     &lt;div class="btn-group-bleed mb-64"&gt;
       &lt;div class="btn-group"&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini is-active"&gt;.is-active&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini is-active"&gt;.is-active&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
       &lt;/div&gt;
       &lt;div class="btn-group m--1"&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
-        &lt;button class="btn btn-secondary btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
+        &lt;button class="btn btn-secondary text-m btn--mini"&gt;mini&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   </code></pre>
@@ -115,17 +115,17 @@ layout: base.njk
   <p><code>.btn-group</code></p>
   <div class="pre-show mb-24">
     <div class="btn-group">
-      <button class="btn btn-secondary btn--mini">mini</button>
-      <button class="btn btn-secondary btn--medium">medium</button>
-      <button class="btn btn-secondary btn--large">large</button>
+      <button class="btn btn-secondary text-m btn--mini">mini</button>
+      <button class="btn btn-secondary text-m btn--medium">medium</button>
+      <button class="btn btn-secondary text-m btn--large">large</button>
     </div>
   </div>
 
   <pre><code class="language-markup">
     &lt;div class='btn-group'&gt;
-      &lt;button class='btn btn-secondary btn--mini'&gt;mini&lt;/button&gt;
-      &lt;button class='btn btn-secondary btn--medium'&gt;medium&lt;/button&gt;
-      &lt;button class='btn btn-secondary btn--large'&gt;large&lt;/button&gt;
+      &lt;button class='btn btn-secondary text-m btn--mini'&gt;mini&lt;/button&gt;
+      &lt;button class='btn btn-secondary text-m btn--medium'&gt;medium&lt;/button&gt;
+      &lt;button class='btn btn-secondary text-m btn--large'&gt;large&lt;/button&gt;
     &lt;/div&gt;
   </code></pre>
 
@@ -142,7 +142,7 @@ layout: base.njk
 <div class="row">
                 <div class="col-xs-12">
                   <div class="grid-4">
-                    <button class="btn  btn-primary btn--full btn-anim  ">
+                    <button class="btn  btn-primary text-m btn--full btn-anim  ">
                       <span class="btn-submit  ">
       Btn-anim
     </span>
@@ -151,7 +151,7 @@ layout: base.njk
                           <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>rotating-bars-anim</title><g fill="#FFFFFF"><g class="nc-loop-bars-rotate-16-icon-f"><rect fill="#FFFFFF" height="2" rx=".5" width="4" x="12" y="7"></rect><rect fill="#FFFFFF" height="4.001" rx=".5" width="1.999" opacity=".4" x="11.243" y="10.242" transform="rotate(-44.975 12.243 12.243)"></rect><rect fill="#FFFFFF" height="4" rx=".5" width="2" opacity=".4" x="7" y="12"></rect><rect fill="#FFFFFF" height="1.999" rx=".5" width="4.001" opacity=".4" x="1.757" y="11.243" transform="rotate(-45.03 3.757 12.242)"></rect><rect fill="#FFFFFF" height="2" rx=".5" width="4" opacity=".4" y="7"></rect><rect fill="#FFFFFF" height="4.001" rx=".5" width="1.999" opacity=".4" x="2.758" y="1.757" transform="rotate(-44.975 3.757 3.757)"></rect><rect fill="#FFFFFF" height="4" rx=".5" width="2" opacity=".6" x="7"></rect><rect fill="#FFFFFF" height="1.999" rx=".5" width="4.001" opacity=".8" x="10.242" y="2.758" transform="rotate(-45.03 12.242 3.757)"></rect></g><style>.nc-loop-bars-rotate-16-icon-f{--animation-duration:0.8s;transform-origin:8px 8px;animation:nc-loop-bars-rotate-anim var(--animation-duration) infinite steps(8,start)}@keyframes nc-loop-bars-rotate-anim{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}</style></g></svg>                      </span>
                     </button>
-                    <button disabled="" class="btn  btn-primary btn--full btn-anim  ">
+                    <button disabled="" class="btn  btn-primary text-m btn--full btn-anim  ">
                       <span class="btn-submit  ">
       Btn-anim disabled
     </span>

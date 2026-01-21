@@ -83,7 +83,7 @@ html {
   inset-inline-start: 0;
   justify-content: flex-start;
   order: -100;
-  padding-block-start: $hg-spacer-200;
+  padding-block-start: to-rem(106);
   padding-inline-start: $hg-spacer-200;
   position: fixed;
   width: 40%;
@@ -99,10 +99,11 @@ html {
 .md-timeline2-point-title {
   font-family: 'massimo-daily-regular';
   font-size: to-rem(26);
-  line-height: 1.2;
+  line-height: 1;
   
   @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
     font-size: to-rem(64);
+    line-height: .75;
     padding-block-end: $hg-spacer-800;
     padding-inline-start: $hg-spacer-600;
     position: fixed;
@@ -113,10 +114,9 @@ html {
 
 .md-timeline2-point-content-text {
   margin-block-start: $hg-spacer-200;
-  min-height: to-rem(200);
   
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
-    min-height: to-rem(120);
+  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
+    padding-block-end: $hg-spacer-800;
   }
 }
 

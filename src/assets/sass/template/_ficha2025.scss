@@ -728,7 +728,7 @@ Cosas a tener en cuenta:
 //nunca usamos selectores del tipo div , img etc. siempre clases semanticas
 //intentaremos siempre usar media queries mobile first , desde el init subiendo por min. 
 //Siempre usaremos variables si ya existen en el archivo de variables.
-//no modificaremos ningun elemento core, por ejemplo btn-tertiary. lo podemos extender pero no modificar.
+//no modificaremos ningun elemento core, por ejemplo btn-tertiary text-m. lo podemos extender pero no modificar.
 //hay que revisar rtl siempre, muchas veces poniendo inherit o initial a valores anteriores y dandoselo a su contrario. 
 
 

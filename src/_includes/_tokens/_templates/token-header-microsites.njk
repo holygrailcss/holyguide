@@ -1,0 +1,28 @@
+<div class="hg-grow-0 hg-shrink-0 md-microsite-page-header">
+  <header class="md-microsite-header">
+    <div class="md-microsite-header-prepend">
+      <button type="button" aria-label="Abrir menú" class="btn btn-link md-microsite-header-btn-icon md-microsite-header-btn-ham">
+        {% from "_macros/_icon.njk" import icon %}{{ icon('menu-ham') }}
+      </button>
+      <button type="button" aria-label="Buscar" class="md:visible btn btn-link md-microsite-header-btn-icon">
+        {% from "_macros/_icon.njk" import icon %}{{ icon('search') }}
+      </button>
+    </div>
+    <div class="hg-d-flex hg-flex-column hg-flex-nowrap hg-items-center hg-justify-center md-microsite-header-main">
+      <a href="/" title="Massimo Dutti" aria-label="Massimo Dutti - Ir a inicio" class="hg-d-inline-flex md-microsite-header-logo">{% from "_macros/_icon.njk" import icon %}{{ icon('md-logo') }}</a>
+    </div>
+    <div class="md-microsite-header-append">
+      <nav aria-label="Navegación principal" class="hg-d-flex hg-flex-row hg-flex-nowrap hg-justify-center hg-items-center md:hg-gap-32 hg-items-center hg-justify-end hg-gap-2">
+        <button type="button" class="md:hidden btn btn-link text-m">BUSCAR</button>
+        <button type="button" class="md:hidden btn btn-link text-m">INICIAR SESIÓN</button>
+        <button type="button" class="md:hidden btn btn-link text-m">CESTA</button>
+        <button type="button" aria-label="Mi cuenta" class="md:visible btn btn-link md-microsite-header-btn-icon">
+          {% from "_macros/_icon.njk" import icon %}{{ icon('user') }}
+        </button>
+        <button type="button" aria-label="Ir a la cesta" class="md:visible btn btn-link md-microsite-header-btn-icon">
+          {% from "_macros/_icon.njk" import icon %}{{ icon('cesta') }}
+        </button>
+      </nav>
+    </div>
+  </header>
+</div>

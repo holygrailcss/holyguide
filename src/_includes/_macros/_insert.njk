@@ -327,7 +327,7 @@
                     <button class="link-line title-m m-16 ">
                       Boton link uno
                     </button>
-                    <button class="btn btn-primary btn--full">Boton dos de cookies</button>
+                    <button class="btn btn-primary text-m btn--full">Boton dos de cookies</button>
                   </div>
                 </div>
               </div>
@@ -576,7 +576,7 @@
     <div class="container-6">
       <div class="row">
         <div class="col-xs-12 mb-16">
-          <button class="btn  btn-primary btn--full btn-anim  ">
+          <button class="btn  btn-primary text-m btn--full btn-anim  ">
             <span class="btn-submit  ">
               {{buttonName }}
             </span>
@@ -600,7 +600,7 @@
     </div>
   </div>
   {% set standardcode %}
-  <button class="btn  btn-primary btn--full btn-anim  ">
+  <button class="btn  btn-primary text-m btn--full btn-anim  ">
     <span class="btn-submit  ">
       {{buttonName }}
     </span>
@@ -633,7 +633,7 @@
     <div class="container-6">
       <div class="row">
         <div class="col-xs-12 mb-16">
-          <button class="btn  btn-primary btn--full btn-anim  ">
+          <button class="btn  btn-primary text-m btn--full btn-anim  ">
             <span class="btn-submit has-ico-center ">
               Submit
             </span>
@@ -657,7 +657,7 @@
     </div>
   </div>
   {% set standardcode %}
-  <button id='btnAddToCart' class='btn  btn-primary btn--full btn-anim  '>
+  <button id='btnAddToCart' class='btn  btn-primary text-m btn--full btn-anim  '>
     <span class='btn-submit has-ico-center '>
       <svg-icon>
         <div>
@@ -692,7 +692,7 @@
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
     <button class=" {{buttonName }} btn  btn--small">
-      <svg-icon class="{% if buttonName=='has-ico-pre btn-primary' %} ico-pre {% else %}  ico-post {% endif %}">
+      <svg-icon class="{% if buttonName=='has-ico-pre btn-primary text-m' %} ico-pre {% else %}  ico-post {% endif %}">
         <div>
           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -804,7 +804,7 @@
 {% if buttonName == 'btn-separate'%}
 <div class="resize-mini">
   <div class="resize-mini-content {{dark  }} ">
-    <button class="btn btn-primary btn--medium {{buttonName }}">
+    <button class="btn btn-primary text-m btn--medium {{buttonName }}">
       <span>{{buttonName }}</span>
       <svg-icon>
         <div>
@@ -818,7 +818,7 @@
     </button>
   </div>
   {% set standardcode %}
-  <button class="btn btn-primary btn--medium {{buttonName }}">
+  <button class="btn btn-primary text-m btn--medium {{buttonName }}">
     <span>{{buttonName }}</span>
     <svg-icon src="YOUR_ICON"></svg-icon>
   </button>
@@ -2063,7 +2063,7 @@
         <input type="tel" id="t1" class="input" placeholder="Teléfono" />
         <label for="t1">Teléfono </label>
       </div>
-      <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+      <button class="btn btn-primary text-m">VERIFICAR TELEFONO</button>
     </div>
     {# ---------- #}
   </div>
@@ -2081,7 +2081,7 @@
       <input type="tel" id="t1" class="input" placeholder="Teléfono" />
       <label for="t1">Teléfono </label>
     </div>
-    <button class="btn btn-primary">VERIFICAR TELEFONO</button>
+    <button class="btn btn-primary text-m">VERIFICAR TELEFONO</button>
   </div>
   {% endset %}
   <div class="code-zone">
@@ -2200,7 +2200,7 @@
 
       </div>
       <div class="col-xs-12 col-sm-5"><button
-          class="btn btn-primary btn--full btn-separate"><span>Consultar</span><svg-icon src="arrow-right">
+          class="btn btn-primary text-m btn--full btn-separate"><span>Consultar</span><svg-icon src="arrow-right">
             <div><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M10.5455 13.3674C10.3426 13.1801 10.3299 12.8638 10.5172 12.6609L14.358 8.5L0.5 8.5C0.223858 8.5 0 8.27614 0 8C0 7.72386 0.223858 7.5 0.5 7.5L14.358 7.5L10.5172 3.33914C10.3299 3.13623 10.3426 2.8199 10.5455 2.6326C10.7484 2.4453 11.0647 2.45795 11.252 2.66086L15.8674 7.66086C16.0442 7.85239 16.0442 8.14761 15.8674 8.33914L11.252 13.3391C11.0647 13.5421 10.7484 13.5547 10.5455 13.3674Z"
@@ -2223,7 +2223,7 @@
       </div>
     </div>
     <div class="col-xs-12 col-sm-5">
-      <button class="btn btn-primary btn--full ">
+      <button class="btn btn-primary text-m btn--full ">
         <span>Consultar</span>
         <svg-icon src="arrow-right"></svg-icon>
       </button>
@@ -2474,7 +2474,7 @@
 
 <div class="resize-mini">
   <div class="resize-mini-content">
-    <button class="btn btn--{{buttonName }} btn-primary" onclick="toggleOpenDrawer('{{ functionName }}')">
+    <button class="btn btn--{{buttonName }} btn-primary text-m" onclick="toggleOpenDrawer('{{ functionName }}')">
      Toggle {{ buttonName | capitalize }}
 
   
@@ -2486,7 +2486,7 @@
 <div class="drawer-body"> Contenido del drawer </div>
   <div class="drawer-footer  pl-body pr-body">
     Zona de botones fixed, puede o no  ser a sangre
-      <button class="btn btn-primary btn--full ">btn-primary</button>
+      <button class="btn btn-primary text-m btn--full ">btn-primary</button>
 </div>{% endset %}
   <pre><code class="language-markup">{{standardcode}} </code></pre>
 </div>

@@ -1,4 +1,4 @@
-<!-- base-parrillas.njk -->
+<!-- base-clean.njk -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <meta name="google-site-verification" content="vKkP615NVTrbJknjA1ykKXOHT0VPbJqJgAO8VDea4pE" />
+  <meta name="google-site-verification" content="" />
   <title>{{ title }}</title>
   <meta name="robots" content="noindex">
   <link rel="icon" href="/assets/static/images/favicon.ico" type="image/x-icon">
@@ -20,57 +20,75 @@
           global.c_primary
         }
       }
+
       ;
+
       --c-secondary: {
           {
           global.c_secondary
         }
       }
+
       ;
+
       --bg-dark: {
           {
           global.bg_dark
         }
       }
+
       ;
+
       --c-bg-dark: {
           {
           global.c_bg_dark
         }
       }
+
       ;
+
       --bg-light: {
           {
           global.bg_light
         }
       }
+
       ;
+
       --c-bg-light: {
           {
           global.c_bg_light
         }
       }
+
       ;
+
       --btn-radius: {
           {
           global.btn_radius
         }
       }
+
       ;
+
       --padding-global: {
           {
           global.padding_global
         }
       }
+
       ;
+
       --btn-radius: {
           {
           global.btn_radius
         }
       }
+
       ;
     }
   </style>
+  <link rel="stylesheet" href="https://hg5.netlify.app/output.css">
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/docs.css" />
   <link rel="canonical" href="{{ global.url }}/{{ page.url | url }}" />
@@ -79,39 +97,53 @@
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ global.url }}" />
-  <meta property="og:description"
+  <meta property="og:description" 
     content="{{ metaKeywords or eleventyComputed.metaKeywords or metaKeywords.description }}" />
-  <!-- End Google Tag Manager -->
 </head>
-<body class="contain guide  ">
-  <main>
-    {{ content | safe }}
-    <div class="guide-inspect">
-      <button class="resize-rules  btn btn-secondary text-m  ">
-        <div class="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <title>measure-02</title>
-            <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" transform="translate(0.5 0.5)"
-              fill="#eaeaea" stroke="#eaeaea">
-              <line fill="none" stroke-miterlimit="10" x1="8" y1="6" x2="11" y2="6"></line>
-              <line fill="none" stroke-miterlimit="10" x1="8" y1="10" x2="10" y2="10"></line>
-              <line fill="none" stroke-miterlimit="10" x1="8" y1="14" x2="11" y2="14"></line>
-              <line fill="none" stroke-miterlimit="10" x1="8" y1="18" x2="10" y2="18"></line>
-              <rect x="8" y="1" fill="none" stroke="#eaeaea" stroke-miterlimit="10" width="8" height="22"></rect>
-            </g>
-          </svg>
-        </div>
-      </button>
-      <button class=" btn btn-secondary text-m rtl-inspect" onclick="rtlChange()">RTL</button>
+<body class="contain theme-keyboard-accesible ">
+
+  <div class="hg-d-flex hg-flex-column hg-flex-wrap hg-min-h-100vh md-microsite-page">
+    {% if layoutHeader != false %}
+    {% include '_tokens/_templates/token-header-microsites.njk' %}
+    {% endif %}
+    <div class="hg-grow-1 hg-shrink-1 md-microsite-page-body">
+      {{ content | safe }}
     </div>
-  </main>
+    {% if layoutFooter != false %}
+    <div class="hg-grow-0 hg-shrink-0 md-microsite-page-footer">
+    </div>
+    {% endif %}
+  </div>
+
+  {% if guides != 0 %}
+  <div class="guide-inspect">
+    <button class="resize-rules  btn btn-secondary text-m  ">
+      <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <title>measure-02</title>
+          <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" transform="translate(0.5 0.5)"
+            fill="#eaeaea" stroke="#eaeaea">
+            <line fill="none" stroke-miterlimit="10" x1="8" y1="6" x2="11" y2="6"></line>
+            <line fill="none" stroke-miterlimit="10" x1="8" y1="10" x2="10" y2="10"></line>
+            <line fill="none" stroke-miterlimit="10" x1="8" y1="14" x2="11" y2="14"></line>
+            <line fill="none" stroke-miterlimit="10" x1="8" y1="18" x2="10" y2="18"></line>
+            <rect x="8" y="1" fill="none" stroke="#eaeaea" stroke-miterlimit="10" width="8" height="22"></rect>
+          </g>
+        </svg>
+      </div>
+    </button>
+    <button class=" btn btn-secondary text-m rtl-inspect" onclick="rtlChange()">RTL</button>
+  </div>
+  {% endif %}
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
   <script src="/assets/js/index.js"></script>
   <script type="module" src="/assets/js/prism.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css" />
+
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism.css" rel="stylesheet">
+
   <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
 </body>

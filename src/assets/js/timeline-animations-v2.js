@@ -215,28 +215,28 @@ function createFigureAnimation(figure, item) {
 
 /**
  * Configura las animaciones cuando los elementos entran o salen de la vista
+/**
+ * Configura las animaciones cuando los elementos entran o salen de la vista
  */
 function setupContentAnimations(item, title, galleryFigures, textContent) {
-  const elementsWithMovement = [...galleryFigures];
   const elementsWithFade = [];
 
   if (title) {
     elementsWithFade.push(title);
   }
 
+  if (galleryFigures && galleryFigures.length) {
+    elementsWithFade.push(...galleryFigures);
+  }
+
   if (textContent) {
     elementsWithFade.push(textContent);
   }
-
-  elementsWithMovement.forEach(element => {
-    gsap.set(element, { y: "10dvh", opacity: 0 });
-  });
 
   elementsWithFade.forEach(element => {
     gsap.set(element, { opacity: 0 });
   });
 
-  // Creamos un trigger que detecta cuando el elemento entra en la vista
   const triggerConfig = getScrollTriggerConfig();
   ScrollTrigger.create({
     trigger: item,
@@ -244,77 +244,35 @@ function setupContentAnimations(item, title, galleryFigures, textContent) {
     start: triggerConfig.start,
     end: triggerConfig.end,
     
-    // Cuando el elemento entra en la vista (scroll hacia abajo)
     onEnter: () => {
       item.setAttribute('aria-current', 'true');
-      
-      // Animar cada elemento con un pequeño retraso (efecto cascada)
-      elementsWithMovement.forEach((element, index) => {
+      elementsWithFade.forEach((element, index) => {
         const delay = index * ANIMATION_CONFIG.staggerDelay;
-        animateElementIn(element, delay);
+        animateTextIn(element, delay);
       });
-
-      // Animar el texto después de los otros elementos
-      if (elementsWithFade.length) {
-        const baseDelay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
-        elementsWithFade.forEach((element, index) => {
-          const delay = baseDelay + index * ANIMATION_CONFIG.staggerDelay;
-          animateTextIn(element, delay);
-        });
-      }
     },
     
-    // Cuando el elemento sale de la vista (scroll hacia abajo)
     onLeave: () => {
       item.removeAttribute('aria-current');
-      
-      // Ocultar todos los elementos
-      elementsWithMovement.forEach(element => {
-        animateElementOut(element, 'up');
+      elementsWithFade.forEach(element => {
+        animateTextOut(element);
       });
-
-      if (elementsWithFade.length) {
-        elementsWithFade.forEach(element => {
-          animateTextOut(element);
-        });
-      }
     },
     
-    // Cuando el elemento vuelve a entrar (scroll hacia arriba)
     onEnterBack: () => {
       item.setAttribute('aria-current', 'true');
-      
-      // Animar en orden inverso (último elemento primero)
-      const reversedElements = [...elementsWithMovement].reverse();
-      reversedElements.forEach((element, index) => {
+      const reversedFade = [...elementsWithFade].reverse();
+      reversedFade.forEach((element, index) => {
         const delay = index * ANIMATION_CONFIG.staggerDelay;
-        animateElementIn(element, delay);
+        animateTextIn(element, delay);
       });
-
-      if (elementsWithFade.length) {
-        const baseDelay = elementsWithMovement.length * ANIMATION_CONFIG.staggerDelay;
-        const reversedFade = [...elementsWithFade].reverse();
-        reversedFade.forEach((element, index) => {
-          const delay = baseDelay + index * ANIMATION_CONFIG.staggerDelay;
-          animateTextIn(element, delay);
-        });
-      }
     },
     
-    // Cuando el elemento sale hacia atrás (scroll hacia arriba)
     onLeaveBack: () => {
       item.removeAttribute('aria-current');
-      
-      // Ocultar todos los elementos
-      elementsWithMovement.forEach(element => {
-        animateElementOut(element, 'down');
+      elementsWithFade.forEach(element => {
+        animateTextOut(element);
       });
-
-      if (elementsWithFade.length) {
-        elementsWithFade.forEach(element => {
-          animateTextOut(element);
-        });
-      }
     }
   });
 }
@@ -341,41 +299,30 @@ function setTimelineMarginVariable() {
  * Inicializa todas las animaciones del timeline
  */
 function initTimelineAnimations() {
-  // Calcular y asignar variable CSS antes de cualquier animación
   setTimelineMarginVariable();
   
-  // Buscar todos los elementos del timeline
   const timelineItems = gsap.utils.toArray('.md-timeline2-point');
   
-  // Si no hay elementos, no hacer nada
   if (!timelineItems.length) return;
   
-  // Respetar la preferencia de movimiento reducido del usuario
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return;
   }
   
-  // Limpiar animaciones anteriores si existen
   if (animationContext) {
     animationContext.revert();
   }
   
-  // Configurar animaciones (solo desktop)
   animationContext = gsap.context(() => {
     timelineItems.forEach((item) => {
-      // Buscar los elementos dentro de cada item
       const figure = item.querySelector('.md-timeline2-point-media');
       const title = item.querySelector('.md-timeline2-point-title');
       const galleryFigures = gsap.utils.toArray('.md-timeline2-point-content-gallery figure', item);
       const textContent = item.querySelector('.md-timeline2-point-content-text');
       
-      // Si no hay imagen principal, saltar este item
       if (!figure) return;
       
-      // Crear animación de la imagen principal
       createFigureAnimation(figure, item);
-      
-      // Configurar animaciones del contenido
       setupContentAnimations(item, title, galleryFigures, textContent);
     });
   });
@@ -385,17 +332,14 @@ function initTimelineAnimations() {
 // INICIALIZACIÓN
 // =============================================================================
 
-// Inicializar cuando el DOM esté listo
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initTimelineAnimations);
 } else {
   initTimelineAnimations();
 }
 
-// Configurar ScrollTrigger
 ScrollTrigger.config({ ignoreMobileResize: true });
 
-// Reinicializar animaciones cuando cambia el tamaño de la ventana
 let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
