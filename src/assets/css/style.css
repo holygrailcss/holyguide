@@ -19653,6 +19653,11 @@ html {
     width: 10.9375rem;
   }
 }
+@media (min-width: 1440px) {
+  .md-microsite-header-logo {
+    width: 15.625rem;
+  }
+}
 
 .md-microsite-header-prepend {
   grid-column: 1;
