@@ -7,12 +7,12 @@ layout: base-clean.njk
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
 <div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh">
-  <!-- Botones de navegación: izquierda y derecha del viewport -->
-  <button type="button" class="hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  <!-- Botones de navegación: texto girado 90° -->
+  <button type="button" class="btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
+    <span class="hg-home-nav-btn__text">men new season AW 26</span>
   </button>
-  <button type="button" class="hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  <button type="button" class=" btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
+    <span class="hg-home-nav-btn__text">women new season AW 26</span>
   </button>
 
   
@@ -22,6 +22,18 @@ layout: base-clean.njk
     <!-- Columna 1 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
+
+        <div class="hg-home-box hg-home-box-animated">
+          <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+        </div>
+
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+        </div>
+
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+        </div>
 
         <div class="hg-home-box">
           <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
@@ -36,7 +48,9 @@ layout: base-clean.njk
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
         <div class="hg-home-box">
-          <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+          <div class="hg-aspect-2-3  hg-h-100-percent">
+            <img class="hg-aspect-image" src="/assets/static/home/foto2.jpg" alt="Columna 2">
+          </div>
         </div>
 
         <div class="hg-home-box p-104">
@@ -70,9 +84,7 @@ layout: base-clean.njk
   </div>
   </div>
   <!-- Footer debajo de las columnas -->
-  <footer class="hg-w-100-percent p-24 hg-text-center" >
-    <p class="text-m">Footer – HolyGrail5</p>
-  </footer>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -91,6 +103,30 @@ layout: base-clean.njk
   }
 
   var cols = row ? row.querySelectorAll('.hg-home-row-cols__col') : [];
+
+  var fadeStartRatio = 0.001;
+
+  function updateBoxOpacity(col) {
+    if (!col) return;
+    var colRect = col.getBoundingClientRect();
+    var colHeight = colRect.height;
+    var fadeStartPx = fadeStartRatio * colHeight;
+    var boxes = col.querySelectorAll('.hg-home-box');
+    boxes.forEach(function(box) {
+      var boxRect = box.getBoundingClientRect();
+      var boxTop = boxRect.top - colRect.top;
+      var boxHeight = boxRect.height;
+      var opacity = Math.min(1, Math.max(0, (boxTop + boxHeight) / (fadeStartPx + boxHeight)));
+      box.style.opacity = String(opacity);
+    });
+  }
+
+  function setupScrollFade() {
+    cols.forEach(function(col) {
+      col.addEventListener('scroll', function() { updateBoxOpacity(col); });
+      updateBoxOpacity(col);
+    });
+  }
 
   function goToIndex(index) {
     if (index < 0 || index >= totalCols) return;
@@ -114,6 +150,7 @@ layout: base-clean.njk
 
   window.addEventListener('resize', function() {
     goToIndex(currentIndex);
+    cols.forEach(function(col) { updateBoxOpacity(col); });
   });
 
   /* Estado inicial: columna 1 al 100%, resto al 50% */
@@ -121,5 +158,6 @@ layout: base-clean.njk
     gsap.set(col, { scale: i === 0 ? 1 : 0.5 });
   });
   goToIndex(0);
+  setupScrollFade();
 })();
 </script>
