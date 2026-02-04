@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/**
+ * home.css — Estilos exclusivos del template Home (Templates 2026).
+ * Todas las clases nuevas del template home deben definirse en template/_home.scss,
+ * que se importa aquí. Este archivo compila a home.css y se carga solo en la página home.
+ */
+/**
+ * Template Home (Templates 2026)
+ * Todas las clases nuevas del template home deben ir en este archivo.
+ * Se compila a home.css (vía home.scss) y se carga solo en la página templates-2026/home.
+ * Usa variables --hg-* de HolyGrail5 (p. ej. https://hg5.netlify.app/output.css).
+ */
+.templates-2026-home {
+  --home-bg: var(--hg-color-white, #fff);
+  --home-text: var(--hg-color-primary, #000);
+  --home-spacing: var(--hg-spacing-16, 16px);
+  --home-radius: var(--hg-radius-md, 8px);
+  min-height: 100%;
+  background-color: var(--home-bg);
+  color: var(--home-text);
+}
+.templates-2026-home .home-hero {
+  padding: var(--hg-spacing-32, 32px) var(--home-spacing);
+  text-align: center;
+  background-color: var(--hg-color-light-grey, #f5f5f5);
+}
+.templates-2026-home .home-section {
+  padding: var(--hg-spacing-24, 24px) var(--home-spacing);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.templates-2026-home .home-title {
+  font-size: var(--hg-typo-font-size-fluid-6, clamp(1.5rem, 4vw, 3rem));
+  line-height: var(--hg-typo-line-height-tight, 1.2);
+  margin-bottom: var(--home-spacing);
+}
+.templates-2026-home .home-lead {
+  font-size: var(--hg-typo-font-size-16, 1rem);
+  line-height: 1.5;
+  color: var(--hg-color-dark-grey, #333);
+}

@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+{% import "_macros/_token.njk" as tokens %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="templates-2026-home">
+  <div class="hg-w-100-percent">
+    {% include '_website/hero.njk' %}
+  </div>
+
+  <section class="row mb-32 mt-32">
+    <div class="col-xs-12">
+      {% call insert.template('_tokens/tokens-2026/','token-home', '550px','https://www.figma.com') %} {% endcall %}
+    </div>
+  </section>
+
+  <section class="row mb-32 mt-32 p-16">
+    <div class="col-xs-12">
+      <div class="main-content innermarkdown">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Contenido de la página plantilla home.njk - CSS en home.css (template/_home.scss) -->

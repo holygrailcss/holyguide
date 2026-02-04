@@ -37,7 +37,8 @@ permalink: /index/
           <div class="mb-16" data-aos-delay="400">
             <a href="/foundations"><button class="btn btn-primary text-m btn--small">Foundations</button></a>
             <a href="/components"><button class="btn btn-secondary text-m btn--small">Componentes</button></a>
-            <a href="/templates"><button class="btn btn-secondary text-m btn--small">Templates</button></a>
+            <a href="/templates-old"><button class="btn btn-secondary text-m btn--small">Templates old</button></a>
+            <a href="/templates-2026"><button class="btn btn-secondary text-m btn--small">Templates 2026</button></a>
           </div>
           <div class="mb-16" data-aos-delay="800">
             <a href="/foundations"><button class="btn btn-primary text-m btn--small">
@@ -66,12 +67,12 @@ permalink: /index/
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <a href="/templates">
+        <a href="/templates-old">
           <h2>Nuestros últimos templates</h2>
         </a>
         <ul role="list" class="list-clear blog-intro-inner w-100 pt-32 pb-32">
           <div class="grid-5">
-            {% for component in collections.templates | reverse %}
+            {% for component in collections["templates-old"] | reverse %}
             {% include 'token-loop-list.njk' %}
             {% endfor %}
           </div>

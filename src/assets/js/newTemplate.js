@@ -13,10 +13,10 @@ if (!fileName) {
 }
 
 // Ruta donde se guardará el archivo Markdown
-const targetMarkdownFilePath = path.join("src", "templates", `${fileName}.md`);
+const targetMarkdownFilePath = path.join("src", "templates-old", `${fileName}.md`);
 
 // Ruta donde se guardará el archivo Nunjucks
-const targetNunjucksFilePath = path.join("src", "_includes", "_paginas", "templates", `${fileName}.njk`);
+const targetNunjucksFilePath = path.join("src", "_includes", "_paginas", "templates-old", `${fileName}.njk`);
 
 // Configurar Nunjucks
 nunjucks.configure({
@@ -31,15 +31,15 @@ const currentDate = new Date().toISOString().slice(0, 10);
 
 // Plantilla Nunjucks (para archivo .md)
 const markdownTemplate = `---
-layout: _paginas/templates/${fileName}.njk
+layout: _paginas/templates-old/${fileName}.njk
 permalink: /${fileName}/
-page_section: templates
+page_section: templates-old
 titulo: ${fileName}
 descripcion: ${fileName}
 image: /assets/static/images/${fileName}.jpg
 author: autor
 date: ${currentDate} 
-tags: ["templates"]
+tags: ["templates-old"]
 imageAlt: ${fileName}
 ---
 # ${fileName}

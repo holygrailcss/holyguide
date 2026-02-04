@@ -1,5 +1,5 @@
 ---
-layout: _paginas/templates/_store-locator.njk
+layout: _paginas/templates-old/_store-locator.njk
 permalink: /store-locator/
 page_section: templates
 

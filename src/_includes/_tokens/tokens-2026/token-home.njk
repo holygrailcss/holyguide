@@ -1,0 +1,38 @@
+---
+layout: base-clean.njk
+---
+<!-- Token home: 3 columnas (100vw cada una), scroll vertical independiente, footer debajo -->
+<div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" style="background-color: var(--hg-color-primary); color: var(--hg-color-white);">
+  <!-- Contenedor de las 3 columnas: scroll horizontal, ocupa el espacio sobre el footer -->
+  <div class="hg-d-flex hg-flex-row hg-flex-nowrap hg-overflow-x-auto hg-min-h-0" style="flex: 1 1 0; min-height: 0;">
+    <!-- Columna 1: ancho 100vw, scroll vertical propio -->
+    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
+      <div class="hg-d-flex hg-flex-column hg-gap-y-24">
+        <h2 class="h2">Columna 1</h2>
+        <p class="text-m">Contenido de la primera columna. Tiene scroll vertical independiente.</p>
+        <p class="text-m">Más contenido para que se active el scroll dentro de esta columna.</p>
+        <p class="text-m">Cada columna ocupa el ancho total del viewport (100vw).</p>
+      </div>
+    </section>
+    <!-- Columna 2 -->
+    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
+      <div class="hg-d-flex hg-flex-column hg-gap-y-24">
+        <h2 class="h2">Columna 2</h2>
+        <p class="text-m">Contenido de la segunda columna con su propio scroll.</p>
+        <p class="text-m">Puedes hacer scroll horizontal para ver las tres columnas.</p>
+      </div>
+    </section>
+    <!-- Columna 3 -->
+    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
+      <div class="hg-d-flex hg-flex-column hg-gap-y-24">
+        <h2 class="h2">Columna 3</h2>
+        <p class="text-m">Contenido de la tercera columna.</p>
+        <p class="text-m">Debajo de las tres columnas está el footer.</p>
+      </div>
+    </section>
+  </div>
+  <!-- Footer debajo de las columnas -->
+  <footer class="hg-w-100-percent p-24 hg-text-center" style="background-color: var(--hg-color-charcoal); color: var(--hg-color-white); flex-shrink: 0;">
+    <p class="text-m">Footer – HolyGrail5</p>
+  </footer>
+</div>

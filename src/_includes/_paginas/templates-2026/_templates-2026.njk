@@ -1,0 +1,28 @@
+---
+layout: base.njk
+---
+{% set page_title = "Templates 2026" %}
+
+{{ page_title }}
+
+<div class="container-fluid">{% include '_website/hero.njk' %}</div>
+
+<section>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="main-content innermarkdown">
+        {{ content | safe }}
+        <div class="list-grid pt-24">
+          <div class="full-grid text-16-b">
+            Templates 2026
+          </div>
+          {% for template in collections["templates-2026"] | reverse %}
+            {% if template.data.titulo and template.data.permalink and template.fileSlug != "0_templates-2026" %}
+              {% include 'template-loop.njk' %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
