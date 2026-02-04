@@ -35,6 +35,10 @@
   color: var(--hg-color-dark-grey, #333);
 }
 
+.hg-home-box {
+  height: 100vh;
+}
+
 /**
  * Contenedor con ancho configurable cuyos hijos quedan uno al lado del otro (flex row).
  * Columna activa: 100% - 100px por la izquierda y -100px por la derecha → ancho = calc(100vw - 200px).
@@ -52,7 +56,13 @@
   flex: 0 0 var(--hg-home-col-width);
   width: var(--hg-home-col-width);
   min-width: 0;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hg-home-row-cols__col::-webkit-scrollbar {
+  display: none;
 }
 .hg-home-row-cols__col:nth-child(1) {
   transform-origin: right center;
@@ -63,13 +73,30 @@
 .hg-home-row-cols__col:nth-child(3) {
   transform-origin: left center;
 }
+/* Col 1 activa: col 2 y 3 alineadas a la izquierda (peek junto a col 1) */
+.hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(2),
+.hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(3) {
+  transform-origin: left center;
+}
+/* Col 2 activa: col 1 a la derecha, col 3 a la izquierda */
+.hg-home-row-cols[data-active="1"] .hg-home-row-cols__col:nth-child(1) {
+  transform-origin: right center;
+}
+.hg-home-row-cols[data-active="1"] .hg-home-row-cols__col:nth-child(3) {
+  transform-origin: left center;
+}
+/* Col 3 activa: col 1 y 2 alineadas a la derecha (peek junto a col 3) */
+.hg-home-row-cols[data-active="2"] .hg-home-row-cols__col:nth-child(1),
+.hg-home-row-cols[data-active="2"] .hg-home-row-cols__col:nth-child(2) {
+  transform-origin: right center;
+}
 
 /**
  * Wrapper: 100px margen izquierda y derecha; la columna activa mide 100vw - 200px.
  */
 .hg-home-row-cols-wrap {
   flex: 1 1 0;
-  min-height: 0;
+  min-height: 100vh;
   overflow-x: hidden;
   position: relative;
   padding-left: 100px;

@@ -6,7 +6,7 @@ layout: base-clean.njk
 <link rel="stylesheet" href="/assets/css/home.css">
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
-<div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" style="background-color: var(--hg-color-primary); color: var(--hg-color-white);">
+<div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh">
   <!-- Botones de navegación: izquierda y derecha del viewport -->
   <button type="button" class="hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -18,7 +18,7 @@ layout: base-clean.njk
   
   <!-- Wrapper: recorta a una columna visible, el row se desplaza con GSAP -->
   <div class="hg-home-row-cols-wrap">
-    <div class="hg-home-row-cols" id="hg-home-row-cols">
+    <div class="hg-home-row-cols" id="hg-home-row-cols" data-active="0">
     <!-- Columna 1 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
@@ -28,6 +28,9 @@ layout: base-clean.njk
         </div>
 
       </div>
+      <footer class="hg-w-100-percent p-24 hg-text-center" >
+        <p class="text-m">Footer – HolyGrail5</p>
+      </footer>
     </section>
     <!-- Columna 2 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
@@ -35,7 +38,22 @@ layout: base-clean.njk
         <div class="hg-home-box">
           <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
         </div>
+
+        <div class="hg-home-box p-104">
+          <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+        </div>
+
+        <div class="hg-home-box p-104">
+          <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+        </div>
+
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+        </div>
       </div>
+      <footer class="hg-w-100-percent p-24 hg-text-center" >
+        <p class="text-m">Footer – HolyGrail5</p>
+      </footer>
     </section>  
     <!-- Columna 3 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
@@ -45,11 +63,14 @@ layout: base-clean.njk
         </div>
 
       </div>
+      <footer class="hg-w-100-percent p-24 hg-text-center" >
+        <p class="text-m">Footer – HolyGrail5</p>
+      </footer>
     </section>
   </div>
   </div>
   <!-- Footer debajo de las columnas -->
-  <footer class="hg-w-100-percent p-24 hg-text-center" style="background-color: var(--hg-color-charcoal); color: var(--hg-color-white); flex-shrink: 0;">
+  <footer class="hg-w-100-percent p-24 hg-text-center" >
     <p class="text-m">Footer – HolyGrail5</p>
   </footer>
 </div>
@@ -74,6 +95,7 @@ layout: base-clean.njk
   function goToIndex(index) {
     if (index < 0 || index >= totalCols) return;
     currentIndex = index;
+    row.setAttribute('data-active', String(index));
     var x = -currentIndex * getColWidthPx();
     gsap.to(row, { x: x, duration: 0.5, ease: 'power3.out' });
     cols.forEach(function(col, i) {
