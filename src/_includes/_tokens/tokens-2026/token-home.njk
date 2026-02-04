@@ -1,38 +1,103 @@
 ---
 layout: base-clean.njk
 ---
-<!-- Token home: 3 columnas (100vw cada una), scroll vertical independiente, footer debajo -->
+
+{# Importamos home.css únicamente para el token-home. #}
+<link rel="stylesheet" href="/assets/css/home.css">
+
+<!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
 <div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" style="background-color: var(--hg-color-primary); color: var(--hg-color-white);">
-  <!-- Contenedor de las 3 columnas: scroll horizontal, ocupa el espacio sobre el footer -->
-  <div class="hg-d-flex hg-flex-row hg-flex-nowrap hg-overflow-x-auto hg-min-h-0" style="flex: 1 1 0; min-height: 0;">
-    <!-- Columna 1: ancho 100vw, scroll vertical propio -->
-    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
+  <!-- Botones de navegación: izquierda y derecha del viewport -->
+  <button type="button" class="hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button type="button" class="hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+
+  
+  <!-- Wrapper: recorta a una columna visible, el row se desplaza con GSAP -->
+  <div class="hg-home-row-cols-wrap">
+    <div class="hg-home-row-cols" id="hg-home-row-cols">
+    <!-- Columna 1 -->
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
-        <h2 class="h2">Columna 1</h2>
-        <p class="text-m">Contenido de la primera columna. Tiene scroll vertical independiente.</p>
-        <p class="text-m">Más contenido para que se active el scroll dentro de esta columna.</p>
-        <p class="text-m">Cada columna ocupa el ancho total del viewport (100vw).</p>
+
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+        </div>
+
       </div>
     </section>
     <!-- Columna 2 -->
-    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
-        <h2 class="h2">Columna 2</h2>
-        <p class="text-m">Contenido de la segunda columna con su propio scroll.</p>
-        <p class="text-m">Puedes hacer scroll horizontal para ver las tres columnas.</p>
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+        </div>
       </div>
-    </section>
+    </section>  
     <!-- Columna 3 -->
-    <section class="hg-w-100vw hg-h-100-percent hg-min-h-0 hg-overflow-y-auto p-24" style="flex-shrink: 0;">
-      <div class="hg-d-flex hg-flex-column hg-gap-y-24">
-        <h2 class="h2">Columna 3</h2>
-        <p class="text-m">Contenido de la tercera columna.</p>
-        <p class="text-m">Debajo de las tres columnas está el footer.</p>
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
+      <div class="hg-d-flex hg-flex-column hg-gap-y-24">  
+        <div class="hg-home-box">
+          <img src="/assets/static/home/foto3.jpg" alt="Columna 3">
+        </div>
+
       </div>
     </section>
+  </div>
   </div>
   <!-- Footer debajo de las columnas -->
   <footer class="hg-w-100-percent p-24 hg-text-center" style="background-color: var(--hg-color-charcoal); color: var(--hg-color-white); flex-shrink: 0;">
     <p class="text-m">Footer – HolyGrail5</p>
   </footer>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+(function() {
+  var row = document.getElementById('hg-home-row-cols');
+  var btnPrev = document.getElementById('hg-home-nav-prev');
+  var btnNext = document.getElementById('hg-home-nav-next');
+  if (!row || !btnPrev || !btnNext) return;
+
+  var totalCols = 3;
+  var currentIndex = 0;
+
+  function getColWidthPx() {
+    return window.innerWidth - 200;
+  }
+
+  var cols = row ? row.querySelectorAll('.hg-home-row-cols__col') : [];
+
+  function goToIndex(index) {
+    if (index < 0 || index >= totalCols) return;
+    currentIndex = index;
+    var x = -currentIndex * getColWidthPx();
+    gsap.to(row, { x: x, duration: 0.5, ease: 'power3.out' });
+    cols.forEach(function(col, i) {
+      gsap.to(col, { scale: i === currentIndex ? 1 : 0.5, duration: 0.5, ease: 'power3.out' });
+    });
+    btnPrev.disabled = currentIndex === 0;
+    btnNext.disabled = currentIndex === totalCols - 1;
+  }
+
+  btnPrev.addEventListener('click', function() {
+    if (currentIndex > 0) goToIndex(currentIndex - 1);
+  });
+  btnNext.addEventListener('click', function() {
+    if (currentIndex < totalCols - 1) goToIndex(currentIndex + 1);
+  });
+
+  window.addEventListener('resize', function() {
+    goToIndex(currentIndex);
+  });
+
+  /* Estado inicial: columna 1 al 100%, resto al 50% */
+  cols.forEach(function(col, i) {
+    gsap.set(col, { scale: i === 0 ? 1 : 0.5 });
+  });
+  goToIndex(0);
+})();
+</script>

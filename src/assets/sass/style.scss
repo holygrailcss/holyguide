@@ -31,7 +31,7 @@ $width-left: calc((1280px + (100vw - 1280px) / 2));
 @import "./template/_push25.scss";
 @import "./template/_timeline-gsap.scss";
 @import "./template/_timeline-gsap-v2.scss";
-/* Estilos del template home están en home.scss → home.css y se cargan solo en esa página */
+/* Estilos del template home están en home.css y se cargan solo en esa página */
 @import "./layout-microsites.scss";
 @import "./_menu.scss";
 @import "./_swiper.scss";

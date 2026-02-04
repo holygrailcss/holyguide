@@ -19598,7 +19598,7 @@ html {
   z-index: 1;
 }
 
-/* Estilos del template home están en home.scss → home.css y se cargan solo en esa página */
+/* Estilos del template home están en home.css y se cargan solo en esa página */
 /* TYPES FIJOS */
 .grid-product-view-new {
   flex-basis: 100%;
