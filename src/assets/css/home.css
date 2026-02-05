@@ -27,7 +27,7 @@
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
-  overflow-y: auto;
+
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
 }
 .hg-menu-panel.is-open {
@@ -48,6 +48,8 @@
   color: inherit;
 }
 .hg-menu-panel__inner {
+  position: relative;
+  width: 500px;
   padding: 70px 24px 24px;
 }
 .hg-menu-backdrop {
@@ -277,9 +279,10 @@
 }
 
 .hg-menu {
+
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 94px);
   background-color: #fff;
   color: #000;
   transition: all ease 0.3s;
@@ -320,4 +323,31 @@
 
 .hg-menu__list a:hover {
   text-decoration: underline;
+}
+
+.hg-menu__image {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  max-width: 280px;
+  aspect-ratio: 3/4;
+  transform: translate(-100%, 0);
+
+  visibility: hidden;
+  transition: transform 0.35s ease 0.15s;
+  pointer-events: none;
+}
+.hg-menu__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cuando el menú está abierto, la imagen sale */
+.hg-menu-panel.is-open .hg-menu__image {
+  transform: translate(100%, 0);
+  visibility: visible;
 }
