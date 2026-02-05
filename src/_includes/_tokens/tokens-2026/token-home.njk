@@ -16,8 +16,8 @@ layout: base-clean.njk
   </button>
 
   
-  <!-- Wrapper: recorta a una columna visible, el row se desplaza con GSAP -->
-  <div class="hg-home-row-cols-wrap">
+  <!-- Wrapper: recorta a una columna visible; arrastrar para cambiar de columna -->
+  <div class="hg-home-row-cols-wrap hg-home-drag-wrap" id="hg-home-drag-wrap">
     <div class="hg-home-row-cols" id="hg-home-row-cols" data-active="0">
     <!-- Columna 1 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
@@ -162,6 +162,93 @@ layout: base-clean.njk
   btnNext.addEventListener('click', function() {
     if (currentIndex < totalCols - 1) goToIndex(currentIndex + 1);
   });
+
+  /* Drag: click + arrastrar mueve las columnas; evitar que el scroll de la columna lo bloquee */
+  (function() {
+    var wrap = document.getElementById('hg-home-drag-wrap');
+    if (!wrap) return;
+    var startX = 0, startY = 0, baseX = 0, minX = 0, lastX = 0, dragging = false, didDrag = false, captureId = null;
+    var SWIPE = 70;
+
+    function getX(e, isEnd) {
+      if (e.touches && e.touches.length) return e.touches[0].clientX;
+      if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
+      return e.clientX;
+    }
+    function getY(e, isEnd) {
+      if (e.touches && e.touches.length) return e.touches[0].clientY;
+      if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientY;
+      return e.clientY;
+    }
+
+    function start(e) {
+      if (dragging) return;
+      if (e.button !== 0 && e.type === 'pointerdown') return;
+      dragging = true;
+      didDrag = false;
+      startX = getX(e, false);
+      startY = getY(e, false);
+      baseX = -currentIndex * getColWidthPx();
+      lastX = baseX;
+      minX = -(totalCols - 1) * getColWidthPx();
+      gsap.killTweensOf(row);
+      captureId = e.pointerId != null ? e.pointerId : null;
+      if (captureId != null) wrap.setPointerCapture(captureId);
+      if (!e.touches) e.preventDefault();
+    }
+
+    function move(e) {
+      if (!dragging) return;
+      var x = getX(e, false);
+      var y = getY(e, false);
+      var dx = x - startX;
+      var dy = y - startY;
+      if (!didDrag) {
+        if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
+          didDrag = Math.abs(dx) >= Math.abs(dy);
+          if (!didDrag) { dragging = false; return; }
+        }
+      }
+      lastX = Math.max(minX, Math.min(0, baseX + dx));
+      row.style.transform = 'translate3d(' + lastX + 'px, 0, 0)';
+      e.preventDefault();
+    }
+
+    function end(e) {
+      var x = getX(e, true);
+      var dx = x - startX;
+      try { if (captureId != null) wrap.releasePointerCapture(captureId); } catch (_) {}
+      captureId = null;
+      if (!dragging) return;
+      dragging = false;
+      gsap.set(row, { x: lastX });
+      if (didDrag) {
+        if (dx > SWIPE && currentIndex > 0) goToIndex(currentIndex - 1);
+        else if (dx < -SWIPE && currentIndex < totalCols - 1) goToIndex(currentIndex + 1);
+        else goToIndex(currentIndex);
+      } else {
+        goToIndex(currentIndex);
+      }
+    }
+
+    function cancel(e) {
+      try { if (captureId != null) wrap.releasePointerCapture(captureId); } catch (_) {}
+      captureId = null;
+      if (!dragging) return;
+      dragging = false;
+      gsap.set(row, { x: -currentIndex * getColWidthPx() });
+      goToIndex(currentIndex);
+    }
+
+    wrap.addEventListener('pointerdown', start, { passive: false });
+    wrap.addEventListener('touchstart', start, { passive: true });
+    wrap.addEventListener('pointermove', move, { passive: false });
+    wrap.addEventListener('touchmove', move, { passive: false });
+    wrap.addEventListener('pointerup', end, { passive: true });
+    wrap.addEventListener('pointercancel', cancel, { passive: true });
+    wrap.addEventListener('touchend', end, { passive: true });
+    wrap.addEventListener('touchcancel', cancel, { passive: true });
+  })();
 
   window.addEventListener('resize', function() {
     goToIndex(currentIndex);

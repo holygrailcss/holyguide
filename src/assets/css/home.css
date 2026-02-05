@@ -127,6 +127,11 @@
   padding-right: 100px;
 }
 
+.hg-home-drag-wrap {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
 /**
  * Botones de navegación horizontal: izquierda y derecha del viewport.
  */
