@@ -49,8 +49,6 @@
 }
 .hg-menu-panel__inner {
   position: relative;
-  width: 500px;
-  padding: 70px 24px 24px;
 }
 .hg-menu-backdrop {
   position: fixed;
@@ -59,7 +57,9 @@
   z-index: 800;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 .hg-menu-backdrop.is-open {
   opacity: 1;
@@ -211,12 +211,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s, background-color 0.2s;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
 }
 .hg-home-nav-btn__text {
   white-space: nowrap;
   font-size: 0.75rem;
- 
+
   text-transform: lowercase;
 }
 .hg-home-nav-btn--prev {
@@ -236,7 +238,7 @@
   opacity: 0.35;
   cursor: not-allowed;
   background-color: transparent;
-  border:none;
+  border: none;
 }
 
 /* Lista horizontal del footer home (selector de idiomas) */
@@ -262,23 +264,27 @@
   display: flex;
   align-items: center;
 
-
   @media (min-width: 992px) {
     padding-bottom: 0;
     height: 60px;
   }
 }
 
-.hg-header .tabs ul li a{
+.hg-header .tabs ul li a {
   padding-left: 0px;
 }
 
-.hg-home-container{
+.hg-home-container {
   z-index: 100;
   position: relative;
 }
 
 .hg-menu {
+  position: relative;
+  width: 500px;
+  padding: 70px 24px 24px;
+  z-index: 1000;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -291,7 +297,7 @@
 .hg-menu__logo {
   margin-top: auto;
   padding-top: 24px;
-  svg{
+  svg {
     width: 100%;
     height: auto;
   }
@@ -315,7 +321,6 @@
   margin: 0;
 }
 
-
 .hg-menu__list a {
   text-decoration: none;
   color: inherit;
@@ -326,7 +331,6 @@
 }
 
 .hg-menu__image {
-  background-color: red;
   position: absolute;
   top: 0;
   right: 0;
@@ -334,15 +338,20 @@
   max-width: 280px;
   aspect-ratio: 3/4;
   transform: translate(-100%, 0);
-
+  z-index: 500;
   visibility: hidden;
-  transition: transform 0.35s ease 0.15s;
+  transition: transform 0.5s ease 0.15s;
   pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hg-menu__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
