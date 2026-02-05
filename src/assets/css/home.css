@@ -321,6 +321,43 @@
   padding-left: 0px;
 }
 
+/* Logo del header: entra a escala 4x, alineado a la izquierda del viewport y a la mitad de altura; al segundo pasa a la posición original */
+.hg-header .hg-menu-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  /* Reserva espacio en el layout para que el header no salte cuando el logo está en fixed */
+  min-width: 258px;
+  min-height: 38px;
+}
+.hg-header .hg-menu-logo svg {
+  display: block;
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(40vh) scale(4);
+  transform-origin: left center; /* escala desde la izquierda para que se vea el logo entero */
+  animation: hg-menu-logo-enter 1s ease 1s forwards;
+  z-index: 2001;
+}
+@keyframes hg-menu-logo-enter {
+  to {
+    top: 0; /* centro del header (altura ~60px) */
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 991px) {
+  .hg-header .hg-menu-logo svg {
+    left: 16px;
+  }
+  @keyframes hg-menu-logo-enter {
+    to {
+      top: 0px; /* centro del header en móvil (altura 50px) */
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
 .hg-home-container {
   z-index: 100;
   position: relative;
