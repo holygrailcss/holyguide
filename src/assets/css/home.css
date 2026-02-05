@@ -40,6 +40,29 @@
   transition: opacity 0.25s ease-out;
 }
 
+/* Wrapper: ocupa el viewport de la columna y centra el box animado */
+.hg-home-box-animated-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Inicio animación: ratio 1:1, mitad de altura del viewport */
+.hg-home-box-animated {
+  height: 50vh;
+  width: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+.hg-home-box-animated img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /**
  * Contenedor con ancho configurable cuyos hijos quedan uno al lado del otro (flex row).
  * Columna activa: 100% - 100px por la izquierda y -100px por la derecha → ancho = calc(100vw - 200px).
@@ -144,4 +167,17 @@
   cursor: not-allowed;
   background-color: transparent;
   border:none;
+}
+
+/* Lista horizontal del footer home (selector de idiomas) */
+.hg-horizontal-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.hg-horizontal-list li {
+  list-style: none;
 }

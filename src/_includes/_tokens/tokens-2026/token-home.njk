@@ -9,7 +9,7 @@ layout: base-clean.njk
 <div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh">
   <!-- Botones de navegación: texto girado 90° -->
   <button type="button" class="btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
-    <span class="hg-home-nav-btn__text">men new season AW 26</span>
+    <span class="hg-home-nav-btn__text">xxx new season AW 26</span>
   </button>
   <button type="button" class=" btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
     <span class="hg-home-nav-btn__text">women new season AW 26</span>
@@ -22,9 +22,11 @@ layout: base-clean.njk
     <!-- Columna 1 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
       <div class="hg-d-flex hg-flex-column hg-gap-y-24">
-
-        <div class="hg-home-box hg-home-box-animated">
-          <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+        <!-- Wrapper para centrar el box animado en el viewport de la columna -->
+        <div class="hg-home-box-animated-wrap">
+          <div class="hg-home-box hg-home-box-animated">
+            <img src="https://static.massimodutti.net/assets/public/b417/9650/83e44e5da0dc/5cd25799ab75/w-bloque5-1-desktop/w-bloque5-1-desktop.jpg" alt="Columna 1">
+          </div>
         </div>
 
         <div class="hg-home-box">
@@ -40,9 +42,7 @@ layout: base-clean.njk
         </div>
 
       </div>
-      <footer class="hg-w-100-percent p-24 hg-text-center" >
-        <p class="text-m">Footer – HolyGrail5</p>
-      </footer>
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>
     <!-- Columna 2 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
@@ -78,7 +78,22 @@ layout: base-clean.njk
 
       </div>
       <footer class="hg-w-100-percent p-24 hg-text-center" >
-        <p class="text-m">Footer – HolyGrail5</p>
+     
+        <ul>
+          <li><p class="btn btn-tertiary text-m ttu">APP MASSIMO DUTTI</p></li>
+          <li><a class="btn btn-tertiary text-m ttu" href="#">Ayuda</a></li>
+          <li><a class="btn btn-tertiary text-m ttu" href="#">Social</a></li>
+          <li><a class="btn btn-tertiary text-m ttu"   href="#">Servicios</a></li>
+          <li><a class="btn btn-tertiary text-m ttu"   href="#">Legal</a></li>
+          <li><a class="btn btn-tertiary text-m ttu"   href="#">Empresa</a></li>
+        </ul>
+
+        <ul>
+         
+          <li> <a href="">CAMBIAR DE MERCADO</a>  </li>
+          <li>  <a href="">ESPAÑA</a>  </li>
+         
+        </ul>
       </footer>
     </section>
   </div>
@@ -159,5 +174,18 @@ layout: base-clean.njk
   });
   goToIndex(0);
   setupScrollFade();
+
+  /* Tras 1 s: animar .hg-home-box-animated de 1:1 (50vh) a 3:2 (100vh alto) */
+  setTimeout(function() {
+    var animatedBoxes = document.querySelectorAll('.hg-home-box-animated');
+    animatedBoxes.forEach(function(el) {
+      gsap.to(el, {
+        height: '100vh',
+        width: '150vh',
+        duration: 1.2,
+        ease: 'power2.out'
+      });
+    });
+  }, 1000);
 })();
 </script>
