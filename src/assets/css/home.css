@@ -5,6 +5,24 @@
  * Usa variables --hg-* de HolyGrail5 (https://hg5.netlify.app/output.css).
  */
 
+/* Enlace "Saltar al contenido" (accesibilidad, navegación por teclado) */
+.hg-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.hg-skip-link:focus {
+  left: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 /* Header por encima del contenido de la home (columnas e imágenes) */
 .hg-header {
   position: relative;
@@ -13,6 +31,21 @@
 .hg-home-container {
   position: relative;
   z-index: 1;
+}
+
+/* Foco visible para navegación por teclado (Tab) */
+.hg-header a:focus-visible,
+.hg-home-nav-btn:focus-visible,
+.hg-menu-panel__close:focus-visible,
+.hg-menu a:focus-visible,
+.hg-home-box-link:focus-visible,
+.hg-skip-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.hg-home-nav-btn:focus:not(:focus-visible),
+.hg-menu-panel__close:focus:not(:focus-visible) {
+  outline: none;
 }
 
 /* Panel hg-menu: drawer que se abre al hacer click en .menu-item-header */
@@ -97,6 +130,20 @@
   color: var(--hg-color-dark-grey, #333);
 }
 
+.hg-home-box-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.hg-home-box-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.hg-home-box-link:hover,
+.hg-home-box-link:hover .hg-home-box {
+  opacity: 1;
+}
 .hg-home-box {
   display: flex;
   align-items: center;
