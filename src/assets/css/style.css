@@ -15175,35 +15175,6 @@ header.interior svg path {
     width: initial;
   }
 }
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  color: #ffffff;
-  z-index: 100;
-  height: 50px;
-  transition: all ease 0.3s;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  mix-blend-mode: difference;
-  background-blend-mode: difference;
-}
-@media (min-width: 992px) {
-  header {
-    padding-bottom: 0;
-    height: 60px;
-  }
-}
-
-header ul.list-clear li {
-  margin: 0;
-}
-
-header a {
-  color: white;
-}
-
 header.interior a {
   color: #212121;
 }

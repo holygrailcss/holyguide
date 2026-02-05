@@ -5,8 +5,20 @@ layout: base-clean.njk
 {# Importamos home.css únicamente para el token-home. #}
 <link rel="stylesheet" href="/assets/css/home.css">
 
+
+{% include '_paginas/templates-2026/hg-header.njk' %}
+
+<!-- Panel hg-menu: se abre al hacer click en .menu-item-header -->
+<div id="hg-menu-panel" class="hg-menu-panel" aria-hidden="true">
+  <button type="button" class="hg-menu-panel__close" aria-label="Cerrar menú">&times;</button>
+  <div class="hg-menu-panel__inner">
+    {% include '_paginas/templates-2026/hg-menu.njk' %}
+  </div>
+</div>
+<div id="hg-menu-backdrop" class="hg-menu-backdrop" aria-hidden="true"></div>
+
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
-<div class="hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh">
+<div class="hg-home-container hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh">
   <!-- Botones de navegación: texto girado 90° -->
   <button type="button" class="btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
     <span class="hg-home-nav-btn__text">xxx new season AW 26</span>
@@ -65,9 +77,7 @@ layout: base-clean.njk
           <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
         </div>
       </div>
-      <footer class="hg-w-100-percent p-24 hg-text-center" >
-        <p class="text-m">Footer – HolyGrail5</p>
-      </footer>
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>  
     <!-- Columna 3 -->
     <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
@@ -77,195 +87,223 @@ layout: base-clean.njk
         </div>
 
       </div>
-      <footer class="hg-w-100-percent p-24 hg-text-center" >
-     
-        <ul>
-          <li><p class="btn btn-tertiary text-m ttu">APP MASSIMO DUTTI</p></li>
-          <li><a class="btn btn-tertiary text-m ttu" href="#">Ayuda</a></li>
-          <li><a class="btn btn-tertiary text-m ttu" href="#">Social</a></li>
-          <li><a class="btn btn-tertiary text-m ttu"   href="#">Servicios</a></li>
-          <li><a class="btn btn-tertiary text-m ttu"   href="#">Legal</a></li>
-          <li><a class="btn btn-tertiary text-m ttu"   href="#">Empresa</a></li>
-        </ul>
 
-        <ul>
-         
-          <li> <a href="">CAMBIAR DE MERCADO</a>  </li>
-          <li>  <a href="">ESPAÑA</a>  </li>
-         
-        </ul>
-      </footer>
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>
   </div>
   </div>
   <!-- Footer debajo de las columnas -->
 
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
-(function() {
-  var row = document.getElementById('hg-home-row-cols');
-  var btnPrev = document.getElementById('hg-home-nav-prev');
-  var btnNext = document.getElementById('hg-home-nav-next');
-  if (!row || !btnPrev || !btnNext) return;
+(() => {
+  // -----------------------------
+  // 1) Referencias DOM y estado
+  // -----------------------------
+  const row     = document.getElementById('hg-home-row-cols');
+  const prevBtn = document.getElementById('hg-home-nav-prev');
+  const nextBtn = document.getElementById('hg-home-nav-next');
+  const dragWrap = document.getElementById('hg-home-drag-wrap');
 
-  var totalCols = 3;
-  var currentIndex = 0;
+  if (!row || !prevBtn || !nextBtn) return;
 
-  function getColWidthPx() {
-    return window.innerWidth - 200;
+  const totalCols = 3;            // número de columnas/páginas
+  let active = 0;                 // índice activo (0..totalCols-1)
+  const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
+
+  // ancho "efectivo" de cada columna (tu lógica original)
+  const colWidth = () => window.innerWidth - 200;
+
+  // -----------------------------
+  // 2) Navegación / animación
+  // -----------------------------
+  function setActive(index) {
+    if (index < 0 || index >= totalCols) return;
+    active = index;
+
+    row.dataset.active = String(active);
+
+    // mover el contenedor horizontalmente
+    gsap.to(row, {
+      x: -active * colWidth(),
+      duration: 0.5,
+      ease: 'power3.out'
+    });
+
+    // escalar columnas: activa 1, resto 0.5
+    cols.forEach((col, i) => {
+      gsap.to(col, {
+        scale: i === active ? 1 : 0.5,
+        duration: 0.5,
+        ease: 'power3.out'
+      });
+    });
+
+    prevBtn.disabled = active === 0;
+    nextBtn.disabled = active === totalCols - 1;
   }
 
-  var cols = row ? row.querySelectorAll('.hg-home-row-cols__col') : [];
+  prevBtn.addEventListener('click', () => setActive(active - 1));
+  nextBtn.addEventListener('click', () => setActive(active + 1));
 
-  var fadeStartRatio = 0.001;
+  // -----------------------------
+  // 3) Fade de boxes al hacer scroll dentro de cada columna
+  //    (aparece progresivo al entrar por abajo)
+  // -----------------------------
+  const fadeStartRatio = 0.001;
 
   function updateBoxOpacity(col) {
-    if (!col) return;
-    var colRect = col.getBoundingClientRect();
-    var colHeight = colRect.height;
-    var fadeStartPx = fadeStartRatio * colHeight;
-    var boxes = col.querySelectorAll('.hg-home-box');
-    boxes.forEach(function(box) {
-      var boxRect = box.getBoundingClientRect();
-      var boxTop = boxRect.top - colRect.top;
-      var boxHeight = boxRect.height;
-      var opacity = Math.min(1, Math.max(0, (boxTop + boxHeight) / (fadeStartPx + boxHeight)));
+    const colRect = col.getBoundingClientRect();
+    const fadeStartPx = colRect.height * fadeStartRatio;
+
+    col.querySelectorAll('.hg-home-box').forEach(box => {
+      const boxRect = box.getBoundingClientRect();
+      const boxTopInsideCol = boxRect.top - colRect.top;
+      const boxHeight = boxRect.height;
+
+      // misma fórmula que tenías, pero con nombres más claros
+      const opacity = Math.min(1, Math.max(0,
+        (boxTopInsideCol + boxHeight) / (fadeStartPx + boxHeight)
+      ));
+
       box.style.opacity = String(opacity);
     });
   }
 
-  function setupScrollFade() {
-    cols.forEach(function(col) {
-      col.addEventListener('scroll', function() { updateBoxOpacity(col); });
+  function initScrollFade() {
+    cols.forEach(col => {
+      col.addEventListener('scroll', () => updateBoxOpacity(col));
       updateBoxOpacity(col);
     });
   }
 
-  function goToIndex(index) {
-    if (index < 0 || index >= totalCols) return;
-    currentIndex = index;
-    row.setAttribute('data-active', String(index));
-    var x = -currentIndex * getColWidthPx();
-    gsap.to(row, { x: x, duration: 0.5, ease: 'power3.out' });
-    cols.forEach(function(col, i) {
-      gsap.to(col, { scale: i === currentIndex ? 1 : 0.5, duration: 0.5, ease: 'power3.out' });
-    });
-    btnPrev.disabled = currentIndex === 0;
-    btnNext.disabled = currentIndex === totalCols - 1;
-  }
+  // -----------------------------
+  // 4) Drag / Swipe horizontal (pointer events)
+  //    - si el gesto es más horizontal que vertical, cambia de columna
+  // -----------------------------
+  function initDrag() {
+    if (!dragWrap) return;
 
-  btnPrev.addEventListener('click', function() {
-    if (currentIndex > 0) goToIndex(currentIndex - 1);
-  });
-  btnNext.addEventListener('click', function() {
-    if (currentIndex < totalCols - 1) goToIndex(currentIndex + 1);
-  });
+    const SWIPE_PX = 70;
+    const DRAG_START_PX = 8;
 
-  /* Drag: click + arrastrar mueve las columnas; evitar que el scroll de la columna lo bloquee */
-  (function() {
-    var wrap = document.getElementById('hg-home-drag-wrap');
-    if (!wrap) return;
-    var startX = 0, startY = 0, baseX = 0, minX = 0, lastX = 0, dragging = false, didDrag = false, captureId = null;
-    var SWIPE = 70;
+    let isDragging = false;
+    let started = false;          // ya decidimos si es drag horizontal
+    let startX = 0, startY = 0;
+    let baseX = 0;                // x inicial del row al empezar a arrastrar
+    let lastX = 0;                // último x aplicado
+    let pointerId = null;
 
-    function getX(e, isEnd) {
-      if (e.touches && e.touches.length) return e.touches[0].clientX;
-      if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientX;
-      return e.clientX;
-    }
-    function getY(e, isEnd) {
-      if (e.touches && e.touches.length) return e.touches[0].clientY;
-      if (e.changedTouches && e.changedTouches.length) return e.changedTouches[0].clientY;
-      return e.clientY;
-    }
+    const minX = () => -(totalCols - 1) * colWidth();
 
-    function start(e) {
-      if (dragging) return;
-      if (e.button !== 0 && e.type === 'pointerdown') return;
-      dragging = true;
-      didDrag = false;
-      startX = getX(e, false);
-      startY = getY(e, false);
-      baseX = -currentIndex * getColWidthPx();
+    function onDown(e) {
+      if (e.type === 'pointerdown' && e.button !== 0) return;
+
+      isDragging = true;
+      started = false;
+
+      startX = e.clientX;
+      startY = e.clientY;
+
+      baseX = -active * colWidth();
       lastX = baseX;
-      minX = -(totalCols - 1) * getColWidthPx();
-      gsap.killTweensOf(row);
-      captureId = e.pointerId != null ? e.pointerId : null;
-      if (captureId != null) wrap.setPointerCapture(captureId);
-      if (!e.touches) e.preventDefault();
-    }
 
-    function move(e) {
-      if (!dragging) return;
-      var x = getX(e, false);
-      var y = getY(e, false);
-      var dx = x - startX;
-      var dy = y - startY;
-      if (!didDrag) {
-        if (Math.abs(dx) > 8 || Math.abs(dy) > 8) {
-          didDrag = Math.abs(dx) >= Math.abs(dy);
-          if (!didDrag) { dragging = false; return; }
-        }
-      }
-      lastX = Math.max(minX, Math.min(0, baseX + dx));
-      row.style.transform = 'translate3d(' + lastX + 'px, 0, 0)';
+      gsap.killTweensOf(row);
+
+      pointerId = e.pointerId ?? null;
+      if (pointerId != null) dragWrap.setPointerCapture(pointerId);
+
       e.preventDefault();
     }
 
-    function end(e) {
-      var x = getX(e, true);
-      var dx = x - startX;
-      try { if (captureId != null) wrap.releasePointerCapture(captureId); } catch (_) {}
-      captureId = null;
-      if (!dragging) return;
-      dragging = false;
-      gsap.set(row, { x: lastX });
-      if (didDrag) {
-        if (dx > SWIPE && currentIndex > 0) goToIndex(currentIndex - 1);
-        else if (dx < -SWIPE && currentIndex < totalCols - 1) goToIndex(currentIndex + 1);
-        else goToIndex(currentIndex);
-      } else {
-        goToIndex(currentIndex);
+    function onMove(e) {
+      if (!isDragging) return;
+
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // decidir si el gesto es realmente horizontal
+      if (!started) {
+        if (Math.abs(dx) > DRAG_START_PX || Math.abs(dy) > DRAG_START_PX) {
+          started = Math.abs(dx) >= Math.abs(dy);
+          if (!started) { isDragging = false; return; } // era scroll vertical
+        } else {
+          return;
+        }
       }
+
+      lastX = Math.max(minX(), Math.min(0, baseX + dx));
+      row.style.transform = `translate3d(${lastX}px,0,0)`;
+
+      e.preventDefault();
     }
 
-    function cancel(e) {
-      try { if (captureId != null) wrap.releasePointerCapture(captureId); } catch (_) {}
-      captureId = null;
-      if (!dragging) return;
-      dragging = false;
-      gsap.set(row, { x: -currentIndex * getColWidthPx() });
-      goToIndex(currentIndex);
+    function finish(e) {
+      if (pointerId != null) {
+        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
+      }
+      pointerId = null;
+
+      if (!isDragging) return;
+      isDragging = false;
+
+      // “consolidamos” el transform manual a GSAP x
+      gsap.set(row, { x: lastX });
+
+      const dx = e.clientX - startX;
+
+      // si fue swipe suficiente, cambia de columna
+      if (started) {
+        if (dx > SWIPE_PX) return setActive(active - 1);
+        if (dx < -SWIPE_PX) return setActive(active + 1);
+      }
+
+      // si no, vuelve a la actual (snap)
+      setActive(active);
     }
 
-    wrap.addEventListener('pointerdown', start, { passive: false });
-    wrap.addEventListener('touchstart', start, { passive: true });
-    wrap.addEventListener('pointermove', move, { passive: false });
-    wrap.addEventListener('touchmove', move, { passive: false });
-    wrap.addEventListener('pointerup', end, { passive: true });
-    wrap.addEventListener('pointercancel', cancel, { passive: true });
-    wrap.addEventListener('touchend', end, { passive: true });
-    wrap.addEventListener('touchcancel', cancel, { passive: true });
-  })();
+    function cancel() {
+      if (pointerId != null) {
+        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
+      }
+      pointerId = null;
 
-  window.addEventListener('resize', function() {
-    goToIndex(currentIndex);
-    cols.forEach(function(col) { updateBoxOpacity(col); });
+      if (!isDragging) return;
+      isDragging = false;
+
+      gsap.set(row, { x: -active * colWidth() });
+      setActive(active);
+    }
+
+    dragWrap.addEventListener('pointerdown', onDown, { passive: false });
+    dragWrap.addEventListener('pointermove', onMove, { passive: false });
+    dragWrap.addEventListener('pointerup', finish, { passive: true });
+    dragWrap.addEventListener('pointercancel', cancel, { passive: true });
+  }
+
+  // -----------------------------
+  // 5) Resize: recalcular x y opacidades
+  // -----------------------------
+  window.addEventListener('resize', () => {
+    setActive(active);
+    cols.forEach(updateBoxOpacity);
   });
 
-  /* Estado inicial: columna 1 al 100%, resto al 50% */
-  cols.forEach(function(col, i) {
-    gsap.set(col, { scale: i === 0 ? 1 : 0.5 });
-  });
-  goToIndex(0);
-  setupScrollFade();
+  // -----------------------------
+  // 6) Init
+  // -----------------------------
+  // estado inicial: col 0 a 1, resto a 0.5
+  cols.forEach((col, i) => gsap.set(col, { scale: i === 0 ? 1 : 0.5 }));
+  setActive(0);
+  initScrollFade();
+  initDrag();
 
-  /* Tras 1 s: animar .hg-home-box-animated de 1:1 (50vh) a 3:2 (100vh alto) */
-  setTimeout(function() {
-    var animatedBoxes = document.querySelectorAll('.hg-home-box-animated');
-    animatedBoxes.forEach(function(el) {
+  // -----------------------------
+  // 7) Animación “hero” al segundo
+  // -----------------------------
+  setTimeout(() => {
+    document.querySelectorAll('.hg-home-box-animated').forEach(el => {
       gsap.to(el, {
         height: '100vh',
         width: '150vh',
@@ -274,5 +312,32 @@ layout: base-clean.njk
       });
     });
   }, 1000);
+
+  // Abrir/cerrar hg-menu al hacer click en .menu-item-header
+  (function() {
+    var panel = document.getElementById('hg-menu-panel');
+    var backdrop = document.getElementById('hg-menu-backdrop');
+    if (!panel || !backdrop) return;
+    function openMenu() {
+      panel.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      panel.setAttribute('aria-hidden', 'false');
+      backdrop.setAttribute('aria-hidden', 'false');
+    }
+    function closeMenu() {
+      panel.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      panel.setAttribute('aria-hidden', 'true');
+      backdrop.setAttribute('aria-hidden', 'true');
+    }
+    document.querySelectorAll('.menu-item-header').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (panel.classList.contains('is-open')) closeMenu(); else openMenu();
+      });
+    });
+    panel.querySelector('.hg-menu-panel__close').addEventListener('click', closeMenu);
+    backdrop.addEventListener('click', closeMenu);
+  })();
 })();
 </script>

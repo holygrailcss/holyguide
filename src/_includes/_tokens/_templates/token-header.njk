@@ -1,37 +1,5 @@
 ---
-  layout: base-clean.njk
+layout: base-clean.njk
 ---
 <!-- Contenido de la plantilla header.njk -->
-<div class="height-full bg-dark ">
-    <header>
-        <div class="container-total pr-body pl-body">
-            <div class="row  ">
-                <div class="col-xs-4 text-left is-flex content-start pt-16">
-                    <div class="pr-40">
-                        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <line y1="0.5" x2="14" y2="0.5" stroke="white" ></line>
-                            <line y1="9.5" x2="14" y2="9.5" stroke="white" ></line>
-                        </svg>
-                    </div>
-                    <div class="tabs sm:hidden">
-                        <ul class="  list-clear  has-light ">
-                            <li> <a href="/"> WOMEN </a> </li>
-                            <li class="is-active"><a href="/parrillas2"> MEN </a> </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-4 text-center">
-                    <div class="search-bar  sm:hidden mt-16"> SEARCH</div>
-                </div>
-                <div class="col-xs-4 text-center">
-                    <ul class="  list-clear   text-right is-flex  content-end  pt-16">
-                        <li class="pr-40"> <a class="" href="/">SIGN IN </a>
-                        </li>
-                        <li> <a class=" " href="/parrillas2"> BAG </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-</div>
+{% include '_paginas/templates-2026/hg-header.njk' %}
