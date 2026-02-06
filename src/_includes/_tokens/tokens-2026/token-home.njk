@@ -332,6 +332,21 @@ layout: base-clean.njk
   initScrollFade();
   initDrag();
 
+  // 6b) Ocultar botones cuando el footer de la columna entra en pantalla
+  (function() {
+    const footers = document.querySelectorAll('#hg-home-main footer');
+    if (!footers.length) return;
+    const visibleFooters = new Set();
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) visibleFooters.add(entry.target);
+        else visibleFooters.delete(entry.target);
+      });
+      document.body.classList.toggle('hg-footer-in-view', visibleFooters.size > 0);
+    }, { threshold: 0 });
+    footers.forEach(function(f) { observer.observe(f); });
+  })();
+
   // -----------------------------
   // 7) Animación “hero” al segundo
   // -----------------------------
