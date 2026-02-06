@@ -142,8 +142,8 @@ layout: base-clean.njk
   let active = 0;                 // índice activo (0..totalCols-1)
   const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
 
-  // ancho "efectivo" de cada columna (tu lógica original)
-  const colWidth = () => window.innerWidth - 200;
+  const mobileMQ = window.matchMedia('(max-width: 991px)');
+  const colWidth = () => window.innerWidth - (mobileMQ.matches ? 100 : 200);
 
   // -----------------------------
   // 2) Navegación / animación
@@ -176,6 +176,9 @@ layout: base-clean.njk
 
   prevBtn.addEventListener('click', () => setActive(active - 1));
   nextBtn.addEventListener('click', () => setActive(active + 1));
+
+  mobileMQ.addEventListener('change', () => setActive(active));
+  window.addEventListener('resize', () => setActive(active));
 
   // -----------------------------
   // 3) Fade de boxes al hacer scroll dentro de cada columna

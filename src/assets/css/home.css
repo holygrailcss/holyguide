@@ -180,6 +180,8 @@
  * Columna activa: 100% - 100px por la izquierda y -100px por la derecha → ancho = calc(100vw - 200px).
  */
 .hg-home-row-cols {
+
+
   --hg-home-col-width: calc(100vw - 200px);
   --hg-home-row-width: calc(300vw - 600px);
   display: flex;
@@ -209,6 +211,24 @@
 .hg-home-row-cols__col:nth-child(3) {
   transform-origin: left center;
 }
+
+
+@media (min-width: 768px) {
+  .hg-home-row-cols__col {
+    flex: 0 0 var(--hg-home-col-width);
+    width: var(--hg-home-col-width);
+    min-width: 0;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+
+
+
+
 /* Col 1 activa: col 2 y 3 alineadas a la izquierda (peek junto a col 1) */
 .hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(2),
 .hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(3) {
@@ -229,6 +249,7 @@
 
 /**
  * Wrapper: 100px margen izquierda y derecha; la columna activa mide 100vw - 200px.
+ * En móvil: 50px por lado (100px total).
  */
 .hg-home-row-cols-wrap {
   flex: 1 1 0;
@@ -237,6 +258,17 @@
   position: relative;
   padding-left: 100px;
   padding-right: 100px;
+}
+
+@media (max-width: 991px) {
+  .hg-home-row-cols {
+    --hg-home-col-width: calc(100vw - 100px);
+    --hg-home-row-width: calc(300vw - 300px);
+  }
+  .hg-home-row-cols-wrap {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .hg-home-drag-wrap {
@@ -269,14 +301,26 @@
   text-transform: lowercase;
 }
 .hg-home-nav-btn--prev {
-  left: 25px;
+  left: -20px;
 }
+.hg-home-nav-btn--next {
+  right: -32px;
+}
+
+
+@media (min-width: 768px) {
+  .hg-home-nav-btn--prev {
+    left: 25px;
+  }
+  .hg-home-nav-btn--next {
+    right: -32px;
+  }
+}
+
 .hg-home-nav-btn--prev {
   transform: rotate(-90deg);
 }
-.hg-home-nav-btn--next {
-  right: 16px;
-}
+
 .hg-home-nav-btn--next {
   transform: rotate(-90deg);
 }
