@@ -157,7 +157,6 @@ layout: base-clean.njk
 
     row.dataset.active = String(active);
 
-    // mover el contenedor horizontalmente
     gsap.to(row, {
       x: -active * colWidth(),
       duration: 0.5,
@@ -299,7 +298,6 @@ layout: base-clean.njk
 
       const dx = e.clientX - startX;
 
-      // si fue swipe suficiente, cambia de columna
       if (started) {
         if (dx > SWIPE_PX) return setActive(active - 1);
         if (dx < -SWIPE_PX) return setActive(active + 1);

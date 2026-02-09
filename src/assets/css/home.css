@@ -222,6 +222,12 @@
   touch-action: pan-y;
 }
 
+/* RTL: el carrusel de columnas mantiene orden LTR para que el drag y la posición x sigan siendo correctos */
+body.is-rtl .hg-home-row-cols-wrap,
+body.is-rtl .hg-home-row-cols {
+  direction: ltr;
+}
+
 /**
  * Botones de navegación horizontal: izquierda y derecha del viewport.
  */
