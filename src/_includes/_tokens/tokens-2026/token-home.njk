@@ -17,16 +17,16 @@ layout: base-clean.njk
   <div class="hg-menu-panel__inner">
     {% include '_paginas/templates-2026/hg-menu.njk' %}
   </div>
-</div>    
+</div>
 <div id="hg-menu-backdrop" class="hg-menu-backdrop" aria-hidden="true" tabindex="-1"></div>
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
 <main id="hg-home-main" class="hg-home-container hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
   <!-- Botones de navegación: texto girado 90° -->
-  <button type="button" class="btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
+  <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
     <span class="hg-home-nav-btn__text">xxx new season AW 26</span>
   </button>
-  <button type="button" class=" btn btn-tertiary  hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
+  <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
     <span class="hg-home-nav-btn__text">women new season AW 26</span>
   </button>
 
@@ -35,7 +35,7 @@ layout: base-clean.njk
   <div class="hg-home-row-cols-wrap hg-home-drag-wrap" id="hg-home-drag-wrap">
     <div class="hg-home-row-cols" id="hg-home-row-cols" data-active="0">
     <!-- Columna 1 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 1">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -71,7 +71,7 @@ layout: base-clean.njk
       {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>
     <!-- Columna 2 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 2">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -107,7 +107,7 @@ layout: base-clean.njk
       {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>  
     <!-- Columna 3 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 3">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -128,6 +128,8 @@ layout: base-clean.njk
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script>
 (() => {
+  if (typeof gsap === 'undefined') return;
+
   // -----------------------------
   // 1) Referencias DOM y estado
   // -----------------------------
@@ -180,7 +182,16 @@ layout: base-clean.njk
   nextBtn.addEventListener('click', () => setActive(active + 1));
 
   mobileMQ.addEventListener('change', () => setActive(active));
-  window.addEventListener('resize', () => setActive(active));
+
+  let resizeT = null;
+  window.addEventListener('resize', () => {
+    if (resizeT) clearTimeout(resizeT);
+    resizeT = setTimeout(() => {
+      setActive(active);
+      cols.forEach(updateBoxOpacity);
+      resizeT = null;
+    }, 100);
+  });
 
   // -----------------------------
   // 3) Fade de boxes al hacer scroll dentro de cada columna
@@ -318,12 +329,8 @@ layout: base-clean.njk
   }
 
   // -----------------------------
-  // 5) Resize: recalcular x y opacidades
+  // 5) Resize: ver manejador con debounce (100 ms) más arriba
   // -----------------------------
-  window.addEventListener('resize', () => {
-    setActive(active);
-    cols.forEach(updateBoxOpacity);
-  });
 
   // -----------------------------
   // 6) Init
@@ -334,7 +341,7 @@ layout: base-clean.njk
   initScrollFade();
   initDrag();
 
-  // 6b) Ocultar botones solo cuando el footer de la columna visible entra en pantalla
+  // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
   (function() {
     const footers = document.querySelectorAll('#hg-home-main footer');
     if (!footers.length) return;
@@ -349,7 +356,7 @@ layout: base-clean.njk
         else visibleFooters.delete(entry.target);
       });
       updateFooterInView();
-    }, { threshold: 0 });
+    }, { threshold: 0.2 });
     footers.forEach(function(f) { observer.observe(f); });
   })();
 
