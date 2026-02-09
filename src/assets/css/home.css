@@ -36,67 +36,13 @@
 /* Foco visible para navegación por teclado (Tab) */
 .hg-header a:focus-visible,
 .hg-home-nav-btn:focus-visible,
-.hg-menu-panel__close:focus-visible,
-.hg-menu a:focus-visible,
 .hg-home-box-link:focus-visible,
 .hg-skip-link:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
-.hg-home-nav-btn:focus:not(:focus-visible),
-.hg-menu-panel__close:focus:not(:focus-visible) {
+.hg-home-nav-btn:focus:not(:focus-visible) {
   outline: none;
-}
-
-/* Panel hg-menu: drawer que se abre al hacer click en .menu-item-header */
-.hg-menu-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 500px;
-  height: 100vh;
-  background: var(--hg-color-white, #fff);
-  z-index: 1000;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
-}
-.hg-menu-panel.is-open {
-  transform: translateX(0);
-}
-.hg-menu-panel__close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  color: inherit;
-}
-.hg-menu-panel__inner {
-  position: relative;
-}
-.hg-menu-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 800;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-}
-.hg-menu-backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
 }
 
 .templates-2026-home {
@@ -371,126 +317,7 @@ body.hg-footer-in-view .hg-home-nav-btn {
   padding-left: 0px;
 }
 
-/* Logo del header: entra a escala 4x, alineado a la izquierda del viewport y a la mitad de altura; al segundo pasa a la posición original */
-.hg-header .hg-menu-logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  /* Reserva espacio en el layout para que el header no salte cuando el logo está en fixed */
-  min-width: 258px;
-  min-height: 38px;
-}
-.hg-header .hg-menu-logo svg {
-  display: block;
-  position: absolute;
-
-  top: 50%;
-  transform: translateY(40vh) scale(4);
-  transform-origin: left center; /* escala desde la izquierda para que se vea el logo entero */
-  animation: hg-menu-logo-enter 1s ease 1s forwards;
-  z-index: 2001;
-}
-@keyframes hg-menu-logo-enter {
-  to {
-    top: 0; /* centro del header (altura ~60px) */
-    transform: translateY(0) scale(1);
-  }
-}
-@media (max-width: 991px) {
-  .hg-header .hg-menu-logo svg {
-    left: 16px;
-  }
-  @keyframes hg-menu-logo-enter {
-    to {
-      top: 0px; /* centro del header en móvil (altura 50px) */
-      transform: translateY(0) scale(1);
-    }
-  }
-}
-
 .hg-home-container {
   z-index: 100;
   position: relative;
-}
-
-.hg-menu {
-  position: relative;
-  width: 500px;
-  padding: 70px 24px 24px;
-  z-index: 1000;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 94px);
-  background-color: #fff;
-  color: #000;
-  transition: all ease 0.3s;
-}
-
-.hg-menu__logo {
-  margin-top: auto;
-  padding-top: 24px;
-  svg {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.hg-menu__cols {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-/* Ahora el ancho lo define el contenido */
-.hg-menu__col {
-  flex: 0 0 auto;
-  min-width: 100px;
-  width: auto;
-}
-
-.hg-menu__list {
-  padding: 0;
-  margin: 0;
-}
-
-.hg-menu__list a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.hg-menu__list a:hover {
-  text-decoration: underline;
-}
-
-.hg-menu__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40vw;
-  max-width: 280px;
-  aspect-ratio: 3/4;
-  transform: translate(-100%, 0);
-  z-index: 500;
-  visibility: hidden;
-  transition: transform 0.5s ease 0.15s;
-  pointer-events: none;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hg-menu__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Cuando el menú está abierto, la imagen sale */
-.hg-menu-panel.is-open .hg-menu__image {
-  transform: translate(100%, 0);
-  visibility: visible;
 }
