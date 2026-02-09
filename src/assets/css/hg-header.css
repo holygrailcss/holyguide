@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/**
+ * hg-header.css — Estilos del header (templates 2026).
+ * Se carga junto a home.css en token-home. Usa variables --hg-* de HolyGrail5.
+ */
+
+/* Header: barra fija superior */
+.hg-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #000;
+  z-index: 2000;
+  height: 50px;
+  transition: all ease 0.3s;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .hg-header {
+    padding-bottom: 0;
+    height: 60px;
+  }
+}
+
+.hg-header .tabs ul li a {
+  padding-left: 0;
+}
+
+/* Foco visible (accesibilidad) en enlaces del header */
+.hg-header a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

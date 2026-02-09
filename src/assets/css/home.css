@@ -23,18 +23,12 @@
   outline-offset: 2px;
 }
 
-/* Header por encima del contenido de la home (columnas e imágenes) */
-.hg-header {
-  position: relative;
-  z-index: 20;
-}
 .hg-home-container {
   position: relative;
   z-index: 1;
 }
 
 /* Foco visible para navegación por teclado (Tab) */
-.hg-header a:focus-visible,
 .hg-home-nav-btn:focus-visible,
 .hg-home-box-link:focus-visible,
 .hg-skip-link:focus-visible {
@@ -301,26 +295,6 @@ body.hg-footer-in-view .hg-home-nav-btn {
 }
 .hg-horizontal-list li {
   list-style: none;
-}
-.hg-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  color: #000;
-  z-index: 2000;
-  height: 50px;
-  transition: all ease 0.3s;
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 992px) {
-    padding-bottom: 0;
-    height: 60px;
-  }
-}
-
-.hg-header .tabs ul li a {
-  padding-left: 0px;
 }
 
 .hg-home-container {
