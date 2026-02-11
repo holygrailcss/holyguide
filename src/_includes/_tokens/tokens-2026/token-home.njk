@@ -340,6 +340,26 @@ layout: base-clean.njk
   initScrollFade();
   initDrag();
 
+  // 6a) Animación de entrada del logo (estado inicial en CSS para evitar salto; GSAP anima al destino)
+  (function() {
+    const logo = document.querySelector('.hg-header .hg-menu-logo svg');
+    const container = document.querySelector('.hg-header .hg-menu-logo');
+    if (!logo || !container) return;
+    const rect = container.getBoundingClientRect();
+    gsap.to(logo, {
+      left: rect.left,
+      top: rect.top,
+      y: 0,
+      scale: 1,
+      duration: 1,
+      delay: 1,
+      ease: 'power2.out',
+      onComplete: function() {
+        gsap.set(logo, { position: 'absolute', left: 0, top: 0 });
+      }
+    });
+  })();
+
   // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
   (function() {
     const footers = document.querySelectorAll('#hg-home-main footer');

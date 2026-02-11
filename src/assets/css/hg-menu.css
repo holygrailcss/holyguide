@@ -82,7 +82,7 @@ body.is-rtl .hg-menu-panel__close {
   visibility: visible;
 }
 
-/* Logo en el header: animación de entrada */
+/* Logo en el header: estado inicial (evita salto antes de que GSAP arranque); animación con GSAP */
 .hg-header .hg-menu-logo {
   position: relative;
   display: inline-flex;
@@ -92,29 +92,12 @@ body.is-rtl .hg-menu-panel__close {
 }
 .hg-header .hg-menu-logo svg {
   display: block;
-  position: absolute;
+  position: fixed;
+  left: 0;
   top: 50%;
-  transform: translateY(40vh) scale(4);
+  transform: translateY(-50%) scale(4);
   transform-origin: left center;
-  animation: hg-menu-logo-enter 1s ease 1s forwards;
   z-index: 2001;
-}
-@keyframes hg-menu-logo-enter {
-  to {
-    top: 0;
-    transform: translateY(0) scale(1);
-  }
-}
-@media (max-width: 991px) {
-  .hg-header .hg-menu-logo svg {
-    left: 16px;
-  }
-  @keyframes hg-menu-logo-enter {
-    to {
-      top: 0;
-      transform: translateY(0) scale(1);
-    }
-  }
 }
 
 /* Contenido del menú (nav y columnas) */
