@@ -294,10 +294,26 @@ layout: base-clean.njk
       if (!isDragging) return;
       isDragging = false;
 
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // Tap en la zona que asoma (peek): ir a columna anterior o siguiente como el botón
+      if (!started && Math.abs(dx) < 15 && Math.abs(dy) < 15) {
+        const wrapRect = dragWrap.getBoundingClientRect();
+        const relX = startX - wrapRect.left;
+        const peekThreshold = 0.2;
+        if (relX < wrapRect.width * peekThreshold && active > 0) {
+          setActive(active - 1);
+          return;
+        }
+        if (relX > wrapRect.width * (1 - peekThreshold) && active < totalCols - 1) {
+          setActive(active + 1);
+          return;
+        }
+      }
+
       // “consolidamos” el transform manual a GSAP x
       gsap.set(row, { x: lastX });
-
-      const dx = e.clientX - startX;
 
       if (started) {
         if (dx > SWIPE_PX) return setActive(active - 1);
