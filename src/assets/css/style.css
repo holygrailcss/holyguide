@@ -27678,9 +27678,7 @@ body {
 }
 
 .p-tag,
-.semantic,
 .title-l,
-.title-m,
 .text-m,
 .text-l,
 .title-s,
@@ -27688,7 +27686,12 @@ body {
 .hg-body-m,
 .hg-body-m-b,
 .form-input-label-2 label {
-  letter-spacing: 0.64px;
+  letter-spacing: 0.04em;
+}
+
+.semantic,
+.title-m {
+  letter-spacing: 0.16em;
 }
 
 h1, h2, h3, h4, h5, h6 {
