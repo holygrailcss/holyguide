@@ -23,14 +23,17 @@ $minheaders: (
 
 
     p-tag: (8px, 8px, 1, "light", ), 
-    semantic: ( 12px, 12px, 1, "light", ),// interletrado a 16%
-    title-l: (13px, 13px, 1.4, "light", ),
-    title-m: (12px, 12px, 1.4, "light", ),// interletrado a 16%
-    text-m: (12px, 13px, 1.5, "light", ),
-    text-l: (12px, 12px, 1.5, "light", ), // no se está usando
+    semantic: ( 12px, 12px, 1, "light", ),// interletrado a 16% cambiar por / label-m
+    title-l: (13px, 13px, 1.4, "light", ),// ttu
+    title-m: (12px, 12px, 1.4, "light", ),// interletrado a 16% ttu
+
+    text-m: (12px, 12px, 1.5, "light", ),
+    text-l: (12px, 13px, 1.5, "light", ), // no se está usando 
 
     hg-body-m:( 12px, 13px, 1.5, "light", ),
     hg-body-m-b:( 12px, 13px, 1.5, "medium", ),
+
+    label-m: (12px, 12px, 1, "light", ), // interletrado a 16%
 
 );
 

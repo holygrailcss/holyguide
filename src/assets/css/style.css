@@ -3692,6 +3692,12 @@ mark {
     font-size: 12px;
     line-height: 1.5;
   }
+  .label-m {
+    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 1;
+  }
 }
 @media (min-width: 992px) {
   .h2 {
@@ -3735,11 +3741,11 @@ mark {
     line-height: 1.4;
   }
   .text-m {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
   }
   .text-l {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
   }
   .hg-body-m {
@@ -3749,6 +3755,10 @@ mark {
   .hg-body-m-b {
     font-size: 13px;
     line-height: 1.5;
+  }
+  .label-m {
+    font-size: 12px;
+    line-height: 1;
   }
 }
 @media (min-width: 1px) {
@@ -14557,7 +14567,7 @@ pre[class*=language-] {
   color: green;
 }
 
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -14571,16 +14581,16 @@ header {
   letter-spacing: 2px;
 }
 @media (min-width: 992px) {
-  header {
+  .header {
     padding-bottom: 0;
     height: 60px;
   }
 }
 
-header.interior a {
+.header.interior a {
   color: #212121;
 }
-header.interior svg path {
+.header.interior svg path {
   fill: #212121;
 }
 
@@ -14598,17 +14608,17 @@ header.interior svg path {
   }
 }
 
-.scrolled header {
+.scrolled .header {
   background-color: rgba(255, 255, 255, 0.2784313725);
   height: 90px;
 }
-.scrolled header a {
+.scrolled .header a {
   color: #000000;
 }
-.scrolled header svg path {
+.scrolled .header svg path {
   fill: #000000;
 }
-.scrolled header .height-md {
+.scrolled .header .height-md {
   min-height: 150px;
 }
 .scrolled .header-top {
@@ -27690,7 +27700,8 @@ body {
 }
 
 .semantic,
-.title-m {
+.title-m,
+.label-m {
   letter-spacing: 0.16em;
 }
 
