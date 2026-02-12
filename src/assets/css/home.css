@@ -253,10 +253,10 @@ body.is-rtl .hg-home-row-cols {
 
 @media (min-width: 768px) {
   .hg-home-nav-btn--prev {
-    left: 25px;
+    left: 0;
   }
   .hg-home-nav-btn--next {
-    right: 18px;
+    right: -14px;
   }
 }
 
