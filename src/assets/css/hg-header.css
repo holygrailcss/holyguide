@@ -7,19 +7,13 @@
   --hg-header-logo-width: 9.375rem;
   --hg-header-list-gap: var(--hg-spacing-8);
   --hg-header-logo-z-index: 2001;
-  
-}
-
-@media (min-width: 48rem) {
-  :root {
-    --hg-header-min-height: var(--hg-spacing-80);
-    --hg-header-logo-width: 15.625rem;
-    --hg-header-list-gap: var(--hg-spacing-16);
-  }
 }
 
 @media (min-width: 62rem) {
   :root {
+    --hg-header-min-height: var(--hg-spacing-80);
+    --hg-header-list-gap: var(--hg-spacing-16);
+    --hg-header-logo-width: 15.625rem;
     --hg-header-list-gap: var(--hg-spacing-32);
   }
 }
