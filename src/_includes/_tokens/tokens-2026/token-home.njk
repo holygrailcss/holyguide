@@ -12,7 +12,7 @@ layout: base-clean.njk
 <!-- Enlace para saltar al contenido (accesibilidad, navegación por teclado) -->
 <a href="#hg-home-main" class="hg-skip-link">Saltar al contenido principal</a>
 
-<!-- Panel hg-menu: se abre al hacer click en .menu-item-header -->
+<!-- Panel hg-menu: se abre al hacer click en .js-hg-menu-toggle -->
 <div id="hg-menu-panel" class="hg-menu-panel" aria-hidden="true" aria-label="Menú" role="dialog" inert>
   <button type="button" class="hg-menu-panel__close" aria-label="Cerrar menú">&times;</button>
   <div class="hg-menu-panel__inner">
@@ -358,22 +358,28 @@ layout: base-clean.njk
 
   // 6a) Animación de entrada del logo (estado inicial en CSS para evitar salto; GSAP anima al destino)
   (function() {
-    const logo = document.querySelector('.hg-header .hg-menu-logo svg');
-    const container = document.querySelector('.hg-header .hg-menu-logo');
+    const container = document.querySelector('.js-hg-header-logo');
+    const logo = document.querySelector('.js-hg-header-logo-icon');
     if (!logo || !container) return;
-    const rect = container.getBoundingClientRect();
-    gsap.to(logo, {
-      left: rect.left,
-      top: rect.top,
-      y: 0,
-      scale: 1,
-      duration: 1,
-      delay: 1,
-      ease: 'power2.out',
-      onComplete: function() {
-        gsap.set(logo, { position: 'absolute', left: 0, top: 0 });
-      }
-    });
+    
+    setTimeout(() => {
+      const containerRect = container.getBoundingClientRect();
+      const rectCenterY = containerRect.top + (containerRect.height / 2);
+      
+      gsap.to(logo, {
+        left: containerRect.left,
+        top: rectCenterY,
+        width: containerRect.width,
+        duration: 1,
+        ease: 'power3.out',
+        onComplete() {
+          gsap.set(logo, {
+            clearProps: 'all'
+          });
+          logo.classList.remove('hg-header-logo-icon--home-animation');
+        }
+      });
+    }, 1000);
   })();
 
   // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
@@ -424,7 +430,7 @@ layout: base-clean.njk
       backdrop.classList.add('is-open');
       panel.setAttribute('aria-hidden', 'false');
       backdrop.setAttribute('aria-hidden', 'false');
-      document.querySelectorAll('.menu-item-header').forEach(function(el) {
+      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
         el.setAttribute('aria-expanded', 'true');
       });
       closeBtn.focus();
@@ -436,7 +442,7 @@ layout: base-clean.njk
       backdrop.classList.remove('is-open');
       panel.setAttribute('aria-hidden', 'true');
       backdrop.setAttribute('aria-hidden', 'true');
-      document.querySelectorAll('.menu-item-header').forEach(function(el) {
+      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
         el.setAttribute('aria-expanded', 'false');
       });
       document.removeEventListener('keydown', onEscape);
@@ -446,7 +452,7 @@ layout: base-clean.njk
       if (e.key === 'Escape' && panel.classList.contains('is-open')) closeMenu();
     }
 
-    document.querySelectorAll('.menu-item-header').forEach(function(el) {
+    document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
       el.setAttribute('aria-controls', 'hg-menu-panel');
       el.setAttribute('aria-expanded', 'false');
       el.setAttribute('aria-haspopup', 'true');

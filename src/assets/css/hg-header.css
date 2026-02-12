@@ -1,31 +1,163 @@
 @charset "UTF-8";
+
+:root {
+  --hg-header-min-height: var(--hg-spacing-48);
+  --hg-header-padding-inline: var(--hg-spacing-16);
+  --hg-header-z-index: 1200;
+  --hg-header-logo-width: 9.375rem;
+  --hg-header-list-gap: var(--hg-spacing-8);
+  --hg-header-logo-z-index: 2001;
+  
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --hg-header-min-height: var(--hg-spacing-80);
+    --hg-header-logo-width: 15.625rem;
+    --hg-header-list-gap: var(--hg-spacing-16);
+  }
+}
+
+@media (min-width: 62rem) {
+  :root {
+    --hg-header-list-gap: var(--hg-spacing-32);
+  }
+}
+
 /**
  * hg-header.css — Estilos del header (templates 2026).
  * Se carga junto a home.css en token-home. Usa variables --hg-* de HolyGrail5.
  */
 
 /* Header: barra fija superior */
+
 .hg-header {
+  align-items: center;
+  background-color: var(--hg-color-white);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  min-height: var(--hg-header-min-height);
+  padding-inline: var(--hg-header-padding-inline);
   position: fixed;
   top: 0;
-  width: 100%;
-  color: #000;
-  z-index: 2000;
-  height: 50px;
-  transition: all ease 0.3s;
-  display: flex;
-  align-items: center;
-}
-@media (min-width: 992px) {
-  .hg-header {
-    padding-bottom: 0;
-    height: 60px;
-  }
+  left: 0;
+  right: 0;
+  z-index: var(--hg-header-z-index);
 }
 
-.hg-header .tabs ul li a {
-  padding-left: 0;
+.hg-header__prepend,
+.hg-header__append {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  justify-content: center;
 }
+
+.hg-header__main {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.hg-header-logo {
+    aspect-ratio: 6.79 / 1;
+    display: block;
+    height: auto;
+    position: relative;
+    width: var(--hg-header-logo-width);
+  }
+  
+.hg-header-logo-icon {
+  aspect-ratio: 6.79 / 1;
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: var(--hg-header-logo-z-index);
+}
+
+
+.hg-header-logo-icon.hg-header-logo-icon--home-animation {
+  position: fixed;
+  left: 20px;
+  width: 65vw;
+}
+
+.hg-header-logo-icon svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hg-header-nav {
+  display: block;
+}
+
+.hg-header-list {
+  align-items: center;
+  display: flex;
+  column-gap: var(--hg-header-list-gap);
+  flex-flow: row nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hg-header-list.hg-header-list--primary {
+  justify-content: flex-start;
+}
+
+.hg-header-list.hg-header-list--secondary {
+  justify-content: flex-end;
+}
+
+.btn.hg-header-action {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--hg-spacing-4);
+  justify-content: center;
+  min-height: var(--hg-spacing-24);
+  min-width: var(--hg-spacing-24);
+}
+
+.hg-header-action .hg-icon {
+  align-items: center;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.hg-header-bag-counter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hg-header-bag-bracket
+
+
+
+.hg-header-back {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: var(--hg-spacing-8);
+}
+
+.hg-header-prepend .hg-header-back:first-child {
+  margin-inline-start: calc(var(--hg-spacing-8) * -1);
+}
+
+
+
 
 /* Foco visible (accesibilidad) en enlaces del header */
 .hg-header a:focus-visible {

@@ -1,7 +1,7 @@
 $header-mobile: 60px;
 $header-desktop: 200px;
 
-header {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,7 +19,7 @@ header {
   }
 }
 
-header.interior {
+.header.interior {
   a {
     color: #212121;
   }
@@ -41,7 +41,7 @@ header.interior {
 }
 
 .scrolled {
-  header {
+  .header {
     background-color: #ffffff47;
     height: 90px;
 
