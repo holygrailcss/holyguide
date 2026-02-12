@@ -45,7 +45,7 @@
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   justify-content: center;
 }
 
@@ -97,7 +97,7 @@
   align-items: center;
   display: flex;
   column-gap: var(--hg-header-list-gap);
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   list-style: none;
   margin: 0;
   padding: 0;
