@@ -1,13 +1,13 @@
 {# Componente hg-footer (templates-2026). Uso: {% include '_paginas/templates-2026/hg-footer.njk' %} #}
-<footer class="hg-w-100-percent p-24 hg-text-center hg-h-100vh hg-d-flex hg-flex-column hg-align-items-center hg-justify-end">
+<footer class="hg-w-100 ov-scroll-percent  hg-text-center hg-h-100vh hg-d-flex hg-flex-column hg-align-items-center hg-justify-end">
   <ul class="mb-32">
     <li><p class="btn btn-label-m text-m ttu">APP MASSIMO DUTTI</p></li>
 
     <li>
       <details class="hg-footer-details">
         <summary class="btn btn-label-m text-m ttu hg-footer-details-summary">Social</summary>
-        <div class="hg-footer-details-panel">
-          <ul class="list-clear hg-footer-details-list">
+        <div class="hg-footer-details-panel align-center w-100 ov-scroll">
+          <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><a class="btn btn-label-m text-m ttu" href="#">Instagram</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Tik Tok</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Facebook</a></li>
@@ -21,8 +21,8 @@
     <li>
       <details class="hg-footer-details">
         <summary class="btn btn-label-m text-m ttu hg-footer-details-summary">Ayuda</summary>
-        <div class="hg-footer-details-panel">
-          <ul class="list-clear hg-footer-details-list">
+        <div class="hg-footer-details-panel align-center w-100 ov-scroll ">
+         <ul class="list-clear  list-inline is-flex flex-nowrap  hg-gap-20">
             <li><a class="btn btn-label-m text-m ttu" href="#">WhatsApp</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Contacto</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Preguntas frecuentes</a></li>
@@ -38,8 +38,8 @@
     <li>
       <details class="hg-footer-details">
         <summary class="btn btn-label-m text-m ttu hg-footer-details-summary">Servicios</summary>
-        <div class="hg-footer-details-panel">
-          <ul class="list-clear hg-footer-details-list">
+        <div class="hg-footer-details-panel align-center w-100 ov-scroll">
+         <ul class="list-clear  list-inline is-flex flex-nowrap  hg-gap-20">
             <li><a class="btn btn-label-m text-m ttu" href="#">Tarjeta regalo</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Massimo Dutti Feel</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Información de envío</a></li>
@@ -52,8 +52,8 @@
     <li>
       <details class="hg-footer-details">
         <summary class="btn btn-label-m text-m ttu hg-footer-details-summary">Empresa</summary>
-        <div class="hg-footer-details-panel">
-          <ul class="list-clear hg-footer-details-list">
+        <div class="hg-footer-details-panel align-center w-100 ov-scroll">
+         <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><a class="btn btn-label-m text-m ttu" href="#">Sobre Massimo Dutti</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Localizador de tiendas</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Prensa</a></li>
@@ -65,8 +65,8 @@
     <li>
       <details class="hg-footer-details">
         <summary class="btn btn-label-m text-m ttu hg-footer-details-summary">Legal</summary>
-        <div class="hg-footer-details-panel">
-          <ul class="list-clear hg-footer-details-list">
+        <div class="hg-footer-details-panel align-center w-100 ov-scroll">
+         <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><a class="btn btn-label-m text-m ttu" href="#">Condiciones de compra</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Política de privacidad</a></li>
             <li><a class="btn btn-label-m text-m ttu" href="#">Política de devoluciones</a></li>
@@ -115,7 +115,7 @@
   function initFooterDetails() {
     document.querySelectorAll('.hg-footer-details').forEach(function(details) {
       var summary = details.querySelector('.hg-footer-details-summary');
-      var panel = details.querySelector('.hg-footer-details-panel');
+      var panel = details.querySelector('.hg-footer-details-panel align-center w-100 ov-scroll');
       if (!summary || !panel) return;
       function updateActive() {
         if (details.open) {
