@@ -275,25 +275,6 @@ body.is-rtl .hg-home-row-cols {
   border: none;
 }
 
-/* Ocultar botones girados cuando algún footer de columna entra en pantalla */
-body.hg-footer-in-view .hg-home-nav-btn {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Lista horizontal del footer home (selector de idiomas) */
-.hg-horizontal-list {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-.hg-horizontal-list li {
-  list-style: none;
-}
-
 .hg-home-container {
   z-index: 100;
   position: relative;
