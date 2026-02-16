@@ -20,27 +20,34 @@ footer button.btn {
   width: 100%;
 }
 .hg-footer-details-summary {
-  list-style: none;
   cursor: pointer;
 }
-.hg-footer-details-summary::-webkit-details-marker {
-  display: none;
-}
 /* Título en negrita cuando el acordeón está abierto */
-.hg-footer-details[open] .hg-footer-details-summary,
-.hg-footer-details-summary.active {
+.hg-footer-details.is-open .hg-footer-details-summary {
   font-weight: 700;
 }
 /* Cuando hay uno abierto, el resto de títulos y APP MASSIMO DUTTI se muestran en gris */
-footer:has(.hg-footer-details[open]) .hg-footer-details:not([open]) .hg-footer-details-summary,
-footer:has(.hg-footer-details[open]) .hg-footer-app-label {
-  color: #757575;
+footer:has(.hg-footer-details.is-open) .hg-footer-details:not(.is-open) .hg-footer-details-summary,
+footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
+  color: #737373;
 }
 
 .hg-footer-details-panel {
   margin-left: -20px;
   margin-right: -20px;
+  transition: height 0.3s ease-out;
 }
+
+.hg-footer-details .hg-footer-details-panel {
+  height: 0;
+  overflow: hidden;
+
+}
+.hg-footer-details.is-open .hg-footer-details-panel {
+  height: 50px;
+}
+
+
 
 
 .hg-footer-logo{

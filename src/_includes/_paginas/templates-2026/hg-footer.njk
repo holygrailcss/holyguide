@@ -4,8 +4,8 @@
     <li><button type="button" class="btn btn-label-m label-m ttu hg-footer-app-label">APP MASSIMO DUTTI</button></li>
 
     <li>
-      <details class="hg-footer-details">
-        <summary class="btn btn-label-m label-m ttu hg-footer-details-summary">Social</summary>
+      <div class="hg-footer-details">
+        <button type="button" class="btn btn-label-m label-m ttu hg-footer-details-summary">Social</button>
         <div class="hg-footer-details-panel align-center ov-scroll">
           <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><button type="button" class="btn btn-label-m label-m ttu">Instagram</button></li>
@@ -15,12 +15,12 @@
             <li><button type="button" class="btn btn-label-m label-m ttu">YouTube</button></li>
           </ul>
         </div>
-      </details>
+      </div>
     </li>
 
     <li>
-      <details class="hg-footer-details">
-        <summary class="btn btn-label-m label-m ttu hg-footer-details-summary">Ayuda</summary>
+      <div class="hg-footer-details">
+        <button type="button" class="btn btn-label-m label-m ttu hg-footer-details-summary">Ayuda</button>
         <div class="hg-footer-details-panel align-center ov-scroll ">
          <ul class="list-clear  list-inline is-flex flex-nowrap  hg-gap-20">
             <li><button type="button" class="btn btn-label-m label-m ttu">WhatsApp</button></li>
@@ -32,12 +32,12 @@
             <li><button type="button" class="btn btn-label-m label-m ttu">Ticket a factura</button></li>
           </ul>
         </div>
-      </details>
+      </div>
     </li>
 
     <li>
-      <details class="hg-footer-details">
-        <summary class="btn btn-label-m label-m ttu hg-footer-details-summary">Servicios</summary>
+      <div class="hg-footer-details">
+        <button type="button" class="btn btn-label-m label-m ttu hg-footer-details-summary">Servicios</button>
         <div class="hg-footer-details-panel align-center ov-scroll">
          <ul class="list-clear  list-inline is-flex flex-nowrap  hg-gap-20">
             <li><button type="button" class="btn btn-label-m label-m ttu">Tarjeta regalo</button></li>
@@ -46,12 +46,12 @@
             <li><button type="button" class="btn btn-label-m label-m ttu">Trajes a medida</button></li>
           </ul>
         </div>
-      </details>
+      </div>
     </li>
 
     <li>
-      <details class="hg-footer-details">
-        <summary class="btn btn-label-m label-m ttu hg-footer-details-summary">Empresa</summary>
+      <div class="hg-footer-details">
+        <button type="button" class="btn btn-label-m label-m ttu hg-footer-details-summary">Empresa</button>
         <div class="hg-footer-details-panel align-center ov-scroll">
          <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><button type="button" class="btn btn-label-m label-m ttu">Sobre Massimo Dutti</button></li>
@@ -59,12 +59,12 @@
             <li><button type="button" class="btn btn-label-m label-m ttu">Prensa</button></li>
           </ul>
         </div>
-      </details>
+      </div>
     </li>
 
     <li>
-      <details class="hg-footer-details">
-        <summary class="btn btn-label-m label-m ttu hg-footer-details-summary">Legal</summary>
+      <div class="hg-footer-details">
+        <button type="button" class="btn btn-label-m label-m ttu hg-footer-details-summary">Legal</button>
         <div class="hg-footer-details-panel align-center ov-scroll">
          <ul class="list-clear  list-inline is-flex flex-nowrap hg-gap-20">
             <li><button type="button" class="btn btn-label-m label-m ttu">Condiciones de compra</button></li>
@@ -75,7 +75,7 @@
             <li><button type="button" class="btn btn-label-m label-m ttu">Baja de la newsletter</button></li>
           </ul>
         </div>
-      </details>
+      </div>
     </li>
   </ul>
 
@@ -129,40 +129,20 @@
   function initFooterDetails() {
     document.querySelectorAll('.hg-footer-details').forEach(function(details) {
       var summary = details.querySelector('.hg-footer-details-summary');
-      var panel = details.querySelector('.hg-footer-details-panel');
-      if (!summary || !panel) return;
-      function updateActive() {
-        if (details.open) {
-          summary.classList.add('active');
+      if (!summary) return;
+      summary.addEventListener('click', function() {
+        var footer = details.closest('footer');
+        if (details.classList.contains('is-open')) {
+          details.classList.remove('is-open');
         } else {
-          summary.classList.remove('active');
-        }
-      }
-      summary.addEventListener('click', function(e) {
-        if (details.open) {
-          e.preventDefault();
-          panel.classList.add('is-closing');
-          panel.addEventListener('animationend', function onEnd() {
-            panel.removeEventListener('animationend', onEnd);
-            panel.classList.remove('is-closing');
-            details.open = false;
-          }, { once: true });
-        }
-      }, true);
-      details.addEventListener('toggle', function() {
-        if (details.open) {
-          var footer = details.closest('footer');
           if (footer) {
             footer.querySelectorAll('.hg-footer-details').forEach(function(other) {
-              if (other !== details) {
-                other.open = false;
-              }
+              other.classList.remove('is-open');
             });
           }
+          details.classList.add('is-open');
         }
-        updateActive();
       });
-      updateActive();
     });
   }
   if (document.readyState === 'loading') {
