@@ -38,7 +38,7 @@ footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
   transition: height 0.3s ease-out;
 }
 
-footer .hg-footer-details .hg-footer-details-summary {
+footer .hg-footer-details .hg-footer-details-summary:hover {
 color: #000!important;
 }
 
