@@ -1,35 +1,29 @@
-/* Estilos del componente hg-footer (templates-2026) */
-
-/* Ocultar botones girados cuando algún footer de columna entra en pantalla */
 body.hg-footer-in-view .hg-home-nav-btn {
   opacity: 0;
   pointer-events: none;
 }
-
-
-
 /* Paneles desplegables del footer (Social, Ayuda, Servicios, Empresa, Legal) */
-.hg-footer-details {
 
+.hg-footer-list{
+  display: flex;
+	flex-direction: column;
+  gap: 8px;
+}
+.hg-footer-details {
   display: inline-block;
   width: 100%;
 }
-
 .hg-footer-details-summary::-webkit-details-marker {
   display: none;
 }
 .hg-footer-details-summary.active {
   font-weight: 700;
 }
-
-@keyframes hg-footer-details-open {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hg-footer-details-panel {
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
+.hg-footer-language-list{
+  gap: 16px;
+}
