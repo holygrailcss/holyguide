@@ -1,20 +1,19 @@
-@charset "UTF-8";
-
 :root {
+  --hg-header-bg-color: var(--hg-color-white);
   --hg-header-min-height: var(--hg-spacing-48);
   --hg-header-padding-inline: var(--hg-spacing-16);
   --hg-header-z-index: 1200;
-  --hg-header-logo-width: 9.375rem;
   --hg-header-list-gap: var(--hg-spacing-8);
+  --hg-header-logo-width: 9.375rem;
   --hg-header-logo-z-index: 2001;
+  --hg-header-transition: all 0.270s ease-in-out;
 }
 
 @media (min-width: 62rem) {
   :root {
     --hg-header-min-height: var(--hg-spacing-80);
-    --hg-header-list-gap: var(--hg-spacing-16);
-    --hg-header-logo-width: 15.625rem;
     --hg-header-list-gap: var(--hg-spacing-32);
+    --hg-header-logo-width: 15.625rem;
   }
 }
 
@@ -23,21 +22,24 @@
  * Se carga junto a home.css en token-home. Usa variables --hg-* de HolyGrail5.
  */
 
-/* Header: barra fija superior */
+/* Header: estilos globales */
 
 .hg-header {
+  position: sticky;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  z-index: var(--hg-header-z-index);
+}
+
+.hg-header__handler {
   align-items: center;
-  background-color: var(--hg-color-white);
+  background-color: var(--hg-header-bg-color);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   min-height: var(--hg-header-min-height);
   padding-inline: var(--hg-header-padding-inline);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: var(--hg-header-z-index);
 }
 
 .hg-header__prepend,
@@ -47,6 +49,7 @@
   flex-flow: row nowrap;
   flex: 0 1 auto;
   justify-content: center;
+  min-height: var(--hg-header-min-height);
 }
 
 .hg-header__main {
@@ -55,33 +58,27 @@
   flex-flow: row nowrap;
   flex: 1 1 auto;
   justify-content: center;
+  min-height: var(--hg-header-min-height);
 }
 
 .hg-header-logo {
-    aspect-ratio: 6.79 / 1;
-    display: block;
-    height: auto;
-    position: relative;
-    width: var(--hg-header-logo-width);
-  }
-  
-.hg-header-logo-icon {
   aspect-ratio: 6.79 / 1;
   display: block;
-  left: 0;
+  height: auto;
+  position: relative;
+  width: var(--hg-header-logo-width);
+}
+  
+.hg-header-logo-icon {
+  display: block;
+  left: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   z-index: var(--hg-header-logo-z-index);
 }
 
-
-.hg-header-logo-icon.hg-header-logo-icon--home-animation {
-  position: fixed;
-  left: 20px;
-  width: 65vw;
-}
 
 .hg-header-logo-icon svg {
   display: block;
@@ -90,13 +87,17 @@
 }
 
 .hg-header-nav {
-  display: block;
+  align-items: center;
+  column-gap: var(--hg-header-list-gap);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
 }
 
 .hg-header-list {
   align-items: center;
-  display: flex;
   column-gap: var(--hg-header-list-gap);
+  display: flex;
   flex-flow: row wrap;
   list-style: none;
   margin: 0;
@@ -134,27 +135,71 @@
   align-items: center;
 }
 
-.hg-header-bag-bracket
-
-
-
-.hg-header-back {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  padding: var(--hg-spacing-8);
-}
-
-.hg-header-prepend .hg-header-back:first-child {
-  margin-inline-start: calc(var(--hg-spacing-8) * -1);
-}
-
-
-
-
 /* Foco visible (accesibilidad) en enlaces del header */
 .hg-header a:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+/* is-compact: variante para el header en home, que hace que el logo se muestre siempre centrado y el header tenga un comportamiento de wrap para evitar solapamientos. */
+body:not(.is-scrolling-offset).is-compact .hg-header__handler {
+  flex-wrap: wrap;
+}
+
+body:not(.is-scrolling-offset).is-compact .hg-header__main {
+  flex-basis: 100%;
+  order: 1;
+  width: 100%;
+}
+
+body:not(.is-scrolling-offset).is-compact .hg-header-logo {
+  position: relative;
+  left: auto;
+  right: auto;
+  width: 100%;
+}
+
+/* is-compact: variante para el header en home, que hace que el logo se muestre siempre centrado y el header tenga un comportamiento de wrap para evitar solapamientos. */
+body:not(.is-scrolling-offset).is-phantom .hg-header {
+  height: 0;
+  overflow: visible;
+}
+
+body:not(.is-scrolling-offset).is-phantom .hg-header__handler {
+  background-color: transparent;
+}
+
+
+
+/* Headers: estilos para pantallas < 991.9px */
+@media (max-width: 61.994rem) {
+  body {
+    padding-bottom: 50vh;
+  }
+  .hg-header-logo-icon.hg-header-logo-icon--home-animation {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - (var(--hg-header-padding-inline) * 2));
+  }
+
+  body .hg-header-logo {
+    left: var(--hg-header-padding-inline);
+    position: absolute;
+    right: var(--hg-header-padding-inline);
+    width: auto;
+    top: var(--hg-header-min-height);
+  }
+}
+
+/* Headers: estilos para pantallas >= 992px */
+@media (min-width: 62rem) {
+  .hg-header-logo-icon.hg-header-logo-icon--home-animation {
+    position: fixed;
+    left: var(--hg-header-padding-inline);
+    top: 50vh;
+    transform: translate(0, -50%);
+    width: 62vw;
+  }
 }

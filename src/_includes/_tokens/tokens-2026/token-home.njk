@@ -365,21 +365,33 @@ layout: base-clean.njk
     
     setTimeout(() => {
       const containerRect = container.getBoundingClientRect();
-      const rectCenterY = containerRect.top + (containerRect.height / 2);
+      const isDesktop = window.innerWidth >= 992;
       
-      gsap.to(logo, {
-        left: containerRect.left,
-        top: rectCenterY,
-        width: containerRect.width,
-        duration: 1,
-        ease: 'power3.out',
-        onComplete() {
-          gsap.set(logo, {
-            clearProps: 'all'
-          });
-          logo.classList.remove('hg-header-logo-icon--home-animation');
-        }
-      });
+      if (isDesktop) {
+        gsap.to(logo, {
+          left: containerRect.left,
+          top: containerRect.top + (containerRect.height / 2),
+          width: containerRect.width,
+          duration: 1,
+          ease: 'power3.out',
+          onComplete() {
+            gsap.set(logo, { clearProps: 'all' });
+            logo.classList.remove('hg-header-logo-icon--home-animation');
+          }
+        });
+      } else {
+        gsap.to(logo, {
+          left: containerRect.left + (containerRect.width / 2),
+          top: containerRect.top + (containerRect.height / 2),
+          width: containerRect.width,
+          duration: 0.8,
+          ease: 'power3.out',
+          onComplete() {
+            gsap.set(logo, { clearProps: 'all' });
+            logo.classList.remove('hg-header-logo-icon--home-animation');
+          }
+        });
+      }
     }, 1000);
   })();
 
