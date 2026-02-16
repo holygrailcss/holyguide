@@ -16,14 +16,20 @@ body.hg-footer-in-view .hg-home-nav-btn {
 .hg-footer-details-summary::-webkit-details-marker {
   display: none;
 }
+
 .hg-footer-details-summary.active {
   font-weight: 700;
 }
+
 .hg-footer-details-panel {
   margin-left: -20px;
   margin-right: -20px;
 }
 
-.hg-footer-language-list{
-  gap: 16px;
+
+.hg-footer-logo{
+  svg{
+    width: 197px;
+    height: auto;
+  }
 }
