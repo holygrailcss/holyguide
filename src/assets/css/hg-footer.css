@@ -13,10 +13,15 @@ body.hg-footer-in-view .hg-home-nav-btn {
   display: inline-block;
   width: 100%;
 }
+.hg-footer-details-summary {
+  list-style: none;
+  cursor: pointer;
+}
 .hg-footer-details-summary::-webkit-details-marker {
   display: none;
 }
-
+/* Título en negrita cuando el acordeón está abierto */
+.hg-footer-details[open] .hg-footer-details-summary,
 .hg-footer-details-summary.active {
   font-weight: 700;
 }
