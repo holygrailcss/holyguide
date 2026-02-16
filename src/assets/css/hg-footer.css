@@ -38,6 +38,10 @@ footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
   transition: height 0.3s ease-out;
 }
 
+footer .hg-footer-details .hg-footer-details-summary {
+color: #000!important;
+}
+
 .hg-footer-details .hg-footer-details-panel {
   height: 0;
   overflow: hidden;
