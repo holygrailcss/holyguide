@@ -8298,7 +8298,8 @@ button {
   border: 0 solid transparent;
   height: auto;
   min-width: 24px;
-  padding-inline: 0;
+  padding: 10px 0;
+  min-height: auto;
 }
 .btn-label-m svg g {
   fill: #000000;

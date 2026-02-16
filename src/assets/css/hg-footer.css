@@ -2,6 +2,12 @@ body.hg-footer-in-view .hg-home-nav-btn {
   opacity: 0;
   pointer-events: none;
 }
+
+/* Botones del footer: aspecto de enlace (sin borde/fondo por defecto) */
+footer button.btn {
+
+}
+
 /* Paneles desplegables del footer (Social, Ayuda, Servicios, Empresa, Legal) */
 
 .hg-footer-list{
@@ -24,6 +30,11 @@ body.hg-footer-in-view .hg-home-nav-btn {
 .hg-footer-details[open] .hg-footer-details-summary,
 .hg-footer-details-summary.active {
   font-weight: 700;
+}
+/* Cuando hay uno abierto, el resto de títulos y APP MASSIMO DUTTI se muestran en gris */
+footer:has(.hg-footer-details[open]) .hg-footer-details:not([open]) .hg-footer-details-summary,
+footer:has(.hg-footer-details[open]) .hg-footer-app-label {
+  color: #757575;
 }
 
 .hg-footer-details-panel {
