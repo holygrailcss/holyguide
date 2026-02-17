@@ -97,8 +97,8 @@ body.hg-footer-in-view[data-active-col="2"] #hg-home-row-cols .hg-home-row-cols_
   color: #737373;
 }
 
-.hg-footer-language-list .is-active .hg-footer-language-list-item,
-.hg-footer-language-list .hg-footer-language-list-item:hover {
+
+.hg-footer-language-list .is-active .hg-footer-language-list-item {
   color: #000 !important;
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+
 }
