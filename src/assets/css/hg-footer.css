@@ -37,7 +37,6 @@ body.hg-footer-in-view[data-active-col="2"] #hg-home-row-cols .hg-home-row-cols_
    Acordeón: contenedor y resumen
    -------------------------------------------------------------------------- */
 .hg-footer-details {
-  display: inline-block;
   width: 100%;
 }
 
@@ -69,7 +68,7 @@ body.hg-footer-in-view[data-active-col="2"] #hg-home-row-cols .hg-home-row-cols_
    Acordeón: estados (abierto, gris, hover)
    -------------------------------------------------------------------------- */
 .hg-footer-details.is-open .hg-footer-details-summary {
-  font-weight: 700;
+  color: #000;
 }
 
 .hg-footer:has(.hg-footer-details.is-open) .hg-footer-details:not(.is-open) .hg-footer-details-summary,

@@ -8308,14 +8308,17 @@ button {
 .btn-label-m svg circle {
   stroke: #000000;
 }
-.btn-label-m:focus, .btn-label-m.focus, .btn-label-m:hover, .btn-label-m.hover, .btn-label-m:active, .btn-label-m.active {
+.btn-label-m:hover, .btn-label-m.hover {
   border: 0 solid transparent;
   background-color: transparent;
   cursor: pointer;
+  color: #737373;
 }
-.btn-label-m:hover, .btn-label-m.hover, .btn-label-m.active {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
-  font-weight: 500;
+.btn-label-m:focus, .btn-label-m.focus, .btn-label-m:active, .btn-label-m.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: #000000;
 }
 .btn-label-m:disabled, .btn-label-m[disabled], .btn-label-m.disabled {
   pointer-events: none;
