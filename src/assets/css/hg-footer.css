@@ -1,62 +1,93 @@
+/* ==========================================================================
+   hg-footer (templates-2026)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Contexto global
+   -------------------------------------------------------------------------- */
 body.hg-footer-in-view .hg-home-nav-btn {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Botones del footer: aspecto de enlace (sin borde/fondo por defecto) */
-footer button.btn {
 
-}
-
-/* Paneles desplegables del footer (Social, Ayuda, Servicios, Empresa, Legal) */
-
-.hg-footer-list{
+/* --------------------------------------------------------------------------
+   Estructura: lista principal
+   -------------------------------------------------------------------------- */
+.hg-footer-list {
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
   gap: 8px;
 }
+
+
+/* --------------------------------------------------------------------------
+   Acordeón: contenedor y resumen
+   -------------------------------------------------------------------------- */
 .hg-footer-details {
   display: inline-block;
   width: 100%;
 }
+
 .hg-footer-details-summary {
   cursor: pointer;
 }
-/* Título en negrita cuando el acordeón está abierto */
-.hg-footer-details.is-open .hg-footer-details-summary {
-  font-weight: 700;
-}
-/* Cuando hay uno abierto, el resto de títulos y APP MASSIMO DUTTI se muestran en gris */
-footer:has(.hg-footer-details.is-open) .hg-footer-details:not(.is-open) .hg-footer-details-summary,
-footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
-  color: #737373;
-}
 
+
+/* --------------------------------------------------------------------------
+   Acordeón: panel
+   -------------------------------------------------------------------------- */
 .hg-footer-details-panel {
   margin-left: -20px;
   margin-right: -20px;
   transition: height 0.3s ease-out;
 }
 
-footer .hg-footer-details .hg-footer-details-summary:hover {
-color: #000!important;
-}
-
 .hg-footer-details .hg-footer-details-panel {
   height: 0;
   overflow: hidden;
-
 }
+
 .hg-footer-details.is-open .hg-footer-details-panel {
   height: 50px;
 }
 
 
+/* --------------------------------------------------------------------------
+   Acordeón: estados (abierto, gris, hover)
+   -------------------------------------------------------------------------- */
+.hg-footer-details.is-open .hg-footer-details-summary {
+  font-weight: 700;
+}
+
+.hg-footer:has(.hg-footer-details.is-open) .hg-footer-details:not(.is-open) .hg-footer-details-summary,
+.hg-footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
+  color: #737373;
+}
+
+.hg-footer .hg-footer-details .hg-footer-details-summary:hover {
+  color: #000 !important;
+}
 
 
-.hg-footer-logo{
-  svg{
-    width: 197px;
-    height: auto;
-  }
+/* --------------------------------------------------------------------------
+   Logo
+   -------------------------------------------------------------------------- */
+.hg-footer-logo svg {
+  width: 197px;
+  height: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   Lista de idiomas / horizontal
+   -------------------------------------------------------------------------- */
+.hg-horizontal-list .hg-footer-language-list-item {
+  color: #737373;
+}
+
+.hg-footer-language-list .is-active .hg-footer-language-list-item,
+.hg-footer-language-list .hg-footer-language-list-item:hover {
+  color: #000 !important;
+  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
 }
