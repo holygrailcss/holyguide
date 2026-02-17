@@ -11,7 +11,7 @@ Contiene **layouts de página** (usados por los `.md` de `src/templates-2026`) y
 | `hg-home.njk`    | hg-home.md     | token-hg-home       | /templates-2026/hg-home/ |
 | `hg-menu-page.njk` | hg-menu.md   | token-hg-menu       | /templates-2026/hg-menu/  |
 | `hg-footer-page.njk` | hg-footer.md | token-hg-footer | /templates-2026/hg-footer/ |
-| `header.njk`     | header.md      | token-header, token-header3 (carpeta `_tokens/_templates`) | /templates-2026/header/ |
+| `header.njk`     | header.md      | token-hg-header (header 2026) | /templates-2026/header/ |
 
 - Convención: el layout se llama `{nombre}.njk` (slug del template).
 - Excepción: si ya existe un **componente** con ese nombre (ej. `hg-menu.njk`, `hg-footer.njk`), el layout de la página usa el sufijo `-page` → `hg-menu-page.njk`, `hg-footer-page.njk`.
@@ -43,9 +43,10 @@ Contiene los **tokens** (vistas aisladas para FIGMA / VER / CODE / iframe) de Te
 
 | Token                 | Lo muestra la página |
 |-----------------------|----------------------|
-| `token-hg-home.njk`   | hg-home              |
-| `token-hg-menu.njk`   | hg-menu              |
-| `token-hg-footer.njk` | hg-footer        |
+| `token-hg-home.njk`   | hg-home   |
+| `token-hg-header.njk` | header (hg-header 2026) |
+| `token-hg-menu.njk`   | hg-menu   |
+| `token-hg-footer.njk` | hg-footer |
 
 Cada layout de página en templates-2026 llama al token así:
 
