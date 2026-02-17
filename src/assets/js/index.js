@@ -32,7 +32,14 @@ $(document).ready(function () {
   initvideo();
 
   $(".resize-code").on("click", function (e) {
-      $(this).closest('.resize-container').toggleClass("opencode-button");
+      var $container = $(this).closest('.resize-container');
+      $container.removeClass("opencode-css").toggleClass("opencode-button");
+      e.preventDefault();
+  });
+
+  $(".resize-css").on("click", function (e) {
+      var $container = $(this).closest('.resize-container');
+      $container.removeClass("opencode-button").toggleClass("opencode-css");
       e.preventDefault();
   });
 

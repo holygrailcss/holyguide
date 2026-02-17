@@ -20472,7 +20472,8 @@ html {
 }
 
 .resize-snip,
-.resize-code {
+.resize-code,
+.resize-css {
   z-index: 100;
   float: right;
   left: 0;
@@ -20481,7 +20482,8 @@ html {
 }
 @media (min-width: 768px) {
   .resize-snip,
-  .resize-code {
+  .resize-code,
+  .resize-css {
     height: 100%;
     display: flex;
     padding: 12px;
@@ -20669,7 +20671,11 @@ html {
   left: 34px;
 }
 
-.opencode-button .viewcode {
+.opencode-button .viewcode-html {
+  height: 400px;
+}
+
+.opencode-css .viewcode-css {
   height: 400px;
 }
 

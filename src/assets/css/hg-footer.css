@@ -10,16 +10,17 @@ body.hg-footer-in-view .hg-home-nav-btn {
   pointer-events: none;
 }
 
-/* Ocultar columnas no activas cuando el footer está en pantalla */
-body.hg-footer-in-view[data-active-col="0"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(2),
-body.hg-footer-in-view[data-active-col="0"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(3),
-body.hg-footer-in-view[data-active-col="1"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(1),
-body.hg-footer-in-view[data-active-col="1"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(3),
-body.hg-footer-in-view[data-active-col="2"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(1),
-body.hg-footer-in-view[data-active-col="2"] #hg-home-row-cols .hg-home-row-cols__col:nth-child(2) {
+/* Ocultar columnas no activas cuando el footer está en pantalla; la activa lleva .is-active (JS) */
+body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 

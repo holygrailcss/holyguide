@@ -65,7 +65,8 @@
 }
 
 .resize-snip,
-.resize-code {
+.resize-code,
+.resize-css {
   z-index: 100;
 
   float: right;
@@ -271,7 +272,13 @@
 }
 
 .opencode-button {
-  .viewcode {
+  .viewcode-html {
+    height: 400px;
+  }
+}
+
+.opencode-css {
+  .viewcode-css {
     height: 400px;
   }
 }

@@ -76,6 +76,26 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Lee contenido de uno o más CSS (nombres separados por coma) desde src/assets/css/
+  eleventyConfig.addNunjucksFilter("readCss", (cssFiles) => {
+    if (!cssFiles || typeof cssFiles !== "string") return "";
+    const dir = path.join(process.cwd(), "src", "assets", "css");
+    return cssFiles
+      .split(",")
+      .map((f) => f.trim())
+      .filter(Boolean)
+      .map((filename) => {
+        const filepath = path.join(dir, filename);
+        try {
+          const content = fs.readFileSync(filepath, "utf8");
+          return `/* === ${filename} === */\n${content}`;
+        } catch {
+          return `/* ${filename} (no encontrado) */`;
+        }
+      })
+      .join("\n\n");
+  });
+
   // Plugins
   eleventyConfig.addPlugin(embeds);
   eleventyConfig.addPlugin(syntaxHighlight);

@@ -145,8 +145,9 @@ layout: base-clean.njk
   document.body.dataset.activeCol = row.dataset.active || '0';
 
   const totalCols = 3;            // número de columnas/páginas
-  let active = 0;                 // índice activo (0..totalCols-1)
+  let active = parseInt(row.dataset.active || '0', 10);
   const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
+  cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
   let updateFooterInView = function() {};
 
   const mobileMQ = window.matchMedia('(max-width: 991px)');
@@ -161,6 +162,7 @@ layout: base-clean.njk
 
     row.dataset.active = String(active);
     document.body.dataset.activeCol = String(active);
+    cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
 
     gsap.to(row, {
       x: -active * colWidth(),

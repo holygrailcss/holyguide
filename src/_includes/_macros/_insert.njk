@@ -1,4 +1,4 @@
-{% macro template(ruta = '', component = '', size = '', componentfigma = "", descripcion = '') %}
+{% macro template(ruta = '', component = '', size = '', componentfigma = "", descripcion = '', cssFiles = '') %}
 <section >
   <div class="resize-container">
     <div class="resize-bar title-m">
@@ -15,12 +15,22 @@
           VER
         </a>
       </div>
+      {% if cssFiles %}
+      <div class="resize-css title-m">
+        <div class="title-m">CSS</div>
+      </div>
+      {% endif %}
       <div class="resize-code">
         <div class="title-m">
           CODE </div>
       </div>
     </div>
-    <div class="viewcode">
+    {% if cssFiles %}
+    <div class="viewcode viewcode-css">
+      <pre><code class="language-css">{{ cssFiles | readCss }}</code></pre>
+    </div>
+    {% endif %}
+    <div class="viewcode viewcode-html">
       <pre><code class="language-markup">{% set standardcode %} 
                 {% include   ruta+component +'.njk' %}
 				{% endset %}{{standardcode}}</code></pre>
