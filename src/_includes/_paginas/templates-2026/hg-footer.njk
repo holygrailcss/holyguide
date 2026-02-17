@@ -84,7 +84,7 @@
     <li><button type="button" class="btn btn-label-m label-m ttu">ESPAÑA (€)</button></li>
   </ul>
 
-  <ul class="hg-footer-language-list hg-gap-16 list-clear is-flex hg-justify-center hg-flex-row mb-64 hg-horizontal-list">
+  <ul class="hg-footer-language-list hg-gap-24 list-clear is-flex hg-justify-center hg-flex-row mb-64 hg-horizontal-list">
     <li class="is-active"><button type="button" class="hg-footer-language-list-item btn btn-label-m label-m ttu">ES</button></li>
     <li><button type="button" class="hg-footer-language-list-item btn btn-label-m label-m ttu">EN</button></li>
     <li><button type="button" class="hg-footer-language-list-item btn btn-label-m label-m ttu">EU</button></li>
@@ -126,29 +126,25 @@
 </footer>
 <script>
 (function() {
-  function initFooterDetails() {
-    document.querySelectorAll('.hg-footer-details').forEach(function(details) {
-      var summary = details.querySelector('.hg-footer-details-summary');
-      if (!summary) return;
-      summary.addEventListener('click', function() {
-        var footer = details.closest('footer');
-        if (details.classList.contains('is-open')) {
-          details.classList.remove('is-open');
-        } else {
-          if (footer) {
-            footer.querySelectorAll('.hg-footer-details').forEach(function(other) {
-              other.classList.remove('is-open');
-            });
-          }
-          details.classList.add('is-open');
-        }
-      });
-    });
+  if (window.hgFooterDetailsInit) return;
+  window.hgFooterDetailsInit = true;
+  function handleSummaryClick(e) {
+    var summary = e.target.closest('.hg-footer-details-summary');
+    if (!summary) return;
+    var details = summary.closest('.hg-footer-details');
+    if (!details) return;
+    var footer = details.closest('footer');
+    if (details.classList.contains('is-open')) {
+      details.classList.remove('is-open');
+    } else {
+      if (footer) {
+        footer.querySelectorAll('.hg-footer-details').forEach(function(other) {
+          other.classList.remove('is-open');
+        });
+      }
+      details.classList.add('is-open');
+    }
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFooterDetails);
-  } else {
-    initFooterDetails();
-  }
+  document.addEventListener('click', handleSummaryClick);
 })();
 </script>

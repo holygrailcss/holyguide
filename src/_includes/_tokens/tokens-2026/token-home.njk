@@ -142,6 +142,8 @@ layout: base-clean.njk
 
   if (!row || !prevBtn || !nextBtn) return;
 
+  document.body.dataset.activeCol = row.dataset.active || '0';
+
   const totalCols = 3;            // número de columnas/páginas
   let active = 0;                 // índice activo (0..totalCols-1)
   const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
@@ -158,6 +160,7 @@ layout: base-clean.njk
     active = index;
 
     row.dataset.active = String(active);
+    document.body.dataset.activeCol = String(active);
 
     gsap.to(row, {
       x: -active * colWidth(),
@@ -246,6 +249,8 @@ layout: base-clean.njk
 
     function onDown(e) {
       if (e.type === 'pointerdown' && e.button !== 0) return;
+      // No capturar si el clic es dentro del footer (toggles deben funcionar)
+      if (e.target.closest && e.target.closest('footer')) return;
 
       isDragging = true;
       started = false;
@@ -402,7 +407,9 @@ layout: base-clean.njk
     const visibleFooters = new Set();
     updateFooterInView = function() {
       const activeIndex = parseInt(row.dataset.active || '0', 10);
-      document.body.classList.toggle('hg-footer-in-view', visibleFooters.has(footers[activeIndex]));
+      const inView = visibleFooters.has(footers[activeIndex]);
+      document.body.classList.toggle('hg-footer-in-view', inView);
+      document.body.dataset.activeCol = String(activeIndex);
     };
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
