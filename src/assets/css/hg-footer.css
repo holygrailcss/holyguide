@@ -84,9 +84,7 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
   color: var(--hg-color-dark-grey);
 }
 
-.hg-footer .hg-footer-details .hg-footer-details-summary:hover {
-  color: var(--hg-color-primary) !important;
-}
+
 
 
 /* --------------------------------------------------------------------------
