@@ -110,29 +110,40 @@
   src: url("/assets/fonts/mdserif/mdserif-Black.woff2") format("woff2"), url("/assets/fonts/mdserif/mdserif-Black.woff") format("woff");
 }
 @font-face {
-  font-display: swap;
   font-family: "dutti-daily-light";
-  src: url("/assets/fonts/dutti/dutti-daily-light.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-light.woff") format("woff");
+  font-weight: 100;
+  font-display: swap;
+  src: local("SuisseIntl-Light"), url("/assets/fonts/suisse/SuisseIntl-Light.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Light.woff") format("woff");
 }
 @font-face {
-  font-display: swap;
   font-family: "dutti-daily-regular";
-  src: url("/assets/fonts/dutti/dutti-daily-regular.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-regular.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  src: local("SuisseIntl-Regular"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff") format("woff");
 }
 @font-face {
+  font-family: "dutti-daily-bold2";
+  font-weight: 500;
   font-display: swap;
+  src: local("dutti-daily-bold2"), url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
+}
+@font-face {
   font-family: "dutti-daily-medium";
-  src: url("/assets/fonts/dutti/dutti-daily-medium.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+  src: local("SuisseIntl-SemiBold"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
 }
 @font-face {
-  font-display: swap;
-  font-family: "dutti-daily-bold";
-  src: url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
-}
-@font-face {
-  font-display: swap;
   font-family: "dutti-daily-semibold";
-  src: url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+  src: local("SuisseIntl-SemiBold"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "dutti-daily-bold";
+  font-weight: normal;
+  font-display: swap;
+  src: local("dutti-daily-bold"), url("/assets/fonts/dutti/dutti-daily-semibold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-semibold.woff") format("woff");
 }
 @font-face {
   font-display: swap;
