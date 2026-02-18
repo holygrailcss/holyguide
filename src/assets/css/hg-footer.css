@@ -59,7 +59,10 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
   margin-left: -20px;
   margin-right: -20px;
   transition: height 0.3s ease-out;
+  display: flex;
+	justify-content: space-around;
 }
+
 
 .hg-footer-details .hg-footer-details-panel {
   height: 0;
