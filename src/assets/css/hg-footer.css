@@ -72,20 +72,20 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
 
 
 /* --------------------------------------------------------------------------
-   Acordeón: estados (abierto, gris, hover)
+   Acordeón: estados (abierto, gris, hover). Variables --hg-* HolyGrail5.
    -------------------------------------------------------------------------- */
 .hg-footer-details.is-open .hg-footer-details-summary {
-  color: #000;
+  color: var(--hg-color-primary);
   font-family: var(--hg-font-family-primary-bold, 'arial');
 }
 
 .hg-footer:has(.hg-footer-details.is-open) .hg-footer-details:not(.is-open) .hg-footer-details-summary,
 .hg-footer:has(.hg-footer-details.is-open) .hg-footer-app-label {
-  color: #737373;
+  color: var(--hg-color-dark-grey);
 }
 
 .hg-footer .hg-footer-details .hg-footer-details-summary:hover {
-  color: #000 !important;
+  color: var(--hg-color-primary) !important;
 }
 
 
@@ -102,11 +102,11 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
    Lista de idiomas / horizontal
    -------------------------------------------------------------------------- */
 .hg-horizontal-list .hg-footer-language-list-item {
-  color: #737373;
+  color: var(--hg-color-dark-grey);
 }
 
 
 .hg-footer-language-list .is-active .hg-footer-language-list-item {
-  color: #000 !important;
+  color: var(--hg-color-primary) !important;
 
 }
