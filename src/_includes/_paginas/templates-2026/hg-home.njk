@@ -231,8 +231,8 @@ layout: base-clean.njk
   }
 
   // -----------------------------
-  // 4) Drag / Swipe horizontal (pointer events)
-  //    - si el gesto es más horizontal que vertical, cambia de columna
+  // 4) Drag / Swipe horizontal (pointer + touch para móvil)
+  //    - Usamos última posición conocida en finish() porque en móvil pointerup puede traer (0,0)
   // -----------------------------
   function initDrag() {
     if (!dragWrap) return;
@@ -241,24 +241,33 @@ layout: base-clean.njk
     const DRAG_START_PX = 8;
 
     let isDragging = false;
-    let started = false;          // ya decidimos si es drag horizontal
+    let started = false;
     let startX = 0, startY = 0;
-    let baseX = 0;                // x inicial del row al empezar a arrastrar
-    let lastX = 0;                // último x aplicado
+    let lastClientX = 0, lastClientY = 0;  // última posición (para finish en móvil)
+    let baseX = 0;
+    let lastX = 0;
     let pointerId = null;
 
     const minX = () => -(totalCols - 1) * colWidth();
 
+    function getCoords(e) {
+      if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+      return { x: e.clientX, y: e.clientY };
+    }
+
     function onDown(e) {
       if (e.type === 'pointerdown' && e.button !== 0) return;
-      // No capturar si el clic es dentro del footer (toggles deben funcionar)
       if (e.target.closest && e.target.closest('footer')) return;
 
+      const coords = getCoords(e);
       isDragging = true;
       started = false;
 
-      startX = e.clientX;
-      startY = e.clientY;
+      startX = coords.x;
+      startY = coords.y;
+      lastClientX = coords.x;
+      lastClientY = coords.y;
 
       baseX = -active * colWidth();
       lastX = baseX;
@@ -266,7 +275,9 @@ layout: base-clean.njk
       gsap.killTweensOf(row);
 
       pointerId = e.pointerId ?? null;
-      if (pointerId != null) dragWrap.setPointerCapture(pointerId);
+      if (pointerId != null) {
+        try { dragWrap.setPointerCapture(pointerId); } catch (_) {}
+      }
 
       e.preventDefault();
     }
@@ -274,14 +285,17 @@ layout: base-clean.njk
     function onMove(e) {
       if (!isDragging) return;
 
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
+      const coords = getCoords(e);
+      lastClientX = coords.x;
+      lastClientY = coords.y;
 
-      // decidir si el gesto es realmente horizontal
+      const dx = coords.x - startX;
+      const dy = coords.y - startY;
+
       if (!started) {
         if (Math.abs(dx) > DRAG_START_PX || Math.abs(dy) > DRAG_START_PX) {
           started = Math.abs(dx) >= Math.abs(dy);
-          if (!started) { isDragging = false; return; } // era scroll vertical
+          if (!started) { isDragging = false; return; }
         } else {
           return;
         }
@@ -302,10 +316,14 @@ layout: base-clean.njk
       if (!isDragging) return;
       isDragging = false;
 
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
+      // En móvil pointerup/touchend puede traer clientX/clientY incorrectos; usamos última posición
+      const endX = lastClientX;
+      const endY = lastClientY;
+      const dx = endX - startX;
+      const dy = endY - startY;
+      const dragDeltaX = lastX - baseX;  // desplazamiento horizontal real aplicado
 
-      // Tap en la zona que asoma (peek): ir a columna anterior o siguiente como el botón
+      // Tap en zona peek
       if (!started && Math.abs(dx) < 15 && Math.abs(dy) < 15) {
         const wrapRect = dragWrap.getBoundingClientRect();
         const relX = startX - wrapRect.left;
@@ -320,19 +338,17 @@ layout: base-clean.njk
         }
       }
 
-      // “consolidamos” el transform manual a GSAP x
       gsap.set(row, { x: lastX });
 
       if (started) {
-        if (dx > SWIPE_PX) return setActive(active - 1);
-        if (dx < -SWIPE_PX) return setActive(active + 1);
+        if (dragDeltaX > SWIPE_PX) return setActive(active - 1);
+        if (dragDeltaX < -SWIPE_PX) return setActive(active + 1);
       }
 
-      // si no, vuelve a la actual (snap)
       setActive(active);
     }
 
-    function cancel() {
+    function cancel(e) {
       if (pointerId != null) {
         try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
       }
@@ -345,10 +361,18 @@ layout: base-clean.njk
       setActive(active);
     }
 
-    dragWrap.addEventListener('pointerdown', onDown, { passive: false });
-    dragWrap.addEventListener('pointermove', onMove, { passive: false });
-    dragWrap.addEventListener('pointerup', finish, { passive: true });
-    dragWrap.addEventListener('pointercancel', cancel, { passive: true });
+    const useTouch = 'ontouchstart' in window;
+    if (useTouch) {
+      dragWrap.addEventListener('touchstart', onDown, { passive: false });
+      dragWrap.addEventListener('touchmove', onMove, { passive: false });
+      dragWrap.addEventListener('touchend', finish, { passive: false });
+      dragWrap.addEventListener('touchcancel', cancel, { passive: false });
+    } else {
+      dragWrap.addEventListener('pointerdown', onDown, { passive: false });
+      dragWrap.addEventListener('pointermove', onMove, { passive: false });
+      dragWrap.addEventListener('pointerup', finish, { passive: true });
+      dragWrap.addEventListener('pointercancel', cancel, { passive: true });
+    }
   }
 
   // -----------------------------
