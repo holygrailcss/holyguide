@@ -4,8 +4,21 @@
  * Definir aquí todas las clases del token home. Se carga en el token (home.css).
  * Usa variables --hg-* de HolyGrail5 (https://hg5.netlify.app/output.css).
  */
-
 /* Enlace "Saltar al contenido" (accesibilidad, navegación por teclado) */
+body.hg-footer-in-view .hg-home-nav-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
 .hg-skip-link {
   position: absolute;
   left: -9999px;
@@ -22,12 +35,10 @@
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
-
 .hg-home-container {
   position: relative;
   z-index: 1;
 }
-
 /* Foco visible para navegación por teclado (Tab) */
 .hg-home-nav-btn:focus-visible,
 .hg-home-box-link:focus-visible,
@@ -38,7 +49,6 @@
 .hg-home-nav-btn:focus:not(:focus-visible) {
   outline: none;
 }
-
 .templates-2026-home {
   --hg-home-bg: var(--hg-color-white, #fff);
   --hg-home-text: var(--hg-color-primary, #000);
@@ -69,7 +79,6 @@
   line-height: 1.5;
   color: var(--hg-color-dark-grey, #333);
 }
-
 .hg-home-box-list {
   padding: 0;
   margin: 0;
@@ -91,7 +100,6 @@
   height: 100vh;
   transition: opacity 0.25s ease-out;
 }
-
 /* Wrapper: ocupa el viewport de la columna y centra el box animado */
 .hg-home-box-animated-wrap {
   min-height: 100vh;
@@ -100,7 +108,6 @@
   justify-content: center;
   flex-shrink: 0;
 }
-
 /* Inicio animación: ratio 1:1, mitad de altura del viewport */
 .hg-home-box-animated {
   height: 50vh;
@@ -114,14 +121,11 @@
   object-fit: cover;
   display: block;
 }
-
 /**
  * Contenedor con ancho configurable cuyos hijos quedan uno al lado del otro (flex row).
  * Columna activa: 100% - 100px por la izquierda y -100px por la derecha → ancho = calc(100vw - 200px).
  */
 .hg-home-row-cols {
-
-
   --hg-home-col-width: calc(100vw - 200px);
   --hg-home-row-width: calc(300vw - 600px);
   display: flex;
@@ -151,8 +155,6 @@
 .hg-home-row-cols__col:nth-child(3) {
   transform-origin: left center;
 }
-
-
 @media (min-width: 768px) {
   .hg-home-row-cols__col {
     flex: 0 0 var(--hg-home-col-width);
@@ -164,11 +166,6 @@
     -ms-overflow-style: none;
   }
 }
-
-
-
-
-
 /* Col 1 activa: col 2 y 3 alineadas a la izquierda (peek junto a col 1) */
 .hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(2),
 .hg-home-row-cols[data-active="0"] .hg-home-row-cols__col:nth-child(3) {
@@ -186,7 +183,6 @@
 .hg-home-row-cols[data-active="2"] .hg-home-row-cols__col:nth-child(2) {
   transform-origin: right center;
 }
-
 /**
  * Wrapper: 100px margen izquierda y derecha; la columna activa mide 100vw - 200px.
  * En móvil: 50px por lado (100px total).
@@ -199,7 +195,6 @@
   padding-left: 100px;
   padding-right: 100px;
 }
-
 @media (max-width: 991px) {
   .hg-home-row-cols {
     --hg-home-col-width: calc(100vw - 100px);
@@ -210,18 +205,15 @@
     padding-right: 50px;
   }
 }
-
 .hg-home-drag-wrap {
   cursor: grab;
   touch-action: pan-y;
 }
-
 /* RTL: el carrusel de columnas mantiene orden LTR para que el drag y la posición x sigan siendo correctos */
 body.is-rtl .hg-home-row-cols-wrap,
 body.is-rtl .hg-home-row-cols {
   direction: ltr;
 }
-
 /**
  * Botones de navegación horizontal: izquierda y derecha del viewport.
  */
@@ -231,7 +223,6 @@ body.is-rtl .hg-home-row-cols {
   transform: translateY(-50%);
   z-index: 20;
   padding: 16px 12px;
-
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -249,8 +240,6 @@ body.is-rtl .hg-home-row-cols {
 .hg-home-nav-btn--next {
   right: -32px;
 }
-
-
 @media (min-width: 768px) {
   .hg-home-nav-btn--prev {
     left: 0;
@@ -259,22 +248,18 @@ body.is-rtl .hg-home-row-cols {
     right: -14px;
   }
 }
-
 .hg-home-nav-btn--prev {
   transform: rotate(-90deg);
 }
-
 .hg-home-nav-btn--next {
   transform: rotate(-90deg);
 }
-
 .hg-home-nav-btn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
   background-color: transparent;
   border: none;
 }
-
 .hg-home-container {
   z-index: 100;
   position: relative;

@@ -1,20 +1,7 @@
 :root {
   --hg-font-family-primary-bold: "dutti-daily-regular";
 }
-body.hg-footer-in-view .hg-home-nav-btn {
-  opacity: 0;
-  pointer-events: none;
-}
-body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
+
 .hg-footer-list {
   display: flex;
   flex-direction: column;
