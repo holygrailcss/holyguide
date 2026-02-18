@@ -1,5 +1,5 @@
 ---
-layout: _paginas/templates-2026/header.njk
+layout: _paginas/templates-2026/viewer-hg-header.njk
 permalink: /templates-2026/header/
 page_section: templates-2026
 titulo: header

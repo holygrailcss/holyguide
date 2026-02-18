@@ -6,15 +6,14 @@ Contiene **layouts de página** (usados por los `.md` de `src/templates-2026`) y
 
 ### Layouts de página (páginas del sitio)
 
-| Layout           | Página (.md)   | Token que muestra   | URL                    |
-|------------------|----------------|---------------------|------------------------|
-| `hg-home.njk`    | hg-home.md     | token-hg-home       | /templates-2026/hg-home/ |
-| `hg-menu-page.njk` | hg-menu.md   | token-hg-menu       | /templates-2026/hg-menu/  |
-| `hg-footer-page.njk` | hg-footer.md | token-hg-footer | /templates-2026/hg-footer/ |
-| `header.njk`     | header.md      | token-hg-header (header 2026) | /templates-2026/header/ |
+| Layout               | Página (.md)   | Token que muestra   | URL                    |
+|----------------------|----------------|---------------------|------------------------|
+| `hg-home.njk`        | hg-home.md     | token-hg-home       | /templates-2026/hg-home/ |
+| `viewer-hg-menu.njk` | hg-menu.md     | token-hg-menu       | /templates-2026/hg-menu/  |
+| `viewer-hg-footer.njk` | hg-footer.md  | token-hg-footer     | /templates-2026/hg-footer/ |
+| `viewer-hg-header.njk` | header.md    | token-hg-header (header 2026) | /templates-2026/header/ |
 
-- Convención: el layout se llama `{nombre}.njk` (slug del template).
-- Excepción: si ya existe un **componente** con ese nombre (ej. `hg-menu.njk`, `hg-footer.njk`), el layout de la página usa el sufijo `-page` → `hg-menu-page.njk`, `hg-footer-page.njk`.
+- Convención: el layout de las páginas con iframe (FIGMA / VER / CODE) usa el prefijo `viewer-` → `viewer-hg-menu.njk`, `viewer-hg-footer.njk`, `viewer-hg-header.njk`.
 
 ### Componentes (incluidos por otros archivos)
 
@@ -30,14 +29,14 @@ Se usan con `{% include '_paginas/templates-2026/hg-footer.njk' %}` (y análogo 
 
 ---
 
-## Carpeta `_tokens/tokens-2026`
+## Carpeta `_tokens/preview-2026`
 
 Contiene los **tokens** (vistas aisladas para FIGMA / VER / CODE / iframe) de Templates 2026.
 
 ### Convención
 
 - Archivo: `token-{nombre}.njk`, donde `{nombre}` es el slug del template que muestra ese token.
-- Página del token: `src/tokens-2026/token-{nombre}.md` → `layout: _tokens/tokens-2026/token-{nombre}.njk`, `permalink: /token-{nombre}/`.
+- Página del token: `src/tokens-2026/token-{nombre}.md` → `layout: _tokens/preview-2026/token-{nombre}.njk`, `permalink: /token-{nombre}/`.
 
 ### Tokens actuales
 
@@ -50,4 +49,4 @@ Contiene los **tokens** (vistas aisladas para FIGMA / VER / CODE / iframe) de Te
 
 Cada layout de página en templates-2026 llama al token así:
 
-`{% call insert.template('_tokens/tokens-2026/','token-{nombre}', '550px','...') %}`
+`{% call insert.template('_tokens/preview-2026/','token-{nombre}', '550px','...') %}`

@@ -11,24 +11,25 @@ Cuando el usuario pida **crear un template nuevo** (por ejemplo: "creame un temp
 
 **Archivo:** `src/templates-2026/{nombre}.md`
 
-- `layout: _paginas/templates-2026/{nombre}.njk`
+- `layout: _paginas/templates-2026/viewer-{nombre}.njk` (o `{nombre}.njk` si no hay componente con ese nombre)
 - `permalink: /templates-2026/{nombre}/`
 - `page_section: templates-2026`
 - `titulo: {nombre}` (y descripcion, image, tags: `["templates-2026"]`, etc.)
 
 ## 2. Layout del template
 
-**Archivo:** `src/_includes/_paginas/templates-2026/{nombre}.njk`
+**Archivo:** `src/_includes/_paginas/templates-2026/viewer-{nombre}.njk` (o `{nombre}.njk` si no hay componente con ese nombre)
 
+- Si ya existe un componente `{nombre}.njk` (ej. hg-footer.njk), el layout de la página es `viewer-{nombre}.njk`.
 - Layout: `base.njk`
 - Importar `_macros/_token.njk` e `_macros/_insert.njk`
 - Bloque hero: `{% include '_website/hero.njk' %}`
-- Sección con el token: `{% call insert.template('_tokens/tokens-2026/','token-{nombre}', '550px','https://www.figma.com') %} {% endcall %}`
+- Sección con el token: `{% call insert.template('_tokens/preview-2026/','token-{nombre}', '550px','https://www.figma.com') %} {% endcall %}`
 - Sección con contenido: `{{ content | safe }}`
 
 ## 3. Token del template
 
-**Archivo:** `src/_includes/_tokens/tokens-2026/token-{nombre}.njk`
+**Archivo:** `src/_includes/_tokens/preview-2026/token-{nombre}.njk`
 
 - Layout: `base-clean.njk`
 - Contenido inicial del token (bloque con título/sección básica). El usuario puede editarlo después.
@@ -37,7 +38,7 @@ Cuando el usuario pida **crear un template nuevo** (por ejemplo: "creame un temp
 
 **Archivo:** `src/tokens-2026/token-{nombre}.md`
 
-- `layout: _tokens/tokens-2026/token-{nombre}.njk`
+- `layout: _tokens/preview-2026/token-{nombre}.njk`
 - `permalink: /token-{nombre}/`
 - `page_section: token-templates`
 - `tags: ["token-templates"]`

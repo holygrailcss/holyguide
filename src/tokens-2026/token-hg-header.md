@@ -1,5 +1,5 @@
 ---
-layout: _tokens/tokens-2026/token-hg-header.njk
+layout: _tokens/preview-2026/token-hg-header.njk
 permalink: /token-hg-header/
 page_section: token-templates
 titulo: Token hg-header

@@ -1,5 +1,5 @@
 ---
-layout: _paginas/templates-2026/hg-menu-page.njk
+layout: _paginas/templates-2026/viewer-hg-menu.njk
 permalink: /templates-2026/hg-menu/
 page_section: templates-2026
 titulo: hg menu

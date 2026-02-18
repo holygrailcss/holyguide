@@ -1,5 +1,5 @@
 ---
-layout: _tokens/tokens-2026/token-hg-home.njk
+layout: _tokens/preview-2026/token-hg-home.njk
 permalink: /token-hg-home/
 page_section: token-templates
 titulo: Token hg-home

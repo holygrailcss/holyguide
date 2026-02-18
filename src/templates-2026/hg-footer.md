@@ -1,5 +1,5 @@
 ---
-layout: _paginas/templates-2026/hg-footer-page.njk
+layout: _paginas/templates-2026/viewer-hg-footer.njk
 permalink: /templates-2026/hg-footer/
 page_section: templates-2026
 titulo: hg-footer

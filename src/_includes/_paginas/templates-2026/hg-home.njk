@@ -1,27 +1,490 @@
 ---
-layout: base.njk
+layout: base-clean.njk
 ---
-{% import "_macros/_token.njk" as tokens %}
-{% import "_macros/_insert.njk" as insert %}
 
-<div class="templates-2026-home">
-  <div class="hg-w-100-percent">
-    {% include '_website/hero.njk' %}
+{# Token hg-home (templates-2026): home, header, menú y footer. #}
+<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/hg-header.css">
+<link rel="stylesheet" href="/assets/css/hg-menu.css">
+<link rel="stylesheet" href="/assets/css/hg-footer.css">
+
+{% include '_paginas/templates-2026/hg-header.njk' %}
+
+<!-- Enlace para saltar al contenido (accesibilidad, navegación por teclado) -->
+<a href="#hg-home-main" class="hg-skip-link">Saltar al contenido principal</a>
+
+<!-- Panel hg-menu: se abre al hacer click en .js-hg-menu-toggle -->
+<div id="hg-menu-panel" class="hg-menu-panel" aria-hidden="true" aria-label="Menú" role="dialog" inert>
+  <button type="button" class="hg-menu-panel__close" aria-label="Cerrar menú">&times;</button>
+  <div class="hg-menu-panel__inner">
+    {% include '_paginas/templates-2026/hg-menu.njk' %}
   </div>
-
-  <section class="row mb-32 mt-32">
-    <div class="col-xs-12">
-      {% call insert.template('_tokens/tokens-2026/','token-hg-home', '550px','https://www.figma.com/design/lTe92NVB0qm6pDL1oTIG1c/NW26_MD--Congelado-?node-id=20035-35731&t=vvgzspCYt748voBf-1', '', 'home.css,hg-header.css,hg-menu.css,hg-footer.css') %} {% endcall %}
-    </div>
-  </section>
-
-  <section class="row mb-32 mt-32 p-16">
-    <div class="col-xs-12">
-      <div class="main-content innermarkdown">
-        {{ content | safe }}
-      </div>
-    </div>
-  </section>
 </div>
+<div id="hg-menu-backdrop" class="hg-menu-backdrop" aria-hidden="true" tabindex="-1"></div>
 
-<!-- Página plantilla hg-home (templates-2026). CSS en home.css -->
+<!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
+<main id="hg-home-main" class="hg-home-container hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
+  <!-- Botones de navegación: texto girado 90° -->
+  <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
+    <span class="hg-home-nav-btn__text label-m ttu">xxx new season AW 26</span>
+  </button>
+  <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
+    <span class="hg-home-nav-btn__text label-m ttu">women new season AW 26</span>
+  </button>
+
+  
+  <!-- Wrapper: recorta a una columna visible; arrastrar para cambiar de columna -->
+  <div class="hg-home-row-cols-wrap hg-home-drag-wrap" id="hg-home-drag-wrap">
+    <div class="hg-home-row-cols" id="hg-home-row-cols" data-active="0">
+    <!-- Columna 1 -->
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 1">
+      <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box-animated-wrap">
+              <div class="hg-home-box hg-home-box-animated">
+                <img src="https://static.massimodutti.net/assets/public/b417/9650/83e44e5da0dc/5cd25799ab75/w-bloque5-1-desktop/w-bloque5-1-desktop.jpg" alt="Columna 1">
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <img src="/assets/static/home/foto1.jpg" alt="Columna 1">
+            </div>
+          </a>
+        </li>
+      </ul>
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
+    </section>
+    <!-- Columna 2 -->
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 2">
+      <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <div class="hg-aspect-2-3 hg-h-100-percent">
+                <img class="hg-aspect-image" src="/assets/static/home/foto2.jpg" alt="Columna 2">
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box p-104">
+              <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box p-104">
+              <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <img src="/assets/static/home/foto2.jpg" alt="Columna 2">
+            </div>
+          </a>
+        </li>
+      </ul>
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
+    </section>  
+    <!-- Columna 3 -->
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 3">
+      <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
+        <li>
+          <a href="#" class="hg-home-box-link">
+            <div class="hg-home-box">
+              <img src="/assets/static/home/foto3.jpg" alt="Columna 3">
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      {% include '_paginas/templates-2026/hg-footer.njk' %}
+    </section>
+  </div>
+  </div>
+  <!-- Footer debajo de las columnas -->
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+(() => {
+  if (typeof gsap === 'undefined') return;
+
+  // -----------------------------
+  // 1) Referencias DOM y estado
+  // -----------------------------
+  const row     = document.getElementById('hg-home-row-cols');
+  const prevBtn = document.getElementById('hg-home-nav-prev');
+  const nextBtn = document.getElementById('hg-home-nav-next');
+  const dragWrap = document.getElementById('hg-home-drag-wrap');
+
+  if (!row || !prevBtn || !nextBtn) return;
+
+  document.body.dataset.activeCol = row.dataset.active || '0';
+
+  const totalCols = 3;            // número de columnas/páginas
+  let active = parseInt(row.dataset.active || '0', 10);
+  const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
+  cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
+  let updateFooterInView = function() {};
+
+  const mobileMQ = window.matchMedia('(max-width: 991px)');
+  const colWidth = () => window.innerWidth - (mobileMQ.matches ? 100 : 200);
+
+  // -----------------------------
+  // 2) Navegación / animación
+  // -----------------------------
+  function setActive(index) {
+    if (index < 0 || index >= totalCols) return;
+    active = index;
+
+    row.dataset.active = String(active);
+    document.body.dataset.activeCol = String(active);
+    cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
+
+    gsap.to(row, {
+      x: -active * colWidth(),
+      duration: 0.5,
+      ease: 'power3.out'
+    });
+
+    // escalar columnas: activa 1, resto 0.5
+    cols.forEach((col, i) => {
+      gsap.to(col, {
+        scale: i === active ? 1 : 0.5,
+        duration: 0.5,
+        ease: 'power3.out'
+      });
+    });
+
+    prevBtn.disabled = active === 0;
+    nextBtn.disabled = active === totalCols - 1;
+    updateFooterInView();
+  }
+
+  prevBtn.addEventListener('click', () => setActive(active - 1));
+  nextBtn.addEventListener('click', () => setActive(active + 1));
+
+  mobileMQ.addEventListener('change', () => setActive(active));
+
+  let resizeT = null;
+  window.addEventListener('resize', () => {
+    if (resizeT) clearTimeout(resizeT);
+    resizeT = setTimeout(() => {
+      setActive(active);
+      cols.forEach(updateBoxOpacity);
+      resizeT = null;
+    }, 100);
+  });
+
+  // -----------------------------
+  // 3) Fade de boxes al hacer scroll dentro de cada columna
+  //    (aparece progresivo al entrar por abajo)
+  // -----------------------------
+  const fadeStartRatio = 0.001;
+
+  function updateBoxOpacity(col) {
+    const colRect = col.getBoundingClientRect();
+    const fadeStartPx = colRect.height * fadeStartRatio;
+
+    col.querySelectorAll('.hg-home-box').forEach(box => {
+      const boxRect = box.getBoundingClientRect();
+      const boxTopInsideCol = boxRect.top - colRect.top;
+      const boxHeight = boxRect.height;
+
+      // misma fórmula que tenías, pero con nombres más claros
+      const opacity = Math.min(1, Math.max(0,
+        (boxTopInsideCol + boxHeight) / (fadeStartPx + boxHeight)
+      ));
+
+      box.style.opacity = String(opacity);
+    });
+  }
+
+  function initScrollFade() {
+    cols.forEach(col => {
+      col.addEventListener('scroll', () => updateBoxOpacity(col));
+      updateBoxOpacity(col);
+    });
+  }
+
+  // -----------------------------
+  // 4) Drag / Swipe horizontal (pointer events)
+  //    - si el gesto es más horizontal que vertical, cambia de columna
+  // -----------------------------
+  function initDrag() {
+    if (!dragWrap) return;
+
+    const SWIPE_PX = 70;
+    const DRAG_START_PX = 8;
+
+    let isDragging = false;
+    let started = false;          // ya decidimos si es drag horizontal
+    let startX = 0, startY = 0;
+    let baseX = 0;                // x inicial del row al empezar a arrastrar
+    let lastX = 0;                // último x aplicado
+    let pointerId = null;
+
+    const minX = () => -(totalCols - 1) * colWidth();
+
+    function onDown(e) {
+      if (e.type === 'pointerdown' && e.button !== 0) return;
+      // No capturar si el clic es dentro del footer (toggles deben funcionar)
+      if (e.target.closest && e.target.closest('footer')) return;
+
+      isDragging = true;
+      started = false;
+
+      startX = e.clientX;
+      startY = e.clientY;
+
+      baseX = -active * colWidth();
+      lastX = baseX;
+
+      gsap.killTweensOf(row);
+
+      pointerId = e.pointerId ?? null;
+      if (pointerId != null) dragWrap.setPointerCapture(pointerId);
+
+      e.preventDefault();
+    }
+
+    function onMove(e) {
+      if (!isDragging) return;
+
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // decidir si el gesto es realmente horizontal
+      if (!started) {
+        if (Math.abs(dx) > DRAG_START_PX || Math.abs(dy) > DRAG_START_PX) {
+          started = Math.abs(dx) >= Math.abs(dy);
+          if (!started) { isDragging = false; return; } // era scroll vertical
+        } else {
+          return;
+        }
+      }
+
+      lastX = Math.max(minX(), Math.min(0, baseX + dx));
+      row.style.transform = `translate3d(${lastX}px,0,0)`;
+
+      e.preventDefault();
+    }
+
+    function finish(e) {
+      if (pointerId != null) {
+        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
+      }
+      pointerId = null;
+
+      if (!isDragging) return;
+      isDragging = false;
+
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // Tap en la zona que asoma (peek): ir a columna anterior o siguiente como el botón
+      if (!started && Math.abs(dx) < 15 && Math.abs(dy) < 15) {
+        const wrapRect = dragWrap.getBoundingClientRect();
+        const relX = startX - wrapRect.left;
+        const peekThreshold = 0.2;
+        if (relX < wrapRect.width * peekThreshold && active > 0) {
+          setActive(active - 1);
+          return;
+        }
+        if (relX > wrapRect.width * (1 - peekThreshold) && active < totalCols - 1) {
+          setActive(active + 1);
+          return;
+        }
+      }
+
+      // “consolidamos” el transform manual a GSAP x
+      gsap.set(row, { x: lastX });
+
+      if (started) {
+        if (dx > SWIPE_PX) return setActive(active - 1);
+        if (dx < -SWIPE_PX) return setActive(active + 1);
+      }
+
+      // si no, vuelve a la actual (snap)
+      setActive(active);
+    }
+
+    function cancel() {
+      if (pointerId != null) {
+        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
+      }
+      pointerId = null;
+
+      if (!isDragging) return;
+      isDragging = false;
+
+      gsap.set(row, { x: -active * colWidth() });
+      setActive(active);
+    }
+
+    dragWrap.addEventListener('pointerdown', onDown, { passive: false });
+    dragWrap.addEventListener('pointermove', onMove, { passive: false });
+    dragWrap.addEventListener('pointerup', finish, { passive: true });
+    dragWrap.addEventListener('pointercancel', cancel, { passive: true });
+  }
+
+  // -----------------------------
+  // 5) Resize: ver manejador con debounce (100 ms) más arriba
+  // -----------------------------
+
+  // -----------------------------
+  // 6) Init
+  // -----------------------------
+  // estado inicial: col 0 a 1, resto a 0.5
+  cols.forEach((col, i) => gsap.set(col, { scale: i === 0 ? 1 : 0.5 }));
+  setActive(0);
+  initScrollFade();
+  initDrag();
+
+  // 6a) Animación de entrada del logo (estado inicial en CSS para evitar salto; GSAP anima al destino)
+  (function() {
+    const container = document.querySelector('.js-hg-header-logo');
+    const logo = document.querySelector('.js-hg-header-logo-icon');
+    if (!logo || !container) return;
+    
+    setTimeout(() => {
+      const containerRect = container.getBoundingClientRect();
+      const isDesktop = window.innerWidth >= 992;
+      
+      if (isDesktop) {
+        gsap.to(logo, {
+          left: containerRect.left,
+          top: containerRect.top + (containerRect.height / 2),
+          width: containerRect.width,
+          duration: 1,
+          ease: 'power3.out',
+          onComplete() {
+            gsap.set(logo, { clearProps: 'all' });
+            logo.classList.remove('hg-header-logo-icon--home-animation');
+          }
+        });
+      } else {
+        gsap.to(logo, {
+          left: containerRect.left + (containerRect.width / 2),
+          top: containerRect.top + (containerRect.height / 2),
+          width: containerRect.width,
+          duration: 0.8,
+          ease: 'power3.out',
+          onComplete() {
+            gsap.set(logo, { clearProps: 'all' });
+            logo.classList.remove('hg-header-logo-icon--home-animation');
+          }
+        });
+      }
+    }, 1000);
+  })();
+
+  // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
+  (function() {
+    const footers = document.querySelectorAll('#hg-home-main footer');
+    if (!footers.length) return;
+    const visibleFooters = new Set();
+    updateFooterInView = function() {
+      const activeIndex = parseInt(row.dataset.active || '0', 10);
+      const inView = visibleFooters.has(footers[activeIndex]);
+      document.body.classList.toggle('hg-footer-in-view', inView);
+      document.body.dataset.activeCol = String(activeIndex);
+    };
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) visibleFooters.add(entry.target);
+        else visibleFooters.delete(entry.target);
+      });
+      updateFooterInView();
+    }, { threshold: 0.2 });
+    footers.forEach(function(f) { observer.observe(f); });
+  })();
+
+  // -----------------------------
+  // 7) Animación “hero” al segundo
+  // -----------------------------
+  setTimeout(() => {
+    document.querySelectorAll('.hg-home-box-animated').forEach(el => {
+      gsap.to(el, {
+        height: '100vh',
+        width: '150vh',
+        duration: 1.2,
+        ease: 'power2.out'
+      });
+    });
+  }, 1000);
+
+  // Abrir/cerrar hg-menu (accesible: Tab, Escape, foco, inert, ARIA)
+  (function() {
+    var panel = document.getElementById('hg-menu-panel');
+    var backdrop = document.getElementById('hg-menu-backdrop');
+    var closeBtn = panel ? panel.querySelector('.hg-menu-panel__close') : null;
+    if (!panel || !backdrop || !closeBtn) return;
+
+    var lastFocusedTrigger = null;
+    function openMenu(trigger) {
+      lastFocusedTrigger = trigger || document.activeElement;
+      panel.removeAttribute('inert');
+      panel.classList.add('is-open');
+      backdrop.classList.add('is-open');
+      panel.setAttribute('aria-hidden', 'false');
+      backdrop.setAttribute('aria-hidden', 'false');
+      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
+        el.setAttribute('aria-expanded', 'true');
+      });
+      closeBtn.focus();
+      document.addEventListener('keydown', onEscape);
+    }
+    function closeMenu() {
+      panel.setAttribute('inert', '');
+      panel.classList.remove('is-open');
+      backdrop.classList.remove('is-open');
+      panel.setAttribute('aria-hidden', 'true');
+      backdrop.setAttribute('aria-hidden', 'true');
+      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
+        el.setAttribute('aria-expanded', 'false');
+      });
+      document.removeEventListener('keydown', onEscape);
+      if (lastFocusedTrigger && lastFocusedTrigger.focus) lastFocusedTrigger.focus();
+    }
+    function onEscape(e) {
+      if (e.key === 'Escape' && panel.classList.contains('is-open')) closeMenu();
+    }
+
+    document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
+      el.setAttribute('aria-controls', 'hg-menu-panel');
+      el.setAttribute('aria-expanded', 'false');
+      el.setAttribute('aria-haspopup', 'true');
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (panel.classList.contains('is-open')) closeMenu(); else openMenu(el);
+      });
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    backdrop.addEventListener('click', closeMenu);
+  })();
+})();
+</script>
