@@ -1,186 +1,360 @@
-@charset "UTF-8";
+:root {
+  --hg-menu-panel-bg-color: rgba(255, 255, 255, 0.95);
+  --hg-menu-panel-z-index: calc(var(--hg-header-z-index) + 1);
+  --hg-menu-panel-width: 100%;
+  --hg-menu-panel-max-width: none;
+  --hg-menu-panel-transition: all 0.3s ease-in-out;
+  --hg-menu-panel-inset-block-start: var(--hg-header-min-height);
+  --hg-menu-panel-padding-inline: var(--hg-spacing-20);
+  --hg-menu-panel-box-shadow: none;
+
+  --hg-menu-panel-backdrop-bg-color: rgba(0, 0, 0, 0.5);
+  --hg-menu-panel-backdrop-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  --hg-menu-panel-header-min-height: var(--hg-spacing-48);
+  --hg-menu-panel-header-padding-block: var(--hg-spacing-24) 0;
+  --hg-menu-panel-header-actions-min-height: var(--hg-header-min-height);
+
+  --hg-menu-panel-media-transition: all 0.3s ease-in-out;
+
+  --hg-menu-column-cat-width: var(--hg-spacing-128);
+  --hg-menu-column-transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 62rem) {
+  :root {
+    --hg-menu-panel-width: 100%;
+    --hg-menu-panel-max-width: 500px;
+    --hg-menu-panel-inset-block-start: 0;
+    --hg-menu-panel-box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
+    
+    --hg-menu-panel-header-min-height: var(--hg-spacing-64);
+    --hg-menu-panel-header-padding-block: 0;
+    --hg-menu-panel-header-actions-min-height: unset;
+
+    --hg-menu-column-cat-width: var(--hg-spacing-160);
+  }
+}
+
 /**
  * hg-menu.css — Estilos del menú (panel, backdrop, contenido) y logo del header.
  * Templates 2026. Se carga junto a home.css en token-hg-home y en token-hg-menu.
  * Usa variables --hg-* de HolyGrail5.
  */
 
-/* Foco visible (accesibilidad) para elementos del menú */
-.hg-menu-panel__close:focus-visible,
-.hg-menu a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-}
-.hg-menu-panel__close:focus:not(:focus-visible) {
-  outline: none;
+/* ###########################################################################
+  .md-main-menu-open: clase que se añade al body al abrir el menú.
+  ########################################################################### */
+body.md-main-menu-open {
+  overflow: hidden !important;
+  overscroll-behavior: contain;
+  position: relative !important;
 }
 
-/* Panel: drawer que se abre al hacer click en .menu-item-header */
-.hg-menu-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 500px;
-  height: 100vh;
-  background: var(--hg-color-white, #fff);
-  z-index: 1000;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.08);
+body.md-main-menu-open app-top-notification {
+  display: none;
 }
+
+body.md-main-menu-open .hg-menu-panel,
 .hg-menu-panel.is-open {
   transform: translateX(0);
 }
-.hg-menu-panel__close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  color: inherit;
-}
-.hg-menu-panel__inner {
-  position: relative;
+
+body.md-main-menu-open .hg-menu-backdrop,
+.hg-menu-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* RTL: panel por la derecha (body.is-rtl) */
-body.is-rtl .hg-menu-panel {
-  left: auto;
-  right: 0;
+/* ###########################################################################
+  Estilos responsive de .md-main-menu-open
+  ########################################################################### */
+@media (min-width: 62rem) {
+  body.md-main-menu-open .hg-menu-panel__media,
+  .hg-menu-panel__media.is-open {
+    transform: translateX(0);
+    transition-delay: .2s;
+  }
+}
+
+
+/* ###########################################################################
+  .hg-menu-panel: panel del menú, que se muestra al hacer click en el botón del header.
+  ########################################################################### */
+.hg-menu-panel {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  inset-block-end: 0;
+  inset-block-start: var(--hg-menu-panel-inset-block-start);
+  inset-inline-start: 0;
+  justify-content: flex-start;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: var(--hg-menu-panel-transition);
+  width: var(--hg-menu-panel-width);
+  z-index: var(--hg-menu-panel-z-index);
+}
+
+:dir(rtl) .hg-menu-panel {
   transform: translateX(100%);
-  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.08);
 }
-body.is-rtl .hg-menu-panel.is-open {
-  transform: translateX(0);
+
+.btn.hg-menu-panel-action {
+  min-width: var(--hg-spacing-24);
+  min-height: var(--hg-spacing-32);
 }
-body.is-rtl .hg-menu-panel__close {
-  right: auto;
-  left: 16px;
+
+.btn.hg-menu-panel-action--close {
+  color: var(--hg-color-black);
+  fill: var(--hg-color-black);
+  padding: 0;
+}
+
+.hg-menu-panel__handler {
+  align-items: stretch;
+  background: var(--hg-menu-panel-bg-color);
+  box-shadow: var(--hg-menu-panel-box-shadow);
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  max-width: var(--hg-menu-panel-max-width);
+  position: relative;
+  max-height: 100%;
+}
+
+.hg-menu-panel__header {
+  align-items: center;
+  column-gap: var(--hg-spacing-16);
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  min-height: var(--hg-menu-panel-header-min-height);
+  overflow: hidden;
+  padding-block: var(--hg-menu-panel-header-padding-block);
+}
+
+.hg-menu-panel-header-actions {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  min-height: var(--hg-menu-panel-header-actions-min-height);
+  padding-inline: var(--hg-menu-panel-padding-inline);
+  order: 2;
+}
+
+.hg-menu-panel .hg-header-list.hg-header-list--primary {
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  padding-inline: var(--hg-menu-panel-padding-inline);
+  min-height: var(--hg-spacing-48);
+  order: 1;
+}
+.hg-menu-panel__footer {
+  flex: 0 0 auto;
+  display: block;
+  padding: var(--hg-spacing-20) var(--hg-menu-panel-padding-inline) var(--hg-spacing-12);
+}
+
+.hg-menu-panel__footer-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hg-menu-panel__footer-logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Backdrop del menú */
 .hg-menu-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 800;
+  background: var(--hg-menu-panel-backdrop-bg-color);
+  z-index: calc(var(--hg-menu-panel-z-index) - 1);
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
-}
-.hg-menu-backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
+  transition: var(--hg-menu-panel-backdrop-transition);
 }
 
-/* Logo en el header: estado inicial (evita salto antes de que GSAP arranque); animación con GSAP */
-.hg-header .hg-menu-logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-width: 258px;
-  min-height: 38px;
-}
-.hg-header .hg-menu-logo svg {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) scale(4);
-  transform-origin: left center;
-  z-index: 2001;
-  transition: transform 300ms ease-out;
+/* ###########################################################################
+  Estilos responsive de .hg-menu-panel
+  ########################################################################### */
+@media (max-width: 61.994rem) {
+  .hg-menu-panel-header-actions {
+    inset-block-end: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+  }
+
+  .hg-menu-backdrop {
+    display: none;
+  }
+
+  .hg-menu-panel__media-wrapper {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
 }
 
-/* Contenido del menú (nav y columnas) */
+@media (min-width: 62rem) {
+  .hg-menu-panel-header-actions {
+    flex: 0 0 auto;
+    order: 2;
+  }
+
+  .hg-menu-panel__media {
+    inset-block-start: 0;
+    inset-inline-start: 100%;
+    max-height: 100%;
+    position: absolute;
+    width: 22rem;
+    transform: translateX(-100%);
+    transition: var(--hg-menu-panel-media-transition);
+    transition-delay: 0s;
+    z-index: -1;
+    background-color: var(--hg-menu-panel-bg-color);
+  }
+
+  .hg-menu-panel__media-wrapper {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  .hg-menu-panel__body {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+
+  :dir(rtl) .hg-menu-panel__media {
+    transform: translateX(100%);
+  }
+}
+
+/* ###########################################################################
+  .hg-menu: contenido del menú, que se muestra dentro de .hg-menu-panel__body.
+  ########################################################################### */
+.hg-menu-panel .MEN:not(.is-active),
+.hg-menu-panel .WOMEN:not(.is-active),
+.hg-menu-panel .WORLD:not(.is-active) {
+    display: none;
+}
+
 .hg-menu {
-  position: relative;
-  width: 500px;
-  padding: 70px 24px 24px;
-  z-index: 1000;
-  height: 100vh;
+  align-items: stretch;
   display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 94px);
-  background-color: #fff;
-  color: #000;
-  transition: all ease 0.3s;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding-block: var(--hg-spacing-20);
+  padding-inline: var(--hg-spacing-16);
 }
-.hg-menu__logo {
-  margin-top: auto;
-  padding-top: 24px;
-}
-.hg-menu__logo svg {
-  width: 100%;
-  height: auto;
-}
-.hg-menu__cols {
+
+.hg-menu-grid {
+  align-items: stretch;
   display: flex;
-  gap: 24px;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  row-gap: var(--hg-spacing-40);
+}
+
+.hg-menu-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: flex-start;
 }
-.hg-menu__col {
-  flex: 0 0 auto;
-  min-width: 100px;
-  width: auto;
+
+.hg-menu-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: var(--hg-menu-column-transition);
 }
-.hg-menu__list {
+
+.hg-menu-column__handler {
+  align-items: stretch;
+  background-color: var(--hg-menu-column-bg-color, transparent);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.hg-menu-column.hg-menu-column--cat {
+  flex: 0 0 var(--hg-menu-column-cat-width);
+  max-width: var(--hg-menu-column-cat-width);
+}
+
+.hg-menu-column.hg-menu-column--subcat .hg-menu-column__handler {
+  overflow: hidden;
+}
+
+.hg-menu-column.hg-menu-column--subcat {
+  flex: 1 1 auto;
+  grid-template-rows: 1fr;
+  overflow: auto;
+}
+
+.hg-menu-column.hg-menu-column--subcat.is-collapsed {
+  grid-template-rows: 0fr;
+}
+
+.btn.hg-menu-btn {
+  align-items: center;
+  background-color: var(--hg-menu-btn-bg-color, transparent);
+  color: var(--hg-menu-btn-color, var(--hg-color-black));
+  column-gap: var(--hg-spacing-8);
+  cursor: pointer;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: flex-start;
+  min-height: var(--hg-spacing-16);
+  overflow-wrap: break-word;
+  padding: 0.125rem var(--hg-spacing-4);
+  text-align: start;
+  white-space: normal;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+.btn.hg-menu-btn .p-tag {
+  flex: 0 0 auto;
+}
+
+.btn.hg-menu-btn::before,
+.btn.hg-menu-btn::after {
+  display: none;
+}
+
+.btn.hg-menu-btn:hover {
+  color: var(--hg-menu-btn-color, var(--hg-color-dark-grey));
+}
+
+.hg-menu-column.hg-menu-column--subcat .btn.hg-menu-btn.active {
+  font-weight: 400;
+}
+
+.hg-menu-subcat-list {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--hg-spacing-16);
   padding: 0;
   margin: 0;
-}
-.hg-menu__list a {
-  text-decoration: none;
-  color: inherit;
-}
-.hg-menu__list a:hover {
-  text-decoration: underline;
+  list-style: none;
 }
 
-/* Imagen lateral del menú */
-.hg-menu__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40vw;
-  max-width: 280px;
-  aspect-ratio: 3/4;
-  transform: translate(-100%, 0);
-  z-index: 500;
-  visibility: hidden;
-  transition: transform 0.5s ease 0.15s;
-  pointer-events: none;
-  overflow: hidden;
-  display: flex;
+.hg-menu-subcat-list > li {
   align-items: center;
-  justify-content: center;
-}
-.hg-menu__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-.hg-menu-panel.is-open .hg-menu__image {
-  transform: translate(100%, 0);
-  visibility: visible;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
 }
 
-/* RTL: imagen lateral del menú a la izquierda del panel */
-body.is-rtl .hg-menu__image {
-  right: auto;
-  left: 0;
-  transform: translate(100%, 0);
-}
-body.is-rtl .hg-menu-panel.is-open .hg-menu__image {
-  transform: translate(-100%, 0);
+.hg-menu-subcat-list .btn.hg-menu-btn {
+  flex: 1 1 auto;
 }

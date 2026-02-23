@@ -1,35 +1,80 @@
 :root {
-  --hg-header-bg-color: var(--hg-color-white);
+  --hg-base-line-compensation: 0.18em;
+
+  --hg-header-bg-color: rgba(255, 255, 255, 0.95);
   --hg-header-min-height: var(--hg-spacing-48);
-  --hg-header-padding-inline: var(--hg-spacing-16);
+  --hg-header-padding-inline: var(--hg-spacing-20);
   --hg-header-z-index: 1200;
-  --hg-header-list-gap: var(--hg-spacing-8);
-  --hg-header-logo-width: 9.375rem;
-  --hg-header-logo-z-index: 2001;
+  --hg-header-transition-fast: all 0.070s ease-in-out;
   --hg-header-transition: all 0.270s ease-in-out;
+  --hg-header-action-min-height: var(--hg-spacing-24);
+  
+  --hg-header-list-gap: var(--hg-spacing-8);
+  
+  --hg-header-logo-width: 9.375rem;
+  --hg-header-logo-z-index: calc(var(--hg-header-z-index) + 1);
+  --hg-header-logo-margin-inline: 10% 0;
+  --hg-header-logo-ratio: 6.79 / 1;
+  --hg-header-logo-transition: all 0.270s ease-in-out;
+  
+  --hg-header-maxilogo-width: unset;
+  --hg-header-maxilogo-transition: all 0.270s ease-in-out;
 }
 
 @media (min-width: 62rem) {
   :root {
-    --hg-header-min-height: var(--hg-spacing-80);
+    --hg-header-min-height: var(--hg-spacing-64);
     --hg-header-list-gap: var(--hg-spacing-32);
+    --hg-header-action-min-height: var(--hg-spacing-32);
+    
     --hg-header-logo-width: 15.625rem;
+    --hg-header-logo-margin-inline: 10% 0;
+    
+    --hg-header-maxilogo-width: 32.25rem;
   }
 }
 
 /**
  * hg-header.css — Estilos del header (templates 2026).
- * Se carga junto a home.css en token-hg-home. Usa variables --hg-* de HolyGrail5.
+ * Se carga junto a home.css en token-home. Usa variables --hg-* de HolyGrail5.
+ * Estado por defecto sin variantes aplicadas: header con maxilogo
+ * Logo oculto en mobile y desktop, header con fondo blanco, texto negro, logo alineado a la izquierda.
+ * Maxilogo visible en mobile y desktop.
+ * Maxilogo no tiene cuerpo, es dicir, no ocupa espacio, se muestra por encima del contenido.
+ * Al iniciarse el scroll se añade la clase .is-scrolling-offset al body.
+ * Con la clase .is-scrolling-offset se oculta el maxilogo y se hace visible el logo.
  */
 
 /* Header: estilos globales */
-
 .hg-header {
   position: sticky;
   inset-block-start: 0;
   inset-inline-start: 0;
   inset-inline-end: 0;
   z-index: var(--hg-header-z-index);
+}
+
+.hg-header-maxilogo {
+  display: block;
+  height: 0;
+  max-height: 100%;
+  overflow: visible;
+  padding-inline: var(--hg-header-padding-inline);
+  transition: var(--hg-header-maxilogo-transition);
+}
+
+.hg-header-maxilogo-icon {
+  display: block;
+  width: 100%;
+  max-width: var(--hg-header-maxilogo-width);
+  padding-block: var(--hg-spacing-16);
+  height: auto;
+}
+
+.hg-header-maxilogo-icon svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hg-header__handler {
@@ -40,6 +85,7 @@
   justify-content: space-between;
   min-height: var(--hg-header-min-height);
   padding-inline: var(--hg-header-padding-inline);
+  transition: var(--hg-header-transition-fast);
 }
 
 .hg-header__prepend,
@@ -57,30 +103,29 @@
   display: flex;
   flex-flow: row nowrap;
   flex: 1 1 auto;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: var(--hg-header-min-height);
 }
 
-.hg-header-logo {
-  aspect-ratio: 6.79 / 1;
+.hg-header .hg-header-logo {
   display: block;
   height: auto;
+  margin-inline: var(--hg-header-logo-margin-inline);
+  opacity: 0;
+  pointer-events: none;
   position: relative;
+  transition: var(--hg-header-logo-transition);
   width: var(--hg-header-logo-width);
-}
-  
-.hg-header-logo-icon {
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
   z-index: var(--hg-header-logo-z-index);
 }
+  
+.hg-header .hg-header-logo-icon {
+  display: block;
+  height: auto;
+  width: 100%;
+}
 
-
-.hg-header-logo-icon svg {
+.hg-header .hg-header-logo-icon svg {
   display: block;
   width: 100%;
   height: auto;
@@ -118,8 +163,31 @@
   flex-flow: row nowrap;
   gap: var(--hg-spacing-4);
   justify-content: center;
-  min-height: var(--hg-spacing-24);
-  min-width: var(--hg-spacing-24);
+  min-height: var(--hg-header-action-min-height);
+  min-width: var(--hg-header-action-min-height);
+  padding: var(--hg-base-line-compensation) 0 0;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.btn.hg-header-action--primary {
+  color: var(--hg-color-dark-grey);
+  fill: var(--hg-color-dark-grey);
+}
+
+.btn.hg-header-action--primary.active {
+  color: var(--hg-color-black);
+  fill: var(--hg-color-black);
+}
+
+.btn.hg-header-action--secondary {
+  color: var(--hg-color-black);
+  fill: var(--hg-color-black);
+}
+
+.btn.hg-header-action--secondary.active {
+  color: var(--hg-color-black);
+  fill: var(--hg-color-black);
 }
 
 .hg-header-action .hg-icon {
@@ -128,78 +196,159 @@
   flex-flow: column nowrap;
   justify-content: center;
 }
-
+  
 .hg-header-bag-counter {
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Foco visible (accesibilidad) en enlaces del header */
-.hg-header a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+/**
+ * is-scrolling-offset: clase que se añade al body cuando 
+ * se ha hecho scroll más allá del offset definido en HolyGrail5 
+ * (por defecto, 80px). Sirve para aplicar estilos específicos 
+ * al header cuando el usuario ha hecho scroll.
+ * Se usa especialmente para evitar solapamientos del header 
+ * con el contenido y como "tope" para las variantes de header.
+ */
+body.is-scrolling-offset .hg-header__handler {
+  background-color: var(--hg-header-bg-color);
 }
 
-/* is-compact: variante para el header en home, que hace que el logo se muestre siempre centrado y el header tenga un comportamiento de wrap para evitar solapamientos. */
-body:not(.is-scrolling-offset).is-compact .hg-header__handler {
-  flex-wrap: wrap;
+body.is-scrolling-offset .hg-header-maxilogo {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
-body:not(.is-scrolling-offset).is-compact .hg-header__main {
-  flex-basis: 100%;
-  order: 1;
-  width: 100%;
+body.is-scrolling-offset .hg-header .hg-header-logo {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-body:not(.is-scrolling-offset).is-compact .hg-header-logo {
-  position: relative;
-  left: auto;
-  right: auto;
-  width: 100%;
+/**
+  * is-reduced: clase que se añade al body cuando 
+  * el header no muestra el maxilogo.
+  */
+
+body.is-reduced .hg-header__handler {
+  background-color: var(--hg-header-bg-color);
 }
 
-/* is-compact: variante para el header en home, que hace que el logo se muestre siempre centrado y el header tenga un comportamiento de wrap para evitar solapamientos. */
-body:not(.is-scrolling-offset).is-phantom .hg-header {
+body.is-reduced .hg-header-maxilogo {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.is-reduced .hg-header .hg-header-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/**
+  * is-compact: clase que se añade al body cuando 
+  * el header muestra el maxilogo y ocupa espacio físico.
+  */
+
+body.is-compact .hg-header__handler {
+  background-color: var(--hg-header-bg-color);
+}
+
+body.is-compact .hg-header-maxilogo {
+  height: auto;
+  max-height: none;
+}
+
+/**
+  * md-main-menu-open: clase que se añade al body cuando 
+  * el menú principal está abierto.
+  */
+
+body.md-main-menu-open .hg-header__handler {
+  background-color: var(--hg-header-bg-color);
+}
+
+body.md-main-menu-open .hg-header-maxilogo {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.md-main-menu-open .hg-header .hg-header-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/**
+ * [class*="phantom"]: variante para el header con fondo transparente, 
+ * que hace que el header se superponga al contenido.
+ * Todo el header NO tiene cuerpo.
+ * is-scrolling-offset se usa como "tope" para esta variante, es decir,
+ * cuando el usuario hace scroll más allá del offset, el header deja de ser phantom.
+ */
+body[class*="phantom"] .hg-header {
   height: 0;
   overflow: visible;
 }
 
-body:not(.is-scrolling-offset).is-phantom .hg-header__handler {
+body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
   background-color: transparent;
 }
 
+/**
+ * [class*="phantom-white"]: variante para el header phantom, complementaria a phantom pero con texto e iconos en blanco.
+ * is-scrolling-offset se usa como "tope" para esta variante, es decir,
+ * cuando el usuario hace scroll más allá del offset, el header deja de ser phantom.
+ */
+body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
+body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
+  color: var(--hg-color-white);
+  fill: var(--hg-color-white);
+}
 
+/* variante phantom-white para el maxilogo, previene la transición a negro antes de desaparecer */
+body[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
+  color: var(--hg-color-white);
+  fill: var(--hg-color-white);
+}
+
+/**
+ * micro variantes para mostrar elementos específicos del 
+ * header en blanco, usadas para casos puntuales (home, rutas privadas, etc).
+ */
+body:not(.is-scrolling-offset):not(.md-main-menu-open).phantom-logo-white .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-menu .hg-header .btn.hg-header-action--hamburger path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-menu .hg-header .btn.hg-header-action--primary,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-logo .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-logo .hg-header .hg-header-maxilogo path,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-login .hg-header .btn.hg-header-action--username,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-basket .hg-header .btn.hg-header-action--cart,
+body:not(.is-scrolling-offset):not(.md-main-menu-open).white-search .hg-header .btn.hg-header-action--search {
+  color: var(--hg-color-white);
+  fill: var(--hg-color-white);
+}
+
+/**
+* micro variantes para ocultar elementos específicos del 
+* header, usadas para casos puntuales (home, rutas privadas, etc).
+*/
+body.no-menu .hg-header .btn.hg-header-action--hamburger,
+body.no-menu .hg-header .hg-header-list--primary,
+body.no-logo .hg-header .hg-header-logo,
+body.no-login .hg-header .btn.hg-header-action--username,
+body.no-basket .hg-header .btn.hg-header-action--cart,
+body.no-search .hg-header .btn.hg-header-action--search {
+  display: none !important;
+}
 
 /* Headers: estilos para pantallas < 991.9px */
 @media (max-width: 61.994rem) {
-  body {
-    padding-bottom: 50vh;
-  }
-  .hg-header-logo-icon.hg-header-logo-icon--home-animation {
-    position: fixed;
-    left: 50vw;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-    width: calc(100vw - (var(--hg-header-padding-inline) * 2));
-  }
-
-  body .hg-header-logo {
-    left: var(--hg-header-padding-inline);
-    position: absolute;
-    right: var(--hg-header-padding-inline);
-    width: auto;
-    top: var(--hg-header-min-height);
-  }
-}
-
-/* Headers: estilos para pantallas >= 992px */
-@media (min-width: 62rem) {
-  .hg-header-logo-icon.hg-header-logo-icon--home-animation {
-    position: fixed;
-    left: var(--hg-header-padding-inline);
-    top: 50vh;
-    transform: translate(0, -50%);
-    width: 62vw;
+  body.md-main-menu-open .btn.hg-header-action--hamburger,
+  body.md-main-menu-open .hg-header .hg-header-logo {
+    visibility: hidden;
+    opacity: 0;
   }
 }

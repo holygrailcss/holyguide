@@ -14,13 +14,7 @@ layout: base-clean.njk
 <a href="#hg-home-main" class="hg-skip-link">Saltar al contenido principal</a>
 
 <!-- Panel hg-menu: se abre al hacer click en .js-hg-menu-toggle -->
-<div id="hg-menu-panel" class="hg-menu-panel" aria-hidden="true" aria-label="Menú" role="dialog" inert>
-  <button type="button" class="hg-menu-panel__close" aria-label="Cerrar menú">&times;</button>
-  <div class="hg-menu-panel__inner">
-    {% include '_paginas/templates-2026/hg-menu.njk' %}
-  </div>
-</div>
-<div id="hg-menu-backdrop" class="hg-menu-backdrop" aria-hidden="true" tabindex="-1"></div>
+{% include '_paginas/templates-2026/hg-menu.njk' %}
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
 <main id="hg-home-main" class="hg-home-container hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
@@ -465,7 +459,7 @@ layout: base-clean.njk
   (function() {
     var panel = document.getElementById('hg-menu-panel');
     var backdrop = document.getElementById('hg-menu-backdrop');
-    var closeBtn = panel ? panel.querySelector('.hg-menu-panel__close') : null;
+    var closeBtn = panel ? panel.querySelector('.hg-menu-panel-action--close') : null;
     if (!panel || !backdrop || !closeBtn) return;
 
     var lastFocusedTrigger = null;
