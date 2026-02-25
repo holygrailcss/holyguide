@@ -1,5 +1,5 @@
 :root {
-  --hg-menu-panel-bg-color: rgba(255, 255, 255, 0.95);
+  --hg-menu-panel-bg-color: var(--hg-color-white);
   --hg-menu-panel-z-index: calc(var(--hg-header-z-index) + 1);
   --hg-menu-panel-width: 100%;
   --hg-menu-panel-max-width: none;
@@ -8,7 +8,7 @@
   --hg-menu-panel-padding-inline: var(--hg-spacing-20);
   --hg-menu-panel-box-shadow: none;
 
-  --hg-menu-panel-backdrop-bg-color: rgba(0, 0, 0, 0.5);
+  --hg-menu-panel-backdrop-bg-color: rgba(255, 255, 255, 0.3);
   --hg-menu-panel-backdrop-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   --hg-menu-panel-header-min-height: var(--hg-spacing-48);
@@ -38,7 +38,7 @@
 
 /**
  * hg-menu.css — Estilos del menú (panel, backdrop, contenido) y logo del header.
- * Templates 2026. Se carga junto a home.css en token-hg-home y en token-hg-menu.
+ * Templates 2026. Se carga junto a home.css en token-home y en token-hg-menu.
  * Usa variables --hg-* de HolyGrail5.
  */
 
@@ -71,7 +71,7 @@ body.md-main-menu-open .hg-menu-backdrop,
   ########################################################################### */
 @media (min-width: 62rem) {
   body.md-main-menu-open .hg-menu-panel__media,
-  .hg-menu-panel__media.is-open {
+  .hg-menu-panel.is-open .hg-menu-panel__media {
     transform: translateX(0);
     transition-delay: .2s;
   }
@@ -187,6 +187,10 @@ body.md-main-menu-open .hg-menu-backdrop,
   Estilos responsive de .hg-menu-panel
   ########################################################################### */
 @media (max-width: 61.994rem) {
+  .hg-menu-panel .hg-header-list.hg-header-list--primary {
+    --hg-header-list-gap: var(--hg-spacing-32);
+  }
+  
   .hg-menu-panel-header-actions {
     inset-block-end: 100%;
     inset-inline-start: 0;
@@ -333,10 +337,6 @@ body.md-main-menu-open .hg-menu-backdrop,
 
 .btn.hg-menu-btn:hover {
   color: var(--hg-menu-btn-color, var(--hg-color-dark-grey));
-}
-
-.hg-menu-column.hg-menu-column--subcat .btn.hg-menu-btn.active {
-  font-weight: 400;
 }
 
 .hg-menu-subcat-list {

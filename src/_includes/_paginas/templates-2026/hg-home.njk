@@ -382,44 +382,6 @@ layout: base-clean.njk
   initScrollFade();
   initDrag();
 
-  // 6a) Animación de entrada del logo (estado inicial en CSS para evitar salto; GSAP anima al destino)
-  (function() {
-    const container = document.querySelector('.js-hg-header-logo');
-    const logo = document.querySelector('.js-hg-header-logo-icon');
-    if (!logo || !container) return;
-    
-    setTimeout(() => {
-      const containerRect = container.getBoundingClientRect();
-      const isDesktop = window.innerWidth >= 992;
-      
-      if (isDesktop) {
-        gsap.to(logo, {
-          left: containerRect.left,
-          top: containerRect.top + (containerRect.height / 2),
-          width: containerRect.width,
-          duration: 1,
-          ease: 'power3.out',
-          onComplete() {
-            gsap.set(logo, { clearProps: 'all' });
-            logo.classList.remove('hg-header-logo-icon--home-animation');
-          }
-        });
-      } else {
-        gsap.to(logo, {
-          left: containerRect.left + (containerRect.width / 2),
-          top: containerRect.top + (containerRect.height / 2),
-          width: containerRect.width,
-          duration: 0.8,
-          ease: 'power3.out',
-          onComplete() {
-            gsap.set(logo, { clearProps: 'all' });
-            logo.classList.remove('hg-header-logo-icon--home-animation');
-          }
-        });
-      }
-    }, 1000);
-  })();
-
   // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
   (function() {
     const footers = document.querySelectorAll('#hg-home-main footer');
@@ -454,55 +416,6 @@ layout: base-clean.njk
       });
     });
   }, 1000);
-
-  // Abrir/cerrar hg-menu (accesible: Tab, Escape, foco, inert, ARIA)
-  (function() {
-    var panel = document.getElementById('hg-menu-panel');
-    var backdrop = document.getElementById('hg-menu-backdrop');
-    var closeBtn = panel ? panel.querySelector('.hg-menu-panel-action--close') : null;
-    if (!panel || !backdrop || !closeBtn) return;
-
-    var lastFocusedTrigger = null;
-    function openMenu(trigger) {
-      lastFocusedTrigger = trigger || document.activeElement;
-      panel.removeAttribute('inert');
-      panel.classList.add('is-open');
-      backdrop.classList.add('is-open');
-      panel.setAttribute('aria-hidden', 'false');
-      backdrop.setAttribute('aria-hidden', 'false');
-      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
-        el.setAttribute('aria-expanded', 'true');
-      });
-      closeBtn.focus();
-      document.addEventListener('keydown', onEscape);
-    }
-    function closeMenu() {
-      panel.setAttribute('inert', '');
-      panel.classList.remove('is-open');
-      backdrop.classList.remove('is-open');
-      panel.setAttribute('aria-hidden', 'true');
-      backdrop.setAttribute('aria-hidden', 'true');
-      document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
-        el.setAttribute('aria-expanded', 'false');
-      });
-      document.removeEventListener('keydown', onEscape);
-      if (lastFocusedTrigger && lastFocusedTrigger.focus) lastFocusedTrigger.focus();
-    }
-    function onEscape(e) {
-      if (e.key === 'Escape' && panel.classList.contains('is-open')) closeMenu();
-    }
-
-    document.querySelectorAll('.js-hg-menu-toggle').forEach(function(el) {
-      el.setAttribute('aria-controls', 'hg-menu-panel');
-      el.setAttribute('aria-expanded', 'false');
-      el.setAttribute('aria-haspopup', 'true');
-      el.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (panel.classList.contains('is-open')) closeMenu(); else openMenu(el);
-      });
-    });
-    closeBtn.addEventListener('click', closeMenu);
-    backdrop.addEventListener('click', closeMenu);
-  })();
 })();
 </script>
+<script src="/assets/js/templates-2026.js"></script>

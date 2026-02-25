@@ -1,7 +1,7 @@
 :root {
   --hg-base-line-compensation: 0.18em;
 
-  --hg-header-bg-color: rgba(255, 255, 255, 0.95);
+  --hg-header-bg-color: var(--hg-color-white);
   --hg-header-min-height: var(--hg-spacing-48);
   --hg-header-padding-inline: var(--hg-spacing-20);
   --hg-header-z-index: 1200;
@@ -13,11 +13,12 @@
   
   --hg-header-logo-width: 9.375rem;
   --hg-header-logo-z-index: calc(var(--hg-header-z-index) + 1);
-  --hg-header-logo-margin-inline: 10% 0;
+  --hg-header-logo-margin-inline: calc(50% - var(--hg-header-logo-width) / 2) 0;
   --hg-header-logo-ratio: 6.79 / 1;
   --hg-header-logo-transition: all 0.270s ease-in-out;
   
   --hg-header-maxilogo-width: unset;
+  --hg-header-maxilogo-padding-block: var(--hg-spacing-8);
   --hg-header-maxilogo-transition: all 0.270s ease-in-out;
 }
 
@@ -27,10 +28,11 @@
     --hg-header-list-gap: var(--hg-spacing-32);
     --hg-header-action-min-height: var(--hg-spacing-32);
     
-    --hg-header-logo-width: 15.625rem;
-    --hg-header-logo-margin-inline: 10% 0;
+    --hg-header-logo-width: 15.063rem;
+    --hg-header-logo-margin-inline: calc(40% - var(--hg-header-logo-width) / 2) 0;
     
     --hg-header-maxilogo-width: 32.25rem;
+    --hg-header-maxilogo-padding-block: var(--hg-spacing-16);
   }
 }
 
@@ -67,7 +69,7 @@
   display: block;
   width: 100%;
   max-width: var(--hg-header-maxilogo-width);
-  padding-block: var(--hg-spacing-16);
+  padding-block: var(--hg-header-maxilogo-padding-block);
   height: auto;
 }
 
@@ -168,26 +170,6 @@
   padding: var(--hg-base-line-compensation) 0 0;
   cursor: pointer;
   opacity: 1;
-}
-
-.btn.hg-header-action--primary {
-  color: var(--hg-color-dark-grey);
-  fill: var(--hg-color-dark-grey);
-}
-
-.btn.hg-header-action--primary.active {
-  color: var(--hg-color-black);
-  fill: var(--hg-color-black);
-}
-
-.btn.hg-header-action--secondary {
-  color: var(--hg-color-black);
-  fill: var(--hg-color-black);
-}
-
-.btn.hg-header-action--secondary.active {
-  color: var(--hg-color-black);
-  fill: var(--hg-color-black);
 }
 
 .hg-header-action .hg-icon {
@@ -309,12 +291,6 @@ body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .
   fill: var(--hg-color-white);
 }
 
-/* variante phantom-white para el maxilogo, previene la transición a negro antes de desaparecer */
-body[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
-  color: var(--hg-color-white);
-  fill: var(--hg-color-white);
-}
-
 /**
  * micro variantes para mostrar elementos específicos del 
  * header en blanco, usadas para casos puntuales (home, rutas privadas, etc).
@@ -346,9 +322,72 @@ body.no-search .hg-header .btn.hg-header-action--search {
 
 /* Headers: estilos para pantallas < 991.9px */
 @media (max-width: 61.994rem) {
+  /* md-main-menu-open */
   body.md-main-menu-open .btn.hg-header-action--hamburger,
   body.md-main-menu-open .hg-header .hg-header-logo {
     visibility: hidden;
     opacity: 0;
+  }
+  
+  body.is-scrolling-offset .hg-header .hg-header-logo {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /**
+  * caso especial para la home
+  * prevalece la media query
+  */
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header-maxilogo {
+    max-height: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header .hg-header-logo {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
+    background-color: transparent;
+  }
+
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
+    color: var(--hg-color-white);
+    fill: var(--hg-color-white);
+  }
+}
+
+/* Headers: estilos para pantallas > 992px */
+@media (min-width: 62rem) {
+  /**
+  * caso especial para la home
+  * prevalece la media query
+  */
+  html#ItxHomePage body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header-maxilogo {
+    max-height: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  html#ItxHomePage body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header .hg-header-logo {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
+    background-color: transparent;
+  }
+
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
+  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
+    color: var(--hg-color-white);
+    fill: var(--hg-color-white);
   }
 }
