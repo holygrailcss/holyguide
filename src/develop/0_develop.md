@@ -94,10 +94,10 @@ Una vez importado, tendrás acceso a todas las variables, mixins y utilidades de
 Configuración de fuentes y familias tipográficas disponibles en el sistema:
 
 ```scss
-// Familia 1: Dutti Daily
-$font-family-regular: "dutti-daily-regular", Helvetica, arial, sans-serif;
-$font-family-medium: "dutti-daily-light", Helvetica, arial, sans-serif;
-$font-family-bold: "dutti-daily-bold", Helvetica, arial, sans-serif;
+// Familia 1: SuisseIntl
+$font-family-regular: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
+$font-family-medium: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
+$font-family-bold: "SuisseIntl-Bold", Helvetica, arial, sans-serif;
 
 // Familia 2: Dutti Extended
 $font-family-2-regular: "dutti-extended-regular", Helvetica, arial, sans-serif;
@@ -121,8 +121,8 @@ $font-weight-medium: inherit;
 $font-weight-bold: inherit;
 
 // Fuentes para formularios
-$font-family-form-placeholder: "dutti-daily-regular", Helvetica, arial, sans-serif;
-$font-family-form: "dutti-daily-regular", Helvetica, arial, sans-serif;
+$font-family-form-placeholder: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
+$font-family-form: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
 ```
 
 ### Varios Elementos

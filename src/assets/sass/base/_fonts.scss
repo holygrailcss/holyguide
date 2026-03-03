@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: "dutti-daily-light";
+  font-family: "SuisseIntl-Light";
   font-weight: 100;
   font-display: swap;
   src:
@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: "dutti-daily-regular";
+  font-family: "SuisseIntl-Regular";
   font-weight: 500;
   font-display: swap;
   src:
@@ -28,17 +28,17 @@
 
 
 @font-face {
-  font-family: "dutti-daily-medium";
+  font-family: "SuisseIntl-Medium";
   font-style: normal;
   font-display: swap;
   src:
-    local("SuisseIntl-SemiBold"),
-    url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"),
-    url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
+    local("SuisseIntl-Medium"),
+    url("/assets/fonts/suisse/SuisseIntl-Medium.woff2") format("woff2"),
+    url("/assets/fonts/suisse/SuisseIntl-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: "dutti-daily-semibold";
+  font-family: "SuisseIntl-SemiBold";
   font-weight: normal;
   font-display: swap;
   src:
@@ -48,11 +48,11 @@
 }
 
 @font-face {
-  font-family: "dutti-daily-bold";
+  font-family: "SuisseIntl-Bold";
   font-weight: normal;
   font-display: swap;
   src:
-    local("dutti-daily-bold"),
+    local("SuisseIntl-Bold"),
     url("/assets/fonts/dutti/dutti-daily-semibold.woff2") format("woff2"),
     url("/assets/fonts/dutti/dutti-daily-semibold.woff") format("woff");
 }

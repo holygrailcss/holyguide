@@ -42,9 +42,9 @@ Configuración del archivo setup.scss
 Antes de nada configuraremos la guia, con ella generaremos el siguiente archivo de setup.scss. Después copiaremos y sustituiremos en nuestro archivo setup las diferentes variables, de esta forma, tanto la documentación como el proyecto estarán alineados.
 
 ```
-$font-family-regular:"dutti-daily-regular",Helvetica,arial,sans-serif;
-$font-family-medium:"dutti-daily-light",Helvetica,arial,sans-serif;
-$font-family-bold:"dutti-daily-bold",Helvetica,arial,sans-serif;
+$font-family-regular:"SuisseIntl-Regular",Helvetica,arial,sans-serif;
+$font-family-medium:"SuisseIntl-Medium",Helvetica,arial,sans-serif;
+$font-family-bold:"SuisseIntl-Bold",Helvetica,arial,sans-serif;
 $font-family-2-regular:"dutti-extended-regular",Helvetica,arial,sans-serif;
 $font-family-2-medium:"dutti-extended-bold",Helvetica,arial,sans-serif;
 $font-family-2-bold:"dutti-extended-extrabold",Helvetica,arial,sans-serif;
@@ -56,8 +56,8 @@ $font-weight-light: inherit;
 $font-weight-regular: inherit;
 $font-weight-medium: inherit;
 $font-weight-bold: inherit;
-$font-family-form-placeholder: "dutti-daily-regular",Helvetica,arial,sans-serif;
-$font-family-form: "dutti-daily-regular",Helvetica,arial,sans-serif;
+$font-family-form-placeholder: "SuisseIntl-Regular",Helvetica,arial,sans-serif;
+$font-family-form: "SuisseIntl-Regular",Helvetica,arial,sans-serif;
 
 $totalCols:12px;
 $padding-global:8px;
