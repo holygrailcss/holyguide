@@ -8324,8 +8324,9 @@ button {
   background-color: transparent;
   cursor: pointer;
   color: #737373;
+  opacity: 1;
 }
-.btn-label-m:focus, .btn-label-m.focus, .btn-label-m:active, .btn-label-m.active {
+.btn-label-m.focus, .btn-label-m.active {
   border: 0 solid transparent;
   background-color: transparent;
   cursor: pointer;
