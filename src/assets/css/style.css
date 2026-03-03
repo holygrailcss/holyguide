@@ -110,45 +110,45 @@
   src: url("/assets/fonts/mdserif/mdserif-Black.woff2") format("woff2"), url("/assets/fonts/mdserif/mdserif-Black.woff") format("woff");
 }
 @font-face {
-  font-family: "dutti-daily-light";
+  font-family: "SuisseIntl-Light";
   font-weight: 100;
   font-display: swap;
   src: local("SuisseIntl-Light"), url("/assets/fonts/suisse/SuisseIntl-Light.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Light.woff") format("woff");
 }
 @font-face {
-  font-family: "dutti-daily-regular";
+  font-family: "SuisseIntl-Regular";
   font-weight: 500;
   font-display: swap;
   src: local("SuisseIntl-Regular"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "SuisseIntl-Medium";
+  font-style: normal;
+  font-display: swap;
+  src: local("SuisseIntl-Medium"), url("/assets/fonts/suisse/SuisseIntl-Medium.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "SuisseIntl-SemiBold";
+  font-weight: normal;
+  font-display: swap;
+  src: local("SuisseIntl-SemiBold"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "SuisseIntl-Bold";
+  font-weight: normal;
+  font-display: swap;
+  src: local("SuisseIntl-Bold"), url("/assets/fonts/dutti/dutti-daily-semibold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-semibold.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "dutti-extended-regular";
+  src: url("/assets/fonts/dutti/dutti-extended-regular.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-extended-regular.woff") format("woff");
 }
 @font-face {
   font-family: "dutti-daily-bold2";
   font-weight: 500;
   font-display: swap;
   src: local("dutti-daily-bold2"), url("/assets/fonts/dutti/dutti-daily-bold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-bold.woff") format("woff");
-}
-@font-face {
-  font-family: "dutti-daily-medium";
-  font-style: normal;
-  font-display: swap;
-  src: local("SuisseIntl-SemiBold"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
-}
-@font-face {
-  font-family: "dutti-daily-semibold";
-  font-weight: normal;
-  font-display: swap;
-  src: local("SuisseIntl-SemiBold"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-SemiBold.woff") format("woff");
-}
-@font-face {
-  font-family: "dutti-daily-bold";
-  font-weight: normal;
-  font-display: swap;
-  src: local("dutti-daily-bold"), url("/assets/fonts/dutti/dutti-daily-semibold.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-daily-semibold.woff") format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "dutti-extended-regular";
-  src: url("/assets/fonts/dutti/dutti-extended-regular.woff2") format("woff2"), url("/assets/fonts/dutti/dutti-extended-regular.woff") format("woff");
 }
 @font-face {
   font-family: "massimo-daily-regular";
@@ -3280,7 +3280,7 @@ md-icon.ico-pre {
 }
 
 body {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   -webkit-overflow-scrolling: touch;
   font-variant-ligatures: no-common-ligatures;
@@ -3300,7 +3300,7 @@ samp {
 .textarea,
 .select,
 select {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.3;
@@ -3315,12 +3315,12 @@ select {
 }
 
 select {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 
 p {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   margin: 0;
   font-size: 12px;
@@ -3331,7 +3331,7 @@ p {
   }
 }
 p.b {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   color: #000000;
 }
@@ -3362,21 +3362,21 @@ mark {
 }
 
 .text-12-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 1;
 }
 
 .text-12-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 1;
 }
 
 .text-12-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 12px;
   line-height: 1;
@@ -3395,21 +3395,21 @@ mark {
 }
 
 .text-14-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
 }
 
 .text-14-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
 }
 
 .text-14-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 14px;
   line-height: 1.5;
@@ -3428,21 +3428,21 @@ mark {
 }
 
 .text-16-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .text-16-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
 
 .text-16-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.5;
@@ -3461,21 +3461,21 @@ mark {
 }
 
 .text-18-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
 }
 
 .text-18-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
 }
 
 .text-18-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 18px;
   line-height: 1.5;
@@ -3494,21 +3494,21 @@ mark {
 }
 
 .text-20-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
 
 .text-20-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
 }
 
 .text-20-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 20px;
   line-height: 1.2;
@@ -3527,21 +3527,21 @@ mark {
 }
 
 .text-24-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
 }
 
 .text-24-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
 }
 
 .text-24-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 1.2;
@@ -3560,21 +3560,21 @@ mark {
 }
 
 .text-32-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.2;
 }
 
 .text-32-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 1.2;
 }
 
 .text-32-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 32px;
   line-height: 1.2;
@@ -3593,21 +3593,21 @@ mark {
 }
 
 .text-40-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.2;
 }
 
 .text-40-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.2;
 }
 
 .text-40-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   font-size: 40px;
   line-height: 1.2;
@@ -3627,19 +3627,19 @@ mark {
 
 @media (min-width: 1px) {
   .h2 {
-    font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
     font-weight: 900;
     font-size: 18px;
     line-height: 1.2;
   }
   .title-l-b {
-    font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.4;
   }
   .title-s {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 11px;
     line-height: 1.4;
@@ -3660,55 +3660,55 @@ mark {
     line-height: 1.1;
   }
   .p-tag {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 8px;
     line-height: 1;
   }
   .semantic {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1;
   }
   .title-l {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 13px;
     line-height: 1.4;
   }
   .title-m {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1.4;
   }
   .text-m {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1.5;
   }
   .text-l {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1.5;
   }
   .hg-body-m {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1.5;
   }
   .hg-body-m-b {
-    font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
   }
   .label-m {
-    font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 1;
@@ -3778,7 +3778,7 @@ mark {
 }
 @media (min-width: 1px) {
   .titularbase-m {
-    font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+    font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
@@ -3803,7 +3803,7 @@ mark {
   }
 }
 .fluid-1-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-1-l {
@@ -3824,7 +3824,7 @@ mark {
 }
 
 .fluid-1-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-1-r {
@@ -3845,7 +3845,7 @@ mark {
 }
 
 .fluid-1-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-1-m {
@@ -3866,7 +3866,7 @@ mark {
 }
 
 .fluid-1-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-1-sb {
@@ -3887,7 +3887,7 @@ mark {
 }
 
 .fluid-1-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-1-b {
@@ -3908,7 +3908,7 @@ mark {
 }
 
 .fluid-2-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-2-l {
@@ -3929,7 +3929,7 @@ mark {
 }
 
 .fluid-2-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-2-r {
@@ -3950,7 +3950,7 @@ mark {
 }
 
 .fluid-2-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-2-m {
@@ -3971,7 +3971,7 @@ mark {
 }
 
 .fluid-2-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-2-sb {
@@ -3992,7 +3992,7 @@ mark {
 }
 
 .fluid-2-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-2-b {
@@ -4013,7 +4013,7 @@ mark {
 }
 
 .fluid-3-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-3-l {
@@ -4034,7 +4034,7 @@ mark {
 }
 
 .fluid-3-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-3-r {
@@ -4055,7 +4055,7 @@ mark {
 }
 
 .fluid-3-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-3-m {
@@ -4076,7 +4076,7 @@ mark {
 }
 
 .fluid-3-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-3-sb {
@@ -4097,7 +4097,7 @@ mark {
 }
 
 .fluid-3-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-3-b {
@@ -4118,7 +4118,7 @@ mark {
 }
 
 .fluid-4-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-4-l {
@@ -4139,7 +4139,7 @@ mark {
 }
 
 .fluid-4-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-4-r {
@@ -4160,7 +4160,7 @@ mark {
 }
 
 .fluid-4-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-4-m {
@@ -4181,7 +4181,7 @@ mark {
 }
 
 .fluid-4-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-4-sb {
@@ -4202,7 +4202,7 @@ mark {
 }
 
 .fluid-4-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-4-b {
@@ -4223,7 +4223,7 @@ mark {
 }
 
 .fluid-5-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-5-l {
@@ -4244,7 +4244,7 @@ mark {
 }
 
 .fluid-5-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-5-r {
@@ -4265,7 +4265,7 @@ mark {
 }
 
 .fluid-5-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-5-m {
@@ -4286,7 +4286,7 @@ mark {
 }
 
 .fluid-5-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-5-sb {
@@ -4307,7 +4307,7 @@ mark {
 }
 
 .fluid-5-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-5-b {
@@ -4328,7 +4328,7 @@ mark {
 }
 
 .fluid-6-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-6-l {
@@ -4349,7 +4349,7 @@ mark {
 }
 
 .fluid-6-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-6-r {
@@ -4370,7 +4370,7 @@ mark {
 }
 
 .fluid-6-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-6-m {
@@ -4391,7 +4391,7 @@ mark {
 }
 
 .fluid-6-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-6-sb {
@@ -4412,7 +4412,7 @@ mark {
 }
 
 .fluid-6-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-6-b {
@@ -4433,7 +4433,7 @@ mark {
 }
 
 .fluid-7-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-7-l {
@@ -4454,7 +4454,7 @@ mark {
 }
 
 .fluid-7-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-7-r {
@@ -4475,7 +4475,7 @@ mark {
 }
 
 .fluid-7-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-7-m {
@@ -4496,7 +4496,7 @@ mark {
 }
 
 .fluid-7-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-7-sb {
@@ -4517,7 +4517,7 @@ mark {
 }
 
 .fluid-7-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-7-b {
@@ -4538,7 +4538,7 @@ mark {
 }
 
 .fluid-8-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-8-l {
@@ -4559,7 +4559,7 @@ mark {
 }
 
 .fluid-8-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-8-r {
@@ -4580,7 +4580,7 @@ mark {
 }
 
 .fluid-8-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-8-m {
@@ -4601,7 +4601,7 @@ mark {
 }
 
 .fluid-8-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-8-sb {
@@ -4622,7 +4622,7 @@ mark {
 }
 
 .fluid-8-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-8-b {
@@ -4643,7 +4643,7 @@ mark {
 }
 
 .fluid-18-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-18-l {
@@ -4664,7 +4664,7 @@ mark {
 }
 
 .fluid-18-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-18-r {
@@ -4685,7 +4685,7 @@ mark {
 }
 
 .fluid-18-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-18-m {
@@ -4706,7 +4706,7 @@ mark {
 }
 
 .fluid-18-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-18-sb {
@@ -4727,7 +4727,7 @@ mark {
 }
 
 .fluid-18-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-18-b {
@@ -4749,31 +4749,31 @@ mark {
 
 .text-light,
 .font-light {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 
 .text-regular,
 .font-regular {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 
 .text-medium,
 .font-medium {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 
 .text-semibold,
 .font-semibold {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 
 .text-bold,
 .font-bold {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 
@@ -6478,12 +6478,12 @@ mark {
 }
 
 .bold {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 
 .semibold {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 
@@ -6804,13 +6804,13 @@ hr {
 }
 
 .text-12-l {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-size: 12px;
 }
 
 strong {
   color: #000000;
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
 }
 
 .bb-line {
@@ -7160,23 +7160,23 @@ strong {
 }
 
 .font-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
 }
 
 .font-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
 }
 
 .font-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
 }
 
 .font-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
 }
 
 .font-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
 }
 
 .absolute-middle {
@@ -7779,7 +7779,7 @@ button {
   padding: 2px 16px 0;
   background-color: transparent;
   min-height: 32px;
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
   letter-spacing: 0.64px;
 }
@@ -7799,7 +7799,7 @@ button {
   color: #000000;
   border-color: #ffffff;
   background-color: #ffffff;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .has-light .btn::after {
@@ -7980,7 +7980,7 @@ button {
   color: #ffffff;
   background-color: #000000;
   border: 1px solid #000000;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-primary svg g {
@@ -8150,7 +8150,7 @@ button {
   color: #ffffff;
   background-color: #000;
   border: 1px solid #000;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-limited svg g {
@@ -8331,7 +8331,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   color: #000000;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-label-m:disabled, .btn-label-m[disabled], .btn-label-m.disabled {
@@ -8370,40 +8370,39 @@ button {
   justify-content: center;
   min-height: auto;
   height: auto;
-  padding: 4px 12px;
   background-color: transparent;
-  color: #000000;
+  color: #737373;
   font-size: 12px;
   white-space: nowrap;
 }
 .hg-btn-badge:focus, .hg-btn-badge.focus, .hg-btn-badge:hover, .hg-btn-badge.hover, .hg-btn-badge:active, .hg-btn-badge.active {
-  background-color: #000000;
-  color: #ffffff;
-  border-color: #000000;
+  color: #000000;
+  border-color: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 .hg-btn-badge:disabled, .hg-btn-badge[disabled], .hg-btn-badge.disabled {
   pointer-events: none;
   cursor: default;
-  background-color: #f0f0f0;
-  border-color: #f0f0f0;
-  color: #737373;
+  color: #a9a9a9;
+  border-color: transparent;
+  background-color: transparent;
   opacity: 1;
 }
 .has-light .hg-btn-badge {
-  color: #ffffff;
-  border-color: #ffffff;
   background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
 }
 .has-light .hg-btn-badge:focus, .has-light .hg-btn-badge.focus, .has-light .hg-btn-badge:hover, .has-light .hg-btn-badge.hover, .has-light .hg-btn-badge:active, .has-light .hg-btn-badge.active {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
 }
 .has-light .hg-btn-badge:disabled, .has-light .hg-btn-badge[disabled], .has-light .hg-btn-badge.disabled {
-  background-color: #f0f0f0;
-  border-color: #f0f0f0;
-  color: #737373;
+  background-color: transparent;
+  border-color: transparent;
+  color: #f0f0f0;
 }
 
 .btn-text {
@@ -8443,7 +8442,7 @@ button {
   background-color: #1a32a4;
   color: #ffffff;
   border: 1px solid #1a32a4;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-blue:focus, .btn-blue.focus, .btn-blue:hover, .btn-blue.hover, .btn-blue:visited, .btn-blue:active, .btn-blue.active {
@@ -8563,7 +8562,7 @@ button {
   background-color: #186CF1;
   color: #ffffff;
   border: 1px solid #186CF1;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-facebook svg-icon,
@@ -8592,7 +8591,7 @@ button {
   background-color: #000000;
   color: #ffffff;
   border: 1px solid #000000;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-apple:focus, .btn-apple.focus, .btn-apple:hover, .btn-apple.hover, .btn-apple:visited, .btn-apple:active, .btn-apple.active,
@@ -8641,7 +8640,7 @@ button {
   color: #ffffff;
   padding-inline: 40px;
   border: 1px solid #03cf5d;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-naver:focus, .btn-naver.focus, .btn-naver:hover, .btn-naver.hover, .btn-naver:visited, .btn-naver:active, .btn-naver.active,
@@ -8671,7 +8670,7 @@ button {
   color: #ffffff;
   padding-inline: 40px;
   border: 1px solid #2dc100;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-wechat:focus, .btn-wechat.focus, .btn-wechat:hover, .btn-wechat.hover, .btn-wechat:visited, .btn-wechat:active, .btn-wechat.active,
@@ -8933,7 +8932,7 @@ button {
   background-color: #fb9962;
   border: 1px solid #fb9962;
   color: #ffffff;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .btn-feel:hover, .btn-feel.hover, .btn-feel:focus, .btn-feel.focus {
@@ -10409,7 +10408,7 @@ input::placeholder {
 }
 
 .input-notouch {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   pointer-events: none;
   border-color: #a9a9a9;
@@ -10448,7 +10447,7 @@ input::placeholder {
 
 .form-input-label-2,
 .error-zone {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   position: relative;
 }
 .form-input-label-2 label,
@@ -10461,7 +10460,7 @@ input::placeholder {
 }
 .form-input-label-2 .help,
 .error-zone .help {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   position: relative;
   line-height: 1.5;
   font-size: 12px;
@@ -10491,7 +10490,7 @@ input::placeholder {
 .error-zone > input,
 .error-zone > label,
 .error-zone > textarea {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   padding: 16px 0 0;
   font-weight: normal;
 }
@@ -10718,7 +10717,7 @@ input::placeholder {
 .input-line-v2 .input:focus,
 .input-line-v2 .textarea,
 .input-line-v2 .textarea:focus {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   padding: 12px 0 4px;
   height: auto;
@@ -10726,7 +10725,7 @@ input::placeholder {
   border-bottom: var(--line-width) solid #000000;
 }
 .input-line-v2 .input::placeholder {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   text-overflow: inherit;
   line-height: initial;
@@ -11069,7 +11068,7 @@ a:hover {
 
 .link-svg-pre {
   padding-left: 20px;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   position: relative;
   border: 0;
@@ -11092,7 +11091,7 @@ a:hover {
 
 .link-svg-post {
   padding-right: 20px;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   display: initial;
   position: relative;
@@ -11734,7 +11733,7 @@ ul.list-breadcrumb li.list-breadcrumb-divider {
   padding: 0 14px;
   background-color: #ffffff;
   display: inline-flex;
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
 }
 .tabs-mini li a {
   padding: 6px 8px 8px;
@@ -13129,7 +13128,7 @@ body.md-open-dialog .md-dialog-overlay {
   border-right: 1px solid #a9a9a9;
 }
 .card9 .card9-sizes button {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   border: none;
   background-color: #ffffff;
@@ -13321,7 +13320,7 @@ body.md-open-dialog .md-dialog-overlay {
 }
 
 .product-tag {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   color: #737373;
   letter-spacing: 0;
@@ -14796,7 +14795,7 @@ pre[class*=language-] {
   bottom: 14px;
 }
 .list-slide .is-active.btn {
-  font-family: "dutti-daily-semibold";
+  font-family: "SuisseIntl-SemiBold";
 }
 
 .search-space {
@@ -15842,7 +15841,7 @@ body.open-drawer .drawer-overlay {
 }
 
 .md-layout-header .btn-link.active {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 
@@ -23545,7 +23544,7 @@ html {
 }
 .grid-product-wrap--VIT .limited-card-wrap .limited-before-card9 {
   justify-content: center;
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
 }
 .grid-product-wrap--VIT .limited-card-wrap .limited-after-card9 {
   justify-content: center;
@@ -26489,7 +26488,7 @@ html {
 }
 
 .fluid-1-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-1-l {
@@ -26510,7 +26509,7 @@ html {
 }
 
 .fluid-1-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-1-r {
@@ -26531,7 +26530,7 @@ html {
 }
 
 .fluid-1-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-1-m {
@@ -26552,7 +26551,7 @@ html {
 }
 
 .fluid-1-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-1-sb {
@@ -26573,7 +26572,7 @@ html {
 }
 
 .fluid-1-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-1-b {
@@ -26594,7 +26593,7 @@ html {
 }
 
 .fluid-2-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-2-l {
@@ -26615,7 +26614,7 @@ html {
 }
 
 .fluid-2-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-2-r {
@@ -26636,7 +26635,7 @@ html {
 }
 
 .fluid-2-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-2-m {
@@ -26657,7 +26656,7 @@ html {
 }
 
 .fluid-2-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-2-sb {
@@ -26678,7 +26677,7 @@ html {
 }
 
 .fluid-2-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-2-b {
@@ -26699,7 +26698,7 @@ html {
 }
 
 .fluid-3-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-3-l {
@@ -26720,7 +26719,7 @@ html {
 }
 
 .fluid-3-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-3-r {
@@ -26741,7 +26740,7 @@ html {
 }
 
 .fluid-3-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-3-m {
@@ -26762,7 +26761,7 @@ html {
 }
 
 .fluid-3-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-3-sb {
@@ -26783,7 +26782,7 @@ html {
 }
 
 .fluid-3-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-3-b {
@@ -26804,7 +26803,7 @@ html {
 }
 
 .fluid-4-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-4-l {
@@ -26825,7 +26824,7 @@ html {
 }
 
 .fluid-4-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-4-r {
@@ -26846,7 +26845,7 @@ html {
 }
 
 .fluid-4-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-4-m {
@@ -26867,7 +26866,7 @@ html {
 }
 
 .fluid-4-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-4-sb {
@@ -26888,7 +26887,7 @@ html {
 }
 
 .fluid-4-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-4-b {
@@ -26909,7 +26908,7 @@ html {
 }
 
 .fluid-5-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-5-l {
@@ -26930,7 +26929,7 @@ html {
 }
 
 .fluid-5-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-5-r {
@@ -26951,7 +26950,7 @@ html {
 }
 
 .fluid-5-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-5-m {
@@ -26972,7 +26971,7 @@ html {
 }
 
 .fluid-5-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-5-sb {
@@ -26993,7 +26992,7 @@ html {
 }
 
 .fluid-5-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-5-b {
@@ -27014,7 +27013,7 @@ html {
 }
 
 .fluid-6-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-6-l {
@@ -27035,7 +27034,7 @@ html {
 }
 
 .fluid-6-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-6-r {
@@ -27056,7 +27055,7 @@ html {
 }
 
 .fluid-6-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-6-m {
@@ -27077,7 +27076,7 @@ html {
 }
 
 .fluid-6-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-6-sb {
@@ -27098,7 +27097,7 @@ html {
 }
 
 .fluid-6-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-6-b {
@@ -27119,7 +27118,7 @@ html {
 }
 
 .fluid-7-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-7-l {
@@ -27140,7 +27139,7 @@ html {
 }
 
 .fluid-7-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-7-r {
@@ -27161,7 +27160,7 @@ html {
 }
 
 .fluid-7-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-7-m {
@@ -27182,7 +27181,7 @@ html {
 }
 
 .fluid-7-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-7-sb {
@@ -27203,7 +27202,7 @@ html {
 }
 
 .fluid-7-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-7-b {
@@ -27224,7 +27223,7 @@ html {
 }
 
 .fluid-8-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-8-l {
@@ -27245,7 +27244,7 @@ html {
 }
 
 .fluid-8-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-8-r {
@@ -27266,7 +27265,7 @@ html {
 }
 
 .fluid-8-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-8-m {
@@ -27287,7 +27286,7 @@ html {
 }
 
 .fluid-8-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-8-sb {
@@ -27308,7 +27307,7 @@ html {
 }
 
 .fluid-8-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-8-b {
@@ -27329,7 +27328,7 @@ html {
 }
 
 .fluid-18-l {
-  font-family: "dutti-daily-light", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
   font-weight: 100;
 }
 .fluid-18-l {
@@ -27350,7 +27349,7 @@ html {
 }
 
 .fluid-18-r {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-18-r {
@@ -27371,7 +27370,7 @@ html {
 }
 
 .fluid-18-m {
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .fluid-18-m {
@@ -27392,7 +27391,7 @@ html {
 }
 
 .fluid-18-sb {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 700;
 }
 .fluid-18-sb {
@@ -27413,7 +27412,7 @@ html {
 }
 
 .fluid-18-b {
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 .fluid-18-b {
@@ -27777,7 +27776,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-tag {
-  font-family: "dutti-daily-bold";
+  font-family: "SuisseIntl-Bold";
   font-size: 14px;
   color: var(--c-primary);
   letter-spacing: 0;
@@ -27993,7 +27992,7 @@ ul {
   padding: 0;
 }
 .grid-product-list .product-tag {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
   font-size: 10px;
   color: #737373;
@@ -28356,7 +28355,7 @@ ul {
   transform: scale(1);
   border-radius: 50%;
   color: white;
-  font-family: "dutti-daily-medium", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Medium", Helvetica, arial, sans-serif;
   font-weight: 500;
   display: flex;
   align-items: center;

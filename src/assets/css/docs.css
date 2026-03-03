@@ -86,7 +86,7 @@ html {
 }
 .guide .h8 {
   font-size: 24px;
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
 }
 
@@ -5841,7 +5841,7 @@ code {
   margin-left: 20px;
 }
 .toc ol ol a {
-  font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
   font-weight: 500;
 }
 .toc ol ol ol {
@@ -5871,7 +5871,7 @@ code {
 }
 .guide table th {
   color: #000;
-  font-family: "dutti-daily-semibold", Helvetica, arial, sans-serif;
+  font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
   font-weight: 900;
   text-transform: capitalize;
 }
