@@ -281,20 +281,22 @@
     flex-shrink: 0;
   }
 
-  // Box con animación de apertura
-  .hg-home-box-animated {
-    height: 400px;
-    width: 500px;
+  // Box con animación de apertura: height/width gestionados exclusivamente por GSAP
+  .hg-home-box.hg-home-box-animated {
     overflow: hidden;
     position: relative;
-    transition: all 0.25s ease-out;
 
     img {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      display: block;
     }
+  }
+
+  .hg-header .hg-header-logo {
+
+    margin-left: 150px;
+
   }
 }
 

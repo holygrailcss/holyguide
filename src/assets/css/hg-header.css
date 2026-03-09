@@ -112,7 +112,7 @@
 .hg-header .hg-header-logo {
   display: block;
   height: auto;
-  margin-inline: var(--hg-header-logo-margin-inline);
+
   opacity: 0;
   pointer-events: none;
   position: relative;
