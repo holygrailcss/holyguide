@@ -3,7 +3,7 @@ layout: base-clean.njk
 ---
 
 {# Token hg-home-2 (templates-2026): copia de hg-home para pruebas. #}
-<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/hg-home2.css">
 <link rel="stylesheet" href="/assets/css/hg-header.css">
 <link rel="stylesheet" href="/assets/css/hg-menu.css">
 <link rel="stylesheet" href="/assets/css/hg-footer.css">
@@ -17,7 +17,7 @@ layout: base-clean.njk
 {% include '_paginas/templates-2026/hg-menu.njk' %}
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
-<main id="hg-home-main" class="hg-home-container hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
+<main id="hg-home-main" class="hg-home-container2 hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
   <!-- Botones de navegación: texto girado 90° -->
   <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
     <span class="hg-home-nav-btn__text label-m ttu">xxx new season AW 26</span>
@@ -31,7 +31,7 @@ layout: base-clean.njk
   <div class="hg-home-row-cols-wrap hg-home-drag-wrap" id="hg-home-drag-wrap">
     <div class="hg-home-row-cols" id="hg-home-row-cols" data-active="0">
     <!-- Columna 1 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 1">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto " aria-label="Columna 1">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -67,7 +67,7 @@ layout: base-clean.njk
       {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>
     <!-- Columna 2 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 2">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto " aria-label="Columna 2">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -103,7 +103,7 @@ layout: base-clean.njk
       {% include '_paginas/templates-2026/hg-footer.njk' %}
     </section>  
     <!-- Columna 3 -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto px-24" aria-label="Columna 3">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto " aria-label="Columna 3">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
@@ -144,8 +144,7 @@ layout: base-clean.njk
   cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
   let updateFooterInView = function() {};
 
-  const mobileMQ = window.matchMedia('(max-width: 991px)');
-  const colWidth = () => window.innerWidth - (mobileMQ.matches ? 100 : 200);
+  const colWidth = () => window.innerWidth;
 
   // -----------------------------
   // 2) Navegación / animación
@@ -180,8 +179,6 @@ layout: base-clean.njk
 
   prevBtn.addEventListener('click', () => setActive(active - 1));
   nextBtn.addEventListener('click', () => setActive(active + 1));
-
-  mobileMQ.addEventListener('change', () => setActive(active));
 
   let resizeT = null;
   window.addEventListener('resize', () => {
@@ -409,8 +406,8 @@ layout: base-clean.njk
   setTimeout(() => {
     document.querySelectorAll('.hg-home-box-animated').forEach(el => {
       gsap.to(el, {
-        height: '100vh',
-        width: '150vh',
+        height: '100%',
+        width: '100vw',
         duration: 1.2,
         ease: 'power2.out'
       });
