@@ -52,53 +52,57 @@
 	closeBtn.addEventListener('click', closeMenu);
 	backdrop.addEventListener('click', closeMenu);
 
-  // 2) Animación de entrada del logo (estado inicial en CSS para evitar salto; GSAP anima al destino)
+  // 2) Animación de entrada del logo
   (function() {
 		if (typeof gsap === 'undefined') return;
 		const maxilogo = document.querySelector('.js-hg-header-maxilogo-icon');
 		if (!maxilogo) return;
-		const logo = document.querySelector('.js-hg-header-logo');
+		const logo     = document.querySelector('.js-hg-header-logo');
 		const isMobile = window.innerWidth < 992;
 
+		gsap.set(maxilogo, { padding: 0 });
+		maxilogo.style.transition = 'none';
+
+		// Posición natural del maxilogo antes de cualquier transform
+		const naturalRect = maxilogo.getBoundingClientRect();
+		const natCX = naturalRect.left + naturalRect.width  / 2;
+		const natCY = naturalRect.top  + naturalRect.height / 2;
+		const startScale = (window.innerWidth * (isMobile ? 0.7 : 0.62)) / naturalRect.width;
+
+		// Estado inicial: grande y centrado en el viewport
+		gsap.set(maxilogo, {
+			scale: startScale,
+			x: window.innerWidth  / 2 - natCX,
+			y: window.innerHeight / 2 - natCY,
+			transformOrigin: 'center center'
+		});
+		maxilogo.offsetHeight;
+
 		if (isMobile) {
-			const rect = maxilogo.getBoundingClientRect();
-			const deltaY = (window.innerHeight / 2) - (rect.top + (rect.height / 2));
-			const originalTransition = maxilogo.style.transition;
-			maxilogo.style.transition = 'none';
-			gsap.set(maxilogo, { y: deltaY });
-			maxilogo.offsetHeight;
-			maxilogo.style.transition = originalTransition;
-			gsap.to(maxilogo, { y: 0, duration: 0.8, ease: 'power2.inOut' });
+			// Móvil: solo baja hasta su posición natural
+			gsap.to(maxilogo, { scale: 1, x: 0, y: 0, duration: 0.8, ease: 'power2.out' });
 			return;
 		}
 
+		// Desktop: vuela y encoge hasta la posición del logo pequeño
 		if (!logo) return;
-		gsap.set(maxilogo, { padding: 0 });
-		const startWidth = window.innerWidth * 0.62;
-		maxilogo.style.transition = 'none';
 		logo.style.transition = 'none';
-		gsap.set(maxilogo, { width: startWidth });
-		const startRect = maxilogo.getBoundingClientRect();
-		const startDeltaY = (window.innerHeight / 2) - (startRect.top + (startRect.height / 2));
-		gsap.set(maxilogo, { y: startDeltaY });
-		maxilogo.offsetHeight;
-
 		const logoRect = logo.getBoundingClientRect();
-		const deltaX = logoRect.left - startRect.left;
-		const deltaY = logoRect.top - startRect.top;
+		const logoCX   = logoRect.left + logoRect.width  / 2;
+		const logoCY   = logoRect.top  + logoRect.height / 2;
+		const endScale = logoRect.width / naturalRect.width;
+
 		gsap.to(maxilogo, {
-			x: deltaX,
-			y: deltaY,
-			width: logoRect.width,
+			scale: endScale,
+			x: logoCX - natCX,
+			y: logoCY - natCY,
 			duration: 0.9,
 			ease: 'power3.out',
 			onComplete: function() {
-				if (logo) {
-					gsap.set(logo, { opacity: 1, pointerEvents: 'auto' });
-				}
-				gsap.set(maxilogo, { opacity: 0, pointerEvents: 'none', maxHeight: 0 });
+				if (logo) gsap.set(logo, { opacity: 1, pointerEvents: 'auto' });
+				gsap.set(maxilogo, { clearProps: 'all' });
+				gsap.set(maxilogo, { opacity: 0, pointerEvents: 'none' });
 			}
 		});
-		return;
   })();
 })();
