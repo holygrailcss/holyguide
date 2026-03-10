@@ -5850,7 +5850,6 @@ code {
 
 .toc ol li a.active {
   color: black;
-  /* Este estilo es solo un ejemplo */
 }
 .toc ol li a.active:hover {
   opacity: 0.5;
@@ -5858,6 +5857,9 @@ code {
 .toc ol li a.active:after {
   content: "_";
   margin-left: 8px;
+}
+.toc ol li a.active {
+  /* Este estilo es solo un ejemplo */
 }
 
 .guide table {

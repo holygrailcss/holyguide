@@ -12750,6 +12750,13 @@ body.open-drawer .drawer-overlay, body.body-sidebar-open .drawer-overlay {
 
 .md-drawer {
   --md-drawer-padding-inline: 20px;
+}
+@media (min-width: 768px) {
+  .md-drawer {
+    --md-drawer-padding-inline: 40px;
+  }
+}
+.md-drawer {
   align-items: stretch;
   background-clip: padding-box;
   background-color: #ffffff;
@@ -12766,11 +12773,6 @@ body.open-drawer .drawer-overlay, body.body-sidebar-open .drawer-overlay {
   transition: all 0.3s ease-in-out;
   width: 424px;
   z-index: 2050;
-}
-@media (min-width: 768px) {
-  .md-drawer {
-    --md-drawer-padding-inline: 40px;
-  }
 }
 [dir=rtl] .md-drawer {
   transform: translateX(-100%);
@@ -15445,17 +15447,21 @@ header.interior svg path {
 
 .scrollcustom {
   overflow: auto;
-  /* Track */
-  /* Handle */
 }
 .scrollcustom::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
+.scrollcustom {
+  /* Track */
+}
 .scrollcustom::-webkit-scrollbar-track {
   background: #fafafa;
   -webkit-border-radius: 10px;
   border-radius: 0;
+}
+.scrollcustom {
+  /* Handle */
 }
 .scrollcustom::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
@@ -19947,10 +19953,6 @@ html {
   padding-left: 0;
   padding-top: 1.5em;
   padding-bottom: 4em;
-  /* Swiper custom pagination */
-  /* Swiper custom pagination */
-  /* Swiper custom pagination active state */
-  /* override zoom cursor */
 }
 @media (min-width: 992px) {
   .swiper-container-img {
@@ -20000,6 +20002,9 @@ html {
   margin: 0;
   padding: 0;
 }
+.swiper-container-img {
+  /* Swiper custom pagination */
+}
 .swiper-container-img .swiper-pagination-bullet {
   width: 34px;
   height: 34px;
@@ -20011,14 +20016,23 @@ html {
   background: rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease, color 0.5s ease;
 }
+.swiper-container-img {
+  /* Swiper custom pagination */
+}
 .swiper-container-img .swiper-pagination-bullet:hover {
   transition: background-color 0.5s ease;
   background: rgb(0, 0, 0);
   color: white;
 }
+.swiper-container-img {
+  /* Swiper custom pagination active state */
+}
 .swiper-container-img .swiper-pagination-bullet-active {
   color: #fff;
   background: black;
+}
+.swiper-container-img {
+  /* override zoom cursor */
 }
 .swiper-container-img .pswp__img {
   cursor: pointer !important;
