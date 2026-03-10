@@ -281,9 +281,8 @@
     flex-shrink: 0;
   }
 
-  // Box con animación de apertura: height/width gestionados exclusivamente por GSAP
+  // Box con animación de apertura: clip-path gestionado por GSAP
   .hg-home-box.hg-home-box-animated {
-    overflow: hidden;
     position: relative;
 
     img {

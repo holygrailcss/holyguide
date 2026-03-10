@@ -422,8 +422,9 @@ layout: base-clean.njk
   // -----------------------------
   // estado inicial: col 0 a 1, resto a 0.5
   cols.forEach((col, i) => gsap.set(col, { scale: i === 0 ? 1 : 0.5 }));
-  // estado inicial del box animado: GSAP lo fija desde el primer frame
-  gsap.set('.hg-home-box-animated', { height: '400px', width: '400px' });
+  // estado inicial del box animado: pequeño desde el centro
+  // Reveal con clip-path desde el centro: imagen siempre a tamaño natural, sin deformación
+  gsap.set('.hg-home-box-animated', { clipPath: 'inset(42.5% 47.5%)' });
   setActive(0);
   initScrollFade();
   initDrag();
@@ -452,14 +453,7 @@ layout: base-clean.njk
   // -----------------------------
   // 7) Animación “hero” al segundo
   // -----------------------------
-  setTimeout(() => {
-    gsap.to('.hg-home-box-animated', {
-      height: '100vh',
-      width: '100vw',
-      duration: .6,
-      ease: 'power3.out'
-    });
-  }, 1000);
+  gsap.to('.hg-home-box-animated', { clipPath: 'inset(0% 0%)', duration: 0.8, ease: 'power1.inOut' });
 })();
 </script>
 <script src="/assets/js/templates-2026.js"></script>
