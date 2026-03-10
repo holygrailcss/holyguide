@@ -2,10 +2,12 @@
 
 // Estilos fuera del contenedor principal (accesibilidad y wrapper del token)
 
-.hg-home-container3 {
+.hg-home-container2 {
 	--hg-home-col-width: calc(100vw );
 	--hg-home-row-width: calc(300vw );
+  --hg-home-nav-btn-prev-next: -8px;
   }
+
 
 
 .hg-skip-link {

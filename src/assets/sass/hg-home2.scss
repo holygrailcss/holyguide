@@ -5,6 +5,7 @@
 .hg-home-container2 {
 	--hg-home-col-width: calc(100vw );
 	--hg-home-row-width: calc(300vw );
+  --hg-home-nav-btn-prev-next: -76px;
   }
 
 
@@ -146,7 +147,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        left: -37px;
+        left: var(--hg-home-nav-btn-prev-next); // Valor controlado por variable CSS
       }
     }
 
@@ -155,7 +156,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        right: -37px;
+        right:  var(--hg-home-nav-btn-prev-next); // Valor controlado por variable CSS
       }
     }
   }
@@ -229,7 +230,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+
     transition: opacity 0.25s ease-out;
 
     img {
@@ -251,7 +252,7 @@
   // Wrapper del box animado
   .hg-home-box-animated-wrap {
     width: 100vw;
-    height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,7 +265,7 @@
 
     img {
       width: 100vw;
-      height: 100vh;
+ 
       object-fit: cover;
     }
   }
