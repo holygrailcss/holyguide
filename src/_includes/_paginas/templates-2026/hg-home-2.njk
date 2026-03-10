@@ -191,7 +191,8 @@ layout: base-clean.njk
 
   const totalCols = 3;            // número de columnas/páginas
   let active = -1;                // se inicializa en setActive(0)
-  const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
+  const cols    = [...row.querySelectorAll('.hg-home-row-cols__col')];
+  const colUls  = cols.map(col => col.querySelector('.hg-home-box-list'));
   let updateFooterInView = function() {};
 
   const colWidth = () => window.innerWidth;
@@ -246,11 +247,13 @@ layout: base-clean.njk
       ease: 'power3.out'
     });
 
-    // escalar columnas: activa 1, resto 0.5
-    cols.forEach((col, i) => {
-      gsap.to(col, {
-        scale: i === active ? 1 : 0.5,
-        duration: 0.5,
+    // escalar el ul interior: activo 1, resto 1.3 (entra grande → se reduce a normal)
+    colUls.forEach((ul, i) => {
+      if (!ul) return;
+      gsap.to(ul, {
+        scale: i === active ? 1 : 1.4,
+        transformOrigin: 'top center',
+        duration: 0.6,
         ease: 'power3.out'
       });
     });
@@ -277,32 +280,16 @@ layout: base-clean.njk
   });
 
   // -----------------------------
-  // 3) Fade de boxes al hacer scroll dentro de cada columna
-  //    (aparece progresivo al entrar por abajo)
+  // 3) Opacidad fija a 1 (fade de scroll desactivado)
   // -----------------------------
-  const fadeStartRatio = 0.001;
-
   function updateBoxOpacity(col) {
-    const colRect = col.getBoundingClientRect();
-    const fadeStartPx = colRect.height * fadeStartRatio;
-
     col.querySelectorAll('.hg-home-box').forEach(box => {
-      const boxRect = box.getBoundingClientRect();
-      const boxTopInsideCol = boxRect.top - colRect.top;
-      const boxHeight = boxRect.height;
-
-      // misma fórmula que tenías, pero con nombres más claros
-      const opacity = Math.min(1, Math.max(0,
-        (boxTopInsideCol + boxHeight) / (fadeStartPx + boxHeight)
-      ));
-
-      box.style.opacity = String(opacity);
+      box.style.opacity = '1';
     });
   }
 
   function initScrollFade() {
     cols.forEach(col => {
-      col.addEventListener('scroll', () => updateBoxOpacity(col));
       updateBoxOpacity(col);
     });
   }
@@ -460,7 +447,7 @@ layout: base-clean.njk
   // 6) Init
   // -----------------------------
   // estado inicial: col 0 a 1, resto a 0.5
-  cols.forEach((col, i) => gsap.set(col, { scale: i === 0 ? 1 : 0.5 }));
+  colUls.forEach((ul, i) => { if (ul) gsap.set(ul, { scale: i === 0 ? 1 : 1.3, transformOrigin: 'top center' }); });
   // etiquetas de navegación: todas ocultas; setActive(0) las inicializa
   gsap.set([...prevTexts, ...nextTexts], { opacity: 0, y: 120 });
   // estado inicial del box animado: pequeño desde el centro
