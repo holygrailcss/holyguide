@@ -2,8 +2,8 @@
 layout: base-clean.njk
 ---
 
-{# Token hg-home-2 (templates-2026): copia de hg-home para pruebas. #}
-<link rel="stylesheet" href="/assets/css/hg-home2.css">
+{# Token hg-home-3 (templates-2026): copia de hg-home para pruebas. #}
+<link rel="stylesheet" href="/assets/css/hg-home3.css">
 <link rel="stylesheet" href="/assets/css/hg-header.css">
 <link rel="stylesheet" href="/assets/css/hg-menu.css">
 <link rel="stylesheet" href="/assets/css/hg-footer.css">
@@ -17,17 +17,29 @@ layout: base-clean.njk
 {% include '_paginas/templates-2026/hg-menu.njk' %}
 
 <!-- Token home: 3 columnas, navegación horizontal con botones y GSAP -->
-<main id="hg-home-main" class="hg-home-container2 hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
+<main id="hg-home-main" class="hg-home-container3 hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
   <!-- Botones de navegación: texto girado 90° -->
   <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">‹</span> SECTION 1</span>
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">‹</span> SECTION 2</span>
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">‹</span> SECTION 3</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.12598 12.832L4.83105 8L9.12598 3.16797L9.87402 3.83203L6.16992 8L9.87402 12.168L9.12598 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64" aria-hidden="true"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.12598 12.832L4.83105 8L9.12598 3.16797L9.87402 3.83203L6.16992 8L9.87402 12.168L9.12598 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64 mr-120" aria-hidden="true"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.12598 12.832L4.83105 8L9.12598 3.16797L9.87402 3.83203L6.16992 8L9.87402 12.168L9.12598 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
   </button>
   <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">›</span> SECTION 1</span>
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">›</span> SECTION 2</span>
-    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron" aria-hidden="true">›</span> SECTION 3</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64" aria-hidden="true">  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.5791 12.832L9.87402 8L5.5791 3.16797L4.83105 3.83203L8.53516 8L4.83106 12.168L5.5791 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64" aria-hidden="true"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.5791 12.832L9.87402 8L5.5791 3.16797L4.83105 3.83203L8.53516 8L4.83106 12.168L5.5791 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu"><span class="hg-home-nav-btn__chevron mr-64" aria-hidden="true"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.5791 12.832L9.87402 8L5.5791 3.16797L4.83105 3.83203L8.53516 8L4.83106 12.168L5.5791 12.832Z" fill="black"></path>
+      </svg></span> NEW SEASON AW 26</span>
   </button>
 
   
@@ -195,7 +207,7 @@ layout: base-clean.njk
   let updateFooterInView = function() {};
 
   const colWidth = () => window.innerWidth;
-  const PEEK          = 100;        // px visibles de cada sección inactiva
+  const PEEK          = 70;         // px visibles de cada sección inactiva
   const SCALE_INACTIVE = 2 / 3;     // un tercio más pequeñas
 
   function getNaturalX(i) {
@@ -207,13 +219,7 @@ layout: base-clean.njk
   }
 
   function getNaturalClip(i) {
-    // Con scale SCALE_INACTIVE, necesitamos PEEK/scale px locales para ver PEEK px en pantalla
-    const W = colWidth(), d = i - active;
-    const localPeek = Math.round(PEEK / SCALE_INACTIVE); // px locales que equivalen a PEEK px visuales
-    if (d === 0)  return 'inset(0 0 0 0)';
-    if (d === -1) return `inset(0 0 0 ${W - localPeek}px)`;
-    if (d ===  1) return `inset(0 ${W - localPeek}px 0 0)`;
-    return 'inset(0 50% 0 50%)';
+    return 'inset(0 0 0 0)';
   }
 
   function getNaturalScale(i)  { return i === active ? 1 : SCALE_INACTIVE; }
@@ -276,7 +282,7 @@ layout: base-clean.njk
         x:            getNaturalX(i),
         clipPath:     getNaturalClip(i),
         scale:        getNaturalScale(i),
-        zIndex:       d === 0 ? 1 : 2,
+        zIndex:       d === 0 ? 1000 : 100,
         pointerEvents: d === 0 ? 'auto' : 'none',
         duration:     0.5,
         ease:         'power3.out'
@@ -474,13 +480,12 @@ layout: base-clean.njk
   // posición inicial de columnas para active=0 (sin animación)
   (() => {
     const W = colWidth();
-    const lp = Math.round(PEEK / SCALE_INACTIVE); // localPeek
     cols.forEach((col, i) => gsap.set(col, {
       x:             i === 0 ? 0 : i === 1 ? W - PEEK : W * 3,
-      clipPath:      i === 0 ? 'inset(0 0 0 0)' : i === 1 ? `inset(0 ${W - lp}px 0 0)` : 'inset(0 50% 0 50%)',
+      clipPath:      'inset(0 0 0 0)',
       scale:         i === 0 ? 1 : SCALE_INACTIVE,
       transformOrigin: i === 0 ? 'center center' : i === 1 ? 'left center' : 'center center',
-      zIndex:        i === 0 ? 1 : 2,
+      zIndex:        i === 0 ? 1000 : 100,
       pointerEvents: i === 0 ? 'auto' : 'none'
     }));
   })();

@@ -2,7 +2,7 @@
 
 // Estilos fuera del contenedor principal (accesibilidad y wrapper del token)
 
-.hg-home-container2 {
+.hg-home-container3 {
 	--hg-home-col-width: calc(100vw );
 	--hg-home-row-width: calc(300vw );
   }
@@ -67,7 +67,7 @@
 }
 
 // Contenedor principal: todo lo interno queda encapsulado aquí
-.hg-home-container2 {
+.hg-home-container3 {
   z-index: 100;
   position: relative;
 
@@ -101,7 +101,7 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 20;
+    z-index: 9999;
     padding: 16px 12px;
     cursor: pointer;
     display: grid;
@@ -146,7 +146,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        left: -37px;
+        left: -42px;
       }
     }
 
@@ -155,7 +155,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        right: -37px;
+        right: -14px;
       }
     }
   }
@@ -229,7 +229,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     transition: opacity 0.25s ease-out;
 
     img {
@@ -245,13 +244,13 @@
     align-items: center;
     justify-content: center;
     transition: opacity 0.25s ease-out;
-    padding-inline: 95px;
+    padding-inline: 150px;
   }
 
   // Wrapper del box animado
   .hg-home-box-animated-wrap {
     width: 100vw;
-    height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,7 +263,7 @@
 
     img {
       width: 100vw;
-      height: 100vh;
+
       object-fit: cover;
     }
   }
