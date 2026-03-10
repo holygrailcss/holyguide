@@ -107,6 +107,7 @@
     display: grid;
     place-items: center;
     overflow: hidden;
+
     transition:
       opacity 0.2s,
       background-color 0.2s;
@@ -138,7 +139,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        left: -54px;
+        left: -27px;
       }
     }
 
@@ -147,7 +148,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        right: -65px;
+        right: -27px;
       }
     }
   }
