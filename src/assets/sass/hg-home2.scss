@@ -134,6 +134,13 @@
       white-space: nowrap;
     }
 
+    &__chevron {
+      display: inline-block;
+      // Contrarresta el rotate(-90deg) del botón → el chevron queda orientado correctamente en pantalla
+      transform: rotate(90deg);
+      font-style: normal;
+    }
+
     &--prev {
       left: -100px;
       transform: rotate(-90deg);

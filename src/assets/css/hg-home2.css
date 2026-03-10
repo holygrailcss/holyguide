@@ -109,6 +109,11 @@ body.is-rtl .hg-home-container2 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   text-align: center;
   white-space: nowrap;
 }
+.hg-home-container2 .hg-home-nav-btn__chevron {
+  display: inline-block;
+  transform: rotate(90deg);
+  font-style: normal;
+}
 .hg-home-container2 .hg-home-nav-btn--prev {
   left: -100px;
   transform: rotate(-90deg);
