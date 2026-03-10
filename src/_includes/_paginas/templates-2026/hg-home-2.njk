@@ -208,7 +208,7 @@ layout: base-clean.njk
     // direction >= 0: avanza → entra desde la derecha (y:120 local), sale por la izquierda (y:-120 local)
     const fromY = direction >= 0 ?  120 : -120;
     const toY   = direction >= 0 ? -120 :  120;
-    const DUR   = 0.25;
+    const DUR   = 0.35;
 
     const slide = (texts, targetIdx, curIdx) => {
       if (curIdx >= 0 && curIdx < texts.length) {
