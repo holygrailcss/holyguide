@@ -86,9 +86,9 @@ body.is-rtl .hg-home-container2 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   z-index: 20;
   padding: 16px 12px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   transition: opacity 0.2s, background-color 0.2s;
 }
 .hg-home-container2 .hg-home-nav-btn:focus-visible {
@@ -105,24 +105,26 @@ body.is-rtl .hg-home-container2 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   border: none;
 }
 .hg-home-container2 .hg-home-nav-btn__text {
+  grid-area: 1/1;
+  text-align: center;
   white-space: nowrap;
 }
 .hg-home-container2 .hg-home-nav-btn--prev {
-  left: -80px;
+  left: -100px;
   transform: rotate(-90deg);
 }
 @media (min-width: 768px) {
   .hg-home-container2 .hg-home-nav-btn--prev {
-    left: -54px;
+    left: -27px;
   }
 }
 .hg-home-container2 .hg-home-nav-btn--next {
-  right: -93px;
+  right: -100px;
   transform: rotate(-90deg);
 }
 @media (min-width: 768px) {
   .hg-home-container2 .hg-home-nav-btn--next {
-    right: -65px;
+    right: -27px;
   }
 }
 .hg-home-container2 .hg-home-row-cols-wrap {

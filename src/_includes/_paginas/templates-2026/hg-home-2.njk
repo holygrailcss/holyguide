@@ -20,10 +20,14 @@ layout: base-clean.njk
 <main id="hg-home-main" class="hg-home-container2 hg-d-flex hg-flex-column hg-min-h-100vh hg-h-100vh" role="main">
   <!-- Botones de navegación: texto girado 90° -->
   <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--prev" id="hg-home-nav-prev" aria-label="Columna anterior" disabled>
-    <span class="hg-home-nav-btn__text label-m ttu">xxx new season AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu">SECTION 1</span>
+    <span class="hg-home-nav-btn__text label-m ttu" >SECTION 2</span>
+    <span class="hg-home-nav-btn__text label-m ttu">SECTION 3</span>
   </button>
   <button type="button" class="btn btn-tertiary hg-home-nav-btn hg-home-nav-btn--next" id="hg-home-nav-next" aria-label="Columna siguiente">
-    <span class="hg-home-nav-btn__text label-m ttu">women new season AW 26</span>
+    <span class="hg-home-nav-btn__text label-m ttu">SECTION 1</span>
+    <span class="hg-home-nav-btn__text label-m ttu">SECTION 2</span>
+    <span class="hg-home-nav-btn__text label-m ttu">SECTION 3</span>
   </button>
 
   
@@ -186,18 +190,50 @@ layout: base-clean.njk
   document.body.dataset.activeCol = row.dataset.active || '0';
 
   const totalCols = 3;            // número de columnas/páginas
-  let active = parseInt(row.dataset.active || '0', 10);
+  let active = -1;                // se inicializa en setActive(0)
   const cols = [...row.querySelectorAll('.hg-home-row-cols__col')];
-  cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
   let updateFooterInView = function() {};
 
   const colWidth = () => window.innerWidth;
 
   // -----------------------------
-  // 2) Navegación / animación
+  // 2) Etiquetas de navegación (slide entre secciones)
+  // -----------------------------
+  const prevTexts = [...prevBtn.querySelectorAll('.hg-home-nav-btn__text')];
+  const nextTexts = [...nextBtn.querySelectorAll('.hg-home-nav-btn__text')];
+  let prevVis = -1, nextVis = -1;
+
+  function updateNavLabels(newIndex, direction) {
+    // local y → pantalla izquierda/derecha (el botón tiene rotate(-90deg))
+    // direction >= 0: avanza → entra desde la derecha (y:120 local), sale por la izquierda (y:-120 local)
+    const fromY = direction >= 0 ?  120 : -120;
+    const toY   = direction >= 0 ? -120 :  120;
+    const DUR   = 0.25;
+
+    const slide = (texts, targetIdx, curIdx) => {
+      if (curIdx >= 0 && curIdx < texts.length) {
+        gsap.to(texts[curIdx], { opacity: 0, y: toY, duration: DUR, ease: 'power2.in' });
+      }
+      if (targetIdx >= 0 && targetIdx < texts.length) {
+        gsap.fromTo(texts[targetIdx],
+          { opacity: 0, y: fromY },
+          { opacity: 1, y: 0,    duration: DUR, ease: 'power2.out' }
+        );
+      }
+      return targetIdx;
+    };
+
+    prevVis = slide(prevTexts, newIndex - 1, prevVis);
+    nextVis = slide(nextTexts, newIndex + 1, nextVis);
+  }
+
+  // -----------------------------
+  // 3) Navegación / animación
   // -----------------------------
   function setActive(index) {
     if (index < 0 || index >= totalCols) return;
+    const direction   = index > active ? 1 : -1;
+    const prevActive  = active;
     active = index;
 
     row.dataset.active = String(active);
@@ -222,6 +258,9 @@ layout: base-clean.njk
     prevBtn.disabled = active === 0;
     nextBtn.disabled = active === totalCols - 1;
     updateFooterInView();
+
+    // Actualizar etiqueta de botones solo cuando la sección cambia
+    if (index !== prevActive) updateNavLabels(active, direction);
   }
 
   prevBtn.addEventListener('click', () => setActive(active - 1));
@@ -422,9 +461,16 @@ layout: base-clean.njk
   // -----------------------------
   // estado inicial: col 0 a 1, resto a 0.5
   cols.forEach((col, i) => gsap.set(col, { scale: i === 0 ? 1 : 0.5 }));
+  // etiquetas de navegación: todas ocultas; setActive(0) las inicializa
+  gsap.set([...prevTexts, ...nextTexts], { opacity: 0, y: 120 });
   // estado inicial del box animado: pequeño desde el centro
   // Reveal con clip-path desde el centro: imagen siempre a tamaño natural, sin deformación
-  gsap.set('.hg-home-box-animated', { clipPath: 'inset(42.5% 47.5%)' });
+  // El inset se calcula para que el área inicial sea ~400×400px
+  const animBox = document.querySelector('.hg-home-box-animated');
+  const animRect = animBox.getBoundingClientRect();
+  const initInsetX = Math.max(0, (animRect.width  - 150) / 2 / animRect.width  * 100).toFixed(2);
+  const initInsetY = Math.max(0, (animRect.height - 150) / 2 / animRect.height * 100).toFixed(2);
+  gsap.set('.hg-home-box-animated', { clipPath: `inset(${initInsetY}% ${initInsetX}%)` });
   setActive(0);
   initScrollFade();
   initDrag();
