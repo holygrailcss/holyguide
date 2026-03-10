@@ -8,31 +8,39 @@
   --hg-header-transition-fast: all 0.070s ease-in-out;
   --hg-header-transition: all 0.270s ease-in-out;
   --hg-header-action-min-height: var(--hg-spacing-24);
-  
+
   --hg-header-list-gap: var(--hg-spacing-8);
-  
+
   --hg-header-logo-width: 9.375rem;
   --hg-header-logo-z-index: calc(var(--hg-header-z-index) + 1);
-  --hg-header-logo-margin-inline: calc(50% - var(--hg-header-logo-width) / 2) 0;
+  --hg-header-logo-margin-inline: var(--hg-spacing-32) 0;
   --hg-header-logo-ratio: 6.79 / 1;
-  --hg-header-logo-transition: opacity 0.220s ease-out;
-  
+  --hg-header-logo-transition: all 0.270s ease-in-out;
+
   --hg-header-maxilogo-width: unset;
   --hg-header-maxilogo-padding-block: var(--hg-spacing-8);
-  --hg-header-maxilogo-transition: opacity 0.220s ease-out, max-height 0.220s ease-out;
+  --hg-header-maxilogo-transition: all 0.270s ease-in-out;
 }
 
+/* Variables para pantallas >= 992px */
 @media (min-width: 62rem) {
   :root {
     --hg-header-min-height: var(--hg-spacing-64);
     --hg-header-list-gap: var(--hg-spacing-32);
     --hg-header-action-min-height: var(--hg-spacing-32);
-    
+
     --hg-header-logo-width: 15.063rem;
-    --hg-header-logo-margin-inline: calc(40% - var(--hg-header-logo-width) / 2) 0;
-    
+    --hg-header-logo-margin-inline: var(--hg-spacing-48) 0;
+
     --hg-header-maxilogo-width: 32.25rem;
     --hg-header-maxilogo-padding-block: var(--hg-spacing-16);
+  }
+}
+
+/* Variables para pantallas >= 1280px */
+@media (min-width: 80rem) {
+  :root {
+    --hg-header-logo-margin-inline: var(--hg-spacing-112) 0;
   }
 }
 
@@ -61,7 +69,7 @@
   height: 0;
   max-height: 100%;
   overflow: visible;
-  padding-inline: var(--hg-header-padding-inline);
+  margin-inline: var(--hg-header-padding-inline);
   transition: var(--hg-header-maxilogo-transition);
 }
 
@@ -112,7 +120,7 @@
 .hg-header .hg-header-logo {
   display: block;
   height: auto;
-  margin-left: 120px;
+  margin-inline: var(--hg-header-logo-margin-inline);
   opacity: 0;
   pointer-events: none;
   position: relative;
@@ -120,7 +128,7 @@
   width: var(--hg-header-logo-width);
   z-index: var(--hg-header-logo-z-index);
 }
-  
+
 .hg-header .hg-header-logo-icon {
   display: block;
   height: auto;
@@ -178,7 +186,7 @@
   flex-flow: column nowrap;
   justify-content: center;
 }
-  
+
 .hg-header-bag-counter {
   display: inline-flex;
   justify-content: center;
@@ -186,11 +194,11 @@
 }
 
 /**
- * is-scrolling-offset: clase que se añade al body cuando 
- * se ha hecho scroll más allá del offset definido en HolyGrail5 
- * (por defecto, 80px). Sirve para aplicar estilos específicos 
+ * is-scrolling-offset: clase que se añade al body cuando
+ * se ha hecho scroll más allá del offset definido en HolyGrail5
+ * (por defecto, 80px). Sirve para aplicar estilos específicos
  * al header cuando el usuario ha hecho scroll.
- * Se usa especialmente para evitar solapamientos del header 
+ * Se usa especialmente para evitar solapamientos del header
  * con el contenido y como "tope" para las variantes de header.
  */
 body.is-scrolling-offset .hg-header__handler {
@@ -209,7 +217,7 @@ body.is-scrolling-offset .hg-header .hg-header-logo {
 }
 
 /**
-  * is-reduced: clase que se añade al body cuando 
+  * is-reduced: clase que se añade al body cuando
   * el header no muestra el maxilogo.
   */
 
@@ -229,7 +237,7 @@ body.is-reduced .hg-header .hg-header-logo {
 }
 
 /**
-  * is-compact: clase que se añade al body cuando 
+  * is-compact: clase que se añade al body cuando
   * el header muestra el maxilogo y ocupa espacio físico.
   */
 
@@ -243,27 +251,7 @@ body.is-compact .hg-header-maxilogo {
 }
 
 /**
-  * md-main-menu-open: clase que se añade al body cuando 
-  * el menú principal está abierto.
-  */
-
-body.md-main-menu-open .hg-header__handler {
-  background-color: var(--hg-header-bg-color);
-}
-
-body.md-main-menu-open .hg-header-maxilogo {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-body.md-main-menu-open .hg-header .hg-header-logo {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/**
- * [class*="phantom"]: variante para el header con fondo transparente, 
+ * [class*="phantom"]: variante para el header con fondo transparente,
  * que hace que el header se superponga al contenido.
  * Todo el header NO tiene cuerpo.
  * is-scrolling-offset se usa como "tope" para esta variante, es decir,
@@ -274,7 +262,7 @@ body[class*="phantom"] .hg-header {
   overflow: visible;
 }
 
-body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
+body:not(.is-scrolling-offset)[class*="phantom"] .hg-header__handler {
   background-color: transparent;
 }
 
@@ -283,32 +271,32 @@ body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-hea
  * is-scrolling-offset se usa como "tope" para esta variante, es decir,
  * cuando el usuario hace scroll más allá del offset, el header deja de ser phantom.
  */
-body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
-body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
+body:not(.is-scrolling-offset)[class*="phantom-white"] .hg-header .btn.hg-header-action,
+body:not(.is-scrolling-offset)[class*="phantom-white"] .hg-header .btn.hg-header-action path,
+body:not(.is-scrolling-offset)[class*="phantom-white"] .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
   color: var(--hg-color-white);
   fill: var(--hg-color-white);
 }
 
 /**
- * micro variantes para mostrar elementos específicos del 
+ * micro variantes para mostrar elementos específicos del
  * header en blanco, usadas para casos puntuales (home, rutas privadas, etc).
  */
-body:not(.is-scrolling-offset):not(.md-main-menu-open).phantom-logo-white .hg-header .hg-header-logo path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-menu .hg-header .btn.hg-header-action--hamburger path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-menu .hg-header .btn.hg-header-action--primary,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-logo .hg-header .hg-header-logo path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-logo .hg-header .hg-header-maxilogo path,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-login .hg-header .btn.hg-header-action--username,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-basket .hg-header .btn.hg-header-action--cart,
-body:not(.is-scrolling-offset):not(.md-main-menu-open).white-search .hg-header .btn.hg-header-action--search {
+body:not(.is-scrolling-offset).phantom-logo-white .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset).white-menu .hg-header .btn.hg-header-action--hamburger path,
+body:not(.is-scrolling-offset).white-menu .hg-header .btn.hg-header-action--primary,
+body:not(.is-scrolling-offset).white-logo .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset).white-logo .hg-header .hg-header-maxilogo path,
+body:not(.is-scrolling-offset).white-login .hg-header .btn.hg-header-action--username,
+body:not(.is-scrolling-offset).white-basket .hg-header .btn.hg-header-action--cart,
+body:not(.is-scrolling-offset).white-search .hg-header .btn.hg-header-action--search {
   color: var(--hg-color-white);
   fill: var(--hg-color-white);
 }
 
 /**
-* micro variantes para ocultar elementos específicos del 
+* micro variantes para ocultar elementos específicos del
 * header, usadas para casos puntuales (home, rutas privadas, etc).
 */
 body.no-menu .hg-header .btn.hg-header-action--hamburger,
@@ -322,72 +310,8 @@ body.no-search .hg-header .btn.hg-header-action--search {
 
 /* Headers: estilos para pantallas < 991.9px */
 @media (max-width: 61.994rem) {
-  /* md-main-menu-open */
-  body.md-main-menu-open .btn.hg-header-action--hamburger,
-  body.md-main-menu-open .hg-header .hg-header-logo {
-    visibility: hidden;
-    opacity: 0;
-  }
-  
   body.is-scrolling-offset .hg-header .hg-header-logo {
     opacity: 1;
     pointer-events: auto;
-  }
-  
-  /**
-  * caso especial para la home
-  * prevalece la media query
-  */
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header-maxilogo {
-    max-height: 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header .hg-header-logo {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
-    background-color: transparent;
-  }
-
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
-    color: var(--hg-color-white);
-    fill: var(--hg-color-white);
-  }
-}
-
-/* Headers: estilos para pantallas > 992px */
-@media (min-width: 62rem) {
-  /**
-  * caso especial para la home
-  * prevalece la media query
-  */
-  html#ItxHomePage body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header-maxilogo {
-    max-height: 0;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  html#ItxHomePage body:not(.is-scrolling-offset):not(.md-main-menu-open)[class*="phantom"] .hg-header .hg-header-logo {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom"] .hg-header__handler {
-    background-color: transparent;
-  }
-
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .btn.hg-header-action path,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-logo path,
-  html#ItxHomePage body:not(.md-main-menu-open)[class*="phantom-white"] .hg-header .hg-header-maxilogo path {
-    color: var(--hg-color-white);
-    fill: var(--hg-color-white);
   }
 }
