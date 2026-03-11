@@ -324,20 +324,21 @@ layout: base-clean.njk
 
   if (!row || !prevBtn || !nextBtn) return;
 
-  const NAV_BTN_OFFSET_MOBILE = 20;
+  const NAV_BTN_OFFSET_MOBILE = -102;
   const NAV_BTN_OFFSET_DESKTOP = 102;
   const NAV_BTN_BREAKPOINT = 768;
 
   function positionNavBtns() {
-    const offset = window.innerWidth >= NAV_BTN_BREAKPOINT ? NAV_BTN_OFFSET_DESKTOP : NAV_BTN_OFFSET_MOBILE;
+    const desktop = window.innerWidth >= NAV_BTN_BREAKPOINT;
     const W = prevBtn.offsetWidth  || window.innerWidth * 0.15;
     const H = prevBtn.offsetHeight || 50;
-    // Con rotate(-90deg) center-center, el borde visual = borde_css + (W - H) / 2
-    // Para que el borde visual quede a `offset`, necesitamos: borde_css = offset - (W - H) / 2
     const adjust = (W - H) / 2;
-    // Usamos GSAP para gestionar toda la transformación y evitar conflictos CSS/GSAP
-    gsap.set(prevBtn, { left: offset - adjust, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
-    gsap.set(nextBtn, { right: offset - adjust - 13, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
+    // En mobile: valor fijo directo (sin compensar adjust)
+    // En desktop: compensa la rotación para que el borde visual quede a NAV_BTN_OFFSET_DESKTOP
+    const leftVal  = desktop ? NAV_BTN_OFFSET_DESKTOP - adjust        : NAV_BTN_OFFSET_MOBILE;
+    const rightVal = desktop ? NAV_BTN_OFFSET_DESKTOP - adjust - 13   : NAV_BTN_OFFSET_MOBILE;
+    gsap.set(prevBtn, { left: leftVal,  yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
+    gsap.set(nextBtn, { right: rightVal, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
   }
   requestAnimationFrame(positionNavBtns);
 
