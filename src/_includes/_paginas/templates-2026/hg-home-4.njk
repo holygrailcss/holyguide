@@ -325,20 +325,21 @@ layout: base-clean.njk
   if (!row || !prevBtn || !nextBtn) return;
 
   const NAV_BTN_OFFSET_MOBILE = 20;
-  const NAV_BTN_OFFSET_DESKTOP = 112;
+  const NAV_BTN_OFFSET_DESKTOP = 102;
   const NAV_BTN_BREAKPOINT = 768;
 
   function positionNavBtns() {
     const offset = window.innerWidth >= NAV_BTN_BREAKPOINT ? NAV_BTN_OFFSET_DESKTOP : NAV_BTN_OFFSET_MOBILE;
-    const wPrev = prevBtn.offsetWidth || window.innerWidth * 0.15;
-    const wNext = nextBtn.offsetWidth || window.innerWidth * 0.15;
-    prevBtn.style.left = `${offset}px`;
-    nextBtn.style.right = `${offset}px`;
-
-    gsap.set(prevBtn, { top: '50%', y: -wPrev / 2, rotation: -90, transformOrigin: 'left center' });
-    gsap.set(nextBtn, { top: '50%', y: -wNext / 2, rotation: -90, transformOrigin: 'right center' });
+    const W = prevBtn.offsetWidth  || window.innerWidth * 0.15;
+    const H = prevBtn.offsetHeight || 50;
+    // Con rotate(-90deg) center-center, el borde visual = borde_css + (W - H) / 2
+    // Para que el borde visual quede a `offset`, necesitamos: borde_css = offset - (W - H) / 2
+    const adjust = (W - H) / 2;
+    // Usamos GSAP para gestionar toda la transformación y evitar conflictos CSS/GSAP
+    gsap.set(prevBtn, { left: offset - adjust, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
+    gsap.set(nextBtn, { right: offset - adjust - 13, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
   }
-  positionNavBtns();
+  requestAnimationFrame(positionNavBtns);
 
   document.body.dataset.activeCol = row.dataset.active || '0';
 
@@ -513,7 +514,8 @@ layout: base-clean.njk
   let resizeT = null;
   window.addEventListener('resize', () => {
     clearTimeout(resizeT);
-    positionNavBtns();
+    // requestAnimationFrame garantiza que el layout está recalculado antes de leer offsetWidth
+    requestAnimationFrame(positionNavBtns);
     resizeT = setTimeout(() => { setActive(active); resizeT = null; }, 100);
   });
 

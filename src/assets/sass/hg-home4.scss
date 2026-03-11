@@ -98,57 +98,7 @@
     }
   }
 
-  // Botones de navegación
-  .hg-home-nav-btn {
-    position: fixed;
-    top: 50%;
-    z-index: 9999;
-    padding: 16px 12px;
-    cursor: pointer;
-    display: grid;
-    justify-content: stretch;
-    place-items: center;
-    overflow: hidden;
-    width: 30%;
 
-    transition:
-      opacity 0.2s,
-      background-color 0.2s;
-
-    &:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
-
-    &:focus:not(:focus-visible) {
-      outline: none;
-    }
-
-    &:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-      background-color: transparent;
-      border: none;
-    }
-
-    &__text {
-      grid-area: 1 / 1;    // todos los spans en la misma celda → se superponen
-      text-align: center;
-      white-space: nowrap;
-      width: 100%;
-      display: flex;
-      justify-items: stretch;
-      justify-content: space-between;
-    }
-
-    &__chevron {
-      display: inline-block;
-      // Contrarresta el rotate(-90deg) del botón → el chevron queda orientado correctamente en pantalla
-      transform: rotate(90deg);
-      font-style: normal;
-    }
-
-  }
 
   // Wrapper de columnas
   .hg-home-row-cols-wrap {
@@ -301,8 +251,58 @@ background: white;
 	font-weight: bold;
 }
 
-.hg-home-container4 .hg-home-nav-btn--prev,
-.hg-home-container4 .hg-home-nav-btn--next {
-  top: 50%;
-}
+
+  // Botones de navegación
+  .hg-home-nav-btn {
+    position: fixed;
+    top: 50%;
+    z-index: 9999;
+    padding: 16px 12px;
+    cursor: pointer;
+    display: grid;
+    justify-content: stretch;
+    place-items: center;
+    overflow: hidden;
+    width: 30%;
+
+    transition:
+      opacity 0.2s,
+      background-color 0.2s;
+
+    &:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      background-color: transparent;
+      border: none;
+    }
+
+    &__text {
+      grid-area: 1 / 1;    // todos los spans en la misma celda → se superponen
+      text-align: center;
+      white-space: nowrap;
+      width: 100%;
+      display: flex;
+      justify-items: stretch;
+      justify-content: space-between;
+    }
+
+    &__chevron {
+      display: inline-block;
+      // Contrarresta el rotate(-90deg) del botón → el chevron queda orientado correctamente en pantalla
+      transform: rotate(90deg);
+      font-style: normal;
+    }
+
+  }
+
+
 
