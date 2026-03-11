@@ -107,8 +107,12 @@
     padding: 16px 12px;
     cursor: pointer;
     display: grid;
+    justify-content: stretch;
     place-items: center;
     overflow: hidden;
+
+    width: 60vh;
+
 
     transition:
       opacity 0.2s,
@@ -134,6 +138,10 @@
       grid-area: 1 / 1;    // todos los spans en la misma celda → se superponen
       text-align: center;
       white-space: nowrap;
+      width: 100%;
+      display: flex;
+      justify-items: stretch;
+      justify-content: space-between;
     }
 
     &__chevron {
@@ -148,7 +156,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        left: -48px;
+        left: -151px;
       }
     }
 
@@ -157,7 +165,7 @@
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
-        right: -14px;
+        right: -151px;
       }
     }
   }
@@ -252,7 +260,7 @@
 
   // Wrapper del box animado
   .hg-home-box-animated-wrap {
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -285,5 +293,16 @@ background: white;
 
 .hg-home-special-cutout {
  padding-inline: 150px;
+}
+
+.hg-home-box-label{
+  position: absolute;
+  top: 80vh;
+  transform: translateY(-100%);
+	right: 0;
+
+	color: white;
+	font-size: 10vw;
+	font-weight: bold;
 }
 
