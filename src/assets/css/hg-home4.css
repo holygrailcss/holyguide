@@ -121,7 +121,7 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
 }
 @media (min-width: 768px) {
   .hg-home-container4 .hg-home-nav-btn--prev {
-    left: -42px;
+    left: -48px;
   }
 }
 .hg-home-container4 .hg-home-nav-btn--next {
