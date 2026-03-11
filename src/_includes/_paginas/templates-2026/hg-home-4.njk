@@ -272,9 +272,6 @@ layout: base-clean.njk
 (() => {
   if (typeof gsap === 'undefined') return;
 
-  // -----------------------------
-  // 1) Referencias DOM y estado
-  // -----------------------------
   const row     = document.getElementById('hg-home-row-cols');
   const prevBtn = document.getElementById('hg-home-nav-prev');
   const nextBtn = document.getElementById('hg-home-nav-next');
@@ -285,12 +282,11 @@ layout: base-clean.njk
   document.body.dataset.activeCol = row.dataset.active || '0';
 
   const cols      = [...row.querySelectorAll('.hg-home-row-cols__col')];
-  const totalCols = cols.length;  // número de columnas detectado del DOM
-  let active = -1;                // se inicializa en setActive(0)
+  const totalCols = cols.length;
+  let active = -1;
   let updateFooterInView = function() {};
-  let btnsHidden = false;         // true cuando el footer del activo está en pantalla
+  let btnsHidden = false;
 
-  // ─── Nombres de las columnas ───────────────────────────────────────────────
   const COL_NAMES = [
     'New Season',
     'Editorials',
@@ -298,9 +294,7 @@ layout: base-clean.njk
     'About',
     'Contact'
   ];
-  // ───────────────────────────────────────────────────────────────────────────
 
-  // Generar spans de navegación dinámicamente según COL_NAMES
   const SVG_PREV = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.12598 12.832L4.83105 8L9.12598 3.16797L9.87402 3.83203L6.16992 8L9.87402 12.168L9.12598 12.832Z" fill="currentColor"/></svg>`;
   const SVG_NEXT = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5791 12.832L9.87402 8L5.5791 3.16797L4.83105 3.83203L8.53516 8L4.83106 12.168L5.5791 12.832Z" fill="currentColor"/></svg>`;
   prevBtn.innerHTML = '';
@@ -313,19 +307,31 @@ layout: base-clean.njk
       `<div class="hg-home-nav-btn__text label-m ttu"><div class="hg-home-nav-btn__chevron" aria-hidden="true">${SVG_NEXT}</div><div>${label}</div><div></div></div>`);
   });
 
-  const colWidth = () => window.innerWidth;
-  const PEEK          = 70;         // px visibles de cada sección inactiva
-  const SCALE_INACTIVE = 2 / 3;     // un tercio más pequeñas
+  const colWidth       = () => window.innerWidth;
+  const BREAKPOINT     = 992;
+  const PEEK           = 70;
+  const SCALE_INACTIVE = 2 / 3;
 
+  const isDesktop = () => window.innerWidth >= BREAKPOINT;
+
+  // Devuelve la posición X de reposo de la columna i:
+  // En desktop: activa → 0, adyacentes → asoman PEEK px, resto → fuera de pantalla.
+  // En mobile: todas las inactivas van completamente fuera de pantalla (sin peek).
   function getNaturalX(i) {
     const W = colWidth(), d = i - active;
-    if (d === 0)  return 0;
-    if (d === -1) return -(W - PEEK);  // borde derecho queda en x=PEEK
-    if (d ===  1) return  (W - PEEK);  // borde izquierdo queda en x=W-PEEK
-    return d < 0 ? -W * 3 : W * 3;
+    if (d === 0) return 0;
+    if (isDesktop()) {
+      if (d === -1) return -(W - PEEK);
+      if (d ===  1) return  (W - PEEK);
+    }
+    return d < 0 ? -W * 1.5 : W * 1.5;
   }
 
-  function getNaturalScale(i)  { return i === active ? 1 : SCALE_INACTIVE; }
+  // Devuelve la escala de reposo: 1 si es la activa, reducida si es inactiva.
+  function getNaturalScale(i) { return i === active ? 1 : SCALE_INACTIVE; }
+
+  // Devuelve el origen del transform según la posición relativa a la activa,
+  // para que las adyacentes escalen desde el borde que toca a la activa.
   function getNaturalOrigin(i) {
     const d = i - active;
     if (d === -1) return 'right center';
@@ -333,16 +339,13 @@ layout: base-clean.njk
     return 'center center';
   }
 
-  // -----------------------------
-  // 2) Etiquetas de navegación (slide entre secciones)
-  // -----------------------------
   const prevTexts = [...prevBtn.querySelectorAll('.hg-home-nav-btn__text')];
   const nextTexts = [...nextBtn.querySelectorAll('.hg-home-nav-btn__text')];
   let prevVis = -1, nextVis = -1;
 
+  // Anima el texto de los botones prev/next para mostrar el nombre de la sección
+  // hacia la que se va a navegar. El sentido del slide depende de la dirección del cambio.
   function updateNavLabels(newIndex, direction) {
-    // local y → pantalla izquierda/derecha (el botón tiene rotate(-90deg))
-    // direction >= 0: avanza → entra desde la derecha (y:120 local), sale por la izquierda (y:-120 local)
     const fromY = direction >= 0 ?  120 : -120;
     const toY   = direction >= 0 ? -120 :  120;
     const DUR   = 0.35;
@@ -364,16 +367,13 @@ layout: base-clean.njk
     nextVis = slide(nextTexts, newIndex + 1, nextVis);
   }
 
-  // -----------------------------
-  // 3) Navegación / animación
-  // -----------------------------
-
-  // Al terminar la transición, sube el hg-home-box-link más próximo al top del viewport
+  // Reposiciona el scroll de una columna inactiva al abandonarla:
+  // si el primer slide es el más visible sube al top; si es otro, lo centra en pantalla.
+  // Se llama al inicio del drag para que la columna quede bien cuando se vuelva a ella.
   function scrollActiveToTopLink(col) {
     const links = [...col.querySelectorAll('.hg-home-box-link')];
     if (!links.length) return;
 
-    // Busca el link con mayor área visible en el viewport
     let closest = null, maxVisible = -1;
     const vh = window.innerHeight;
     links.forEach(link => {
@@ -390,39 +390,35 @@ layout: base-clean.njk
 
     let raw;
     if (isFirst) {
-      // Primer slide más visible → scroll al top
       raw = 0;
     } else {
-      // Cualquier otro → centrar en el viewport
       const centerOffset = (col.clientHeight - closest.offsetHeight) / 2;
       raw = col.scrollTop + (linkRect.top - colRect.top) - centerOffset;
     }
 
     const target = Math.max(0, Math.min(raw, maxScroll));
-
     if (Math.abs(target - col.scrollTop) < 2) return;
     gsap.to(col, { scrollTop: target, duration: 0.3, ease: 'power2.out' });
   }
 
-  let revealDone = false; // true cuando termina la animación hero inicial
+  let revealDone = false;
 
+  // Activa la columna indicada: la mueve al centro, escala las adyacentes,
+  // actualiza estado y botones, y dispara el reposicionamiento de la columna saliente.
   function setActive(index) {
     if (index < 0 || index >= totalCols) return;
-    const direction   = index > active ? 1 : -1;
-    const prevActive  = active;
+    const direction  = index > active ? 1 : -1;
+    const prevActive = active;
     active = index;
 
     row.dataset.active = String(active);
     document.body.dataset.activeCol = String(active);
     cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
 
-    // Scroll de la sección que sale al inicio de la transición
     if (prevActive >= 0 && prevActive !== active) {
       scrollActiveToTopLink(cols[prevActive]);
     }
 
-
-    // Posicionar secciones: activa centrada, adyacentes con peek de 70px, resto fuera
     cols.forEach((col, i) => {
       const d = i - active;
       const tweenProps = {
@@ -434,7 +430,6 @@ layout: base-clean.njk
         duration:        0.5,
         ease:            'power3.out'
       };
-      // Solo gestionar opacity tras el reveal inicial
       if (revealDone || d === 0) tweenProps.opacity = 1;
       gsap.to(col, tweenProps);
     });
@@ -443,7 +438,6 @@ layout: base-clean.njk
     nextBtn.disabled = active === totalCols - 1;
     updateFooterInView();
 
-    // Actualizar etiqueta de botones solo cuando la sección cambia
     if (index !== prevActive) updateNavLabels(active, direction);
   }
 
@@ -456,9 +450,8 @@ layout: base-clean.njk
     resizeT = setTimeout(() => { setActive(active); resizeT = null; }, 100);
   });
 
-  // -----------------------------
-  // 4) Drag / Swipe horizontal (Pointer Events — funciona en mouse y touch)
-  // -----------------------------
+  // Registra los listeners de Pointer Events para el drag/swipe horizontal.
+  // Distingue entre un tap corto (navega por la zona peek) y un arrastre real.
   function initDrag() {
     const SWIPE_PX      = 70;
     const DRAG_START_PX = 8;
@@ -469,6 +462,7 @@ layout: base-clean.njk
     let lastDragDelta = 0;
     let pointerId = null;
 
+    // Libera el pointer capture para que el evento no quede bloqueado en dragWrap.
     function releaseCapture() {
       if (pointerId != null) {
         try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
@@ -476,6 +470,7 @@ layout: base-clean.njk
       }
     }
 
+    // Inicia el seguimiento del gesto: guarda la posición inicial y captura el puntero.
     function onDown(e) {
       if (e.button !== 0) return;
       if (e.target.closest?.('footer')) return;
@@ -495,6 +490,7 @@ layout: base-clean.njk
       e.preventDefault();
     }
 
+    // Mueve las columnas siguiendo el dedo/cursor. Descarta gestos principalmente verticales.
     function onMove(e) {
       if (!isDragging) return;
       lastClientX = e.clientX;
@@ -516,6 +512,8 @@ layout: base-clean.njk
       e.preventDefault();
     }
 
+    // Al soltar: decide si cambiar de sección (supera umbral de swipe o tap en zona peek)
+    // o volver a la posición actual.
     function finish() {
       releaseCapture();
       if (!isDragging) return;
@@ -525,10 +523,12 @@ layout: base-clean.njk
       const dy = lastClientY - startY;
 
       if (!started && Math.abs(dx) < 15 && Math.abs(dy) < 15) {
-        const { left, width } = dragWrap.getBoundingClientRect();
-        const relX = startX - left;
-        if (relX < PEEK && active > 0)                    return setActive(active - 1);
-        if (relX > width - PEEK && active < totalCols - 1) return setActive(active + 1);
+        if (isDesktop()) {
+          const { left, width } = dragWrap.getBoundingClientRect();
+          const relX = startX - left;
+          if (relX < PEEK && active > 0)                     return setActive(active - 1);
+          if (relX > width - PEEK && active < totalCols - 1) return setActive(active + 1);
+        }
         return;
       }
 
@@ -537,6 +537,7 @@ layout: base-clean.njk
       setActive(active);
     }
 
+    // Cancela el gesto (p.ej. llamada entrante en móvil) y vuelve a la sección activa.
     function cancel() {
       releaseCapture();
       if (!isDragging) return;
@@ -550,15 +551,12 @@ layout: base-clean.njk
     dragWrap.addEventListener('pointercancel', cancel,  { passive: true  });
   }
 
-  // -----------------------------
-  // 5) Init
-  // -----------------------------
   active = 0;
-  // Secciones inactivas y botón: invisibles hasta que termina la animación hero
+
   const HERO_DUR    = 0.8;
   const REVEAL_DUR  = 0.5;
   const REVEAL_EASE = 'power2.out';
-  const SLIDE_OFFSET = 30; // px de desplazamiento en la entrada
+  const SLIDE_OFFSET = 30;
 
   cols.forEach((col, i) => gsap.set(col, {
     x:               getNaturalX(i),
@@ -569,7 +567,6 @@ layout: base-clean.njk
     pointerEvents:   i === 0 ? 'auto' : 'none'
   }));
 
-  // Botón next oculto hasta el reveal
   gsap.set(nextBtn, { opacity: 0 });
   gsap.set([...prevTexts, ...nextTexts], { opacity: 0, y: 120 });
 
@@ -582,19 +579,15 @@ layout: base-clean.njk
     gsap.to(animBox,  { clipPath: 'inset(0% 0%)', duration: HERO_DUR, ease: 'power1.inOut' });
   }
 
-  // Reveal lateral: se dispara siempre tras HERO_DUR, independientemente de animBox
   gsap.delayedCall(HERO_DUR, () => {
     revealDone = true;
-    // Sección adyacente: entra desde la derecha
     if (cols[1]) {
       gsap.fromTo(cols[1],
         { opacity: 0, x: getNaturalX(1) + SLIDE_OFFSET },
         { opacity: 1, x: getNaturalX(1), duration: REVEAL_DUR, ease: REVEAL_EASE }
       );
     }
-    // Botón next: fade de entrada (solo si el footer no está visible)
     if (!btnsHidden) gsap.to(nextBtn, { opacity: 1, duration: REVEAL_DUR, ease: REVEAL_EASE });
-    // Texto del botón next para la sección 1 (active=0 → siguiente es índice 1)
     if (nextTexts[1]) {
       gsap.fromTo(nextTexts[1],
         { opacity: 0, y: 120 },
@@ -607,19 +600,20 @@ layout: base-clean.njk
   setActive(0);
   initDrag();
 
-  // 6b) Ocultar botones cuando el footer de la columna activa entra en pantalla (≥20 % visible)
+  // Oculta botones y secciones inactivas cuando el footer de la columna activa entra en pantalla
   (function() {
     const footers = document.querySelectorAll('#hg-home-main footer');
     if (!footers.length) return;
     const visibleFooters = new Set();
 
+    // Oculta o muestra botones y secciones inactivas según si el footer de la columna
+    // activa está visible. Evita animar si el estado ya era el mismo.
     function syncBtns() {
       const activeIndex = parseInt(row.dataset.active || '0', 10);
       const shouldHide = visibleFooters.has(footers[activeIndex]);
       if (shouldHide === btnsHidden) return;
       btnsHidden = shouldHide;
 
-      // Botones y secciones no activas a la vez
       const inactiveCols = cols.filter((_, i) => i !== activeIndex);
       gsap.to([prevBtn, nextBtn, ...inactiveCols], {
         opacity:       shouldHide ? 0 : 1,
