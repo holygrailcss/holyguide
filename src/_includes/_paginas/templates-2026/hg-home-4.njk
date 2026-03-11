@@ -288,6 +288,7 @@ layout: base-clean.njk
   const totalCols = cols.length;  // número de columnas detectado del DOM
   let active = -1;                // se inicializa en setActive(0)
   let updateFooterInView = function() {};
+  let btnsHidden = false;         // true cuando el footer del activo está en pantalla
 
   // ─── Nombres de las columnas ───────────────────────────────────────────────
   const COL_NAMES = [
@@ -304,7 +305,7 @@ layout: base-clean.njk
   const SVG_NEXT = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5791 12.832L9.87402 8L5.5791 3.16797L4.83105 3.83203L8.53516 8L4.83106 12.168L5.5791 12.832Z" fill="currentColor"/></svg>`;
   prevBtn.innerHTML = '';
   nextBtn.innerHTML = '';
-  cols.forEach((col, i) => {
+  cols.forEach((_, i) => {
     const label = COL_NAMES[i] || `Section ${i + 1}`;
     prevBtn.insertAdjacentHTML('beforeend',
       `<div class="hg-home-nav-btn__text label-m ttu"><div class="hg-home-nav-btn__chevron" aria-hidden="true">${SVG_PREV}</div><div>${label}</div><div></div></div>`);
@@ -322,10 +323,6 @@ layout: base-clean.njk
     if (d === -1) return -(W - PEEK);  // borde derecho queda en x=PEEK
     if (d ===  1) return  (W - PEEK);  // borde izquierdo queda en x=W-PEEK
     return d < 0 ? -W * 3 : W * 3;
-  }
-
-  function getNaturalClip(i) {
-    return 'inset(0 0 0 0)';
   }
 
   function getNaturalScale(i)  { return i === active ? 1 : SCALE_INACTIVE; }
@@ -386,19 +383,28 @@ layout: base-clean.njk
     });
     if (!closest) return;
 
-    // Desplaza la columna con GSAP para centrar el link en el medio del viewport
-    const colRect  = col.getBoundingClientRect();
-    const linkRect = closest.getBoundingClientRect();
-    const centerOffset = (col.clientHeight - closest.offsetHeight) / 2;
-    const raw    = col.scrollTop + (linkRect.top - colRect.top) - centerOffset;
+    const isFirst   = closest === links[0];
+    const colRect   = col.getBoundingClientRect();
+    const linkRect  = closest.getBoundingClientRect();
     const maxScroll = col.scrollHeight - col.clientHeight;
+
+    let raw;
+    if (isFirst) {
+      // Primer slide más visible → scroll al top
+      raw = 0;
+    } else {
+      // Cualquier otro → centrar en el viewport
+      const centerOffset = (col.clientHeight - closest.offsetHeight) / 2;
+      raw = col.scrollTop + (linkRect.top - colRect.top) - centerOffset;
+    }
+
     const target = Math.max(0, Math.min(raw, maxScroll));
 
-    // Si ya está en posición (menos de 2px de diferencia tras clampear) no animar
     if (Math.abs(target - col.scrollTop) < 2) return;
-
     gsap.to(col, { scrollTop: target, duration: 0.3, ease: 'power2.out' });
   }
+
+  let revealDone = false; // true cuando termina la animación hero inicial
 
   function setActive(index) {
     if (index < 0 || index >= totalCols) return;
@@ -415,24 +421,22 @@ layout: base-clean.njk
       scrollActiveToTopLink(cols[prevActive]);
     }
 
-    // La sección que entra arranca siempre desde el top
-    if (prevActive !== active) {
-      gsap.set(cols[active], { scrollTop: 0 });
-    }
 
     // Posicionar secciones: activa centrada, adyacentes con peek de 70px, resto fuera
     cols.forEach((col, i) => {
       const d = i - active;
-      gsap.set(col, { transformOrigin: getNaturalOrigin(i) });
-      gsap.to(col, {
-        x:            getNaturalX(i),
-        clipPath:     getNaturalClip(i),
-        scale:        getNaturalScale(i),
-        zIndex:       d === 0 ? 1000 : 100,
-        pointerEvents: d === 0 ? 'auto' : 'none',
-        duration:     0.5,
-        ease:         'power3.out'
-      });
+      const tweenProps = {
+        x:               getNaturalX(i),
+        scale:           getNaturalScale(i),
+        transformOrigin: getNaturalOrigin(i),
+        zIndex:          d === 0 ? 1000 : 100,
+        pointerEvents:   d === 0 ? 'auto' : 'none',
+        duration:        0.5,
+        ease:            'power3.out'
+      };
+      // Solo gestionar opacity tras el reveal inicial
+      if (revealDone || d === 0) tweenProps.opacity = 1;
+      gsap.to(col, tweenProps);
     });
 
     prevBtn.disabled = active === 0;
@@ -448,232 +452,194 @@ layout: base-clean.njk
 
   let resizeT = null;
   window.addEventListener('resize', () => {
-    if (resizeT) clearTimeout(resizeT);
-    resizeT = setTimeout(() => {
-      setActive(active);
-      cols.forEach(updateBoxOpacity);
-      resizeT = null;
-    }, 100);
+    clearTimeout(resizeT);
+    resizeT = setTimeout(() => { setActive(active); resizeT = null; }, 100);
   });
 
   // -----------------------------
-  // 3) Fade de boxes al hacer scroll dentro de cada columna
-  //    (aparece progresivo al entrar por abajo)
-  // -----------------------------
-  const fadeStartRatio = 0.001;
-
-  function updateBoxOpacity(col) {
-    const colRect = col.getBoundingClientRect();
-    const fadeStartPx = colRect.height * fadeStartRatio;
-
-    col.querySelectorAll('.hg-home-box').forEach(box => {
-      const boxRect = box.getBoundingClientRect();
-      const boxTopInsideCol = boxRect.top - colRect.top;
-      const boxHeight = boxRect.height;
-
-      // misma fórmula que tenías, pero con nombres más claros
-      const opacity = Math.min(1, Math.max(0,
-        (boxTopInsideCol + boxHeight) / (fadeStartPx + boxHeight)
-      ));
-
-      box.style.opacity = String(opacity);
-    });
-  }
-
-  function initScrollFade() {
-    cols.forEach(col => {
-      col.addEventListener('scroll', () => updateBoxOpacity(col));
-      updateBoxOpacity(col);
-    });
-  }
-
-  // -----------------------------
-  // 4) Drag / Swipe horizontal (pointer + touch para móvil)
-  //    - Usamos última posición conocida en finish() porque en móvil pointerup puede traer (0,0)
+  // 4) Drag / Swipe horizontal (Pointer Events — funciona en mouse y touch)
   // -----------------------------
   function initDrag() {
-    if (!dragWrap) return;
-
-    const SWIPE_PX = 70;
+    const SWIPE_PX      = 70;
     const DRAG_START_PX = 8;
 
-    let isDragging = false;
-    let started = false;
+    let isDragging = false, started = false;
     let startX = 0, startY = 0;
     let lastClientX = 0, lastClientY = 0;
     let lastDragDelta = 0;
     let pointerId = null;
 
-    function getCoords(e) {
-      if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
-      if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
-      return { x: e.clientX, y: e.clientY };
+    function releaseCapture() {
+      if (pointerId != null) {
+        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
+        pointerId = null;
+      }
     }
 
     function onDown(e) {
-      if (e.type === 'pointerdown' && e.button !== 0) return;
-      if (e.target.closest && e.target.closest('footer')) return;
+      if (e.button !== 0) return;
+      if (e.target.closest?.('footer')) return;
 
-      const coords = getCoords(e);
-      isDragging = true;
-      started = false;
-
-      startX = coords.x;
-      startY = coords.y;
-      lastClientX = coords.x;
-      lastClientY = coords.y;
-
+      isDragging    = true;
+      started       = false;
+      startX        = lastClientX = e.clientX;
+      startY        = lastClientY = e.clientY;
       lastDragDelta = 0;
+
       gsap.killTweensOf(cols);
-      cols.forEach(col => gsap.set(col, { clipPath: 'inset(0 0 0 0)' }));
 
       pointerId = e.pointerId ?? null;
       if (pointerId != null) {
         try { dragWrap.setPointerCapture(pointerId); } catch (_) {}
       }
-
       e.preventDefault();
     }
 
     function onMove(e) {
       if (!isDragging) return;
+      lastClientX = e.clientX;
+      lastClientY = e.clientY;
 
-      const coords = getCoords(e);
-      lastClientX = coords.x;
-      lastClientY = coords.y;
-
-      const dx = coords.x - startX;
-      const dy = coords.y - startY;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
 
       if (!started) {
-        if (Math.abs(dx) > DRAG_START_PX || Math.abs(dy) > DRAG_START_PX) {
-          started = Math.abs(dx) >= Math.abs(dy);
-          if (!started) { isDragging = false; return; }
-        } else {
-          return;
-        }
+        if (Math.abs(dx) <= DRAG_START_PX && Math.abs(dy) <= DRAG_START_PX) return;
+        started = Math.abs(dx) >= Math.abs(dy);
+        if (!started) { isDragging = false; return; }
       }
 
       const maxR = active * colWidth();
       const maxL = (totalCols - 1 - active) * colWidth();
       lastDragDelta = Math.max(-maxL, Math.min(maxR, dx));
       cols.forEach((col, i) => gsap.set(col, { x: getNaturalX(i) + lastDragDelta }));
-
       e.preventDefault();
     }
 
-    function finish(e) {
-      if (pointerId != null) {
-        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
-      }
-      pointerId = null;
-
+    function finish() {
+      releaseCapture();
       if (!isDragging) return;
       isDragging = false;
 
       const dx = lastClientX - startX;
       const dy = lastClientY - startY;
 
-      // Tap en zona peek (100px fijos a cada lado)
       if (!started && Math.abs(dx) < 15 && Math.abs(dy) < 15) {
-        const wrapRect = dragWrap.getBoundingClientRect();
-        const relX = startX - wrapRect.left;
-        if (relX < PEEK && active > 0) { setActive(active - 1); return; }
-        if (relX > wrapRect.width - PEEK && active < totalCols - 1) { setActive(active + 1); return; }
+        const { left, width } = dragWrap.getBoundingClientRect();
+        const relX = startX - left;
+        if (relX < PEEK && active > 0)                    return setActive(active - 1);
+        if (relX > width - PEEK && active < totalCols - 1) return setActive(active + 1);
+        return;
       }
 
-      if (started) {
-        if (lastDragDelta > SWIPE_PX)  return setActive(active - 1);
-        if (lastDragDelta < -SWIPE_PX) return setActive(active + 1);
-      }
-
+      if (lastDragDelta > SWIPE_PX)  return setActive(active - 1);
+      if (lastDragDelta < -SWIPE_PX) return setActive(active + 1);
       setActive(active);
     }
 
-    function cancel(e) {
-      if (pointerId != null) {
-        try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
-      }
-      pointerId = null;
-
+    function cancel() {
+      releaseCapture();
       if (!isDragging) return;
       isDragging = false;
-
       setActive(active);
     }
 
-    const useTouch = 'ontouchstart' in window;
-    if (useTouch) {
-      dragWrap.addEventListener('touchstart', onDown, { passive: false });
-      dragWrap.addEventListener('touchmove', onMove, { passive: false });
-      dragWrap.addEventListener('touchend', finish, { passive: false });
-      dragWrap.addEventListener('touchcancel', cancel, { passive: false });
-    } else {
-      dragWrap.addEventListener('pointerdown', onDown, { passive: false });
-      dragWrap.addEventListener('pointermove', onMove, { passive: false });
-      dragWrap.addEventListener('pointerup', finish, { passive: true });
-      dragWrap.addEventListener('pointercancel', cancel, { passive: true });
-    }
+    dragWrap.addEventListener('pointerdown',   onDown,  { passive: false });
+    dragWrap.addEventListener('pointermove',   onMove,  { passive: false });
+    dragWrap.addEventListener('pointerup',     finish,  { passive: true  });
+    dragWrap.addEventListener('pointercancel', cancel,  { passive: true  });
   }
 
   // -----------------------------
-  // 5) Resize: ver manejador con debounce (100 ms) más arriba
+  // 5) Init
   // -----------------------------
+  active = 0;
+  // Secciones inactivas y botón: invisibles hasta que termina la animación hero
+  const HERO_DUR    = 0.8;
+  const REVEAL_DUR  = 0.5;
+  const REVEAL_EASE = 'power2.out';
+  const SLIDE_OFFSET = 30; // px de desplazamiento en la entrada
 
-  // -----------------------------
-  // 6) Init
-  // -----------------------------
-  // posición inicial de columnas para active=0 (sin animación)
-  (() => {
-    const W = colWidth();
-    cols.forEach((col, i) => gsap.set(col, {
-      x:             i === 0 ? 0 : i === 1 ? W - PEEK : W * 3,
-      clipPath:      'inset(0 0 0 0)',
-      scale:         i === 0 ? 1 : SCALE_INACTIVE,
-      transformOrigin: i === 0 ? 'center center' : i === 1 ? 'left center' : 'center center',
-      zIndex:        i === 0 ? 1000 : 100,
-      pointerEvents: i === 0 ? 'auto' : 'none'
-    }));
-  })();
-  // etiquetas de navegación: todas ocultas; setActive(0) las inicializa
+  cols.forEach((col, i) => gsap.set(col, {
+    x:               getNaturalX(i),
+    scale:           getNaturalScale(i),
+    transformOrigin: getNaturalOrigin(i),
+    opacity:         i === 0 ? 1 : 0,
+    zIndex:          i === 0 ? 1000 : 100,
+    pointerEvents:   i === 0 ? 'auto' : 'none'
+  }));
+
+  // Botón next oculto hasta el reveal
+  gsap.set(nextBtn, { opacity: 0 });
   gsap.set([...prevTexts, ...nextTexts], { opacity: 0, y: 120 });
-  // estado inicial del box animado: pequeño desde el centro
-  // Reveal con clip-path desde el centro: imagen siempre a tamaño natural, sin deformación
-  // El inset se calcula para que el área inicial sea ~400×400px
+
   const animBox = document.querySelector('.hg-home-box-animated');
-  const animRect = animBox.getBoundingClientRect();
-  const initInsetX = Math.max(0, (animRect.width  - 150) / 2 / animRect.width  * 100).toFixed(2);
-  const initInsetY = Math.max(0, (animRect.height - 150) / 2 / animRect.height * 100).toFixed(2);
-  gsap.set('.hg-home-box-animated', { clipPath: `inset(${initInsetY}% ${initInsetX}%)` });
+  if (animBox) {
+    const r  = animBox.getBoundingClientRect();
+    const ix = Math.max(0, (r.width  - 150) / 2 / r.width  * 100).toFixed(2);
+    const iy = Math.max(0, (r.height - 150) / 2 / r.height * 100).toFixed(2);
+    gsap.set(animBox, { clipPath: `inset(${iy}% ${ix}%)` });
+    gsap.to(animBox,  { clipPath: 'inset(0% 0%)', duration: HERO_DUR, ease: 'power1.inOut' });
+  }
+
+  // Reveal lateral: se dispara siempre tras HERO_DUR, independientemente de animBox
+  gsap.delayedCall(HERO_DUR, () => {
+    revealDone = true;
+    // Sección adyacente: entra desde la derecha
+    if (cols[1]) {
+      gsap.fromTo(cols[1],
+        { opacity: 0, x: getNaturalX(1) + SLIDE_OFFSET },
+        { opacity: 1, x: getNaturalX(1), duration: REVEAL_DUR, ease: REVEAL_EASE }
+      );
+    }
+    // Botón next: fade de entrada (solo si el footer no está visible)
+    if (!btnsHidden) gsap.to(nextBtn, { opacity: 1, duration: REVEAL_DUR, ease: REVEAL_EASE });
+    // Texto del botón next para la sección 1 (active=0 → siguiente es índice 1)
+    if (nextTexts[1]) {
+      gsap.fromTo(nextTexts[1],
+        { opacity: 0, y: 120 },
+        { opacity: 1, y: 0, duration: REVEAL_DUR, ease: REVEAL_EASE }
+      );
+      nextVis = 1;
+    }
+  });
+
   setActive(0);
-  initScrollFade();
   initDrag();
 
-  // 6b) Ocultar botones cuando el footer de la columna visible entra en pantalla (≥20 % visible)
+  // 6b) Ocultar botones cuando el footer de la columna activa entra en pantalla (≥20 % visible)
   (function() {
     const footers = document.querySelectorAll('#hg-home-main footer');
     if (!footers.length) return;
     const visibleFooters = new Set();
-    updateFooterInView = function() {
+
+    function syncBtns() {
       const activeIndex = parseInt(row.dataset.active || '0', 10);
-      const inView = visibleFooters.has(footers[activeIndex]);
-      document.body.classList.toggle('hg-footer-in-view', inView);
-      document.body.dataset.activeCol = String(activeIndex);
-    };
+      const shouldHide = visibleFooters.has(footers[activeIndex]);
+      if (shouldHide === btnsHidden) return;
+      btnsHidden = shouldHide;
+
+      // Botones y secciones no activas a la vez
+      const inactiveCols = cols.filter((_, i) => i !== activeIndex);
+      gsap.to([prevBtn, nextBtn, ...inactiveCols], {
+        opacity:       shouldHide ? 0 : 1,
+        pointerEvents: shouldHide ? 'none' : 'auto',
+        duration:      0.15,
+        ease:          'power2.out'
+      });
+    }
+
+    updateFooterInView = syncBtns;
+
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) visibleFooters.add(entry.target);
         else visibleFooters.delete(entry.target);
       });
-      updateFooterInView();
+      syncBtns();
     }, { threshold: 0.2 });
     footers.forEach(function(f) { observer.observe(f); });
   })();
-
-  // -----------------------------
-  // 7) Animación “hero” al segundo
-  // -----------------------------
-  gsap.to('.hg-home-box-animated', { clipPath: 'inset(0% 0%)', duration: 0.8, ease: 'power1.inOut' });
 })();
 </script>
 <script src="/assets/js/templates-2026.js"></script>

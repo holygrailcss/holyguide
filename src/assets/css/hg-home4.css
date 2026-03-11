@@ -127,7 +127,7 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
 }
 @media (min-width: 768px) {
   .hg-home-container4 .hg-home-nav-btn--prev {
-    left: -151px;
+    left: -149px;
   }
 }
 .hg-home-container4 .hg-home-nav-btn--next {
@@ -136,7 +136,7 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
 }
 @media (min-width: 768px) {
   .hg-home-container4 .hg-home-nav-btn--next {
-    right: -151px;
+    right: -149px;
   }
 }
 .hg-home-container4 .hg-home-row-cols-wrap {
