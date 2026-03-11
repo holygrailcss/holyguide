@@ -255,10 +255,11 @@
     align-items: center;
     justify-content: center;
     transition: opacity 0.25s ease-out;
-    padding-inline: 150px;
+    padding-inline: 0;
 
     @media (min-width: 768px) {
       min-height: 100vh;
+      padding-inline: 150px;
     }
   }
 

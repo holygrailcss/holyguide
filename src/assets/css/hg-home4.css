@@ -206,11 +206,12 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   align-items: center;
   justify-content: center;
   transition: opacity 0.25s ease-out;
-  padding-inline: 150px;
+  padding-inline: 0;
 }
 @media (min-width: 768px) {
   .hg-home-container4 .hg-home-box-2 {
     min-height: 100vh;
+    padding-inline: 150px;
   }
 }
 .hg-home-container4 .hg-home-box-animated-wrap {
