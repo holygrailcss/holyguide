@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-// Estilos fuera del contenedor principal (accesibilidad y wrapper del token)
-
-.hg-home-container2 {
-	--hg-home-col-width: calc(100vw );
-	--hg-home-row-width: calc(300vw );
-  --hg-home-nav-btn-prev-next: -8px;
-  }
-
-
-
 .hg-skip-link {
   position: absolute;
   left: -9999px;
@@ -33,63 +23,10 @@
   }
 }
 
-.templates-2026-home {
-  --hg-home-bg: var(--hg-color-white, #fff);
-  --hg-home-text: var(--hg-color-primary, #000);
-  --hg-home-spacing: var(--hg-spacing-16, 16px);
-  --hg-home-radius: var(--hg-radius-md, 8px);
-  min-height: 100%;
-  background-color: var(--hg-home-bg);
-  color: var(--hg-home-text);
-
-  .hg-home-hero {
-    padding: var(--hg-spacing-32, 32px) var(--hg-home-spacing);
-    text-align: center;
-    background-color: var(--hg-color-light-grey, #f5f5f5);
-  }
-
-  .hg-home-section {
-    padding: var(--hg-spacing-24, 24px) var(--hg-home-spacing);
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hg-home-title {
-    font-size: var(--hg-typo-font-size-fluid-6, clamp(1.5rem, 4vw, 3rem));
-    line-height: var(--hg-typo-line-height-tight, 1.2);
-    margin-bottom: var(--hg-home-spacing);
-  }
-
-  .hg-home-lead {
-    font-size: var(--hg-typo-font-size-16, 1rem);
-    line-height: 1.5;
-    color: var(--hg-color-dark-grey, #333);
-  }
-}
-
 // Contenedor principal: todo lo interno queda encapsulado aquí
 .hg-home-container4 {
   z-index: 100;
   position: relative;
-
-  // Estados de body que afectan a elementos internos
-  @at-root body.hg-footer-in-view & .hg-home-nav-btn {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  @at-root body.hg-footer-in-view & #hg-home-row-cols .hg-home-row-cols__col {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-
-    &.is-active {
-      opacity: 1;
-      pointer-events: auto;
-      visibility: visible;
-    }
-  }
 
   @at-root {
     body.is-rtl & .hg-home-row-cols-wrap,
@@ -97,8 +34,6 @@
       direction: ltr;
     }
   }
-
-
 
   // Wrapper de columnas
   .hg-home-row-cols-wrap {
@@ -124,7 +59,7 @@
     flex: 1 1 0;
   }
 
-  // Columna individual — apiladas, GSAP las mueve con x + clip-path
+  // Columna individual — apiladas, GSAP las mueve con x
   .hg-home-row-cols__col {
     position: absolute;
     top: 0;
@@ -197,7 +132,6 @@
   // Wrapper del box animado
   .hg-home-box-animated-wrap {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,49 +144,15 @@
 
     img {
       width: 100vw;
-
       object-fit: cover;
     }
   }
 
   .hg-header .hg-header-logo {
-
     margin-left: 150px;
-
   }
-}
 
-.hg-home-special-full {
-padding-inline: 0;
-background: white;
-@media (min-width: 768px) {
-  padding-inline: 0;
-}
-
-
-}
-
-.hg-home-special-cutout { 
-  padding-inline: 50px;
-
-  @media (min-width: 768px) {
-    padding-inline: 150px;
-  }
-}
-
-.hg-home-box-label{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-	right: 0;
-
-	color: white;
-	font-size: 10vw;
-	font-weight: bold;
-}
-
-
-  // Botones de navegación
+  // Botones de navegación — transform y posición gestionados por GSAP
   .hg-home-nav-btn {
     position: fixed;
     top: 50%;
@@ -265,7 +165,6 @@ background: white;
     overflow: hidden;
     width: 30%;
     min-width: 250px;
-
     transition:
       opacity 0.2s,
       background-color 0.2s;
@@ -287,7 +186,7 @@ background: white;
     }
 
     &__text {
-      grid-area: 1 / 1;    // todos los spans en la misma celda → se superponen
+      grid-area: 1 / 1;
       text-align: center;
       white-space: nowrap;
       width: 100%;
@@ -296,14 +195,36 @@ background: white;
       justify-content: space-between;
     }
 
+    // Contrarresta el rotate(-90deg) del botón para que el chevron quede orientado en pantalla
     &__chevron {
       display: inline-block;
-      // Contrarresta el rotate(-90deg) del botón → el chevron queda orientado correctamente en pantalla
       transform: rotate(90deg);
       font-style: normal;
     }
-
   }
+}
 
+// Tipos de sección
 
+.hg-home-special-full {
+  padding-inline: 0;
+  background: white;
+}
 
+.hg-home-special-cutout {
+  padding-inline: 50px;
+
+  @media (min-width: 768px) {
+    padding-inline: 150px;
+  }
+}
+
+.hg-home-box-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: white;
+  font-size: 10vw;
+  font-weight: bold;
+}
