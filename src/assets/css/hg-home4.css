@@ -199,6 +199,7 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   justify-content: center;
   transition: opacity 0.25s ease-out;
   padding-inline: 150px;
+  min-height: 100vh;
 }
 .hg-home-container4 .hg-home-box-animated-wrap {
   width: 100vw;

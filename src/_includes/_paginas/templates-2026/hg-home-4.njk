@@ -264,6 +264,28 @@ layout: base-clean.njk
   // -----------------------------
   // 3) Navegación / animación
   // -----------------------------
+
+  // Al terminar la transición, sube el hg-home-box-link más próximo al top del viewport
+  function scrollActiveToTopLink(col) {
+    const links = [...col.querySelectorAll('.hg-home-box-link')];
+    if (!links.length) return;
+
+    // Busca el link cuyo top esté más cercano a 0 (borde superior del viewport)
+    let closest = null, minDist = Infinity;
+    links.forEach(link => {
+      const dist = Math.abs(link.getBoundingClientRect().top);
+      if (dist < minDist) { minDist = dist; closest = link; }
+    });
+    if (!closest) return;
+
+    // Desplaza la columna con GSAP para centrar el link en el medio del viewport
+    const colRect  = col.getBoundingClientRect();
+    const linkRect = closest.getBoundingClientRect();
+    const centerOffset = (col.clientHeight - closest.offsetHeight) / 2;
+    const target = col.scrollTop + (linkRect.top - colRect.top) - centerOffset;
+    gsap.to(col, { scrollTop: target, duration: 0.3, ease: 'power2.out' });
+  }
+
   function setActive(index) {
     if (index < 0 || index >= totalCols) return;
     const direction   = index > active ? 1 : -1;
@@ -274,7 +296,12 @@ layout: base-clean.njk
     document.body.dataset.activeCol = String(active);
     cols.forEach((col, i) => col.classList.toggle('is-active', i === active));
 
-    // Posicionar secciones: activa centrada, adyacentes con peek de 100px, resto fuera
+    // Scroll de la sección que sale al inicio de la transición
+    if (prevActive >= 0 && prevActive !== active) {
+      scrollActiveToTopLink(cols[prevActive]);
+    }
+
+    // Posicionar secciones: activa centrada, adyacentes con peek de 70px, resto fuera
     cols.forEach((col, i) => {
       const d = i - active;
       gsap.set(col, { transformOrigin: getNaturalOrigin(i) });
