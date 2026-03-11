@@ -102,7 +102,6 @@
   .hg-home-nav-btn {
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 9999;
     padding: 16px 12px;
     cursor: pointer;
@@ -110,8 +109,7 @@
     justify-content: stretch;
     place-items: center;
     overflow: hidden;
-
-    width: 60vh;
+    width: 30%;
 
     transition:
       opacity 0.2s,
@@ -150,23 +148,6 @@
       font-style: normal;
     }
 
-    &--prev {
-      left: -234px;
-      transform: rotate(-90deg);
-
-      @media (min-width: 768px) {
-        left: -149px;
-      }
-    }
-
-    &--next {
-      right: -237px;
-      transform: rotate(-90deg);
-
-      @media (min-width: 768px) {
-        right: -149px;
-      }
-    }
   }
 
   // Wrapper de columnas
@@ -301,12 +282,12 @@ background: white;
 
 }
 
-.hg-home-special-cutout {
- padding-inline: 50px;
- 
- @media (min-width: 768px) {
-  padding-inline: 150px;
-}
+.hg-home-special-cutout { 
+  padding-inline: 50px;
+
+  @media (min-width: 768px) {
+    padding-inline: 150px;
+  }
 }
 
 .hg-home-box-label{
@@ -318,5 +299,10 @@ background: white;
 	color: white;
 	font-size: 10vw;
 	font-weight: bold;
+}
+
+.hg-home-container4 .hg-home-nav-btn--prev,
+.hg-home-container4 .hg-home-nav-btn--next {
+  top: 50%;
 }
 

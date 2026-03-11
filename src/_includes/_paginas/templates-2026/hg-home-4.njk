@@ -80,13 +80,13 @@ layout: base-clean.njk
       </section>
 
     <!-- full -->
-    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto hg-home-special-full" aria-label="Columna 3">
+    <section class="hg-home-row-cols__col hg-h-100-percent hg-min-h-0 hg-overflow-y-auto hg-home-special-cutout" aria-label="Columna 3">
       <ul class="list-clear hg-home-box-list hg-d-flex hg-flex-column hg-gap-y-24">
         <li>
           <a href="#" class="hg-home-box-link">
             <div class="hg-home-box">
               <img src="/assets/static/home/imagen_4.png" alt="Columna 2">
-              <div class="hg-home-box-label">Full</div>
+              <div class="hg-home-box-label">Cutout</div>
             </div>
           </a>
         </li>
@@ -324,6 +324,22 @@ layout: base-clean.njk
 
   if (!row || !prevBtn || !nextBtn) return;
 
+  const NAV_BTN_OFFSET_MOBILE = 20;
+  const NAV_BTN_OFFSET_DESKTOP = 112;
+  const NAV_BTN_BREAKPOINT = 768;
+
+  function positionNavBtns() {
+    const offset = window.innerWidth >= NAV_BTN_BREAKPOINT ? NAV_BTN_OFFSET_DESKTOP : NAV_BTN_OFFSET_MOBILE;
+    const wPrev = prevBtn.offsetWidth || window.innerWidth * 0.15;
+    const wNext = nextBtn.offsetWidth || window.innerWidth * 0.15;
+    prevBtn.style.left = `${offset}px`;
+    nextBtn.style.right = `${offset}px`;
+
+    gsap.set(prevBtn, { top: '50%', y: -wPrev / 2, rotation: -90, transformOrigin: 'left center' });
+    gsap.set(nextBtn, { top: '50%', y: -wNext / 2, rotation: -90, transformOrigin: 'right center' });
+  }
+  positionNavBtns();
+
   document.body.dataset.activeCol = row.dataset.active || '0';
 
   const cols      = [...row.querySelectorAll('.hg-home-row-cols__col')];
@@ -355,20 +371,24 @@ layout: base-clean.njk
 
   const colWidth       = () => window.innerWidth;
   const BREAKPOINT     = 992;
-  const PEEK           = 70;
+  const PEEK_CUTOUT    = 180;
+  const PEEK_FULL      = 70;
   const SCALE_INACTIVE = 2 / 3;
 
   const isDesktop = () => window.innerWidth >= BREAKPOINT;
 
+  const getPeek = (col) => col?.classList?.contains('hg-home-special-cutout') ? PEEK_CUTOUT : PEEK_FULL;
+
   // Devuelve la posición X de reposo de la columna i:
-  // En desktop: activa → 0, adyacentes → asoman PEEK px, resto → fuera de pantalla.
+  // En desktop: activa → 0, adyacentes → asoman PEEK px (200 si cutout, 70 si full), resto → fuera.
   // En mobile: todas las inactivas van completamente fuera de pantalla (sin peek).
   function getNaturalX(i) {
     const W = colWidth(), d = i - active;
     if (d === 0) return 0;
     if (isDesktop()) {
-      if (d === -1) return -(W - PEEK);
-      if (d ===  1) return  (W - PEEK);
+      const peek = getPeek(cols[i]);
+      if (d === -1) return -(W - peek);
+      if (d ===  1) return  (W - peek);
     }
     return d < 0 ? -W * 1.5 : W * 1.5;
   }
@@ -493,6 +513,7 @@ layout: base-clean.njk
   let resizeT = null;
   window.addEventListener('resize', () => {
     clearTimeout(resizeT);
+    positionNavBtns();
     resizeT = setTimeout(() => { setActive(active); resizeT = null; }, 100);
   });
 
@@ -572,8 +593,10 @@ layout: base-clean.njk
         if (isDesktop()) {
           const { left, width } = dragWrap.getBoundingClientRect();
           const relX = startX - left;
-          if (relX < PEEK && active > 0)                     return setActive(active - 1);
-          if (relX > width - PEEK && active < totalCols - 1) return setActive(active + 1);
+          const peekPrev = active > 0 ? getPeek(cols[active - 1]) : 0;
+          const peekNext = active < totalCols - 1 ? getPeek(cols[active + 1]) : 0;
+          if (relX < peekPrev && active > 0)                     return setActive(active - 1);
+          if (relX > width - peekNext && active < totalCols - 1) return setActive(active + 1);
         }
         return;
       }
