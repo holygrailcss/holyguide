@@ -151,7 +151,7 @@
     }
 
     &--prev {
-      left: -190px;
+      left: -234px;
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
@@ -160,7 +160,7 @@
     }
 
     &--next {
-      right: -190px;
+      right: -237px;
       transform: rotate(-90deg);
 
       @media (min-width: 768px) {
@@ -235,6 +235,7 @@
 
   // Box a pantalla completa
   .hg-home-box {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,6 +250,7 @@
 
   // Box secundario (sin altura fija)
   .hg-home-box-2 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
