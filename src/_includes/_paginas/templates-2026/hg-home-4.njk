@@ -623,6 +623,40 @@ layout: base-clean.njk
     dragWrap.addEventListener('pointercancel', cancel,  { passive: true  });
   }
 
+  // Navegación con trackpad horizontal (rueda/gesto de dos dedos en Mac).
+  // Captura eventos wheel horizontales y navega cuando el delta acumulado supera el umbral.
+  function initWheel() {
+    const WHEEL_THRESHOLD = 60;
+    const COOLDOWN_MS     = 600;
+    let accDelta   = 0;
+    let cooldown   = false;
+    let resetT     = null;
+
+    dragWrap.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+
+      if (cooldown) return;
+
+      accDelta += e.deltaX;
+
+      clearTimeout(resetT);
+      resetT = setTimeout(() => { accDelta = 0; }, 200);
+
+      if (accDelta > WHEEL_THRESHOLD) {
+        cooldown = true;
+        accDelta = 0;
+        setActive(active + 1);
+        setTimeout(() => { cooldown = false; }, COOLDOWN_MS);
+      } else if (accDelta < -WHEEL_THRESHOLD) {
+        cooldown = true;
+        accDelta = 0;
+        setActive(active - 1);
+        setTimeout(() => { cooldown = false; }, COOLDOWN_MS);
+      }
+    }, { passive: false });
+  }
+
   active = 0;
 
   const HERO_DUR    = 0.8;
@@ -671,6 +705,7 @@ layout: base-clean.njk
 
   setActive(0);
   initDrag();
+  initWheel();
 
   // Oculta botones y secciones inactivas cuando el footer de la columna activa entra en pantalla
   (function() {
