@@ -392,7 +392,7 @@ layout: base-clean.njk
       if (d === -1) return -(W - peek);
       if (d ===  1) return  (W - peek);
     }
-    return d < 0 ? -W * 1.5 : W * 1.5;
+    return d < 0 ? -W * 1.05 : W * 1.05;
   }
 
   // Devuelve la escala de reposo: 1 si es la activa, reducida si es inactiva.
