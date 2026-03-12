@@ -335,7 +335,7 @@ layout: base-clean.njk
     const adjust = (W - H) / 2;
     // En mobile: valor fijo directo (sin compensar adjust)
     // En desktop: compensa la rotación para que el borde visual quede a NAV_BTN_OFFSET_DESKTOP
-    const leftVal  = desktop ? NAV_BTN_OFFSET_DESKTOP - adjust        : NAV_BTN_OFFSET_MOBILE;
+    const leftVal  = desktop ? NAV_BTN_OFFSET_DESKTOP - adjust - 8    : NAV_BTN_OFFSET_MOBILE;
     const rightVal = desktop ? NAV_BTN_OFFSET_DESKTOP - adjust - 13   : NAV_BTN_OFFSET_MOBILE;
     gsap.set(prevBtn, { left: leftVal,  yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
     gsap.set(nextBtn, { right: rightVal, yPercent: -50, rotation: -90, transformOrigin: 'center center', overwrite: 'auto' });
