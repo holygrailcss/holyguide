@@ -19,21 +19,41 @@
   outline-offset: 2px;
 }
 
+.hg-home-container4 .hg-home-special-full {
+  padding-inline: 0;
+  background: white;
+}
+.hg-home-container4 .hg-home-special-cutout {
+  padding-inline: 50px;
+}
+@media (min-width: 768px) {
+  .hg-home-container4 .hg-home-special-cutout {
+    padding-inline: 150px;
+  }
+}
+.hg-home-container4 .hg-home-box-label {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 10vw;
+  font-weight: bold;
+}
 .hg-home-container4 {
-  z-index: 100;
   position: relative;
+  z-index: 100;
 }
 body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-container4 .hg-home-row-cols {
   direction: ltr;
 }
 
 .hg-home-container4 .hg-home-row-cols-wrap {
+  position: relative;
   flex: 1 1 0;
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline: 0;
 }
 .hg-home-container4 .hg-home-drag-wrap {
   cursor: grab;
@@ -83,15 +103,15 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   justify-content: center;
   transition: opacity 0.25s ease-out;
 }
-.hg-home-container4 .hg-home-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 @media (min-width: 768px) {
   .hg-home-container4 .hg-home-box {
     min-height: 100vh;
   }
+}
+.hg-home-container4 .hg-home-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hg-home-container4 .hg-home-box-2 {
   position: relative;
@@ -132,7 +152,6 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   cursor: pointer;
   display: grid;
   justify-content: stretch;
-  place-items: center;
   overflow: hidden;
   width: 30%;
   min-width: 250px;
@@ -164,28 +183,4 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   display: inline-block;
   transform: rotate(90deg);
   font-style: normal;
-}
-
-.hg-home-special-full {
-  padding-inline: 0;
-  background: white;
-}
-
-.hg-home-special-cutout {
-  padding-inline: 50px;
-}
-@media (min-width: 768px) {
-  .hg-home-special-cutout {
-    padding-inline: 150px;
-  }
-}
-
-.hg-home-box-label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  color: white;
-  font-size: 10vw;
-  font-weight: bold;
 }
