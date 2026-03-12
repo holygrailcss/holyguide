@@ -88,6 +88,11 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   height: 100%;
   object-fit: cover;
 }
+@media (min-width: 768px) {
+  .hg-home-container4 .hg-home-box {
+    min-height: 100vh;
+  }
+}
 .hg-home-container4 .hg-home-box-2 {
   position: relative;
   display: flex;

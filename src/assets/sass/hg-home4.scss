@@ -112,6 +112,10 @@
       height: 100%;
       object-fit: cover;
     }
+    @media (min-width: 768px) {
+      min-height: 100vh;
+
+    }
   }
 
   // Box secundario (sin altura fija)
