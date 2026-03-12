@@ -542,7 +542,8 @@ layout: base-clean.njk
 
     // Inicia el seguimiento del gesto: guarda la posición inicial y captura el puntero.
     function onDown(e) {
-      if (e.button !== 0) return;
+      if (e.button > 1) return;
+      if (!e.isPrimary) return;
       if (e.target.closest?.('footer')) return;
 
       isDragging    = true;
@@ -557,7 +558,9 @@ layout: base-clean.njk
       if (pointerId != null) {
         try { dragWrap.setPointerCapture(pointerId); } catch (_) {}
       }
-      e.preventDefault();
+      if (e.pointerType === 'mouse') {
+        e.preventDefault();
+      }
     }
 
     // Mueve las columnas siguiendo el dedo/cursor. Descarta gestos principalmente verticales.
