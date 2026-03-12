@@ -73,6 +73,7 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  touch-action: pan-y;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
