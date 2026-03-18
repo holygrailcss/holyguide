@@ -29,8 +29,10 @@
     background: white;
   }
   .hg-home-special-cutout {
+    padding-top: 150px;
     padding-inline: 50px;
     @media (min-width: 768px) {
+      padding-top: 0;
       padding-inline: 150px;
     }
   }
