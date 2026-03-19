@@ -3,22 +3,22 @@
   --hg-menu-panel-z-index: calc(var(--hg-header-z-index) + 1);
   --hg-menu-panel-width: 100%;
   --hg-menu-panel-max-width: none;
-  --hg-menu-panel-transition: all 0.3s ease-in-out;
+  --hg-menu-panel-transition: all 0.4s cubic-bezier(0.25, 0, 0, 1);
   --hg-menu-panel-inset-block-start: var(--hg-header-min-height);
   --hg-menu-panel-padding-inline: var(--hg-spacing-20);
   --hg-menu-panel-box-shadow: none;
 
   --hg-menu-panel-backdrop-bg-color: rgba(255, 255, 255, 0.3);
-  --hg-menu-panel-backdrop-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  --hg-menu-panel-backdrop-transition: opacity 0.4s cubic-bezier(0.25, 0, 0, 1), visibility 0.4s cubic-bezier(0.25, 0, 0, 1);
 
   --hg-menu-panel-header-min-height: var(--hg-spacing-48);
   --hg-menu-panel-header-padding-block: var(--hg-spacing-24) 0;
   --hg-menu-panel-header-actions-min-height: var(--hg-header-min-height);
 
-  --hg-menu-panel-media-transition: all 0.3s ease-in-out;
+  --hg-menu-panel-media-transition: all 0.4s cubic-bezier(0.25, 0, 0, 1);
 
   --hg-menu-column-cat-width: var(--hg-spacing-128);
-  --hg-menu-column-transition: all 0.3s ease-in-out;
+  --hg-menu-column-transition: all 0.4s cubic-bezier(0.25, 0, 0, 1);
 }
 
 @media (min-width: 62rem) {
