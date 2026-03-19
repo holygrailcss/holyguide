@@ -10,9 +10,10 @@
                 </a>
           <div class="article-text mt-24">
               <div class="mb-16">
-                <h4 class=" ttu bold "><a href="{{ component.data.titulo }}">{{ component.data.titulo }}  </a></h4>
-
-     
+                <h4 class="ttu bold article-title-with-badge">
+                  <a href="{{ component.data.titulo }}">{{ component.data.titulo }}</a>
+                  {% if component.data.badge %}<span class="nav-badge nav-badge--{{ component.data.badge }}">{{ component.data.badge }}</span>{% endif %}
+                </h4>
 
                   <div class="article-content">
              <p >{{ component.data.descripcion }}</p></div>

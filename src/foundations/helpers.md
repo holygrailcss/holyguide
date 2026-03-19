@@ -2,8 +2,9 @@
 layout: _paginas/foundations/_foundations.njk
 permalink: /helpers/
 titulo: Helpers
-descripcion: Helpers para developers
-date: Last Modified
+descripcion: Clases de utilidad para colores, fondos, posicionamiento, tipografía, scroll, visibilidad y más.
+page_section: foundations
+date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]
 image: /assets/static/components/helpers.jpg

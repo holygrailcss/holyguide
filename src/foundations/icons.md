@@ -3,8 +3,9 @@ layout: _paginas/foundations/_icons.njk
 permalink: /icons/
 
 titulo: Iconos
-descripcion:
+descripcion: Sistema de iconos SVG mediante el componente svg-icon2. Proceso de incorporación, uso en Angular y consideraciones de mantenimiento.
 
+page_section: foundations
 date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]
@@ -12,36 +13,57 @@ image: /assets/static/components/icons.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
 
-## Proceso de añadir ícono
+## Componente `svg-icon2`
 
-> **Contacto con el Diseñador**: Acude al responsable de diseño especializado en la creación de diseños. Él nos proporcionará el código SVG del ícono.
-> Claro, aquí tienes una versión simplificada del contenido:
+Los iconos del proyecto se gestionan mediante el componente Angular `svg-icon2`, que carga SVGs almacenados en Base64 dentro de un archivo JSON. Esto evita peticiones HTTP por cada icono y optimiza el rendimiento.
 
-### Guía de Uso del Componente `svg-icon2` en Angular
+### Ventajas
 
-## Ventajas
+- Sin peticiones HTTP por icono
+- Caché automático del JSON completo
+- Actualización global cambiando un solo archivo
+- Nombres descriptivos y ordenados
 
-- Eficiencia en la carga
-- Rendimiento optimizado
-- Facilidad de uso
-
-## Uso Básico
+### Uso básico
 
 ```html
+<!-- Icono de la categoría "common" llamado "check" -->
 <svg-icon2 category="common" src="check"></svg-icon2>
+
+<!-- Con tamaño personalizado -->
+<svg-icon2 category="common" src="arrow-right" class="icon-24"></svg-icon2>
 ```
 
-## Proceso para Añadir o Actualizar Íconos
+---
 
-1. Obtener SVG del diseñador
-2. Convertir a Base64
-3. Actualizar JSON: `{ "nombreicono": "icono en base 64" }`
-4. Ordenar alfabéticamente con extension alphabetical sorter
-5. Incorporar al proyecto
-6. Notificar al Lead de UX Layout
+## Proceso para añadir un ícono nuevo
 
-## Consideraciones
+| Paso | Acción |
+|---|---|
+| **1** | Contactar al diseñador responsable para obtener el SVG |
+| **2** | Verificar que el SVG es limpio (sin rellenos hardcoded, usar `currentColor` si se necesita color dinámico) |
+| **3** | Convertir el SVG a Base64 ([herramienta online](https://www.base64encode.org/)) |
+| **4** | Abrir el JSON de iconos correspondiente a su categoría |
+| **5** | Añadir la entrada: `"nombre-icono": "data:image/svg+xml;base64,..."` |
+| **6** | Ordenar alfabéticamente (usar la extensión *Alphabetical Sorter* de VS Code) |
+| **7** | Notificar al Lead de UX/Layout |
 
-- Mantener JSON organizado
-- Usar nombres descriptivos
-- Actualización automática en toda la aplicación
+---
+
+## Consideraciones de mantenimiento
+
+- Mantener el JSON ordenado alfabéticamente para facilitar búsquedas
+- Usar nombres en **kebab-case** descriptivos: `arrow-right`, `check-circle`, `close`
+- No duplicar iconos ya existentes — buscar antes de añadir
+- Al actualizar un icono, el cambio se propaga automáticamente a toda la aplicación
+- Los iconos se agrupan por categorías (`common`, `navigation`, `social`, etc.)
+
+---
+
+## Tamaños de icono
+
+Los iconos usan por defecto el tamaño definido en `$svg-size: 16px`. Se puede sobreescribir con clases o estilos inline.
+
+```html
+<svg-icon2 category="common" src="check" style="width: 24px; height: 24px;"></svg-icon2>
+```

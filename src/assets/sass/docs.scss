@@ -878,3 +878,36 @@ blockquote {
   border-left: 4px solid $c-primary;
   margin: 20px 0;
 }
+
+// Badge en títulos de cards
+.article-title-with-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+// Badge de navegación (new, updated, etc.)
+.nav-loop-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: middle;
+  flex-shrink: 0;
+
+  &--new     { background: #1a7a3c; color: #fff; }
+  &--updated { background: #1a5e99; color: #fff; }
+  &--beta    { background: #7c3aed; color: #fff; }
+  &--wip     { background: #b45309; color: #fff; }
+}

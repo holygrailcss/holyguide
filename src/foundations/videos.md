@@ -3,54 +3,68 @@ layout: _paginas/foundations/_foundations.njk
 permalink: /videos/
 
 titulo: Videos
-descripcion: Videos tipo background
+descripcion: Guía de vídeos en loop para background — formatos, peso máximo, frame rate y canal de audio.
 
-date: Last Modified
+page_section: foundations
+date: 2023-06-19
+fecha: 19 de junio de 2023
 
 tags: ["Estructuras modulares", "web design", "foundations"]
 image: /assets/static/components/videos.jpg
 ---
 
-## Intro
+## Uso básico
 
-Si queremos que los videos se inicien en `autoplay`, deberemos forzarlo con la etiqueta `muted y playsinline` . figma
-
-        <video width="100%" autoplay loop muted playsinline>
-            <source src="https://vjs.zencdn.net/v/oceans.mp-m" type="video/mp-m">
-            <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-
-          </video>
+Para que los vídeos se inicien en `autoplay`, es obligatorio añadir los atributos `muted` y `playsinline`.
 
 ```html
 <video autoplay loop muted playsinline>
-  <source src="https://vjs.zencdn.net/v/oceans.mp-m" type="video/mp-m" />
-  <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+  <source src="/assets/video/hero.mp4" type="video/mp4" />
+  <source src="/assets/video/hero.webm" type="video/webm" />
 </video>
 ```
 
-**Todo vídeo deberá seguir las siguientes pautas en la creación del mismo**
+**Todo vídeo deberá seguir las siguientes pautas:**
 
-> TRUCO:
-> Uno de los mejores compresores del mercado es handbrake, además es gratuito.
-
-[Link a handbrake ](https://handbrake.fr/)
+---
 
 ## Duración
 
 Nunca deberá superar los **6 segundos** de vídeo en loop.
 
-Si queremos insertar un vídeo de una duración superior con audio, deberemos abrir una modal con un visualizador minimalista con la finalidad de no entorpecer la navegación al usuario y poder disfrutar de la totalidad del vídeo.
-Formato :
-Se entregarán dos versiones como mínimo. **mp-m y webm**, la versión ogg es opcional. Para ello usaremos Handbrake como herramienta de compresión .
+Si se necesita un vídeo de mayor duración con audio, se debe abrir en una modal con un visualizador minimalista para no interrumpir la navegación.
+
+## Formatos
+
+Se entregarán **dos versiones como mínimo**: `mp4` y `webm`. La versión `ogg` es opcional.
+
+| Formato | Compatibilidad | Notas |
+|---|---|---|
+| `.mp4` (H.264) | Todos los navegadores | Obligatorio |
+| `.webm` (VP9) | Chrome, Firefox, Edge | Obligatorio |
+| `.ogg` | Firefox | Opcional |
+
+> **Herramienta recomendada**: [Handbrake](https://handbrake.fr/) — compresor gratuito y de los mejores del mercado.
 
 ## Peso
 
-Un vídeo en loop no deberia superar los **6 mb**, ya que más bloquearia y ralentizará la web.
+Un vídeo en loop **no debería superar los 6 MB**. Por encima de ese peso bloqueará y ralentizará la web.
 
 ## Frame rate
 
-Usaremos framerates de **24 fps / 30 fps**
+Usar framerates de **24 fps** o **30 fps**.
 
 ## Canal de audio
 
-Si no tiene sonido, deberemos eliminar el canal de audio a la hora de exportar
+Si el vídeo no tiene sonido, **eliminar el canal de audio** en la exportación para reducir el peso del archivo.
+
+## Tabla de especificaciones
+
+| Parámetro | Valor recomendado |
+|---|---|
+| Duración máxima en loop | 6 segundos |
+| Peso máximo | 6 MB |
+| Frame rate | 24 fps / 30 fps |
+| Formatos mínimos | mp4 + webm |
+| Atributos HTML | `autoplay loop muted playsinline` |
+| Audio en vídeo mudo | Eliminar canal de audio |

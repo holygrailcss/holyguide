@@ -2,37 +2,77 @@
 layout: _paginas/foundations/_motion.njk
 permalink: /motion/
 
-titulo: motion
-descripcion: Clases y helpers para realizar animaciones
+titulo: Motion
+descripcion: Clases y helpers para animaciones — tipos de transición, duraciones y easings del sistema de diseño.
 
-date: Last Modified
+page_section: foundations
+date: 2023-06-19
+fecha: 19 de junio de 2023
 
 tags: ["Estructuras modulares", "web design", "foundations"]
 image: /assets/static/components/videos.jpg
 ---
 
-## Motion
+## Tipos de animación
 
-### Tipo de animación
+| Clase | Descripción |
+|---|---|
+| `.slide-in` | El panel entra desde los lados al activarse un trigger. Añade un overlay `#000` al 15% de opacidad. Se cierra con icono ✕ o al salir el mouse del panel. |
+| `.slide-out` | Salida del panel hacia el lado contrario. |
+| `.fade-in` | Entrada con aumento de opacidad de 0 a 1. |
+| `.fade-out` | Salida con disminución de opacidad de 1 a 0. |
+| `.expand-top` | El contenedor se expande desde arriba. El contenido hace FadeIn durante la expansión. Se recoge al hacer clic de nuevo en el trigger. |
+| `.collapse-top` | Contracción hacia arriba. Inverso de `.expand-top`. |
 
-| Tipo          | Descripción de aplicación                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| .slide-in     | El panel debe entrar o salir de la pantalla desde los lados cuando se activa un trigger (click en un enlace, mouse moves out...). Durante esta animación, se añade un overlay con color #000000 y 15% de opacidad para atenuar las capas inferiores. El panel puede cerrarse manualmente mediante un icono de cerrar o automáticamente si el mouse sale del panel. |
-| .slide-out    |                                                                                                                                                                                                                                                                                                                                                                    |
-| .fade-in      | Cada elemento entra/sale en la pantalla aplicando un efecto de FadeIn/Out, aumentando su opacidad de 0 a 1.                                                                                                                                                                                                                                                        |
-| .fade-out     |                                                                                                                                                                                                                                                                                                                                                                    |
-| .expand-top   | El contenedor está inicialmente oculto y su contenido también y al hacer click en un CTA o trigger especifico. El contenido dentro del contenedor hace un efecto de FadeIn de 0 a 100 durante la expansión. El contenedor se recoge al hacer clic nuevamente en el CTA o en otro elemento específico.                                                              |
-| .collapse-top | El contenedor está inicialmente oculto y su contenido también y al hacer click en un CTA o trigger especifico. El contenido dentro del contenedor hace un efecto de FadeIn de 0 a 100 durante la expansión. El contenedor se recoge al hacer clic nuevamente en el CTA o en otro elemento específico.                                                              |
+---
 
-### Duración
+## Duración
 
-| Duración       | Css animation               |
-| -------------- | --------------------------- |
-| .duration-50   | animation-duration: 50ms;   |
-| .duration-150  | animation-duration: 150ms;  |
-| .duration-300  | animation-duration: 300ms;  |
-| .duration-400  | animation-duration: 400ms;  |
-| .duration-500  | animation-duration: 500ms;  |
-| .duration-700  | animation-duration: 700ms;  |
-| .duration-800  | animation-duration: 800ms;  |
-| .duration-1000 | animation-duration: 1000ms; |
+| Clase | CSS | Uso típico |
+|---|---|---|
+| `.duration-50` | `animation-duration: 50ms` | Micro-interacciones |
+| `.duration-150` | `animation-duration: 150ms` | Hover, tooltips |
+| `.duration-300` | `animation-duration: 300ms` | Transiciones estándar |
+| `.duration-400` | `animation-duration: 400ms` | Modales, paneles |
+| `.duration-500` | `animation-duration: 500ms` | Animaciones de entrada |
+| `.duration-700` | `animation-duration: 700ms` | Transiciones complejas |
+| `.duration-800` | `animation-duration: 800ms` | Hero animations |
+| `.duration-1000` | `animation-duration: 1000ms` | Animaciones de página |
+
+---
+
+## Easing del sistema
+
+Las variables CSS de transición del sistema utilizan easing de deceleración (`cubic-bezier(0.25, 0, 0, 1)`) para movimientos naturales.
+
+| Variable CSS | Valor | Uso |
+|---|---|---|
+| `--hg-menu-panel-transition` | `all 0.4s cubic-bezier(0.25, 0, 0, 1)` | Panel del menú |
+| `--hg-menu-panel-media-transition` | `all 0.4s cubic-bezier(0.25, 0, 0, 1)` | Media del panel |
+| `--hg-menu-column-transition` | `all 0.4s cubic-bezier(0.25, 0, 0, 1)` | Columnas del menú |
+
+### Curvas de easing recomendadas
+
+| Tipo | Valor | Uso |
+|---|---|---|
+| Desaceleración (entrada) | `cubic-bezier(0.25, 0, 0, 1)` | Elementos que entran en pantalla |
+| Estándar | `ease-in-out` | Transiciones de estado |
+| Lineal | `linear` | Animaciones de carga / spinners |
+
+---
+
+## Principios de motion del DS
+
+1. **Propósito** — Cada animación debe tener una razón funcional, no decorativa.
+2. **Velocidad** — Transiciones de UI: 150–300ms. Animaciones de página: 400–700ms.
+3. **Naturalidad** — Usar curvas de desaceleración para entradas; aceleración para salidas.
+4. **Respeto al usuario** — Respetar `prefers-reduced-motion`:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
