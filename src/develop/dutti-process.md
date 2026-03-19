@@ -14,7 +14,6 @@ imageAlt: Process SCSS Dutti
 
 **Ruta:** `code/apps/frontend/src/assets/styles/process/`
 
----
 
 ## Listado de archivos
 
@@ -56,7 +55,6 @@ imageAlt: Process SCSS Dutti
 | `_coordinated-product-item.component.scss` | Item de productos coordinados |
 | `shop-cart-item.component.scss` | Item del carrito |
 
----
 
 ## Detalles de flujos principales
 
@@ -79,7 +77,6 @@ imageAlt: Process SCSS Dutti
 }
 ```
 
----
 
 ### `_my-account.scss` — Mi cuenta (~1.400 líneas)
 
@@ -115,7 +112,6 @@ El archivo más extenso del proyecto. Cubre toda la sección de "Mi Cuenta".
 | Wishlist (mi cuenta) | `.my-wishlist-*` |
 | Menú lateral | `.my-account-sidemenu`, `.my-account-nav-*` |
 
----
 
 ### `_shipping.scss` — Flujo de envío
 
@@ -135,7 +131,6 @@ El archivo más extenso del proyecto. Cubre toda la sección de "Mi Cuenta".
 }
 ```
 
----
 
 ### `_newsletter.scss` — Newsletter
 
@@ -149,7 +144,6 @@ El archivo más extenso del proyecto. Cubre toda la sección de "Mi Cuenta".
 }
 ```
 
----
 
 ### `_appointment-tunnel.scss` — Citas en tienda
 
@@ -159,7 +153,6 @@ Flujo de reserva de cita personal en tienda:
 - `.date-time-selector` — selector de día y hora
 - `.appointment-summary` — resumen de la cita
 
----
 
 ### `_phone_verification.scss` — Verificación OTP
 
@@ -175,7 +168,6 @@ Flujo de reserva de cita personal en tienda:
 }
 ```
 
----
 
 ### `_top-notification.scss` — Banner superior
 
@@ -192,7 +184,6 @@ Flujo de reserva de cita personal en tienda:
 }
 ```
 
----
 
 ### `_error-modal.scss` — Modal de error
 
@@ -207,7 +198,6 @@ Modal genérico para errores de red, sesión expirada, etc.
 }
 ```
 
----
 
 ## Herramientas de desarrollo
 

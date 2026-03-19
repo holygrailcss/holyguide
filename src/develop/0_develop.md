@@ -232,7 +232,6 @@ url3: /enlace3
   </div>
 </div>
 
----
 
 ## Secciones de Develop
 
@@ -289,7 +288,6 @@ url3: /enlace3
   </a>
 </div>
 
----
 
 ### Herramientas de desarrollo
 

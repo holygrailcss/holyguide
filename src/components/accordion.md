@@ -39,7 +39,6 @@ imageAlt: Accordion component
 
 **Fuente:** <span class="cd-file">src/app/ui/md-accordion/</span> &nbsp; <span class="cd-file">styles.scss (.md-toggle)</span>
 
----
 
 ## Preview
 
@@ -73,7 +72,6 @@ imageAlt: Accordion component
   </div>
 </div>
 
----
 
 ## HTML — Angular Component
 
@@ -119,7 +117,6 @@ imageAlt: Accordion component
 </md-accordion-title>
 ```
 
----
 
 ## CSS — Clases principales
 
@@ -138,7 +135,6 @@ imageAlt: Accordion component
   </tbody>
 </table>
 
----
 
 ## Propiedades del componente Angular
 
@@ -153,7 +149,6 @@ imageAlt: Accordion component
 }
 ```
 
----
 
 ## Uso en la PDP
 

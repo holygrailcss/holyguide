@@ -44,7 +44,6 @@ imageAlt: Quantity stepper component
 
 **Fuente:** <span class="cd-file">src/app/ui/quantity-stepper/</span> &nbsp; <span class="cd-file">src/assets/css/componentes/stepper.css</span>
 
----
 
 ## Preview
 
@@ -75,7 +74,6 @@ imageAlt: Quantity stepper component
   </div>
 </div>
 
----
 
 ## HTML
 
@@ -117,7 +115,6 @@ imageAlt: Quantity stepper component
 </div>
 ```
 
----
 
 ## CSS — Clases
 
@@ -133,7 +130,6 @@ imageAlt: Quantity stepper component
   </tbody>
 </table>
 
----
 
 ## SCSS de referencia
 
@@ -182,7 +178,6 @@ imageAlt: Quantity stepper component
 }
 ```
 
----
 
 ## Inputs del componente Angular
 
@@ -208,7 +203,6 @@ decreaseValue() {
 }
 ```
 
----
 
 ## Buenas prácticas
 

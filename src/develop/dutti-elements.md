@@ -14,7 +14,6 @@ imageAlt: Elements SCSS Dutti
 
 **Ruta:** `code/apps/frontend/src/assets/styles/elements/`
 
----
 
 ## Listado de archivos
 
@@ -43,7 +42,6 @@ imageAlt: Elements SCSS Dutti
 | `_studio_templates.scss` | CMS | Templates de estudio CMS |
 | `_stylitics.scss` | Terceros | Integración Stylitics (outfits) |
 
----
 
 ## Detalles por archivo
 
@@ -76,7 +74,6 @@ Modales basados en Angular CDK Overlay.
 .nhg-modal-header { ... }
 ```
 
----
 
 ### `_modals_legacy.scss` — Modales legacy
 
@@ -90,7 +87,6 @@ Sistema anterior de modales. Clases principales:
 
 > ⚠️ Sistema legacy. Migrar a `_modals.scss` (CDK) cuando sea posible.
 
----
 
 ### `_filters.scss` — Barra de filtros PLP/Búsqueda
 
@@ -119,7 +115,6 @@ Sistema anterior de modales. Clases principales:
 
 Clases relacionadas: `.btn-filter`, `.btn-display-filter-action`, `.btn-filter-trigger`.
 
----
 
 ### `_pdp.scss` — Product Detail Page (base)
 
@@ -141,7 +136,6 @@ Clases relacionadas: `.btn-filter`, `.btn-display-filter-action`, `.btn-filter-t
 }
 ```
 
----
 
 ### `_plp2026.scss` — PLP 2026
 
@@ -162,7 +156,6 @@ Clases relacionadas: `.btn-filter`, `.btn-display-filter-action`, `.btn-filter-t
 
 Clases de botones relacionadas: `.btn-quick`, `.btn.md-list-action`.
 
----
 
 ### `_swiper.scss` — Carrusel
 
@@ -175,7 +168,6 @@ Personalización del Swiper.js para los distintos carruseles del proyecto:
 
 Hay variantes para: PDP (zoom), PLP (grid), CMS (editorial), relacionados, runway.
 
----
 
 ### `_spinner.scss` y `_md-loading.scss` — Estados de carga
 
@@ -191,7 +183,6 @@ Hay variantes para: PDP (zoom), PLP (grid), CMS (editorial), relacionados, runwa
 }
 ```
 
----
 
 ### `_drawer.scss` / `_sidebar.scss` — Paneles laterales
 
@@ -202,7 +193,6 @@ Hay variantes para: PDP (zoom), PLP (grid), CMS (editorial), relacionados, runwa
 .sidebar-backdrop { ... }
 ```
 
----
 
 ### `_toast.scss` / `_notification.scss` — Notificaciones
 

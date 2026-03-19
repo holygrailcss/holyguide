@@ -6,23 +6,33 @@ layout: base.njk
 {% import "_macros/_insert.njk" as insert %}
 {% import "_macros/_product.njk" as product %}
 
-
-
-<div class="row">
-    <div class="col-xs-12">
-        Productview
-    </div>
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
 </div>
 
-<div class="row pt-120 pb-120">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-2">
+<div class="main-content innermarkdown">{{ content | safe }}</div>
 
-        <div class="sk-load2">
-            {% call product.ratio('3-4') %} {% endcall %}
-          </div>
+<div class="main-content">
+  <section class="mb-32 mt-32">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="h2 mb-32 mt-64">Preview</h2>
+        <p class="title-m mb-32">Vista de producto en rollover para listados PLP. Imagen principal con cambio a secundaria al hover, acciones rápidas de guardar y añadir al carrito.</p>
 
+        <div class="grid-4 mb-64">
+          {% call product.ratio('3-4') %}{% endcall %}
+        </div>
+
+        <h3 class="h3 mb-24">Variante sin texto (limited-text)</h3>
+        <div class="grid-4 mb-64">
+          {% call product.ratio('3-4', 'limited-text') %}{% endcall %}
+        </div>
+
+        <h3 class="h3 mb-24">Variante solo imagen (no-text)</h3>
+        <div class="grid-4 mb-64">
+          {% call product.ratio('3-4', 'no-text') %}{% endcall %}
+        </div>
+      </div>
     </div>
+  </section>
 </div>
-
-

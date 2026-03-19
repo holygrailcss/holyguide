@@ -36,7 +36,6 @@ imageAlt: Spinner y loader
 
 **Fuente:** <span class="cd-file">src/app/ui/spinner/</span> &nbsp; <span class="cd-file">src/app/ui/loading/</span> &nbsp; <span class="cd-file">elements/_spinner.scss</span> &nbsp; <span class="cd-file">elements/_md-loading.scss</span>
 
----
 
 ## Variantes
 
@@ -61,7 +60,6 @@ imageAlt: Spinner y loader
   </div>
 </div>
 
----
 
 ## Spinner inline
 
@@ -91,7 +89,6 @@ Usado dentro de botones, tablas o cualquier elemento inline.
 </button>
 ```
 
----
 
 ## Loader de sección
 
@@ -114,7 +111,6 @@ Para cargar contenido dentro de un bloque (no la página completa).
 </div>
 ```
 
----
 
 ## Loading de página completa
 
@@ -150,7 +146,6 @@ Con logo de Massimo Dutti, usado en la carga inicial de la app.
 }
 ```
 
----
 
 ## CSS — Animación del spinner
 
@@ -182,7 +177,6 @@ Con logo de Massimo Dutti, usado en la carga inicial de la app.
 }
 ```
 
----
 
 ## Buenas prácticas
 

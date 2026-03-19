@@ -146,7 +146,6 @@ badge: updated
 npm install holygrail2
 ```
 
----
 
 ## Setup paso a paso
 
@@ -181,7 +180,6 @@ npm install holygrail2
   </div>
 </div>
 
----
 
 ## Estructura de archivos recomendada
 
@@ -201,7 +199,6 @@ npm install holygrail2
 <br>└── <span class="sd-arch-file">styles.scss</span>           <span class="sd-arch-comment">← punto de entrada principal</span>
 </div>
 
----
 
 ## Configuración mínima (`_setup.scss`)
 
@@ -280,7 +277,6 @@ $container-12: 800px;
   <span>El orden importa. Tus variables deben declararse <strong>antes</strong> de importar holygrail2 para que los <code>!default</code> sean sobreescritos correctamente.</span>
 </div>
 
----
 
 ## Breakpoints del sistema
 
@@ -328,7 +324,6 @@ $container-12: 800px;
 }
 ```
 
----
 
 ## Estructura HTML base
 
@@ -360,7 +355,6 @@ $container-12: 800px;
   <span>Usa siempre <code>col-xs-12</code> como base en mobile. Define el responsive de menor a mayor breakpoint: xs → sm → md → lg → xl.</span>
 </div>
 
----
 
 ## Debug en desarrollo
 
@@ -379,7 +373,6 @@ $container-12: 800px;
   <span>Elimina todos los <code>@include debug-*</code> antes del deploy a producción. Añade una regla de linting para detectarlos automáticamente.</span>
 </div>
 
----
 
 ## Próximos pasos
 

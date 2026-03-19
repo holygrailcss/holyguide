@@ -107,7 +107,6 @@ body {
 }
 ```
 
----
 
 ## Alturas porcentuales
 
@@ -118,7 +117,6 @@ body {
 | `.height-full` | `height: 100vh` | Toda la altura del viewport |
 | `.height-home` | `height: calc(100vh - 80px)` | Viewport menos 80px de header |
 
----
 
 ## Alturas fijas
 
@@ -131,7 +129,6 @@ body {
 | `.height-lg` | 400px | 400px | Altura grande |
 | `.height-xl` | 450px | 450px | Altura extra grande |
 
----
 
 ## Alturas responsive (hero)
 
@@ -143,7 +140,6 @@ Alturas que escalan entre mobile y desktop para secciones hero.
 | `.height-medium` | 200px | 400px | Hero medio |
 | `.height-mini` | 100px | 300px | Hero pequeño |
 
----
 
 ## Cómo usar
 

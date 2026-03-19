@@ -39,9 +39,9 @@
 </head>
 <body class="contain theme-keyboard-accesible is-phantom">
   <main>
-    {{ content | safe }}
+    {% block content %}{{ content | safe }}{% endblock %}
 
-{% if guides != 0 %}
+{% if guides %}
 <div class="guide-inspect">   
 <button class="resize-rules  btn btn-secondary text-m  ">  
 	<div class="">

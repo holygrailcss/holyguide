@@ -14,7 +14,6 @@ imageAlt: Partials SCSS Dutti
 
 **Ruta:** `code/apps/frontend/src/assets/styles/partials/`
 
----
 
 ## Listado de archivos
 
@@ -38,7 +37,6 @@ imageAlt: Partials SCSS Dutti
 | `chats/_style-advisor.scss` | ✅ Activo | Style advisor chat |
 | `chats/_kakao-chat.scss` | ✅ Activo | Chat Kakao (Korea) |
 
----
 
 ## Detalles por archivo
 
@@ -84,7 +82,6 @@ Define todas las CSS custom properties del header. Los valores se aplican a trav
 .btn.hg-menu-panel-action { ... }
 ```
 
----
 
 ### `_hg-menu.scss` — Menú lateral HolyGrail
 
@@ -108,7 +105,6 @@ CSS custom properties del panel de menú.
 
 > El easing `cubic-bezier(0.25, 0, 0, 1)` es de desaceleración (arranca rápido, frena suavemente).
 
----
 
 ### `_hg-home.scss` — Home NW26
 
@@ -130,7 +126,6 @@ body.hg-footer-in-view .hg-home-row-cols__col:not(.is-active) {
 }
 ```
 
----
 
 ### `_shopcart.scss` — Carrito de compra
 
@@ -155,7 +150,6 @@ body.hg-footer-in-view .hg-home-row-cols__col:not(.is-active) {
 .shop-cart-item { ... }
 ```
 
----
 
 ### `_hg-search.scss` — Búsqueda HolyGrail
 
@@ -168,7 +162,6 @@ Estilos del panel de búsqueda. Incluye:
 - `.tabs` y `.tab` — pestañas de resultados (ej. WOMEN / MEN)
 - `.tabs-resetfirst` — variante que resetea el primer tab
 
----
 
 ### `_rtl.scss` — Soporte RTL
 
@@ -183,7 +176,6 @@ Estilos para idiomas de derecha a izquierda (árabe, hebreo). Se aplican con la 
 }
 ```
 
----
 
 ### `_blame.scss` — Debug y estados de botón
 
@@ -203,7 +195,6 @@ A pesar del nombre, contiene estilos funcionales además de debug:
 .btn-quick { ... }
 ```
 
----
 
 ### `_a11y.scss` — Accesibilidad
 
@@ -220,7 +211,6 @@ A pesar del nombre, contiene estilos funcionales además de debug:
 }
 ```
 
----
 
 ### `chats/` — Integración de chat
 

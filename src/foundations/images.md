@@ -26,7 +26,6 @@ Toda imagen debe incluir un `alt` descriptivo. Para imágenes decorativas se dej
 <img src="/assets/static/pattern.jpg" alt="" aria-hidden="true" />
 ```
 
----
 
 ## Imagen con ratio (proporciones fijas)
 
@@ -46,7 +45,6 @@ Para mantener proporciones definidas, usa la clase de ratio correspondiente. Ver
 </div>
 ```
 
----
 
 ## Imagen como cover
 
@@ -69,7 +67,6 @@ La clase `.video-cover` aplica `object-fit: cover` y posiciona la imagen para qu
 }
 ```
 
----
 
 ## Imagen con ancho completo
 
@@ -77,7 +74,6 @@ La clase `.video-cover` aplica `object-fit: cover` y posiciona la imagen para qu
 <img class="w-100" src="imagen.jpg" alt="Descripción" />
 ```
 
----
 
 ## Placeholders de desarrollo
 
@@ -99,7 +95,6 @@ Durante la maquetación, usa estas URLs para imágenes de relleno con proporcion
 | `/assets/static/components/` | Thumbnails de componentes |
 | `/assets/static/home/` | Imágenes para la home |
 
----
 
 ## Imágenes lazy load
 
@@ -117,7 +112,6 @@ Para imágenes que no están en el viewport inicial, usa el atributo `loading="l
 
 > Incluir siempre `width` y `height` para evitar el _Cumulative Layout Shift_ (CLS).
 
----
 
 ## Buenas prácticas
 

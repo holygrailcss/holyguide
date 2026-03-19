@@ -230,7 +230,6 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
   </div>
 </div>
 
----
 
 ## Opacidades del color primario
 
@@ -278,7 +277,6 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
   </div>
 </div>
 
----
 
 ## Referencia completa de variables
 
@@ -301,7 +299,6 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
 | `$bg-light` | `#f0f0f0` | `.bg-light` | Fondo claro |
 | `$c-bg-cream` | `#f4f2ed` | `.bg-cream` | Fondo crema |
 
----
 
 ## Cómo usar
 

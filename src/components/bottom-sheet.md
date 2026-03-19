@@ -51,7 +51,6 @@ imageAlt: Bottom sheet component
 
 **Fuente:** <span class="cd-file">src/app/ui/md-bottom-sheet/</span>
 
----
 
 ## Anatomía
 
@@ -70,7 +69,6 @@ imageAlt: Bottom sheet component
   </div>
 </div>
 
----
 
 ## HTML — Angular Component
 
@@ -109,7 +107,6 @@ imageAlt: Bottom sheet component
 </md-bottom-sheet>
 ```
 
----
 
 ## Sub-componentes
 
@@ -123,7 +120,6 @@ imageAlt: Bottom sheet component
   </tbody>
 </table>
 
----
 
 ## CSS — Comportamiento
 
@@ -156,7 +152,6 @@ md-bottom-sheet {
 }
 ```
 
----
 
 ## Usos en el proyecto
 
@@ -168,7 +163,6 @@ md-bottom-sheet {
 | **Selección de talla** | `hg-product-size-selector` + guía de tallas |
 | **Bottom sheet de confirmación** | Texto + botón confirmar + cancelar |
 
----
 
 ## Buenas prácticas
 

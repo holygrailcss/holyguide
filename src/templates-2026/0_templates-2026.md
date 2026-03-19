@@ -13,5 +13,15 @@ tags: ["page", "templates-2026"]
 imageAlt: Templates 2026
 ---
 
+## Qué son los Templates 2026
 
-Sección de templates del sistema HolyGuide para 2026. Añade aquí tus nuevos templates.
+Templates de página completa para el sistema HolyGuide 2026. Incluyen **Home**, **Header**, **Footer** y **Menú** listos para integrar en proyectos de ecommerce.
+
+Cada template tiene su propia página con:
+
+- **FIGMA** — Enlace al diseño en Figma
+- **VER** — Vista aislada del template
+- **CODE** — Código HTML del token
+- **Visualizador** — Iframe redimensionable para probar distintas resoluciones
+
+Haz clic en cualquier template para ver la documentación y el código.

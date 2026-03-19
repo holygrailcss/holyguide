@@ -1,5 +1,5 @@
 ---
-layout: _paginas/foundations/_foundations.njk
+layout: _paginas/develop/_dutti.njk
 permalink: /start-design/
 page_section: design
 
@@ -11,8 +11,6 @@ tags: ["design"]
 image: /assets/static/images/7.jpg
 imageAlt: Ilustración de un diseño de sistema
 ---
-
-## Sistemas de Diseño
 
 Esta es la herramienta central en torno a la que gira nuestra metodología. Por ello, hemos creído oportuno dedicar un capítulo entero a explicar: qué entendemos por sistema de diseño, qué principios de diseño nos guían a la hora gestionarlo, y qué elementos componen nuestros sistemas a nivel morfológico.
 

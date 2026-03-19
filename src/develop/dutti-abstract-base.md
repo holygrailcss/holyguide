@@ -12,7 +12,6 @@ imageAlt: Abstract y Base SCSS Dutti
 ---
 
 
----
 
 ## `abstract/` — 9 archivos
 
@@ -30,7 +29,6 @@ Contiene las variables globales, mixins, breakpoints y sistemas de grid. Se impo
 | `_categoryGrid.scss` | Grid específico para páginas de categoría |
 | `_attachments.scss` | Utilidades para adjuntos e imágenes |
 
----
 
 ### `_variables.scss` — Colores y espaciado
 
@@ -54,7 +52,6 @@ $grid-padding-xs: 16px;  // móvil
 $grid-padding-md: 40px;  // desktop
 ```
 
----
 
 ### `_breakpoints.scss` — Puntos de ruptura
 
@@ -85,7 +82,6 @@ $break-3xl:  1920px;
 
 > ⚠️ El proyecto Holygrail también define `$hg-breakpoints`. Pendiente unificar ambos sistemas (iniciativa #9 del [Effort vs Impact Matrix](/develop/effort-impact/)).
 
----
 
 ### `_setup.scss` — Escala tipográfica y containers
 
@@ -112,7 +108,6 @@ $container-small:  360px;
 $container:        800px;
 ```
 
----
 
 ### `_mixins.scss` — Mixins principales
 
@@ -126,7 +121,6 @@ $container:        800px;
 }
 ```
 
----
 
 ## `base/` — 5 archivos
 
@@ -140,7 +134,6 @@ Contiene el reset, fuentes, tipografía aplicada y estilos por idioma.
 | `_types.scss` | Clases tipográficas del Design System |
 | `_lang.scss` | Estilos específicos por idioma / locale |
 
----
 
 ### `_fonts.scss` — Familias tipográficas
 
@@ -157,7 +150,6 @@ El proyecto define tres familias:
 | `SuisseIntl-SemiBold` | Suisse Intl SemiBold | `.woff2`, `.woff` |
 | `SuisseIntl-Bold` | Suisse Intl Bold | `.woff2`, `.woff` |
 
----
 
 ### `_base.scss` — Reset y utilidades globales
 
@@ -176,7 +168,6 @@ ul   { list-style: none; margin: 0; padding: 0; }
 .x135 { width: 135px; height: auto; }
 ```
 
----
 
 ### `_types.scss` — Tipografía aplicada
 
@@ -196,7 +187,6 @@ Importa Holygrail2 y abstract. Define clases tipográficas con sus `letter-spaci
 .p-tag     { letter-spacing: ...; text-transform: uppercase; }
 ```
 
----
 
 ### `_lang.scss` — Estilos por idioma
 

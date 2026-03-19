@@ -1,153 +1,176 @@
 ---
 layout: base.njk
-permalink: /index/
 ---
-<section class="header-img height-full align-middle   ">
-  <div class="zona-img mb-64 ">
-    <div class="zona-img-1 box">
-      <img width="100%" src="/assets/static/images/pdp1.jpg" alt="">
-    </div>
-    <div class="zona-img-2 box">
-      <img width="100%" src="/assets/static/images/pdp3.jpg" alt="">
-    </div>
-    <div class="zona-img-3 box">
-      <img width="100%" src="/assets/static/images/pdp2.jpg" alt="">
-    </div>
-    <div class="zona-img-4 box"> <img width="60px" src="/assets/static/images/icon1.jpg" alt=""> </div>
-    <div class="zona-img-5 box"> <img width="60px" src="/assets/static/images/icon2.jpg" alt=""> </div>
-    <div class="zona-img-6 box"> <img width="60px" src="/assets/static/images/icon3.jpg" alt=""> </div>
-    <div class="zona-img-7 box"> <img width="60px" src="/assets/static/images/icon4.jpg" alt=""> </div>
-  </div>
 
-  <div class="container ">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-6 ">
-        <div class="height-md content-center">
-          <div class="mb-24">
-            <div  class=" fluid-8-r mb-16">
-              Holyguide
-            </div>
-            <div  class=" fluid-4-r mb-16">
-              SISTEMATIZANDO RESULTADOS
-            </div>
-            <div  class="fluid-8-r c-dark-grey">Creamos la primera biblioteca de componentes
-              totalmente receptiva para la marca.
-            </div>
-          </div>
-          <div class="mb-16" data-aos-delay="400">
-            <a href="/foundations"><button class="btn btn-primary text-m btn--small">Foundations</button></a>
-            <a href="/components"><button class="btn btn-secondary text-m btn--small">Componentes</button></a>
-            <a href="/templates-old"><button class="btn btn-secondary text-m btn--small">Templates old</button></a>
-            <a href="/templates-2026"><button class="btn btn-secondary text-m btn--small">Templates 2026</button></a>
-          </div>
-          <div class="mb-16" data-aos-delay="800">
-            <a href="/foundations"><button class="btn btn-primary text-m btn--small">
-                <div class="mr-8">Figma</div>
-          </div>
-          <div class="code-install mb-24" data-aos-delay="500">
-            npm <b>install</b> holygrail2
-          </div>
-          <div data-aos-delay="100" class="is-flex mb-24">
-            <a href="https://www.npmjs.com/package/holygrail2" target="_blank" rel="nofollow">
-              <img src="https://img.shields.io/npm/dm/holygrail2.svg">
-            </a>
-            <a href="https://www.npmjs.com/package/holygrail2" rel="nofollow">
-              <img src="https://img.shields.io/npm/v/holygrail2" alt="npm"
-                data-canonical-src="https://img.shields.io/npm/v/holygrail2.svg" style="max-width:100%;"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-<section class="front-section bg-light pt-32 pb-64">
+{# ── HERO ──────────────────────────────────────────────────────────────── #}
+<section class="home-hero">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <a href="/templates-old">
-          <h2>Nuestros últimos templates</h2>
-        </a>
-        <ul role="list" class="list-clear blog-intro-inner w-100 pt-32 pb-32">
-          <div class="grid-5">
-            {% for component in collections["templates-old"] | reverse %}
-            {% include 'token-loop-list.njk' %}
-            {% endfor %}
+      <div class="col-xs-12 col-md-6">
+
+        <div class="home-hero__eyebrow">Design System · Holyguide</div>
+
+        <h1 class="home-hero__title">Holy<br>guide</h1>
+
+        <p class="home-hero__desc">
+          Biblioteca de componentes, tokens de diseño y guías de uso para
+          construir interfaces consistentes y escalables.
+        </p>
+
+        <div class="home-hero__actions">
+          <a href="/foundations" class="btn btn-primary label-m">Empezar →</a>
+          <a href="/components" class="btn btn-secondary label-m" style="border-color:#fff;color:#fff;background:transparent;">Componentes</a>
+        </div>
+
+        <div class="home-hero__npm" onclick="navigator.clipboard.writeText('npm install holygrail2').then(()=>{ this.querySelector('span').textContent='¡Copiado!'; setTimeout(()=>{ this.querySelector('span').textContent='npm install holygrail2'; },1800); })">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v-1a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-1"/><rect x="2" y="6" width="8" height="8" rx="1.5"/></svg>
+          <span>npm install holygrail2</span>
+        </div>
+
+        <div class="home-hero__meta mt-24">
+          <div class="home-hero__version">
+            <a href="https://www.npmjs.com/package/holygrail2" target="_blank" rel="nofollow">
+              <img src="https://img.shields.io/npm/v/holygrail2" alt="npm version" style="vertical-align:middle;">
+            </a>
           </div>
-        </ul>
+          <div class="home-hero__version">
+            <a href="https://www.npmjs.com/package/holygrail2" target="_blank" rel="nofollow">
+              <img src="https://img.shields.io/npm/dm/holygrail2.svg" alt="npm downloads" style="vertical-align:middle;">
+            </a>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
-<section class="front-section bg-white height-full-2 front-section ptr-128 pbr-128">
-  <div class="container  pb-64  pt-64">
-    <div class="row">
-      <div class="col-xs-12 col-sm-7">
-        <div class="fluid-5-r">
-          <b>Para creadores, por creadores </b>.
-          Para creadores, por creadores .
-          El framework completo para programadores,
-          grupos de artistas y diseñadores.
+
+      <div class="col-xs-12 col-md-6">
+        <div class="zona-img mb-64">
+          <div class="zona-img-1 box">
+            <img width="100%" src="/assets/static/images/pdp1.jpg" alt="">
+          </div>
+          <div class="zona-img-2 box">
+            <img width="100%" src="/assets/static/images/pdp3.jpg" alt="">
+          </div>
+          <div class="zona-img-3 box">
+            <img width="100%" src="/assets/static/images/pdp2.jpg" alt="">
+          </div>
+          <div class="zona-img-4 box"><img width="60px" src="/assets/static/images/icon1.jpg" alt=""></div>
+          <div class="zona-img-5 box"><img width="60px" src="/assets/static/images/icon2.jpg" alt=""></div>
+          <div class="zona-img-6 box"><img width="60px" src="/assets/static/images/icon3.jpg" alt=""></div>
+          <div class="zona-img-7 box"><img width="60px" src="/assets/static/images/icon4.jpg" alt=""></div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-<section class="front-section bg-white height-full-2 front-section mtr-64 mbr-64">
-  <div class="container mb-64">
-    <div class="row  pt-64 pb-64">
-      <div class="col-xs-6 ">
-        <a data-aos-once="true" data-aos-delay="500" class="link-line" href="/start-design/">
-          <div data-aos-delay="200" class="is-flex flex-column has-light">
-            <img src="/assets/static/images/designers.png" alt="">
-            <div class="inner-index">
-              <h2 class=" pl-64 pb-24"> Diseñadores
-              </h2>
-              Nuestra bíblia
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-xs-6 ">
-        <a data-aos-once="true" data-aos-delay="500" class="link-line" href="/develop/">
-          <div data-aos-delay="200" class="is-flex flex-column has-light">
-            <img src="/assets/static/images/developers.png" alt="">
-            <div class="inner-index">
-              <h2 class=" pl-64 pb-24"> Desarrolladores
-              </h2>
-              Entiende como se maqueta
-            </div>
-          </div>
-        </a>
-      </div>
+
+{# ── SECCIONES ─────────────────────────────────────────────────────────── #}
+<section class="home-sections">
+  <div class="container">
+
+    <div class="home-sections__title">Explorar</div>
+
+    <div class="home-grid">
+
+      <a href="/foundations" class="home-card">
+        <div class="home-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <div>
+          <div class="home-card__label">01</div>
+          <div class="home-card__name">Foundations</div>
+        </div>
+        <div class="home-card__desc">Tokens de color, tipografía, espaciado, grid y motion.</div>
+        <div class="home-card__arrow">↗</div>
+      </a>
+
+      <a href="/components" class="home-card">
+        <div class="home-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"/><polyline points="12 2 12 20"/><line x1="3" y1="6.5" x2="21" y2="6.5"/></svg>
+        </div>
+        <div>
+          <div class="home-card__label">02</div>
+          <div class="home-card__name">Componentes</div>
+        </div>
+        <div class="home-card__desc">Botones, inputs, modales, acordeones, tabs y más.</div>
+        <div class="home-card__arrow">↗</div>
+      </a>
+
+      <a href="/develop" class="home-card">
+        <div class="home-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div>
+          <div class="home-card__label">03</div>
+          <div class="home-card__name">Develop</div>
+        </div>
+        <div class="home-card__desc">Guías de instalación, arquitectura y buenas prácticas.</div>
+        <div class="home-card__arrow">↗</div>
+      </a>
+
+      <a href="/templates-2026" class="home-card">
+        <div class="home-card__icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        <div>
+          <div class="home-card__label">04</div>
+          <div class="home-card__name">Templates</div>
+        </div>
+        <div class="home-card__desc">Parrillas y estructuras de página listas para usar.</div>
+        <div class="home-card__arrow">↗</div>
+      </a>
+
     </div>
   </div>
 </section>
-<section class="bg-light mb-64">
-  <div class="container ">
-    <div class="row height-sm  align-middle ">
-      <div class="col-xs-6">
-        <div class="text-16-b ttu">¿Necesitas ayuda?</div>
-        <p class="text-18-r">
-          Pónte en contacto con nosotros
-          y te daremos soporte en lo que necesites.
+
+{# ── MANIFIESTO ────────────────────────────────────────────────────────── #}
+<section class="home-manifesto">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10">
+        <h2 class="home-manifesto__text">
+          Un sistema de diseño es el lenguaje común entre
+          diseñadores y desarrolladores. Holyguide lo hace
+          coherente, predecible y escalable.
+        </h2>
+        <p class="home-manifesto__sub">
+          Construido para equipos que necesitan moverse rápido sin perder consistencia.
+          Cada componente está documentado, cada token explicado.
         </p>
       </div>
-      <div class="col-xs-6 is-flex align-end">
-        <button class="btn btn-primary text-m"> CONTACT US</button>
-      </div>
     </div>
   </div>
 </section>
-<section>
+
+{# ── ÚLTIMOS TEMPLATES ─────────────────────────────────────────────────── #}
+<section class="home-templates">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12"> <img width="100%" src="/assets/static/images/imgs.png" alt="">
-      </div>
+    <div class="home-templates__header">
+      <div class="home-templates__title">Últimos templates</div>
+      <a href="/templates-2026" class="home-templates__link">Ver todos →</a>
+    </div>
+    <div class="grid-5">
+      {% for component in collections["templates-2026"] | reverse %}
+        {% if loop.index <= 5 %}
+          {% include 'token-loop-list.njk' %}
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>
-{% include '_website/footer.njk' %}
-</div>
+
+{# ── CTA ───────────────────────────────────────────────────────────────── #}
+<section class="home-cta">
+  <div class="container">
+    <div class="home-cta__inner">
+      <div>
+        <div class="home-cta__text">¿Necesitas ayuda?</div>
+        <div class="home-cta__sub">Contacta con el equipo de design systems.</div>
+      </div>
+      <a href="mailto:design@example.com" class="btn btn-secondary label-m" style="border-color:#333;color:#fff;background:transparent;">
+        Contactar →
+      </a>
+    </div>
+  </div>
+</section>

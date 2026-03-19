@@ -27,7 +27,6 @@ Para que los vídeos se inicien en `autoplay`, es obligatorio añadir los atribu
 
 **Todo vídeo deberá seguir las siguientes pautas:**
 
----
 
 ## Duración
 

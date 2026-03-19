@@ -16,7 +16,6 @@ imageAlt: Forms SCSS Dutti
 
 > ⚠️ Ver también la iniciativa #19 del [Effort vs Impact Matrix](/develop/effort-impact/) para la estrategia de unificación de inputs.
 
----
 
 ## Listado de archivos
 
@@ -34,7 +33,6 @@ imageAlt: Forms SCSS Dutti
 | `_gift-card-amount-virtual-details.scss` | Gift card | Detalles de gift card virtual |
 | `_gift-card-physical-details.scss` | Gift card | Detalles de gift card física |
 
----
 
 ## Detalles por componente
 
@@ -83,7 +81,6 @@ Patrón de checkbox con input oculto visualmente pero accesible por teclado y sc
 </div>
 ```
 
----
 
 ### `_custom-dropdown.scss` — Dropdown custom
 
@@ -113,7 +110,6 @@ Dropdown que en móvil se abre a pantalla completa (mejor UX en táctil).
 }
 ```
 
----
 
 ### `_input-code.scss` — Input OTP / código
 
@@ -139,7 +135,6 @@ input-code {
 }
 ```
 
----
 
 ### `_input-phone-combo.scss` — Combo teléfono + prefijo
 
@@ -155,7 +150,6 @@ Combinación de selector de prefijo de país + campo de teléfono.
 }
 ```
 
----
 
 ### `_input-custom-range.scss` — Slider de rango
 
@@ -182,7 +176,6 @@ Slider personalizado (p.ej. filtro de precio en PLP).
 }
 ```
 
----
 
 ### `_combo-document-type.scss` — Selector de documento
 
@@ -202,7 +195,6 @@ Combo que combina tipo de documento (DNI, NIE, pasaporte) + número.
 }
 ```
 
----
 
 ### Gift card — 3 archivos
 
@@ -214,7 +206,6 @@ Estilos para el flujo de compra de tarjetas regalo.
 | `_gift-card-amount-virtual-details.scss` | Formulario de gift card virtual (email destinatario, mensaje) |
 | `_gift-card-physical-details.scss` | Formulario de gift card física (nombre, dirección de envío) |
 
----
 
 ## Clases de input del sistema global
 

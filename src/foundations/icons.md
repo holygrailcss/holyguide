@@ -35,7 +35,6 @@ Los iconos del proyecto se gestionan mediante el componente Angular `svg-icon2`,
 <svg-icon2 category="common" src="arrow-right" class="icon-24"></svg-icon2>
 ```
 
----
 
 ## Proceso para añadir un ícono nuevo
 
@@ -49,7 +48,6 @@ Los iconos del proyecto se gestionan mediante el componente Angular `svg-icon2`,
 | **6** | Ordenar alfabéticamente (usar la extensión *Alphabetical Sorter* de VS Code) |
 | **7** | Notificar al Lead de UX/Layout |
 
----
 
 ## Consideraciones de mantenimiento
 
@@ -59,7 +57,6 @@ Los iconos del proyecto se gestionan mediante el componente Angular `svg-icon2`,
 - Al actualizar un icono, el cambio se propaga automáticamente a toda la aplicación
 - Los iconos se agrupan por categorías (`common`, `navigation`, `social`, etc.)
 
----
 
 ## Tamaños de icono
 

@@ -84,7 +84,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 @include respond($break-3xl) { /* ≥ 1920px */ }
 ```
 
----
 
 ## Activar Flexbox
 
@@ -99,7 +98,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.mdmax:flex` | `display: flex` hasta `md - 1` | Flex solo hasta md |
 | `.lgmax:flex` | `display: flex` hasta `lg - 1` | Flex solo hasta lg |
 
----
 
 ## Dirección
 
@@ -110,7 +108,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.flex-row-reverse` | `flex-direction: row-reverse` | Horizontal invertido |
 | `.flex-col-reverse` | `flex-direction: column-reverse` | Vertical invertido |
 
----
 
 ## Alineación — eje principal (justify-content)
 
@@ -123,7 +120,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.content-sp-around` | `justify-content: space-around` | Espacio alrededor |
 | `.content-sp-evenly` | `justify-content: space-evenly` | Espacio uniforme |
 
----
 
 ## Alineación — eje cruzado (align-items)
 
@@ -136,7 +132,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.align-baseline` | `align-items: baseline` | Alinea por baseline de texto |
 | `.vert-end` | `align-items: flex-end` | Alinea verticalmente al final |
 
----
 
 ## Alineación — item individual (align-self)
 
@@ -147,7 +142,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.self-center` | `align-self: center` | Este item centrado |
 | `.self-stretch` | `align-self: stretch` | Este item estirado |
 
----
 
 ## Wrapping
 
@@ -157,7 +151,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.flex-nowrap` | `flex-wrap: nowrap` | Sin envolver (por defecto) |
 | `.flex-wrap-reverse` | `flex-wrap: wrap-reverse` | Envuelve en orden inverso |
 
----
 
 ## Grow / Shrink / Basis
 
@@ -168,7 +161,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.flex-initial` | `flex: 0 1 auto` | No crece, encoge, base auto |
 | `.flex-none` | `flex: 0 0 auto` | No crece ni encoge |
 
----
 
 ## Gap
 
@@ -179,7 +171,6 @@ El sistema de grid y las media queries se basan en estos puntos de corte definid
 | `.gap-24` | `gap: 24px` | Separación de 24px |
 | `.gap-32` | `gap: 32px` | Separación de 32px |
 
----
 
 ## Cómo usar
 

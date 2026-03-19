@@ -160,7 +160,6 @@ El proyecto usa tres familias tipográficas con variantes de peso, mapeadas a va
 | `$font-family-c-b` | `massimo-daily-bold` | `massimo-daily-bold.woff2` | Serif negrita |
 | `$font-family-form` | `suisse-light` | `SuisseIntl-Light.woff2` | Inputs y formularios |
 
----
 
 ### Pesos de fuente
 
@@ -194,7 +193,6 @@ El proyecto usa tres familias tipográficas con variantes de peso, mapeadas a va
 
 > **Nota**: `$font-weight-bold` tiene valor `500` (igual que medium). Para negrita real usa `$font-weight-semibold: 600` o la clase `.font-sb`.
 
----
 
 ## Escala tipográfica — `$minheaders`
 
@@ -314,7 +312,6 @@ Clases generadas a partir del mapa `$minheaders` del proyecto. Formato: `(tamañ
   </div>
 </div>
 
----
 
 ## Tamaños fijos — `$headersFixers`
 
@@ -333,7 +330,6 @@ Clases con tamaño de fuente fijo (no responsive) y line-height estándar.
 
 > **Nota**: El proyecto Dutti **no usa `$headersFluids`** (tipografías fluidas con clamp). Las tipografías fluidas no están definidas en este proyecto.
 
----
 
 ## Interletrado — `letter-spacing`
 
@@ -446,7 +442,6 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
 
 > **Importante**: El resto de clases (`.hg-body-l`, `.hg-body-l-b`, `.title-l-b`, `.suisse-*`, `.h2`) **no tienen tracking explícito** — heredan el valor por defecto del navegador (`0`).
 
----
 
 ## Clases helper de texto
 
@@ -464,7 +459,6 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
 | `.leading-1` | `line-height: 1` | Interlineado 1 |
 | `.text-center` | `text-align: center` | Centrado |
 
----
 
 ## Uso en código
 

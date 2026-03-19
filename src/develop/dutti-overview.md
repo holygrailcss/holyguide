@@ -12,7 +12,6 @@ imageAlt: Arquitectura SCSS Dutti Frontend
 ---
 
 
----
 
 ## Ruta de estilos globales
 
@@ -44,7 +43,6 @@ code/apps/frontend/src/assets/styles/
 | `hg-plpviews.scss` | Vistas PLP |
 | `template-styles.scss` | Importa las plantillas CMS |
 
----
 
 ## Orden de carga en `styles.scss`
 
@@ -117,7 +115,6 @@ El orden de importación es: **base → abstract → holygrail2 → elements →
 @import "./process/debugbar";
 ```
 
----
 
 ## Estructura de la app Angular
 
@@ -139,7 +136,6 @@ src/app/
 
 `authentication`, `category`, `checkout`, `cms-render-page`, `collection`, `confirmation`, `contact`, `home`, `landing`, `lookbook`, `microsite`, `my-account`, `product`, `runway-limited`, `search`, `shopcart`, `store-locator`, `zalando-return`, entre otras.
 
----
 
 ## Convenciones de prefijos CSS
 
@@ -152,7 +148,6 @@ src/app/
 | `.js-` | Selectores JavaScript (no estilar) | `.js-submit-form` |
 | `cdk-` | Angular CDK | `.cdk-overlay-container` |
 
----
 
 ## Páginas de documentación por sección
 

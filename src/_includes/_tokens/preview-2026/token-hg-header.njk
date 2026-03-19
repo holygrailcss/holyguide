@@ -1,12 +1,10 @@
----
-layout: base-clean.njk
----
-
+{% extends "base-clean.njk" %}
+{% block content %}
 <link rel="stylesheet" href="/assets/css/home.css">
 <link rel="stylesheet" href="/assets/css/hg-header.css">
 <link rel="stylesheet" href="/assets/css/hg-menu.css">
 
-<div class="templates-2026-home p-24">
+<div class="templates-2026-home">
   {% include '_paginas/templates-2026/hg-header.njk' %}
 
   <!-- Panel hg-menu: se abre al hacer click en .js-hg-menu-toggle -->
@@ -18,3 +16,4 @@ layout: base-clean.njk
   </div>
   <div id="hg-menu-backdrop" class="hg-menu-backdrop" aria-hidden="true" tabindex="-1"></div>
 </div>
+{% endblock %}

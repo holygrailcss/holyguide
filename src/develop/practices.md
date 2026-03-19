@@ -150,7 +150,6 @@ image: /assets/static/images/1.jpg
 
 Guía completa de buenas prácticas para CSS/SCSS/HTML, con **ejemplos reales de malas praxis detectadas en el proyecto Dutti**.
 
----
 
 ## Diagnóstico del proyecto
 
@@ -193,7 +192,6 @@ Guía completa de buenas prácticas para CSS/SCSS/HTML, con **ejemplos reales de
   </table>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">1</span>
@@ -293,7 +291,6 @@ aspect-ratio: 2 / 3 !important;
 
 **La única excepción válida:** clases de accesibilidad (`.sr-only`, `.skip-link`) y resets críticos con alcance muy controlado.
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">2</span>
@@ -384,7 +381,6 @@ Los selectores de alta especificidad crean deuda: cada sobrescritura requiere un
   </div>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">3</span>
@@ -485,7 +481,6 @@ $c-middle-grey: #a9a9a9;
   </div>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">4</span>
@@ -577,7 +572,6 @@ body .ngdialog.new-modal .ngdialog-content { height: auto; }
 3. El comentario en código debe tener: número de ticket + descripción corta
 4. Sin ticket → no es un TODO válido, es código abandonado
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">5</span>
@@ -657,7 +651,6 @@ Cuando el mismo selector está definido en múltiples archivos, los cambios solo
   </div>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">6</span>
@@ -723,7 +716,6 @@ Cada archivo SCSS debe declarar sus dependencias y seguir un orden claro. El ord
   </div>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">7</span>
@@ -774,7 +766,6 @@ Las clases CSS y los selectores JavaScript no deben mezclarse. Si renombras la c
 | `is-` | Estados de UI | `.is-active`, `.is-open`, `.is-loading`, `.is-rtl` |
 | `has-` | Modificadores de contexto | `.has-light`, `.has-error` |
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">8</span>
@@ -849,7 +840,6 @@ Usar `margin-left: -Xpx` para centrar elementos es frágil — depende de conoce
   </div>
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">9</span>
@@ -906,7 +896,6 @@ $break-3xl: 1920px;
   <strong>Pendiente (iniciativa #9):</strong> El proyecto tiene dos sistemas de breakpoints: <code>$breakpoints</code> del proyecto y <code>$hg-breakpoints</code> de Holygrail. Unificarlos reduce fragilidad. Ver <a href="/develop/effort-impact/">Effort vs Impact Matrix</a>.
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">10</span>
@@ -968,7 +957,6 @@ $break-3xl: 1920px;
   El color de foco <code>#383bff</code> está hardcodeado en <span class="bp-file-badge">elements/_pdp2025.scss</span>. Debería ser una variable <code>$c-focus</code> o <code>--hg-focus-color</code> para poder actualizarse desde un único sitio.
 </div>
 
----
 
 <div class="bp-section-title">
   <span class="bp-section-num">11</span>
@@ -1007,7 +995,6 @@ $break-3xl: 1920px;
 - [ ] ¿Los comentarios explican el "por qué", no el "qué"?
 - [ ] ¿No hay estilos inline aplicados con JS (`.style.xxx = ...`) cuando un toggle de clase es suficiente?
 
----
 
 ## Referencias
 

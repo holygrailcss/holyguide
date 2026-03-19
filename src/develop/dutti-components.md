@@ -14,7 +14,6 @@ imageAlt: Components Angular Dutti
 
 **Ruta base:** `code/apps/frontend/src/app/` y `code/apps/frontend/src/assets/styles/components/`
 
----
 
 ## Producto / PDP
 
@@ -39,7 +38,6 @@ Componentes de la página de detalle de producto (Product Detail Page).
 | `shoes-info.component.scss` | Info específica de calzado |
 | `hg-product-size-selector-horizontal.component.scss` | Selector de talla horizontal (NW26) |
 
----
 
 ## Categoría / PLP
 
@@ -57,7 +55,6 @@ Componentes de la página de listado de productos (Product List Page).
 | `related-products-grid.component.scss` | Grid de productos relacionados |
 | `related-products-carousel.component.scss` | Carrusel de productos relacionados |
 
----
 
 ## Carrito y Compra
 
@@ -75,7 +72,6 @@ Componentes del flujo de carrito y añadir al carrito.
 | `order-summary-future-price.component.scss` | Precio futuro en resumen de pedido |
 | `order-header.component.scss` | Cabecera del pedido |
 
----
 
 ## Wishlist
 
@@ -84,7 +80,6 @@ Componentes del flujo de carrito y añadir al carrito.
 | `wishlist-item.component.scss` | Item de wishlist |
 | `wishlist-icon.component.scss` | Icono de wishlist (corazón) |
 
----
 
 ## Media y CMS
 
@@ -108,7 +103,6 @@ Componentes de contenido editorial y CMS.
 | `shop-the-look.component.scss` | Shop the look |
 | `shop-the-look-picture.component.scss` | Imagen con puntos de shop the look |
 
----
 
 ## Store Locator y Fast Sint
 
@@ -133,7 +127,6 @@ Componentes del localizador de tiendas y recogida rápida.
 | `fast-sint-pickup-banner.component.scss` | Banner recogida Fast Sint |
 | `fast-sint-variables.scss` | Variables CSS de Fast Sint |
 
----
 
 ## Returns y Devoluciones
 
@@ -144,7 +137,6 @@ Componentes del localizador de tiendas y recogida rápida.
 | `zalando-return-wrapper.component.scss` | Devolución Zalando |
 | `sfi-refund-form-layout.component.scss` | Formulario de devolución SFI |
 
----
 
 ## Chat y Asistente
 
@@ -156,7 +148,6 @@ Componentes del localizador de tiendas y recogida rápida.
 | `smart-assistant-faqs.component.scss` | FAQs del asistente inteligente |
 | `upi-intent.component.scss` | UPI intent (pagos India) |
 
----
 
 ## Checkout y Flujos especiales
 
@@ -170,7 +161,6 @@ Componentes del localizador de tiendas y recogida rápida.
 | `methods-list.component.scss` | Lista de métodos de pago |
 | `home-ssr.component.scss` | Home con Server Side Rendering |
 
----
 
 ## Búsqueda, Mapa y Accesibilidad
 
@@ -180,7 +170,6 @@ Componentes del localizador de tiendas y recogida rápida.
 | `map.component.scss` | Componente de mapa |
 | `accessibility-button.component.scss` | Botón flotante de accesibilidad y chat (`.btn-access`, `.btn-chat`) |
 
----
 
 ## Convenciones de estilos en componentes Angular
 

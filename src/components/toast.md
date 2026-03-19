@@ -58,7 +58,6 @@ imageAlt: Toast notifications
 
 **Fuente:** <span class="cd-file">shared/banners/banner-toast/</span> &nbsp; <span class="cd-file">elements/_toast.scss</span>
 
----
 
 ## Preview
 
@@ -73,7 +72,6 @@ imageAlt: Toast notifications
   </div>
 </div>
 
----
 
 ## HTML
 
@@ -103,7 +101,6 @@ imageAlt: Toast notifications
 <div class="banner-toast appear">...</div>
 ```
 
----
 
 ## CSS — Clases y propiedades
 
@@ -148,7 +145,6 @@ imageAlt: Toast notifications
 }
 ```
 
----
 
 ## Variantes
 
@@ -177,7 +173,6 @@ imageAlt: Toast notifications
 </div>
 ```
 
----
 
 ## Buenas prácticas
 

@@ -25,7 +25,6 @@ image: /assets/static/components/videos.jpg
 | `.expand-top` | El contenedor se expande desde arriba. El contenido hace FadeIn durante la expansión. Se recoge al hacer clic de nuevo en el trigger. |
 | `.collapse-top` | Contracción hacia arriba. Inverso de `.expand-top`. |
 
----
 
 ## Duración
 
@@ -40,7 +39,6 @@ image: /assets/static/components/videos.jpg
 | `.duration-800` | `animation-duration: 800ms` | Hero animations |
 | `.duration-1000` | `animation-duration: 1000ms` | Animaciones de página |
 
----
 
 ## Easing del sistema
 
@@ -60,7 +58,6 @@ Las variables CSS de transición del sistema utilizan easing de deceleración (`
 | Estándar | `ease-in-out` | Transiciones de estado |
 | Lineal | `linear` | Animaciones de carga / spinners |
 
----
 
 ## Principios de motion del DS
 

@@ -30,18 +30,35 @@ $(document).ready(function () {
   initvideo();
 
   // ── Code view toggles (resize-container) ─────────────────────
-  $(".resize-code").on("click", function (e) {
-    $(this).closest(".resize-container")
+  function toggleCodeView($el) {
+    $el.closest(".resize-container")
       .removeClass("opencode-css")
       .toggleClass("opencode-button");
+  }
+  function toggleCssView($el) {
+    $el.closest(".resize-container")
+      .removeClass("opencode-button")
+      .toggleClass("opencode-css");
+  }
+
+  $(".resize-code").on("click", function (e) {
+    toggleCodeView($(this));
     e.preventDefault();
+  }).on("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      toggleCodeView($(this));
+      e.preventDefault();
+    }
   });
 
   $(".resize-css").on("click", function (e) {
-    $(this).closest(".resize-container")
-      .removeClass("opencode-button")
-      .toggleClass("opencode-css");
+    toggleCssView($(this));
     e.preventDefault();
+  }).on("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      toggleCssView($(this));
+      e.preventDefault();
+    }
   });
 
   // ── Debug: marcar reglas de layout ───────────────────────────

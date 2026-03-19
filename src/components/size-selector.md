@@ -52,7 +52,6 @@ imageAlt: Size selector component
 
 **Fuente:** <span class="cd-file">shared/product/components/product-size-selector/</span> &nbsp; <span class="cd-file">components/hg-product-size-selector-horizontal.component.scss</span>
 
----
 
 ## Preview
 
@@ -65,7 +64,6 @@ imageAlt: Size selector component
   <button class="sz-btn is-sold-out">XXL</button>
 </div>
 
----
 
 ## HTML
 
@@ -114,7 +112,6 @@ imageAlt: Size selector component
 </ul>
 ```
 
----
 
 ## Estados
 
@@ -154,7 +151,6 @@ imageAlt: Size selector component
   </tbody>
 </table>
 
----
 
 ## Modificadores del contenedor
 
@@ -169,7 +165,6 @@ imageAlt: Size selector component
 <ul class="hg-product-size-selector min-h-32">
 ```
 
----
 
 ## CSS
 
@@ -219,7 +214,6 @@ imageAlt: Size selector component
 }
 ```
 
----
 
 ## Buenas prácticas
 

@@ -12,7 +12,6 @@ imageAlt: Effort vs Impact Matrix SCSS HTML CSS
 ---
 
 
----
 
 ## Matriz visual
 
@@ -22,7 +21,6 @@ imageAlt: Effort vs Impact Matrix SCSS HTML CSS
 | **Esfuerzo medio** | 8 | 9, 10, 11, 12 | 13, 14 |
 | **Esfuerzo alto** | — | 15, 16 | 17, 18, **19** |
 
----
 
 ## Iniciativas
 
@@ -60,7 +58,6 @@ imageAlt: Effort vs Impact Matrix SCSS HTML CSS
 | **18** | Plan de migración completa a Holygrail / DS | Alto | Definir fases: tipografía (en curso con hg-body-m, label-m), luego layout (hg-*), luego componentes; eliminar duplicados y estilos "md-*" que sobren. |
 | **19** | **Unificar tabs, buttons e inputs** | Alto | Hoy hay varias variantes de **Tabs** (`.tabs`, `.tabs2`, `.md-tabs`, `.tabs-colors`, `.tabs-filters`…), **Buttons** (`.btn`, `.btn-primary`, `.btn-tertiary`, `.btn-link`, `.btn-popup`…) e **Inputs** (`.input`, `.form-input-label-2`, `.input-prefix`, `.input-phone`…). Definir un único conjunto de clases por tipo, documentar variantes y migrar usos progresivamente. |
 
----
 
 ## Priorización sugerida
 
@@ -73,7 +70,6 @@ imageAlt: Effort vs Impact Matrix SCSS HTML CSS
 **Largo plazo**
 → 17, 18, **19** (media queries por dominio, estrategia Holygrail/DS, **unificación tabs/buttons/inputs**).
 
----
 
 ## Iniciativa 19: Unificación de tabs, buttons e inputs
 
@@ -107,7 +103,6 @@ Importar estos archivos en `styles.scss` e **ir eliminando** reglas duplicadas d
 - Cero reglas duplicadas en `styles.scss` o partials para esos tres elementos.
 - Nuevos desarrollos usan solo la API unificada.
 
----
 
 ## Tabs: inventario de páginas y componentes
 
@@ -132,7 +127,6 @@ Importar estos archivos en `styles.scss` e **ir eliminando** reglas duplicadas d
 | **CMS** | `slice-tabs.component.html` | `.tabs-content`, `.nav-tabs`, `.tab-content`, `.tab-pane` |
 | **UI compartido** | `app/ui/tabs/tabs.component.html` | `.md-tabs` + `.tabs.is-center` |
 
----
 
 ## Buttons: inventario de clases
 
@@ -182,7 +176,6 @@ Importar estos archivos en `styles.scss` e **ir eliminando** reglas duplicadas d
 4. Product y carrito (PDP, add-to-cart, modals, shopcart-layout, mini-cart)
 5. Resto (contact, newsletter, gift-card, footer, CMS, bag-collection, dev, debugbar)
 
----
 
 ## Referencias en el proyecto
 

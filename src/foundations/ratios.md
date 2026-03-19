@@ -21,7 +21,6 @@ El sistema dispone de dos métodos para mantener proporciones:
 - **`rat-*`** — Sistema legacy basado en `padding-top`. Compatible con todos los navegadores. Requiere un `.rat-content` interno.
 - **`ar-*`** — Sistema moderno usando la propiedad CSS `aspect-ratio`. Más limpio, sin necesidad de wrapper interno.
 
----
 
 ## Sistema `rat-*` (legacy)
 
@@ -60,7 +59,6 @@ Requiere la estructura: contenedor con la clase `rat-*` + hijo con clase `rat-co
 }
 ```
 
----
 
 ## Sistema `ar-*` (moderno)
 
@@ -93,7 +91,6 @@ Adicionalmente, el proyecto define estas clases con `aspect-ratio`:
 | `.aspect-3-4` | 3:4 |
 | `.aspect-3-2` | 3:2 |
 
----
 
 ## ¿Cuál usar?
 
@@ -103,7 +100,6 @@ Adicionalmente, el proyecto define estas clases con `aspect-ratio`:
 | Compatibilidad máxima / legacy | `rat-*` |
 | Imagen con `object-fit: cover` | `ar-*` + `img { width: 100%; height: 100%; object-fit: cover; }` |
 
----
 
 ## Ejemplo completo con imagen
 

@@ -31,7 +31,7 @@ Cuando el usuario pida **crear un template nuevo** (por ejemplo: "creame un temp
 
 **Archivo:** `src/_includes/_tokens/preview-2026/token-{nombre}.njk`
 
-- Layout: `base-clean.njk`
+- Usar `{% extends "base-clean.njk" %}` y `{% block content %}...{% endblock %}` (no frontmatter con layout, para evitar que se muestre en la web)
 - Contenido inicial del token (bloque con título/sección básica). El usuario puede editarlo después.
 
 ## 4. Página del token (para el iframe)

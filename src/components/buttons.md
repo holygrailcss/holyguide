@@ -15,7 +15,6 @@ imageAlt: Buttons component
 
 ## Clases Principales de Botones
 
----
 
 ## Variantes del proyecto Dutti
 
@@ -97,4 +96,3 @@ El sistema de botones usa la base de **HolyGrail 2** con variantes propias de Ma
 </button>
 ```
 
----

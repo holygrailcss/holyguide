@@ -37,7 +37,6 @@ imageAlt: Skeleton loading component
 
 **Fuente:** <span class="cd-file">shared/media/components/media-skeleton/</span> &nbsp; <span class="cd-file">elements/_product-skeleton.scss</span>
 
----
 
 ## Preview
 
@@ -62,7 +61,6 @@ imageAlt: Skeleton loading component
   </div>
 </div>
 
----
 
 ## HTML — Media Skeleton (tarjeta de producto)
 
@@ -106,7 +104,6 @@ imageAlt: Skeleton loading component
 </div>
 ```
 
----
 
 ## CSS — Clases de skeleton
 
@@ -128,7 +125,6 @@ imageAlt: Skeleton loading component
   </tbody>
 </table>
 
----
 
 ## Ratios disponibles
 
@@ -145,7 +141,6 @@ $ratios: (
 );
 ```
 
----
 
 ## Animación CSS
 
@@ -173,7 +168,6 @@ $ratios: (
 // ...hasta sk-load8
 ```
 
----
 
 ## Buenas prácticas
 

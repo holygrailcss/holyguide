@@ -15,7 +15,6 @@ imageAlt: Input component
 
 ## Inputs collection
 
----
 
 ## Sistema de inputs del proyecto Dutti
 
