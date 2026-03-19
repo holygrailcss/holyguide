@@ -14,6 +14,78 @@ image: /assets/static/components/flexbox.jpg
 imageAlt: Diagrama de flexbox
 ---
 
+## Breakpoints del sistema
+
+El sistema de grid y las media queries se basan en estos puntos de corte definidos en `abstract/_breakpoints.scss`:
+
+<style>
+.bp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  margin: 16px 0 32px;
+}
+.bp-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+.bp-card__name { font-size: 11px; font-weight: 700; font-family: monospace; display: block; margin-bottom: 4px; }
+.bp-card__val  { font-size: 16px; font-weight: 700; display: block; margin-bottom: 4px; }
+.bp-card__var  { font-size: 10px; font-family: monospace; color: #999; }
+</style>
+
+<div class="bp-grid">
+  <div class="bp-card">
+    <span class="bp-card__name">xs</span>
+    <span class="bp-card__val">1px</span>
+    <span class="bp-card__var">$break-xs</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">sm</span>
+    <span class="bp-card__val">768px</span>
+    <span class="bp-card__var">$break-sm</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">md</span>
+    <span class="bp-card__val">992px</span>
+    <span class="bp-card__var">$break-md</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">lg</span>
+    <span class="bp-card__val">1280px</span>
+    <span class="bp-card__var">$break-lg</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">xl</span>
+    <span class="bp-card__val">1440px</span>
+    <span class="bp-card__var">$break-xl</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">2xl</span>
+    <span class="bp-card__val">1600px</span>
+    <span class="bp-card__var">$break-2xl</span>
+  </div>
+  <div class="bp-card">
+    <span class="bp-card__name">3xl</span>
+    <span class="bp-card__val">1920px</span>
+    <span class="bp-card__var">$break-3xl</span>
+  </div>
+</div>
+
+```scss
+// Cómo usar los breakpoints en SCSS
+@include respond($break-sm)  { /* ≥ 768px */ }
+@include respond($break-md)  { /* ≥ 992px */ }
+@include respond($break-lg)  { /* ≥ 1280px */ }
+@include respond($break-xl)  { /* ≥ 1440px */ }
+@include respond($break-2xl) { /* ≥ 1600px */ }
+@include respond($break-3xl) { /* ≥ 1920px */ }
+```
+
+---
+
 ## Activar Flexbox
 
 | Clase | CSS | Descripción |

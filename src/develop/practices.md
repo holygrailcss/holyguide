@@ -5,6 +5,10 @@ page_section: develop
 tags: ["Estructuras modulares", "develop", "buenas prácticas"]
 titulo: Buenas Prácticas
 descripcion: Guía de buenas prácticas para el desarrollo con HolyGuide, con ejemplos reales de malas praxis detectadas en el proyecto Dutti.
+badge: updated
+date: 2026-03-09
+fecha: 9 de marzo de 2026
+image: /assets/static/images/1.jpg
 ---
 
 <style>

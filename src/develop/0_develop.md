@@ -23,22 +23,302 @@ seccion3: Owners
 url3: /enlace3
 ---
 
-## Empezando
+<style>
+.dev-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 32px 0;
+}
+.dev-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.dev-card:hover {
+  border-color: #000;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+  text-decoration: none;
+}
+.dev-card__label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: #999; margin-bottom: 6px;
+}
+.dev-card__title {
+  font-size: 15px; font-weight: 700;
+  margin: 0 0 6px;
+}
+.dev-card__desc {
+  font-size: 12px; color: #666;
+  margin: 0; line-height: 1.5;
+}
+.dev-card__badge {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-size: 8px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em;
+  padding: 2px 6px;
+  border-radius: 20px;
+  line-height: 1.6;
+}
+.dev-card--accent .dev-card__badge { background: #000;     color: #fff; }
+.dev-card--dutti  .dev-card__badge { background: #1a5e99;  color: #fff; }
+.dev-card--warn   .dev-card__badge { background: #f59e0b;  color: #fff; }
+.dev-card--green  .dev-card__badge { background: #1a7a3c;  color: #fff; }
 
-Nuestro objetivo es convertir una de las empresas minoristas más grandes del mundo en una organización digital de primer orden. Creamos la primera biblioteca de componentes totalmente receptiva para la marca.
+.dev-stack {
+  margin: 32px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dev-stack__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: stretch;
+}
+.dev-stack__row:last-child { border-bottom: none; }
+.dev-stack__layer {
+  padding: 14px 16px;
+  background: #f8f8f8;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: #555;
+  display: flex; align-items: center;
+  border-right: 1px solid #e0e0e0;
+}
+.dev-stack__items {
+  padding: 12px 16px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+  align-items: center;
+}
+.dev-stack__chip {
+  font-size: 11px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-family: monospace;
+}
+.dev-stack__chip--key {
+  background: #000;
+  color: #fff;
+}
 
-**Holygrail** es un sistema de diseño completo que proporciona todas las herramientas que necesita para diseñar y desarrollar productos digitales, desde temas de Figma hasta configuraciones y componentes compartidos.
+.dev-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+.dev-flow__step {
+  flex: 1;
+  min-width: 110px;
+  text-align: center;
+  padding: 16px 8px;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+  position: relative;
+}
+.dev-flow__step:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-size: 18px;
+  color: #999;
+}
+.dev-flow__num {
+  display: block;
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 4px;
+}
+.dev-flow__label {
+  display: block;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.3;
+}
 
-Si bien algunas de las herramientas de desarrollo, como **SASS**, son obligatorias para trabajar con los componentes de la interfaz de usuario de Holygrail, se recomiendan enfáticamente otras para garantizar la consistencia y la calidad del código elevado en todos los proyectos.
+.dev-tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+.dev-tool {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 13px;
+}
+.dev-tool a { font-weight: 700; color: #000; }
+.dev-tool p { margin: 4px 0 0; font-size: 11px; color: #777; }
+</style>
 
-### Enlaces de interés
+## ¿Qué es Holygrail?
 
-Herramientas útiles para el desarrollo:
+**Holygrail** es un sistema de diseño CSS agnóstico que proporciona variables, utilidades, componentes y layouts para construir interfaces web consistentes. Compatible con cualquier framework (Angular, React, vanilla HTML).
 
-- [Mindmaps para hacer ideas mentales](https://www.mindmaps.app/) - Crea mapas mentales visuales
-- [Creador de snippets](https://snippet-generator.app/) - Genera snippets de código
-- [Gráficos en ASCII](https://asciiflow.com/#/) - Crea diagramas en texto plano
-- [API SWIPER slider](https://swiperjs.com/) - Documentación del slider Swiper
+### Stack tecnológico
+
+<div class="dev-stack">
+  <div class="dev-stack__row">
+    <div class="dev-stack__layer">Núcleo</div>
+    <div class="dev-stack__items">
+      <span class="dev-stack__chip dev-stack__chip--key">holygrail2</span>
+      <span class="dev-stack__chip">SCSS / Sass</span>
+      <span class="dev-stack__chip">CSS custom properties</span>
+    </div>
+  </div>
+  <div class="dev-stack__row">
+    <div class="dev-stack__layer">Generador</div>
+    <div class="dev-stack__items">
+      <span class="dev-stack__chip dev-stack__chip--key">Eleventy (11ty)</span>
+      <span class="dev-stack__chip">Nunjucks</span>
+      <span class="dev-stack__chip">Markdown</span>
+    </div>
+  </div>
+  <div class="dev-stack__row">
+    <div class="dev-stack__layer">Animación</div>
+    <div class="dev-stack__items">
+      <span class="dev-stack__chip dev-stack__chip--key">GSAP</span>
+      <span class="dev-stack__chip">CSS animations</span>
+      <span class="dev-stack__chip">Intersection Observer</span>
+    </div>
+  </div>
+  <div class="dev-stack__row">
+    <div class="dev-stack__layer">Proyecto</div>
+    <div class="dev-stack__items">
+      <span class="dev-stack__chip dev-stack__chip--key">Angular</span>
+      <span class="dev-stack__chip">TypeScript</span>
+      <span class="dev-stack__chip">Angular CDK</span>
+    </div>
+  </div>
+</div>
+
+### Flujo de trabajo
+
+<div class="dev-flow">
+  <div class="dev-flow__step">
+    <span class="dev-flow__num">01</span>
+    <span class="dev-flow__label">Setup<br>variables</span>
+  </div>
+  <div class="dev-flow__step">
+    <span class="dev-flow__num">02</span>
+    <span class="dev-flow__label">Import<br>holygrail2</span>
+  </div>
+  <div class="dev-flow__step">
+    <span class="dev-flow__num">03</span>
+    <span class="dev-flow__label">HTML<br>estructura</span>
+  </div>
+  <div class="dev-flow__step">
+    <span class="dev-flow__num">04</span>
+    <span class="dev-flow__label">Componentes<br>DS</span>
+  </div>
+  <div class="dev-flow__step">
+    <span class="dev-flow__num">05</span>
+    <span class="dev-flow__label">Debug &<br>QA</span>
+  </div>
+</div>
+
+---
+
+## Secciones de Develop
+
+<div class="dev-cards">
+  <a class="dev-card dev-card--accent" href="/start-dev/">
+    <span class="dev-card__badge">Inicio</span>
+    <p class="dev-card__title">Start Dev</p>
+    <p class="dev-card__desc">Instalación, setup mínimo, estructura de archivos y primeros pasos con holygrail2.</p>
+  </a>
+  <a class="dev-card dev-card--green" href="/practices/">
+    <span class="dev-card__badge">Calidad</span>
+    <p class="dev-card__title">Buenas Prácticas</p>
+    <p class="dev-card__desc">Guía con ejemplos reales de buenas y malas praxis detectadas en el proyecto Dutti.</p>
+  </a>
+  <a class="dev-card dev-card--warn" href="/develop/effort-impact/">
+    <span class="dev-card__badge">Estrategia</span>
+    <p class="dev-card__title">Effort vs Impact</p>
+    <p class="dev-card__desc">Propuestas de mejora SCSS/HTML clasificadas por esfuerzo e impacto. 19 iniciativas.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-overview/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Visión General</p>
+    <p class="dev-card__desc">Arquitectura completa del frontend de Massimo Dutti — estructura de carpetas y convenciones.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-abstract-base/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Abstract & Base</p>
+    <p class="dev-card__desc">Variables, breakpoints, mixins, tipografía y declaración de fuentes.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-elements/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Elements</p>
+    <p class="dev-card__desc">Modales, filtros, PDP, PLP, Swiper, sidebars, toast y notificaciones. 22 archivos.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-partials/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Partials</p>
+    <p class="dev-card__desc">Header, menú HolyGrail, footer, shopcart, search y chat. 17 archivos.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-forms/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Forms</p>
+    <p class="dev-card__desc">Inputs, checkboxes, dropdowns, OTP, phone combo y range slider. 11 archivos.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-components/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Components Angular</p>
+    <p class="dev-card__desc">Inventario de 86 componentes Angular con estilos encapsulados.</p>
+  </a>
+  <a class="dev-card dev-card--dutti" href="/develop/dutti-process/">
+    <span class="dev-card__badge">Dutti</span>
+    <p class="dev-card__title">Process</p>
+    <p class="dev-card__desc">Flujos de checkout, mi cuenta, newsletter, citas y herramientas dev. 23 archivos.</p>
+  </a>
+</div>
+
+---
+
+### Herramientas de desarrollo
+
+<div class="dev-tools">
+  <div class="dev-tool">
+    <a href="https://www.mindmaps.app/" target="_blank">Mindmaps</a>
+    <p>Mapas mentales visuales para arquitectura</p>
+  </div>
+  <div class="dev-tool">
+    <a href="https://snippet-generator.app/" target="_blank">Snippet Generator</a>
+    <p>Genera snippets para VS Code / Cursor</p>
+  </div>
+  <div class="dev-tool">
+    <a href="https://asciiflow.com/#/" target="_blank">ASCIIFlow</a>
+    <p>Diagramas en texto plano para comentarios</p>
+  </div>
+  <div class="dev-tool">
+    <a href="https://swiperjs.com/" target="_blank">Swiper API</a>
+    <p>Documentación del slider Swiper</p>
+  </div>
+  <div class="dev-tool">
+    <a href="https://codesandbox.io/s/origen-holygrail-ktq12" target="_blank">CodeSandbox</a>
+    <p>Boilerplate holygrail2 en la nube</p>
+  </div>
+  <div class="dev-tool">
+    <a href="https://handbrake.fr/" target="_blank">Handbrake</a>
+    <p>Compresor de vídeo gratuito</p>
+  </div>
+</div>
 
 ### Boilerplate
 

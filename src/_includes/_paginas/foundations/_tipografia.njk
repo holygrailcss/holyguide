@@ -4,161 +4,212 @@ layout: base.njk
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
+
 <div class="main-content">
+
+  {# ── Familias de fuente ─────────────────────────────────────── #}
   <div class="row pb-64">
-
-<div class="col-xs-12 mb-64">
-  <div class="h2">Familias</div>
-</div>
-
+    <div class="col-xs-12 mb-32">
+      <div class="h2">Familias tipográficas</div>
+    </div>
     <div class="col-xs-12">
-      <p class="title-l mb-16">
-        Actualmente tenemos las siguientes Familias tipográficas:
-      </p>
 
-      <div class="title-1 bg-warning mb-16"> title-m</div>
-      <div class="title-1 bg-warning mb-16"> TITLE-M </div>
+      <div class="row mb-8 title-m ttu c-dark-grey">
+        <div class="col-xs-3">Variable SCSS</div>
+        <div class="col-xs-4">Font-face</div>
+        <div class="col-xs-5">Muestra</div>
+      </div>
+      <div class="border-b2 mb-16"></div>
 
-      <p class="text-l mb-16">
-        Las familias tipograficas que van después de la fuente primaria son las
-        llamadas <strong>"fallbacks"</strong>, estás fuentes son las primeras en
-        cargar.
-      </p>
-      <div class="title-m mb-16 mt-32">Familia SuisseIntl</div>
-      <p>
-        <strong>light</strong>:'SuisseIntl-Light', Helvetica, 'Arial ',
-        'Lucida Grande', sans-serif;
-      </p>
-      <p>
-        <strong>regular</strong>:'SuisseIntl-Regular', Helvetica, 'Arial ',
-        'Lucida Grande', sans-serif;
-      </p>
-      <p>
-        <strong>medium</strong>: 'SuisseIntl-Medium', Helvetica, 'Arial ', 'Lucida
-        Grande', sans-serif;
-      </p>
-      <p>
-        <strong>bold</strong>: 'SuisseIntl-Bold', Helvetica, 'Arial ', 'Lucida
-        Grande', sans-serif;
-      </p>
-      <div class="title-m mb-16 mt-32 bold3">Familia massimo-daily</div>
-      <p>
-        <strong class="bold3">regular3</strong>: 'massimo-daily-regular',
-        'ms-serif',serif; <b class="todo" > Va a ser la suisse regular</b>
-      </p>
-      <p>
-        <strong class="bold3">medium3</strong>: 'massimo-daily-light',
-        'ms-serif',serif;
-      </p>
-      <p>
-        <strong class="bold3">bold3</strong>: 'massimo-daily-bold',
-        'ms-serif',serif;
-      </p>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-a-l</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-light · Light</div>
+        <div class="col-xs-5 font-light" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
+      </div>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-a-r</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-regular · Regular</div>
+        <div class="col-xs-5" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
+      </div>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-a-m / a-b</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-medium · Medium</div>
+        <div class="col-xs-5 bold" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
+      </div>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-a-sb</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-semibold · SemiBold</div>
+        <div class="col-xs-5 semibold" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
+      </div>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-b-m</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">dutti-extended-bold</div>
+        <div class="col-xs-5 bold3" style="font-size:16px">Massimo Dutti Aa Bb</div>
+      </div>
+      <div class="row mb-16 pb-16 border-b2">
+        <div class="col-xs-3 hg-body-m">$font-family-c-r</div>
+        <div class="col-xs-4 hg-body-m c-dark-grey">massimo-daily-regular · Serif</div>
+        <div class="col-xs-5 regular3" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
+      </div>
+
     </div>
   </div>
+
   <hr />
-  <div class="row pt-64">
 
-    <div class="col-xs-12 mb-64">
-      <div class="h2">Clases</div>
+  {# ── Escala tipográfica ─────────────────────────────────────── #}
+  <div class="row pt-64 pb-64">
+    <div class="col-xs-12 mb-32">
+      <div class="h2">Escala tipográfica</div>
+      <p class="hg-body-m c-dark-grey mt-8">Clases generadas por <code>$minheaders</code> en <code>abstract/_setup.scss</code>. El interletrado se aplica globalmente desde <code>style.scss</code>.</p>
     </div>
-    
-<div class="suisse-m"> jsfopigsjgsfoijgfdijo</div>
+
     <div class="col-xs-12">
-      <div class="title-s c-dark-grey pb-32">
-        Familia tipográfica y jerarquías que debemos usar con sus ejemplos y
-        variantes.
-      </div>
-    </div>
-    <div class="col-xs-12 mb-64">
-      <div class="bg-info p-16 c-white is-flex mb-24">
-        <p>
-          Estas son las tipografías que estarán definidas en los archivos de diseño
-          y las que deberias usar siempre.
-        </p>
-      </div>
-      <div class="row text-l-b bold mb-16">
-        <div class="col-xs-2">Nombre</div>
-        <div class="col-xs-2">Mobile (xs) </div>
-        <div class="col-xs-2">Desktop (md) +992px</div>
-        <div class="col-xs-4">FAMILY</div>
-        <div class="col-xs-1">Ex.</div>
-        <div class="col-xs-1">LINE</div>
 
+      {# Cabecera #}
+      <div class="row mb-8 title-m ttu c-dark-grey" style="letter-spacing:.1em">
+        <div class="col-xs-2">Clase</div>
+        <div class="col-xs-1">Mobile</div>
+        <div class="col-xs-1">Desktop</div>
+        <div class="col-xs-1">LH</div>
+        <div class="col-xs-2">Peso</div>
+        <div class="col-xs-2">Tracking</div>
+        <div class="col-xs-3">Muestra</div>
       </div>
+      <div class="border-b2 mb-8"></div>
+
       {% for tipo in global.tipografias %}
-      <div class="row mb-8">
-        <div class="col-xs-2 text-l-b">.{{tipo.name}}</div>
-        <div class="col-xs-2 text-l">{{tipo.xs}}</div>
-        <div class="col-xs-2 text-l">{{tipo.lg}}</div>
-        <div class="col-xs-4 {{tipo.weight}} ">
-          {% if tipo.weight == 'light' %} SuisseIntl-Light - light
-          {% elif tipo.weight == 'regular' %} SuisseIntl-Regular - regular
-          {% elif tipo.weight == 'medium' %} SuisseIntl-Medium - medium
-          {% elif tipo.weight == 'bold' %} SuisseIntl-SemiBold - semibold
-          {% elif tipo.weight == 'bold3' %} massimo-daily-medium - bold3
-          {% elif tipo.weight == 'bold' %} massimo-daily-medium - bold
+      <div class="row mb-4 pb-8 border-b2" style="align-items:center">
+        <div class="col-xs-2">
+          <code style="font-size:11px;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px">.{{tipo.name}}</code>
+        </div>
+        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.xs}}</div>
+        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.lg}}</div>
+        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.line}}</div>
+        <div class="col-xs-2 hg-body-m c-dark-grey">
+          {% if tipo.weight == 'light' %}light
+          {% elif tipo.weight == 'regular' %}regular
+          {% elif tipo.weight == 'medium' %}medium
+          {% elif tipo.weight == 'bold' %}bold
+          {% elif tipo.weight == 'regular3' %}regular3 (serif)
+          {% else %}{{tipo.weight}}
           {% endif %}
         </div>
-        <div class="col-xs-1 {{tipo.name}} "> Aa</div>
-        <div class="col-xs-1 text-l">{{tipo.line}} </div>
+        <div class="col-xs-2">
+          {% if tipo.tracking == '0.04em' %}
+            <span style="display:inline-block;font-size:9px;font-weight:700;font-family:monospace;padding:1px 5px;border-radius:4px;background:#e8f4fd;color:#1a5e99">0.04em</span>
+          {% elif tipo.tracking == '0.16em' %}
+            <span style="display:inline-block;font-size:9px;font-weight:700;font-family:monospace;padding:1px 5px;border-radius:4px;background:#f0fdf4;color:#1a7a3c">0.16em</span>
+          {% else %}
+            <span style="font-size:10px;color:#bbb">—</span>
+          {% endif %}
+        </div>
+        <div class="col-xs-3 {{tipo.name}}">Massimo Dutti</div>
       </div>
-      <div class="border-b2 mb-16"> </div>
       {% endfor %}
+
     </div>
   </div>
 
+  <hr />
 
+  {# ── Tamaños fijos ──────────────────────────────────────────── #}
+  <div class="row pt-64 pb-64">
+    <div class="col-xs-12 mb-32">
+      <div class="h2">Tamaños fijos — $headersFixers</div>
+      <p class="hg-body-m c-dark-grey mt-8">Clases con tamaño fijo (no responsive). Generadas por <code>$headersFixers</code>.</p>
+    </div>
 
-<div class="row pb-64" contenteditable="true">
+    <div class="col-xs-12">
+      <div class="row mb-8 title-m ttu c-dark-grey" style="letter-spacing:.1em">
+        <div class="col-xs-2">Clase</div>
+        <div class="col-xs-2">Font-size</div>
+        <div class="col-xs-2">Line-height</div>
+        <div class="col-xs-6">Muestra</div>
+      </div>
+      <div class="border-b2 mb-8"></div>
 
+      {% set fixers = [
+        { "cls": "text-12-r", "size": "12px", "lh": "1" },
+        { "cls": "text-14-r", "size": "14px", "lh": "1.5" },
+        { "cls": "text-16-r", "size": "16px", "lh": "1.5" },
+        { "cls": "text-18-r", "size": "18px", "lh": "1.5" },
+        { "cls": "text-20-r", "size": "20px", "lh": "1.2" },
+        { "cls": "text-24-r", "size": "24px", "lh": "1.2" },
+        { "cls": "text-32-r", "size": "32px", "lh": "1.2" },
+        { "cls": "text-40-r", "size": "40px", "lh": "1.2" }
+      ] %}
+      {% for f in fixers %}
+      <div class="row pb-8 mb-4 border-b2" style="align-items:center">
+        <div class="col-xs-2">
+          <code style="font-size:11px;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px">.{{f.cls}}</code>
+        </div>
+        <div class="col-xs-2 hg-body-m c-dark-grey">{{f.size}}</div>
+        <div class="col-xs-2 hg-body-m c-dark-grey">{{f.lh}}</div>
+        <div class="col-xs-6 {{f.cls}}">Massimo Dutti</div>
+      </div>
+      {% endfor %}
 
-
-
-<div class="col-xs-12 mb-64">
-  <div class="h2">Grosores  </div>
-</div>
-
-
-  <div class="col-xs-6">
-    <div class="mb-24"> Font light</div>
-    <div class=" font-light title-l">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
+    </div>
   </div>
 
+  <hr />
 
-  <div class="col-xs-6 bg-dark">
-    <div class="mb-24"> Font light</div>
-    <div class="font-light title-l ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
-  </div>
-</div>
-
-
-<div class="row pb-64">
-  <div class="col-xs-6">
-    <div class="mb-24"> Font Regular</div>
-    <div class=" font-regular title-l">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
-  </div>
-
-
-  <div class="col-xs-6 bg-dark">
-    <div class="mb-24"> Font Regular</div>
-    <div class="font-regular title-l ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
-  </div>
-</div>
-
-
-<div class="row pb-64">
-  <div class="col-xs-6">
-    <div class="mb-24"> Font Bold</div>
-    <div class=" font-bold title-l">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
+  {# ── Interletrado ───────────────────────────────────────────── #}
+  <div class="row pt-64 pb-64">
+    <div class="col-xs-12 mb-32">
+      <div class="h2">Interletrado</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <div class="title-m mb-16" style="letter-spacing:.1em">0.04em — cuerpo de texto</div>
+      <p class="hg-body-m c-dark-grey mb-16">.p-tag · .title-l · .text-m · .text-l · .title-s · .input · .hg-body-m · .hg-body-m-b · .form-input-label-2 label</p>
+      <div style="letter-spacing:0.04em;font-size:12px;padding:16px;background:#f5f5f5;border-radius:6px">
+        Massimo Dutti — texto de cuerpo a 0.04em de interletrado
+      </div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <div class="title-m mb-16" style="letter-spacing:.1em">0.16em — etiquetas TTU</div>
+      <p class="hg-body-m c-dark-grey mb-16">.title-m · .label-m · .semantic</p>
+      <div style="letter-spacing:0.16em;text-transform:uppercase;font-size:12px;padding:16px;background:#f5f5f5;border-radius:6px">
+        Massimo Dutti — etiqueta a 0.16em
+      </div>
+    </div>
   </div>
 
+  <hr />
 
-  <div class="col-xs-6 bg-dark">
-    <div class="mb-24"> Font Bold</div>
-    <div class="font-bold  title-l">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus doloremque facere optio voluptatum id, quae laboriosam iusto aut eaque fugit rem quibusdam, dolorum at temporibus autem omnis illum ratione adipisci.</div>
+  {# ── Grosores ───────────────────────────────────────────────── #}
+  <div class="row pt-64 pb-64">
+    <div class="col-xs-12 mb-32">
+      <div class="h2">Grosores</div>
+    </div>
+
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">font-light</p>
+      <div class="font-light title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">font-regular</p>
+      <div class="font-regular title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">bold (→ suisse-medium)</p>
+      <div class="bold title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">semibold (→ suisse-semibold)</p>
+      <div class="semibold title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">bold3 (dutti-extended-bold)</p>
+      <div class="bold3" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="col-xs-6 mb-32">
+      <p class="label-m mb-8">regular3 (massimo-daily-regular)</p>
+      <div class="regular3" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
   </div>
-</div>
 
+  {{ content | safe }}
 
 </div>

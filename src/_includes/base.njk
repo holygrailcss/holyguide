@@ -215,8 +215,148 @@
         event.target.classList.remove("resize-overlay");
       });
     document.addEventListener("DOMContentLoaded", function () {
-      // Inicializa Highlight.js
       Prism.highlightAll();
+
+      // ── Code blocks con cabecera colapsable ───────────────────
+      const LANG_LABELS = {
+        html: 'HTML', css: 'CSS', scss: 'SCSS', js: 'JavaScript',
+        javascript: 'JavaScript', ts: 'TypeScript', typescript: 'TypeScript',
+        bash: 'Bash', shell: 'Shell', njk: 'Nunjucks', nunjucks: 'Nunjucks',
+        json: 'JSON', python: 'Python', yaml: 'YAML', xml: 'XML',
+      };
+
+      document.querySelectorAll('.guide pre').forEach(pre => {
+        const code = pre.querySelector('code');
+        if (!code) return;
+
+        // Detectar lenguaje desde la clase language-xxx
+        const langClass = [...code.classList].find(c => c.startsWith('language-'));
+        const langKey   = langClass ? langClass.replace('language-', '') : '';
+        const langLabel = LANG_LABELS[langKey] || langKey.toUpperCase() || 'CODE';
+
+        // Calcular altura real para la animación
+        const bodyHeight = pre.scrollHeight + 'px';
+
+        // Crear wrapper
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+
+        // Crear cabecera
+        const header = document.createElement('div');
+        header.className = 'code-block-header';
+        header.innerHTML = `
+          <div class="code-block-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="code-block-lang code-block-lang--${langKey}">${langLabel}</span>
+          <div class="code-block-actions">
+            <button class="code-block-btn code-block-copy" title="Copiar código">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v-1a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-1"/><rect x="2" y="6" width="8" height="8" rx="1.5"/></svg>
+            </button>
+            <button class="code-block-btn code-block-toggle" title="Colapsar / Expandir">
+              <svg class="code-block-toggle-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l4 4 4-4"/></svg>
+            </button>
+          </div>`;
+
+        // Crear body contenedor
+        const body = document.createElement('div');
+        body.className = 'code-block-body';
+        body.style.maxHeight = bodyHeight;
+
+        // Insertar en DOM
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(header);
+        body.appendChild(pre);
+        wrapper.appendChild(body);
+
+        // Colapsar / Expandir
+        header.addEventListener('click', (e) => {
+          if (e.target.closest('.code-block-copy')) return;
+          const collapsed = wrapper.classList.toggle('is-collapsed');
+          body.style.maxHeight = collapsed ? '0' : pre.scrollHeight + 'px';
+          body.classList.toggle('is-collapsed', collapsed);
+        });
+
+        // Copiar código
+        header.querySelector('.code-block-copy').addEventListener('click', (e) => {
+          e.stopPropagation();
+          const btn = e.currentTarget;
+          navigator.clipboard.writeText(code.innerText).then(() => {
+            btn.classList.add('copied');
+            btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8l4 4 8-8"/></svg> Copiado`;
+            setTimeout(() => {
+              btn.classList.remove('copied');
+              btn.innerHTML = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v-1a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-1"/><rect x="2" y="6" width="8" height="8" rx="1.5"/></svg>`;
+            }, 2000);
+          });
+        });
+      });
+      // ─────────────────────────────────────────────────────────
+
+      // ── code-view: toolbar interactivo ────────────────────────
+      document.querySelectorAll('.code-view').forEach(cv => {
+        // Evitar doble inicialización
+        if (cv.closest('.code-view-wrapper')) return;
+
+        // Wrapper
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-view-wrapper';
+        cv.parentNode.insertBefore(wrapper, cv);
+        wrapper.appendChild(cv);
+
+        // Toolbar
+        const toolbar = document.createElement('div');
+        toolbar.className = 'code-view-toolbar';
+        toolbar.innerHTML = `
+          <span class="code-view-toolbar__label">Preview</span>
+          <div class="code-view-toolbar__actions">
+            <button class="cv-btn cv-btn--dark" title="Alternar modo oscuro">
+              <svg viewBox="0 0 16 16"><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41"/><circle cx="8" cy="8" r="3"/></svg>
+              Dark
+            </button>
+            <div class="cv-separator"></div>
+            <button class="cv-btn cv-btn--rtl" title="Alternar dirección RTL">
+              <svg viewBox="0 0 16 16"><path d="M14 4H7M14 8H7M14 12H4"/><path d="M2 10l-2-2 2-2"/></svg>
+              RTL
+            </button>
+            <div class="cv-separator"></div>
+            <button class="cv-btn cv-btn--bg" title="Fondo blanco" data-mode="white">
+              <svg viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2"/></svg>
+              BG
+            </button>
+          </div>`;
+
+        wrapper.insertBefore(toolbar, cv);
+
+        // Botón Dark
+        toolbar.querySelector('.cv-btn--dark').addEventListener('click', function() {
+          const isDark = cv.classList.toggle('bg-dark');
+          cv.classList.toggle('has-light', !isDark);
+          this.classList.toggle('is-active', isDark);
+        });
+
+        // Botón RTL
+        toolbar.querySelector('.cv-btn--rtl').addEventListener('click', function() {
+          const isRtl = cv.classList.toggle('is-rtl');
+          cv.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+          this.classList.toggle('is-active', isRtl);
+        });
+
+        // Botón BG (ciclo: checker → white → black)
+        const bgBtn = toolbar.querySelector('.cv-btn--bg');
+        const bgModes = ['checker', 'white', 'black'];
+        let bgIdx = 0;
+        bgBtn.addEventListener('click', function() {
+          cv.classList.remove('cv-bg--white', 'cv-bg--black');
+          bgIdx = (bgIdx + 1) % bgModes.length;
+          const mode = bgModes[bgIdx];
+          if (mode !== 'checker') cv.classList.add('cv-bg--' + mode);
+          const labels = ['BG', 'BG ◻', 'BG ◼'];
+          bgBtn.childNodes[bgBtn.childNodes.length - 1].textContent = ' ' + labels[bgIdx];
+          bgBtn.classList.toggle('is-active', bgIdx !== 0);
+        });
+      });
+      // ─────────────────────────────────────────────────────────
     });
 
 

@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "scss", "css", "arquitectura"]
 titulo: Effort vs Impact Matrix
 descripcion: Propuestas de mejora para el SCSS, la arquitectura HTML y el CSS del frontend, clasificadas por esfuerzo e impacto.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Effort vs Impact Matrix SCSS HTML CSS

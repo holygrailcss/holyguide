@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "forms", "inputs", "formularios"]
 titulo: Dutti — Forms
 descripcion: Documentación de la carpeta forms/ del frontend de Massimo Dutti. Inputs, checkboxes, dropdowns y componentes de formulario.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Forms SCSS Dutti

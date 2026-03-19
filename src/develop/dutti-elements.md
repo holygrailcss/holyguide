@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "elements", "modales", "pdp", "plp"]
 titulo: Dutti — Elements
 descripcion: Documentación de la carpeta elements/ del frontend de Massimo Dutti. Modales, filtros, PDP, PLP, swiper, drawer y más.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Elements SCSS Dutti

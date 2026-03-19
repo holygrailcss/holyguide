@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "process", "checkout", "my-account"]
 titulo: Dutti — Process
 descripcion: Documentación de la carpeta process/ del frontend de Massimo Dutti. Flujos de checkout, mi cuenta, newsletter, citas y herramientas de desarrollo.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Process SCSS Dutti

@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "partials", "header", "footer", "menu"]
 titulo: Dutti — Partials
 descripcion: Documentación de la carpeta partials/ del frontend de Massimo Dutti. Header, menú, footer, shopcart, search y chat.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Partials SCSS Dutti

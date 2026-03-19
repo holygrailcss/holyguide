@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "components", "angular"]
 titulo: Dutti — Components Angular
 descripcion: Inventario de los 86 componentes Angular con estilos encapsulados del frontend de Massimo Dutti.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Components Angular Dutti

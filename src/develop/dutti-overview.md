@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "arquitectura"]
 titulo: Dutti Frontend — Visión general
 descripcion: Arquitectura de estilos del proyecto frontend de Massimo Dutti. Estructura de carpetas, orden de carga y convenciones.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Arquitectura SCSS Dutti Frontend

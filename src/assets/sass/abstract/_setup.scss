@@ -13,27 +13,29 @@ $height-sm: 150px;
 
 $minheaders: (
 
-    h2: (18px, 24px, 1.2, "bold", ),
+    h2:          (18px, 24px, 1.2, "bold",     ),
 
-    title-l-b: (14px, 14px, 1.4, "medium", ), // quitarlo
-    title-s: (11px, 11px, 1.4, "light", ),  //ttu
-    suisse-1: ( 16px, 20px, 1.5, "regular3", ),
-    suisse-2: ( 13px, 14px, 1.1, "regular3", ),
-    suisse-body: ( 10px, 12px, 1.1, "regular3", ),
+    suisse-1:    (16px, 20px, 1.5, "regular3", ),
+    suisse-2:    (13px, 14px, 1.1, "regular3", ),
+    suisse-body: (10px, 12px, 1.1, "regular3", ),
 
+    p-tag:       ( 9px, 10px, 1,   "light",    ),
+    title-l-b:   (12px, 13px, 1.4, "regular",  ),
+    title-l:     (12px, 13px, 1.4, "light",    ),  // ttu · 0.04em
+    title-m:     (12px, 12px, 1.4, "light",    ),  // ttu · 0.16em
+    title-s:     (10px, 10px, 1.4, "light",    ),  // ttu · 0.04em
 
-    p-tag: (8px, 8px, 1, "light", ), 
-    semantic: ( 12px, 12px, 1, "light", ),// interletrado a 16% cambiar por / label-m
-    title-l: (13px, 13px, 1.4, "light", ),// ttu
-    title-m: (12px, 12px, 1.4, "light", ),// interletrado a 16% ttu
+    text-m:      (12px, 12px, 1.5, "light",    ),  // 0.04em
+    text-l:      (12px, 13px, 1.5, "light",    ),  // 0.04em · alias de hg-body-l
 
-    text-m: (12px, 12px, 1.5, "light", ),
-    text-l: (12px, 13px, 1.5, "light", ), // la cambiamos por hg-body-m 
+    semantic:    (12px, 12px, 1,   "light",    ),  // 0.16em
 
-    hg-body-m:( 12px, 13px, 1.5, "light", ),
-    hg-body-m-b:( 12px, 13px, 1.5, "medium", ),
+    hg-body-l:   (12px, 13px, 1.5, "light",   ),
+    hg-body-l-b: (12px, 13px, 1.5, "regular", ),
+    hg-body-m:   (12px, 12px, 1.5, "light",   ),  // 0.04em · más usado
+    hg-body-m-b: (12px, 12px, 1.5, "regular", ),  // 0.04em
 
-    label-m: (12px, 12px, 1, "light", ), // interletrado a 16%
+    label-m:     (12px, 12px, 1,   "light",   ),  // 0.16em
 
 );
 

@@ -5,6 +5,7 @@ page_section: develop
 tags: ["develop", "dutti", "scss", "variables", "breakpoints"]
 titulo: Dutti — Abstract & Base
 descripcion: Variables, breakpoints, mixins, tipografía y fuentes del proyecto frontend de Massimo Dutti.
+badge: new
 date: 2026-03-09
 image: /assets/static/images/1.jpg
 imageAlt: Abstract y Base SCSS Dutti
