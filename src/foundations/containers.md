@@ -4,6 +4,7 @@ permalink: /containers/
 titulo: Containers
 descripcion: Tipos de contenedores y anchos máximos del sistema de retícula. Variables SCSS y clases CSS disponibles.
 page_section: foundations
+badge: updated
 date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]

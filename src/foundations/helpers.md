@@ -4,6 +4,7 @@ permalink: /helpers/
 titulo: Helpers
 descripcion: Clases de utilidad para colores, fondos, posicionamiento, tipografía, scroll, visibilidad y más.
 page_section: foundations
+badge: updated
 date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]

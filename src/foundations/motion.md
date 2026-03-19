@@ -6,6 +6,7 @@ titulo: Motion
 descripcion: Clases y helpers para animaciones — tipos de transición, duraciones y easings del sistema de diseño.
 
 page_section: foundations
+badge: updated
 date: 2023-06-19
 fecha: 19 de junio de 2023
 

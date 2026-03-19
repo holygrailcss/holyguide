@@ -6,6 +6,7 @@ titulo: Ratios
 descripcion: Contenedores que conservan una relación de aspecto definida. Dos sistemas disponibles — rat-* (padding-top legacy) y ar-* (CSS aspect-ratio moderno).
 
 page_section: foundations
+badge: new
 date: 2026-03-09
 fecha: 9 de marzo de 2026
 tags: ["Estructuras modulares", "web design", "foundations"]

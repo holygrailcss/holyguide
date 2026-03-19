@@ -6,6 +6,7 @@ titulo: Videos
 descripcion: Guía de vídeos en loop para background — formatos, peso máximo, frame rate y canal de audio.
 
 page_section: foundations
+badge: updated
 date: 2023-06-19
 fecha: 19 de junio de 2023
 

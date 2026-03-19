@@ -6,6 +6,7 @@ descripcion: El modelo unidimensional de layout de CSS. Base de la distribución
 descripcion2: Colección completa de clases helper para flexbox — activación, dirección, alineación, orden y wrapping.
 
 page_section: foundations
+badge: new
 date: 2026-03-09
 fecha: 9 de marzo de 2026
 tags: ["Estructuras modulares", "web design", "foundations"]

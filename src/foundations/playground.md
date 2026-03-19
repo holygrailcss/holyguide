@@ -6,6 +6,7 @@ titulo: Playground
 descripcion: Espacio de pruebas para experimentar con clases, layouts y componentes del sistema de diseño.
 
 page_section: foundations
+badge: new
 date: 2026-03-09
 fecha: 9 de marzo de 2026
 tags: ["Estructuras modulares", "web design", "foundations"]

@@ -6,6 +6,7 @@ titulo: Colores
 descripcion: Paleta de colores del sistema de diseño. Los colores primitivos son la base sobre la que se construyen todos los tokens de color del DS.
 
 page_section: foundations
+badge: new
 date: 2026-03-09
 fecha: 9 de marzo de 2026
 tags: ["Estructuras modulares", "web design", "foundations"]

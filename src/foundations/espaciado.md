@@ -4,6 +4,7 @@ permalink: /espaciado/
 titulo: Espaciado
 descripcion: Sistema de padding y margin del DS — valores fijos, responsive y helpers de reset por breakpoint.
 page_section: foundations
+badge: updated
 date: 2023-06-19
 fecha: 19 de junio de 2023
 tags: ["Estructuras modulares", "web design", "foundations"]
