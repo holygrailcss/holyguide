@@ -203,84 +203,7 @@ html {
     cursor: pointer;
   }
 }
-.code-view {
-  position: relative;
-  padding: 20px 20%;
-  display: grid;
-  background-color: #e4e4e4;
-  transition: 0.2s ease all;
-  flex-direction: column;
-}
-.code-view.bg-dark {
-  background-color: #000;
-}
-.check-new {
-  width: 10px;
-  height: 10px;
-  background-color: #28292d;
-  overflow: hidden;
-  border-radius: 50px;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  overflow: hidden;
-  cursor: pointer;
-  &:hover {
-    opacity: 1;
-  }
-  &:after {
-    content: "";
-    top: 4px;
-    right: 16px;
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
-    border-radius: 50px;
-  }
-  &:before {
-    content: "";
-    top: 2px;
-    right: -14px;
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: transparent;
-    z-index: 2;
-    border-radius: 50px;
-  }
-  .has-light & {
-    background-color: #ffffff;
-    &:after {
-      content: "";
-      top: 2px;
-      right: 16px;
-      position: absolute;
-      background-color: #28292d;
-    }
-    &:before {
-      content: "";
-      top: 2px;
-      right: 10px;
-      position: absolute;
-      background-color: #ffffff;
-      z-index: 2;
-    }
-  }
-}
-
-.check-rtl {
-  width: 10px;
-  height: 5px;
-  background-color: white;
-  overflow: hidden;
-
-  position: absolute;
-  bottom: 4px;
-  right: 4px;
-  overflow: hidden;
-  cursor: pointer;
-}
+// .code-view, .check-new, .check-rtl → ver estilos al final del archivo
 
 .opencode-button {
   .viewcode-html {
@@ -878,6 +801,223 @@ blockquote {
   border-left: 4px solid $c-primary;
   margin: 20px 0;
 }
+
+// ── Code blocks con cabecera ──────────────────────────────────────
+.guide .code-block-wrapper {
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.guide .code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e1e;
+  padding: 0 14px;
+  height: 36px;
+  user-select: none;
+  gap: 12px;
+  cursor: pointer;
+
+  &:hover { background: #252525; }
+}
+
+.guide .code-block-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+
+  span {
+    width: 10px; height: 10px;
+    border-radius: 50%; display: block;
+    &:nth-child(1) { background: #ff5f57; }
+    &:nth-child(2) { background: #febc2e; }
+    &:nth-child(3) { background: #28c840; }
+  }
+}
+
+.guide .code-block-lang {
+  flex: 1;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  font-family: monospace; color: #888;
+  padding-left: 4px;
+
+  &--scss    { color: #c678dd; }
+  &--css     { color: #56b6c2; }
+  &--html,
+  &--markup  { color: #e06c75; }
+  &--js,
+  &--javascript { color: #e5c07b; }
+  &--bash,
+  &--shell   { color: #98c379; }
+  &--njk,
+  &--nunjucks{ color: #61afef; }
+  &--json    { color: #d19a66; }
+  &--ts,
+  &--typescript { color: #4ec9b0; }
+}
+
+.guide .code-block-actions {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.guide .code-block-btn {
+  background: none; border: none; cursor: pointer;
+  color: #888; padding: 4px 6px; border-radius: 4px;
+  display: flex; align-items: center; gap: 4px;
+  font-size: 11px; font-family: monospace;
+  transition: all .15s; line-height: 1;
+
+  &:hover { background: rgba(255,255,255,.08); color: #ccc; }
+  &.copied { color: #28c840; }
+
+  svg {
+    width: 13px; height: 13px;
+    fill: none; stroke: currentColor;
+    flex-shrink: 0;
+  }
+}
+
+.guide .code-block-toggle-icon {
+  transition: transform .25s;
+}
+
+.guide .code-block-wrapper.is-collapsed .code-block-toggle-icon {
+  transform: rotate(-90deg);
+}
+
+.guide .code-block-body {
+  overflow: hidden;
+  transition: max-height .3s cubic-bezier(.4,0,.2,1), opacity .2s;
+
+  &.is-collapsed { max-height: 0 !important; opacity: 0; }
+}
+
+.guide .code-block-wrapper > .code-block-body > pre {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+// ── code-view rediseñada ──────────────────────────────────────────
+.code-view-wrapper {
+  margin: 24px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.code-view-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  padding: 0 14px;
+  height: 38px;
+  gap: 8px;
+  transition: background .2s;
+}
+
+.code-view-toolbar__label {
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: #aaa; font-family: monospace;
+}
+
+.code-view-toolbar__actions {
+  display: flex; align-items: center; gap: 4px;
+}
+
+.cv-btn {
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer; color: #777;
+  padding: 3px 9px; border-radius: 5px;
+  font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+  display: inline-flex; align-items: center; gap: 5px;
+  transition: all .15s; line-height: 1; height: 24px;
+
+  &:hover { background: #e8e8e8; color: #333; border-color: #ddd; }
+  &.is-active { background: #111; color: #fff; border-color: #111; }
+
+  svg {
+    width: 11px; height: 11px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2; stroke-linecap: round;
+    stroke-linejoin: round; flex-shrink: 0;
+  }
+}
+
+.cv-separator {
+  width: 1px; height: 18px;
+  background: #ddd; flex-shrink: 0;
+}
+
+.code-view {
+  position: relative;
+  padding: 48px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: #fafafa;
+  transition: background-color .25s ease, color .2s;
+  min-height: 100px;
+
+  &::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(45deg, rgba(0,0,0,.025) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,.025) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,.025) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.025) 75%);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+    pointer-events: none; z-index: 0;
+  }
+
+  > * { position: relative; z-index: 1; }
+
+  &.bg-dark {
+    background-color: #111;
+    &::after {
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%);
+    }
+  }
+
+  &.cv-bg--white { background-color: #fff !important; }
+  &.cv-bg--black { background-color: #000 !important; }
+}
+
+.code-view-wrapper > .code-view { margin: 0; }
+
+// Toolbar en modo oscuro
+.code-view-wrapper:has(.code-view.bg-dark),
+.code-view-wrapper:has(.code-view.cv-bg--black) {
+  .code-view-toolbar {
+    background: #222;
+    border-bottom-color: #333;
+  }
+  .code-view-toolbar__label { color: #555; }
+  .cv-btn { color: #888; &:hover { background: #333; color: #ccc; } }
+  .cv-separator { background: #333; }
+}
+
+// check-new y check-rtl — reemplazados por toolbar
+.check-new, .check-rtl { display: none !important; }
 
 // Badge en títulos de cards
 .article-title-with-badge {

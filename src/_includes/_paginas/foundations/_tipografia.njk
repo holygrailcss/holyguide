@@ -1,212 +1,526 @@
 ---
 layout: base.njk
 ---
+
+<style>
+/* ── Familias ──────────────────────────────────────────────────── */
+.tf-families {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin: 32px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tf-family-card {
+  background: #fff;
+  padding: 32px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-right: 1px solid #e0e0e0;
+}
+.tf-family-card:last-child { border-right: none; }
+.tf-family-card__specimen {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: #000;
+}
+.tf-family-card__name {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #999;
+}
+.tf-family-card__weights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: auto;
+}
+.tf-family-card__weight-pill {
+  font-size: 10px;
+  font-family: monospace;
+  padding: 2px 7px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  color: #555;
+}
+.tf-family-card__var {
+  font-size: 10px;
+  font-family: monospace;
+  color: #aaa;
+  margin-top: 4px;
+}
+.tf-family-card__glyphs {
+  font-size: 13px;
+  color: #aaa;
+  letter-spacing: .04em;
+  margin-top: 4px;
+}
+
+/* ── Escala tipográfica ────────────────────────────────────────── */
+.tf-scale {
+  margin: 32px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tf-scale__header {
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 10px 20px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #aaa;
+}
+.tf-scale-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  transition: background .15s;
+}
+.tf-scale-row:last-child { border-bottom: none; }
+.tf-scale-row:hover { background: #fafafa; }
+.tf-scale-row__meta { display: flex; flex-direction: column; gap: 4px; }
+.tf-scale-row__code {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  background: rgba(0,0,0,.05);
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.tf-scale-row__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.tf-pill {
+  font-size: 9px;
+  font-family: monospace;
+  padding: 1px 5px;
+  border-radius: 3px;
+  line-height: 1.6;
+}
+.tf-pill--size  { background: #f0f0f0; color: #555; }
+.tf-pill--lh    { background: #f0f0f0; color: #555; }
+.tf-pill--w     { background: #000; color: #fff; }
+.tf-pill--t4    { background: #dbeafe; color: #1d4ed8; font-weight: 700; }
+.tf-pill--t16   { background: #dcfce7; color: #15803d; font-weight: 700; }
+
+.tf-scale-row__preview {
+  padding: 8px 0;
+  color: #000;
+}
+.tf-scale-row__badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* ── Tamaños fijos ─────────────────────────────────────────────── */
+.tf-fixers {
+  margin: 32px 0;
+}
+.tf-fixer-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.tf-fixer-row:last-child { border-bottom: none; }
+.tf-fixer-row__meta {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.tf-fixer-row__code {
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  background: rgba(0,0,0,.05);
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.tf-fixer-row__info { font-size: 10px; color: #aaa; font-family: monospace; }
+.tf-fixer-row__text { color: #000; }
+
+/* ── Tracking ──────────────────────────────────────────────────── */
+.tf-tracking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin: 32px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tf-tracking-card {
+  padding: 32px;
+  background: #fff;
+}
+.tf-tracking-card:first-child { border-right: 1px solid #e0e0e0; }
+.tf-tracking-card__label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+.tf-tracking-card__val {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: monospace;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.tf-tracking-card--4  .tf-tracking-card__val { color: #1d4ed8; }
+.tf-tracking-card--16 .tf-tracking-card__val { color: #15803d; }
+.tf-tracking-card__demo {
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #000;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+.tf-tracking-card__classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.tf-tracking-card__cls {
+  font-size: 10px;
+  font-family: monospace;
+  background: rgba(0,0,0,.05);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #555;
+}
+
+/* ── Grosores ──────────────────────────────────────────────────── */
+.tf-weights {
+  margin: 32px 0;
+}
+.tf-weight-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+.tf-weight-row:last-child { border-bottom: none; }
+.tf-weight-row__meta { display: flex; flex-direction: column; gap: 4px; }
+.tf-weight-row__name { font-size: 13px; font-weight: 700; }
+.tf-weight-row__face { font-size: 11px; color: #999; font-family: monospace; }
+.tf-weight-row__var  { font-size: 10px; color: #bbb; font-family: monospace; }
+.tf-weight-row__text { font-size: 22px; line-height: 1.2; }
+
+/* ── Sección heading ───────────────────────────────────────────── */
+.tf-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+.tf-section-h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.tf-section-desc {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+code {
+  font-family: monospace;
+  font-size: .9em;
+  background: rgba(0,0,0,.05);
+  padding: .1em .4em;
+  border-radius: 3px;
+}
+</style>
+
 <div class="container-fluid">
   {% include '_website/hero.njk' %}
 </div>
 
 <div class="main-content">
 
-  {# ── Familias de fuente ─────────────────────────────────────── #}
+  {# ═══════════════════════════════════════════════════════════════
+     1. FAMILIAS TIPOGRÁFICAS
+  ══════════════════════════════════════════════════════════════ #}
   <div class="row pb-64">
     <div class="col-xs-12 mb-32">
-      <div class="h2">Familias tipográficas</div>
+      <p class="tf-section-title">Sistema tipográfico</p>
+      <h2 class="tf-section-h2">Familias de fuentes</h2>
+      <p class="tf-section-desc">Tres familias cargadas por <code>@font-face</code> en <code>base/_fonts.scss</code>. Se acceden a través de variables SCSS del tipo <code>$font-family-{letra}-{peso}</code>.</p>
     </div>
     <div class="col-xs-12">
+      <div class="tf-families">
 
-      <div class="row mb-8 title-m ttu c-dark-grey">
-        <div class="col-xs-3">Variable SCSS</div>
-        <div class="col-xs-4">Font-face</div>
-        <div class="col-xs-5">Muestra</div>
-      </div>
-      <div class="border-b2 mb-16"></div>
+        <div class="tf-family-card">
+          <div class="tf-family-card__name">Familia A — Sans-serif</div>
+          <div class="tf-family-card__specimen font-light">Aa</div>
+          <div class="tf-family-card__glyphs font-light">ABCDEFGHIJKLM abcdefghijklm 0123456789</div>
+          <div class="tf-family-card__weights">
+            <span class="tf-family-card__weight-pill font-light">Light</span>
+            <span class="tf-family-card__weight-pill">Regular</span>
+            <span class="tf-family-card__weight-pill bold">Medium</span>
+            <span class="tf-family-card__weight-pill semibold">SemiBold</span>
+          </div>
+          <div class="tf-family-card__var">$font-family-a-l / a-r / a-m / a-sb</div>
+        </div>
 
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-a-l</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-light · Light</div>
-        <div class="col-xs-5 font-light" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
-      </div>
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-a-r</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-regular · Regular</div>
-        <div class="col-xs-5" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
-      </div>
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-a-m / a-b</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-medium · Medium</div>
-        <div class="col-xs-5 bold" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
-      </div>
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-a-sb</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">suisse-semibold · SemiBold</div>
-        <div class="col-xs-5 semibold" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
-      </div>
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-b-m</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">dutti-extended-bold</div>
-        <div class="col-xs-5 bold3" style="font-size:16px">Massimo Dutti Aa Bb</div>
-      </div>
-      <div class="row mb-16 pb-16 border-b2">
-        <div class="col-xs-3 hg-body-m">$font-family-c-r</div>
-        <div class="col-xs-4 hg-body-m c-dark-grey">massimo-daily-regular · Serif</div>
-        <div class="col-xs-5 regular3" style="font-size:16px">Massimo Dutti Aa Bb Cc</div>
-      </div>
+        <div class="tf-family-card">
+          <div class="tf-family-card__name">Familia B — Display</div>
+          <div class="tf-family-card__specimen bold3">Aa</div>
+          <div class="tf-family-card__glyphs bold3">ABCDEFGHIJKLM abcdefghijklm</div>
+          <div class="tf-family-card__weights">
+            <span class="tf-family-card__weight-pill bold3">Bold</span>
+            <span class="tf-family-card__weight-pill" style="font-family:'dutti-extended-extrabold',sans-serif">ExtraBold</span>
+          </div>
+          <div class="tf-family-card__var">$font-family-b-m / b-b</div>
+        </div>
 
+        <div class="tf-family-card">
+          <div class="tf-family-card__name">Familia C — Serif</div>
+          <div class="tf-family-card__specimen regular3">Aa</div>
+          <div class="tf-family-card__glyphs regular3">ABCDEFGHIJKLM abcdefghijklm</div>
+          <div class="tf-family-card__weights">
+            <span class="tf-family-card__weight-pill regular3">Regular</span>
+            <span class="tf-family-card__weight-pill" style="font-family:'massimo-daily-light','ms-serif',serif">Light</span>
+            <span class="tf-family-card__weight-pill" style="font-family:'massimo-daily-bold','ms-serif',serif">Bold</span>
+          </div>
+          <div class="tf-family-card__var">$font-family-c-r / c-m / c-b</div>
+        </div>
+
+      </div>
     </div>
   </div>
 
-  <hr />
-
-  {# ── Escala tipográfica ─────────────────────────────────────── #}
+  {# ═══════════════════════════════════════════════════════════════
+     2. ESCALA TIPOGRÁFICA
+  ══════════════════════════════════════════════════════════════ #}
   <div class="row pt-64 pb-64">
     <div class="col-xs-12 mb-32">
-      <div class="h2">Escala tipográfica</div>
-      <p class="hg-body-m c-dark-grey mt-8">Clases generadas por <code>$minheaders</code> en <code>abstract/_setup.scss</code>. El interletrado se aplica globalmente desde <code>style.scss</code>.</p>
+      <p class="tf-section-title">$minheaders</p>
+      <h2 class="tf-section-h2">Escala tipográfica</h2>
+      <p class="tf-section-desc">Clases generadas por el mixin <code>typesMin()</code> a partir del mapa <code>$minheaders</code> en <code>abstract/_setup.scss</code>. Cada clase es responsive: tiene un tamaño para mobile y otro para desktop.</p>
     </div>
-
     <div class="col-xs-12">
-
-      {# Cabecera #}
-      <div class="row mb-8 title-m ttu c-dark-grey" style="letter-spacing:.1em">
-        <div class="col-xs-2">Clase</div>
-        <div class="col-xs-1">Mobile</div>
-        <div class="col-xs-1">Desktop</div>
-        <div class="col-xs-1">LH</div>
-        <div class="col-xs-2">Peso</div>
-        <div class="col-xs-2">Tracking</div>
-        <div class="col-xs-3">Muestra</div>
+      <div class="tf-scale">
+        <div class="tf-scale__header">
+          <span>Clase</span>
+          <span>Preview</span>
+          <span style="text-align:right">Propiedades</span>
+        </div>
+        {% for tipo in global.tipografias %}
+        <div class="tf-scale-row">
+          <div class="tf-scale-row__meta">
+            <span class="tf-scale-row__code">.{{tipo.name}}</span>
+            <div class="tf-scale-row__pills">
+              <span class="tf-pill tf-pill--size">{{tipo.xs}} → {{tipo.lg}}</span>
+              <span class="tf-pill tf-pill--lh">lh {{tipo.line}}</span>
+              <span class="tf-pill tf-pill--w">{{tipo.weight}}</span>
+              {% if tipo.tracking == '0.04em' %}
+                <span class="tf-pill tf-pill--t4">0.04em</span>
+              {% elif tipo.tracking == '0.16em' %}
+                <span class="tf-pill tf-pill--t16">0.16em</span>
+              {% endif %}
+            </div>
+          </div>
+          <div class="tf-scale-row__preview {{tipo.name}}">
+            Massimo Dutti — The Art of Elegance
+          </div>
+          <div class="tf-scale-row__badges">
+            {% if tipo.tracking == '0.04em' %}
+              <span style="font-size:9px;font-family:monospace;padding:1px 5px;border-radius:3px;background:#dbeafe;color:#1d4ed8;font-weight:700">tracking</span>
+            {% elif tipo.tracking == '0.16em' %}
+              <span style="font-size:9px;font-family:monospace;padding:1px 5px;border-radius:3px;background:#dcfce7;color:#15803d;font-weight:700">tracking</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      <div class="border-b2 mb-8"></div>
-
-      {% for tipo in global.tipografias %}
-      <div class="row mb-4 pb-8 border-b2" style="align-items:center">
-        <div class="col-xs-2">
-          <code style="font-size:11px;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px">.{{tipo.name}}</code>
-        </div>
-        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.xs}}</div>
-        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.lg}}</div>
-        <div class="col-xs-1 hg-body-m c-dark-grey">{{tipo.line}}</div>
-        <div class="col-xs-2 hg-body-m c-dark-grey">
-          {% if tipo.weight == 'light' %}light
-          {% elif tipo.weight == 'regular' %}regular
-          {% elif tipo.weight == 'medium' %}medium
-          {% elif tipo.weight == 'bold' %}bold
-          {% elif tipo.weight == 'regular3' %}regular3 (serif)
-          {% else %}{{tipo.weight}}
-          {% endif %}
-        </div>
-        <div class="col-xs-2">
-          {% if tipo.tracking == '0.04em' %}
-            <span style="display:inline-block;font-size:9px;font-weight:700;font-family:monospace;padding:1px 5px;border-radius:4px;background:#e8f4fd;color:#1a5e99">0.04em</span>
-          {% elif tipo.tracking == '0.16em' %}
-            <span style="display:inline-block;font-size:9px;font-weight:700;font-family:monospace;padding:1px 5px;border-radius:4px;background:#f0fdf4;color:#1a7a3c">0.16em</span>
-          {% else %}
-            <span style="font-size:10px;color:#bbb">—</span>
-          {% endif %}
-        </div>
-        <div class="col-xs-3 {{tipo.name}}">Massimo Dutti</div>
-      </div>
-      {% endfor %}
-
     </div>
   </div>
 
-  <hr />
-
-  {# ── Tamaños fijos ──────────────────────────────────────────── #}
+  {# ═══════════════════════════════════════════════════════════════
+     3. TAMAÑOS FIJOS
+  ══════════════════════════════════════════════════════════════ #}
   <div class="row pt-64 pb-64">
     <div class="col-xs-12 mb-32">
-      <div class="h2">Tamaños fijos — $headersFixers</div>
-      <p class="hg-body-m c-dark-grey mt-8">Clases con tamaño fijo (no responsive). Generadas por <code>$headersFixers</code>.</p>
+      <p class="tf-section-title">$headersFixers</p>
+      <h2 class="tf-section-h2">Tamaños fijos</h2>
+      <p class="tf-section-desc">Clases con tamaño de fuente fijo (no responsive). Útiles para UI específica donde se necesita consistencia independientemente del breakpoint.</p>
     </div>
-
     <div class="col-xs-12">
-      <div class="row mb-8 title-m ttu c-dark-grey" style="letter-spacing:.1em">
-        <div class="col-xs-2">Clase</div>
-        <div class="col-xs-2">Font-size</div>
-        <div class="col-xs-2">Line-height</div>
-        <div class="col-xs-6">Muestra</div>
-      </div>
-      <div class="border-b2 mb-8"></div>
-
-      {% set fixers = [
-        { "cls": "text-12-r", "size": "12px", "lh": "1" },
-        { "cls": "text-14-r", "size": "14px", "lh": "1.5" },
-        { "cls": "text-16-r", "size": "16px", "lh": "1.5" },
-        { "cls": "text-18-r", "size": "18px", "lh": "1.5" },
-        { "cls": "text-20-r", "size": "20px", "lh": "1.2" },
-        { "cls": "text-24-r", "size": "24px", "lh": "1.2" },
-        { "cls": "text-32-r", "size": "32px", "lh": "1.2" },
-        { "cls": "text-40-r", "size": "40px", "lh": "1.2" }
-      ] %}
-      {% for f in fixers %}
-      <div class="row pb-8 mb-4 border-b2" style="align-items:center">
-        <div class="col-xs-2">
-          <code style="font-size:11px;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px">.{{f.cls}}</code>
+      <div class="tf-fixers">
+        {% set fixers = [
+          { "cls": "text-40-r", "size": "40px", "lh": "1.2" },
+          { "cls": "text-32-r", "size": "32px", "lh": "1.2" },
+          { "cls": "text-24-r", "size": "24px", "lh": "1.2" },
+          { "cls": "text-20-r", "size": "20px", "lh": "1.2" },
+          { "cls": "text-18-r", "size": "18px", "lh": "1.5" },
+          { "cls": "text-16-r", "size": "16px", "lh": "1.5" },
+          { "cls": "text-14-r", "size": "14px", "lh": "1.5" },
+          { "cls": "text-12-r", "size": "12px", "lh": "1" }
+        ] %}
+        {% for f in fixers %}
+        <div class="tf-fixer-row">
+          <div class="tf-fixer-row__meta">
+            <span class="tf-fixer-row__code">.{{f.cls}}</span>
+            <span class="tf-fixer-row__info">{{f.size}} / lh {{f.lh}}</span>
+          </div>
+          <div class="tf-fixer-row__text {{f.cls}}">Massimo Dutti</div>
         </div>
-        <div class="col-xs-2 hg-body-m c-dark-grey">{{f.size}}</div>
-        <div class="col-xs-2 hg-body-m c-dark-grey">{{f.lh}}</div>
-        <div class="col-xs-6 {{f.cls}}">Massimo Dutti</div>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
-
-  <hr />
-
-  {# ── Interletrado ───────────────────────────────────────────── #}
-  <div class="row pt-64 pb-64">
-    <div class="col-xs-12 mb-32">
-      <div class="h2">Interletrado</div>
-    </div>
-    <div class="col-xs-6 mb-32">
-      <div class="title-m mb-16" style="letter-spacing:.1em">0.04em — cuerpo de texto</div>
-      <p class="hg-body-m c-dark-grey mb-16">.p-tag · .title-l · .text-m · .text-l · .title-s · .input · .hg-body-m · .hg-body-m-b · .form-input-label-2 label</p>
-      <div style="letter-spacing:0.04em;font-size:12px;padding:16px;background:#f5f5f5;border-radius:6px">
-        Massimo Dutti — texto de cuerpo a 0.04em de interletrado
-      </div>
-    </div>
-    <div class="col-xs-6 mb-32">
-      <div class="title-m mb-16" style="letter-spacing:.1em">0.16em — etiquetas TTU</div>
-      <p class="hg-body-m c-dark-grey mb-16">.title-m · .label-m · .semantic</p>
-      <div style="letter-spacing:0.16em;text-transform:uppercase;font-size:12px;padding:16px;background:#f5f5f5;border-radius:6px">
-        Massimo Dutti — etiqueta a 0.16em
+        {% endfor %}
       </div>
     </div>
   </div>
 
-  <hr />
-
-  {# ── Grosores ───────────────────────────────────────────────── #}
+  {# ═══════════════════════════════════════════════════════════════
+     4. INTERLETRADO
+  ══════════════════════════════════════════════════════════════ #}
   <div class="row pt-64 pb-64">
     <div class="col-xs-12 mb-32">
-      <div class="h2">Grosores</div>
+      <p class="tf-section-title">style.scss</p>
+      <h2 class="tf-section-h2">Interletrado</h2>
+      <p class="tf-section-desc">El sistema define dos valores de <code>letter-spacing</code> aplicados globalmente a grupos de clases. No son opcionales: están forzados en <code>style.scss</code>.</p>
     </div>
+    <div class="col-xs-12">
+      <div class="tf-tracking">
 
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">font-light</p>
-      <div class="font-light title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div class="tf-tracking-card tf-tracking-card--4">
+          <div class="tf-tracking-card__label">Cuerpo de texto</div>
+          <div class="tf-tracking-card__val">0.04em</div>
+          <div class="tf-tracking-card__demo" style="letter-spacing:0.04em">
+            Massimo Dutti — The Art of Elegance. Texto de cuerpo con tracking ajustado para máxima legibilidad en tamaños pequeños.
+          </div>
+          <div class="tf-tracking-card__classes">
+            <span class="tf-tracking-card__cls">.p-tag</span>
+            <span class="tf-tracking-card__cls">.title-l</span>
+            <span class="tf-tracking-card__cls">.text-m</span>
+            <span class="tf-tracking-card__cls">.text-l</span>
+            <span class="tf-tracking-card__cls">.title-s</span>
+            <span class="tf-tracking-card__cls">.input</span>
+            <span class="tf-tracking-card__cls">.hg-body-m</span>
+            <span class="tf-tracking-card__cls">.hg-body-m-b</span>
+            <span class="tf-tracking-card__cls">.form-input-label-2 label</span>
+          </div>
+        </div>
+
+        <div class="tf-tracking-card tf-tracking-card--16">
+          <div class="tf-tracking-card__label">Etiquetas TTU</div>
+          <div class="tf-tracking-card__val">0.16em</div>
+          <div class="tf-tracking-card__demo" style="letter-spacing:0.16em;text-transform:uppercase">
+            Massimo Dutti — New Collection — Spring 2026
+          </div>
+          <div class="tf-tracking-card__classes">
+            <span class="tf-tracking-card__cls">.title-m</span>
+            <span class="tf-tracking-card__cls">.label-m</span>
+            <span class="tf-tracking-card__cls">.semantic</span>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">font-regular</p>
-      <div class="font-regular title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+  </div>
+
+  {# ═══════════════════════════════════════════════════════════════
+     5. GROSORES
+  ══════════════════════════════════════════════════════════════ #}
+  <div class="row pt-64 pb-64">
+    <div class="col-xs-12 mb-32">
+      <p class="tf-section-title">Font weights</p>
+      <h2 class="tf-section-h2">Grosores</h2>
+      <p class="tf-section-desc">Clases helper que aplican la familia de fuente correcta para cada peso. Nota: <code>.bold</code> mapea a <code>suisse-medium</code> (no a un bold real).</p>
     </div>
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">bold (→ suisse-medium)</p>
-      <div class="bold title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </div>
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">semibold (→ suisse-semibold)</p>
-      <div class="semibold title-l" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </div>
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">bold3 (dutti-extended-bold)</p>
-      <div class="bold3" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </div>
-    <div class="col-xs-6 mb-32">
-      <p class="label-m mb-8">regular3 (massimo-daily-regular)</p>
-      <div class="regular3" style="font-size:18px">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="col-xs-12">
+      <div class="tf-weights">
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.font-light</span>
+            <span class="tf-weight-row__face">suisse-light</span>
+            <span class="tf-weight-row__var">$font-family-a-l · 100</span>
+          </div>
+          <div class="tf-weight-row__text font-light">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.font-regular</span>
+            <span class="tf-weight-row__face">suisse-regular</span>
+            <span class="tf-weight-row__var">$font-family-a-r · 400</span>
+          </div>
+          <div class="tf-weight-row__text font-regular">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.bold</span>
+            <span class="tf-weight-row__face">suisse-medium</span>
+            <span class="tf-weight-row__var">$font-family-a-b · 500 ⚠</span>
+          </div>
+          <div class="tf-weight-row__text bold">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.semibold</span>
+            <span class="tf-weight-row__face">suisse-semibold</span>
+            <span class="tf-weight-row__var">$font-family-a-sb · 600</span>
+          </div>
+          <div class="tf-weight-row__text semibold">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.bold3</span>
+            <span class="tf-weight-row__face">dutti-extended-bold</span>
+            <span class="tf-weight-row__var">$font-family-b-m · display</span>
+          </div>
+          <div class="tf-weight-row__text bold3">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">.regular3</span>
+            <span class="tf-weight-row__face">massimo-daily-regular</span>
+            <span class="tf-weight-row__var">$font-family-c-r · serif</span>
+          </div>
+          <div class="tf-weight-row__text regular3">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+      </div>
     </div>
   </div>
 

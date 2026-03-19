@@ -223,19 +223,29 @@
         javascript: 'JavaScript', ts: 'TypeScript', typescript: 'TypeScript',
         bash: 'Bash', shell: 'Shell', njk: 'Nunjucks', nunjucks: 'Nunjucks',
         json: 'JSON', python: 'Python', yaml: 'YAML', xml: 'XML',
+        markup: 'HTML',
       };
 
+      const SKIP_SELECTORS = [
+        '.code-view', '.code-zone', '.code-block-body',
+        '.innermarkdown', 'table', '.sd-arch', '[contenteditable]'
+      ].join(',');
+
       document.querySelectorAll('.guide pre').forEach(pre => {
+        // Saltar si está dentro de un contexto que no debe tener cabecera
+        if (pre.closest(SKIP_SELECTORS)) return;
+        // Saltar si ya está envuelto
+        if (pre.closest('.code-block-wrapper')) return;
+
         const code = pre.querySelector('code');
         if (!code) return;
 
-        // Detectar lenguaje desde la clase language-xxx
+        // Solo aplicar a bloques con clase language-* (del markdown)
         const langClass = [...code.classList].find(c => c.startsWith('language-'));
-        const langKey   = langClass ? langClass.replace('language-', '') : '';
-        const langLabel = LANG_LABELS[langKey] || langKey.toUpperCase() || 'CODE';
+        if (!langClass) return;
 
-        // Calcular altura real para la animación
-        const bodyHeight = pre.scrollHeight + 'px';
+        const langKey   = langClass.replace('language-', '');
+        const langLabel = LANG_LABELS[langKey] || langKey.toUpperCase();
 
         // Crear wrapper
         const wrapper = document.createElement('div');
@@ -261,15 +271,17 @@
         // Crear body contenedor
         const body = document.createElement('div');
         body.className = 'code-block-body';
-        body.style.maxHeight = bodyHeight;
 
-        // Insertar en DOM
+        // Insertar en DOM antes de calcular alturas
         pre.parentNode.insertBefore(wrapper, pre);
         wrapper.appendChild(header);
         body.appendChild(pre);
         wrapper.appendChild(body);
 
-        // Colapsar / Expandir
+        // Fijar altura real tras insertar en DOM
+        body.style.maxHeight = pre.scrollHeight + 'px';
+
+        // Colapsar / Expandir al clic en cabecera
         header.addEventListener('click', (e) => {
           if (e.target.closest('.code-block-copy')) return;
           const collapsed = wrapper.classList.toggle('is-collapsed');
