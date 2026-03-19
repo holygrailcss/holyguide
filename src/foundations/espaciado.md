@@ -12,7 +12,7 @@ image: /assets/static/components/espaciado.jpg
 imageAlt: Sistema de espaciado
 ---
 
-### PADDINGS FIJOS
+## Padding fijo
 
 | CLASE                                                  | Espaciado | Ejemplo                                                                     |
 | ------------------------------------------------------ | --------- | --------------------------------------------------------------------------- |

@@ -14,10 +14,6 @@ tags: ["components"]
 imageAlt: modals
 ---
 
-# Modals
-
-Los inputs se utilizan para permitir a los usuarios proporcionar texto cuando se espera que la entrada sea breve. Además de texto plano, los inputs admiten varios tipos de texto, incluyendo contraseñas y números.
-
 ## Sistema de modales — `modalx`
 
 El proyecto usa el sistema `modalx` (nuevo) y el sistema CDK legacy.

@@ -42,10 +42,6 @@ imageAlt: Quantity stepper component
   }
 </style>
 
-# Stepper
-
-Control de cantidad numérica para el carrito de compra.
-
 **Fuente:** <span class="cd-file">src/app/ui/quantity-stepper/</span> &nbsp; <span class="cd-file">src/assets/css/componentes/stepper.css</span>
 
 ---

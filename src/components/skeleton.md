@@ -35,10 +35,6 @@ imageAlt: Skeleton loading component
   .sk-txt-p { height: 12px; margin-top: 6px; width: 60px; }
 </style>
 
-# Skeleton
-
-Marcadores animados que simulan el contenido mientras carga.
-
 **Fuente:** <span class="cd-file">shared/media/components/media-skeleton/</span> &nbsp; <span class="cd-file">elements/_product-skeleton.scss</span>
 
 ---

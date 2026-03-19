@@ -1,15 +1,14 @@
 ---
 layout: _paginas/components/_checkbox.njk
 permalink: /checkbox/
+page_section: components
 
 titulo: Checkbox
-descripcion: Un checkbox en un design system es un elemento de interfaz que permite seleccionar opciones de una lista. Se define como un componente estándar en el sistema de diseño para mantener la coherencia y mejorar la experiencia del usuario.
+descripcion: Elemento de selección múltiple que permite al usuario elegir una o varias opciones de una lista. Disponible en estados activo, inactivo, indeterminado y desactivado.
 
 date: 2023-06-19
-fecha: 19 de junio de 2023
-tags: ["Estructuras modulares", "web design", "components"]
+badge: updated
+tags: ["components"]
 image: /assets/static/components/checkbox.jpg
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: Checkbox component
 ---
-
-# Checkboxes

@@ -50,10 +50,6 @@ imageAlt: Size selector component
   }
 </style>
 
-# Size Selector
-
-Selector de tallas de la ficha de producto (PDP).
-
 **Fuente:** <span class="cd-file">shared/product/components/product-size-selector/</span> &nbsp; <span class="cd-file">components/hg-product-size-selector-horizontal.component.scss</span>
 
 ---

@@ -14,7 +14,3 @@ tags: ["components"]
 image: /assets/static/images/1.jpg
 imageAlt: Todos los componentes del sistema de diseño
 ---
-
-# Todos los Componentes
-
-Esta página muestra todos los componentes disponibles en la guía de diseño. Cada componente se muestra con su vista previa interactiva, código y enlace a su documentación completa.

@@ -1,16 +1,14 @@
 ---
 layout: _paginas/components/_productview.njk
 permalink: /productview/
+page_section: components
 
-titulo: productview
-descripcion: productview en rollover
+titulo: Product View
+descripcion: Vista de producto en rollover para listados PLP. Muestra imagen principal con cambio a imagen secundaria al hacer hover, con acciones rápidas de guardar y añadir al carrito.
 
 date: 2023-06-19
-fecha: 19 de junio de 2023
-tags: ["Estructuras modulares", "web design", "components"]
+badge: updated
+tags: ["components"]
 image: /assets/static/components/productview.jpg
-
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: Product view component
 ---
-
-# productview

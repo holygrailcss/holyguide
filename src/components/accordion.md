@@ -37,10 +37,6 @@ imageAlt: Accordion component
   .cd-acc-inner { padding: 0 0 16px; font-size: 13px; line-height: 1.6; color: #555; }
 </style>
 
-# Accordion
-
-Componente plegable para mostrar u ocultar secciones de contenido.
-
 **Fuente:** <span class="cd-file">src/app/ui/md-accordion/</span> &nbsp; <span class="cd-file">styles.scss (.md-toggle)</span>
 
 ---

@@ -1,21 +1,17 @@
 ---
 layout: _paginas/components/_input.njk
 permalink: /input/
+page_section: components
 
 titulo: Input
-descripcion: Los inputs se utilizan para permitir a los usuarios proporcionar texto cuando se espera que la entrada sea breve. Además de texto plano, los inputs admiten varios tipos de texto, incluyendo contraseñas y números.
+descripcion: Campos de texto para captura de datos del usuario. Incluye input estándar, float label, con iconos, password, search y los patrones de validación del proyecto Dutti.
 
 date: 2023-06-19
-fecha: "19 de junio de 2023"
 badge: updated
-tags: ["Estructuras modulares", "web design", "components"]
+tags: ["components"]
 image: /assets/static/components/input.jpg
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: Input component
 ---
-
-# Inputs
-
-Los inputs se utilizan para permitir a los usuarios proporcionar texto cuando se espera que la entrada sea breve. Además de texto plano, los inputs admiten varios tipos de texto, incluyendo contraseñas y números.
 
 ## Inputs collection
 

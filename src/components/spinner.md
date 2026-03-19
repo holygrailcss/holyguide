@@ -34,10 +34,6 @@ imageAlt: Spinner y loader
   }
 </style>
 
-# Spinner / Loader
-
-Indicadores de carga para estados de espera del sistema.
-
 **Fuente:** <span class="cd-file">src/app/ui/spinner/</span> &nbsp; <span class="cd-file">src/app/ui/loading/</span> &nbsp; <span class="cd-file">elements/_spinner.scss</span> &nbsp; <span class="cd-file">elements/_md-loading.scss</span>
 
 ---

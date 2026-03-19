@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Forms SCSS Dutti
 ---
 
-# Dutti — Forms
-
-Documentación de la carpeta `forms/` — 11 archivos de componentes de formulario.
 
 **Ruta:** `code/apps/frontend/src/assets/styles/forms/`
 

@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Arquitectura SCSS Dutti Frontend
 ---
 
-# Dutti Frontend — Visión general
-
-Documentación de la arquitectura de estilos del proyecto **Massimo Dutti Frontend** (`code/apps/frontend/src/assets/styles/`).
 
 ---
 

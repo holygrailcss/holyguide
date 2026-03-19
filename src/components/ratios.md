@@ -15,7 +15,7 @@ image: /assets/static/images/1.jpg
 imageAlt: Ratios de imágenes 2:3 y 3:4
 ---
 
-# Ratios 2:3 y 3:4
+## Diferencia entre 2:3 y 3:4
 
 Esta página explica la diferencia entre los ratios **2:3** y **3:4**, y muestra ejemplos visuales de qué ocurre cuando insertamos una imagen con un ratio diferente al del contenedor.
 

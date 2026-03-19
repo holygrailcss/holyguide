@@ -3,7 +3,6 @@
 
 $nav-width: 250px;
 $c-secondary: orange;
-$nav-width: 250px;
 $c-guide: rgb(218, 19, 112);
 
 $primary-guide: red;
@@ -36,53 +35,112 @@ html {
     font-size: 14px;
     line-height: 1.5;
   }
+  // ── Jerarquía de headings ──────────────────────────────────────
+  // h2 → sección principal: bold, con separador inferior
+  // h3 → subsección: etiqueta uppercase pequeña, color gris
+  // h4 → detalle: semi-bold, casing natural
+  // h5/h6 → etiquetas finas, pequeñas
   h1 {
     scroll-margin-top: 50px;
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
   }
   h2 {
     scroll-margin-top: 50px;
-    text-transform: uppercase;
-    font-size: 24px;
-    padding-bottom: 8px;
-    margin-bottom: 24px;
-    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-top: 56px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e4e4e4;
   }
   h3 {
     scroll-margin-top: 50px;
+    font-size: 11px;
     text-transform: uppercase;
-    font-size: 16px;
-    padding-bottom: 8px;
-    margin-bottom: 24px;
-    margin-top: 24px;
-    border-bottom: 1px solid #ccc;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #888;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-bottom: 0;
+    border-bottom: none;
   }
   h4 {
     scroll-margin-top: 50px;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 28px;
+    margin-bottom: 12px;
   }
   h5 {
     scroll-margin-top: 50px;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 8px;
   }
   h6 {
     scroll-margin-top: 50px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #777;
     text-transform: uppercase;
-    font-size: 16px;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    letter-spacing: 0.06em;
+    margin-top: 16px;
+    margin-bottom: 8px;
   }
   .h8 {
     font-size: 24px;
     @include font-bold;
   }
 }
+// ── Hero de página ─────────────────────────────────────────────
+.page-hero {
+  padding-top: 80px;
+  padding-bottom: 48px;
+  @media (min-width: $break-md) {
+    padding-top: 120px;
+    padding-bottom: 64px;
+  }
+}
+.page-hero__section {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #999;
+  margin-bottom: 12px;
+}
+.page-hero__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.page-hero__title {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.page-hero__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 640px;
+  margin: 0;
+}
+
 .main-content {
   margin-left: auto;
   margin-right: auto;
@@ -153,14 +211,12 @@ html {
 .mini-box {
   background: #eaeaea;
   color: #757171;
-  font-size: 8px;
+  font-size: 18px;
   float: left;
   overflow: initial !important;
   position: relative;
-  font-size: 18px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border: 1px solid #f0f;
   img {
     width: 100%;
   }
@@ -175,7 +231,6 @@ html {
     align-items: center;
     flex-direction: column;
     @include font-2-bold;
-    color: #f0f;
     .p-xs {
       position: absolute;
       right: 4px;
@@ -193,7 +248,6 @@ html {
   color: #ffffff;
 }
 .item-w {
-  width: 46px;
   width: 50px;
   height: 50px;
   padding: 5px;
@@ -203,7 +257,6 @@ html {
     cursor: pointer;
   }
 }
-// .code-view, .check-new, .check-rtl → ver estilos al final del archivo
 
 .opencode-button {
   .viewcode-html {
@@ -1015,9 +1068,6 @@ blockquote {
   .cv-btn { color: #888; &:hover { background: #333; color: #ccc; } }
   .cv-separator { background: #333; }
 }
-
-// check-new y check-rtl — reemplazados por toolbar
-.check-new, .check-rtl { display: none !important; }
 
 // Badge en títulos de cards
 .article-title-with-badge {

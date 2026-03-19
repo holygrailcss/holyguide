@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Process SCSS Dutti
 ---
 
-# Dutti — Process
-
-Documentación de la carpeta `process/` — 23 archivos que cubren los flujos de negocio y herramientas de desarrollo.
 
 **Ruta:** `code/apps/frontend/src/assets/styles/process/`
 

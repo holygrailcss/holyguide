@@ -49,10 +49,6 @@ imageAlt: Bottom sheet component
   }
 </style>
 
-# Bottom Sheet
-
-Panel deslizante desde la parte inferior, usado principalmente en móvil.
-
 **Fuente:** <span class="cd-file">src/app/ui/md-bottom-sheet/</span>
 
 ---

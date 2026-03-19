@@ -12,9 +12,7 @@ image: /assets/static/components/helpers.jpg
 imageAlt: Ilustración de un diseño de sistema web
 ---
 
-Helpers que ayudan a agilizar el proceso de maquetación.
-
-### Colores
+## Colores
 
 | Helper           | Propuesta         | Descripción              |
 | ---------------- | ----------------- | ------------------------ |

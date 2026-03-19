@@ -1,19 +1,17 @@
 ---
 layout: _paginas/components/_tooltip.njk
 permalink: /tooltip/
+page_section: components
 
 titulo: Tooltip
-descripcion: Tooltip en rollover
+descripcion: Etiqueta informativa que aparece al hacer hover sobre un elemento. Configurable en cuatro direcciones (top-left, top-right, bottom-left, bottom-right) y con soporte para contenido rico.
 
 date: 2023-06-19
-fecha: 19 de junio de 2023
-tags: ["Estructuras modulares", "web design", "components"]
+badge: updated
+tags: ["components"]
 image: /assets/static/components/tooltip.jpg
-
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: Tooltip component
 ---
-
-# Tooltip
 
     Tooltips con dirección.
 

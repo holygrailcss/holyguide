@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Components Angular Dutti
 ---
 
-# Dutti — Components Angular
-
-Inventario de los **86 componentes Angular** con estilos encapsulados (`.component.scss`).
 
 **Ruta base:** `code/apps/frontend/src/app/` y `code/apps/frontend/src/assets/styles/components/`
 

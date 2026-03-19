@@ -56,10 +56,6 @@ imageAlt: Toast notifications
   .cd-toast-close { opacity: 0.6; font-size: 16px; cursor: pointer; }
 </style>
 
-# Toast
-
-Notificaciones temporales que aparecen desde la parte inferior de la pantalla.
-
 **Fuente:** <span class="cd-file">shared/banners/banner-toast/</span> &nbsp; <span class="cd-file">elements/_toast.scss</span>
 
 ---

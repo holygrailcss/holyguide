@@ -146,7 +146,7 @@ image: /assets/static/images/1.jpg
   .bp-worst-file td, .bp-worst-file th { padding: 4px 12px 4px 0; }
 </style>
 
-# Buenas Prácticas de Desarrollo
+## Buenas Prácticas de Desarrollo
 
 Guía completa de buenas prácticas para CSS/SCSS/HTML, con **ejemplos reales de malas praxis detectadas en el proyecto Dutti**.
 

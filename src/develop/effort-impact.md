@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Effort vs Impact Matrix SCSS HTML CSS
 ---
 
-# Effort vs Impact Matrix: mejoras SCSS, HTML y CSS
-
-Propuestas de mejora para el SCSS, la arquitectura HTML y el CSS del frontend, clasificadas por **esfuerzo** (bajo / medio / alto) e **impacto** (bajo / medio / alto).
 
 ---
 

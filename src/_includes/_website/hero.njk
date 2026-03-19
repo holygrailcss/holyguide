@@ -1,12 +1,18 @@
-<div class="row  ">
-    <div class="col-xs-12  ">
-
-        <div class="ptr-120 pb-64">
-            <div class="fluid-2-r pb-40 ttu" > {{ titulo }}</div>
-            <div class="fluid-18-r mb-32" > {{ descripcion }} </div>
-            <div class="text-14-r c-dark-grey" > {{ descripcion2 }} </div>
-
-        </div>
-   
+<div class="row">
+  <div class="col-xs-12">
+    <div class="page-hero">
+      {% if page_section %}
+        <div class="page-hero__section">{{ page_section }}</div>
+      {% endif %}
+      <div class="page-hero__title-wrap">
+        <h1 class="page-hero__title">{{ titulo }}</h1>
+        {% if badge %}
+          <span class="nav-badge nav-badge--{{ badge }}">{{ badge }}</span>
+        {% endif %}
+      </div>
+      {% if descripcion %}
+        <p class="page-hero__desc">{{ descripcion }}</p>
+      {% endif %}
     </div>
-</div> 
+  </div>
+</div>

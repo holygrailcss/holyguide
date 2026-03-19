@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Abstract y Base SCSS Dutti
 ---
 
-# Dutti — Abstract & Base
-
-Documentación de las carpetas `abstract/` y `base/` del proyecto frontend.
 
 ---
 

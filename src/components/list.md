@@ -1,16 +1,14 @@
 ---
 layout: _paginas/components/_list.njk
 permalink: /list/
+page_section: components
 
 titulo: List
-descripcion: Estilos para las listas ordenadas de información.
+descripcion: Estilos para listas ordenadas, desordenadas y de definición. Incluye variantes con iconos, separadores y diferentes niveles de indentación.
 
 date: 2023-06-19
-fecha: 19 de junio de 2023
-tags: ["Estructuras modulares", "web design", "components"]
+badge: updated
+tags: ["components"]
 image: /assets/static/components/list.jpg
-
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: List component
 ---
-
-# Listas

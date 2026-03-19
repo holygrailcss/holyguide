@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Partials SCSS Dutti
 ---
 
-# Dutti — Partials
-
-Documentación de la carpeta `partials/` — 17 archivos que cubren los bloques estructurales de la interfaz.
 
 **Ruta:** `code/apps/frontend/src/assets/styles/partials/`
 

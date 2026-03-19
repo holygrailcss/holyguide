@@ -1,16 +1,14 @@
 $(document).ready(function () {
+
+  // ── Scroll state classes ──────────────────────────────────────
   var bodyElement = document.body;
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+
   var handleScroll = function () {
     var y = window.scrollY || window.pageYOffset || 0;
     var x = window.scrollX || window.pageXOffset || 0;
 
-    if (y >= 150) {
-      bodyElement.classList.add("scrolled");
-    } else {
-      bodyElement.classList.remove("scrolled");
-    }
-
+    bodyElement.classList.toggle("scrolled", y >= 150);
     bodyElement.classList.toggle("is-scorlling", x !== 0 || y !== 0);
     bodyElement.classList.toggle("is-scrolling-offset", y > 48);
 
@@ -21,7 +19,6 @@ $(document).ready(function () {
       bodyElement.classList.remove("scroll-down");
       bodyElement.classList.add("scroll-up");
     }
-
     scrollPosition = y;
   };
 
@@ -29,178 +26,148 @@ $(document).ready(function () {
   window.addEventListener("scroll", handleScroll, { passive: true });
   window.addEventListener("resize", handleScroll, { passive: true });
 
+  // ── Video player ──────────────────────────────────────────────
   initvideo();
 
+  // ── Code view toggles (resize-container) ─────────────────────
   $(".resize-code").on("click", function (e) {
-      var $container = $(this).closest('.resize-container');
-      $container.removeClass("opencode-css").toggleClass("opencode-button");
-      e.preventDefault();
+    $(this).closest(".resize-container")
+      .removeClass("opencode-css")
+      .toggleClass("opencode-button");
+    e.preventDefault();
   });
 
   $(".resize-css").on("click", function (e) {
-      var $container = $(this).closest('.resize-container');
-      $container.removeClass("opencode-button").toggleClass("opencode-css");
-      e.preventDefault();
-  });
-
-  $(".resize-rules").on("click", function () {
-      console.log("esto no funciona");
-      $(this).closest('html').toggleClass("openRules");
-  });
-
-  $(".btn-anim").click(function () {
-      $(this).toggleClass("is-loading");
-  });
-
-  $("#menu-toggle").click(function () {
-      $("body").toggleClass("menu-open");
-  });
-
-  $(".check-new").on("click", function (e) {
-      console.log("Esto funciona");
-      $(this).closest('.code-view').toggleClass("bg-dark has-light");
-      e.preventDefault();
-  });
-
-  $(".check-rtl").on("click", function (e) {
-    console.log("Esto funciona");
-    
-    // Obtener el elemento más cercano con la clase 'code-view'
-    var $codeView = $(this).closest('.code-view');
-    
-    // Alternar la clase 'is-rtl'
-    $codeView.toggleClass("is-rtl");
-    
-    // Verificar si el elemento ya tiene dir="rtl" y alternarlo
-    if ($codeView.attr('dir') === 'rtl') {
-        $codeView.attr('dir', 'ltr');
-    } else {
-        $codeView.attr('dir', 'rtl');
-    }
-
+    $(this).closest(".resize-container")
+      .removeClass("opencode-button")
+      .toggleClass("opencode-css");
     e.preventDefault();
-});
+  });
 
-  // Enseñamos el primero ocultamos el resto
+  // ── Debug: marcar reglas de layout ───────────────────────────
+  $(".resize-rules").on("click", function () {
+    $(this).closest("html").toggleClass("openRules");
+  });
+
+  // ── Loading state en botones ──────────────────────────────────
+  $(".btn-anim").click(function () {
+    $(this).toggleClass("is-loading");
+  });
+
+  // ── Tab guide ─────────────────────────────────────────────────
   $("#tabguide-nav li:first-child").addClass("active");
   $(".tabguide-content").hide().first().show();
 
   $("#tabguide-nav li").click(function () {
-      $("#tabguide-nav li").removeClass("active");
-      $(this).addClass("active");
-      $(".tabguide-content").hide();
-      $($(this).find("a").attr("href")).fadeIn();
-      return false;
+    $("#tabguide-nav li").removeClass("active");
+    $(this).addClass("active");
+    $(".tabguide-content").hide();
+    $($(this).find("a").attr("href")).fadeIn();
+    return false;
   });
 
+  // ── Open code button ──────────────────────────────────────────
   $(".opencode-button").click(function () {
-      $(this).closest('.code-button-container').toggleClass("active");
-      return false;
+    $(this).closest(".code-button-container").toggleClass("active");
+    return false;
   });
 
-  $(".openshoplook").click(function () {
-      $("body").toggleClass("openshop");
-      return false;
-  });
-
-  $('input[type="checkbox"]').click(function () {
-      if ($(this).is(":checked")) {
-          console.log("Checkbox esta seleccionado.");
-      } else {
-          console.log("Checkbox no esta seleccionado.");
-      }
-  });
-
+  // ── Nav sidebar ───────────────────────────────────────────────
   $(".nav-mainbar-close").click(function () {
-      $(".nav-wrap").toggleClass("active");
+    $(".nav-wrap").toggleClass("active");
   });
 
-  //Boton que marca en rojo los iconos que no son 16x16
+  // ── Debug: marcar iconos que no son 16×16 ─────────────────────
   $(".check-16").on("click", function () {
-      document.querySelectorAll("svg").forEach(function(icon) {
-          if (icon.getBoundingClientRect().width != 16 || icon.getBoundingClientRect().height != 16) {
-              icon.querySelectorAll("path").forEach(function(path) {
-                  path.style.fill = "red";
-              });
-          }
-      });
+    document.querySelectorAll("svg").forEach(function (icon) {
+      if (
+        icon.getBoundingClientRect().width  !== 16 ||
+        icon.getBoundingClientRect().height !== 16
+      ) {
+        icon.querySelectorAll("path").forEach(function (path) {
+          path.style.fill = "red";
+        });
+      }
+    });
   });
 
+  // ── Toggle Men / Woman view ───────────────────────────────────
   $("#menlink, #womanlink").click(function () {
-      var isMen = $(this).is("#menlink");
-      $("body").toggleClass("menopen", isMen).toggleClass("womanopen", !isMen);
-      $("#menlink").toggleClass("link-active", isMen);
-      $("#womanlink").toggleClass("link-active", !isMen);
+    var isMen = $(this).is("#menlink");
+    $("body")
+      .toggleClass("menopen", isMen)
+      .toggleClass("womanopen", !isMen);
+    $("#menlink").toggleClass("link-active", isMen);
+    $("#womanlink").toggleClass("link-active", !isMen);
   });
 
+  // ── ClipboardJS (botón .btncode) ──────────────────────────────
   if (document.querySelector(".btncode")) {
-      var clipboard = new ClipboardJS(".btncode");
-      clipboard.on("success", function (e) {
-          console.info("Action:", e.action);
-          console.info("Text:", e.text);
-          console.info("Trigger:", e.trigger);
-          e.clearSelection();
-      });
+    var clipboard = new ClipboardJS(".btncode");
+    clipboard.on("success", function (e) {
+      e.clearSelection();
+    });
   }
 
+  // ── RTL toggle (enlace <a class="rtl">) ───────────────────────
   $("a.rtl").on("click", function () {
-      console.log("rtlChange activo");
-      $("body").toggleClass("is-rtl");
-      $("html").attr("dir", $("body").hasClass("is-rtl") ? "rtl" : "ltr");
+    $("body").toggleClass("is-rtl");
+    $("html").attr("dir", $("body").hasClass("is-rtl") ? "rtl" : "ltr");
   });
 
+  // ── Overlay sections ──────────────────────────────────────────
   $(".over1, .over2, .over3").on("click", function (e) {
-      var className = "open-" + $(this).attr('class');
-      $(this).closest('.overlay-container').attr('class', 'overlay-container ' + className);
-      e.preventDefault();
-  });
-
-  $(".to-top").on("click", function () {
-      $(window).scrollTop(0);
-  });
-
-
-
-  $('.accordion-toggle').click(function(e) {
+    var className = "open-" + $(this).attr("class");
+    $(this).closest(".overlay-container")
+      .attr("class", "overlay-container " + className);
     e.preventDefault();
+  });
 
+  // ── Scroll to top ─────────────────────────────────────────────
+  $(".to-top").on("click", function () {
+    $(window).scrollTop(0);
+  });
+
+  // ── Accordion ─────────────────────────────────────────────────
+  $(".accordion-toggle").click(function (e) {
+    e.preventDefault();
     var $this = $(this);
-    if ($this.next().hasClass('show')) {
-        $this.next().removeClass('show');
-        $this.next().slideUp(350);
+    if ($this.next().hasClass("show")) {
+      $this.next().removeClass("show").slideUp(350);
     } else {
-        $this.parent().parent().find('li .accordion-content').removeClass('show');
-        $this.parent().parent().find('li .accordion-content').slideUp(350);
-        $this.next().toggleClass('show');
-        $this.next().slideToggle(350);
+      $this.parent().parent()
+        .find("li .accordion-content")
+        .removeClass("show")
+        .slideUp(350);
+      $this.next().toggleClass("show").slideToggle(350);
     }
+  });
+
 });
 
-
-});
-
+// ── Video player ──────────────────────────────────────────────────
 function initvideo() {
   $(".action--play").click(function () {
-      $(".video-wrap").addClass("video-wrap--show").removeClass("video-wrap--hide");
-      $(".video-player").attr("src", $(this).data("src")).get(0).play();
+    $(".video-wrap")
+      .addClass("video-wrap--show")
+      .removeClass("video-wrap--hide");
+    $(".video-player")
+      .attr("src", $(this).data("src"))
+      .get(0).play();
   });
 
   $(".action--close").click(function () {
-      $(".video-wrap").addClass("video-wrap--hide").removeClass("video-wrap--show");
-      $(".video-player").get(0).pause();
+    $(".video-wrap")
+      .addClass("video-wrap--hide")
+      .removeClass("video-wrap--show");
+    $(".video-player").get(0).pause();
   });
 }
 
-
-
-
-
-
+// ── RTL toggle (función global para onclick="rtlChange()") ───────
 function rtlChange() {
-  console.log("rtlChange activo");
-  let element = document.querySelector("body");
-  let validation = element.classList.contains("is-rtl");
-  if (validation == true) {
+  var element = document.querySelector("body");
+  if (element.classList.contains("is-rtl")) {
     element.classList.remove("is-rtl");
     document.querySelector("html").setAttribute("dir", "ltr");
   } else {
@@ -208,307 +175,19 @@ function rtlChange() {
     document.querySelector("html").setAttribute("dir", "rtl");
   }
 }
-var swiper = new Swiper(".swiper-container", {
-  spaceBetween: 15,
-  slidesPerView: "1.5",
-  loop: true,
-  // autoHeight: true,
-  pagination: {
-    el: ".actuals .swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-arrows .swiper-next",
-    prevEl: ".swiper-arrows .swiper-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-      centeredSlides: false,
-      pagination: false,
-    },
-    980: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-    },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-      loop: false,
-    },
-    1600: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-      loop: false,
-    },
-  },
-});
-function initvideo() {
-  $(".action--play").click(function () {
-    $(".video-wrap").addClass("video-wrap--show");
-    $(".video-wrap").removeClass("video-wrap--hide");
-    $(".video-player").attr("src", $(this).data("src"));
-    $(".video-player source").attr("src", $(this).data("src"));
-    $(".video-player").get(0).play();
-  });
-  $(".action--close").click(function () {
-    $(".video-wrap").addClass("video-wrap--hide");
-    $(".video-wrap").removeClass("video-wrap--show");
-    $(".video-player").get(0).pause();
-  });
-}
-var mySwiper = new Swiper(".swiper-container-img", {
-  // If loop true set photoswipe - counterEl: false
-  loop: true,
-  /* slidesPerView || auto - if you want to set width by css like flickity.js layout - in this case width:80% by CSS */
-  spaceBetween: 15,
-  slidesPerView: "1.5",
-  loop: true,
-  // autoHeight: true,
-  pagination: {
-    el: ".actuals .swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-arrows-img .swiper-next",
-    prevEl: ".swiper-arrows-img .swiper-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-      centeredSlides: false,
-      pagination: false,
-    },
-    980: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-    },
-    1200: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-      loop: false,
-    },
-    1600: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      centeredSlides: false,
-      pagination: false,
-      loop: false,
-    },
-  },
-});
-var initPhotoSwipeFromDOM = function (gallerySelector) {
-  // parse slide data (url, title, size ...) from DOM elements
-  // (children of gallerySelector)
-  var parseThumbnailElements = function (el) {
-    var thumbElements = el.childNodes,
-      numNodes = thumbElements.length,
-      items = [],
-      figureEl,
-      linkEl,
-      size,
-      item;
-    for (var i = 0; i < numNodes; i++) {
-      figureEl = thumbElements[i]; // <figure> element
-      // include only element nodes
-      if (figureEl.nodeType !== 1) {
-        continue;
-      }
-      linkEl = figureEl.children[0]; // <a> element
-      size = linkEl.getAttribute("data-size").split("x");
-      // create slide object
-      item = {
-        src: linkEl.getAttribute("href"),
-        w: parseInt(size[0], 10),
-        h: parseInt(size[1], 10),
-      };
-      if (figureEl.children.length > 1) {
-        // <figcaption> content
-        item.title = figureEl.children[1].innerHTML;
-      }
-      if (linkEl.children.length > 0) {
-        // <img> thumbnail element, retrieving thumbnail url
-        item.msrc = linkEl.children[0].getAttribute("src");
-      }
-      item.el = figureEl; // save link to element for getThumbBoundsFn
-      items.push(item);
-    }
-    return items;
-  };
-  // find nearest parent element
-  var closest = function closest(el, fn) {
-    return el && (fn(el) ? el : closest(el.parentNode, fn));
-  };
-  // triggers when user clicks on thumbnail
-  var onThumbnailsClick = function (e) {
-    e = e || window.event;
-    e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-    var eTarget = e.target || e.srcElement;
-    // find root element of slide
-    var clickedListItem = closest(eTarget, function (el) {
-      return el.tagName && el.tagName.toUpperCase() === "LI";
-    });
-    if (!clickedListItem) {
-      return;
-    }
-    // find index of clicked item by looping through all child nodes
-    // alternatively, you may define index via data- attribute
-    var clickedGallery = clickedListItem.parentNode,
-      childNodes = clickedListItem.parentNode.childNodes,
-      numChildNodes = childNodes.length,
-      nodeIndex = 0,
-      index;
-    for (var i = 0; i < numChildNodes; i++) {
-      if (childNodes[i].nodeType !== 1) {
-        continue;
-      }
-      if (childNodes[i] === clickedListItem) {
-        index = nodeIndex;
-        break;
-      }
-      nodeIndex++;
-    }
-    if (index >= 0) {
-      // open PhotoSwipe if valid index found
-      openPhotoSwipe(index, clickedGallery);
-    }
-    return false;
-  };
-  // parse picture index and gallery index from URL (#&pid=1&gid=2)
-  var photoswipeParseHash = function () {
-    var hash = window.location.hash.substring(1),
-      params = {};
-    if (hash.length < 5) {
-      return params;
-    }
-    var vars = hash.split("&");
-    for (var i = 0; i < vars.length; i++) {
-      if (!vars[i]) {
-        continue;
-      }
-      var pair = vars[i].split("=");
-      if (pair.length < 2) {
-        continue;
-      }
-      params[pair[0]] = pair[1];
-    }
-    if (params.gid) {
-      params.gid = parseInt(params.gid, 10);
-    }
-    return params;
-  };
-  var openPhotoSwipe = function (
-    index,
-    galleryElement,
-    disableAnimation,
-    fromURL
-  ) {
-    var pswpElement = document.querySelectorAll(".pswp")[0],
-      gallery,
-      options,
-      items;
-    items = parseThumbnailElements(galleryElement);
-    // define options (if needed)
-    options = {
-      /* "showHideOpacity" uncomment this If dimensions of your small thumbnail don't match dimensions of large image */
-      //showHideOpacity:true,
-      // Buttons/elements
-      closeEl: true,
-      captionEl: true,
-      fullscreenEl: true,
-      zoomEl: true,
-      shareEl: true,
-      counterEl: false,
-      arrowEl: true,
-      preloaderEl: true,
-      // define gallery index (for URL)
-      galleryUID: galleryElement.getAttribute("data-pswp-uid"),
-      getThumbBoundsFn: function (index) {
-        // See Options -> getThumbBoundsFn section of documentation for more info
-        var thumbnail = items[index].el.getElementsByTagName("img")[0], // find thumbnail
-          pageYScroll =
-            window.pageYOffset || document.documentElement.scrollTop,
-          rect = thumbnail.getBoundingClientRect();
-        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-      },
-    };
-    // PhotoSwipe opened from URL
-    if (fromURL) {
-      if (options.galleryPIDs) {
-        // parse real index when custom PIDs are used
-        // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-        for (var j = 0; j < items.length; j++) {
-          if (items[j].pid == index) {
-            options.index = j;
-            break;
-          }
-        }
-      } else {
-        // in URL indexes start from 1
-        options.index = parseInt(index, 10) - 1;
-      }
-    } else {
-      options.index = parseInt(index, 10);
-    }
-    // exit if index not found
-    if (isNaN(options.index)) {
-      return;
-    }
-    if (disableAnimation) {
-      options.showAnimationDuration = 0;
-    }
-    // Pass data to PhotoSwipe and initialize it
-    gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-    /* EXTRA CODE (NOT FROM THE CORE) - UPDATE SWIPER POSITION TO THE CURRENT ZOOM_IN IMAGE (BETTER UI) */
-    // photoswipe event: Gallery unbinds events
-    // (triggers before closing animation)
-    gallery.listen("unbindEvents", function () {
-      // This is index of current photoswipe slide
-      var getCurrentIndex = gallery.getCurrentIndex();
-      // Update position of the slider
-      mySwiper.slideTo(getCurrentIndex, false);
-    });
-  };
-  // loop through all gallery elements and bind events
-  var galleryElements = document.querySelectorAll(gallerySelector);
-  for (var i = 0, l = galleryElements.length; i < l; i++) {
-    galleryElements[i].setAttribute("data-pswp-uid", i + 1);
-    galleryElements[i].onclick = onThumbnailsClick;
-  }
-  // Parse URL and open gallery if it contains #&pid=3&gid=1
-  var hashData = photoswipeParseHash();
-  if (hashData.pid && hashData.gid) {
-    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
-  }
-};
-// execute above function
-initPhotoSwipeFromDOM(".my-gallery");
+
+// ── Horizontal scroll GSAP (solo si existe .md-scroll-wrap) ──────
 if (document.querySelector(".md-scroll-wrap")) {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.saveStyles(".mobile, .desktop");
-  let container = document.querySelector(".md-scroll-wrap");
+
+  var container = document.querySelector(".md-scroll-wrap");
+
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": function () {
       gsap.to(".md-scroll-wrap", {
         x: () =>
-          -(container.scrollWidth - document.documentElement.clientWidth) +
-          "px",
+          -(container.scrollWidth - document.documentElement.clientWidth) + "px",
         ease: "none",
         scrollTrigger: {
           trigger: ".md-scroll",
@@ -520,65 +199,45 @@ if (document.querySelector(".md-scroll-wrap")) {
       });
     },
   });
-  // Script
-  lastScroll = 0;
+
+  var lastScroll = 0;
   $(window).on("scroll", function () {
     var scroll = $(window).scrollTop();
-    if (lastScroll - scroll > 0) {
-      $("body").addClass("scrollUp");
-    } else {
-      $("body").removeClass("scrollUp");
-    }
+    $("body").toggleClass("scrollUp", lastScroll - scroll > 0);
     lastScroll = scroll;
   });
 }
+
+// ── Code-zone colapsable (código antiguo de .code-zone) ──────────
 function cerrarDiv(clickedElement) {
-  // Buscar el div padre (code-zone) del elemento clicado (code-title)
   var codeZoneDiv = clickedElement.closest(".code-zone");
-  // Verificar si el div está visible u oculto
-  if (codeZoneDiv.style.height === "30px" || codeZoneDiv.style.height === "") {
-    // Si está oculto, mostrarlo ajustando su altura automáticamente
-    codeZoneDiv.style.height = "auto";
-  } else {
-    // Si está visible, ocultarlo ajustando su altura a 0
-    codeZoneDiv.style.height = "30px";
-  }
+  codeZoneDiv.style.height =
+    codeZoneDiv.style.height === "30px" || codeZoneDiv.style.height === ""
+      ? "auto"
+      : "30px";
 }
 
+// ── Search component scroll state ────────────────────────────────
+document.addEventListener("DOMContentLoaded", function () {
+  var lastScrollTop = 0;
+  var div = document.getElementById("searchcomponent");
+  if (!div) return;
 
-document.addEventListener('DOMContentLoaded', function() {
-  var div = document.getElementById('searchcomponent');
-  if (div) {
-      div.onscroll = function () {
-          var currentScrollTop = div.scrollTop;
-          if (currentScrollTop > lastScrollTop) {
-              document.body.classList.remove("scroll-up-search");
-              document.body.classList.add("scroll-down-search");
-          } else if (currentScrollTop < lastScrollTop) {
-              document.body.classList.remove("scroll-down-search");
-              document.body.classList.add("scroll-up-search");
-          }
-          if (div.scrollTop >= 300) {
-              document.body.classList.add("is-search");
-          } else {
-              document.body.classList.remove("is-search");
-          }
-          lastScrollTop = currentScrollTop;
-      };
-  }
+  div.onscroll = function () {
+    var current = div.scrollTop;
+    document.body.classList.toggle("scroll-down-search", current > lastScrollTop);
+    document.body.classList.toggle("scroll-up-search",  current < lastScrollTop);
+    document.body.classList.toggle("is-search", div.scrollTop >= 300);
+    lastScrollTop = current;
+  };
 });
-var lastScrollTop = 0;
 
-
-
-
-document.addEventListener("DOMContentLoaded", (event) => {
-  const buttons = document.querySelectorAll(".list-slide .btn");
-  buttons.forEach((button) => {
+// ── List slide — active button ────────────────────────────────────
+document.addEventListener("DOMContentLoaded", function () {
+  var buttons = document.querySelectorAll(".list-slide .btn");
+  buttons.forEach(function (button) {
     button.addEventListener("click", function () {
-      // Remover la clase is-active de todos los botones
-      buttons.forEach((btn) => btn.classList.remove("is-active"));
-      // Agregar la clase is-active al botón clickeado
+      buttons.forEach(function (btn) { btn.classList.remove("is-active"); });
       this.classList.add("is-active");
     });
   });

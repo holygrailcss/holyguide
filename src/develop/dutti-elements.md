@@ -11,9 +11,6 @@ image: /assets/static/images/1.jpg
 imageAlt: Elements SCSS Dutti
 ---
 
-# Dutti — Elements
-
-Documentación de la carpeta `elements/` — 22 archivos que cubren los elementos de UI reutilizables más complejos.
 
 **Ruta:** `code/apps/frontend/src/assets/styles/elements/`
 

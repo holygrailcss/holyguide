@@ -1,16 +1,14 @@
 ---
 layout: _paginas/components/_select.njk
 permalink: /select/
+page_section: components
 
 titulo: Select
-descripcion: select
+descripcion: Menú desplegable que permite al usuario elegir una opción de una lista predefinida. Incluye variantes con placeholder, estados de error y select nativo del sistema.
 
 date: 2023-06-19
-fecha: 19 de junio de 2023
-tags: ["Estructuras modulares", "web design", "components"]
+badge: updated
+tags: ["components"]
 image: /assets/static/components/select.jpg
-
-imageAlt: Ilustración de un diseño de sistema web
+imageAlt: Select component
 ---
-
-# Selects
