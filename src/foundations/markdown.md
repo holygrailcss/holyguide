@@ -3,10 +3,11 @@ layout: _paginas/foundations/_foundations.njk
 permalink: /markdown/
 
 titulo: Markdown
-descripcion: .
+descripcion: Referencia de todos los elementos de formato disponibles en las páginas de la guía — headings, párrafos, listas, código, tablas y blockquotes.
+page_section: foundations
 date: 2023-06-19
-
-tags: ["Estructuras modulares", "web design", ""]
+badge: updated
+tags: ["foundations"]
 image: /assets/static/components/markdown.jpg
 imageAlt: Ilustración de un diseño de sistema web
 

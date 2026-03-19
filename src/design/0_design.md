@@ -1,12 +1,13 @@
 ---
 layout: _paginas/foundations/_foundations.njk
 permalink: /design/
+page_section: design
 
 titulo: Design
-descripcion: Los principios de diseño ayudan a los equipos a tomar decisiones de diseño que reflejen sus valores. A continuación se muestran los nuestros a altura cero...
+descripcion: Principios de diseño, metodología y herramientas del equipo. Qué es un sistema de diseño, cómo trabajamos y qué elementos lo componen.
 
 date: 2023-06-19
-tags: ["Estructuras modulares", "diseño", "figma"]
+tags: ["design"]
 image: /assets/static/images/7.jpg
 imageAlt: Ilustración de un diseño de sistema
 ---

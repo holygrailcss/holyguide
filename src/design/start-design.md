@@ -1,9 +1,10 @@
 ---
 layout: _paginas/foundations/_foundations.njk
 permalink: /start-design/
+page_section: design
 
 titulo: Start Design
-descripcion: Los principios de diseño ayudan a los equipos a tomar decisiones de diseño que reflejen sus valores. A continuación se muestran los nuestros desde cero.
+descripcion: Guía de inicio para diseñadores. Herramientas, convenciones Figma y metodología para contribuir al sistema de diseño.
 
 date: 2023-06-19
 tags: ["design"]

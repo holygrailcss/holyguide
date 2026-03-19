@@ -36,7 +36,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .c-tier-gold     |                   | Color oro                |
 | .c-limited       |                   | Color de acceso limitado |
 
-### Fondos
+## Fondos
 
 | Helper            | Propuesta           | Descripción            |
 | ----------------- | ------------------- | ---------------------- |
@@ -60,7 +60,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .bg-tier-platinum |                     | Fondo platino          |
 | .bg-tier-gold     |                     | Fondo oro              |
 
-### Posicionamientos
+## Posicionamientos
 
 | Helper           | Propuesta          | Descripción                                     |
 | ---------------- | ------------------ | ----------------------------------------------- |
@@ -71,7 +71,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .fl-left         | **.p-float-left**  | Flota a la izquierda                            |
 | .fl-right        | **.p-float-right** | Flota a la derecha                              |
 
-### Bordes
+## Bordes
 
 | Helper          | Propuesta          | Descripción                       |
 | --------------- | ------------------ | --------------------------------- |
@@ -86,7 +86,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .border-t2      | **.b-t-2-primary** | Borde superior doble primario     |
 | .border-15      | **.b-opacity-15**  | Borde con opacidad del 15%        |
 
-### Tamaños
+## Tamaños
 
 | Helper     | Propuesta          | Descripción               |
 | ---------- | ------------------ | ------------------------- |
@@ -94,7 +94,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .w-max     | **.w-max-content** | Ancho máximo en contenido |
 | .max-vw-35 | **.w-max-35vw**    | Ancho máximo de 35vw      |
 
-### Textos
+## Textos
 
 | Helper               | Propuesta             | Descripción                                               |
 | -------------------- | --------------------- | --------------------------------------------------------- |
@@ -110,14 +110,14 @@ imageAlt: Ilustración de un diseño de sistema web
 | .is-through          | **.t-through**        | Texto tachado                                             |
 | .leading-1           | **.t-leading-1**      | Interlineado de 1 (line-height)                           |
 
-### Alineación
+## Alineación
 
 | Helper       | Propuesta      | Descripción                   |
 | ------------ | -------------- | ----------------------------- |
 | .vert-end    | **.align-end** | Alinea verticalmente al final |
 | .text-center | **.t-center**  | Texto centrado                |
 
-### Scroll
+## Scroll
 
 | Helper              | Propuesta                | Descripción                                     |
 | ------------------- | ------------------------ | ----------------------------------------------- |
@@ -126,20 +126,20 @@ imageAlt: Ilustración de un diseño de sistema web
 | .scrollcustom-x     | **.scroll-x-custom**     | Scroll horizontal personalizado                 |
 | .min-scrollcustom-x | **.scroll-x-custom-min** | Scroll horizontal mínimo personalizado          |
 
-### Opacidad
+## Opacidad
 
 | Helper      | Descripción      |
 | ----------- | ---------------- |
 | .opacity-50 | Opacidad del 50% |
 | .opacity-70 | Opacidad del 70% |
 
-### Cursor
+## Cursor
 
 | Helper          |                               |
 | --------------- | ----------------------------- |
 | .cursor-pointer | Cambia el cursor a un puntero |
 
-### Overflow
+## Overflow
 
 | Helper              | Propuesta                | Descripción                                     |
 | ------------------- | ------------------------ | ----------------------------------------------- |
@@ -147,7 +147,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .scrollcustom       | **.scroll-custom**       | Estilo de barra de desplazamiento personalizada |
 | .min-scrollcustom-x | **.scroll-x-custom-min** | Scroll horizontal mínimo personalizado          |
 
-### Flexbox
+## Flexbox
 
 | Helper        | Descripción                       |
 | ------------- | --------------------------------- |
@@ -156,13 +156,13 @@ imageAlt: Ilustración de un diseño de sistema web
 | .flex-initial | Flex grow 0, shrink 1, basis auto |
 | .flex-none    | Flex grow 0, shrink 0, basis auto |
 
-### Eventos
+## Eventos
 
 | Helper   | Propuesta        | Descripción                    |
 | -------- | ---------------- | ------------------------------ |
 | .pe-none | **.events-none** | Deshabilita eventos de puntero |
 
-### Fuentes
+## Fuentes
 
 | Helper   | Propuesta          | Descripción     |
 | -------- | ------------------ | --------------- |
@@ -172,7 +172,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .font-b  | **.font-bold**     | Fuente bold     |
 | .font-sb | **.font-semibold** | Fuente semibold |
 
-### Visibilidad
+## Visibilidad
 
 | Helper     | Propuesta   | Descripción                                                         |
 | ---------- | ----------- | ------------------------------------------------------------------- |
@@ -182,7 +182,7 @@ imageAlt: Ilustración de un diseño de sistema web
 | .lg:hidden |             | Oculta en pantallas grandes (`lg`).                                 |
 | .xl:hidden |             | Oculta en pantallas extra grandes (`xl`).                           |
 
-### Extras
+## Extras
 
 | Helper               | Descripción                                                |
 | -------------------- | ---------------------------------------------------------- |

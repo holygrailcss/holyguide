@@ -37,7 +37,7 @@ imageAlt: Sistema de espaciado
 
 <br>
 
-### PADDINGS RESPONSIVE
+## Padding responsive
 
 | Espaciado                   | Mobile | Desktop | Example mobile                                                             | Example Desktop                                                             |
 | --------------------------- | ------ | ------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ imageAlt: Sistema de espaciado
 | .ptr-64 <br>.pbr-64         | 32px   | 64px    | <div class="clean-box-wrap"> <div class="clean-box pb-32"  > </div> </div> | <div class="clean-box-wrap"> <div class="clean-box pb-64"  > </div> </div>  |
 | .ptr-24 <br>.pbr-24         | 16px   | 24px    | <div class="clean-box-wrap"> <div class="clean-box pb-16"  > </div> </div> | <div class="clean-box-wrap"> <div class="clean-box pbr-24"  > </div> </div> |
 
-### Márgenes Bottoms Hasta
+## Márgenes bottom — hasta
 
 | Helper            | Descripción                              | Mobile | Desktop |
 | ----------------- | ---------------------------------------- | ------ | ------- |
@@ -62,7 +62,7 @@ imageAlt: Sistema de espaciado
 | .mdmax:mb-20 \*\* | \*\* Margen inferior hasta break-md -1;  | s      |         |
 | .smmax:mb-16 \*\* | \*\* Margen inferior hasta $break-sm -1; | s      |         |
 
-### RESET DESDE [SM..]
+## Reset desde [SM+]
 
 | Helper            | Descripción      |
 | ----------------- | ---------------- |
@@ -97,7 +97,7 @@ imageAlt: Sistema de espaciado
 | .lg:pr-0          | a partir de lg 0 |
 | .xl:pr-0          | a partir de xl 0 |
 
-### RESET HASTA [SM..]
+## Reset hasta [SM-]
 
 | Helper            | Descripción                |
 | ----------------- | -------------------------- |
@@ -112,7 +112,7 @@ imageAlt: Sistema de espaciado
 | .lgmax:mt-0       | margen top a cero hasta sm |
 | .xlmax:mt-0       | margen top a cero hasta sm |
 
-### márgenes Responsive
+## Márgenes responsive
 
 | Helper  | Descripción |       |     |
 | ------- | ----------- | ----- | --- |
