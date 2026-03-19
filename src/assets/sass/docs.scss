@@ -42,11 +42,12 @@ html {
   // h5/h6 → etiquetas finas, pequeñas
   h1 {
     scroll-margin-top: 50px;
-    font-size: 22px;
+    font-size: clamp(28px, 5vw, 90px);
     font-weight: 700;
-    margin-top: 48px;
+   
     margin-bottom: 20px;
     letter-spacing: 0.01em;
+    @include font-light;
   }
   h2 {
     scroll-margin-top: 50px;
@@ -57,6 +58,7 @@ html {
     margin-bottom: 20px;
     padding-bottom: 14px;
     border-bottom: 1px solid #e4e4e4;
+    @include font-light;
   }
   h3 {
     scroll-margin-top: 50px;
@@ -106,30 +108,32 @@ html {
   padding-top: 80px;
   padding-bottom: 48px;
   @media (min-width: $break-md) {
-    padding-top: 120px;
+    padding-top: 70px;
     padding-bottom: 64px;
   }
 }
 .page-hero__section {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.64em;
   color: #999;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  line-height: 1;
+  @include font-light;padding-left: 8px;
 }
 .page-hero__title-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .page-hero__title {
-  font-size: clamp(28px, 5vw, 44px);
+  font-size: clamp(36px, 7vw, 96px);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   margin: 0;
 }
@@ -147,7 +151,7 @@ html {
   padding-right: 8px;
   padding-left: 8px;
   width: 100%;
-  padding-bottom: 200px;
+
 }
 .guide-colors {
   float: left;
@@ -595,15 +599,18 @@ html {
 }
 .sass-zone {
   .code-zone {
-    height: 30px;
+    height: auto;
   }
 }
 
 .code-zone {
-  overflow: hidden;
-
-  transition: all ease 0.2s;
-  cursor: pointer;
+  // El sistema nuevo de code-block-wrapper maneja el colapsar/expandir.
+  // Solo aplicamos overflow:hidden al subtipo con .code-title (sistema legado cerrarDiv).
+  &:has(.code-title) {
+    overflow: hidden;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 
   .code-title {
     transition: all ease 0.2s;
@@ -857,8 +864,8 @@ blockquote {
 
 // ── Code blocks con cabecera ──────────────────────────────────────
 .guide .code-block-wrapper {
-  margin: 24px 0;
-  border-radius: 8px;
+  margin: 0 0 24px 0;
+  border-radius: 0 0 8px 8px;
   overflow: hidden;
   border: 1px solid #2a2a2a;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);

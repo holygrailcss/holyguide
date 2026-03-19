@@ -147,6 +147,23 @@
         event.target.classList.remove("resize-overlay");
       });
     document.addEventListener("DOMContentLoaded", function () {
+      // ── Dedent automático: elimina sangría común antes de resaltar ─
+      document.querySelectorAll('pre code').forEach(code => {
+        let lines = code.textContent.split('\n');
+        // Eliminar líneas vacías al inicio y al final
+        while (lines.length && !lines[0].trim()) lines.shift();
+        while (lines.length && !lines[lines.length - 1].trim()) lines.pop();
+        // Calcular la sangría mínima (ignorando líneas vacías)
+        const minIndent = lines
+          .filter(l => l.trim().length > 0)
+          .reduce((min, l) => Math.min(min, l.match(/^(\s*)/)[1].length), Infinity);
+        if (minIndent > 0 && isFinite(minIndent)) {
+          lines = lines.map(l => l.slice(minIndent));
+        }
+        code.textContent = lines.join('\n');
+      });
+      // ──────────────────────────────────────────────────────────────
+
       Prism.highlightAll();
 
       // ── Code blocks con cabecera colapsable ───────────────────
@@ -159,8 +176,8 @@
       };
 
       const SKIP_SELECTORS = [
-        '.code-view', '.code-zone', '.code-block-body',
-        '.innermarkdown', 'table', '.sd-arch', '[contenteditable]'
+        '.code-view', '.code-block-body',
+        'table', '.sd-arch', '[contenteditable]'
       ].join(',');
 
       document.querySelectorAll('.guide pre').forEach(pre => {
