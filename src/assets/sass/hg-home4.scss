@@ -150,15 +150,22 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
     align-items: center;
     justify-content: center;
     transition: opacity 0.25s ease-out;
-   
+
+    @media (max-width: 767px) {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+    }
     @media (min-width: 768px) {
-    
       min-height: 100vh;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @media (max-width: 767px) {
+        position: absolute;
+        inset: 0;
+      }
     }
   }
   // Box secundario (sin altura fija)
@@ -169,9 +176,23 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
     justify-content: center;
     transition: opacity 0.25s ease-out;
     padding-inline: 0;
+
+    @media (max-width: 767px) {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+    }
     @media (min-width: 768px) {
       min-height: 100vh;
       padding-inline: 150px;
+    }
+    img {
+      @media (max-width: 767px) {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
   // Wrapper del box animado
