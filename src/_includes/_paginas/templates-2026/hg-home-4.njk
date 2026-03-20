@@ -377,9 +377,9 @@
 
   const getPeek = (col) => col?.classList?.contains('hg-home-special-cutout') ? PEEK_CUTOUT : PEEK_FULL;
 
-  // Devuelve la posición X de reposo de la columna i:
-  // En desktop: activa → 0, adyacentes → asoman PEEK px (200 si cutout, 70 si full), resto → fuera.
-  // En mobile: todas las inactivas van completamente fuera de pantalla (sin peek).
+  // Devuelve la posición X de reposo de la columna i.
+  // Desktop: activa → 0, adyacentes → asoman PEEK px, resto → escalonadas fuera.
+  // Mobile: escalonadas por distancia (d * W) para que solo la inmediata entre al arrastrar.
   function getNaturalX(i) {
     const W = colWidth(), d = i - active;
     if (d === 0) return 0;
@@ -388,7 +388,9 @@
       if (d === -1) return -(W - peek);
       if (d ===  1) return  (W - peek);
     }
-    return d < 0 ? -W * 1.05 : W * 1.05;
+    // Cada columna se aleja d * W: la columna 2 está en 2W, la 3 en 3W…
+    // Con delta máximo de ±W (un ancho de pantalla) solo la adyacente (d=±1) puede entrar.
+    return d * W;
   }
 
   // Devuelve la escala de reposo: 1 si es la activa, reducida si es inactiva.
