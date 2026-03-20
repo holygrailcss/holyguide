@@ -85,10 +85,16 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
     min-height: 100vh;
     overflow-x: hidden;
     padding-inline: 0;
+    overscroll-behavior-x: contain;
   }
+  // El arrastre horizontal lo gestiona JS; pan-y en columnas = scroll vertical nativo
+  // (los enlaces/imágenes heredan touch-action desde la columna).
   .hg-home-drag-wrap {
     cursor: grab;
-    touch-action: pan-y;
+    overscroll-behavior-x: contain;
+    &.is-dragging {
+      cursor: grabbing;
+    }
   }
   // Contenedor de columnas — JS posiciona cada col individualmente con GSAP
   .hg-home-row-cols {
@@ -106,7 +112,11 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
     width: 100vw;
     height: 100vh;
     overflow: auto;
+    // Scroll vertical nativo; el arrastre horizontal lo captura el listener del wrapper (burbujeo).
     touch-action: pan-y;
+    * {
+      touch-action: inherit;
+    }
     scrollbar-width: none;
     -ms-overflow-style: none;
     &::-webkit-scrollbar {

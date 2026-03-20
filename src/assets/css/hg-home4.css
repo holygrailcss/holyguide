@@ -83,10 +83,14 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   min-height: 100vh;
   overflow-x: hidden;
   padding-inline: 0;
+  overscroll-behavior-x: contain;
 }
 .hg-home-container4 .hg-home-drag-wrap {
   cursor: grab;
-  touch-action: pan-y;
+  overscroll-behavior-x: contain;
+}
+.hg-home-container4 .hg-home-drag-wrap.is-dragging {
+  cursor: grabbing;
 }
 .hg-home-container4 .hg-home-row-cols {
   position: relative;
@@ -103,6 +107,11 @@ body.is-rtl .hg-home-container4 .hg-home-row-cols-wrap, body.is-rtl .hg-home-con
   height: 100vh;
   overflow: auto;
   touch-action: pan-y;
+}
+.hg-home-container4 .hg-home-row-cols__col * {
+  touch-action: inherit;
+}
+.hg-home-container4 .hg-home-row-cols__col {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

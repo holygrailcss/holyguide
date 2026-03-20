@@ -516,9 +516,11 @@
     resizeT = setTimeout(() => { setActive(active); resizeT = null; }, 100);
   });
 
-  // Registra los listeners de Pointer Events para el drag/swipe horizontal.
-  // Distingue entre un tap corto (navega por la zona peek) y un arrastre real.
+  // Drag / swipe horizontal: pointer en desktop; touch en móvil (más fiable que solo pointer en iOS).
+  // touch-action en CSS: wrapper none + columnas pan-y + herencia a hijos.
   function initDrag() {
+    if (!dragWrap) return;
+
     const SWIPE_PX      = 70;
     const DRAG_START_PX = 8;
 
@@ -528,7 +530,12 @@
     let lastDragDelta = 0;
     let pointerId = null;
 
-    // Libera el pointer capture para que el evento no quede bloqueado en dragWrap.
+    function getXY(e) {
+      if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+      return { x: e.clientX, y: e.clientY };
+    }
+
     function releaseCapture() {
       if (pointerId != null) {
         try { dragWrap.releasePointerCapture(pointerId); } catch (_) {}
@@ -536,55 +543,61 @@
       }
     }
 
-    // Inicia el seguimiento del gesto: guarda la posición inicial y captura el puntero.
     function onDown(e) {
-      if (e.button > 1) return;
-      if (!e.isPrimary) return;
+      if (e.type === 'pointerdown') {
+        if (e.button > 1) return;
+        if (!e.isPrimary) return;
+      }
       if (e.target.closest?.('footer')) return;
 
-      isDragging    = true;
-      started       = false;
-      startX        = lastClientX = e.clientX;
-      startY        = lastClientY = e.clientY;
+      const { x, y } = getXY(e);
+      isDragging = true;
+      started = false;
+      startX = lastClientX = x;
+      startY = lastClientY = y;
       lastDragDelta = 0;
 
       gsap.killTweensOf(cols);
+      dragWrap.classList.add('is-dragging');
 
       pointerId = e.pointerId ?? null;
       if (pointerId != null) {
         try { dragWrap.setPointerCapture(pointerId); } catch (_) {}
       }
-      if (e.pointerType === 'mouse') {
-        e.preventDefault();
-      }
+      // En touch, no preventDefault en start: permite iniciar scroll vertical; el move decide.
+      if (e.type !== 'touchstart') e.preventDefault();
     }
 
-    // Mueve las columnas siguiendo el dedo/cursor. Descarta gestos principalmente verticales.
     function onMove(e) {
       if (!isDragging) return;
-      lastClientX = e.clientX;
-      lastClientY = e.clientY;
+      const { x, y } = getXY(e);
+      lastClientX = x;
+      lastClientY = y;
 
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
+      const dx = x - startX;
+      const dy = y - startY;
 
       if (!started) {
         if (Math.abs(dx) <= DRAG_START_PX && Math.abs(dy) <= DRAG_START_PX) return;
         started = Math.abs(dx) >= Math.abs(dy);
-        if (!started) { isDragging = false; return; }
+        if (!started) {
+          isDragging = false;
+          releaseCapture();
+          dragWrap.classList.remove('is-dragging');
+          return;
+        }
       }
 
       const maxR = active * colWidth();
       const maxL = (totalCols - 1 - active) * colWidth();
       lastDragDelta = Math.max(-maxL, Math.min(maxR, dx));
       cols.forEach((col, i) => gsap.set(col, { x: getNaturalX(i) + lastDragDelta }));
-      e.preventDefault();
+      e.preventDefault(); // bloquea scroll del documento / iframe durante arrastre horizontal
     }
 
-    // Al soltar: decide si cambiar de sección (supera umbral de swipe o tap en zona peek)
-    // o volver a la posición actual.
-    function finish() {
+    function finish(e) {
       releaseCapture();
+      dragWrap.classList.remove('is-dragging');
       if (!isDragging) return;
       isDragging = false;
 
@@ -608,18 +621,26 @@
       setActive(active);
     }
 
-    // Cancela el gesto (p.ej. llamada entrante en móvil) y vuelve a la sección activa.
     function cancel() {
       releaseCapture();
+      dragWrap.classList.remove('is-dragging');
       if (!isDragging) return;
       isDragging = false;
       setActive(active);
     }
 
-    dragWrap.addEventListener('pointerdown',   onDown,  { passive: false });
-    dragWrap.addEventListener('pointermove',   onMove,  { passive: false });
-    dragWrap.addEventListener('pointerup',     finish,  { passive: true  });
-    dragWrap.addEventListener('pointercancel', cancel,  { passive: true  });
+    const useTouch = 'ontouchstart' in window;
+    if (useTouch) {
+      dragWrap.addEventListener('touchstart', onDown, { passive: false });
+      dragWrap.addEventListener('touchmove', onMove, { passive: false });
+      dragWrap.addEventListener('touchend', finish, { passive: false });
+      dragWrap.addEventListener('touchcancel', cancel, { passive: true });
+    } else {
+      dragWrap.addEventListener('pointerdown', onDown, { passive: false });
+      dragWrap.addEventListener('pointermove', onMove, { passive: false });
+      dragWrap.addEventListener('pointerup', finish, { passive: true });
+      dragWrap.addEventListener('pointercancel', cancel, { passive: true });
+    }
   }
 
   // Navegación con trackpad horizontal (rueda/gesto de dos dedos en Mac).
