@@ -150,7 +150,9 @@ body.hg-footer-in-view #hg-home-row-cols .hg-home-row-cols__col.is-active {
     align-items: center;
     justify-content: center;
     transition: opacity 0.25s ease-out;
+   
     @media (min-width: 768px) {
+    
       min-height: 100vh;
     }
     img {
