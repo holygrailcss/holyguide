@@ -111,6 +111,74 @@ imageAlt: Escala tipográfica del sistema de diseño Dutti
 .weight-card__val {
   font-size: 10px; color: #999; font-family: monospace;
 }
+
+.uppercase-languages-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+.uppercase-languages-table thead tr {
+  background: #111827;
+  color: #ffffff;
+}
+.uppercase-languages-table th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 1px solid #374151;
+}
+.uppercase-languages-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.uppercase-languages-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+.uppercase-languages-table .is-ttu {
+  text-transform: uppercase;
+}
+.uppercase-language-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.uppercase-language-tab {
+  appearance: none;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 10px 14px;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.uppercase-language-tab[aria-selected="true"] {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+}
+.uppercase-language-tab:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 2px;
+}
+.uppercase-language-table--suisse-itl * {
+  font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
+}
+.uppercase-language-table--suisse-works * {
+  font-family: "massimo-daily-regular", "ms-serif", serif !important;
+}
+.uppercase-language-table--suisse-helvetica * {
+  font-family: Helvetica, Arial, sans-serif !important;
+}
 </style>
 
 ## Familias de fuentes
@@ -491,3 +559,126 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
   letter-spacing: .16em;
 }
 ```
+
+## Idiomas en uppercase
+
+<div class="uppercase-language-tabs" role="tablist" aria-label="Selector tipográfico para tabla de uppercase">
+  <button
+    type="button"
+    class="uppercase-language-tab"
+    role="tab"
+    aria-selected="true"
+    data-table-font="uppercase-language-table--suisse-itl"
+  >
+    Suisse Itl
+  </button>
+  <button
+    type="button"
+    class="uppercase-language-tab"
+    role="tab"
+    aria-selected="false"
+    data-table-font="uppercase-language-table--suisse-works"
+  >
+    Suisse Works
+  </button>
+  <button
+    type="button"
+    class="uppercase-language-tab"
+    role="tab"
+    aria-selected="false"
+    data-table-font="uppercase-language-table--suisse-helvetica"
+  >
+    Helvetica
+  </button>
+</div>
+
+<table class="uppercase-languages-table uppercase-language-table--suisse-itl" id="uppercase-language-table">
+  <thead>
+    <tr>
+      <th>Idioma</th>
+      <th>Minúsculas (Input)</th>
+      <th>Mayúsculas (Esperado)</th>
+      <th>Mayúsculas (ttu) [Simulación CSS]</th>
+      <th>Punto crítico a verificar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr lang="tr-TR"><td>TR</td><td>istanbul</td><td>İSTANBUL</td><td class="is-ttu">istanbul</td><td>¿Aparece el punto sobre la İ?</td></tr>
+    <tr lang="tr-TR"><td>TR</td><td>ilginç</td><td>İLGİNÇ</td><td class="is-ttu">ilginç</td><td>¿Ambas i mantienen el punto?</td></tr>
+    <tr lang="tr-TR"><td>TR</td><td>ışık</td><td>IŞIK</td><td class="is-ttu">ışık</td><td>¿La ı se convierte en I (sin punto)?</td></tr>
+    <tr lang="tr-TR"><td>TR</td><td>iyi</td><td>İYİ</td><td class="is-ttu">iyi</td><td>Si ves "IYI" (sin puntos), falla el atributo lang.</td></tr>
+    <tr lang="el-GR"><td>EL</td><td>ελληνικά</td><td>ΕΛΛΗΝΙΚΑ</td><td class="is-ttu">ελληνικά</td><td>¿Se eliminó el acento de la ά?</td></tr>
+    <tr lang="el-GR"><td>EL</td><td>άρτα</td><td>ΑΡΤΑ</td><td class="is-ttu">άρτα</td><td>El acento (tonos) debe desaparecer.</td></tr>
+    <tr lang="el-GR"><td>EL</td><td>η</td><td>Η</td><td class="is-ttu">η</td><td>No debe quedar ningún rastro de tilde.</td></tr>
+    <tr lang="el-GR"><td>EL</td><td>αυλός</td><td>ΑΥΛΟΣ</td><td class="is-ttu">αυλός</td><td>La ό final debe perder el acento.</td></tr>
+    <tr lang="de-DE"><td>DE</td><td>straße</td><td>STRASSE</td><td class="is-ttu">straße</td><td>La ß suele pasar a SS (estándar CSS).</td></tr>
+    <tr lang="de-DE"><td>DE</td><td>größe</td><td>GRÖSSE</td><td class="is-ttu">größe</td><td>La diéresis sobre la Ö debe persistir.</td></tr>
+    <tr lang="de-DE"><td>DE</td><td>maß</td><td>MASS</td><td class="is-ttu">maß</td><td>¿Se transformó la ß correctamente?</td></tr>
+    <tr lang="de-DE"><td>DE</td><td>fussball</td><td>FUSSBALL</td><td class="is-ttu">fussball</td><td>Conversión estándar.</td></tr>
+    <tr lang="nl-NL"><td>NL</td><td>ijssel</td><td>IJSSEL</td><td class="is-ttu">ijssel</td><td>La IJ debe ser mayúscula.</td></tr>
+    <tr lang="nl-NL"><td>NL</td><td>ijsland</td><td>IJSLAND</td><td class="is-ttu">ijsland</td><td>Ambos caracteres del dígrafo en caja alta.</td></tr>
+    <tr lang="nl-NL"><td>NL</td><td>bijzonder</td><td>BIJZONDER</td><td class="is-ttu">bijzonder</td><td>Transformación estándar sin pérdida de caracteres.</td></tr>
+    <tr lang="ar-AE"><td>AR</td><td>مرحبا</td><td>مرحبا</td><td class="is-ttu">مرحبا</td><td>Sin cambios. El árabe no tiene caja.</td></tr>
+    <tr lang="ar-AE"><td>AR</td><td>العربية</td><td>العربية</td><td class="is-ttu">العربية</td><td>Sin cambios.</td></tr>
+    <tr lang="zh-CN"><td>ZH</td><td>iphone 你好</td><td>IPHONE 你好</td><td class="is-ttu">iphone 你好</td><td>Solo "IPHONE" cambia; "你好" no varía.</td></tr>
+    <tr lang="ru-RU"><td>RU</td><td>москва</td><td>МОСКВА</td><td class="is-ttu">москва</td><td>Conversión cirílica estándar.</td></tr>
+    <tr lang="ru-RU"><td>RU</td><td>ёлка</td><td>ЁΛΚΑ</td><td class="is-ttu">ёлка</td><td>La ё (Yo) debe mantener sus dos puntos.</td></tr>
+    <tr lang="uk-UA"><td>UK</td><td>київ</td><td>КИЇВ</td><td class="is-ttu">київ</td><td>La ї (Yi) debe mantener los dos puntos.</td></tr>
+    <tr lang="uk-UA"><td>UK</td><td>їжак</td><td>ЇЖАК</td><td class="is-ttu">їжак</td><td>Verifica la integridad de la ї.</td></tr>
+    <tr lang="uk-UA"><td>UK</td><td>ґанок</td><td>ҐАНОК</td><td class="is-ttu">ґанок</td><td>La ґ (Ghe con gancho) debe ser correcta.</td></tr>
+    <tr lang="sr-Cyrl-RS"><td>SR (Cy)</td><td>беοград</td><td>БЕОГРАД</td><td class="is-ttu">беοград</td><td>Cirílico serbio estándar.</td></tr>
+    <tr lang="sr-Latn-RS"><td>SR (Lat)</td><td>beograd</td><td>BEOGRAD</td><td class="is-ttu">beograd</td><td>Latino serbio estándar.</td></tr>
+  </tbody>
+</table>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const table = document.getElementById('uppercase-language-table');
+    const tabs = Array.from(document.querySelectorAll('.uppercase-language-tab'));
+    const fontClasses = [
+      'uppercase-language-table--suisse-itl',
+      'uppercase-language-table--suisse-works',
+      'uppercase-language-table--suisse-helvetica'
+    ];
+
+    if (!table || !tabs.length) {
+      return;
+    }
+
+    const activateTab = (tab) => {
+      const fontClass = tab.dataset.tableFont;
+
+      if (!fontClass) {
+        return;
+      }
+
+      table.classList.remove(...fontClasses);
+      table.classList.add(fontClass);
+
+      tabs.forEach((item) => {
+        const isSelected = item === tab;
+        item.setAttribute('aria-selected', String(isSelected));
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.tabIndex = tab.getAttribute('aria-selected') === 'true' ? 0 : -1;
+
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') {
+          return;
+        }
+
+        event.preventDefault();
+        const direction = event.key === 'ArrowRight' ? 1 : -1;
+        const nextIndex = (index + direction + tabs.length) % tabs.length;
+        const nextTab = tabs[nextIndex];
+
+        activateTab(nextTab);
+        nextTab.focus();
+      });
+    });
+  });
+</script>
