@@ -244,47 +244,12 @@ url3: /enlace3
   <a class="dev-card dev-card--green" href="/practices/">
     <span class="dev-card__badge">Calidad</span>
     <p class="dev-card__title">Buenas Prácticas</p>
-    <p class="dev-card__desc">Guía con ejemplos reales de buenas y malas praxis detectadas en el proyecto Dutti.</p>
+    <p class="dev-card__desc">Guía con ejemplos de buenas y malas praxis en CSS, SCSS y HTML.</p>
   </a>
   <a class="dev-card dev-card--warn" href="/develop/effort-impact/">
     <span class="dev-card__badge">Estrategia</span>
     <p class="dev-card__title">Effort vs Impact</p>
     <p class="dev-card__desc">Propuestas de mejora SCSS/HTML clasificadas por esfuerzo e impacto. 19 iniciativas.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-overview/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Visión General</p>
-    <p class="dev-card__desc">Arquitectura completa del frontend de Massimo Dutti — estructura de carpetas y convenciones.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-abstract-base/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Abstract & Base</p>
-    <p class="dev-card__desc">Variables, breakpoints, mixins, tipografía y declaración de fuentes.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-elements/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Elements</p>
-    <p class="dev-card__desc">Modales, filtros, PDP, PLP, Swiper, sidebars, toast y notificaciones. 22 archivos.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-partials/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Partials</p>
-    <p class="dev-card__desc">Header, menú HolyGrail, footer, shopcart, search y chat. 17 archivos.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-forms/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Forms</p>
-    <p class="dev-card__desc">Inputs, checkboxes, dropdowns, OTP, phone combo y range slider. 11 archivos.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-components/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Components Angular</p>
-    <p class="dev-card__desc">Inventario de 86 componentes Angular con estilos encapsulados.</p>
-  </a>
-  <a class="dev-card dev-card--dutti" href="/develop/dutti-process/">
-    <span class="dev-card__badge">Dutti</span>
-    <p class="dev-card__title">Process</p>
-    <p class="dev-card__desc">Flujos de checkout, mi cuenta, newsletter, citas y herramientas dev. 23 archivos.</p>
   </a>
 </div>
 

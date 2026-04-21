@@ -202,7 +202,7 @@ npm install holygrail2
 
 ## Configuración mínima (`_setup.scss`)
 
-Valores reales del proyecto Massimo Dutti Frontend (`abstract/_setup.scss`):
+Valores de referencia del proyecto (`abstract/_setup.scss`):
 
 ```scss
 // ─── Colores ─────────────────────────────────────────────────────
@@ -379,4 +379,4 @@ $container-12: 800px;
 - [Foundations](/foundations/) — Colores, tipografía, espaciado, flexbox
 - [Componentes](/components/) — Botones, inputs, modales, accordion
 - [Buenas prácticas](/practices/) — Patrones de código recomendados
-- [Dutti Frontend](/develop/dutti-overview/) — Arquitectura del proyecto real
+- [Effort vs Impact](/develop/effort-impact/) — Propuestas de mejora SCSS/HTML
