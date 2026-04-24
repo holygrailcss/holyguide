@@ -53,7 +53,7 @@ html {
   margin-bottom: 20px;
   letter-spacing: 0.01em;
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .guide h2 {
   scroll-margin-top: 50px;
@@ -65,7 +65,7 @@ html {
   padding-bottom: 14px;
   border-bottom: 1px solid #e4e4e4;
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .guide h3 {
   scroll-margin-top: 50px;
@@ -108,7 +108,7 @@ html {
 .guide .h8 {
   font-size: 24px;
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .page-hero {
@@ -131,7 +131,7 @@ html {
   margin-bottom: 10px;
   line-height: 1;
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   padding-left: 8px;
 }
 
@@ -5828,7 +5828,7 @@ code {
 }
 .toc ol ol a {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .toc ol ol ol {
   margin-left: 20px;

@@ -111,13 +111,13 @@
 }
 @font-face {
   font-family: "SuisseIntl-Light";
-  font-weight: 100;
+  font-weight: 300;
   font-display: swap;
   src: local("SuisseIntl-Light"), url("/assets/fonts/suisse/SuisseIntl-Light.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Light.woff") format("woff");
 }
 @font-face {
   font-family: "SuisseIntl-Regular";
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
   src: local("SuisseIntl-Regular"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff2") format("woff2"), url("/assets/fonts/suisse/SuisseIntl-Regular.woff") format("woff");
 }
@@ -3281,7 +3281,7 @@ md-icon.ico-pre {
 
 body {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   -webkit-overflow-scrolling: touch;
   font-variant-ligatures: no-common-ligatures;
   text-rendering: optimizelegibility;
@@ -3301,7 +3301,7 @@ samp {
 .select,
 select {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.3;
 }
@@ -3316,12 +3316,12 @@ select {
 
 select {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 p {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   font-size: 12px;
 }
@@ -3332,7 +3332,7 @@ p {
 }
 p.b {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -3363,7 +3363,7 @@ mark {
 
 .text-12-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1;
 }
@@ -3377,7 +3377,7 @@ mark {
 
 .text-12-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 12px;
   line-height: 1;
 }
@@ -3396,7 +3396,7 @@ mark {
 
 .text-14-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -3410,7 +3410,7 @@ mark {
 
 .text-14-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -3429,7 +3429,7 @@ mark {
 
 .text-16-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -3443,7 +3443,7 @@ mark {
 
 .text-16-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -3462,7 +3462,7 @@ mark {
 
 .text-18-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -3476,7 +3476,7 @@ mark {
 
 .text-18-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -3495,7 +3495,7 @@ mark {
 
 .text-20-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -3509,7 +3509,7 @@ mark {
 
 .text-20-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
 }
@@ -3528,7 +3528,7 @@ mark {
 
 .text-24-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -3542,7 +3542,7 @@ mark {
 
 .text-24-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
 }
@@ -3561,7 +3561,7 @@ mark {
 
 .text-32-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 32px;
   line-height: 1.2;
 }
@@ -3575,7 +3575,7 @@ mark {
 
 .text-32-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
 }
@@ -3594,7 +3594,7 @@ mark {
 
 .text-40-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -3608,7 +3608,7 @@ mark {
 
 .text-40-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 40px;
   line-height: 1.2;
 }
@@ -3628,7 +3628,7 @@ mark {
 @media (min-width: 1px) {
   .h2 {
     font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 18px;
     line-height: 1.2;
   }
@@ -3649,80 +3649,98 @@ mark {
   }
   .p-tag {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 9px;
     line-height: 1;
   }
   .title-l-b {
     font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.4;
   }
   .title-l {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.4;
   }
   .title-m {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.4;
   }
   .title-s {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 10px;
     line-height: 1.4;
   }
   .text-m {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
   }
   .text-l {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
   }
   .semantic {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1;
   }
   .hg-body-l {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
   }
   .hg-body-l-b {
     font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.5;
   }
   .hg-body-m {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
     line-height: 1.5;
   }
   .hg-body-m-b {
     font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.5;
   }
-  .label-m {
+  .hg-label-m {
     font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 12px;
+    line-height: 1;
+  }
+  .hg-label-m-b {
+    font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .hg-label-s {
+    font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 1;
+  }
+  .hg-label-s-b {
+    font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
     line-height: 1;
   }
 }
@@ -3791,8 +3809,20 @@ mark {
     font-size: 12px;
     line-height: 1.5;
   }
-  .label-m {
+  .hg-label-m {
     font-size: 12px;
+    line-height: 1;
+  }
+  .hg-label-m-b {
+    font-size: 12px;
+    line-height: 1;
+  }
+  .hg-label-s {
+    font-size: 10px;
+    line-height: 1;
+  }
+  .hg-label-s-b {
+    font-size: 10px;
     line-height: 1;
   }
 }
@@ -3824,7 +3854,7 @@ mark {
 }
 .fluid-1-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-1-l {
   font-size: 60px;
@@ -3845,7 +3875,7 @@ mark {
 
 .fluid-1-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-1-r {
   font-size: 60px;
@@ -3908,7 +3938,7 @@ mark {
 
 .fluid-1-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-1-b {
   font-size: 60px;
@@ -3929,7 +3959,7 @@ mark {
 
 .fluid-2-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-2-l {
   font-size: 40px;
@@ -3950,7 +3980,7 @@ mark {
 
 .fluid-2-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-2-r {
   font-size: 40px;
@@ -4013,7 +4043,7 @@ mark {
 
 .fluid-2-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-2-b {
   font-size: 40px;
@@ -4034,7 +4064,7 @@ mark {
 
 .fluid-3-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-3-l {
   font-size: 40px;
@@ -4055,7 +4085,7 @@ mark {
 
 .fluid-3-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-3-r {
   font-size: 40px;
@@ -4118,7 +4148,7 @@ mark {
 
 .fluid-3-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-3-b {
   font-size: 40px;
@@ -4139,7 +4169,7 @@ mark {
 
 .fluid-4-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-4-l {
   font-size: 40px;
@@ -4160,7 +4190,7 @@ mark {
 
 .fluid-4-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-4-r {
   font-size: 40px;
@@ -4223,7 +4253,7 @@ mark {
 
 .fluid-4-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-4-b {
   font-size: 40px;
@@ -4244,7 +4274,7 @@ mark {
 
 .fluid-5-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-5-l {
   font-size: 20px;
@@ -4265,7 +4295,7 @@ mark {
 
 .fluid-5-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-5-r {
   font-size: 20px;
@@ -4328,7 +4358,7 @@ mark {
 
 .fluid-5-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-5-b {
   font-size: 20px;
@@ -4349,7 +4379,7 @@ mark {
 
 .fluid-6-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-6-l {
   font-size: 18px;
@@ -4370,7 +4400,7 @@ mark {
 
 .fluid-6-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-6-r {
   font-size: 18px;
@@ -4433,7 +4463,7 @@ mark {
 
 .fluid-6-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-6-b {
   font-size: 18px;
@@ -4454,7 +4484,7 @@ mark {
 
 .fluid-7-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-7-l {
   font-size: 18px;
@@ -4475,7 +4505,7 @@ mark {
 
 .fluid-7-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-7-r {
   font-size: 18px;
@@ -4538,7 +4568,7 @@ mark {
 
 .fluid-7-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-7-b {
   font-size: 18px;
@@ -4559,7 +4589,7 @@ mark {
 
 .fluid-8-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-8-l {
   font-size: 18px;
@@ -4580,7 +4610,7 @@ mark {
 
 .fluid-8-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-8-r {
   font-size: 18px;
@@ -4643,7 +4673,7 @@ mark {
 
 .fluid-8-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-8-b {
   font-size: 18px;
@@ -4664,7 +4694,7 @@ mark {
 
 .fluid-18-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-18-l {
   font-size: 18px;
@@ -4685,7 +4715,7 @@ mark {
 
 .fluid-18-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-18-r {
   font-size: 18px;
@@ -4748,7 +4778,7 @@ mark {
 
 .fluid-18-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-18-b {
   font-size: 18px;
@@ -4770,13 +4800,13 @@ mark {
 .text-light,
 .font-light {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .text-regular,
 .font-regular {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .text-medium,
@@ -4794,7 +4824,7 @@ mark {
 .text-bold,
 .font-bold {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .margin-auto {
@@ -6499,7 +6529,7 @@ mark {
 
 .bold {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .semibold {
@@ -7800,7 +7830,7 @@ button {
   background-color: transparent;
   min-height: 32px;
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.64px;
 }
 .btn:focus, .btn.focus, .btn:hover, .btn.hover, .btn:visited, .btn:active, .btn.active {
@@ -7820,7 +7850,7 @@ button {
   border-color: #ffffff;
   background-color: #ffffff;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .has-light .btn::after {
   background-color: #ffffff;
@@ -8001,7 +8031,7 @@ button {
   background-color: #000000;
   border: 1px solid #000000;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-primary svg g {
   fill: #ffffff;
@@ -8171,7 +8201,7 @@ button {
   background-color: #000;
   border: 1px solid #000;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-limited svg g {
   fill: #ffffff;
@@ -8352,7 +8382,7 @@ button {
   cursor: pointer;
   color: #000000;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-label-m:disabled, .btn-label-m[disabled], .btn-label-m.disabled {
   pointer-events: none;
@@ -8463,7 +8493,7 @@ button {
   color: #ffffff;
   border: 1px solid #1a32a4;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-blue:focus, .btn-blue.focus, .btn-blue:hover, .btn-blue.hover, .btn-blue:visited, .btn-blue:active, .btn-blue.active {
   color: #ffffff;
@@ -8583,7 +8613,7 @@ button {
   color: #ffffff;
   border: 1px solid #186CF1;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-facebook svg-icon,
 .btn-facebook svg-icon2,
@@ -8612,7 +8642,7 @@ button {
   color: #ffffff;
   border: 1px solid #000000;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-apple:focus, .btn-apple.focus, .btn-apple:hover, .btn-apple.hover, .btn-apple:visited, .btn-apple:active, .btn-apple.active,
 .has-light .btn-apple:focus,
@@ -8661,7 +8691,7 @@ button {
   padding-inline: 40px;
   border: 1px solid #03cf5d;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-naver:focus, .btn-naver.focus, .btn-naver:hover, .btn-naver.hover, .btn-naver:visited, .btn-naver:active, .btn-naver.active,
 .has-light .btn-naver:focus,
@@ -8691,7 +8721,7 @@ button {
   padding-inline: 40px;
   border: 1px solid #2dc100;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-wechat:focus, .btn-wechat.focus, .btn-wechat:hover, .btn-wechat.hover, .btn-wechat:visited, .btn-wechat:active, .btn-wechat.active,
 .has-light .btn-wechat:focus,
@@ -8953,7 +8983,7 @@ button {
   border: 1px solid #fb9962;
   color: #ffffff;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .btn-feel:hover, .btn-feel.hover, .btn-feel:focus, .btn-feel.focus {
   background-color: #f0f0f0;
@@ -10429,7 +10459,7 @@ input::placeholder {
 
 .input-notouch {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   pointer-events: none;
   border-color: #a9a9a9;
   padding: 24px 0;
@@ -10738,7 +10768,7 @@ input::placeholder {
 .input-line-v2 .textarea,
 .input-line-v2 .textarea:focus {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   padding: 12px 0 4px;
   height: auto;
   border: none;
@@ -10746,7 +10776,7 @@ input::placeholder {
 }
 .input-line-v2 .input::placeholder {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   text-overflow: inherit;
   line-height: initial;
   white-space: pre;
@@ -11089,7 +11119,7 @@ a:hover {
 .link-svg-pre {
   padding-left: 20px;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
   border: 0;
   transform: none;
@@ -11112,7 +11142,7 @@ a:hover {
 .link-svg-post {
   padding-right: 20px;
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   display: initial;
   position: relative;
   border: 0;
@@ -13151,7 +13181,7 @@ body.md-open-dialog .md-dialog-overlay {
 }
 .card9 .card9-sizes button {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   border: none;
   background-color: #ffffff;
   border-top: 1px solid #a9a9a9;
@@ -13343,7 +13373,7 @@ body.md-open-dialog .md-dialog-overlay {
 
 .product-tag {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #737373;
   letter-spacing: 0;
   line-height: 1;
@@ -26610,7 +26640,7 @@ html {
 
 .fluid-1-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-1-l {
   font-size: 60px;
@@ -26631,7 +26661,7 @@ html {
 
 .fluid-1-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-1-r {
   font-size: 60px;
@@ -26694,7 +26724,7 @@ html {
 
 .fluid-1-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-1-b {
   font-size: 60px;
@@ -26715,7 +26745,7 @@ html {
 
 .fluid-2-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-2-l {
   font-size: 40px;
@@ -26736,7 +26766,7 @@ html {
 
 .fluid-2-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-2-r {
   font-size: 40px;
@@ -26799,7 +26829,7 @@ html {
 
 .fluid-2-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-2-b {
   font-size: 40px;
@@ -26820,7 +26850,7 @@ html {
 
 .fluid-3-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-3-l {
   font-size: 40px;
@@ -26841,7 +26871,7 @@ html {
 
 .fluid-3-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-3-r {
   font-size: 40px;
@@ -26904,7 +26934,7 @@ html {
 
 .fluid-3-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-3-b {
   font-size: 40px;
@@ -26925,7 +26955,7 @@ html {
 
 .fluid-4-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-4-l {
   font-size: 40px;
@@ -26946,7 +26976,7 @@ html {
 
 .fluid-4-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-4-r {
   font-size: 40px;
@@ -27009,7 +27039,7 @@ html {
 
 .fluid-4-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-4-b {
   font-size: 40px;
@@ -27030,7 +27060,7 @@ html {
 
 .fluid-5-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-5-l {
   font-size: 20px;
@@ -27051,7 +27081,7 @@ html {
 
 .fluid-5-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-5-r {
   font-size: 20px;
@@ -27114,7 +27144,7 @@ html {
 
 .fluid-5-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-5-b {
   font-size: 20px;
@@ -27135,7 +27165,7 @@ html {
 
 .fluid-6-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-6-l {
   font-size: 18px;
@@ -27156,7 +27186,7 @@ html {
 
 .fluid-6-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-6-r {
   font-size: 18px;
@@ -27219,7 +27249,7 @@ html {
 
 .fluid-6-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-6-b {
   font-size: 18px;
@@ -27240,7 +27270,7 @@ html {
 
 .fluid-7-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-7-l {
   font-size: 18px;
@@ -27261,7 +27291,7 @@ html {
 
 .fluid-7-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-7-r {
   font-size: 18px;
@@ -27324,7 +27354,7 @@ html {
 
 .fluid-7-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-7-b {
   font-size: 18px;
@@ -27345,7 +27375,7 @@ html {
 
 .fluid-8-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-8-l {
   font-size: 18px;
@@ -27366,7 +27396,7 @@ html {
 
 .fluid-8-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-8-r {
   font-size: 18px;
@@ -27429,7 +27459,7 @@ html {
 
 .fluid-8-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-8-b {
   font-size: 18px;
@@ -27450,7 +27480,7 @@ html {
 
 .fluid-18-l {
   font-family: "SuisseIntl-Light", Helvetica, arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .fluid-18-l {
   font-size: 18px;
@@ -27471,7 +27501,7 @@ html {
 
 .fluid-18-r {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 .fluid-18-r {
   font-size: 18px;
@@ -27534,7 +27564,7 @@ html {
 
 .fluid-18-b {
   font-family: "SuisseIntl-SemiBold", Helvetica, arial, sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .fluid-18-b {
   font-size: 18px;
@@ -28114,7 +28144,7 @@ ul {
 }
 .grid-product-list .product-tag {
   font-family: "SuisseIntl-Regular", Helvetica, arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 10px;
   color: #737373;
   letter-spacing: 0;
