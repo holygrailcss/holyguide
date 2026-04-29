@@ -1,0 +1,5345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoría Botones — Duttino (autocontenido)</title>
+<style>
+/* ---- :root variables (de dist/frontend/client/styles.css) ---- */
+:root {
+  --hg-typo-font-family-primary: arial, sans-serif;
+  --hg-typo-font-family-primary-bold: "Arial Bold", Arial, sans-serif;
+  --hg-typo-font-family-secondary: "ms-serif", serif;
+  --hg-typo-line-height-1: 1;
+  --hg-typo-line-height-1-976: 1.976;
+  --hg-typo-line-height-1-2: 1.2;
+  --hg-typo-line-height-1-4: 1.4;
+  --hg-typo-line-height-1-5: 1.5;
+  --hg-typo-line-height-1-1: 1.1;
+  --hg-typo-line-height-1-3: 1.3;
+  --hg-typo-line-height-1-6: 1.6;
+  --hg-typo-font-weight-100: 100;
+  --hg-typo-font-weight-400: 400;
+  --hg-typo-font-weight-500: 500;
+  --hg-typo-font-weight-600: 600;
+  --hg-typo-font-weight-700: 700;
+  --hg-typo-font-weight-900: 900;
+  --hg-typo-letter-spacing-0: 0;
+  --hg-typo-letter-spacing-0: 0rem;
+  --hg-typo-letter-spacing-0-02: 0.02rem;
+  --hg-typo-letter-spacing-0-05: 0.05rem;
+  --hg-typo-letter-spacing-0-08: 0.08rem;
+  --hg-typo-letter-spacing-10: 10rem;
+  --hg-typo-letter-spacing-110: 110rem;
+  --hg-typo-text-transform-none: none;
+  --hg-typo-text-transform-uppercase: uppercase;
+  --hg-typo-text-transform-otro: otro;
+  --hg-typo-font-size-18: 1.125rem;
+  --hg-typo-font-size-24: 1.5rem;
+  --hg-typo-font-size-14: 0.875rem;
+  --hg-typo-font-size-12: 0.75rem;
+  --hg-typo-font-size-16: 1rem;
+  --hg-typo-font-size-20: 1.25rem;
+  --hg-typo-font-size-13: 0.8125rem;
+  --hg-typo-font-size-10: 0.625rem;
+  --hg-typo-font-size-8: 0.5rem;
+  --hg-typo-font-size-32: 2rem;
+  --hg-typo-font-size-48: 3rem;
+  --hg-spacing-0: 0;
+  --hg-spacing-4: 0.25rem;
+  --hg-spacing-8: 0.5rem;
+  --hg-spacing-12: 0.75rem;
+  --hg-spacing-16: 1rem;
+  --hg-spacing-20: 1.25rem;
+  --hg-spacing-24: 1.5rem;
+  --hg-spacing-32: 2rem;
+  --hg-spacing-36: 2.25rem;
+  --hg-spacing-40: 2.5rem;
+  --hg-spacing-48: 3rem;
+  --hg-spacing-56: 3.5rem;
+  --hg-spacing-64: 4rem;
+  --hg-spacing-72: 4.5rem;
+  --hg-spacing-80: 5rem;
+  --hg-spacing-88: 5.5rem;
+  --hg-spacing-96: 6rem;
+  --hg-spacing-104: 6.5rem;
+  --hg-spacing-112: 7rem;
+  --hg-spacing-120: 7.5rem;
+  --hg-spacing-128: 8rem;
+  --hg-spacing-136: 8.5rem;
+  --hg-spacing-144: 9rem;
+  --hg-spacing-152: 9.5rem;
+  --hg-spacing-160: 10rem;
+  --hg-spacing-20-percent: 20%;
+  --hg-spacing-25-percent: 25%;
+  --hg-spacing-33-percent: 33.333333%;
+  --hg-spacing-40-percent: 40%;
+  --hg-spacing-50-percent: 50%;
+  --hg-spacing-60-percent: 60%;
+  --hg-spacing-66-percent: 66.666667%;
+  --hg-spacing-75-percent: 75%;
+  --hg-spacing-100-percent: 100%;
+  --hg-color-white: #ffffff;
+  --hg-color-black: #000000;
+  --hg-color-dark-grey: #737373;
+  --hg-color-middle-grey: #a9a9a9;
+  --hg-color-light-grey: #F9F9F9;
+  --hg-color-grey-ultra: #2F2F2F;
+  --hg-color-orange: #B75D0B;
+  --hg-color-mustard: #FFE693;
+  --hg-color-primary: #000000;
+  --hg-color-error: #b40016;
+  --hg-color-info: #1a32a4;
+  --hg-color-success: #12882C;
+  --hg-color-warning: #ffc700;
+  --hg-color-feel: #fb9962;
+  --hg-color-feel-dark: #c94c07;
+  --hg-color-special: #b99d6b;
+  --hg-color-vanilla: #F4F2ED;
+  --hg-color-silver: #87888D;
+  --hg-color-gold: #A38A6B;
+  --hg-color-platinum: #5B7FA1;
+  --hg-color-charcoal: #1D1D1D;
+  --hg-color-bg-light: #F0F0F0;
+  --hg-color-c-bg-light: #000000;
+  --hg-color-sk-grey: #e3e3e3;
+  --hg-color-bg-cream: #f4f2ed;
+}
+:root {
+  --hg-transition-duration: 0.278s;
+  --hg-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+:root {
+  --line-width: 1px;
+}
+:root {
+  --md-bottom-sheet-z-index: 2000;
+  --md-bottom-sheet-transition-duration: var(--hg-transition-duration);
+  --md-bottom-sheet-transition-timing-function: var(--hg-transition-timing-function);
+  --md-bottom-sheet-overlay-z-index: 1999;
+  --md-bottom-sheet-overlay-background-opacity: 0.15;
+  --md-bottom-sheet-overlay-background-color: #000000;
+  --md-pdp-header-height: 3rem;
+  --md-color-selector-list-margin-block: var(--hg-spacing-16);
+}
+:root {
+  --hg-base-line-compensation: 0.18em;
+  --hg-header-bg-color: var(--hg-color-white);
+  --hg-header-min-height: var(--hg-spacing-48);
+  --hg-header-padding-inline: var(--hg-spacing-20);
+  --hg-header-z-index: 1200;
+  --hg-header-transition-fast: all 0.070s ease-in-out;
+  --hg-header-transition: all 0.270s ease-in-out;
+  --hg-header-action-min-height: var(--hg-spacing-24);
+  --hg-header-list-gap: var(--hg-spacing-8);
+  --hg-header-logo-width: 9.375rem;
+  --hg-header-logo-z-index: calc(var(--hg-header-z-index) + 1);
+  --hg-header-logo-margin-inline: var(--hg-spacing-32) 0;
+  --hg-header-logo-ratio: 6.79 / 1;
+  --hg-header-logo-transition: all 0.270s ease-in-out;
+  --hg-header-maxilogo-width: unset;
+  --hg-header-maxilogo-padding-block: var(--hg-spacing-8);
+  --hg-header-maxilogo-transition: all 0.270s ease-in-out;
+}
+:root {
+  --hg-menu-panel-bg-color: var(--hg-color-white);
+  --hg-menu-panel-z-index: 2001;
+  --hg-menu-panel-width: 100%;
+  --hg-menu-panel-min-width: none;
+  --hg-menu-panel-max-width: none;
+  --hg-menu-panel-transition: all 0.5s cubic-bezier(0.03, 0.25, 0, 1);
+  --hg-menu-panel-inset-block-start: 0;
+  --hg-menu-panel-padding-inline: var(--hg-spacing-20);
+  --hg-menu-panel-box-shadow: none;
+  --hg-menu-panel-backdrop-bg-color: rgba(255, 255, 255, 0.5);
+  --hg-menu-panel-backdrop-transition: opacity 0.4s cubic-bezier(0.03, 0.25, 0, 1), visibility 0.4s cubic-bezier(0.03, 0.25, 0, 1);
+  --hg-menu-panel-header-min-height: var(--hg-spacing-48);
+  --hg-menu-panel-header-flex-wrap: wrap;
+  --hg-menu-panel-header-actions-min-height: var(--hg-header-min-height);
+  --hg-menu-panel-media-transition: all 0.4s cubic-bezier(0.03, 0.25, 0, 1);
+  --hg-menu-column-cat-width: var(--hg-spacing-128);
+  --hg-menu-column-transition: all 0.3s cubic-bezier(0.03, 0.25, 0, 1);
+}
+:root {
+  --header-logo: calc((100vw - var(--hg-header-padding-inline)) * (68 / 350));
+}
+:root {
+  --swiper-theme-color: #007aff;
+  /*
+  --swiper-preloader-color: var(--swiper-theme-color);
+  --swiper-wrapper-transition-timing-function: initial;
+  */
+}
+:root {
+  --md-checkout-header-height: var(--hg-spacing-48);
+}
+
+/* ---- Base reset (production) ---- */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Buttons CSS — todas las reglas que mencionan .btn* o .hg-btn* (de producción) ---- */
+.btn.btn-link.has-ico-pre {
+  padding-left: 18px;
+}
+
+.btn.btn-link.has-ico-pre .ico-pre {
+  margin: 0;
+  top: -1px;
+}
+
+.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
+  text-transform: uppercase;
+}
+
+.btn-group-bleed .btn-group {
+  margin-top: -1px;
+}
+
+.is-active.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.theme-keyboard-accessible .btn-grid .btn:focus,
+.theme-keyboard-accessible .btn-grid .btn:focus-visible {
+  outline: 2px solid #383bff !important;
+  outline-offset: -2px;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  justify-content: center;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 2px 16px 0;
+  background-color: transparent;
+  min-height: 32px;
+  font-family: "suisse-light", Helvetica, arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.64px;
+}
+
+.btn:focus, .btn.focus, .btn:hover, .btn.hover, .btn:visited, .btn:active, .btn.active {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.btn[disabled], .btn:disabled, .btn.disabled {
+  pointer-events: none;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.has-light .btn {
+  color: #000000;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.has-light .btn::after {
+  background-color: #ffffff;
+}
+
+.has-light .btn:focus, .has-light .btn.focus, .has-light .btn:hover, .has-light .btn.hover, .has-light .btn:visited, .has-light .btn:active, .has-light .btn.active {
+  color: #ffffff;
+  background-color: #a9a9a9;
+  border-color: #a9a9a9;
+}
+
+.has-light .btn[disabled], .has-light .btn:disabled, .has-light .btn.disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn.btn-separate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 32px;
+}
+
+.btn.btn-separate.btn--mini, .btn.btn-separate.btn--small {
+  width: max-content;
+}
+
+.btn.btn-feel-invert {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #fb9962;
+}
+
+.btn.btn-feel-invert svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn.btn-feel-invert svg circle {
+  stroke: #000000;
+}
+
+.btn.btn-feel-invert:focus, .btn.btn-feel-invert.focus, .btn.btn-feel-invert:hover, .btn.btn-feel-invert.hover, .btn.btn-feel-invert:active, .btn.btn-feel-invert.active {
+  color: #000000;
+  opacity: 1;
+  border-color: rgba(251, 153, 98, 0.5);
+}
+
+.btn.btn-feel-invert[disabled], .btn.btn-feel-invert:disabled, .btn.btn-feel-invert.disabled {
+  opacity: 1;
+  border-color: #f0f0f0;
+  color: #737373;
+  cursor: default;
+}
+
+.btn.has-ico-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-clear {
+  padding: 8px;
+  background: none;
+  border: none;
+}
+
+.btn-xs {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin-right: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.btn-xs:active, .btn-xs:focus, .btn-xs:visited {
+  outline: none;
+}
+
+.btn--wrap {
+  white-space: wrap;
+}
+
+.btn--mini {
+  padding: 0 16px;
+  font-size: 12px;
+  min-width: 50px;
+}
+
+.btn--small {
+  min-height: 32px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.btn--medium {
+  padding-right: 40px;
+  padding-left: 40px;
+  max-width: 272px;
+  width: 100%;
+  min-height: 32px;
+}
+
+.btn--mini-rd {
+  padding-right: 24px;
+  padding-left: 24px;
+  font-size: 12px;
+  min-height: 32px;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .btn--mini-rd {
+    padding: 16px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+}
+
+.btn--large {
+  min-height: 32px;
+  min-width: 200px;
+  max-width: 400px;
+  width: 100%;
+  padding-right: 56px;
+  padding-left: 56px;
+  font-size: 12px;
+}
+
+.btn--xlarge {
+  padding-right: 64px;
+  padding-left: 64px;
+  position: relative;
+  display: inline-flex;
+  min-height: 32px;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--xxl {
+  display: flex;
+  min-height: 60px;
+  padding: 10px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.btn--search {
+  min-height: initial;
+  display: flex;
+  font-size: 11px;
+  line-height: 1;
+  padding: 6px;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid #000000;
+}
+
+.btn--full {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.btn--round {
+  border-radius: 50px;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-primary svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.btn-primary svg circle {
+  stroke: #ffffff;
+}
+
+.btn-primary svg path {
+  fill: #ffffff;
+}
+
+.btn-primary:focus, .btn-primary.focus, .btn-primary:hover, .btn-primary.hover, .btn-primary:active, .btn-primary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-primary[disabled], .btn-primary:disabled, .btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-primary[disabled] svg g, .btn-primary:disabled svg g, .btn-primary.disabled svg g {
+  fill: #737373;
+  stroke: #737373;
+}
+
+.btn-primary[disabled] svg circle, .btn-primary:disabled svg circle, .btn-primary.disabled svg circle {
+  stroke: #737373;
+}
+
+.btn-primary[disabled] svg path, .btn-primary:disabled svg path, .btn-primary.disabled svg path {
+  fill: #737373;
+}
+
+.has-light .btn-primary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.has-light .btn-primary svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.has-light .btn-primary svg circle {
+  stroke: #000000;
+}
+
+.has-light .btn-primary svg path {
+  fill: #000000;
+}
+
+.has-light .btn-primary:focus, .has-light .btn-primary.focus, .has-light .btn-primary:hover, .has-light .btn-primary.hover, .has-light .btn-primary:active, .has-light .btn-primary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.has-light .btn-primary:focus svg g, .has-light .btn-primary.focus svg g, .has-light .btn-primary:hover svg g, .has-light .btn-primary.hover svg g, .has-light .btn-primary:active svg g, .has-light .btn-primary.active svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-primary:focus svg circle, .has-light .btn-primary.focus svg circle, .has-light .btn-primary:hover svg circle, .has-light .btn-primary.hover svg circle, .has-light .btn-primary:active svg circle, .has-light .btn-primary.active svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-primary:focus svg path, .has-light .btn-primary.focus svg path, .has-light .btn-primary:hover svg path, .has-light .btn-primary.hover svg path, .has-light .btn-primary:active svg path, .has-light .btn-primary.active svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-primary[disabled], .has-light .btn-primary:disabled, .has-light .btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-secondary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-secondary svg circle {
+  stroke: #000000;
+}
+
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:hover, .btn-secondary.hover, .btn-secondary:active, .btn-secondary.active {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.btn-secondary[disabled], .btn-secondary:disabled, .btn-secondary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-secondary[disabled] svg g, .btn-secondary:disabled svg g, .btn-secondary.disabled svg g {
+  fill: #a9a9a9;
+  stroke: #a9a9a9;
+}
+
+.btn-secondary[disabled] svg circle, .btn-secondary:disabled svg circle, .btn-secondary.disabled svg circle {
+  stroke: #a9a9a9;
+}
+
+.btn-secondary[disabled] svg path, .btn-secondary:disabled svg path, .btn-secondary.disabled svg path {
+  fill: #a9a9a9;
+}
+
+.has-light .btn-secondary {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.has-light .btn-secondary svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-secondary:focus, .has-light .btn-secondary.focus, .has-light .btn-secondary:hover, .has-light .btn-secondary.hover, .has-light .btn-secondary:active, .has-light .btn-secondary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.has-light .btn-secondary:focus svg g, .has-light .btn-secondary.focus svg g, .has-light .btn-secondary:hover svg g, .has-light .btn-secondary.hover svg g, .has-light .btn-secondary:active svg g, .has-light .btn-secondary.active svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary:focus svg circle, .has-light .btn-secondary.focus svg circle, .has-light .btn-secondary:hover svg circle, .has-light .btn-secondary.hover svg circle, .has-light .btn-secondary:active svg circle, .has-light .btn-secondary.active svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary:focus svg path, .has-light .btn-secondary.focus svg path, .has-light .btn-secondary:hover svg path, .has-light .btn-secondary.hover svg path, .has-light .btn-secondary:active svg path, .has-light .btn-secondary.active svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-secondary[disabled], .has-light .btn-secondary:disabled, .has-light .btn-secondary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-phantom {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.btn-phantom svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.btn-phantom svg circle {
+  stroke: #ffffff;
+}
+
+.btn-phantom svg path {
+  fill: #ffffff;
+}
+
+.btn-phantom:focus, .btn-phantom.focus, .btn-phantom:hover, .btn-phantom.hover, .btn-phantom:active, .btn-phantom.active {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.btn-limited {
+  height: auto;
+  min-height: 32px;
+  color: #ffffff;
+  background-color: #000;
+  border: 1px solid #000;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-limited svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.btn-limited svg circle {
+  stroke: #ffffff;
+}
+
+.btn-limited svg path {
+  fill: #ffffff;
+}
+
+.btn-primary-feel {
+  color: #ffffff;
+  background-color: #fb9962;
+}
+
+.btn-primary-feel svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-primary-feel svg circle {
+  stroke: #000000;
+}
+
+.btn-primary-feel svg path {
+  fill: #000000;
+}
+
+.btn-primary-feel:focus, .btn-primary-feel.focus, .btn-primary-feel:hover, .btn-primary-feel.hover, .btn-primary-feel:active, .btn-primary-feel.active {
+  color: #000000;
+  opacity: 1;
+  background-color: rgba(251, 153, 98, 0.6);
+}
+
+.btn-primary-feel:disabled, .btn-primary-feel[disabled], .btn-primary-feel.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-primary-feel:disabled svg-icon,
+.btn-primary-feel:disabled svg-icon2,
+.btn-primary-feel:disabled md-icon, .btn-primary-feel[disabled] svg-icon,
+.btn-primary-feel[disabled] svg-icon2,
+.btn-primary-feel[disabled] md-icon, .btn-primary-feel.disabled svg-icon,
+.btn-primary-feel.disabled svg-icon2,
+.btn-primary-feel.disabled md-icon {
+  background-color: #a9a9a9 !important;
+  border: 1px solid #a9a9a9 !important;
+}
+
+.btn-secondary-feel {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-secondary-feel svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-secondary-feel svg circle {
+  stroke: #000000;
+}
+
+.btn-secondary-feel:focus, .btn-secondary-feel.focus, .btn-secondary-feel:hover, .btn-secondary-feel.hover, .btn-secondary-feel:active, .btn-secondary-feel.active {
+  opacity: 1;
+  color: #000000;
+  border: 1px solid #737373;
+  background-color: #ffffff;
+}
+
+.btn-secondary-feel:disabled, .btn-secondary-feel[disabled], .btn-secondary-feel.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-secondary-feel:disabled svg-icon,
+.btn-secondary-feel:disabled svg-icon2,
+.btn-secondary-feel:disabled md-icon, .btn-secondary-feel[disabled] svg-icon,
+.btn-secondary-feel[disabled] svg-icon2,
+.btn-secondary-feel[disabled] md-icon, .btn-secondary-feel.disabled svg-icon,
+.btn-secondary-feel.disabled svg-icon2,
+.btn-secondary-feel.disabled md-icon {
+  background-color: #a9a9a9 !important;
+  border: 1px solid #a9a9a9 !important;
+}
+
+.has-light .btn-secondary-feel {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: transparent;
+}
+
+.has-light .btn-secondary-feel:focus, .has-light .btn-secondary-feel.focus, .has-light .btn-secondary-feel:hover, .has-light .btn-secondary-feel.hover, .has-light .btn-secondary-feel:active, .has-light .btn-secondary-feel.active {
+  opacity: 1;
+  color: #ffffff;
+  border: 1px solid #737373;
+  background-color: #737373;
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  border: 0 solid transparent;
+  height: auto;
+  min-width: 24px;
+  padding-inline: 0;
+}
+
+.btn-tertiary svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-tertiary svg circle {
+  stroke: #000000;
+}
+
+.btn-tertiary:focus, .btn-tertiary.focus, .btn-tertiary:hover, .btn-tertiary.hover, .btn-tertiary:active, .btn-tertiary.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-tertiary.active {
+  border-bottom: 0.5px solid #000;
+}
+
+.btn-tertiary:disabled, .btn-tertiary[disabled], .btn-tertiary.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-tertiary:disabled svg-icon,
+.btn-tertiary:disabled svg-icon2,
+.btn-tertiary:disabled md-icon, .btn-tertiary[disabled] svg-icon,
+.btn-tertiary[disabled] svg-icon2,
+.btn-tertiary[disabled] md-icon, .btn-tertiary.disabled svg-icon,
+.btn-tertiary.disabled svg-icon2,
+.btn-tertiary.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-tertiary {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-tertiary:focus, .has-light .btn-tertiary.focus, .has-light .btn-tertiary:hover, .has-light .btn-tertiary.hover, .has-light .btn-tertiary:active, .has-light .btn-tertiary.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-label-m {
+  background-color: transparent;
+  border: 0 solid transparent;
+  height: auto;
+  min-width: 24px;
+  padding: 10px 0;
+  min-height: auto;
+}
+
+.btn-label-m svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-label-m svg circle {
+  stroke: #000000;
+}
+
+.btn-label-m:hover, .btn-label-m.hover {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-label-m.focus, .btn-label-m.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: #000000;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-label-m:disabled, .btn-label-m[disabled], .btn-label-m.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: transparent;
+  border: 0 solid transparent;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-label-m:disabled svg-icon,
+.btn-label-m:disabled svg-icon2,
+.btn-label-m:disabled md-icon, .btn-label-m[disabled] svg-icon,
+.btn-label-m[disabled] svg-icon2,
+.btn-label-m[disabled] md-icon, .btn-label-m.disabled svg-icon,
+.btn-label-m.disabled svg-icon2,
+.btn-label-m.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-label-m {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-label-m:focus, .has-light .btn-label-m.focus, .has-light .btn-label-m:hover, .has-light .btn-label-m.hover, .has-light .btn-label-m:active, .has-light .btn-label-m.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.hg-btn-badge {
+  align-items: center;
+  background-color: transparent;
+  color: #737373;
+  display: inline-flex;
+  font-size: 12px;
+  justify-content: center;
+  min-width: var(--hg-spacing-24, 24px);
+  padding-inline: 0;
+  white-space: nowrap;
+}
+
+.hg-btn-badge:focus, .hg-btn-badge.focus, .hg-btn-badge:hover, .hg-btn-badge.hover, .hg-btn-badge:active, .hg-btn-badge.active {
+  color: #000000;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hg-btn-badge:disabled, .hg-btn-badge[disabled], .hg-btn-badge.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #a9a9a9;
+  border-color: transparent;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.has-light .hg-btn-badge {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.has-light .hg-btn-badge:focus, .has-light .hg-btn-badge.focus, .has-light .hg-btn-badge:hover, .has-light .hg-btn-badge.hover, .has-light .hg-btn-badge:active, .has-light .hg-btn-badge.active {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.has-light .hg-btn-badge:disabled, .has-light .hg-btn-badge[disabled], .has-light .hg-btn-badge.disabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: #f0f0f0;
+}
+
+.btn-text {
+  background-color: transparent;
+  border-color: transparent;
+  color: #000000;
+}
+
+.btn-invert {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+.btn-invert:focus, .btn-invert.focus, .btn-invert:hover, .btn-invert.hover, .btn-invert:active, .btn-invert.active {
+  opacity: 0.6;
+}
+
+.btn-invert-light {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #a9a9a9;
+}
+
+.btn-invert-light:focus, .btn-invert-light.focus, .btn-invert-light:hover, .btn-invert-light:active, .btn-invert-light.active {
+  opacity: 0.6;
+}
+
+.btn-invert-light:focus svg path, .btn-invert-light.focus svg path, .btn-invert-light:hover svg path, .btn-invert-light:active svg path, .btn-invert-light.active svg path {
+  fill: #ffffff;
+}
+
+.btn-default {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.btn-blue {
+  background-color: #1a32a4;
+  color: #ffffff;
+  border: 1px solid #1a32a4;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-blue:focus, .btn-blue.focus, .btn-blue:hover, .btn-blue.hover, .btn-blue:visited, .btn-blue:active, .btn-blue.active {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.btn-link {
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  height: auto;
+  min-height: auto;
+}
+
+.has-light .btn-link {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.has-light .btn-link:focus, .has-light .btn-link.focus, .has-light .btn-link:hover, .has-light .btn-link.hover, .has-light .btn-link:visited, .has-light .btn-link:active, .has-light .btn-link.active {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.btn-trans {
+  color: #ffffff;
+  background: rgba(226, 226, 226, 0.6);
+  font-size: 12px;
+  border: 0 solid #ffffff;
+  box-sizing: border-box;
+}
+
+.btn-trans svg {
+  stroke: #ffffff;
+}
+
+.btn-trans:focus, .btn-trans.focus, .btn-trans:hover, .btn-trans.hover, .btn-trans:visited, .btn-trans:active, .btn-trans.active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-circle {
+  right: 0;
+  position: absolute;
+  display: flex;
+  width: 40px;
+  max-width: initial;
+  height: 40px;
+  border: 1px solid #000000;
+  border-radius: 50px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn-social {
+  height: auto;
+  min-height: 32px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn-social svg-icon,
+.btn-social svg-icon2,
+.btn-social md-icon {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  margin-top: -2px;
+  left: 16px;
+  position: absolute;
+}
+
+.btn-social svg-icon div,
+.btn-social svg-icon2 div,
+.btn-social md-icon div {
+  display: flex;
+}
+
+.btn-social:disabled, .btn-social[disabled], .btn-social.disabled {
+  background-color: #f0f0f0;
+  border-color: transparent;
+  opacity: 1;
+}
+
+.btn-social:disabled svg path, .btn-social[disabled] svg path, .btn-social.disabled svg path {
+  fill: #737373;
+}
+
+.btn-google,
+.has-light .btn-google {
+  background-color: #ffffff;
+  color: #000000;
+  border: var(--line-width) solid #000000;
+}
+
+.btn-google:focus, .btn-google.focus, .btn-google:hover, .btn-google.hover, .btn-google:visited, .btn-google:active, .btn-google.active,
+.has-light .btn-google:focus,
+.has-light .btn-google.focus,
+.has-light .btn-google:hover,
+.has-light .btn-google.hover,
+.has-light .btn-google:visited,
+.has-light .btn-google:active,
+.has-light .btn-google.active {
+  border: var(--line-width) solid #f0f0f0;
+  opacity: 1;
+}
+
+.btn-facebook {
+  background-color: #186CF1;
+  color: #ffffff;
+  border: 1px solid #186CF1;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-facebook svg-icon,
+.btn-facebook svg-icon2,
+.btn-facebook md-icon {
+  background-color: transparent;
+}
+
+.btn-facebook svg-icon path,
+.btn-facebook svg-icon2 path,
+.btn-facebook md-icon path {
+  fill: #ffffff;
+}
+
+.btn-facebook:focus, .btn-facebook.focus, .btn-facebook:hover, .btn-facebook.hover, .btn-facebook:visited, .btn-facebook:active, .btn-facebook.active {
+  opacity: 1;
+  background-color: #186CF1;
+  border: 1px solid #186CF1;
+}
+
+.has-light .btn-facebook {
+  background-color: #186CF1;
+  color: #ffffff;
+  border: 1px solid #186CF1;
+}
+
+.btn-apple,
+.has-light .btn-apple {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-apple:focus, .btn-apple.focus, .btn-apple:hover, .btn-apple.hover, .btn-apple:visited, .btn-apple:active, .btn-apple.active,
+.has-light .btn-apple:focus,
+.has-light .btn-apple.focus,
+.has-light .btn-apple:hover,
+.has-light .btn-apple.hover,
+.has-light .btn-apple:visited,
+.has-light .btn-apple:active,
+.has-light .btn-apple.active {
+  opacity: 1;
+  background-color: #737373;
+  border: 1px solid #737373;
+}
+
+.btn-apple svg-icon path,
+.btn-apple svg-icon2 path,
+.btn-apple md-icon path,
+.has-light .btn-apple svg-icon path,
+.has-light .btn-apple svg-icon2 path,
+.has-light .btn-apple md-icon path {
+  fill: #ffffff;
+}
+
+.btn-apple-secondary,
+.has-light .btn-apple-secondary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.btn-apple-secondary:focus, .btn-apple-secondary.focus, .btn-apple-secondary:hover, .btn-apple-secondary.hover, .btn-apple-secondary:visited, .btn-apple-secondary:active, .btn-apple-secondary.active,
+.has-light .btn-apple-secondary:focus,
+.has-light .btn-apple-secondary.focus,
+.has-light .btn-apple-secondary:hover,
+.has-light .btn-apple-secondary.hover,
+.has-light .btn-apple-secondary:visited,
+.has-light .btn-apple-secondary:active,
+.has-light .btn-apple-secondary.active {
+  opacity: 1;
+  background-color: #ffffff;
+  border: 1px solid #737373;
+}
+
+.btn-naver,
+.has-light .btn-naver {
+  background-color: #03cf5d;
+  color: #ffffff;
+  padding-inline: 40px;
+  border: 1px solid #03cf5d;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-naver:focus, .btn-naver.focus, .btn-naver:hover, .btn-naver.hover, .btn-naver:visited, .btn-naver:active, .btn-naver.active,
+.has-light .btn-naver:focus,
+.has-light .btn-naver.focus,
+.has-light .btn-naver:hover,
+.has-light .btn-naver.hover,
+.has-light .btn-naver:visited,
+.has-light .btn-naver:active,
+.has-light .btn-naver.active {
+  opacity: 1;
+  background-color: #03cf5d;
+  border: 1px solid #03cf5d;
+}
+
+.btn-naver svg-icon path,
+.btn-naver svg-icon2 path,
+.btn-naver md-icon path,
+.has-light .btn-naver svg-icon path,
+.has-light .btn-naver svg-icon2 path,
+.has-light .btn-naver md-icon path {
+  fill: #ffffff;
+}
+
+.btn-wechat,
+.has-light .btn-wechat {
+  background-color: #2dc100;
+  color: #ffffff;
+  padding-inline: 40px;
+  border: 1px solid #2dc100;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-wechat:focus, .btn-wechat.focus, .btn-wechat:hover, .btn-wechat.hover, .btn-wechat:visited, .btn-wechat:active, .btn-wechat.active,
+.has-light .btn-wechat:focus,
+.has-light .btn-wechat.focus,
+.has-light .btn-wechat:hover,
+.has-light .btn-wechat.hover,
+.has-light .btn-wechat:visited,
+.has-light .btn-wechat:active,
+.has-light .btn-wechat.active {
+  opacity: 1;
+  background-color: #03cf5d;
+  border: 1px solid #2dc100;
+}
+
+.btn-wechat svg-icon path,
+.btn-wechat svg-icon2 path,
+.btn-wechat md-icon path,
+.has-light .btn-wechat svg-icon path,
+.has-light .btn-wechat svg-icon2 path,
+.has-light .btn-wechat md-icon path {
+  fill: #ffffff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btns {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.btns .btn {
+  margin-right: 8px;
+}
+
+.btns .btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.btn-group {
+  position: relative;
+  display: flex;
+}
+
+.btn-group > :not(:first-child, :last-child) {
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.btn-group [class^=btn--],
+.btn-group [class*=" btn--"] {
+  position: relative;
+  border-radius: 0;
+  float: left;
+  margin-right: 0;
+}
+
+.btn-group [class^=btn--]:first-child,
+.btn-group [class*=" btn--"]:first-child {
+  margin-left: 0;
+}
+
+.btn-group [class^=btn--]:last-child,
+.btn-group [class*=" btn--"]:last-child {
+  margin-left: -1px;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-radius: 0 0 0 0;
+}
+
+.btn-group .btn:last-child {
+  border-radius: 0 0 0 0;
+}
+
+.btn-selector {
+  position: relative;
+  display: flex;
+}
+
+.btn-selector > :not(:first-child, :last-child) {
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.btn-selector [class^=btn--],
+.btn-selector [class*=" btn--"] {
+  height: initial;
+  border-color: #a9a9a9;
+  color: #000000;
+  position: relative;
+  border-radius: 0;
+  float: left;
+  margin-right: 0;
+}
+
+.btn-selector [class^=btn--].is-active,
+.btn-selector [class*=" btn--"].is-active {
+  background-color: transparent;
+  color: #000000;
+  border-color: #000000;
+  z-index: 10;
+}
+
+.btn-selector [class^=btn--].disabled, .btn-selector [class^=btn--]:disabled,
+.btn-selector [class*=" btn--"].disabled,
+.btn-selector [class*=" btn--"]:disabled {
+  background-color: transparent;
+  color: #a9a9a9;
+  border-color: #a9a9a9;
+}
+
+.btn-selector [class^=btn--]:first-child,
+.btn-selector [class*=" btn--"]:first-child {
+  margin-left: 0;
+}
+
+.btn-selector [class^=btn--]:last-child,
+.btn-selector [class*=" btn--"]:last-child {
+  margin-left: -1px;
+}
+
+.btn-selector [class^=btn--]:hover,
+.btn-selector [class*=" btn--"]:hover {
+  color: #000000;
+  border-color: #000000;
+  z-index: 11;
+}
+
+.btn-selector .btn {
+  border-radius: 0;
+}
+
+.btn-selector .btn:first-child {
+  border-radius: 0 0 0 0;
+}
+
+.btn-selector .btn:last-child {
+  border-radius: 0 0 0 0;
+}
+
+.btn-selector .is-active {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+  z-index: 10;
+}
+
+.btn-selector-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.btn-selector-wrap.btn-selector .btn {
+  border-radius: 0;
+  white-space: normal;
+  min-height: 50px;
+  flex: none;
+  max-width: 70px;
+  padding-inline: 4px;
+  min-width: 50px;
+  overflow-wrap: break-word;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[lang^=zh] .btn-selector-wrap.btn-selector .btn,
+[lang^=zn] .btn-selector-wrap.btn-selector .btn,
+[lang^=ko] .btn-selector-wrap.btn-selector .btn {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.btn-group > .btn {
+  flex: 1;
+}
+
+.btn-group-inline {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.btn-group-inline .btn {
+  display: inline-flex;
+  width: auto;
+  min-width: 200px;
+  margin: 0 8px;
+}
+
+.btn-anim {
+  height: auto;
+  min-height: 32px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-anim span {
+  position: absolute;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.btn-anim .btn-submit {
+  transform: translateY(0);
+}
+
+.btn-anim .btn-loading {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.btn-anim:disabled, .btn-anim[disabled], .btn-anim.disabled {
+  background-color: #f0f0f0;
+  color: #737373;
+  border-color: transparent;
+  opacity: 1;
+}
+
+.btn-anim:disabled svg path, .btn-anim[disabled] svg path, .btn-anim.disabled svg path {
+  fill: #737373;
+}
+
+.is-loading.btn-anim .btn-submit {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+
+.is-loading.btn-anim .btn-loading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-loading svg {
+  animation: spin 1.6s ease-in-out infinite;
+}
+
+.btn-social-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-social-login svg {
+  margin-right: 8px;
+}
+
+.btn-social-login.btn-facebook {
+  border: #186CF1 solid 1px;
+  background: #186CF1;
+  color: #ffffff;
+}
+
+.btn-social-login.btn-outline-login {
+  border: #a9a9a9 solid 1px;
+}
+
+.btn-social-login.disabled {
+  filter: invert(1);
+  background: #ffffff;
+  color: #000000;
+  cursor: default;
+}
+
+.btn-social-login.disabled svg path {
+  fill: #000000;
+}
+
+.btn-feel {
+  background-color: #fb9962;
+  border: 1px solid #fb9962;
+  color: #ffffff;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-feel:hover, .btn-feel.hover, .btn-feel:focus, .btn-feel.focus {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.btn-feel[disabled], .btn-feel:disabled, .btn-feel.disabled {
+  background-color: #a9a9a9;
+  border: 1px solid #a9a9a9;
+  color: #737373;
+  opacity: 1;
+}
+
+.has-light .btn-feel {
+  background-color: #fb9962;
+  border: 1px solid #fb9962;
+  color: #000000;
+}
+
+.has-light .btn-feel:hover, .has-light .btn-feel.hover, .has-light .btn-feel:focus, .has-light .btn-feel.focus {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #000000;
+  opacity: 1;
+}
+
+.has-light .btn-feel[disabled], .has-light .btn-feel:disabled, .has-light .btn-feel.disabled {
+  background-color: #a9a9a9;
+  border: 1px solid #a9a9a9;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-world {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 32px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-world svg path {
+  fill: #ffffff;
+}
+
+.btn-world:hover, .btn-world.hover, .btn-world:focus, .btn-world.focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+}
+
+.btn-world .btn-world-left {
+  padding-right: 8px;
+}
+
+.btn-world .btn-world-center {
+  width: calc(100% - 40px);
+  padding-right: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: left;
+  margin-top: -1px;
+}
+
+.btn-svg svg-icon,
+.btn-svg svg-icon2,
+.btn-svg md-icon {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 46px;
+  height: 46px;
+  padding-bottom: 3px;
+}
+
+.btn.btn-secondary-rd {
+  border-radius: 0;
+  border: 1px solid #000000;
+  padding: 9px 2px 4px;
+  height: auto;
+  min-height: 32px;
+  min-width: 100px;
+  text-align: center;
+  background: none;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .btn.btn-secondary-rd {
+    padding: 16px 2px 14px;
+    height: auto;
+    min-height: 32px;
+    font-size: 12px;
+    min-width: 120px;
+  }
+}
+
+.btn.btn-secondary-rd:hover {
+  opacity: 0.5;
+}
+
+.has-light .btn-phantom {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.has-light .btn-primary-feel:hover, .has-light .btn-primary-feel.hover, .has-light .btn-primary-feel:focus, .has-light .btn-primary-feel.focus {
+  background-color: rgba(251, 153, 98, 0.6);
+  color: #737373;
+  border-color: rgba(251, 153, 98, 0.6);
+}
+
+.has-light .btn-primary-feel[disabled], .has-light .btn-primary-feel:disabled, .has-light .btn-primary-feel.disabled {
+  opacity: 1;
+  background-color: #f0f0f0;
+  color: #737373;
+  cursor: default;
+}
+
+.has-light .btn-google svg path {
+  fill: initial;
+  stroke: none;
+}
+
+.is-active.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-grid {
+  display: grid;
+  gap: 0;
+  padding-inline: 1px;
+}
+
+.btn-grid .btn {
+  border: 1px solid #000000;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.btn--color {
+  width: auto;
+  min-width: 42px;
+  height: auto;
+  min-height: 42px;
+  position: relative;
+}
+
+.btn--color:hover {
+  opacity: 0.6;
+}
+
+.btn--color.is-active {
+  padding-bottom: 8px;
+}
+
+.btn--color.is-active::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.btn-square {
+  border: none;
+  width: auto;
+  min-width: 33px;
+  height: auto;
+  min-height: 32px;
+  padding: 12px;
+}
+
+@media (min-width: 768px) {
+  .btn-square {
+    width: auto;
+    min-width: 37px;
+    height: auto;
+    min-height: 37px;
+    padding: 12px;
+  }
+}
+
+.btn-square svg {
+  position: relative;
+  z-index: 15;
+  transform: scale(0.8);
+}
+
+@media (min-width: 768px) {
+  .btn-square svg {
+    transform: scale(1);
+  }
+}
+
+.btn-square::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 13px;
+  height: 13px;
+}
+
+@media (min-width: 768px) {
+  .btn-square::after {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.btn-square:focus, .btn-square.focus, .btn-square:hover, .btn-square.hover, .btn-square:active, .btn-square.active {
+  opacity: 1;
+}
+
+.btn-square:focus::after, .btn-square.focus::after, .btn-square:hover::after, .btn-square.hover::after, .btn-square:active::after, .btn-square.active::after {
+  content: "";
+  background-color: #a9a9a9;
+  border: 1px solid #a9a9a9;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-square[disabled], .btn-square:disabled, .btn-square.disabled {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-square[disabled] svg, .btn-square:disabled svg, .btn-square.disabled svg {
+  position: relative;
+  z-index: 15;
+}
+
+.btn-square[disabled] svg g, .btn-square:disabled svg g, .btn-square.disabled svg g {
+  fill: #737373;
+  stroke: #737373;
+}
+
+.btn-square[disabled] svg circle, .btn-square:disabled svg circle, .btn-square.disabled svg circle {
+  stroke: #737373;
+}
+
+.btn-square[disabled] svg path, .btn-square:disabled svg path, .btn-square.disabled svg path {
+  fill: #737373;
+}
+
+.has-light .btn-square {
+  border: none;
+  width: auto;
+  min-width: 37px;
+  height: auto;
+  min-height: 37px;
+  padding: 12px;
+}
+
+.has-light .btn-square.btn {
+  background-color: transparent;
+}
+
+.has-light .btn-square svg {
+  position: relative;
+  z-index: 15;
+}
+
+.has-light .btn-square svg path {
+  fill: #000000;
+}
+
+.has-light .btn-square::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 19px;
+  height: 19px;
+}
+
+.has-light .btn-square:focus, .has-light .btn-square.focus, .has-light .btn-square:hover, .has-light .btn-square.hover, .has-light .btn-square:active, .has-light .btn-square.active {
+  opacity: 1;
+}
+
+.has-light .btn-square:focus::after, .has-light .btn-square.focus::after, .has-light .btn-square:hover::after, .has-light .btn-square.hover::after, .has-light .btn-square:active::after, .has-light .btn-square.active::after {
+  content: "";
+  background-color: #a9a9a9;
+  border: 1px solid #a9a9a9;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.has-light .btn-square[disabled], .has-light .btn-square:disabled, .has-light .btn-square.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.has-light .btn-square[disabled] svg, .has-light .btn-square:disabled svg, .has-light .btn-square.disabled svg {
+  position: relative;
+  z-index: 15;
+}
+
+.has-light .btn-square[disabled] svg g, .has-light .btn-square:disabled svg g, .has-light .btn-square.disabled svg g {
+  fill: #737373;
+  stroke: #737373;
+}
+
+.has-light .btn-square[disabled] svg circle, .has-light .btn-square:disabled svg circle, .has-light .btn-square.disabled svg circle {
+  stroke: #737373;
+}
+
+.has-light .btn-square[disabled] svg path, .has-light .btn-square:disabled svg path, .has-light .btn-square.disabled svg path {
+  fill: #737373;
+}
+
+.btn-icon {
+  padding-inline: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-quick {
+  align-items: center;
+  background-color: transparent;
+  border: 0 solid transparent;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  height: auto;
+  justify-content: space-between;
+  min-height: 16px;
+  min-width: 36px;
+  padding: 0;
+  width: auto;
+  color: #000000;
+  background-color: transparent;
+  line-height: 1;
+}
+
+.btn-quick .text {
+  line-height: 1;
+}
+
+.btn-quick md-icon,
+.btn-quick .icon {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-quick md-icon path,
+.btn-quick .icon path {
+  fill: #000000;
+}
+
+.btn-quick:focus, .btn-quick.focus, .btn-quick:hover, .btn-quick.hover, .btn-quick:active, .btn-quick.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-quick:hover .text, .btn-quick.hover .text {
+  text-decoration: underline;
+}
+
+.btn-quick:disabled, .btn-quick[disabled], .btn-quick.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-quick:disabled svg-icon,
+.btn-quick:disabled svg-icon2,
+.btn-quick:disabled md-icon, .btn-quick[disabled] svg-icon,
+.btn-quick[disabled] svg-icon2,
+.btn-quick[disabled] md-icon, .btn-quick.disabled svg-icon,
+.btn-quick.disabled svg-icon2,
+.btn-quick.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-quick {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-quick:focus, .has-light .btn-quick.focus, .has-light .btn-quick:hover, .has-light .btn-quick.hover, .has-light .btn-quick:active, .has-light .btn-quick.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-tab {
+  background-color: transparent;
+  border: 0 solid transparent;
+  height: auto;
+  min-height: auto;
+  padding: 16px;
+}
+
+.btn-tab svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-tab svg circle {
+  stroke: #000000;
+}
+
+.btn-tab .icon-sizes {
+  margin-top: -4px;
+  transform: translate(4px, 5px);
+}
+
+.is-active .btn-tab .tab-inner-size::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #000000;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.btn-tab:focus, .btn-tab.focus, .btn-tab:hover, .btn-tab.hover, .btn-tab:active, .btn-tab.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-tab:disabled, .btn-tab[disabled], .btn-tab.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-tab:disabled svg-icon,
+.btn-tab:disabled svg-icon2,
+.btn-tab:disabled md-icon, .btn-tab[disabled] svg-icon,
+.btn-tab[disabled] svg-icon2,
+.btn-tab[disabled] md-icon, .btn-tab.disabled svg-icon,
+.btn-tab.disabled svg-icon2,
+.btn-tab.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-tab {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-tab:focus, .has-light .btn-tab.focus, .has-light .btn-tab:hover, .has-light .btn-tab.hover, .has-light .btn-tab:active, .has-light .btn-tab.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-link-tab {
+  align-items: flex-start;
+  align-self: flex-start;
+  border-color: transparent;
+  border-style: solid;
+  border-width: var(--line-width) 0;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  height: auto;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 12px 0;
+  text-align: initial;
+}
+
+.btn-link-tab .btn-prepend,
+.btn-link-tab .btn-append {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.btn-link-tab .btn-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.is-rtl .btn-icon-arrow-right {
+  transform: rotate(180deg);
+}
+
+.btn-link-tab:disabled, .btn-link-tab[disabled], .btn-link-tab.disabled {
+  border-left: 0;
+  border-right: 0;
+}
+
+.btn-link-tab.btn-lines {
+  border-bottom-color: #000000;
+  border-top-color: #000000;
+}
+
+.btn-link-tab.btn-lines:disabled, .btn-link-tab.btn-lines[disabled], .btn-link-tab.btn-lines.disabled {
+  border-bottom-color: #a9a9a9;
+  border-top-color: #a9a9a9;
+}
+
+.select.select-secondary-rd .btn-secondary-rd {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.select .select-secondary-rd .btn.btn-secondary-rd {
+  padding: 9px 2px 4px;
+}
+
+.select .select-secondary-rd .btn.btn-secondary-rd:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .select .select-secondary-rd .btn.btn-secondary-rd {
+    padding: 16px 2px 14px;
+  }
+}
+
+.form-input-label-2.has-ico-pre.btn, .form-input-label-2.has-ico-pre > input, .form-input-label-2.has-ico-pre > label,
+.form-input-label-2 .has-ico-pre.btn,
+.form-input-label-2 .has-ico-pre > input,
+.form-input-label-2 .has-ico-pre > label,
+.error-zone.has-ico-pre.btn,
+.error-zone.has-ico-pre > input,
+.error-zone.has-ico-pre > label,
+.error-zone .has-ico-pre.btn,
+.error-zone .has-ico-pre > input,
+.error-zone .has-ico-pre > label {
+  padding-left: 24px;
+}
+
+.form-input-label-2.has-ico-post.btn, .form-input-label-2.has-ico-post > input, .form-input-label-2.has-ico-post > label,
+.form-input-label-2 .has-ico-post.btn,
+.form-input-label-2 .has-ico-post > input,
+.form-input-label-2 .has-ico-post > label,
+.error-zone.has-ico-post.btn,
+.error-zone.has-ico-post > input,
+.error-zone.has-ico-post > label,
+.error-zone .has-ico-post.btn,
+.error-zone .has-ico-post > input,
+.error-zone .has-ico-post > label {
+  padding-inline-end: 36px;
+  padding-inline-start: 0;
+}
+
+.form-prefix > .btn {
+  flex: 1 0 auto;
+}
+
+.tabs li a:not(.btn),
+.tabs li span,
+.tabs li .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  cursor: pointer;
+  padding-block: 0;
+  padding-inline: 20px;
+  line-height: 1;
+}
+
+.tabs li.is-active a:not(.btn), .tabs li.is-active span, .tabs li.is-active .tab {
+  position: relative;
+}
+
+.tabs li.is-active a:not(.btn)::after, .tabs li.is-active span::after, .tabs li.is-active .tab::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #000000;
+  bottom: -8px;
+}
+
+.tabs.tabs-resetfirst ul li:first-child a:not(.btn) {
+  padding: 0 20px 0 0;
+}
+
+.tabs2 li .btn-tertiary,
+.tabs2 li .btn-label-m,
+.tabs2 li .hg-btn-badge {
+  padding-block: 0;
+}
+
+.md-accordion .md-accordion-button,
+.md-accordion .btn-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.has-light .md-accordion .has-lines .md-accordion-content .btn-link, .has-light .md-accordion .has-lines.md-accordion-item.has-lines .btn-link {
+  border-bottom: 1px solid white;
+}
+
+.btn.md-btn-drawer-close {
+  align-items: center;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  justify-content: center;
+  margin-block: 0;
+  margin-inline-start: auto;
+  margin-inline: auto 0;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 0;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .btn.md-btn-drawer-close {
+    margin-top: 6px;
+  }
+}
+
+.has-light .btn {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.has-light .btn:hover, .has-light .btn:focus, .has-light .btn:visited, .has-light .btn:active {
+  background-color: transparent;
+  border-top-color: transparent;
+}
+
+.md-dialog-header .btn-close {
+  position: absolute;
+  right: 8px;
+}
+
+.md-toggle .md-toggle-button,
+.md-toggle .btn-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-height: 40px;
+  justify-content: space-between;
+}
+
+.md-toggle-lines .md-toggle-inner .btn-link, .md-toggle-lines.md-toggle-item .btn-link {
+  border-bottom: 1px solid black;
+}
+
+.has-light .md-toggle .md-toggle-lines .md-toggle-inner .btn-link, .has-light .md-toggle .md-toggle-lines.md-toggle-item.md-toggle-lines .btn-link {
+  border-bottom: 1px solid white;
+}
+
+.card9-wrap .rat-content .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn--macro {
+  height: initial;
+  width: 100%;
+  border-bottom: var(--line-width) solid #000000;
+}
+
+.btn--macro.btn:hover {
+  opacity: 0.6;
+}
+
+.is-rtl .btn.btn-world .btn-world-center {
+  text-align: right;
+}
+
+.is-rtl .btn.btn-world .btn-world-right {
+  transform: rotateY(180deg);
+}
+
+.is-rtl .btn-group > :not(:first-child, :last-child) {
+  border-radius: 0;
+  margin-right: -1px;
+  margin-left: 0;
+}
+
+.is-rtl .btn-group .btn:first-child {
+  border-radius: 0 0 0 0;
+}
+
+.is-rtl .btn-group .btn:last-child {
+  border-radius: 0 0 0 0;
+}
+
+.is-rtl .btn-group [class^=btn--]:last-child,
+.is-rtl .btn-group [class*=" btn--"]:last-child {
+  margin-right: -1px;
+  margin-left: 0;
+}
+
+.is-rtl .btn-social-login svg {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.is-rtl .btn-social {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.is-rtl .btn-social svg-icon,
+.is-rtl .btn-social svg-icon2,
+.is-rtl .btn-social md-icon {
+  right: 16px;
+  left: auto;
+}
+
+.is-rtl .has-ico-post.btn, .is-rtl .has-ico-post > input, .is-rtl .has-ico-post > label {
+  padding-right: 0;
+  padding-left: 24px;
+}
+
+.is-rtl .has-ico-pre.btn, .is-rtl .has-ico-pre > input, .is-rtl .has-ico-pre > label {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup {
+  margin: 20px 0 0;
+}
+
+body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup.register-popup {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup .btn {
+    min-width: 265px;
+  }
+}
+
+.related-product-dialog-content .btn-container {
+  padding-top: 20px;
+}
+
+.ngdialog.ngdialog-theme-plain.ngdialog-droppointParams form .btn-popup {
+  margin-top: 20px;
+}
+
+html body .addressConfirmation-dialog .btn-container {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+html body .addressConfirmation-dialog .btn-container .btn {
+  width: auto;
+  min-width: 200px;
+}
+
+.store-head .btn-link {
+  font-size: 14px;
+  margin: 18px 0 0;
+}
+
+.info-store .btn-container {
+  margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .info-store .btn-container {
+    margin: 50px 0 0;
+  }
+}
+
+.info-store .btn-container > button {
+  width: 100%;
+}
+
+.store-head .btn-link {
+  font-weight: 500;
+}
+
+.sidebar-footer-actions > .btn {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+.btn-return-query {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  text-transform: none;
+  text-wrap: auto;
+  padding: 16px;
+}
+
+.stories-menu .stories-menu-btn.btn-shop {
+  width: 65%;
+  left: 0;
+  right: auto;
+}
+
+.stories-menu .stories-menu-btn.btn-3d-view {
+  width: 35%;
+  right: 0;
+  left: auto;
+  padding-left: 1px;
+}
+
+.stories-menu .stories-menu-btn.btn-3d-view .btn {
+  padding-top: 6px;
+}
+
+.stories-menu .stories-menu-btn a .btn {
+  border: none;
+}
+
+.btn.btn-filter-trigger {
+  align-items: center;
+  column-gap: 0.25rem;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-inline: 0;
+}
+
+.btn.md-btn-link-multiline {
+  border: 0;
+  padding: 0;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  white-space: normal;
+}
+
+.md-product-options .btn {
+  align-items: center;
+  border: none;
+  box-shadow: none;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.md-product-heading .btn.btn--wishlist {
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0;
+  text-align: center;
+}
+
+.md-bottom-sheet-actions .btn.md-list-action {
+  padding-inline: 1rem;
+}
+
+.btn.md-list-action {
+  text-align: var(--md-list-action-text-align, start);
+  white-space: normal;
+  align-items: center;
+  column-gap: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: var(--md-list-action-justify, space-between);
+  min-height: 1.5rem;
+  padding: 0;
+}
+
+.btn.btn-look {
+  background-color: transparent;
+  padding: calc(0.25rem + 1px) 1rem calc(0.25rem - 1px);
+  min-height: 1.5rem;
+  color: #ffffff;
+  border-color: #ffffff;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+}
+
+.btn.btn-3d-view {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  row-gap: 0.5rem;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: calc(0.25rem + 1px) 1rem calc(0.25rem - 1px);
+  text-align: center;
+}
+
+.md-pdp5-box-fixed-actions .btn.btn-3d-view {
+  margin-block-end: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  cart-modify-item .md-bottom-sheet {
+    left: 0rem;
+    right: 0rem;
+  }
+  cart-modify-item .md-bottom-sheet-actions.md-list-actions {
+    margin-inline: -1.25rem;
+  }
+  cart-modify-item .md-bottom-sheet-actions .btn.md-list-action {
+    padding-inline: 1.25rem;
+  }
+}
+
+.md-new-quick-buy .btn.md-list-action.is-highlighted,
+.md-new-quick-buy .btn.md-list-action.is-recommended {
+  background-color: transparent;
+  text-decoration-thickness: var(--line-width);
+  text-decoration-line: underline;
+  text-underline-offset: 0.063rem;
+}
+
+.md-new-quick-buy .product-size-selector-item.is-sold-out .btn.btn-quick {
+  color: #a9a9a9 !important;
+}
+
+.md-new-quick-buy .product-size-selector-item.is-sold-out .btn.btn-quick .text {
+  text-decoration: line-through;
+}
+
+.md-new-quick-buy .btn.md-list-action--xl {
+  min-height: 2rem;
+}
+
+.md-new-quick-buy .btn-quick {
+  justify-content: space-evenly;
+  color: inherit;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+.quick-purchase .btn.btn--wishlist {
+  min-height: auto;
+  min-width: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.plp-add-to-cart-wrapper-button .btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-card-add-actions .btn.btn-tertiary {
+  padding-inline: 8px;
+}
+
+.product-card-add-actions .btn.md-list-action {
+  padding-inline: 8px;
+}
+
+.btn-noselected {
+  opacity: 0.4;
+  border: 1px solid #a9a9a9;
+}
+
+.btn-primary[disabled],
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn--color {
+  width: 42px;
+  height: 42px;
+  padding: 12px;
+  position: relative;
+}
+
+.btn--color:hover {
+  opacity: 0.6;
+}
+
+.btn--color.is-active {
+  padding-bottom: 12px;
+}
+
+.btn--color.is-active:after {
+  position: absolute;
+  left: 12px;
+  bottom: 7px;
+  content: "";
+  width: 18px;
+  height: 1px;
+  background-color: #000000;
+}
+
+.btn.btn-quick.btn-quick--padded {
+  min-height: 48px;
+  min-width: 42px;
+  padding-inline-end: 12px;
+  padding-inline-start: 16px;
+}
+
+.md-customize-text .btn--color.is-active:after {
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+}
+
+.btn-primary, .btn-secondary {
+  padding-top: 0;
+}
+
+.btn-kakao {
+  border-radius: 4px;
+  background-color: #ffc700 !important;
+}
+
+.chat-contact-window .btn {
+  background-color: #ffc700;
+  box-sizing: border-box;
+  height: 30px;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.chat-contact-window .btn.btn-white {
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.chat-contact-window .btn.btn-black {
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.chat-contact-window .chat-close-confirmation .btn {
+  height: 25px;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+.chat-contact-window .itx-chat-button-window .btn {
+  width: 100%;
+}
+
+.chat-contact-window .itx-chat-selector-window .btn {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .chat-contact-window {
+    bottom: 0;
+    height: 360px;
+    right: -300px;
+    text-align: center;
+    top: inherit;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+    width: 300px;
+  }
+  .chat-contact-window.open {
+    border: 1px solid #a9a9a9;
+    height: 360px;
+    padding: 0;
+    right: 40px;
+    top: inherit;
+    width: 300px;
+  }
+  .chat-contact-window.open .icon-accordion {
+    display: block;
+  }
+  .chat-contact-window.open .icon-accordion {
+    display: none;
+  }
+  .chat-contact-window.open.chatbot {
+    height: 500px;
+    width: 380px;
+  }
+  .chat-contact-window .icon-accordion {
+    cursor: pointer;
+    display: none;
+    font-size: 7px;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 7px;
+  }
+  .chat-contact-window .chat-window,
+  .chat-contact-window .contact-window {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 64px;
+  }
+  .chat-contact-window .contact-window #ms_content {
+    font-size: 12px;
+    padding: 33px 15px 0;
+  }
+  .chat-contact-window .contact-window .contact_data {
+    padding-top: 21px;
+  }
+  .chat-contact-window .contact-window .contact_data div {
+    font-size: 1.1em;
+  }
+  .chat-contact-window .contact-window .contact_data .contact-schedule {
+    margin-top: 20px;
+  }
+  .chat-contact-window .contact-window .buttons_container,
+  .chat-contact-window .contact-window img {
+    display: none;
+  }
+  .chat-contact-window .btn {
+    border: 0 !important;
+    height: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .chat-contact-window .form-group input {
+    font-size: 12px;
+    height: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  .chat-contact-window .itx-chat-client {
+    height: 100%;
+    width: 100%;
+  }
+  .chat-contact-window .chat-close-confirmation {
+    padding: 20px 0 25px;
+    text-align: center;
+  }
+  .chat-contact-window .chat-close-confirmation .btn {
+    height: 25px;
+    margin-bottom: 15px;
+    width: 200px;
+  }
+  .chat-contact-window .chat-close-confirmation .chat-close-question {
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 200px;
+  }
+  .chat-contact-window .itx-chat-window {
+    color: #000000;
+    font-size: 10px;
+    overflow-y: auto;
+  }
+  .chat-contact-window .itx-chat-input-window {
+    bottom: 15px;
+    box-sizing: border-box;
+    left: 10px;
+    margin: 0;
+    position: absolute;
+    right: 40%;
+  }
+  .chat-contact-window .itx-chat-input-window .itx-chat-input {
+    color: #000000;
+    font-style: normal;
+    height: 20px;
+    text-align: left;
+  }
+  .chat-contact-window .itx-chat-button-window {
+    bottom: 15px;
+    left: 60%;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+  }
+  .chat-contact-window .itx-chat-button-window .btn {
+    width: 100%;
+  }
+  .chat-contact-window .itx-chat-selector-window {
+    background: #ffffff;
+    bottom: 0;
+    left: 0;
+    padding: 20px 20px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .chat-contact-window .itx-chat-selector-window .form-group {
+    display: block;
+    width: 100%;
+  }
+  .chat-contact-window .itx-chat-selector-window .form-group .help-block {
+    font-size: 7px;
+    top: 2px;
+  }
+  .chat-contact-window .itx-chat-selector-window .form-group .help-block .text-danger {
+    color: #b40016;
+  }
+  .chat-contact-window .itx-chat-selector-window .itx-chat-init-button-area {
+    bottom: 0;
+    height: 93px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+  }
+  .chat-contact-window .itx-chat-selector-window p {
+    font-size: 10px;
+  }
+  .chat-contact-window .itx-chat-selector-window .btn {
+    margin-bottom: 18px;
+    width: 100%;
+  }
+  .chat-contact-window .itx-chat-title {
+    margin: 0 0 45px;
+  }
+  .chat-contact-window .itx-chat-title .chat-unavailable {
+    font-size: 12px;
+  }
+  .chat-contact-window .itx-chat-title span {
+    display: block;
+    text-align: center;
+  }
+  .chat-contact-window .itx-chat-title .bold {
+    margin-bottom: 7px;
+  }
+  .chat-contact-window .itx-chat-message {
+    display: block;
+    margin: 0 2px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  .chat-contact-window .itx-chat-message .itx-chat-time {
+    color: #737373;
+    display: block;
+    font-size: 0.8em;
+    margin-top: 4px;
+    text-align: right;
+  }
+  .chat-contact-window .itx-chat-sent-message {
+    clear: both;
+    float: right;
+    margin-bottom: 8px;
+    max-width: 80%;
+    padding: 7px;
+  }
+  .chat-contact-window .itx-chat-received-message {
+    clear: both;
+    float: left;
+    margin-bottom: 8px;
+    max-width: 80%;
+    padding: 7px;
+    text-align: left;
+  }
+  .chat-contact-window .itx-chat-error-message,
+  .chat-contact-window .itx-chat-system-message {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .chat-contact-window .itx-chat-error-message .itx-chat-time,
+  .chat-contact-window .itx-chat-system-message .itx-chat-time {
+    text-align: center;
+  }
+}
+
+.md-layout-header .btn-link.active {
+  font-family: "suisse-medium", Helvetica, arial, sans-serif;
+  font-weight: 500;
+}
+
+.btn.hg-header-action {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--hg-spacing-4);
+  justify-content: center;
+  min-height: var(--hg-header-action-min-height);
+  min-width: var(--hg-header-action-min-height);
+  opacity: 1;
+  padding: var(--hg-base-line-compensation) 0 0;
+}
+
+body:not(.is-scrolling-offset)[class*=phantom-white] .hg-header .btn.hg-header-action,
+body:not(.is-scrolling-offset)[class*=phantom-white] .hg-header .btn.hg-header-action path,
+body:not(.is-scrolling-offset)[class*=phantom-white] .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset)[class*=phantom-white] .hg-header .hg-header-maxilogo path {
+  color: var(--hg-color-white);
+  fill: var(--hg-color-white);
+}
+
+body:not(.is-scrolling-offset).phantom-logo-white .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset).white-menu .hg-header .btn.hg-header-action--hamburger path,
+body:not(.is-scrolling-offset).white-menu .hg-header .btn.hg-header-action--primary,
+body:not(.is-scrolling-offset).white-logo .hg-header .hg-header-logo path,
+body:not(.is-scrolling-offset).white-logo .hg-header .hg-header-maxilogo path,
+body:not(.is-scrolling-offset).white-login .hg-header .btn.hg-header-action--username,
+body:not(.is-scrolling-offset).white-basket .hg-header .btn.hg-header-action--cart,
+body:not(.is-scrolling-offset).white-search .hg-header .btn.hg-header-action--search {
+  color: var(--hg-color-white);
+  fill: var(--hg-color-white);
+}
+
+body.no-menu .hg-header .btn.hg-header-action--hamburger,
+body.no-menu .hg-header .hg-header-list--primary,
+body.no-logo .hg-header .hg-header-logo,
+body.no-login .hg-header .btn.hg-header-action--username,
+body.no-basket .hg-header .btn.hg-header-action--cart,
+body.no-search .hg-header .btn.hg-header-action--search {
+  display: none !important;
+}
+
+.btn.hg-menu-panel-action {
+  min-width: var(--hg-spacing-24);
+  min-height: var(--hg-spacing-32);
+}
+
+.btn.hg-menu-panel-action--close {
+  color: var(--hg-color-black);
+  fill: var(--hg-color-black);
+  padding: 0;
+}
+
+.btn.hg-menu-btn {
+  align-items: center;
+  background-color: var(--hg-menu-btn-bg-color, transparent);
+  color: var(--hg-menu-btn-color, var(--hg-color-black));
+  column-gap: var(--hg-spacing-8);
+  cursor: pointer;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: flex-start;
+  min-height: var(--hg-spacing-16);
+  overflow-wrap: break-word;
+  padding: 0.125rem var(--hg-spacing-4);
+  text-align: start;
+  white-space: normal;
+  word-break: break-word;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.btn.hg-menu-btn .p-tag,
+.btn.hg-menu-btn .p-tag-italic {
+  flex: 0 0 auto;
+}
+
+.btn.hg-menu-btn::before,
+.btn.hg-menu-btn::after {
+  display: none;
+}
+
+.btn.hg-menu-btn:hover {
+  color: var(--hg-menu-btn-color-hover, var(--hg-color-dark-grey));
+}
+
+.hg-menu-column .btn.hg-menu-btn.is-active,
+.hg-menu-column .btn.hg-menu-btn.is-bold {
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.hg-menu-subcat-list .btn.hg-menu-btn {
+  flex: 1 1 auto;
+}
+
+.wish .wishlist-empty .btn.btn--medium,
+.cart .shop-cart-empty .btn.btn--medium {
+  max-width: none;
+  width: auto;
+}
+
+.hg-footer-details.is-open .hg-footer-details-panel .btn.hg-btn-badge {
+  color: var(--hg-color-primary);
+}
+
+.newsletter-subscribe-component .btn {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .newsletter-subscribe-component .btn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .my-account-feel-header .no-feel-bar {
+    text-align: left;
+  }
+  .my-account-feel-header .no-feel-bar .btn--medium {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.my-account-points-stats .btn-link {
+  height: auto;
+}
+
+.my-account-sidemenu .btn-tertiary {
+  max-width: 300px;
+  overflow: visible;
+  min-height: 40px;
+}
+
+.my-account-sidemenu .btn-tertiary.is-active {
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.benefits-layout-component .btn--unsubscribe {
+  height: auto;
+}
+
+.benefits-layout-component .btn--action {
+  text-wrap: wrap;
+}
+
+.dev-studio-templates-scraping-component .btn-primary.is-loading {
+  display: flex;
+}
+
+.dev-studio-templates-scraping-component .btn-anim-dev {
+  display: none;
+  padding-top: 0;
+  left: 0px;
+  margin-left: 5px;
+  min-width: 40px;
+}
+
+.dev-studio-templates-scraping-component .btn-anim-dev span {
+  left: 12px;
+}
+
+.accessibility-chat-buttons .btn-access {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 34px;
+  background-color: var(--bg-color);
+  min-width: 0;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.09);
+  padding: 0 6px;
+}
+
+.accessibility-chat-buttons .btn-access .separator {
+  border-right: 1px solid #8E8E8E;
+  margin: 0 4px;
+  height: 19px;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-icon {
+  height: 16px;
+  padding: 0 6px;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-icon path {
+  fill: var(--text-color);
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-close {
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-close path {
+  stroke: var(--text-color);
+}
+
+.accessibility-chat-buttons .btn-chat {
+  width: 34px;
+  height: 34px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.09);
+}
+
+.accessibility-chat-buttons .btn-chat svg {
+  transform: translateY(3px);
+}
+
+.accessibility-chat-buttons .btn-chat svg path {
+  fill: transparent;
+  stroke: var(--text-color);
+}
+
+dropdown-tax-code .btn-loading {
+  color: #000000;
+  text-align: right;
+}
+
+dropdown-tax-regimes .btn-loading {
+  color: #000000;
+  text-align: right;
+}
+
+.btn-swiper {
+  display: flex;
+  cursor: pointer;
+}
+
+.cms-render-preview-container .btn-open-tap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.item-product-cart .btn.shopping-bag, .item-product-cart .btn.bookmark {
+  margin-right: 4px;
+}
+
+[dir=rtl] .item-product-cart :host ::ng-deep .btn.shopping-bag, [dir=rtl] .item-product-cart :host ::ng-deep .btn.bookmark {
+  margin-right: 0px;
+  margin-left: 4px;
+}
+
+@media (max-width: 767px) {
+  .map-wrapper #over_map {
+    max-width: initial;
+    width: 100vw;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translateY(calc(100% - 39px));
+    transition: all 0.3s ease;
+  }
+  .map-wrapper #over_map .tooltip-map .tooltip-info {
+    text-align: left;
+    padding: 48px 48px 16px 48px;
+  }
+  .map-wrapper #over_map .tooltip-map .tooltip-info .btn_close {
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    right: 16px;
+  }
+  .map-wrapper #over_map .tooltip-map {
+    position: relative;
+    background-color: #ffffff;
+    margin: 0;
+  }
+  .map-wrapper #over_map .tooltip-cross {
+    display: none;
+  }
+  .map-wrapper #over_map.is-open-tooltip {
+    transform: translateY(0px);
+  }
+}
+
+@media (min-width: 768px) {
+  .map-wrapper #over_map {
+    position: absolute;
+    bottom: 7.5%;
+    z-index: 99;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 650px;
+  }
+  .map-wrapper .tooltip-info h6:empty {
+    display: none;
+  }
+  .map-wrapper .tooltip-info .tooltip-cross {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    height: 40px;
+    width: 40px;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  .map-wrapper .tooltip-info .tooltip-cross:hover {
+    opacity: 1;
+  }
+  .map-wrapper .tooltip-map {
+    position: relative;
+    background-color: #ffffff;
+    margin: 16px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .map-wrapper .tooltip-map .link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .map-wrapper .tooltip-map .link:hover {
+    opacity: 0.7;
+  }
+  .map-wrapper .tooltip-map .tooltip-info {
+    text-align: center;
+    padding: 20px 80px 16px 80px;
+  }
+  .map-wrapper .tooltip-map .tooltip-info .btn_close {
+    position: absolute;
+    cursor: pointer;
+    top: 16px;
+    right: 16px;
+  }
+  .map-wrapper .tooltip-map .tooltip-km {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .map-wrapper .tooltip-info {
+    text-align: center;
+    padding: 20px 80px 16px 80px;
+  }
+  .map-wrapper .tooltip-km {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  .map-wrapper .tooltip-close {
+    display: none;
+  }
+}
+
+.microsite-360-view .btn.btn-link:focus {
+  opacity: 1;
+}
+
+.microsite-360-view .btn.btn-link:focus:hover {
+  opacity: 0.6;
+}
+
+.microsite-360-view .btn-link svg-icon2 ::ng-deep svg path {
+  fill: #fff;
+}
+
+.product-cart-container .btn.shopping-bag, .product-cart-container .btn.bookmark {
+  margin-right: 4px;
+}
+
+[dir=rtl] .product-cart-container :host ::ng-deep .btn.shopping-bag, [dir=rtl] .product-cart-container :host ::ng-deep .btn.bookmark {
+  margin-right: 0px;
+  margin-left: 4px;
+}
+
+.product-page-product-details :host ::ng-deep .btn-clear {
+  padding: 0px;
+}
+
+.product-page-product-info .btn-clear {
+  padding: 0px;
+}
+
+.changes-size-selector .product-size-selector-item.is-active .btn span {
+  text-decoration: underline;
+}
+
+.btn.hg-product-size-selector-btn {
+  align-items: center;
+  column-gap: var(--hg-spacing-4);
+  display: inline-flex;
+  flex-flow: row nowrap;
+  height: auto;
+  justify-content: center;
+  min-width: var(--hg-spacing-32);
+  padding-inline: var(--hg-spacing-8);
+}
+
+.btn.hg-product-size-selector-btn .icon {
+  margin-block-start: -0.125rem;
+}
+
+.btn.hg-product-size-selector-btn.is-out-of-stock {
+  text-decoration: line-through;
+}
+
+.btn.hg-product-size-selector-btn.is-highlighted,
+.btn.hg-product-size-selector-btn.is-recommended {
+  background-color: transparent;
+  text-decoration-thickness: var(--line-width);
+  text-decoration-line: underline;
+  text-underline-offset: 0.063rem;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary.active {
+  border: none;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000000;
+  z-index: 2;
+}
+
+combo-document-type .btn-loading {
+  color: #000000;
+  text-align: right;
+}
+
+.worldwide-layout-new worldwide-cookies .btn-link {
+  white-space: nowrap;
+}
+
+.btn-link-tab {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.btn-link-menu {
+  padding-block-start: 16px;
+  padding-inline-end: 12px;
+  padding-block-end: 16px;
+}
+
+@media (min-width: 992px) {
+  .btn-link-menu {
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+  }
+}
+
+.helper-font .btn.label-m {
+  border: 1px solid rgb(255, 128, 0);
+  overflow: visible;
+}
+
+.helper-font .btn.label-m::after {
+  content: "label-m " !important;
+  color: rgb(255, 128, 0);
+}
+
+body.custom-colors .hg-header-layout input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors .hg-header-layout input[type=file]::file-selector-button,
+body.custom-colors .hg-header-layout .subcategory-slider-container .hg-btn-badge,
+body.custom-colors .hg-header-layout .hg-footer-language-list .hg-btn-badge,
+body.custom-colors .hg-header-layout .md-breadcrumb-link,
+body.custom-colors .hg-header-layout .view-label,
+body.custom-colors .hg-header-layout button,
+body.custom-colors .hg-header-layout md-icon path,
+body.custom-colors footer-container input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors footer-container input[type=file]::file-selector-button,
+body.custom-colors footer-container .subcategory-slider-container .hg-btn-badge,
+body.custom-colors footer-container .hg-footer-language-list .hg-btn-badge,
+body.custom-colors footer-container .md-breadcrumb-link,
+body.custom-colors footer-container .view-label,
+body.custom-colors footer-container button,
+body.custom-colors footer-container md-icon path,
+body.custom-colors .section-apollo input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors .section-apollo input[type=file]::file-selector-button,
+body.custom-colors .section-apollo .subcategory-slider-container .hg-btn-badge,
+body.custom-colors .section-apollo .hg-footer-language-list .hg-btn-badge,
+body.custom-colors .section-apollo .md-breadcrumb-link,
+body.custom-colors .section-apollo .view-label,
+body.custom-colors .section-apollo button,
+body.custom-colors .section-apollo md-icon path {
+  color: var(--custom-category-styles-color) !important;
+  fill: var(--custom-category-styles-color) !important;
+}
+
+body.custom-colors .hg-header-layout .md-display-filter-actions--desktop .btn-display-filter-action.active,
+body.custom-colors footer-container .md-display-filter-actions--desktop .btn-display-filter-action.active,
+body.custom-colors .section-apollo .md-display-filter-actions--desktop .btn-display-filter-action.active {
+  font-weight: bold;
+}
+
+body.custom-colors .hg-header-layout .md-display-filter-actions--desktop .btn-display-filter-action:not(.active),
+body.custom-colors footer-container .md-display-filter-actions--desktop .btn-display-filter-action:not(.active),
+body.custom-colors .section-apollo .md-display-filter-actions--desktop .btn-display-filter-action:not(.active) {
+  color: #737373 !important;
+}
+
+body.custom-colors .hg-header-layout .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge,
+body.custom-colors footer-container .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge,
+body.custom-colors .section-apollo .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge {
+  color: #737373 !important;
+}
+
+body.custom-colors .hg-header-layout .hg-footer-language-list .hg-btn-badge:not(.active),
+body.custom-colors footer-container .hg-footer-language-list .hg-btn-badge:not(.active),
+body.custom-colors .section-apollo .hg-footer-language-list .hg-btn-badge:not(.active) {
+  color: #737373 !important;
+}
+
+body.custom-colors .hg-header-layout .btn,
+body.custom-colors footer-container .btn,
+body.custom-colors .section-apollo .btn {
+  background: transparent !important;
+  border-color: var(--custom-category-styles-color) !important;
+}
+
+body.custom-font .hg-header-layout span,
+body.custom-font .hg-header-layout .label-m,
+body.custom-font .hg-header-layout .title-m,
+body.custom-font .hg-header-layout .text-m,
+body.custom-font .hg-header-layout p,
+body.custom-font .hg-header-layout .p-tag,
+body.custom-font .hg-header-layout .p-tag-italic,
+body.custom-font .hg-header-layout .more-colors-info,
+body.custom-font .hg-header-layout .btn,
+body.custom-font footer-container span,
+body.custom-font footer-container .label-m,
+body.custom-font footer-container .title-m,
+body.custom-font footer-container .text-m,
+body.custom-font footer-container p,
+body.custom-font footer-container .p-tag,
+body.custom-font footer-container .p-tag-italic,
+body.custom-font footer-container .more-colors-info,
+body.custom-font footer-container .btn,
+body.custom-font .section-apollo span,
+body.custom-font .section-apollo .label-m,
+body.custom-font .section-apollo .title-m,
+body.custom-font .section-apollo .text-m,
+body.custom-font .section-apollo p,
+body.custom-font .section-apollo .p-tag,
+body.custom-font .section-apollo .p-tag-italic,
+body.custom-font .section-apollo .more-colors-info,
+body.custom-font .section-apollo .btn {
+  font-family: var(--custom-category-styles-font);
+  letter-spacing: 0;
+}
+
+body.custom-font-capitalized .hg-header-layout pdp-add-to-cart-button .btn,
+body.custom-font-capitalized footer-container pdp-add-to-cart-button .btn,
+body.custom-font-capitalized .section-apollo pdp-add-to-cart-button .btn {
+  text-transform: uppercase !important;
+}
+
+body.custom-font-capitalized .hg-header-layout .btn-display-filter-action.active,
+body.custom-font-capitalized footer-container .btn-display-filter-action.active,
+body.custom-font-capitalized .section-apollo .btn-display-filter-action.active {
+  font-weight: normal !important;
+}
+
+.btn-clear.delete {
+  margin-right: -8px;
+}
+
+.tabs .btn {
+  white-space: normal;
+}
+
+.filter-content .btn,
+.sidebar-filter .btn {
+  letter-spacing: 0.16em;
+}
+
+.filter-content .btn-tertiary div {
+  padding-top: 1px;
+}
+
+.btn-filter {
+  height: 40px;
+  line-height: 1;
+  font-family: "suisse-light", Helvetica, arial, sans-serif;
+  font-weight: 100;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: #737373;
+}
+
+.btn-filter.selected, .btn-filter:hover {
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.btn-filter:hover {
+  cursor: pointer;
+}
+
+.btn-quick.tab:hover .tab-inner-size::after {
+  background-color: transparent;
+}
+
+.btn-quick.tab .icon-sizes {
+  margin-top: -10px;
+  transform: translate(4px, 5px);
+}
+
+.tabs li .btn-quick.tab {
+  padding-block: 16px;
+  padding-inline: 16px;
+}
+
+.tabs li .btn-quick.tab .tab-inner-size::after {
+  background-color: transparent;
+}
+
+.tabs li.is-active .btn-quick.tab::after {
+  display: none;
+}
+
+.tabs .is-active .hg-btn-badge,
+.tabs2 .is-active .hg-btn-badge {
+  color: #000000;
+}
+
+/* ---- Report layout (no toca al CSS de los botones) ---- */
+body { font-family: arial, sans-serif; background: #fff; color: #000; padding: 0; margin: 0; line-height: 1.5; }
+.report { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+.report h1 { font-size: 28px; margin: 0 0 8px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.report .sub { color: #666; font-size: 14px; margin-bottom: 24px; }
+.report .stats { display: flex; gap: 18px; flex-wrap: wrap; padding: 16px; background: #f7f7f7; border-radius: 6px; margin-bottom: 28px; font-size: 12px; }
+.report .stats b { font-size: 22px; display: block; font-weight: 600; }
+.report h2.section { font-size: 18px; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 2px solid #000; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.report .card { border: 1px solid #e0e0e0; border-radius: 6px; padding: 18px; margin-bottom: 14px; background: #fff; }
+.report .card h3 { margin: 0 0 14px; font-size: 14px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.report .tag { display: inline-block; font-size: 10px; padding: 2px 8px; background: #f0f0f0; border-radius: 3px; margin-left: 8px; font-family: arial, sans-serif; font-weight: 500; vertical-align: middle; text-transform: uppercase; letter-spacing: 0.5px; color: #555; }
+.report .preview-row { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.report .preview { padding: 24px; background: #fafafa; border: 1px dashed #ddd; border-radius: 4px; min-height: 64px; display: flex; align-items: center; justify-content: flex-start; gap: 10px; flex: 1; min-width: 250px; }
+.report .preview.has-light { background: #1a1a1a; }
+.report .preview .label { font-size: 9px; color: #999; text-transform: uppercase; letter-spacing: 0.6px; align-self: flex-start; margin-right: 12px; flex-shrink: 0; padding-top: 6px; }
+.report .preview.has-light .label { color: #666; }
+.report .label-block { font-size: 10px; color: #777; text-transform: uppercase; letter-spacing: 0.6px; margin: 14px 0 6px; font-weight: 600; }
+.report pre { background: #1e1e1e; color: #d4d4d4; padding: 12px 14px; border-radius: 4px; overflow-x: auto; font-size: 11.5px; line-height: 1.55; margin: 0; max-height: 360px; }
+.report pre code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+.report .empty { padding: 10px 12px; background: #fff8e1; border-left: 3px solid #ff9800; color: #5d4037; font-size: 12px; border-radius: 0 4px 4px 0; }
+.report .where { background: #f0f7ff; border-left: 3px solid #1a32a4; padding: 12px 14px; border-radius: 0 4px 4px 0; margin-bottom: 12px; font-size: 13px; line-height: 1.55; }
+.report .where dl { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 4px 12px; }
+.report .where dt { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #1a32a4; font-weight: 600; padding-top: 2px; }
+.report .where dd { margin: 0; color: #1a1a1a; }
+.report .where dd code { background: rgba(26,50,164,0.08); padding: 1px 6px; border-radius: 3px; font-size: 12px; }
+.report .where ul.files { margin: 4px 0 0; padding-left: 18px; font-size: 12px; color: #444; font-family: ui-monospace, monospace; }
+.report .where ul.files li { margin-bottom: 1px; }
+</style>
+</head>
+<body>
+<div class="report">
+<h1>Auditoría de Botones — Duttino</h1>
+<p class="sub">HTML autocontenido. Todo el CSS embebido sale de <code>dist/frontend/client/styles.css</code> (build de producción real). Cada preview usa la misma combinación de clases que el componente emite (ej. <code>btn btn-secondary</code>) para que se vea fiel.</p>
+<div class="stats">
+  <div><b>44</b>Clases auditadas</div>
+  <div><b>37</b>Con CSS específico en producción</div>
+  <div><b>7</b>Sin reglas propias (heredan de .btn base)</div>
+  <div><b>9</b>Categorías</div>
+  <div><b>458</b>Reglas CSS embebidas</div>
+</div>
+<h2 class="section">Variantes Core (6)</h2>
+<div class="card">
+  <h3>.btn-primary <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (toda la web)</dd>
+      <dt>URL</dt><dd>Múltiples contextos — <code>/checkout/*</code>, <code>/my-account/*</code>, <code>/contact</code>, formularios login, modales producto</dd>
+      <dt>Contexto</dt><dd>Componentes globales - formularios, modales, checkout, my-account</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/checkout/* (resumen, shipping)</li><li>pages/my-account/* (cambios, devoluciones, detalles cuenta)</li><li>shared/shopcart/* (carrito modal, resumen)</li><li>shared/product/modals/* (stock, customizar)</li><li>features/orders/* (confirmación, búsqueda)</li><li>shared/payment/* (métodos pago)</li><li>features/otp/* (verificación teléfono/email)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-primary">Botón Primary</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-primary">Botón Primary</button></div></div></div>
+  <div class="label-block">CSS aplicado (22 reglas)</div>
+  <pre><code>.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.btn-primary svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.btn-primary svg circle {
+  stroke: #ffffff;
+}
+
+.btn-primary svg path {
+  fill: #ffffff;
+}
+
+.btn-primary:focus, .btn-primary.focus, .btn-primary:hover, .btn-primary.hover, .btn-primary:active, .btn-primary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-primary[disabled], .btn-primary:disabled, .btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-primary[disabled] svg g, .btn-primary:disabled svg g, .btn-primary.disabled svg g {
+  fill: #737373;
+  stroke: #737373;
+}
+
+.btn-primary[disabled] svg circle, .btn-primary:disabled svg circle, .btn-primary.disabled svg circle {
+  stroke: #737373;
+}
+
+.btn-primary[disabled] svg path, .btn-primary:disabled svg path, .btn-primary.disabled svg path {
+  fill: #737373;
+}
+
+.has-light .btn-primary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.has-light .btn-primary svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.has-light .btn-primary svg circle {
+  stroke: #000000;
+}
+
+.has-light .btn-primary svg path {
+  fill: #000000;
+}
+
+.has-light .btn-primary:focus, .has-light .btn-primary.focus, .has-light .btn-primary:hover, .has-light .btn-primary.hover, .has-light .btn-primary:active, .has-light .btn-primary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.has-light .btn-primary:focus svg g, .has-light .btn-primary.focus svg g, .has-light .btn-primary:hover svg g, .has-light .btn-primary.hover svg g, .has-light .btn-primary:active svg g, .has-light .btn-primary.active svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-primary:focus svg circle, .has-light .btn-primary.focus svg circle, .has-light .btn-primary:hover svg circle, .has-light .btn-primary.hover svg circle, .has-light .btn-primary:active svg circle, .has-light .btn-primary.active svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-primary:focus svg path, .has-light .btn-primary.focus svg path, .has-light .btn-primary:hover svg path, .has-light .btn-primary.hover svg path, .has-light .btn-primary:active svg path, .has-light .btn-primary.active svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-primary[disabled], .has-light .btn-primary:disabled, .has-light .btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-primary[disabled],
+.btn-primary:disabled,
+.btn-primary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-primary, .btn-secondary {
+  padding-top: 0;
+}
+
+.dev-studio-templates-scraping-component .btn-primary.is-loading {
+  display: flex;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-secondary <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — presente en <code>/contact</code>, header global, footer, búsqueda</dd>
+      <dt>Contexto</dt><dd>Componentes globales - acciones secundarias, chat/contact</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/header/layouts/header-layout.component.html</li><li>shared/chat/kakao/kakao.component.html</li><li>pages/contact/* (chat, FAQs)</li><li>pages/search/ui/components/*</li><li>shared/shopcart/* (carrito)</li><li>pages/home/components/container-nw-2026/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-secondary">Botón Secondary</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-secondary">Botón Secondary</button></div></div></div>
+  <div class="label-block">CSS aplicado (20 reglas)</div>
+  <pre><code>.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
+  text-transform: uppercase;
+}
+
+.is-active.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-secondary {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-secondary svg circle {
+  stroke: #000000;
+}
+
+.btn-secondary:focus, .btn-secondary.focus, .btn-secondary:hover, .btn-secondary.hover, .btn-secondary:active, .btn-secondary.active {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.btn-secondary[disabled], .btn-secondary:disabled, .btn-secondary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.btn-secondary[disabled] svg g, .btn-secondary:disabled svg g, .btn-secondary.disabled svg g {
+  fill: #a9a9a9;
+  stroke: #a9a9a9;
+}
+
+.btn-secondary[disabled] svg circle, .btn-secondary:disabled svg circle, .btn-secondary.disabled svg circle {
+  stroke: #a9a9a9;
+}
+
+.btn-secondary[disabled] svg path, .btn-secondary:disabled svg path, .btn-secondary.disabled svg path {
+  fill: #a9a9a9;
+}
+
+.has-light .btn-secondary {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+.has-light .btn-secondary svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-secondary:focus, .has-light .btn-secondary.focus, .has-light .btn-secondary:hover, .has-light .btn-secondary.hover, .has-light .btn-secondary:active, .has-light .btn-secondary.active {
+  color: #ffffff;
+  background-color: #737373;
+  border: 1px solid #737373;
+  opacity: 1;
+}
+
+.has-light .btn-secondary:focus svg g, .has-light .btn-secondary.focus svg g, .has-light .btn-secondary:hover svg g, .has-light .btn-secondary.hover svg g, .has-light .btn-secondary:active svg g, .has-light .btn-secondary.active svg g {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary:focus svg circle, .has-light .btn-secondary.focus svg circle, .has-light .btn-secondary:hover svg circle, .has-light .btn-secondary.hover svg circle, .has-light .btn-secondary:active svg circle, .has-light .btn-secondary.active svg circle {
+  stroke: #ffffff;
+}
+
+.has-light .btn-secondary:focus svg path, .has-light .btn-secondary.focus svg path, .has-light .btn-secondary:hover svg path, .has-light .btn-secondary.hover svg path, .has-light .btn-secondary:active svg path, .has-light .btn-secondary.active svg path {
+  fill: #ffffff;
+}
+
+.has-light .btn-secondary[disabled], .has-light .btn-secondary:disabled, .has-light .btn-secondary.disabled {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  opacity: 1;
+}
+
+.is-active.btn-secondary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.btn-primary, .btn-secondary {
+  padding-top: 0;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-tertiary <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — en modales, formularios, side actions</dd>
+      <dt>Contexto</dt><dd>Variante terciaria de botones, acciones menos relevantes</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>ui/md-accordion/md-accordion-title.component.html</li><li>pages/my-account/sections/*</li><li>shared/product/modals/*</li><li>features/wishlist/ui/components/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-tertiary">Botón Tertiary</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-tertiary">Botón Tertiary</button></div></div></div>
+  <div class="label-block">CSS aplicado (17 reglas)</div>
+  <pre><code>.btn-tertiary {
+  background-color: transparent;
+  border: 0 solid transparent;
+  height: auto;
+  min-width: 24px;
+  padding-inline: 0;
+}
+
+.btn-tertiary svg g {
+  fill: #000000;
+  stroke: #000000;
+}
+
+.btn-tertiary svg circle {
+  stroke: #000000;
+}
+
+.btn-tertiary:focus, .btn-tertiary.focus, .btn-tertiary:hover, .btn-tertiary.hover, .btn-tertiary:active, .btn-tertiary.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-tertiary.active {
+  border-bottom: 0.5px solid #000;
+}
+
+.btn-tertiary:disabled, .btn-tertiary[disabled], .btn-tertiary.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-tertiary:disabled svg-icon,
+.btn-tertiary:disabled svg-icon2,
+.btn-tertiary:disabled md-icon, .btn-tertiary[disabled] svg-icon,
+.btn-tertiary[disabled] svg-icon2,
+.btn-tertiary[disabled] md-icon, .btn-tertiary.disabled svg-icon,
+.btn-tertiary.disabled svg-icon2,
+.btn-tertiary.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-tertiary {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-tertiary:focus, .has-light .btn-tertiary.focus, .has-light .btn-tertiary:hover, .has-light .btn-tertiary.hover, .has-light .btn-tertiary:active, .has-light .btn-tertiary.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.tabs2 li .btn-tertiary,
+.tabs2 li .btn-label-m,
+.tabs2 li .hg-btn-badge {
+  padding-block: 0;
+}
+
+.product-card-add-actions .btn.btn-tertiary {
+  padding-inline: 8px;
+}
+
+.my-account-sidemenu .btn-tertiary {
+  max-width: 300px;
+  overflow: visible;
+  min-height: 40px;
+}
+
+.my-account-sidemenu .btn-tertiary.is-active {
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary.active {
+  border: none;
+}
+
+.product-zoom-container .product-zoom-thumbs-vertical .btn.btn-tertiary.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000000;
+  z-index: 2;
+}
+
+.filter-content .btn-tertiary div {
+  padding-top: 1px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-link <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — header, footer, menú, breadcrumbs</dd>
+      <dt>Contexto</dt><dd>Links estilizados como botones (navegación textual)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/header/components/* (menu-sections, header-buttons)</li><li>layout/ui/components/footer/* (footer links)</li><li>shared/category-toolbar/* (navegación categorías)</li><li>pages/checkout/* (enlaces adicionales)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-link">Texto link</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-link">Texto link</button></div></div></div>
+  <div class="label-block">CSS aplicado (18 reglas)</div>
+  <pre><code>.btn.btn-link.has-ico-pre {
+  padding-left: 18px;
+}
+
+.btn.btn-link.has-ico-pre .ico-pre {
+  margin: 0;
+  top: -1px;
+}
+
+.btn-link {
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  height: auto;
+  min-height: auto;
+}
+
+.has-light .btn-link {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.has-light .btn-link:focus, .has-light .btn-link.focus, .has-light .btn-link:hover, .has-light .btn-link.hover, .has-light .btn-link:visited, .has-light .btn-link:active, .has-light .btn-link.active {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.md-accordion .md-accordion-button,
+.md-accordion .btn-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.has-light .md-accordion .has-lines .md-accordion-content .btn-link, .has-light .md-accordion .has-lines.md-accordion-item.has-lines .btn-link {
+  border-bottom: 1px solid white;
+}
+
+.md-toggle .md-toggle-button,
+.md-toggle .btn-link {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-height: 40px;
+  justify-content: space-between;
+}
+
+.md-toggle-lines .md-toggle-inner .btn-link, .md-toggle-lines.md-toggle-item .btn-link {
+  border-bottom: 1px solid black;
+}
+
+.has-light .md-toggle .md-toggle-lines .md-toggle-inner .btn-link, .has-light .md-toggle .md-toggle-lines.md-toggle-item.md-toggle-lines .btn-link {
+  border-bottom: 1px solid white;
+}
+
+.store-head .btn-link {
+  font-size: 14px;
+  margin: 18px 0 0;
+}
+
+.store-head .btn-link {
+  font-weight: 500;
+}
+
+.md-layout-header .btn-link.active {
+  font-family: "suisse-medium", Helvetica, arial, sans-serif;
+  font-weight: 500;
+}
+
+.my-account-points-stats .btn-link {
+  height: auto;
+}
+
+.microsite-360-view .btn.btn-link:focus {
+  opacity: 1;
+}
+
+.microsite-360-view .btn.btn-link:focus:hover {
+  opacity: 0.6;
+}
+
+.microsite-360-view .btn-link svg-icon2 ::ng-deep svg path {
+  fill: #fff;
+}
+
+.worldwide-layout-new worldwide-cookies .btn-link {
+  white-space: nowrap;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-link-tab <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>my-account, contact, categoria</dd>
+      <dt>URL</dt><dd><code>/my-account/*</code>, <code>/contact</code>, <code>/es/woman/*</code> (pestañas PLP)</dd>
+      <dt>Contexto</dt><dd>Links como pestañas en interfaces</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/feel/ui/layouts/menu/menu-tab.component.html</li><li>pages/contact/components/contact-form-tab.component.html</li><li>ui/tabs/tabs.component.html</li><li>pages/category/modules/filters/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-link-tab">Tab link</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-link-tab">Tab link</button></div></div></div>
+  <div class="label-block">CSS aplicado (7 reglas)</div>
+  <pre><code>.btn-link-tab {
+  align-items: flex-start;
+  align-self: flex-start;
+  border-color: transparent;
+  border-style: solid;
+  border-width: var(--line-width) 0;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  height: auto;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 12px 0;
+  text-align: initial;
+}
+
+.btn-link-tab .btn-prepend,
+.btn-link-tab .btn-append {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 auto;
+  justify-content: center;
+}
+
+.btn-link-tab .btn-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.btn-link-tab:disabled, .btn-link-tab[disabled], .btn-link-tab.disabled {
+  border-left: 0;
+  border-right: 0;
+}
+
+.btn-link-tab.btn-lines {
+  border-bottom-color: #000000;
+  border-top-color: #000000;
+}
+
+.btn-link-tab.btn-lines:disabled, .btn-link-tab.btn-lines[disabled], .btn-link-tab.btn-lines.disabled {
+  border-bottom-color: #a9a9a9;
+  border-top-color: #a9a9a9;
+}
+
+.btn-link-tab {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-link-menu <span class="tag">Variante</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — menú principal, submenús</dd>
+      <dt>Contexto</dt><dd>Links en menús de navegación</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/header/layouts/menu-layout.component.html</li><li>shared/category-toolbar/components/*</li><li>pages/my-account/ui/components/sidemenu/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-link-menu">Menu link</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-link-menu">Menu link</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.btn-link-menu {
+  padding-block-start: 16px;
+  padding-inline-end: 12px;
+  padding-block-end: 16px;
+}
+
+@media (min-width: 992px) {
+  .btn-link-menu {
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+  }
+}</code></pre>
+</div>
+<h2 class="section">Tamaños & Modificadores BEM (5)</h2>
+<div class="card">
+  <h3>.btn--medium <span class="tag">Size</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — usado en la mayoría de formularios y acciones</dd>
+      <dt>Contexto</dt><dd>Botones de tamaño medio (standart)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/returns/* (devoluciones)</li><li>pages/checkout/shipping/* (shipping)</li><li>shared/address/modals/* (dirección)</li><li>pages/gift-card/forms/* (gift card)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-primary btn--medium">Medium</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-primary btn--medium">Medium</button></div></div></div>
+  <div class="label-block">CSS aplicado (3 reglas)</div>
+  <pre><code>.btn--medium {
+  padding-right: 40px;
+  padding-left: 40px;
+  max-width: 272px;
+  width: 100%;
+  min-height: 32px;
+}
+
+.wish .wishlist-empty .btn.btn--medium,
+.cart .shop-cart-empty .btn.btn--medium {
+  max-width: none;
+  width: auto;
+}
+
+@media (max-width: 992px) {
+  .my-account-feel-header .no-feel-bar {
+    text-align: left;
+  }
+  .my-account-feel-header .no-feel-bar .btn--medium {
+    width: auto;
+    max-width: 100%;
+  }
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn--full <span class="tag">Size</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — especialmente en mobile</dd>
+      <dt>Contexto</dt><dd>Botones de ancho completo (responsive mobile)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/chat/kakao/kakao.component.html (chat Kakao)</li><li>pages/checkout/layouts/*</li><li>features/otp/* (verificación)</li><li>pages/authentication/routes/* (login/registro)</li><li>pages/contact/components/* (contact)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-primary btn--full">Full width</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-primary btn--full">Full width</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.ttu,
+.btn-primary,
+.btn--full,
+.btn-secondary,
+.form-input-label-2 label {
+  text-transform: uppercase;
+}
+
+.btn--full {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn--large <span class="tag">Size</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — checkouts, call-to-actions prominentes</dd>
+      <dt>Contexto</dt><dd>Botones de tamaño grande (CTA principal)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/checkout/* (resumen, shipping)</li><li>pages/my-account/sections/returns/* (devolver)</li><li>features/gift-options/* (gift)</li><li>pages/contact/* (contactar)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-primary btn--large">Large</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-primary btn--large">Large</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn--large {
+  min-height: 32px;
+  min-width: 200px;
+  max-width: 400px;
+  width: 100%;
+  padding-right: 56px;
+  padding-left: 56px;
+  font-size: 12px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn--color <span class="tag">Modifier</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (especialmente páginas estáticas)</dd>
+      <dt>URL</dt><dd>Global — CMS pages, feel app, ofertas</dd>
+      <dt>Contexto</dt><dd>Botones con color de marca personalizado</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>features/cms-render/ui/render-pieces/* (CMS render)</li><li>pages/feel/* (app feel)</li><li>pages/cms-render-preview-page.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn--color" aria-label="color"></button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn--color" aria-label="color"></button></div></div></div>
+  <div class="label-block">CSS aplicado (9 reglas)</div>
+  <pre><code>.btn--color {
+  width: auto;
+  min-width: 42px;
+  height: auto;
+  min-height: 42px;
+  position: relative;
+}
+
+.btn--color:hover {
+  opacity: 0.6;
+}
+
+.btn--color.is-active {
+  padding-bottom: 8px;
+}
+
+.btn--color.is-active::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.btn--color {
+  width: 42px;
+  height: 42px;
+  padding: 12px;
+  position: relative;
+}
+
+.btn--color:hover {
+  opacity: 0.6;
+}
+
+.btn--color.is-active {
+  padding-bottom: 12px;
+}
+
+.btn--color.is-active:after {
+  position: absolute;
+  left: 12px;
+  bottom: 7px;
+  content: "";
+  width: 18px;
+  height: 1px;
+  background-color: #000000;
+}
+
+.md-customize-text .btn--color.is-active:after {
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn--wishlist <span class="tag">Modifier</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PDP, PLP, wishlist</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}/{product}-p{id}</code>, <code>/{lang}/{gender}/{category}-c{id}</code>, <code>/my-account/wishlist</code></dd>
+      <dt>Contexto</dt><dd>Botón específico para agregar/quitar favoritos</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>features/wishlist/ui/components/* (lista favoritos)</li><li>shared/product/* (carrito favoritos)</li><li>pages/product/* (PDP)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn--wishlist" aria-label="wishlist">♡</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn--wishlist" aria-label="wishlist">♡</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.md-product-heading .btn.btn--wishlist {
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0;
+  text-align: center;
+}
+
+.quick-purchase .btn.btn--wishlist {
+  min-height: auto;
+  min-width: auto;
+  padding: 0;
+  text-align: center;
+}</code></pre>
+</div>
+<h2 class="section">Estados (3)</h2>
+<div class="card">
+  <h3>.btn-loading <span class="tag">Estado</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (checkout, formularios)</dd>
+      <dt>URL</dt><dd>Global — durante procesos async (checkout, login)</dd>
+      <dt>Contexto</dt><dd>Botón en estado de carga/procesamiento</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/checkout/* (procesamiento pago)</li><li>pages/authentication/* (login)</li><li>features/checkout/* (egui options)</li><li>features/personal-information-request/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-primary btn-loading is-loading">btn-loading</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-primary btn-loading is-loading">btn-loading</button></div></div></div>
+  <div class="label-block">CSS aplicado (6 reglas)</div>
+  <pre><code>.btn-anim .btn-loading {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.is-loading.btn-anim .btn-loading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-loading svg {
+  animation: spin 1.6s ease-in-out infinite;
+}
+
+dropdown-tax-code .btn-loading {
+  color: #000000;
+  text-align: right;
+}
+
+dropdown-tax-regimes .btn-loading {
+  color: #000000;
+  text-align: right;
+}
+
+combo-document-type .btn-loading {
+  color: #000000;
+  text-align: right;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-noselected <span class="tag">Estado</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP, filtros, category</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code> (filtros)</dd>
+      <dt>Contexto</dt><dd>Botón en estado no seleccionado (toggle)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/modules/filters/components/* (filtros)</li><li>pages/search/ui/components/* (search filters)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-noselected">Not sel</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-noselected">Not sel</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn-noselected {
+  opacity: 0.4;
+  border: 1px solid #a9a9a9;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-separate <span class="tag">Estado</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Formularios, modales</dd>
+      <dt>URL</dt><dd>Global — en confirmation dialogs, modales</dd>
+      <dt>Contexto</dt><dd>Botón con separador visual</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>ui/dialog/components/confirmation-modal.component.html</li><li>pages/checkout/layouts/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-separate">Separate</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-separate">Separate</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.btn.btn-separate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 32px;
+}
+
+.btn.btn-separate.btn--mini, .btn.btn-separate.btn--small {
+  width: max-content;
+}</code></pre>
+</div>
+<h2 class="section">Features PDP / PLP / Forms (14)</h2>
+<div class="card">
+  <h3>.btn-quick <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP, búsqueda, home</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code>, <code>/search</code>, <code>/</code> (home)</dd>
+      <dt>Contexto</dt><dd>Botón "Quick View" o acción rápida sobre producto</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/* (category PLP)</li><li>pages/search/ui/components/* (search results)</li><li>pages/home/components/* (home)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-quick">Quick</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-quick">Quick</button></div></div></div>
+  <div class="label-block">CSS aplicado (19 reglas)</div>
+  <pre><code>.btn-quick {
+  align-items: center;
+  background-color: transparent;
+  border: 0 solid transparent;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  height: auto;
+  justify-content: space-between;
+  min-height: 16px;
+  min-width: 36px;
+  padding: 0;
+  width: auto;
+  color: #000000;
+  background-color: transparent;
+  line-height: 1;
+}
+
+.btn-quick .text {
+  line-height: 1;
+}
+
+.btn-quick md-icon,
+.btn-quick .icon {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-quick md-icon path,
+.btn-quick .icon path {
+  fill: #000000;
+}
+
+.btn-quick:focus, .btn-quick.focus, .btn-quick:hover, .btn-quick.hover, .btn-quick:active, .btn-quick.active {
+  border: 0 solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-quick:hover .text, .btn-quick.hover .text {
+  text-decoration: underline;
+}
+
+.btn-quick:disabled, .btn-quick[disabled], .btn-quick.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  color: #737373;
+  filter: none;
+  opacity: 1;
+}
+
+.btn-quick:disabled svg-icon,
+.btn-quick:disabled svg-icon2,
+.btn-quick:disabled md-icon, .btn-quick[disabled] svg-icon,
+.btn-quick[disabled] svg-icon2,
+.btn-quick[disabled] md-icon, .btn-quick.disabled svg-icon,
+.btn-quick.disabled svg-icon2,
+.btn-quick.disabled md-icon {
+  background-color: transparent !important;
+  border: 0 solid transparent !important;
+}
+
+.has-light .btn-quick {
+  color: #ffffff;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.has-light .btn-quick:focus, .has-light .btn-quick.focus, .has-light .btn-quick:hover, .has-light .btn-quick.hover, .has-light .btn-quick:active, .has-light .btn-quick.active {
+  opacity: 0.6;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.md-new-quick-buy .product-size-selector-item.is-sold-out .btn.btn-quick {
+  color: #a9a9a9 !important;
+}
+
+.md-new-quick-buy .product-size-selector-item.is-sold-out .btn.btn-quick .text {
+  text-decoration: line-through;
+}
+
+.md-new-quick-buy .btn-quick {
+  justify-content: space-evenly;
+  color: inherit;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+.btn.btn-quick.btn-quick--padded {
+  min-height: 48px;
+  min-width: 42px;
+  padding-inline-end: 12px;
+  padding-inline-start: 16px;
+}
+
+.btn-quick.tab:hover .tab-inner-size::after {
+  background-color: transparent;
+}
+
+.btn-quick.tab .icon-sizes {
+  margin-top: -10px;
+  transform: translate(4px, 5px);
+}
+
+.tabs li .btn-quick.tab {
+  padding-block: 16px;
+  padding-inline: 16px;
+}
+
+.tabs li .btn-quick.tab .tab-inner-size::after {
+  background-color: transparent;
+}
+
+.tabs li.is-active .btn-quick.tab::after {
+  display: none;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-quick--padded <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code></dd>
+      <dt>Contexto</dt><dd>Variante de btn-quick con padding extra</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/* (product grid)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-quick btn-quick--padded">Padded</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-quick btn-quick--padded">Padded</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn.btn-quick.btn-quick--padded {
+  min-height: 48px;
+  min-width: 42px;
+  padding-inline-end: 12px;
+  padding-inline-start: 16px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-3d-view <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PDP</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}/{product}-p{id}</code> (botón 3D en ficha)</dd>
+      <dt>Contexto</dt><dd>Botón para abrir vista 3D del producto</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>features/viewer-3D/ui/components/viewer-3D.component.html</li><li>pages/product/* (PDP)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-3d-view">3D</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-3d-view">3D</button></div></div></div>
+  <div class="label-block">CSS aplicado (4 reglas)</div>
+  <pre><code>.stories-menu .stories-menu-btn.btn-3d-view {
+  width: 35%;
+  right: 0;
+  left: auto;
+  padding-left: 1px;
+}
+
+.stories-menu .stories-menu-btn.btn-3d-view .btn {
+  padding-top: 6px;
+}
+
+.btn.btn-3d-view {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  row-gap: 0.5rem;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: calc(0.25rem + 1px) 1rem calc(0.25rem - 1px);
+  text-align: center;
+}
+
+.md-pdp5-box-fixed-actions .btn.btn-3d-view {
+  margin-block-end: 1.5rem;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-look <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PDP, Collection, Lookbook</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}/{product}-p{id}</code>, <code>/lookbook/:slug</code>, <code>/collections/*</code></dd>
+      <dt>Contexto</dt><dd>Botón para ver looks/outfits</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/collection/layout/runway/components/runway-look.component.html</li><li>pages/product/* (looks en PDP)</li><li>features/cms-render/ui/cms-view-look.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-look">Look</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-look">Look</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn.btn-look {
+  background-color: transparent;
+  padding: calc(0.25rem + 1px) 1rem calc(0.25rem - 1px);
+  min-height: 1.5rem;
+  color: #ffffff;
+  border-color: #ffffff;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-size <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PDP, PLP, stock modal</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}/{product}-p{id}</code> (tamaño selector)</dd>
+      <dt>Contexto</dt><dd>Botón/selector de tamaño en modal</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/product/modals/product-stock/ui/components/product-stock-size-selector.component.html</li><li>shared/product/components/product-size-selector/* (PDP)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-size">S</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-size">S</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<div class="card">
+  <h3>.btn-swiper <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (home, categoría, búsqueda)</dd>
+      <dt>URL</dt><dd>Global — home, PLP, colecciones</dd>
+      <dt>Contexto</dt><dd>Botón de navegación en carouseles/sliders</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/home/* (carouseles)</li><li>pages/category/* (product carousel)</li><li>features/cms-render/ui/render-pieces/piece-product-carousel.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-swiper">›</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-swiper">›</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn-swiper {
+  display: flex;
+  cursor: pointer;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-shop <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (especialmente PDP, PLP)</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}/{product}-p{id}</code>, <code>/{lang}/{gender}/{category}-c{id}</code></dd>
+      <dt>Contexto</dt><dd>Botón para comprar/shop</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/product/* (add to cart)</li><li>pages/category/* (quick shop)</li><li>features/bag-collection/ui/components/* (shop en colecciones)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-shop">Shop</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-shop">Shop</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.stories-menu .stories-menu-btn.btn-shop {
+  width: 65%;
+  left: 0;
+  right: auto;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-shopcart <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (header)</dd>
+      <dt>URL</dt><dd>Global — header presente en todas las páginas</dd>
+      <dt>Contexto</dt><dd>Ícono/botón del carrito de compra</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/header/components/header-button-cart.component.html</li><li>shared/shopcart/* (mini-cart)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-shopcart">Cart</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-shopcart">Cart</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<div class="card">
+  <h3>.btn-clear <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP (filtros), búsqueda</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code> (limpiar filtros), <code>/search</code></dd>
+      <dt>Contexto</dt><dd>Botón para limpiar/resetear (filtros, campos)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/modules/filters/* (clear filters)</li><li>pages/search/ui/components/* (clear search)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-clear">✕</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-clear">✕</button></div></div></div>
+  <div class="label-block">CSS aplicado (4 reglas)</div>
+  <pre><code>.btn.btn-clear {
+  padding: 8px;
+  background: none;
+  border: none;
+}
+
+.product-page-product-details :host ::ng-deep .btn-clear {
+  padding: 0px;
+}
+
+.product-page-product-info .btn-clear {
+  padding: 0px;
+}
+
+.btn-clear.delete {
+  margin-right: -8px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-filter <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP, búsqueda</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code>, <code>/search</code></dd>
+      <dt>Contexto</dt><dd>Botón genérico de filtros</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/modules/filters/components/product-filter.component.html</li><li>pages/search/ui/components/filters-search.component.html</li><li>pages/category/modules/filters/components/display-filter.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-filter">Filter</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-filter">Filter</button></div></div></div>
+  <div class="label-block">CSS aplicado (3 reglas)</div>
+  <pre><code>.btn-filter {
+  height: 40px;
+  line-height: 1;
+  font-family: "suisse-light", Helvetica, arial, sans-serif;
+  font-weight: 100;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: #737373;
+}
+
+.btn-filter.selected, .btn-filter:hover {
+  font-family: "suisse-regular", Helvetica, arial, sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+.btn-filter:hover {
+  cursor: pointer;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-filter-trigger <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP, búsqueda</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code>, <code>/search</code></dd>
+      <dt>Contexto</dt><dd>Botón que abre panel de filtros</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/modules/filters/components/display-filter.component.html</li><li>pages/search/ui/components/search-filter-dialog.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-filter-trigger">Filtros</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-filter-trigger">Filtros</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn.btn-filter-trigger {
+  align-items: center;
+  column-gap: 0.25rem;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding-inline: 0;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-display-filter-action <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>PLP, búsqueda</dd>
+      <dt>URL</dt><dd><code>/{lang}/{gender}/{category}-c{id}</code>, <code>/search</code></dd>
+      <dt>Contexto</dt><dd>Botón de acción en panel de filtros (aplicar, limpiar)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/category/modules/filters/components/display-filter.component.html</li><li>pages/cms-render-preview-page.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-display-filter-action">Action</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-display-filter-action">Action</button></div></div></div>
+  <div class="label-block">CSS aplicado (3 reglas)</div>
+  <pre><code>body.custom-colors .hg-header-layout .md-display-filter-actions--desktop .btn-display-filter-action.active,
+body.custom-colors footer-container .md-display-filter-actions--desktop .btn-display-filter-action.active,
+body.custom-colors .section-apollo .md-display-filter-actions--desktop .btn-display-filter-action.active {
+  font-weight: bold;
+}
+
+body.custom-colors .hg-header-layout .md-display-filter-actions--desktop .btn-display-filter-action:not(.active),
+body.custom-colors footer-container .md-display-filter-actions--desktop .btn-display-filter-action:not(.active),
+body.custom-colors .section-apollo .md-display-filter-actions--desktop .btn-display-filter-action:not(.active) {
+  color: #737373 !important;
+}
+
+body.custom-font-capitalized .hg-header-layout .btn-display-filter-action.active,
+body.custom-font-capitalized footer-container .btn-display-filter-action.active,
+body.custom-font-capitalized .section-apollo .btn-display-filter-action.active {
+  font-weight: normal !important;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-level-1 <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — menú categorías</dd>
+      <dt>Contexto</dt><dd>Botón de nivel 1 en jerarquía (menú principal)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/category-toolbar/components/*</li><li>shared/header/components/menu-sections.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-level-1">Lvl 1</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-level-1">Lvl 1</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<div class="card">
+  <h3>.btn-return-query <span class="tag">Feature</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>my-account (devoluciones)</dd>
+      <dt>URL</dt><dd><code>/my-account/orders</code>, <code>/my-account/returns</code></dd>
+      <dt>Contexto</dt><dd>Botón para volver a búsqueda de órdenes</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/returns/components/return-or-change-query/return-type-query.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-return-query">← Volver</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-return-query">← Volver</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn-return-query {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  text-transform: none;
+  text-wrap: auto;
+  padding: 16px;
+}</code></pre>
+</div>
+<h2 class="section">Legacy Modales / CMS (3)</h2>
+<div class="card">
+  <h3>.btn-popup <span class="tag">Legacy</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — múltiples contextos modales</dd>
+      <dt>Contexto</dt><dd>Botón en popups/modales</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>ui/dialog/components/* (generic-modal, confirmation)</li><li>shared/common/modals/* (qrcode-modal)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-popup">Popup</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-popup">Popup</button></div></div></div>
+  <div class="label-block">CSS aplicado (4 reglas)</div>
+  <pre><code>body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup {
+  margin: 20px 0 0;
+}
+
+body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup.register-popup {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  body .ngdialog.ngdialog-theme-plain .ngdialog-content form .btn-popup .btn {
+    min-width: 265px;
+  }
+}
+
+.ngdialog.ngdialog-theme-plain.ngdialog-droppointParams form .btn-popup {
+  margin-top: 20px;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-container <span class="tag">Legacy</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>my-account, órdenes</dd>
+      <dt>URL</dt><dd><code>/my-account/orders</code>, <code>/my-account/returns</code></dd>
+      <dt>Contexto</dt><dd>Botón contenedor de acciones</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/returns/components/*</li><li>pages/my-account/sections/orders-type/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><div class="btn-container">wrapper (no es botón)</div></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><div class="btn-container">wrapper (no es botón)</div></div></div></div>
+  <div class="label-block">CSS aplicado (6 reglas)</div>
+  <pre><code>.related-product-dialog-content .btn-container {
+  padding-top: 20px;
+}
+
+html body .addressConfirmation-dialog .btn-container {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+html body .addressConfirmation-dialog .btn-container .btn {
+  width: auto;
+  min-width: 200px;
+}
+
+.info-store .btn-container {
+  margin: 0;
+}
+
+@media (min-width: 1280px) {
+  .info-store .btn-container {
+    margin: 50px 0 0;
+  }
+}
+
+.info-store .btn-container &gt; button {
+  width: 100%;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-open-tap <span class="tag">Legacy</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>my-account, contact</dd>
+      <dt>URL</dt><dd><code>/my-account/*</code>, <code>/contact</code></dd>
+      <dt>Contexto</dt><dd>Botón para abrir/expandir contenido</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/appointments/*</li><li>pages/contact/components/contact-faqs.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-open-tap">Open tap</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-open-tap">Open tap</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.cms-render-preview-container .btn-open-tap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}</code></pre>
+</div>
+<h2 class="section">Accesibilidad / Chat (6)</h2>
+<div class="card">
+  <h3>.btn-access <span class="tag">A11y</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Authentication, header</dd>
+      <dt>URL</dt><dd><code>/</code> (global header), <code>/guest-login</code>, <code>/authentication/*</code></dd>
+      <dt>Contexto</dt><dd>Botón de acceso/login</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/accessibility/components/accessibility-button.component.html</li><li>pages/authentication/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-access">A11y</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-access">A11y</button></div></div></div>
+  <div class="label-block">CSS aplicado (6 reglas)</div>
+  <pre><code>.accessibility-chat-buttons .btn-access {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 34px;
+  background-color: var(--bg-color);
+  min-width: 0;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.09);
+  padding: 0 6px;
+}
+
+.accessibility-chat-buttons .btn-access .separator {
+  border-right: 1px solid #8E8E8E;
+  margin: 0 4px;
+  height: 19px;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-icon {
+  height: 16px;
+  padding: 0 6px;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-icon path {
+  fill: var(--text-color);
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-close {
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-close path {
+  stroke: var(--text-color);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-access-icon <span class="tag">A11y</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — footer, header</dd>
+      <dt>Contexto</dt><dd>Ícono de acceso (accessibility, ayuda)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/accessibility/components/accessibility-button.component.html</li><li>layout/ui/components/footer/* (footer accesibilidad)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-access-icon">icon</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-access-icon">icon</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.accessibility-chat-buttons .btn-access .btn-access-icon {
+  height: 16px;
+  padding: 0 6px;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-icon path {
+  fill: var(--text-color);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-access-close <span class="tag">A11y</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global</dd>
+      <dt>URL</dt><dd>Global — header</dd>
+      <dt>Contexto</dt><dd>Botón para cerrar panel de acceso</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/header/components/header-button-search.component.html</li><li>shared/accessibility/components/accessibility-button.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-access-close">✕</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-access-close">✕</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.accessibility-chat-buttons .btn-access .btn-access-close {
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accessibility-chat-buttons .btn-access .btn-access-close path {
+  stroke: var(--text-color);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-chat <span class="tag">Chat</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global, contact, my-account</dd>
+      <dt>URL</dt><dd>Global — presente en todas las páginas (chat flotante)</dd>
+      <dt>Contexto</dt><dd>Botón para abrir chat</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/chat/hubtype/hubtype.component.html</li><li>pages/contact/components/contact-chat.component.html</li><li>shared/chat/kakao/kakao.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-chat">Chat</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-chat">Chat</button></div></div></div>
+  <div class="label-block">CSS aplicado (3 reglas)</div>
+  <pre><code>.accessibility-chat-buttons .btn-chat {
+  width: 34px;
+  height: 34px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 3px 11px rgba(0, 0, 0, 0.09);
+}
+
+.accessibility-chat-buttons .btn-chat svg {
+  transform: translateY(3px);
+}
+
+.accessibility-chat-buttons .btn-chat svg path {
+  fill: transparent;
+  stroke: var(--text-color);
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-white <span class="tag">Chat</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (especialmente CMS pages, modales)</dd>
+      <dt>URL</dt><dd>Global — en overlays, fondos oscuros</dd>
+      <dt>Contexto</dt><dd>Botón con fondo blanco (contraste)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>features/cms-render/ui/render-pieces/* (CMS content)</li><li>pages/cms-render-preview-page.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-white">White</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-white">White</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.chat-contact-window .btn.btn-white {
+  background: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-black <span class="tag">Chat</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (CMS, feel app)</dd>
+      <dt>URL</dt><dd>Global — páginas estáticas, ofertas</dd>
+      <dt>Contexto</dt><dd>Botón con fondo negro</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>features/cms-render/ui/render-pieces/* (CMS content)</li><li>pages/feel/* (feel app)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-black">Black</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-black">Black</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.chat-contact-window .btn.btn-black {
+  border: 1px solid #000000;
+  color: #ffffff;
+}</code></pre>
+</div>
+<h2 class="section">Integraciones (2)</h2>
+<div class="card">
+  <h3>.btn-kakao <span class="tag">Integración</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Contact, global</dd>
+      <dt>URL</dt><dd><code>/contact</code>, mercados de Asia</dd>
+      <dt>Contexto</dt><dd>Botón específico para Kakao Talk (mercados KR, SEA)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/chat/kakao/kakao.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-kakao">Kakao</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-kakao">Kakao</button></div></div></div>
+  <div class="label-block">CSS aplicado (1 regla)</div>
+  <pre><code>.btn-kakao {
+  border-radius: 4px;
+  background-color: #ffc700 !important;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.btn-daum-address <span class="tag">Integración</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Checkout, dirección</dd>
+      <dt>URL</dt><dd><code>/checkout/*</code>, <code>/my-account/account-details</code></dd>
+      <dt>Contexto</dt><dd>Botón para búsqueda de dirección Daum (Corea)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>shared/address/address-form/components/input-zipcode/input-zipcode.component.html</li><li>pages/checkout/shipping/components/*</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-daum-address">Daum</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-daum-address">Daum</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<h2 class="section">Dev (1)</h2>
+<div class="card">
+  <h3>.btn-anim-dev <span class="tag">Dev</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Development</dd>
+      <dt>URL</dt><dd><code>/development/*</code></dd>
+      <dt>Contexto</dt><dd>Botón con animaciones (development/testing)</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/development/dev-ui-components/pages/studio/* (dev studio)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn btn-anim-dev">Anim Dev</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn btn-anim-dev">Anim Dev</button></div></div></div>
+  <div class="label-block">CSS aplicado (2 reglas)</div>
+  <pre><code>.dev-studio-templates-scraping-component .btn-anim-dev {
+  display: none;
+  padding-top: 0;
+  left: 0px;
+  margin-left: 5px;
+  min-width: 40px;
+}
+
+.dev-studio-templates-scraping-component .btn-anim-dev span {
+  left: 12px;
+}</code></pre>
+</div>
+<h2 class="section">Design System HG (4)</h2>
+<div class="card">
+  <h3>.hg-btn-badge <span class="tag">HG</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Global (órdenes, my-account)</dd>
+      <dt>URL</dt><dd><code>/my-account/orders</code>, <code>/my-account/*</code></dd>
+      <dt>Contexto</dt><dd>Badge o etiqueta como botón</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/my-account/sections/orders-type/* (orden status)</li><li>features/orders/order-search/* (búsqueda órdenes)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><span class="btn hg-btn-badge">Badge</span></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><span class="btn hg-btn-badge">Badge</span></div></div></div>
+  <div class="label-block">CSS aplicado (12 reglas)</div>
+  <pre><code>.hg-btn-badge {
+  align-items: center;
+  background-color: transparent;
+  color: #737373;
+  display: inline-flex;
+  font-size: 12px;
+  justify-content: center;
+  min-width: var(--hg-spacing-24, 24px);
+  padding-inline: 0;
+  white-space: nowrap;
+}
+
+.hg-btn-badge:focus, .hg-btn-badge.focus, .hg-btn-badge:hover, .hg-btn-badge.hover, .hg-btn-badge:active, .hg-btn-badge.active {
+  color: #000000;
+  border-color: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hg-btn-badge:disabled, .hg-btn-badge[disabled], .hg-btn-badge.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #a9a9a9;
+  border-color: transparent;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.has-light .hg-btn-badge {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.has-light .hg-btn-badge:focus, .has-light .hg-btn-badge.focus, .has-light .hg-btn-badge:hover, .has-light .hg-btn-badge.hover, .has-light .hg-btn-badge:active, .has-light .hg-btn-badge.active {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.has-light .hg-btn-badge:disabled, .has-light .hg-btn-badge[disabled], .has-light .hg-btn-badge.disabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: #f0f0f0;
+}
+
+.tabs2 li .btn-tertiary,
+.tabs2 li .btn-label-m,
+.tabs2 li .hg-btn-badge {
+  padding-block: 0;
+}
+
+.hg-footer-details.is-open .hg-footer-details-panel .btn.hg-btn-badge {
+  color: var(--hg-color-primary);
+}
+
+body.custom-colors .hg-header-layout input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors .hg-header-layout input[type=file]::file-selector-button,
+body.custom-colors .hg-header-layout .subcategory-slider-container .hg-btn-badge,
+body.custom-colors .hg-header-layout .hg-footer-language-list .hg-btn-badge,
+body.custom-colors .hg-header-layout .md-breadcrumb-link,
+body.custom-colors .hg-header-layout .view-label,
+body.custom-colors .hg-header-layout button,
+body.custom-colors .hg-header-layout md-icon path,
+body.custom-colors footer-container input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors footer-container input[type=file]::file-selector-button,
+body.custom-colors footer-container .subcategory-slider-container .hg-btn-badge,
+body.custom-colors footer-container .hg-footer-language-list .hg-btn-badge,
+body.custom-colors footer-container .md-breadcrumb-link,
+body.custom-colors footer-container .view-label,
+body.custom-colors footer-container button,
+body.custom-colors footer-container md-icon path,
+body.custom-colors .section-apollo input:is([type=button], [type=submit], [type=reset]),
+body.custom-colors .section-apollo input[type=file]::file-selector-button,
+body.custom-colors .section-apollo .subcategory-slider-container .hg-btn-badge,
+body.custom-colors .section-apollo .hg-footer-language-list .hg-btn-badge,
+body.custom-colors .section-apollo .md-breadcrumb-link,
+body.custom-colors .section-apollo .view-label,
+body.custom-colors .section-apollo button,
+body.custom-colors .section-apollo md-icon path {
+  color: var(--custom-category-styles-color) !important;
+  fill: var(--custom-category-styles-color) !important;
+}
+
+body.custom-colors .hg-header-layout .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge,
+body.custom-colors footer-container .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge,
+body.custom-colors .section-apollo .subcategory-slider-container .swiper-slide:not(.is-active) .hg-btn-badge {
+  color: #737373 !important;
+}
+
+body.custom-colors .hg-header-layout .hg-footer-language-list .hg-btn-badge:not(.active),
+body.custom-colors footer-container .hg-footer-language-list .hg-btn-badge:not(.active),
+body.custom-colors .section-apollo .hg-footer-language-list .hg-btn-badge:not(.active) {
+  color: #737373 !important;
+}
+
+.tabs .is-active .hg-btn-badge,
+.tabs2 .is-active .hg-btn-badge {
+  color: #000000;
+}</code></pre>
+</div>
+<div class="card">
+  <h3>.hg-home-nav-btn <span class="tag">HG</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Home</dd>
+      <dt>URL</dt><dd><code>/</code> (home page)</dd>
+      <dt>Contexto</dt><dd>Botón de navegación en home</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/home/components/* (home navigation)</li><li>pages/category/modules/filters/components/grid-view-selector.component.html</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn hg-home-nav-btn">Nav</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn hg-home-nav-btn">Nav</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<div class="card">
+  <h3>.hg-home-nav-btn--prev <span class="tag">HG Mod</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Home</dd>
+      <dt>URL</dt><dd><code>/</code> (home carouseles)</dd>
+      <dt>Contexto</dt><dd>Botón anterior en carouseles de home</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/home/components/* (carousel prev)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn hg-home-nav-btn hg-home-nav-btn--prev">‹</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn hg-home-nav-btn hg-home-nav-btn--prev">‹</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+<div class="card">
+  <h3>.hg-home-nav-btn--next <span class="tag">HG Mod</span></h3>
+  <div class="label-block">Dónde se usa</div>
+  <div class="where">
+    <dl>
+      <dt>Páginas</dt><dd>Home</dd>
+      <dt>URL</dt><dd><code>/</code> (home carouseles)</dd>
+      <dt>Contexto</dt><dd>Botón siguiente en carouseles de home</dd>
+      <dt>Archivos</dt><dd><ul class="files"><li>pages/home/components/* (carousel next)</li></ul></dd>
+    </dl>
+  </div>
+  <div class="label-block">Preview (CSS de producción aplicado)</div>
+  <div class="preview-row"><div class="preview"><span class="label">light</span><button class="btn hg-home-nav-btn hg-home-nav-btn--next">›</button></div><div class="preview has-light"><span class="label">.has-light</span><div class="has-light"><button class="btn hg-home-nav-btn hg-home-nav-btn--next">›</button></div></div></div>
+  <div class="label-block">CSS aplicado (0 reglas)</div>
+  <div class="empty">Sin reglas específicas en el bundle. Hereda del <code>.btn</code> base.</div>
+</div>
+</div>
+</body>
+</html>

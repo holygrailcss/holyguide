@@ -15,56 +15,16 @@ imageAlt: Buttons component
 
 ## Auditoría del sistema de botones
 
-Inventario de **todas las clases `btn-*`** detectadas en el código: clases efectivamente definidas en CSS frente a clases usadas en plantillas/componentes. Permite ver qué pertenece al sistema "core", qué son features verticales (PDP, PLP, chat, accesibilidad…) y qué clases están huérfanas (usadas pero sin selector que las estilice).
+Auditoría completa e interactiva del sistema de botones, con renderizado real de cada clase y sus estados sobre las variables del Design System.
 
-| # | Clase | Tipo | Definida | Usada | Categoría | Nota |
-|---|-------|------|----------|-------|-----------|------|
-| 1 | `btn-primary` | Variante | Sí | Sí | Core | Variante principal |
-| 2 | `btn-secondary` | Variante | Sí | Sí | Core | Variante secundaria |
-| 3 | `btn-tertiary` | Variante | Sí | Sí | Core | Variante terciaria |
-| 4 | `btn-link` | Variante | Sí | Sí | Core | Botón tipo enlace |
-| 5 | `btn-link-tab` | Variante | Sí | Sí | Core | Variante de link en tabs |
-| 6 | `btn-link-menu` | Variante | Sí | Sí | Core | Variante de link en menú |
-| 7 | `btn--medium` | Tamaño (BEM) | Sí | Sí | Size | Modificador tamaño |
-| 8 | `btn--full` | Tamaño (BEM) | No | Sí | Size | Sin definición — huérfana |
-| 9 | `btn--large` | Tamaño (BEM) | No | Sí | Size | Sin definición — huérfana |
-| 10 | `btn--color` | Modificador | Sí | Sí | Estado/Color | Selector de color |
-| 11 | `btn--wishlist` | Modificador | Sí | Sí | Feature | Mezcla BEM + feature |
-| 12 | `btn-loading` | Estado | Sí | Sí | State | Estado de carga |
-| 13 | `btn-noselected` | Estado | Sí | Sí | State | Sin selección |
-| 14 | `btn-separate` | Estado | No | Sí | State | Sin definición |
-| 15 | `btn-quick` | Feature | Sí | Sí | PDP/PLP | Compra rápida |
-| 16 | `btn-quick--padded` | Feature | Sí | Sí | PDP/PLP | Variante con padding |
-| 17 | `btn-3d-view` | Feature | Sí | Sí | PDP | Vista 3D |
-| 18 | `btn-look` | Feature | Sí | Sí | PDP | Ver look |
-| 19 | `btn-size` | Feature | Sí | Sí | PDP | Selector de talla |
-| 20 | `btn-swiper` | Feature | Sí | Sí | PLP | Navegación slider |
-| 21 | `btn-shop` | Feature | Sí | Sí | Commerce | Comprar |
-| 22 | `btn-shopcart` | Feature | No | Sí | Commerce | Sin definición |
-| 23 | `btn-clear` | Feature | Sí | Sí | Forms | Limpiar input |
-| 24 | `btn-filter` | Feature | Sí | Sí | PLP | Filtros |
-| 25 | `btn-filter-trigger` | Feature | Sí | Sí | PLP | Abre panel de filtros |
-| 26 | `btn-display-filter-action` | Feature | No | Sí | PLP | Sin definición clara |
-| 27 | `btn-level-1` | Feature | Sí | Sí | Menu | Nivel 1 navegación |
-| 28 | `btn-return-query` | Feature | Sí | Sí | Search | Volver a búsqueda |
-| 29 | `btn-popup` | Legacy | Sí | Sí | Modals | Modales antiguos |
-| 30 | `btn-container` | Legacy | Sí | Sí | Modals | Wrapper, no es botón |
-| 31 | `btn-open-tap` | Legacy | Sí | Sí | CMS | Abrir pestaña |
-| 32 | `btn-access` | Feature | Sí | Sí | A11y | Botón de accesibilidad |
-| 33 | `btn-access-icon` | Feature | Sí | Sí | A11y | Icono interno |
-| 34 | `btn-access-close` | Feature | Sí | Sí | A11y | Cerrar accesibilidad |
-| 35 | `btn-chat` | Feature | Sí | Sí | Chat | Botón chat |
-| 36 | `btn-white` | Feature | Sí | Sí | Chat | Variante color |
-| 37 | `btn-black` | Feature | Sí | Sí | Chat | Variante color |
-| 38 | `btn-kakao` | Integración | Sí | Sí | 3rd-party | KakaoTalk |
-| 39 | `btn-daum-address` | Integración | No | Sí | 3rd-party | Daum address |
-| 40 | `btn-anim-dev` | Dev | Sí | Sí | Internal | Solo dev studio |
-| 41 | `hg-btn-badge` | Design System | Sí | Sí | HG | Badge oficial DS |
-| 42 | `hg-home-nav-btn` | Design System | No | Sí | HG | Nav home |
-| 43 | `hg-home-nav-btn--prev` | Design System | No | Sí | HG | Modificador prev |
-| 44 | `hg-home-nav-btn--next` | Design System | No | Sí | HG | Modificador next |
+<iframe
+  src="/assets/static/components/btn-audit-report.html"
+  title="Auditoría Botones — Duttino"
+  loading="lazy"
+  style="width:100%; height:1200px; border:1px solid #e5e5e5; border-radius:4px; background:#fff;">
+</iframe>
 
-**Resumen:** 44 clases totales — 36 definidas + 8 huérfanas (usadas sin selector). Solo 6 son variantes "core" del sistema; el resto (38) son features, estados o modificadores específicos. Señal clara de que el sistema de botones necesita consolidación.
+<p><a href="/assets/static/components/btn-audit-report.html" target="_blank" rel="noopener">Abrir la auditoría en una pestaña nueva ↗</a></p>
 
 ## Clases Principales de Botones
 
