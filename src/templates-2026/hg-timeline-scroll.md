@@ -57,3 +57,61 @@ En móvil (≤ 768px) se sobreescriben a `28vw` / `70vw` para mejor legibilidad.
   data-year="1985"
   data-text="Texto descriptivo del hito." />
 ```
+
+---
+
+## Checklist para una landing de este estilo
+
+### Contenido y narrativa
+
+- [ ] **Historia con hitos claros** — cada slide representa un momento significativo, no relleno. Mínimo 6, máximo 12-15 puntos.
+- [ ] **Año visible siempre** — el usuario debe saber en qué momento está sin tener que leer el texto completo.
+- [ ] **Textos cortos y directos** — máximo 2-3 líneas por hito. El usuario está en movimiento (scrollando).
+- [ ] **Imágenes de calidad** — ratio 3:4, mínimo 800×1067px. Deben funcionar en blanco y negro o con baja saturación.
+- [ ] **Primera y última imagen** representan inicio y estado actual, no puntos intermedios.
+
+### UX y accesibilidad
+
+- [ ] **Textos alternativos (`alt`)** en todas las imágenes o vacíos si son decorativas (en ese caso el `data-text` ya narra el contenido).
+- [ ] **Navegación por teclado** — Tab/Shift+Tab mueve entre slides, Enter/Space los centra. ✅ Ya implementado.
+- [ ] **Focus visible** — outline claro en `:focus-visible`. ✅ Ya implementado.
+- [ ] **Sin autoplay** — el usuario controla el ritmo con su scroll. No mover imágenes automáticamente.
+- [ ] **Reducción de movimiento** — si el usuario tiene `prefers-reduced-motion`, considerar desactivar el pin o reducir la animación de altura.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  .company_slide {
+    transition: none;
+    height: var(--altura-grande);
+    opacity: 1;
+  }
+}
+```
+
+### Rendimiento
+
+- [ ] **Imágenes en formato moderno** — usar WebP o AVIF con fallback JPG.
+- [ ] **Lazy loading** en imágenes fuera del viewport inicial (`loading="lazy"` en todas salvo la primera).
+- [ ] **Tamaño de imagen ajustado** — no servir imágenes de 3000px para mostrar a 400px. Usar `srcset`.
+- [ ] **GSAP cargado de forma asíncrona** — con `defer` o desde CDN con caché larga. No bloquear el render.
+- [ ] **`invalidateOnRefresh: true`** en el ScrollTrigger para recalcular en resize. ✅ Ya implementado.
+
+### Responsive
+
+- [ ] **Variables CSS de altura por breakpoint** — en móvil las imágenes son más anchas relativas (`vw`) y en desktop más altas (`vh`). ✅ Ya implementado.
+- [ ] **Texto legible en móvil** — comprobar que el `company_text` no se superpone con las imágenes en pantallas pequeñas.
+- [ ] **Gap entre imágenes** ajustado por breakpoint (`hg-gap-8 md:hg-gap-20`). ✅ Ya implementado.
+- [ ] **Probar en iOS Safari** — el scroll pinning de GSAP puede tener comportamientos distintos. Verificar que `100dvh` funciona correctamente.
+
+### Contexto de la página
+
+- [ ] **Sección previa** que prepare al usuario para el scroll horizontal — un headline o un CTA que invite a seguir bajando.
+- [ ] **Indicador de scroll** — un texto o icono que sugiera "scroll para explorar" en el primer estado.
+- [ ] **Sección posterior** — la landing no termina en el slider. Hay un bloque de cierre (CTA, contacto, etc.).
+- [ ] **Meta OG y título de página** correctos para compartir en redes sociales.
+
+### SEO
+
+- [ ] **Contenido de los hitos accesible al crawler** — el `data-text` no lo indexan los buscadores. Considerar un `<noscript>` o un listado accesible oculto visualmente pero visible para bots.
+- [ ] **URLs sin hash** — si hay deep linking a un año concreto, la URL debe ser limpia.
+- [ ] **Heading estructurado** — el `company_year` es decorativo; la narrativa real debe estar en un `<h2>` o similar si esta sección tiene peso SEO.
