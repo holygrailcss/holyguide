@@ -60,58 +60,30 @@ En móvil (≤ 768px) se sobreescriben a `28vw` / `70vw` para mejor legibilidad.
 
 ---
 
-## Checklist para una landing de este estilo
+## Checklist
 
-### Contenido y narrativa
+### HolyGrail 5
 
-- [ ] **Historia con hitos claros** — cada slide representa un momento significativo, no relleno. Mínimo 6, máximo 12-15 puntos.
-- [ ] **Año visible siempre** — el usuario debe saber en qué momento está sin tener que leer el texto completo.
-- [ ] **Textos cortos y directos** — máximo 2-3 líneas por hito. El usuario está en movimiento (scrollando).
-- [ ] **Imágenes de calidad** — ratio 3:4, mínimo 800×1067px. Deben funcionar en blanco y negro o con baja saturación.
-- [ ] **Primera y última imagen** representan inicio y estado actual, no puntos intermedios.
+- [ ] Clases de layout, spacing y tipografía usan helpers de HG5 (`hg-d-flex`, `hg-gap-*`, `hg-body-m`…). No duplicar en CSS propio lo que HG5 ya resuelve.
+- [ ] Los prefijos propios del componente (`company_`) no colisionan con los de HG5 (`hg-`).
 
-### UX y accesibilidad
+### Accesibilidad
 
-- [ ] **Textos alternativos (`alt`)** en todas las imágenes o vacíos si son decorativas (en ese caso el `data-text` ya narra el contenido).
-- [ ] **Navegación por teclado** — Tab/Shift+Tab mueve entre slides, Enter/Space los centra. ✅ Ya implementado.
-- [ ] **Focus visible** — outline claro en `:focus-visible`. ✅ Ya implementado.
-- [ ] **Sin autoplay** — el usuario controla el ritmo con su scroll. No mover imágenes automáticamente.
-- [ ] **Reducción de movimiento** — si el usuario tiene `prefers-reduced-motion`, considerar desactivar el pin o reducir la animación de altura.
+- [ ] Todas las imágenes tienen `alt` (descriptivo o vacío si son puramente decorativas).
+- [ ] Navegación por teclado funciona: Tab entre slides, Enter/Space para centrar.
+- [ ] `:focus-visible` visible en todos los elementos interactivos.
+- [ ] Respetar `prefers-reduced-motion`: desactivar o reducir las animaciones de altura/opacidad.
 
-```css
-@media (prefers-reduced-motion: reduce) {
-  .company_slide {
-    transition: none;
-    height: var(--altura-grande);
-    opacity: 1;
-  }
-}
-```
+### Dispositivos y navegadores
 
-### Rendimiento
+- [ ] **Trackpad Mac** — el scroll con dos dedos avanza el slider con fluidez.
+- [ ] **Mobile físico** — probado en dispositivo real (no solo simulador). Verificar altura, scroll y tap en iOS Safari y Chrome Android.
+- [ ] **Chrome** (desktop y Android)
+- [ ] **Firefox** (desktop)
+- [ ] **Safari** (macOS e iOS) — especial atención al scroll pinning de GSAP en iOS.
 
-- [ ] **Imágenes en formato moderno** — usar WebP o AVIF con fallback JPG.
-- [ ] **Lazy loading** en imágenes fuera del viewport inicial (`loading="lazy"` en todas salvo la primera).
-- [ ] **Tamaño de imagen ajustado** — no servir imágenes de 3000px para mostrar a 400px. Usar `srcset`.
-- [ ] **GSAP cargado de forma asíncrona** — con `defer` o desde CDN con caché larga. No bloquear el render.
-- [ ] **`invalidateOnRefresh: true`** en el ScrollTrigger para recalcular en resize. ✅ Ya implementado.
+### Contenido
 
-### Responsive
-
-- [ ] **Variables CSS de altura por breakpoint** — en móvil las imágenes son más anchas relativas (`vw`) y en desktop más altas (`vh`). ✅ Ya implementado.
-- [ ] **Texto legible en móvil** — comprobar que el `company_text` no se superpone con las imágenes en pantallas pequeñas.
-- [ ] **Gap entre imágenes** ajustado por breakpoint (`hg-gap-8 md:hg-gap-20`). ✅ Ya implementado.
-- [ ] **Probar en iOS Safari** — el scroll pinning de GSAP puede tener comportamientos distintos. Verificar que `100dvh` funciona correctamente.
-
-### Contexto de la página
-
-- [ ] **Sección previa** que prepare al usuario para el scroll horizontal — un headline o un CTA que invite a seguir bajando.
-- [ ] **Indicador de scroll** — un texto o icono que sugiera "scroll para explorar" en el primer estado.
-- [ ] **Sección posterior** — la landing no termina en el slider. Hay un bloque de cierre (CTA, contacto, etc.).
-- [ ] **Meta OG y título de página** correctos para compartir en redes sociales.
-
-### SEO
-
-- [ ] **Contenido de los hitos accesible al crawler** — el `data-text` no lo indexan los buscadores. Considerar un `<noscript>` o un listado accesible oculto visualmente pero visible para bots.
-- [ ] **URLs sin hash** — si hay deep linking a un año concreto, la URL debe ser limpia.
-- [ ] **Heading estructurado** — el `company_year` es decorativo; la narrativa real debe estar en un `<h2>` o similar si esta sección tiene peso SEO.
+- [ ] Imágenes en ratio 3:4, formato WebP, mínimo 800×1067px.
+- [ ] Textos de `data-text` breves (2-3 líneas máximo).
+- [ ] La primera y la última imagen representan el inicio y el momento actual.
