@@ -1,0 +1,223 @@
+---
+layout: base-clean.njk
+---
+<link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
+
+<style>
+  /* Slider Timeline — clases propias con prefijo "company_". */
+
+  :root {
+    --altura-base:   22vh;  /* imagen lejos del centro */
+    --altura-grande: 50vh;  /* imagen centrada */
+  }
+
+  /* Texto (año + descripción) con fade controlado desde JS */
+  .company_text {
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: 90%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  .company_text.company_fading { opacity: 0; }
+
+  .company_year {
+    background-color: var(--hg-color-black);
+    color: var(--hg-color-white);
+    padding: 0.4em 1.2em;
+  }
+
+  /* Padding del track para poder centrar 1ª y última imagen */
+  .company_track {
+    padding: 0 calc((100vw - var(--altura-grande) * 3 / 4) / 2);
+  }
+
+  /* --proximidad la fija JS (0..1) e interpola altura y opacidad */
+  .company_slide {
+    width: auto;
+    max-width: none;
+    height: calc(
+      var(--altura-base)
+      + (var(--altura-grande) - var(--altura-base)) * var(--proximidad, 0)
+    );
+    aspect-ratio: 3 / 4;
+    opacity: calc(0.4 + 0.6 * var(--proximidad, 0));
+    transition: height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+
+  .company_slide:focus-visible {
+    outline: 2px solid var(--hg-color-black);
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --altura-base:   28vw;
+      --altura-grande: 70vw;
+    }
+  }
+</style>
+
+<section class="company_slider hg-h-100vh hg-overflow-hidden hg-position-relative pb-8 md:pb-64">
+  <div class="company_text hg-position-absolute hg-text-center hg-z-10">
+    <span class="company_year hg-body-m hg-d-inline-block mb-24"></span>
+    <p class="company_desc hg-body-m m-0 ttu"></p>
+  </div>
+  <div class="company_track hg-d-flex hg-items-end hg-gap-8 md:hg-gap-20 hg-h-100-percent hg-w-max-content">
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/colonia.jpg" alt=""
+      data-year="1985"
+      data-text="Fundación de la firma en Martorell, Barcelona, como marca de moda masculina. Guiada por la calidad, la atemporalidad y la elegancia discreta, establece desde sus inicios un lenguaje propio basado en la pureza formal y el detalle." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/contraluz-hombre.jpg" alt=""
+      data-year="1991"
+      data-text="Integración en un grupo de distribución internacional. La incorporación impulsa su crecimiento global y refuerza su estructura, manteniendo intacta su identidad sobria y funcional." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/modelo-andando.jpg" alt=""
+      data-year="1995"
+      data-text="Lanzamiento de la colección femenina. La elegancia se amplía a un nuevo universo, manteniendo la coherencia estética." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/niña.jpg" alt=""
+      data-year="2003"
+      data-text="Apertura del primer flagship store en Londres y lanzamiento de la línea Kids. La firma amplía su universo y consolida su presencia internacional sin perder coherencia estética ni esencia." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/contraluz-mujer.jpg" alt=""
+      data-year="2011"
+      data-text="La firma alcanza las 500 tiendas y lanza su tienda online. La apertura del flagship en París consolida su presencia internacional. El entorno digital se integra como extensión natural de su identidad." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/espuela.jpg" alt=""
+      data-year="2013"
+      data-text="Inauguración de la nueva sede y lanzamiento de la colección Equestrian Tour. Innovación y tradición se unen en una propuesta que eleva la artesanía y el savoir-faire." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/fachada-piedra.jpg" alt=""
+      data-year="2014"
+      data-text="Apertura de la primera tienda con certificación LEED. Un paso hacia una arquitectura más responsable, definida por materiales naturales y eficiencia energética." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/pasarela.jpg" alt=""
+      data-year="2016"
+      data-text="Primer desfile de la firma con la colección SS17 en el flagship de Paseo de Gracia, Barcelona. La moda se presenta como experiencia y diálogo con el entorno." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/bw-espalda.jpg" alt=""
+      data-year="2022"
+      data-text="Lanzamiento de la colección Studio. Una evolución hacia el diseño contemporáneo y depurado, con el mismo compromiso con la calidad y la atemporalidad." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/pancarta.jpg" alt=""
+      data-year="2024"
+      data-text="Presentación del nuevo logotipo. Una evolución que redefine la identidad visual con un diseño más limpio y equilibrado. Un cambio que refleja la esencia actual de la firma: elegante, precisa y contemporánea." />
+    <img class="company_slide hg-object-cover hg-shrink-0 hg-cursor-pointer"
+      src="/assets/static/templates/timeline/web.jpg" alt=""
+      data-year="2025"
+      data-text="Lanzamiento de la nueva web y universo digital. La plataforma renueva la experiencia de navegación con un lenguaje visual claro e intuitivo, trasladando al entorno digital los valores esenciales de la firma." />
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+  // Slider horizontal con scroll — Historia de la firma
+  // Las clases/variables propias llevan prefijo "company_" (las de HG5 llevan "hg-").
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Elementos del DOM
+  const company_track  = document.querySelector('.company_track');
+  const company_slides = document.querySelectorAll('.company_slide');
+  const company_textEl = document.querySelector('.company_text');
+  const company_yearEl = company_textEl.querySelector('.company_year');
+  const company_descEl = company_textEl.querySelector('.company_desc');
+
+  // Escala 0..1 a lo largo del scroll: 0 = 1ª imagen centrada, 1 = última centrada
+  const total = company_slides.length;
+  const paso  = 1 / (total - 1);
+
+  let indiceActual = 0;
+
+  // Cambia el texto con fade (la transición la hace el CSS)
+  function cambiarTexto(slide) {
+    company_textEl.classList.add('company_fading');
+    setTimeout(() => {
+      company_yearEl.textContent = slide.dataset.year;
+      company_descEl.textContent = slide.dataset.text;
+      company_textEl.classList.remove('company_fading');
+    }, 300);
+  }
+
+  // Para cada slide calcula --proximidad (1 = centrada, 0 = lejos)
+  // y cambia el texto cuando la imagen central cambia
+  function actualizarSlides(progreso) {
+    company_slides.forEach((slide, i) => {
+      const distancia = Math.abs(progreso - i * paso);
+      const cercania  = Math.max(0, 1 - distancia / paso);
+      slide.style.setProperty('--proximidad', cercania);
+    });
+
+    const indiceCentrado = Math.round(progreso * (total - 1));
+    if (indiceCentrado !== indiceActual) {
+      indiceActual = indiceCentrado;
+      cambiarTexto(company_slides[indiceCentrado]);
+    }
+  }
+
+  // Estado inicial
+  actualizarSlides(0);
+  company_yearEl.textContent = company_slides[0].dataset.year;
+  company_descEl.textContent = company_slides[0].dataset.text;
+
+  // Scroll vertical → movimiento horizontal del track
+  const animacion = gsap.to(company_track, {
+    x: () => -(company_track.scrollWidth - window.innerWidth),
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.company_slider',
+      start: 'top top',
+      end:   () => '+=' + (company_track.scrollWidth - window.innerWidth) * 4, // x4 = scroll más pausado
+      pin:   true,
+      scrub: 1,    // 1s de inercia → suaviza la rueda
+      onUpdate: (self) => actualizarSlides(self.progress),
+      invalidateOnRefresh: true
+    }
+  });
+
+  // Mueve el scroll para centrar la imagen "i"
+  function irAEstaImagen(i) {
+    const objetivo = i / (total - 1);
+    const st = animacion.scrollTrigger;
+    window.scrollTo({
+      top: st.start + objetivo * (st.end - st.start),
+      behavior: 'smooth'
+    });
+  }
+
+  // Click / Enter / Space → ir a esa imagen
+  company_slides.forEach((slide, i) => {
+    slide.tabIndex = 0;
+    slide.addEventListener('click', () => irAEstaImagen(i));
+    slide.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        irAEstaImagen(i);
+      }
+    });
+  });
+
+  // Tab/Shift+Tab entre slides sin que el navegador haga su scroll torpe.
+  // En los bordes dejamos pasar para salir del slider con normalidad.
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const enfocada = document.activeElement;
+    if (!enfocada?.classList.contains('company_slide')) return;
+
+    let indice = -1;
+    company_slides.forEach((s, i) => { if (s === enfocada) indice = i; });
+
+    const siguiente = e.shiftKey ? indice - 1 : indice + 1;
+    if (siguiente < 0 || siguiente >= total) return;
+
+    e.preventDefault();
+    company_slides[siguiente].focus({ preventScroll: true });
+    irAEstaImagen(siguiente);
+  });
+</script>

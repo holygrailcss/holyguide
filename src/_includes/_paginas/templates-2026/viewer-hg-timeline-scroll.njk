@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+{% import "_macros/_token.njk" as token %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+{% call insert.template('_tokens/preview-2026/','token-hg-timeline-scroll', '100vh','https://www.figma.com') %} {% endcall %}
+
+<div class="main-content innermarkdown">
+{{ content | safe }}
+</div>
