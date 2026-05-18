@@ -1,0 +1,129 @@
+{% extends "base-clean.njk" %}
+{% block content %}
+{# Token hg-2006 (templates-2026): grid editorial con vídeos en loop + columna de captions #}
+<link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
+<link rel="stylesheet" href="/assets/css/hg-2006.css" />
+
+{% set items = [
+  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/colonia.jpg',          video: '/assets/video/bag-01.mp4' },
+  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-hombre.jpg', video: '/assets/video/bag-02.mp4' },
+  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pasarela.jpg',         video: '/assets/video/bag-03.mp4' },
+  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/fachada-piedra.jpg',   video: '/assets/video/bag-04.mp4' },
+  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/web.jpg',              video: '/assets/video/bag-05.mp4' },
+  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/espuela.jpg',          video: '/assets/video/bag-06.mp4' },
+  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/bw-espalda.jpg',       video: '/assets/video/bag-07.mp4' },
+  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/modelo-andando.jpg',   video: '/assets/video/bag-08.mp4' },
+  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/niña.jpg',             video: '/assets/video/bag-09.mp4' },
+  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pancarta.jpg',         video: '/assets/video/bag-10.mp4' },
+  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/gafas.jpg',            video: '/assets/video/bag-11.mp4' },
+  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: '/assets/video/bag-12.mp4' },
+  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: '/assets/video/bag-13.mp4' },
+  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: '/assets/video/bag-14.mp4' },
+  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4' },
+  { idx: '16', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-2.jpg',   video: '/assets/video/bag-16.mp4' },
+  { idx: '17', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1995-detalle-1.jpg',   video: '/assets/video/bag-17.mp4' },
+  { idx: '18', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1995-detalle-2.jpg',   video: '/assets/video/bag-18.mp4' },
+  { idx: '19', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-1.jpg',   video: '/assets/video/bag-19.mp4' },
+  { idx: '20', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-2.jpg',   video: '/assets/video/bag-20.mp4' }
+] %}
+
+<section class="t2006_wrap hg-d-block">
+
+  <header class="t2006_header hg-d-flex hg-flex-column hg-items-center hg-text-center pt-32 pb-32 pl-16 pr-16">
+    <span class="t2006_brand hg-body-s ttu hg-color-charcoal">Massimo Dutti</span>
+    <h1 class="t2006_title hg-body-xl ttu m-0 mt-8 mb-8">Bolsos</h1>
+    <p class="t2006_intro hg-body-m m-0 hg-color-charcoal" style="max-width: 640px;">
+      Una selección editorial filmada en loop. Cada pieza se presenta en vídeo continuo —
+      el detalle, el material y la silueta en movimiento.
+    </p>
+  </header>
+
+  <div class="t2006_layout">
+
+    {# Grid principal de vídeos — cada tile enlaza a la detail con ?item=NN #}
+    <ul class="t2006_grid list-clear m-0 p-0" role="list">
+      {% for item in items %}
+      <li class="t2006_tile">
+        <a class="t2006_tile-link" href="/token-hg-2006-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
+          <figure class="m-0 t2006_figure">
+            <video
+              class="t2006_video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              poster="{{ item.poster }}"
+              aria-label="{{ item.label }} — featured by {{ item.by }}">
+              <source src="{{ item.video }}" type="video/mp4" />
+              <source src="{{ item.video | replace('.mp4','.webm') }}" type="video/webm" />
+            </video>
+            <figcaption class="t2006_tile-caption hg-body-s ttu mt-4">
+              <span class="t2006_tile-index">[ {{ item.idx }} ]</span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {# Columna de captions a la derecha (desktop) / debajo (mobile) — cada línea enlaza a la detail #}
+    <aside class="t2006_captions" aria-label="Lista de productos">
+      <ol class="t2006_caption-list list-clear m-0 p-0">
+        {% for item in items %}
+        <li class="t2006_caption">
+          <a class="t2006_caption-link" href="/token-hg-2006-detail/?item={{ item.idx }}">
+            <span class="t2006_index title-l">[ {{ item.idx }} ]</span>
+            <span class="t2006_caption-text title-l ttu">
+              {{ item.label }}<br />
+              <span class="hg-color-charcoal">Featured by: {{ item.by }}</span>
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ol>
+    </aside>
+
+  </div>
+</section>
+
+<script>
+  // Vídeos en loop — pausar si el usuario prefiere reducir movimiento.
+  // También reanudar/pausar en función de la visibilidad (IntersectionObserver)
+  // para no consumir CPU con vídeos fuera de pantalla.
+  (function () {
+    const videos = document.querySelectorAll('.t2006_video');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function applyReducedMotion() {
+      videos.forEach(v => {
+        if (reduceMotion.matches) {
+          v.pause();
+          v.removeAttribute('autoplay');
+        } else {
+          v.play().catch(() => { /* autoplay bloqueado por el navegador, no pasa nada */ });
+        }
+      });
+    }
+
+    applyReducedMotion();
+    reduceMotion.addEventListener?.('change', applyReducedMotion);
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const video = entry.target;
+          if (reduceMotion.matches) return;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { rootMargin: '100px 0px', threshold: 0.1 });
+
+      videos.forEach(v => io.observe(v));
+    }
+  })();
+</script>
+{% endblock %}

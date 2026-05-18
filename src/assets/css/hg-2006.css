@@ -1,0 +1,219 @@
+/* ============================================================
+   hg-2006 — Grid editorial Massimo Dutti
+   Vídeos en loop + columna de captions
+   Responsive: 5 cols (desktop) / 3 cols (tablet) / 2 cols (mobile)
+   Prefijo propio: .t2006_*    (HolyGrail 5 usa .hg-*)
+   ============================================================ */
+
+.t2006_wrap {
+  --t2006-gap: 0;
+  --t2006-tile-ratio: 3 / 4;
+  --t2006-bg: var(--hg-color-white, #fff);
+  --t2006-fg: var(--hg-color-primary, #000);
+  --t2006-muted: var(--hg-color-charcoal, #6b6b6b);
+  --t2006-pad-x: 0;
+
+  background: var(--t2006-bg);
+  color: var(--t2006-fg);
+  font-family: inherit;
+}
+
+.t2006_header {
+  /* sin línea inferior — las imágenes deben aparecer pegadas */
+  border-bottom: 0;
+}
+
+.t2006_brand {
+  letter-spacing: 0.18em;
+}
+
+.t2006_title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* ------------------------------------------------------------
+   Layout principal:
+   - Mobile: bloques apilados (grid de vídeos, luego captions)
+   - Desktop ≥ 992px: split en 2 columnas (grid + captions)
+   ------------------------------------------------------------ */
+.t2006_layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--t2006-gap);
+  padding: var(--t2006-gap) var(--t2006-pad-x);
+}
+
+@media (min-width: 992px) {
+  .t2006_layout {
+    /* vídeos a la izquierda + columna de captions con tope de 500px */
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 500px);
+    align-items: start;
+    padding-inline: var(--t2006-gap);
+  }
+}
+
+/* ------------------------------------------------------------
+   Grid de tiles de vídeo
+   ------------------------------------------------------------ */
+.t2006_grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--t2006-gap);
+}
+
+@media (min-width: 768px) {
+  .t2006_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .t2006_grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------
+   Tile y vídeo
+   ------------------------------------------------------------ */
+.t2006_tile {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.t2006_figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.t2006_video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--t2006-tile-ratio);
+  object-fit: cover;
+  /* sin gris de fondo mientras carga: pegamos el color del wrap */
+  background: var(--t2006-bg);
+}
+
+/* Caption inline bajo cada tile (índice) — mostrado solo cuando no hay columna lateral */
+.t2006_tile-caption {
+  display: none;
+  padding: 4px 6px 12px;
+  letter-spacing: 0.12em;
+  color: var(--t2006-muted);
+}
+
+@media (max-width: 991.98px) {
+  /* En mobile/tablet podemos mostrar el índice bajo cada tile (opcional);
+     dejamos oculto por defecto para no duplicar con la lista inferior. */
+  .t2006_tile-caption {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   Columna de captions
+   ------------------------------------------------------------ */
+.t2006_captions {
+  padding: 16px 16px 32px;
+  max-width: 500px;
+}
+
+@media (min-width: 992px) {
+  .t2006_captions {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 16px 24px;
+    /* sin separación gris entre videos y captions */
+    border-left: 0;
+    scrollbar-width: thin;
+  }
+}
+
+.t2006_caption-list {
+  list-style: none;
+}
+
+.t2006_caption {
+  padding: 6px 0;
+  line-height: 1.3;
+}
+
+/* Número a la izquierda, texto a la derecha (en lados opuestos del row).
+   El texto del bloque derecho sigue siendo legible (left-aligned dentro del bloque). */
+.t2006_caption-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  color: inherit;
+  text-decoration: none;
+  padding: 6px 0;
+  transition: opacity 0.2s ease;
+}
+
+.t2006_caption-link:focus-visible {
+  outline: 2px solid var(--hg-color-primary, #000);
+  outline-offset: 2px;
+}
+
+.t2006_index {
+  flex: 0 0 auto;
+}
+
+.t2006_caption-text {
+  flex: 0 1 auto;
+  text-align: left;
+}
+
+/* Hover-state: al pasar por encima de cualquier link de la lista,
+   los demás bajan su opacidad. El que está debajo del cursor se queda al 100%. */
+.t2006_caption-list:hover .t2006_caption-link {
+  opacity: 0.3;
+}
+
+.t2006_caption-list .t2006_caption-link:hover,
+.t2006_caption-list .t2006_caption-link:focus-visible {
+  opacity: 1;
+}
+
+.t2006_tile-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.t2006_tile-link:focus-visible {
+  outline: 2px solid var(--hg-color-primary, #000);
+  outline-offset: -2px;
+}
+
+.t2006_index {
+  color: var(--t2006-muted);
+  letter-spacing: 0.08em;
+}
+
+.t2006_caption-text {
+  letter-spacing: 0.06em;
+}
+
+/* ------------------------------------------------------------
+   Reduced motion
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .t2006_video {
+    /* el JS pausa el vídeo; aquí evitamos cualquier animación añadida */
+    animation: none !important;
+    transition: none !important;
+  }
+}

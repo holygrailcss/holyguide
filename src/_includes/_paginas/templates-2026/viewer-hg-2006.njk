@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+{% import "_macros/_token.njk" as token %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+{% call insert.template('_tokens/preview-2026/','token-hg-2006', '900px','https://www.figma.com', descripcion or 'Grid editorial Massimo Dutti — vídeos en loop + columna de captions. Responsive con HolyGrail 5.', 'hg-2006.css') %} {% endcall %}
+
+<div class="main-content innermarkdown">
+{{ content | safe }}
+</div>
