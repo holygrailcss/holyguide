@@ -32,17 +32,17 @@ Página de detalle a la que se llega desde `hg-bolsos-v2` cuando el usuario hace
 
 ### Clases propias
 
-Prefijo `bolsosd_` para no colisionar con HolyGrail 5 (`hg-`):
+Prefijo `bolsos-detail_` para no colisionar con HolyGrail 5 (`hg-`):
 
 | Clase | Descripción |
 |-------|-------------|
-| `.bolsosd_stage` | Wrap principal del hero (pinned con ScrollTrigger) |
-| `.bolsosd_video` | Cada `<video>` apilado (front + back) para cross-fade |
-| `.bolsosd_caption` | Bloque flotante izquierdo con índice + label + BUY |
-| `.bolsosd_shelf` | Fila de miniaturas en la parte inferior |
-| `.bolsosd_thumb` | Cada miniatura, con su estado base y `.is-active` |
-| `.bolsosd_thumb-card` | Card blanca detrás de la miniatura activa |
-| `.bolsosd_scrollspace` | Bloques transparentes que dan altura al scroll para que cada item tenga su tramo |
+| `.bolsos-detail_stage` | Wrap principal del hero (pinned con ScrollTrigger) |
+| `.bolsos-detail_video` | Cada `<video>` apilado (front + back) para cross-fade |
+| `.bolsos-detail_caption` | Bloque flotante izquierdo con índice + label + BUY |
+| `.bolsos-detail_shelf` | Fila de miniaturas en la parte inferior |
+| `.bolsos-detail_thumb` | Cada miniatura, con su estado base y `.is-active` |
+| `.bolsos-detail_thumb-card` | Card blanca detrás de la miniatura activa |
+| `.bolsos-detail_scrollspace` | Bloques transparentes que dan altura al scroll para que cada item tenga su tramo |
 
 ### Datos esperados
 
