@@ -19,12 +19,7 @@
   { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: '/assets/video/bag-12.mp4' },
   { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: '/assets/video/bag-13.mp4' },
   { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: '/assets/video/bag-14.mp4' },
-  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4' },
-  { idx: '16', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-2.jpg',   video: '/assets/video/bag-16.mp4' },
-  { idx: '17', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1995-detalle-1.jpg',   video: '/assets/video/bag-17.mp4' },
-  { idx: '18', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1995-detalle-2.jpg',   video: '/assets/video/bag-18.mp4' },
-  { idx: '19', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-1.jpg',   video: '/assets/video/bag-19.mp4' },
-  { idx: '20', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-2.jpg',   video: '/assets/video/bag-20.mp4' }
+  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4' }
 ] %}
 
 <section class="bolsos-v2_wrap hg-d-block">
@@ -35,7 +30,7 @@
     <ul class="bolsos-v2_grid list-clear m-0 p-0" role="list">
       {% for item in items %}
       <li class="bolsos-v2_tile">
-        <a class="bolsos-v2_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
+        <a class="bolsos-v2_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" data-idx="{{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
           <figure class="m-0 bolsos-v2_figure">
             <video
               class="bolsos-v2_video"
@@ -63,7 +58,7 @@
       <ol class="bolsos-v2_caption-list list-clear m-0 p-0">
         {% for item in items %}
         <li class="bolsos-v2_caption">
-          <a class="bolsos-v2_caption-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}">
+          <a class="bolsos-v2_caption-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" data-idx="{{ item.idx }}">
             <span class="bolsos-v2_index title-l">[ {{ item.idx }} ]</span>
             <span class="bolsos-v2_caption-text title-l ttu">
               {{ item.label }}<br />
@@ -114,6 +109,31 @@
       }, { rootMargin: '100px 0px', threshold: 0.1 });
 
       videos.forEach(v => io.observe(v));
+    }
+
+    // ------------------------------------------------------------
+    // Hover/foco cruzado entre tiles del grid y la lista de captions.
+    // Hover sobre un tile → el caption con el mismo data-idx queda al 100%,
+    // el resto bajan a 0.3 (lo lleva el CSS al ver .is-tile-hovering en el wrap).
+    // ------------------------------------------------------------
+    const wrap  = document.querySelector('.bolsos-v2_wrap');
+    const tiles = document.querySelectorAll('.bolsos-v2_tile-link');
+    if (wrap && tiles.length) {
+      const captionByIdx = new Map();
+      document.querySelectorAll('.bolsos-v2_caption-link').forEach(c => {
+        captionByIdx.set(c.dataset.idx, c);
+      });
+
+      tiles.forEach(tile => {
+        const caption = captionByIdx.get(tile.dataset.idx);
+        if (!caption) return;
+        const on  = () => { wrap.classList.add('is-tile-hovering'); caption.classList.add('is-active'); };
+        const off = () => { wrap.classList.remove('is-tile-hovering'); caption.classList.remove('is-active'); };
+        tile.addEventListener('mouseenter', on);
+        tile.addEventListener('mouseleave', off);
+        tile.addEventListener('focus', on);
+        tile.addEventListener('blur', off);
+      });
     }
   })();
 </script>

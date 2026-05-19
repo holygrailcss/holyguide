@@ -167,7 +167,7 @@
   text-align: left;
 }
 
-/* Hover-state: al pasar por encima de cualquier link de la lista,
+/* Hover-state directo sobre la lista: al pasar por encima de un link de la lista,
    los demás bajan su opacidad. El que está debajo del cursor se queda al 100%. */
 .bolsos-v2_caption-list:hover .bolsos-v2_caption-link {
   opacity: 0.3;
@@ -175,6 +175,17 @@
 
 .bolsos-v2_caption-list .bolsos-v2_caption-link:hover,
 .bolsos-v2_caption-list .bolsos-v2_caption-link:focus-visible {
+  opacity: 1;
+}
+
+/* Hover-state CRUZADO: hover/foco sobre un video del grid → la lista reacciona
+   igual que si hicieras hover sobre el caption correspondiente. El JS pone
+   .is-tile-hovering en el wrap y .is-active en el caption emparejado por idx. */
+.bolsos-v2_wrap.is-tile-hovering .bolsos-v2_caption-link {
+  opacity: 0.3;
+}
+
+.bolsos-v2_wrap.is-tile-hovering .bolsos-v2_caption-link.is-active {
   opacity: 1;
 }
 
