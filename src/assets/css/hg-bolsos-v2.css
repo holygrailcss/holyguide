@@ -45,17 +45,13 @@
 .bolsos_grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* Mobile / tablet: 3 columnas */
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--bolsos-gap);
 }
 
-@media (min-width: 768px) {
-  .bolsos_grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (min-width: 992px) {
+  /* Desktop: 5 columnas */
   .bolsos_grid {
     grid-template-columns: repeat(5, 1fr);
   }
