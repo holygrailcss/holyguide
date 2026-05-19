@@ -1,19 +1,19 @@
 ---
-layout: _paginas/templates-2026/viewer-hg-2006-detail.njk
-permalink: /templates-2026/hg-2006-detail/
+layout: _paginas/templates-2026/viewer-hg-bolsos-v2-detail.njk
+permalink: /templates-2026/hg-bolsos-v2-detail/
 page_section: templates-2026
-titulo: hg-2006-detail
-descripcion: Página de detalle de hg-2006 — hero con vídeo de fondo + caption flotante a la izquierda + shelf de miniaturas abajo. Click en miniatura cambia el vídeo y la hace crecer (GSAP). Scroll vertical cambia el texto a la izquierda.
+titulo: hg-bolsos-v2-detail
+descripcion: Página de detalle de hg-bolsos-v2 — hero con vídeo de fondo + caption flotante a la izquierda + shelf de miniaturas abajo. Click en miniatura cambia el vídeo y la hace crecer (GSAP). Scroll vertical cambia el texto a la izquierda.
 image: /assets/static/images/1.jpg
 author: autor
 date: 2026-05-18
 tags: ["templates-2026"]
-imageAlt: hg-2006-detail
+imageAlt: hg-bolsos-v2-detail
 ---
 
-## hg-2006-detail
+## hg-bolsos-v2-detail
 
-Página de detalle a la que se llega desde `hg-2006` cuando el usuario hace click en un tile de vídeo o en una caption. Se navega por query string: `/templates-2026/hg-2006-detail/?item=02`. Si no se recibe `?item=...` arranca con el primer item activo.
+Página de detalle a la que se llega desde `hg-bolsos-v2` cuando el usuario hace click en un tile de vídeo o en una caption. Se navega por query string: `/templates-2026/hg-bolsos-v2-detail/?item=02`. Si no se recibe `?item=...` arranca con el primer item activo.
 
 ### Anatomía
 
@@ -32,21 +32,21 @@ Página de detalle a la que se llega desde `hg-2006` cuando el usuario hace clic
 
 ### Clases propias
 
-Prefijo `t2006d_` para no colisionar con HolyGrail 5 (`hg-`):
+Prefijo `bolsosd_` para no colisionar con HolyGrail 5 (`hg-`):
 
 | Clase | Descripción |
 |-------|-------------|
-| `.t2006d_stage` | Wrap principal del hero (pinned con ScrollTrigger) |
-| `.t2006d_video` | Cada `<video>` apilado (front + back) para cross-fade |
-| `.t2006d_caption` | Bloque flotante izquierdo con índice + label + BUY |
-| `.t2006d_shelf` | Fila de miniaturas en la parte inferior |
-| `.t2006d_thumb` | Cada miniatura, con su estado base y `.is-active` |
-| `.t2006d_thumb-card` | Card blanca detrás de la miniatura activa |
-| `.t2006d_scrollspace` | Bloques transparentes que dan altura al scroll para que cada item tenga su tramo |
+| `.bolsosd_stage` | Wrap principal del hero (pinned con ScrollTrigger) |
+| `.bolsosd_video` | Cada `<video>` apilado (front + back) para cross-fade |
+| `.bolsosd_caption` | Bloque flotante izquierdo con índice + label + BUY |
+| `.bolsosd_shelf` | Fila de miniaturas en la parte inferior |
+| `.bolsosd_thumb` | Cada miniatura, con su estado base y `.is-active` |
+| `.bolsosd_thumb-card` | Card blanca detrás de la miniatura activa |
+| `.bolsosd_scrollspace` | Bloques transparentes que dan altura al scroll para que cada item tenga su tramo |
 
 ### Datos esperados
 
-Igual que `hg-2006`: array `items` con `idx`, `label`, `by`, `poster`, `video`.
+Igual que `hg-bolsos-v2`: array `items` con `idx`, `label`, `by`, `poster`, `video`.
 
 ---
 

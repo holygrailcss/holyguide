@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+{% import "_macros/_token.njk" as token %}
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="container-fluid">
+  {% include '_website/hero.njk' %}
+</div>
+
+{% call insert.template('_tokens/preview-2026/','token-hg-bolsos-v2-detail', '900px','https://www.figma.com', descripcion or 'Detail de hg-bolsos-v2 — hero con vídeo de fondo + caption flotante + shelf de miniaturas. Click cambia el vídeo y crece la miniatura (GSAP). Scroll cambia solo el texto a la izquierda.', 'hg-bolsos-v2-detail.css') %} {% endcall %}
+
+<div class="main-content innermarkdown">
+{{ content | safe }}
+</div>

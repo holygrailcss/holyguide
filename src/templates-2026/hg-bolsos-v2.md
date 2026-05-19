@@ -1,17 +1,17 @@
 ---
-layout: _paginas/templates-2026/viewer-hg-2006.njk
-permalink: /templates-2026/hg-2006/
+layout: _paginas/templates-2026/viewer-hg-bolsos-v2.njk
+permalink: /templates-2026/hg-bolsos-v2/
 page_section: templates-2026
-titulo: hg-2006
+titulo: hg-bolsos-v2
 descripcion: Galería editorial tipo Massimo Dutti — grid de vídeos en loop con columna de índice/captions. Responsive (desktop con 5 columnas de vídeo + columna de captions; mobile en stack).
 image: /assets/static/images/1.jpg
 author: autor
 date: 2026-05-18
 tags: ["templates-2026"]
-imageAlt: hg-2006
+imageAlt: hg-bolsos-v2
 ---
 
-## hg-2006
+## hg-bolsos-v2
 
 Grid editorial inspirado en la página de bolsos de Massimo Dutti. Cada celda del grid es un **vídeo en loop** (autoplay, muted, playsinline) y una **columna de captions** acompaña la rejilla con la lista numerada de productos.
 
@@ -27,23 +27,23 @@ Grid editorial inspirado en la página de bolsos de Massimo Dutti. Cada celda de
 
 ### Clases propias
 
-Las clases del componente llevan el prefijo `t2006_` para no colisionar con HolyGrail 5 (`hg-`):
+Las clases del componente llevan el prefijo `bolsos_` para no colisionar con HolyGrail 5 (`hg-`):
 
 | Clase | Descripción |
 |-------|-------------|
-| `.t2006_wrap` | Contenedor de la sección |
-| `.t2006_grid` | El grid principal (cambia de columnas por breakpoint) |
-| `.t2006_tile` | Cada celda con un vídeo |
-| `.t2006_video` | Vídeo en loop dentro del tile |
-| `.t2006_captions` | Columna o bloque con la lista de captions |
-| `.t2006_caption` | Cada línea de caption |
-| `.t2006_index` | Número/índice del producto (p. ej. `[ 01 ]`) |
+| `.bolsos_wrap` | Contenedor de la sección |
+| `.bolsos_grid` | El grid principal (cambia de columnas por breakpoint) |
+| `.bolsos_tile` | Cada celda con un vídeo |
+| `.bolsos_video` | Vídeo en loop dentro del tile |
+| `.bolsos_captions` | Columna o bloque con la lista de captions |
+| `.bolsos_caption` | Cada línea de caption |
+| `.bolsos_index` | Número/índice del producto (p. ej. `[ 01 ]`) |
 
 ### Datos por tile
 
 ```html
-<figure class="t2006_tile">
-  <video class="t2006_video" autoplay loop muted playsinline poster="...">
+<figure class="bolsos_tile">
+  <video class="bolsos_video" autoplay loop muted playsinline poster="...">
     <source src="/assets/video/bag-01.mp4" type="video/mp4" />
     <source src="/assets/video/bag-01.webm" type="video/webm" />
   </video>
@@ -63,7 +63,7 @@ Las clases del componente llevan el prefijo `t2006_` para no colisionar con Holy
 ### HolyGrail 5
 
 - [ ] Spacing, tipografía y layout base usan helpers de HG5.
-- [ ] Las clases propias `t2006_` no colisionan con `hg-`.
+- [ ] Las clases propias `bolsos_` no colisionan con `hg-`.
 - [ ] Colores tomados de `var(--hg-color-*)`.
 
 ### Vídeo

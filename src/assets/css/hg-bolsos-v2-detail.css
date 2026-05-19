@@ -1,36 +1,36 @@
 /* ============================================================
-   hg-2006-detail — Detalle Massimo Dutti
+   hg-bolsos-v2-detail — Detalle Massimo Dutti
    Hero con bg-video + caption flotante + shelf de miniaturas
    GSAP para click & ScrollTrigger para el cambio de texto.
-   Prefijo: .t2006d_*
+   Prefijo: .bolsosd_*
    ============================================================ */
 
-.t2006d_wrap {
-  --t2006d-bg: var(--hg-color-white, #fff);
-  --t2006d-fg: var(--hg-color-white, #fff);
-  --t2006d-muted: rgba(255, 255, 255, 0.7);
-  --t2006d-pad: 24px;
+.bolsosd_wrap {
+  --bolsosd-bg: var(--hg-color-white, #fff);
+  --bolsosd-fg: var(--hg-color-white, #fff);
+  --bolsosd-muted: rgba(255, 255, 255, 0.7);
+  --bolsosd-pad: 24px;
 
   /* Posición horizontal compartida entre el shelf (padding-left del wrap)
      y el caption (left). Así el caption queda siempre alineado con el primer thumb. */
-  --t2006d-shelf-x: 24px;
+  --bolsosd-shelf-x: 24px;
 
   /* Todas las miniaturas miden exactamente lo mismo (ratio 3:4 vía aspect-ratio) */
-  --t2006d-thumb-w: 56px;
+  --bolsosd-thumb-w: 56px;
 
   /* Escala única — el activo se ve igual de grande que el hover.
      La única diferencia visual entre activo y hover es la card blanca de fondo. */
-  --t2006d-scale-hover: 1.35;
+  --bolsosd-scale-hover: 1.35;
 
   position: relative;
   background: #111;
-  color: var(--t2006d-fg);
+  color: var(--bolsosd-fg);
 }
 
 /* ------------------------------------------------------------
    Stage: hero pinned con el vídeo de fondo + overlays
    ------------------------------------------------------------ */
-.t2006d_stage {
+.bolsosd_stage {
   position: relative;
   /* 100vh es estático en iOS y en iframes redimensionables. 100dvh sigue al
      viewport real cuando cambia (incluye la barra dinámica de mobile). */
@@ -41,7 +41,7 @@
   background: #000;
 }
 
-.t2006d_video {
+.bolsosd_video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -55,13 +55,13 @@
   z-index: 1;
 }
 
-.t2006d_video.is-front {
+.bolsosd_video.is-front {
   opacity: 1;
   z-index: 2;
 }
 
 /* Capa de oscurecimiento ligero para que el texto siempre se lea sobre el vídeo */
-.t2006d_stage::after {
+.bolsosd_stage::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -75,10 +75,10 @@
 }
 
 /* Marca arriba a la izquierda */
-.t2006d_brand {
+.bolsosd_brand {
   position: absolute;
-  top: var(--t2006d-pad);
-  left: var(--t2006d-pad);
+  top: var(--bolsosd-pad);
+  left: var(--bolsosd-pad);
   z-index: 3;
   letter-spacing: 0.04em;
 }
@@ -86,11 +86,11 @@
 /* ------------------------------------------------------------
    Caption flotante a la izquierda (índice + label + by + BUY)
    ------------------------------------------------------------ */
-.t2006d_caption {
+.bolsosd_caption {
   position: absolute;
   z-index: 3;
   /* Alineado con la primera miniatura del shelf */
-  left: var(--t2006d-shelf-x);
+  left: var(--bolsosd-shelf-x);
   top: 50%;
   transform: translateY(-50%);
   max-width: min(420px, 70vw);
@@ -100,49 +100,49 @@
   pointer-events: none;
 }
 
-.t2006d_caption-inner {
+.bolsosd_caption-inner {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 /* Re-activar pointer-events sólo en lo que sí es interactivo */
-.t2006d_buy {
+.bolsosd_buy {
   pointer-events: auto;
 }
 
 /* Cada línea del caption: bloque normal. La animación de cambio es un
    fade-opacity puro hecho con GSAP — sin máscara ni desplazamiento. */
-.t2006d_caption-idx,
-.t2006d_caption-label,
-.t2006d_caption-by {
+.bolsosd_caption-idx,
+.bolsosd_caption-label,
+.bolsosd_caption-by {
   opacity: 1;
   will-change: opacity;
 }
 
-.t2006d_caption-idx {
+.bolsosd_caption-idx {
   letter-spacing: 0.08em;
 }
 
-.t2006d_caption-by {
-  color: var(--t2006d-muted);
+.bolsosd_caption-by {
+  color: var(--bolsosd-muted);
 }
 
-.t2006d_buy {
+.bolsosd_buy {
   align-self: flex-start;
   margin-top: 16px;
   padding: 10px 22px;
   border: 1px solid currentColor;
   background: transparent;
-  color: var(--t2006d-fg);
+  color: var(--bolsosd-fg);
   text-decoration: none;
   letter-spacing: 0.08em;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.t2006d_buy:hover,
-.t2006d_buy:focus-visible {
-  background: var(--t2006d-fg);
+.bolsosd_buy:hover,
+.bolsosd_buy:focus-visible {
+  background: var(--bolsosd-fg);
   color: #000;
   outline: none;
 }
@@ -150,7 +150,7 @@
 /* ------------------------------------------------------------
    Shelf de miniaturas en la parte inferior
    ------------------------------------------------------------ */
-.t2006d_shelf-wrap {
+.bolsosd_shelf-wrap {
   position: absolute;
   z-index: 3;
   left: 0;
@@ -161,15 +161,15 @@
      padding-top = sitio que reserva el wrap para el crecimiento vertical del
      thumb activo/hover. Sin esto, `overflow-x: auto` coercia `overflow-y`
      a `auto` y recorta el crecimiento. */
-  padding: 48px var(--t2006d-shelf-x) 0;
+  padding: 48px var(--bolsosd-shelf-x) 0;
   overflow-x: auto;
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-.t2006d_shelf-wrap::-webkit-scrollbar { display: none; }
+.bolsosd_shelf-wrap::-webkit-scrollbar { display: none; }
 
-.t2006d_shelf {
+.bolsosd_shelf {
   list-style: none;
   display: flex;
   align-items: flex-end;            /* el borde inferior queda anclado → crecen hacia arriba */
@@ -179,14 +179,14 @@
   padding: 0 0 8px;                  /* el espacio superior lo da el wrap */
 }
 
-.t2006d_thumb-li {
+.bolsosd_thumb-li {
   list-style: none;
   flex: 0 0 auto;
 }
 
-.t2006d_thumb {
+.bolsosd_thumb {
   position: relative;
-  width: var(--t2006d-thumb-w);
+  width: var(--bolsosd-thumb-w);
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;          /* texto del índice pegado a la izquierda */
@@ -204,26 +204,26 @@
 
 /* Hover y activo → MISMA anchura (ratio se mantiene gracias a aspect-ratio en la img).
    Como el shelf usa align-items: flex-end, la imagen crece "hacia arriba". */
-.t2006d_thumb:hover,
-.t2006d_thumb:focus-visible {
-  width: calc(var(--t2006d-thumb-w) * var(--t2006d-scale-hover));
+.bolsosd_thumb:hover,
+.bolsosd_thumb:focus-visible {
+  width: calc(var(--bolsosd-thumb-w) * var(--bolsosd-scale-hover));
   outline: none;
   z-index: 4;
 }
 
-.t2006d_thumb:focus-visible {
+.bolsosd_thumb:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 6px;
 }
 
-.t2006d_thumb.is-active {
-  width: calc(var(--t2006d-thumb-w) * var(--t2006d-scale-hover));
+.bolsosd_thumb.is-active {
+  width: calc(var(--bolsosd-thumb-w) * var(--bolsosd-scale-hover));
   z-index: 5;
 }
 
 /* Imagen: TODAS comparten ratio 3:4 — al crecer el thumb, la img crece manteniendo ratio.
    `width: 100%` la liga al ancho actual del botón, y `aspect-ratio` la mantiene en 3:4. */
-.t2006d_thumb-img {
+.bolsosd_thumb-img {
   display: block;
   width: 100%;
   height: auto;
@@ -233,13 +233,13 @@
 }
 
 /* Etiqueta [01] [02] … debajo de la imagen, alineada a la IZQUIERDA */
-.t2006d_thumb-idx {
+.bolsosd_thumb-idx {
   margin-top: 6px;
   align-self: flex-start;
   text-align: left;
   font-size: 10px;
   letter-spacing: 0.08em;
-  color: var(--t2006d-fg);
+  color: var(--bolsosd-fg);
   opacity: 0.85;
 }
 
@@ -252,16 +252,16 @@
    sobre los thumbs. Por eso van con pointer-events: none — ScrollTrigger
    sigue funcionando porque mide posición de scroll, no hit-tests.
    ------------------------------------------------------------ */
-.t2006d_scrollspace,
-.t2006d_scrollstep {
+.bolsosd_scrollspace,
+.bolsosd_scrollstep {
   pointer-events: none;
 }
 
-.t2006d_scrollspace {
+.bolsosd_scrollspace {
   position: relative;
 }
 
-.t2006d_scrollstep {
+.bolsosd_scrollstep {
   height: 100vh;
   height: 100dvh;
 }
@@ -270,32 +270,32 @@
    Mobile
    ------------------------------------------------------------ */
 @media (max-width: 767.98px) {
-  .t2006d_wrap {
-    --t2006d-pad: 16px;
-    --t2006d-shelf-x: 16px;
-    --t2006d-thumb-w: 44px;
-    --t2006d-scale-hover: 1.3;
+  .bolsosd_wrap {
+    --bolsosd-pad: 16px;
+    --bolsosd-shelf-x: 16px;
+    --bolsosd-thumb-w: 44px;
+    --bolsosd-scale-hover: 1.3;
   }
 
-  .t2006d_caption {
+  .bolsosd_caption {
     top: auto;
     bottom: 38vh;
     transform: none;
     max-width: 80vw;
   }
 
-  .t2006d_shelf-wrap {
+  .bolsosd_shelf-wrap {
     bottom: 16px;
   }
 
-  .t2006d_shelf {
+  .bolsosd_shelf {
     /* mobile: también pegadas y alineadas a la izquierda */
     gap: 0;
     margin: 0;
     padding: 24px 0 6px;
   }
 
-  .t2006d_brand {
+  .bolsosd_brand {
     font-size: 12px;
   }
 }
@@ -304,11 +304,11 @@
    Reduced motion
    ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
-  .t2006d_video,
-  .t2006d_thumb,
-  .t2006d_caption-idx,
-  .t2006d_caption-label,
-  .t2006d_caption-by {
+  .bolsosd_video,
+  .bolsosd_thumb,
+  .bolsosd_caption-idx,
+  .bolsosd_caption-label,
+  .bolsosd_caption-by {
     transition: none !important;
     animation: none !important;
   }

@@ -1,8 +1,8 @@
 {% extends "base-clean.njk" %}
 {% block content %}
-{# Token hg-2006 (templates-2026): grid editorial con vídeos en loop + columna de captions #}
+{# Token hg-bolsos-v2 (templates-2026): grid editorial con vídeos en loop + columna de captions #}
 <link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
-<link rel="stylesheet" href="/assets/css/hg-2006.css" />
+<link rel="stylesheet" href="/assets/css/hg-bolsos-v2.css" />
 
 {% set items = [
   { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/colonia.jpg',          video: '/assets/video/bag-01.mp4' },
@@ -27,27 +27,18 @@
   { idx: '20', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-2.jpg',   video: '/assets/video/bag-20.mp4' }
 ] %}
 
-<section class="t2006_wrap hg-d-block">
+<section class="bolsos_wrap hg-d-block">
 
-  <header class="t2006_header hg-d-flex hg-flex-column hg-items-center hg-text-center pt-32 pb-32 pl-16 pr-16">
-    <span class="t2006_brand hg-body-s ttu hg-color-charcoal">Massimo Dutti</span>
-    <h1 class="t2006_title hg-body-xl ttu m-0 mt-8 mb-8">Bolsos</h1>
-    <p class="t2006_intro hg-body-m m-0 hg-color-charcoal" style="max-width: 640px;">
-      Una selección editorial filmada en loop. Cada pieza se presenta en vídeo continuo —
-      el detalle, el material y la silueta en movimiento.
-    </p>
-  </header>
-
-  <div class="t2006_layout">
+  <div class="bolsos_layout">
 
     {# Grid principal de vídeos — cada tile enlaza a la detail con ?item=NN #}
-    <ul class="t2006_grid list-clear m-0 p-0" role="list">
+    <ul class="bolsos_grid list-clear m-0 p-0" role="list">
       {% for item in items %}
-      <li class="t2006_tile">
-        <a class="t2006_tile-link" href="/token-hg-2006-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
-          <figure class="m-0 t2006_figure">
+      <li class="bolsos_tile">
+        <a class="bolsos_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
+          <figure class="m-0 bolsos_figure">
             <video
-              class="t2006_video"
+              class="bolsos_video"
               autoplay
               loop
               muted
@@ -58,8 +49,8 @@
               <source src="{{ item.video }}" type="video/mp4" />
               <source src="{{ item.video | replace('.mp4','.webm') }}" type="video/webm" />
             </video>
-            <figcaption class="t2006_tile-caption hg-body-s ttu mt-4">
-              <span class="t2006_tile-index">[ {{ item.idx }} ]</span>
+            <figcaption class="bolsos_tile-caption hg-body-s ttu mt-4">
+              <span class="bolsos_tile-index">[ {{ item.idx }} ]</span>
             </figcaption>
           </figure>
         </a>
@@ -68,13 +59,13 @@
     </ul>
 
     {# Columna de captions a la derecha (desktop) / debajo (mobile) — cada línea enlaza a la detail #}
-    <aside class="t2006_captions" aria-label="Lista de productos">
-      <ol class="t2006_caption-list list-clear m-0 p-0">
+    <aside class="bolsos_captions" aria-label="Lista de productos">
+      <ol class="bolsos_caption-list list-clear m-0 p-0">
         {% for item in items %}
-        <li class="t2006_caption">
-          <a class="t2006_caption-link" href="/token-hg-2006-detail/?item={{ item.idx }}">
-            <span class="t2006_index title-l">[ {{ item.idx }} ]</span>
-            <span class="t2006_caption-text title-l ttu">
+        <li class="bolsos_caption">
+          <a class="bolsos_caption-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}">
+            <span class="bolsos_index title-l">[ {{ item.idx }} ]</span>
+            <span class="bolsos_caption-text title-l ttu">
               {{ item.label }}<br />
               <span class="hg-color-charcoal">Featured by: {{ item.by }}</span>
             </span>
@@ -92,7 +83,7 @@
   // También reanudar/pausar en función de la visibilidad (IntersectionObserver)
   // para no consumir CPU con vídeos fuera de pantalla.
   (function () {
-    const videos = document.querySelectorAll('.t2006_video');
+    const videos = document.querySelectorAll('.bolsos_video');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     function applyReducedMotion() {
