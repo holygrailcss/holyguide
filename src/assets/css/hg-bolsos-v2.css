@@ -2,19 +2,19 @@
    hg-bolsos-v2 — Grid editorial Massimo Dutti
    Vídeos en loop + columna de captions
    Responsive: 5 cols (desktop) / 3 cols (tablet) / 2 cols (mobile)
-   Prefijo propio: .bolsos_*    (HolyGrail 5 usa .hg-*)
+   Prefijo propio: .bolsos-v2_*    (HolyGrail 5 usa .hg-*)
    ============================================================ */
 
-.bolsos_wrap {
-  --bolsos-gap: 0;
-  --bolsos-tile-ratio: 3 / 4;
-  --bolsos-bg: var(--hg-color-white, #fff);
-  --bolsos-fg: var(--hg-color-primary, #000);
-  --bolsos-muted: var(--hg-color-charcoal, #6b6b6b);
-  --bolsos-pad-x: 0;
+.bolsos-v2_wrap {
+  --bolsos-v2-gap: 0;
+  --bolsos-v2-tile-ratio: 3 / 4;
+  --bolsos-v2-bg: var(--hg-color-white, #fff);
+  --bolsos-v2-fg: var(--hg-color-primary, #000);
+  --bolsos-v2-muted: var(--hg-color-charcoal, #6b6b6b);
+  --bolsos-v2-pad-x: 0;
 
-  background: var(--bolsos-bg);
-  color: var(--bolsos-fg);
+  background: var(--bolsos-v2-bg);
+  color: var(--bolsos-v2-fg);
   font-family: inherit;
 }
 
@@ -23,36 +23,36 @@
    - Mobile: bloques apilados (grid de vídeos, luego captions)
    - Desktop ≥ 992px: split en 2 columnas (grid + captions)
    ------------------------------------------------------------ */
-.bolsos_layout {
+.bolsos-v2_layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--bolsos-gap);
-  padding: var(--bolsos-gap) var(--bolsos-pad-x);
+  gap: var(--bolsos-v2-gap);
+  padding: var(--bolsos-v2-gap) var(--bolsos-v2-pad-x);
 }
 
 @media (min-width: 992px) {
-  .bolsos_layout {
+  .bolsos-v2_layout {
     /* vídeos a la izquierda + columna de captions con tope de 500px */
     grid-template-columns: minmax(0, 1fr) minmax(400px, 500px);
     align-items: start;
-    padding-inline: var(--bolsos-gap);
+    padding-inline: var(--bolsos-v2-gap);
   }
 }
 
 /* ------------------------------------------------------------
    Grid de tiles de vídeo
    ------------------------------------------------------------ */
-.bolsos_grid {
+.bolsos-v2_grid {
   list-style: none;
   display: grid;
   /* Mobile / tablet: 3 columnas */
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--bolsos-gap);
+  gap: var(--bolsos-v2-gap);
 }
 
 @media (min-width: 992px) {
   /* Desktop: 5 columnas */
-  .bolsos_grid {
+  .bolsos-v2_grid {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -60,33 +60,33 @@
 /* ------------------------------------------------------------
    Tile y vídeo
    ------------------------------------------------------------ */
-.bolsos_tile {
+.bolsos-v2_tile {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
 
-.bolsos_figure {
+.bolsos-v2_figure {
   position: relative;
   display: block;
   width: 100%;
   margin: 0;
 }
 
-.bolsos_video {
+.bolsos-v2_video {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: var(--bolsos-tile-ratio);
+  aspect-ratio: var(--bolsos-v2-tile-ratio);
   object-fit: cover;
   /* sin gris de fondo mientras carga: pegamos el color del wrap */
-  background: var(--bolsos-bg);
+  background: var(--bolsos-v2-bg);
 }
 
 /* Índice [ NN ] superpuesto en la esquina superior izquierda de cada tile.
    Es el "numerito" que relaciona la imagen con la línea correspondiente del
    listado de captions de la derecha. */
-.bolsos_tile-caption {
+.bolsos-v2_tile-caption {
   position: absolute;
   top: 10px;
   left: 12px;
@@ -100,7 +100,7 @@
   pointer-events: none;
 }
 
-.bolsos_tile-index {
+.bolsos-v2_tile-index {
   font-size: 11px;
   line-height: 1;
 }
@@ -108,13 +108,13 @@
 /* ------------------------------------------------------------
    Columna de captions
    ------------------------------------------------------------ */
-.bolsos_captions {
+.bolsos-v2_captions {
   padding: 16px 16px 32px;
   max-width: 500px;
 }
 
 @media (min-width: 992px) {
-  .bolsos_captions {
+  .bolsos-v2_captions {
     position: sticky;
     top: 0;
     align-self: start;
@@ -127,18 +127,18 @@
   }
 }
 
-.bolsos_caption-list {
+.bolsos-v2_caption-list {
   list-style: none;
 }
 
-.bolsos_caption {
+.bolsos-v2_caption {
   padding: 6px 0;
   line-height: 1.3;
 }
 
 /* Número a la izquierda, texto a la derecha (en lados opuestos del row).
    El texto del bloque derecho sigue siendo legible (left-aligned dentro del bloque). */
-.bolsos_caption-link {
+.bolsos-v2_caption-link {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -149,48 +149,54 @@
   transition: opacity 0.2s ease;
 }
 
-.bolsos_caption-link:focus-visible {
+.bolsos-v2_caption-link:focus-visible {
   outline: 2px solid var(--hg-color-primary, #000);
   outline-offset: 2px;
 }
 
-.bolsos_index {
+.bolsos-v2_index {
   flex: 0 0 auto;
 }
 
-.bolsos_caption-text {
+.bolsos-v2_caption-text {
   flex: 0 1 auto;
   text-align: left;
 }
 
 /* Hover-state: al pasar por encima de cualquier link de la lista,
    los demás bajan su opacidad. El que está debajo del cursor se queda al 100%. */
-.bolsos_caption-list:hover .bolsos_caption-link {
+.bolsos-v2_caption-list:hover .bolsos-v2_caption-link {
   opacity: 0.3;
 }
 
-.bolsos_caption-list .bolsos_caption-link:hover,
-.bolsos_caption-list .bolsos_caption-link:focus-visible {
+.bolsos-v2_caption-list .bolsos-v2_caption-link:hover,
+.bolsos-v2_caption-list .bolsos-v2_caption-link:focus-visible {
   opacity: 1;
 }
 
-.bolsos_tile-link {
+.bolsos-v2_tile-link {
   display: block;
   color: inherit;
   text-decoration: none;
 }
 
-.bolsos_tile-link:focus-visible {
+/* Anular el `a:hover { opacity: 0.6 }` global de style.css — los videos del
+   grid no deben perder opacidad al hacer hover sobre el tile. */
+.bolsos-v2_tile-link:hover {
+  opacity: 1;
+}
+
+.bolsos-v2_tile-link:focus-visible {
   outline: 2px solid var(--hg-color-primary, #000);
   outline-offset: -2px;
 }
 
-.bolsos_index {
-  color: var(--bolsos-muted);
+.bolsos-v2_index {
+  color: var(--bolsos-v2-muted);
   letter-spacing: 0.08em;
 }
 
-.bolsos_caption-text {
+.bolsos-v2_caption-text {
   letter-spacing: 0.06em;
 }
 
@@ -198,7 +204,7 @@
    Reduced motion
    ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
-  .bolsos_video {
+  .bolsos-v2_video {
     /* el JS pausa el vídeo; aquí evitamos cualquier animación añadida */
     animation: none !important;
     transition: none !important;

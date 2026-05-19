@@ -27,18 +27,18 @@
   { idx: '20', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-2.jpg',   video: '/assets/video/bag-20.mp4' }
 ] %}
 
-<section class="bolsos_wrap hg-d-block">
+<section class="bolsos-v2_wrap hg-d-block">
 
-  <div class="bolsos_layout">
+  <div class="bolsos-v2_layout">
 
     {# Grid principal de vídeos — cada tile enlaza a la detail con ?item=NN #}
-    <ul class="bolsos_grid list-clear m-0 p-0" role="list">
+    <ul class="bolsos-v2_grid list-clear m-0 p-0" role="list">
       {% for item in items %}
-      <li class="bolsos_tile">
-        <a class="bolsos_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
-          <figure class="m-0 bolsos_figure">
+      <li class="bolsos-v2_tile">
+        <a class="bolsos-v2_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
+          <figure class="m-0 bolsos-v2_figure">
             <video
-              class="bolsos_video"
+              class="bolsos-v2_video"
               autoplay
               loop
               muted
@@ -49,8 +49,8 @@
               <source src="{{ item.video }}" type="video/mp4" />
               <source src="{{ item.video | replace('.mp4','.webm') }}" type="video/webm" />
             </video>
-            <figcaption class="bolsos_tile-caption hg-body-s ttu mt-4">
-              <span class="bolsos_tile-index">[ {{ item.idx }} ]</span>
+            <figcaption class="bolsos-v2_tile-caption hg-body-s ttu mt-4">
+              <span class="bolsos-v2_tile-index">[ {{ item.idx }} ]</span>
             </figcaption>
           </figure>
         </a>
@@ -59,13 +59,13 @@
     </ul>
 
     {# Columna de captions a la derecha (desktop) / debajo (mobile) — cada línea enlaza a la detail #}
-    <aside class="bolsos_captions" aria-label="Lista de productos">
-      <ol class="bolsos_caption-list list-clear m-0 p-0">
+    <aside class="bolsos-v2_captions" aria-label="Lista de productos">
+      <ol class="bolsos-v2_caption-list list-clear m-0 p-0">
         {% for item in items %}
-        <li class="bolsos_caption">
-          <a class="bolsos_caption-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}">
-            <span class="bolsos_index title-l">[ {{ item.idx }} ]</span>
-            <span class="bolsos_caption-text title-l ttu">
+        <li class="bolsos-v2_caption">
+          <a class="bolsos-v2_caption-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}">
+            <span class="bolsos-v2_index title-l">[ {{ item.idx }} ]</span>
+            <span class="bolsos-v2_caption-text title-l ttu">
               {{ item.label }}<br />
               <span class="hg-color-charcoal">Featured by: {{ item.by }}</span>
             </span>
@@ -83,7 +83,7 @@
   // También reanudar/pausar en función de la visibilidad (IntersectionObserver)
   // para no consumir CPU con vídeos fuera de pantalla.
   (function () {
-    const videos = document.querySelectorAll('.bolsos_video');
+    const videos = document.querySelectorAll('.bolsos-v2_video');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     function applyReducedMotion() {

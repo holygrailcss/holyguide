@@ -27,23 +27,23 @@ Grid editorial inspirado en la página de bolsos de Massimo Dutti. Cada celda de
 
 ### Clases propias
 
-Las clases del componente llevan el prefijo `bolsos_` para no colisionar con HolyGrail 5 (`hg-`):
+Las clases del componente llevan el prefijo `bolsos-v2_` para no colisionar con HolyGrail 5 (`hg-`):
 
 | Clase | Descripción |
 |-------|-------------|
-| `.bolsos_wrap` | Contenedor de la sección |
-| `.bolsos_grid` | El grid principal (cambia de columnas por breakpoint) |
-| `.bolsos_tile` | Cada celda con un vídeo |
-| `.bolsos_video` | Vídeo en loop dentro del tile |
-| `.bolsos_captions` | Columna o bloque con la lista de captions |
-| `.bolsos_caption` | Cada línea de caption |
-| `.bolsos_index` | Número/índice del producto (p. ej. `[ 01 ]`) |
+| `.bolsos-v2_wrap` | Contenedor de la sección |
+| `.bolsos-v2_grid` | El grid principal (cambia de columnas por breakpoint) |
+| `.bolsos-v2_tile` | Cada celda con un vídeo |
+| `.bolsos-v2_video` | Vídeo en loop dentro del tile |
+| `.bolsos-v2_captions` | Columna o bloque con la lista de captions |
+| `.bolsos-v2_caption` | Cada línea de caption |
+| `.bolsos-v2_index` | Número/índice del producto (p. ej. `[ 01 ]`) |
 
 ### Datos por tile
 
 ```html
-<figure class="bolsos_tile">
-  <video class="bolsos_video" autoplay loop muted playsinline poster="...">
+<figure class="bolsos-v2_tile">
+  <video class="bolsos-v2_video" autoplay loop muted playsinline poster="...">
     <source src="/assets/video/bag-01.mp4" type="video/mp4" />
     <source src="/assets/video/bag-01.webm" type="video/webm" />
   </video>
@@ -63,7 +63,7 @@ Las clases del componente llevan el prefijo `bolsos_` para no colisionar con Hol
 ### HolyGrail 5
 
 - [ ] Spacing, tipografía y layout base usan helpers de HG5.
-- [ ] Las clases propias `bolsos_` no colisionan con `hg-`.
+- [ ] Las clases propias `bolsos-v2_` no colisionan con `hg-`.
 - [ ] Colores tomados de `var(--hg-color-*)`.
 
 ### Vídeo

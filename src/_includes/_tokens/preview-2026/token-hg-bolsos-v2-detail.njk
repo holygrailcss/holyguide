@@ -27,47 +27,47 @@
   { idx: '20', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1997-detalle-2.jpg',   video: '/assets/video/bag-20.mp4', thumb: '/assets/static/templates/timeline/1997-detalle-2.jpg' }
 ] %}
 
-<section class="bolsos-detail_wrap" data-items='[
+<section class="bolsos-v2-detail_wrap" data-items='[
   {% for item in items %}{"idx":"{{item.idx}}","label":"{{item.label}}","by":"{{item.by}}","video":"{{item.video}}","poster":"{{item.poster}}"}{% if not loop.last %},{% endif %}{% endfor %}
 ]'>
 
   {# Stage pinned: video de fondo + caption flotante + shelf #}
-  <div class="bolsos-detail_stage">
+  <div class="bolsos-v2-detail_stage">
 
     {# Dos <img> apilados para hacer crossfade del fondo entre el item actual y el siguiente.
        Al clicar una miniatura, su imagen pasa al fondo (a la imagen "back", que se hace front
        con un fade) — la del shelf siempre coincide con la grande. #}
-    <img id="bolsos-detail_image_a" class="bolsos-detail_video is-front" src="{{ items[0].thumb }}" alt="" aria-hidden="true" />
-    <img id="bolsos-detail_image_b" class="bolsos-detail_video" src="" alt="" aria-hidden="true" />
+    <img id="bolsos-v2-detail_image_a" class="bolsos-v2-detail_video is-front" src="{{ items[0].thumb }}" alt="" aria-hidden="true" />
+    <img id="bolsos-v2-detail_image_b" class="bolsos-v2-detail_video" src="" alt="" aria-hidden="true" />
 
     {# Etiqueta marca arriba a la izquierda #}
-    <div class="bolsos-detail_brand title-l ttu">Bolsos</div>
+    <div class="bolsos-v2-detail_brand title-l ttu">Bolsos</div>
 
     {# Caption flotante a la izquierda — al cambiar, el texto hace fade-out con
        opacidad y luego aparece el nuevo con fade-in. #}
-    <div class="bolsos-detail_caption" aria-live="polite">
-      <div class="bolsos-detail_caption-inner">
-        <div class="bolsos-detail_caption-idx title-l" data-bind="idx">[ {{ items[0].idx }} ]</div>
-        <div class="bolsos-detail_caption-label title-l ttu" data-bind="label">{{ items[0].label }}</div>
-        <div class="bolsos-detail_caption-by title-l ttu" data-bind="by">Featured by: {{ items[0].by }}</div>
-        <a href="#" class="bolsos-detail_buy title-l ttu" data-bind="buy">BUY</a>
+    <div class="bolsos-v2-detail_caption" aria-live="polite">
+      <div class="bolsos-v2-detail_caption-inner">
+        <div class="bolsos-v2-detail_caption-idx title-l" data-bind="idx">[ {{ items[0].idx }} ]</div>
+        <div class="bolsos-v2-detail_caption-label title-l ttu" data-bind="label">{{ items[0].label }}</div>
+        <div class="bolsos-v2-detail_caption-by title-l ttu" data-bind="by">Featured by: {{ items[0].by }}</div>
+        <a href="#" class="bolsos-v2-detail_buy title-l ttu" data-bind="buy">BUY</a>
       </div>
     </div>
 
     {# Shelf de miniaturas en la parte inferior #}
-    <div class="bolsos-detail_shelf-wrap">
-      <ul class="bolsos-detail_shelf list-clear m-0 p-0" role="list">
+    <div class="bolsos-v2-detail_shelf-wrap">
+      <ul class="bolsos-v2-detail_shelf list-clear m-0 p-0" role="list">
         {% for item in items %}
-        <li class="bolsos-detail_thumb-li">
+        <li class="bolsos-v2-detail_thumb-li">
           <button type="button"
-                  class="bolsos-detail_thumb {% if loop.index0 == 0 %}is-active{% endif %}"
+                  class="bolsos-v2-detail_thumb {% if loop.index0 == 0 %}is-active{% endif %}"
                   data-idx="{{ item.idx }}"
                   data-image="{{ item.thumb }}"
                   data-label="{{ item.label }}"
                   data-by="{{ item.by }}"
                   aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
-            <img class="bolsos-detail_thumb-img" src="{{ item.thumb }}" alt="" loading="lazy" />
-            <span class="bolsos-detail_thumb-idx title-l">[ {{ item.idx }} ]</span>
+            <img class="bolsos-v2-detail_thumb-img" src="{{ item.thumb }}" alt="" loading="lazy" />
+            <span class="bolsos-v2-detail_thumb-idx title-l">[ {{ item.idx }} ]</span>
           </button>
         </li>
         {% endfor %}
@@ -77,9 +77,9 @@
   </div>
 
   {# Bloques transparentes para dar altura al scroll (sin tocar el vídeo, sólo cambian el texto) #}
-  <div class="bolsos-detail_scrollspace" aria-hidden="true">
+  <div class="bolsos-v2-detail_scrollspace" aria-hidden="true">
     {% for item in items %}
-    <div class="bolsos-detail_scrollstep"
+    <div class="bolsos-v2-detail_scrollstep"
          data-idx="{{ item.idx }}"
          data-label="{{ item.label }}"
          data-by="{{ item.by }}"></div>
@@ -91,17 +91,17 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
 (function () {
-  const root = document.querySelector('.bolsos-detail_wrap');
+  const root = document.querySelector('.bolsos-v2-detail_wrap');
   if (!root) return;
 
-  const stage      = root.querySelector('.bolsos-detail_stage');
-  const imageA     = root.querySelector('#bolsos-detail_image_a');
-  const imageB     = root.querySelector('#bolsos-detail_image_b');
-  const thumbs     = Array.from(root.querySelectorAll('.bolsos-detail_thumb'));
+  const stage      = root.querySelector('.bolsos-v2-detail_stage');
+  const imageA     = root.querySelector('#bolsos-v2-detail_image_a');
+  const imageB     = root.querySelector('#bolsos-v2-detail_image_b');
+  const thumbs     = Array.from(root.querySelectorAll('.bolsos-v2-detail_thumb'));
   const captionIdx = root.querySelector('[data-bind="idx"]');
   const captionLbl = root.querySelector('[data-bind="label"]');
   const captionBy  = root.querySelector('[data-bind="by"]');
-  const steps      = Array.from(root.querySelectorAll('.bolsos-detail_scrollstep'));
+  const steps      = Array.from(root.querySelectorAll('.bolsos-v2-detail_scrollstep'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   // Estado: qué <img> está al frente (la otra recibe la nueva imagen y crossfade encima)
@@ -242,7 +242,7 @@
   });
 
   // También navegación por flechas izquierda/derecha cuando un thumb tiene el foco.
-  root.querySelector('.bolsos-detail_shelf').addEventListener('keydown', (e) => {
+  root.querySelector('.bolsos-v2-detail_shelf').addEventListener('keydown', (e) => {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     const current = thumbs.findIndex(t => t === document.activeElement);
     if (current < 0) return;
@@ -271,10 +271,10 @@
     // `invalidateOnRefresh: true` → recomputa medidas al hacer refresh
     // (necesario para que el pin se adapte al cambiar la viewport).
     ScrollTrigger.create({
-      trigger: '.bolsos-detail_wrap',
+      trigger: '.bolsos-v2-detail_wrap',
       start: 'top top',
       end:   'bottom bottom',
-      pin:   '.bolsos-detail_stage',
+      pin:   '.bolsos-v2-detail_stage',
       pinSpacing: false,
       invalidateOnRefresh: true
     });
