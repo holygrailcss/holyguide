@@ -109,12 +109,16 @@
    Columna de captions
    ------------------------------------------------------------ */
 .bolsos-v2_captions {
+  /* Mobile / tablet: ocupa el ancho completo, sin tope. */
+  width: 100%;
+  max-width: none;
   padding: 16px 16px 32px;
-  max-width: 500px;
 }
 
 @media (min-width: 992px) {
   .bolsos-v2_captions {
+    /* Desktop: tope de 500px y sticky a la derecha del grid. */
+    max-width: 500px;
     position: sticky;
     top: 0;
     align-self: start;
