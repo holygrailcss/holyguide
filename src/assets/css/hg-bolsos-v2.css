@@ -10,7 +10,6 @@
   --bolsos-v2-tile-ratio: 3 / 4;
   --bolsos-v2-bg: var(--hg-color-white, #fff);
   --bolsos-v2-fg: var(--hg-color-primary, #000);
-  --bolsos-v2-muted: var(--hg-color-charcoal, #6b6b6b);
   --bolsos-v2-pad-x: 0;
 
   background: var(--bolsos-v2-bg);
@@ -94,7 +93,6 @@
   margin: 0;
   padding: 0;
   color: #fff;
-  letter-spacing: 0.12em;
   /* Pequeño shadow para que se lea sobre cualquier fotograma del vídeo */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
   pointer-events: none;
@@ -160,14 +158,12 @@
 
 .bolsos-v2_index {
   flex: 0 0 auto;
-  color: var(--bolsos-v2-muted);
-  letter-spacing: 0.08em;
+  color: var(--hg-color-dark-grey, #333);
 }
 
 .bolsos-v2_caption-text {
   flex: 0 1 auto;
   text-align: left;
-  letter-spacing: 0.06em;
 }
 
 /* Hover-state directo sobre la lista: al pasar por encima de un link de la lista,

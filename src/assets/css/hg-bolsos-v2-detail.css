@@ -80,7 +80,6 @@
   top: var(--bolsos-v2-detail-pad);
   left: var(--bolsos-v2-detail-pad);
   z-index: 3;
-  letter-spacing: 0.04em;
 }
 
 /* ------------------------------------------------------------
@@ -120,10 +119,6 @@
   will-change: opacity;
 }
 
-.bolsos-v2-detail_caption-idx {
-  letter-spacing: 0.08em;
-}
-
 .bolsos-v2-detail_caption-by {
   color: var(--bolsos-v2-detail-muted);
 }
@@ -137,7 +132,6 @@
   color: var(--bolsos-v2-detail-fg);
   font: inherit;            /* reset de <button> para heredar tipografía del caption */
   text-decoration: none;
-  letter-spacing: 0.08em;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -240,7 +234,6 @@
   align-self: flex-start;
   text-align: left;
   font-size: 10px;
-  letter-spacing: 0.08em;
   color: var(--bolsos-v2-detail-fg);
   opacity: 0.85;
 }
