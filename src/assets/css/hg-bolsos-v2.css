@@ -160,11 +160,14 @@
 
 .bolsos-v2_index {
   flex: 0 0 auto;
+  color: var(--bolsos-v2-muted);
+  letter-spacing: 0.08em;
 }
 
 .bolsos-v2_caption-text {
   flex: 0 1 auto;
   text-align: left;
+  letter-spacing: 0.06em;
 }
 
 /* Hover-state directo sobre la lista: al pasar por encima de un link de la lista,
@@ -206,21 +209,12 @@
   outline-offset: -2px;
 }
 
-.bolsos-v2_index {
-  color: var(--bolsos-v2-muted);
-  letter-spacing: 0.08em;
-}
-
-.bolsos-v2_caption-text {
-  letter-spacing: 0.06em;
-}
-
 /* ------------------------------------------------------------
    Reduced motion
    ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   .bolsos-v2_video {
-    /* el JS pausa el vídeo; aquí evitamos cualquier animación añadida */
+    /* sin animaciones añadidas en los tiles */
     animation: none !important;
     transition: none !important;
   }

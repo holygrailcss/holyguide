@@ -1,49 +1,42 @@
 {% extends "base-clean.njk" %}
 {% block content %}
-{# Token hg-bolsos-v2 (templates-2026): grid editorial con vídeos en loop + columna de captions #}
+{# Token hg-bolsos-v2 (templates-2026): grid editorial de imágenes + columna de captions #}
 <link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
 <link rel="stylesheet" href="/assets/css/hg-bolsos-v2.css" />
 
 {% set items = [
-  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/colonia.jpg',          video: '/assets/video/bag-01.mp4' },
-  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-hombre.jpg', video: '/assets/video/bag-02.mp4' },
-  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pasarela.jpg',         video: '/assets/video/bag-03.mp4' },
-  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/fachada-piedra.jpg',   video: '/assets/video/bag-04.mp4' },
-  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/web.jpg',              video: '/assets/video/bag-05.mp4' },
-  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/espuela.jpg',          video: '/assets/video/bag-06.mp4' },
-  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/bw-espalda.jpg',       video: '/assets/video/bag-07.mp4' },
-  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/modelo-andando.jpg',   video: '/assets/video/bag-08.mp4' },
-  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/niña.jpg',             video: '/assets/video/bag-09.mp4' },
-  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pancarta.jpg',         video: '/assets/video/bag-10.mp4' },
-  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/gafas.jpg',            video: '/assets/video/bag-11.mp4' },
-  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: '/assets/video/bag-12.mp4' },
-  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: '/assets/video/bag-13.mp4' },
-  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: '/assets/video/bag-14.mp4' },
-  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4' }
+  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/colonia.jpg' },
+  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', image: '/assets/static/templates/timeline/contraluz-hombre.jpg' },
+  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', image: '/assets/static/templates/timeline/pasarela.jpg' },
+  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/fachada-piedra.jpg' },
+  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', image: '/assets/static/templates/timeline/web.jpg' },
+  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/espuela.jpg' },
+  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/bw-espalda.jpg' },
+  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', image: '/assets/static/templates/timeline/modelo-andando.jpg' },
+  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/niña.jpg' },
+  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', image: '/assets/static/templates/timeline/pancarta.jpg' },
+  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', image: '/assets/static/templates/timeline/gafas.jpg' },
+  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/contraluz-mujer.jpg' },
+  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1985-detalle-1.jpg' },
+  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1985-detalle-2.jpg' },
+  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1991-detalle-1.jpg' }
 ] %}
 
 <section class="bolsos-v2_wrap hg-d-block">
 
   <div class="bolsos-v2_layout">
 
-    {# Grid principal de vídeos — cada tile enlaza a la detail con ?item=NN #}
+    {# Grid principal de imágenes — cada tile enlaza a la detail con ?item=NN #}
     <ul class="bolsos-v2_grid list-clear m-0 p-0" role="list">
       {% for item in items %}
       <li class="bolsos-v2_tile">
         <a class="bolsos-v2_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" data-idx="{{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
           <figure class="m-0 bolsos-v2_figure">
-            <video
+            <img
               class="bolsos-v2_video"
-              autoplay
-              loop
-              muted
-              playsinline
-              preload="metadata"
-              poster="{{ item.poster }}"
-              aria-label="{{ item.label }} — featured by {{ item.by }}">
-              <source src="{{ item.video }}" type="video/mp4" />
-              <source src="{{ item.video | replace('.mp4','.webm') }}" type="video/webm" />
-            </video>
+              src="{{ item.image }}"
+              alt="{{ item.label }} — featured by {{ item.by }}"
+              loading="lazy" />
             <figcaption class="bolsos-v2_tile-caption hg-body-s ttu mt-4">
               <span class="bolsos-v2_tile-index">[ {{ item.idx }} ]</span>
             </figcaption>
@@ -74,67 +67,31 @@
 </section>
 
 <script>
-  // Vídeos en loop — pausar si el usuario prefiere reducir movimiento.
-  // También reanudar/pausar en función de la visibilidad (IntersectionObserver)
-  // para no consumir CPU con vídeos fuera de pantalla.
+  // ------------------------------------------------------------
+  // Hover/foco cruzado entre tiles del grid y la lista de captions.
+  // Hover sobre un tile → el caption con el mismo data-idx queda al 100%,
+  // el resto bajan a 0.3 (lo lleva el CSS al ver .is-tile-hovering en el wrap).
+  // ------------------------------------------------------------
   (function () {
-    const videos = document.querySelectorAll('.bolsos-v2_video');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    function applyReducedMotion() {
-      videos.forEach(v => {
-        if (reduceMotion.matches) {
-          v.pause();
-          v.removeAttribute('autoplay');
-        } else {
-          v.play().catch(() => { /* autoplay bloqueado por el navegador, no pasa nada */ });
-        }
-      });
-    }
-
-    applyReducedMotion();
-    reduceMotion.addEventListener?.('change', applyReducedMotion);
-
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          const video = entry.target;
-          if (reduceMotion.matches) return;
-          if (entry.isIntersecting) {
-            video.play().catch(() => {});
-          } else {
-            video.pause();
-          }
-        });
-      }, { rootMargin: '100px 0px', threshold: 0.1 });
-
-      videos.forEach(v => io.observe(v));
-    }
-
-    // ------------------------------------------------------------
-    // Hover/foco cruzado entre tiles del grid y la lista de captions.
-    // Hover sobre un tile → el caption con el mismo data-idx queda al 100%,
-    // el resto bajan a 0.3 (lo lleva el CSS al ver .is-tile-hovering en el wrap).
-    // ------------------------------------------------------------
     const wrap  = document.querySelector('.bolsos-v2_wrap');
     const tiles = document.querySelectorAll('.bolsos-v2_tile-link');
-    if (wrap && tiles.length) {
-      const captionByIdx = new Map();
-      document.querySelectorAll('.bolsos-v2_caption-link').forEach(c => {
-        captionByIdx.set(c.dataset.idx, c);
-      });
+    if (!wrap || !tiles.length) return;
 
-      tiles.forEach(tile => {
-        const caption = captionByIdx.get(tile.dataset.idx);
-        if (!caption) return;
-        const on  = () => { wrap.classList.add('is-tile-hovering'); caption.classList.add('is-active'); };
-        const off = () => { wrap.classList.remove('is-tile-hovering'); caption.classList.remove('is-active'); };
-        tile.addEventListener('mouseenter', on);
-        tile.addEventListener('mouseleave', off);
-        tile.addEventListener('focus', on);
-        tile.addEventListener('blur', off);
-      });
-    }
+    const captionByIdx = new Map();
+    document.querySelectorAll('.bolsos-v2_caption-link').forEach(c => {
+      captionByIdx.set(c.dataset.idx, c);
+    });
+
+    tiles.forEach(tile => {
+      const caption = captionByIdx.get(tile.dataset.idx);
+      if (!caption) return;
+      const on  = () => { wrap.classList.add('is-tile-hovering'); caption.classList.add('is-active'); };
+      const off = () => { wrap.classList.remove('is-tile-hovering'); caption.classList.remove('is-active'); };
+      tile.addEventListener('mouseenter', on);
+      tile.addEventListener('mouseleave', off);
+      tile.addEventListener('focus', on);
+      tile.addEventListener('blur', off);
+    });
   })();
 </script>
 {% endblock %}

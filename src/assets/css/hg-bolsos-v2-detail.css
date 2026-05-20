@@ -135,8 +135,10 @@
   border: 1px solid currentColor;
   background: transparent;
   color: var(--bolsos-v2-detail-fg);
+  font: inherit;            /* reset de <button> para heredar tipografía del caption */
   text-decoration: none;
   letter-spacing: 0.08em;
+  cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
 }
 

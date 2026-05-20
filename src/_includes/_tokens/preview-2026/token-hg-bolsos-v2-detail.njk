@@ -22,9 +22,7 @@
   { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4', thumb: '/assets/static/templates/timeline/1991-detalle-1.jpg' }
 ] %}
 
-<section class="bolsos-v2-detail_wrap" data-items='[
-  {% for item in items %}{"idx":"{{item.idx}}","label":"{{item.label}}","by":"{{item.by}}","video":"{{item.video}}","poster":"{{item.poster}}"}{% if not loop.last %},{% endif %}{% endfor %}
-]'>
+<section class="bolsos-v2-detail_wrap">
 
   {# Stage pinned: video de fondo + caption flotante + shelf #}
   <div class="bolsos-v2-detail_stage">
@@ -45,7 +43,7 @@
         <div class="bolsos-v2-detail_caption-idx title-l" data-bind="idx">[ {{ items[0].idx }} ]</div>
         <div class="bolsos-v2-detail_caption-label title-l ttu" data-bind="label">{{ items[0].label }}</div>
         <div class="bolsos-v2-detail_caption-by title-l ttu" data-bind="by">Featured by: {{ items[0].by }}</div>
-        <a href="#" class="bolsos-v2-detail_buy title-l ttu" data-bind="buy">BUY</a>
+        <button type="button" class="bolsos-v2-detail_buy title-l ttu" data-bind="buy">BUY</button>
       </div>
     </div>
 
