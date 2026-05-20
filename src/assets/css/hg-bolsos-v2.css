@@ -210,7 +210,7 @@
    ------------------------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
   .bolsos-v2_video {
-    /* sin animaciones añadidas en los tiles */
+    /* el JS ya pausa los <video>; aquí evitamos además cualquier animación CSS añadida */
     animation: none !important;
     transition: none !important;
   }

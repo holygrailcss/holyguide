@@ -4,22 +4,26 @@
 <link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
 <link rel="stylesheet" href="/assets/css/hg-bolsos-v2-detail.css" />
 
+{# items 1:1 con el grid principal (token-hg-bolsos-v2.njk).
+   - thumb = imagen (poster) que se usa en el shelf de miniaturas.
+   - video = URL del .mp4 que se reproduce en el background del hero.
+   El número (idx) debe coincidir con el del grid: ?item=09 muestra el vídeo del item 09. #}
 {% set items = [
-  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/colonia.jpg',          video: '/assets/video/bag-01.mp4', thumb: '/assets/static/templates/timeline/colonia.jpg' },
-  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-hombre.jpg', video: '/assets/video/bag-02.mp4', thumb: '/assets/static/templates/timeline/contraluz-hombre.jpg' },
-  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pasarela.jpg',         video: '/assets/video/bag-03.mp4', thumb: '/assets/static/templates/timeline/pasarela.jpg' },
-  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/fachada-piedra.jpg',   video: '/assets/video/bag-04.mp4', thumb: '/assets/static/templates/timeline/fachada-piedra.jpg' },
-  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/web.jpg',              video: '/assets/video/bag-05.mp4', thumb: '/assets/static/templates/timeline/web.jpg' },
-  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/espuela.jpg',          video: '/assets/video/bag-06.mp4', thumb: '/assets/static/templates/timeline/espuela.jpg' },
-  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/bw-espalda.jpg',       video: '/assets/video/bag-07.mp4', thumb: '/assets/static/templates/timeline/bw-espalda.jpg' },
-  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/modelo-andando.jpg',   video: '/assets/video/bag-08.mp4', thumb: '/assets/static/templates/timeline/modelo-andando.jpg' },
-  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/niña.jpg',             video: '/assets/video/bag-09.mp4', thumb: '/assets/static/templates/timeline/niña.jpg' },
-  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pancarta.jpg',         video: '/assets/video/bag-10.mp4', thumb: '/assets/static/templates/timeline/pancarta.jpg' },
-  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/gafas.jpg',            video: '/assets/video/bag-11.mp4', thumb: '/assets/static/templates/timeline/gafas.jpg' },
-  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: '/assets/video/bag-12.mp4', thumb: '/assets/static/templates/timeline/contraluz-mujer.jpg' },
-  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: '/assets/video/bag-13.mp4', thumb: '/assets/static/templates/timeline/1985-detalle-1.jpg' },
-  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: '/assets/video/bag-14.mp4', thumb: '/assets/static/templates/timeline/1985-detalle-2.jpg' },
-  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: '/assets/video/bag-15.mp4', thumb: '/assets/static/templates/timeline/1991-detalle-1.jpg' }
+  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/colonia.jpg',          video: 'https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4' },
+  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/contraluz-hombre.jpg', video: 'https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4' },
+  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/pasarela.jpg',         video: 'https://videos.pexels.com/video-files/3255275/3255275-hd_1920_1080_25fps.mp4' },
+  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/fachada-piedra.jpg',   video: 'https://videos.pexels.com/video-files/6981411/6981411-hd_1920_1080_25fps.mp4' },
+  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/web.jpg',              video: 'https://videos.pexels.com/video-files/4770380/4770380-hd_1920_1080_30fps.mp4' },
+  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/espuela.jpg',          video: 'https://videos.pexels.com/video-files/855289/855289-hd_1920_1080_25fps.mp4' },
+  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/bw-espalda.jpg',       video: 'https://videos.pexels.com/video-files/1536322/1536322-hd_1920_1080_30fps.mp4' },
+  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/modelo-andando.jpg',   video: 'https://videos.pexels.com/video-files/6981411/6981411-hd_1920_1080_25fps.mp4' },
+  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/niña.jpg',             video: 'https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4' },
+  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/pancarta.jpg',         video: 'https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4' },
+  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/gafas.jpg',            video: 'https://videos.pexels.com/video-files/3255275/3255275-hd_1920_1080_25fps.mp4' },
+  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: 'https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4' },
+  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: 'https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4' },
+  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: 'https://videos.pexels.com/video-files/1536322/1536322-hd_1920_1080_30fps.mp4' },
+  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', thumb: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: 'https://videos.pexels.com/video-files/855289/855289-hd_1920_1080_25fps.mp4' }
 ] %}
 
 <section class="bolsos-v2-detail_wrap">
@@ -27,11 +31,23 @@
   {# Stage pinned: video de fondo + caption flotante + shelf #}
   <div class="bolsos-v2-detail_stage">
 
-    {# Dos <img> apilados para hacer crossfade del fondo entre el item actual y el siguiente.
-       Al clicar una miniatura, su imagen pasa al fondo (a la imagen "back", que se hace front
-       con un fade) — la del shelf siempre coincide con la grande. #}
-    <img id="bolsos-v2-detail_image_a" class="bolsos-v2-detail_video is-front" src="{{ items[0].thumb }}" alt="" aria-hidden="true" />
-    <img id="bolsos-v2-detail_image_b" class="bolsos-v2-detail_video" src="" alt="" aria-hidden="true" />
+    {# Dos <video> apilados (a/b) para hacer crossfade del fondo al cambiar de item.
+       Cuando se activa otro item, su .mp4 se asigna al vídeo "back", esperamos a `canplay`
+       y entonces fade-in del back / fade-out del front. La miniatura (thumb) se usa como
+       `poster` para evitar parpadeo negro mientras carga.
+       Atributos clave: muted (autoplay requirement), loop, playsinline (iOS no fullscreen). #}
+    <video
+      id="bolsos-v2-detail_video_a"
+      class="bolsos-v2-detail_video is-front"
+      muted loop playsinline preload="metadata" autoplay
+      poster="{{ items[0].thumb }}"
+      src="{{ items[0].video }}"
+      aria-hidden="true"></video>
+    <video
+      id="bolsos-v2-detail_video_b"
+      class="bolsos-v2-detail_video"
+      muted loop playsinline preload="metadata"
+      aria-hidden="true"></video>
 
     {# Etiqueta marca arriba a la izquierda #}
     <div class="bolsos-v2-detail_brand title-l ttu">Bolsos</div>
@@ -56,6 +72,7 @@
                   class="bolsos-v2-detail_thumb {% if loop.index0 == 0 %}is-active{% endif %}"
                   data-idx="{{ item.idx }}"
                   data-image="{{ item.thumb }}"
+                  data-video="{{ item.video }}"
                   data-label="{{ item.label }}"
                   data-by="{{ item.by }}"
                   aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
@@ -88,8 +105,8 @@
   if (!root) return;
 
   const stage      = root.querySelector('.bolsos-v2-detail_stage');
-  const imageA     = root.querySelector('#bolsos-v2-detail_image_a');
-  const imageB     = root.querySelector('#bolsos-v2-detail_image_b');
+  const videoA     = root.querySelector('#bolsos-v2-detail_video_a');
+  const videoB     = root.querySelector('#bolsos-v2-detail_video_b');
   const thumbs     = Array.from(root.querySelectorAll('.bolsos-v2-detail_thumb'));
   const captionIdx = root.querySelector('[data-bind="idx"]');
   const captionLbl = root.querySelector('[data-bind="label"]');
@@ -97,10 +114,18 @@
   const steps      = Array.from(root.querySelectorAll('.bolsos-v2-detail_scrollstep'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  // Estado: qué <img> está al frente (la otra recibe la nueva imagen y crossfade encima)
-  let front = imageA;
-  let back  = imageB;
-  let currentImageSrc = imageA.getAttribute('src') || '';
+  // Estado: qué <video> está al frente (el otro recibe la nueva src y crossfade encima).
+  let front = videoA;
+  let back  = videoB;
+  let currentVideoSrc = videoA.getAttribute('src') || '';
+
+  // Arrancar el primer vídeo (autoplay puede estar bloqueado en algunos navegadores
+  // hasta que haya interacción del usuario; si falla, no hacemos nada).
+  if (!reduceMotion.matches) {
+    front.play().catch(() => {});
+  } else {
+    front.pause();
+  }
 
   // ---------- Estado inicial desde ?item=NN ----------
   function getItemFromQuery() {
@@ -110,15 +135,14 @@
     return thumbs.find(t => t.dataset.idx === idx) || null;
   }
 
-  // ---------- Cambio de imagen de fondo con crossfade GSAP ----------
-  // Cargamos la nueva imagen en el <img> "back" (oculto). Esperamos a que
-  // termine de descargar para no ver un parpadeo en blanco. Antes del fade
-  // FORZAMOS que el back esté en z-index superior: si no, según cuál de los
-  // dos <img> sea (DOM-antes o DOM-después), el otro se le pondría delante
-  // y el fade ocurriría tapado → la imagen aparecía "de golpe" al terminar.
-  function swapImage(newSrc) {
-    if (!newSrc || newSrc === currentImageSrc) return;
-    currentImageSrc = newSrc;
+  // ---------- Cambio de vídeo de fondo con crossfade GSAP ----------
+  // Asignamos la nueva URL al <video> "back" y esperamos a `canplay` para no fade-in
+  // hacia un vídeo aún sin frames. Antes del fade FORZAMOS que el back tenga z-index
+  // superior: si no, según cuál de los dos <video> sea (DOM-antes o DOM-después), el
+  // otro se le pondría delante y el fade ocurriría tapado.
+  function swapVideo(newSrc, newPoster) {
+    if (!newSrc || newSrc === currentVideoSrc) return;
+    currentVideoSrc = newSrc;
 
     const showBack = () => {
       // Z-index: el back que vamos a fade-in tiene que estar EN FRENTE.
@@ -130,6 +154,8 @@
         back.classList.add('is-front');
         front.style.opacity = '';
         back.style.opacity  = '';
+        front.pause();
+        // En reduced-motion mantenemos el poster del back y NO reproducimos.
         [front, back] = [back, front];
         return;
       }
@@ -140,6 +166,8 @@
           back.classList.add('is-front');
           front.classList.remove('is-front');
           front.style.opacity = 0;
+          // pausar el que sale para no consumir CPU con dos vídeos a la vez
+          front.pause();
           // swap referencias
           [front, back] = [back, front];
           back.style.opacity = 0;
@@ -147,17 +175,33 @@
       });
     };
 
-    // Si la imagen ya está cacheada el `complete` es true tras asignar src;
-    // si no, esperamos al `load` para evitar un fade hacia un <img> en blanco.
+    // Preparamos el back: poster (para que el frame previo sea la miniatura) + src + load.
     back.style.opacity = 0;
-    back.onload = null;
-    back.onerror = null;
+    back.pause();
+    if (newPoster) back.setAttribute('poster', newPoster);
     back.src = newSrc;
-    if (back.complete && back.naturalWidth > 0) {
+    try { back.load(); } catch (e) { /* algunos navegadores pueden ignorar */ }
+
+    const start = () => {
+      if (!reduceMotion.matches) {
+        back.play().catch(() => { /* autoplay bloqueado, sigue sin reproducirse */ });
+      }
       showBack();
+    };
+
+    // readyState >= 2 (HAVE_CURRENT_DATA) ya garantiza primer frame disponible.
+    if (back.readyState >= 2) {
+      start();
     } else {
-      back.onload  = showBack;
-      back.onerror = () => { /* la imagen no se pudo cargar — dejamos el front actual */ };
+      back.addEventListener('canplay', function onReady() {
+        back.removeEventListener('canplay', onReady);
+        start();
+      }, { once: true });
+      // fallback si el vídeo nunca dispara canplay (red lenta o URL caída):
+      // hacemos el swap igualmente tras 1.5s para que la UI no se quede colgada.
+      setTimeout(() => {
+        if (back.readyState < 2 && back.style.opacity === '0') start();
+      }, 1500);
     }
   }
 
@@ -214,7 +258,7 @@
     if (!t) return;
     const wasActive = t.classList.contains('is-active');
     setActiveThumb(t);
-    swapImage(t.dataset.image);
+    swapVideo(t.dataset.video, t.dataset.image);
     setCaptionText({ idx: t.dataset.idx, label: t.dataset.label, by: t.dataset.by });
     // Llevamos la miniatura activa al centro del shelf (sólo si no es por scroll de página).
     if (!wasActive && !(opts && opts.skipScrollIntoView)) {

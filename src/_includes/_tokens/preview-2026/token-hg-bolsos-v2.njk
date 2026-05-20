@@ -1,42 +1,53 @@
 {% extends "base-clean.njk" %}
 {% block content %}
-{# Token hg-bolsos-v2 (templates-2026): grid editorial de imágenes + columna de captions #}
+{# Token hg-bolsos-v2 (templates-2026): grid editorial con vídeos en loop + columna de captions.
+   Los .mp4 se sirven directos desde videos.pexels.com (referencia externa).
+   Si en algún momento quieres servirlos desde tu propio dominio, bájalos a /assets/video/ y cambia las URLs. #}
 <link rel="stylesheet" href="https://hg5.netlify.app/output.css" />
 <link rel="stylesheet" href="/assets/css/hg-bolsos-v2.css" />
 
 {% set items = [
-  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/colonia.jpg' },
-  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', image: '/assets/static/templates/timeline/contraluz-hombre.jpg' },
-  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', image: '/assets/static/templates/timeline/pasarela.jpg' },
-  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/fachada-piedra.jpg' },
-  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', image: '/assets/static/templates/timeline/web.jpg' },
-  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/espuela.jpg' },
-  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/bw-espalda.jpg' },
-  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', image: '/assets/static/templates/timeline/modelo-andando.jpg' },
-  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/niña.jpg' },
-  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', image: '/assets/static/templates/timeline/pancarta.jpg' },
-  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', image: '/assets/static/templates/timeline/gafas.jpg' },
-  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', image: '/assets/static/templates/timeline/contraluz-mujer.jpg' },
-  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1985-detalle-1.jpg' },
-  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1985-detalle-2.jpg' },
-  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', image: '/assets/static/templates/timeline/1991-detalle-1.jpg' }
+  { idx: '01', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/colonia.jpg',          video: 'https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4' },
+  { idx: '02', label: 'BAG, SHOULDER BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-hombre.jpg', video: 'https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4' },
+  { idx: '03', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pasarela.jpg',         video: 'https://videos.pexels.com/video-files/3255275/3255275-hd_1920_1080_25fps.mp4' },
+  { idx: '04', label: 'BAG, TOTE BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/fachada-piedra.jpg',   video: 'https://videos.pexels.com/video-files/6981411/6981411-hd_1920_1080_25fps.mp4' },
+  { idx: '05', label: 'BAG, CROSSBODY BAG',   by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/web.jpg',              video: 'https://videos.pexels.com/video-files/4770380/4770380-hd_1920_1080_30fps.mp4' },
+  { idx: '06', label: 'BAG, HOBO BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/espuela.jpg',          video: 'https://videos.pexels.com/video-files/855289/855289-hd_1920_1080_25fps.mp4' },
+  { idx: '07', label: 'BAG, MINI BAG',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/bw-espalda.jpg',       video: 'https://videos.pexels.com/video-files/1536322/1536322-hd_1920_1080_30fps.mp4' },
+  { idx: '08', label: 'BAG, CLUTCH',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/modelo-andando.jpg',   video: 'https://videos.pexels.com/video-files/6981411/6981411-hd_1920_1080_25fps.mp4' },
+  { idx: '09', label: 'BAG, SHOPPER BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/niña.jpg',             video: 'https://videos.pexels.com/video-files/3195650/3195650-hd_1920_1080_25fps.mp4' },
+  { idx: '10', label: 'BAG, BAGUETTE BAG',    by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/pancarta.jpg',         video: 'https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4' },
+  { idx: '11', label: 'BAG, BOX BAG',         by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/gafas.jpg',            video: 'https://videos.pexels.com/video-files/3255275/3255275-hd_1920_1080_25fps.mp4' },
+  { idx: '12', label: 'BAG, SATCHEL BAG',     by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/contraluz-mujer.jpg',  video: 'https://videos.pexels.com/video-files/853889/853889-hd_1920_1080_25fps.mp4' },
+  { idx: '13', label: 'BAG, BACKPACK',        by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-1.jpg',   video: 'https://videos.pexels.com/video-files/3129957/3129957-hd_1920_1080_25fps.mp4' },
+  { idx: '14', label: 'BAG, WALLET',          by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1985-detalle-2.jpg',   video: 'https://videos.pexels.com/video-files/1536322/1536322-hd_1920_1080_30fps.mp4' },
+  { idx: '15', label: 'BAG, BUCKET BAG',      by: 'LOU DOILLON', poster: '/assets/static/templates/timeline/1991-detalle-1.jpg',   video: 'https://videos.pexels.com/video-files/855289/855289-hd_1920_1080_25fps.mp4' }
 ] %}
 
 <section class="bolsos-v2_wrap hg-d-block">
 
   <div class="bolsos-v2_layout">
 
-    {# Grid principal de imágenes — cada tile enlaza a la detail con ?item=NN #}
+    {# Grid principal de vídeos — cada tile enlaza a la detail con ?item=NN.
+       <video> con autoplay/loop/muted/playsinline (requisitos para autoplay en navegadores).
+       preload="metadata" para no descargar el archivo entero hasta que el IntersectionObserver
+       confirme que el tile está cerca de la viewport (lo gestiona el script de abajo). #}
     <ul class="bolsos-v2_grid list-clear m-0 p-0" role="list">
       {% for item in items %}
       <li class="bolsos-v2_tile">
         <a class="bolsos-v2_tile-link" href="/token-hg-bolsos-v2-detail/?item={{ item.idx }}" data-idx="{{ item.idx }}" aria-label="Ver {{ item.label }} — featured by {{ item.by }}">
           <figure class="m-0 bolsos-v2_figure">
-            <img
+            <video
               class="bolsos-v2_video"
-              src="{{ item.image }}"
-              alt="{{ item.label }} — featured by {{ item.by }}"
-              loading="lazy" />
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              poster="{{ item.poster }}"
+              aria-label="{{ item.label }} — featured by {{ item.by }}">
+              <source src="{{ item.video }}" type="video/mp4" />
+            </video>
             <figcaption class="bolsos-v2_tile-caption hg-body-s ttu mt-4">
               <span class="bolsos-v2_tile-index">[ {{ item.idx }} ]</span>
             </figcaption>
@@ -67,12 +78,53 @@
 </section>
 
 <script>
-  // ------------------------------------------------------------
-  // Hover/foco cruzado entre tiles del grid y la lista de captions.
-  // Hover sobre un tile → el caption con el mismo data-idx queda al 100%,
-  // el resto bajan a 0.3 (lo lleva el CSS al ver .is-tile-hovering en el wrap).
-  // ------------------------------------------------------------
   (function () {
+    // ------------------------------------------------------------
+    // Control de vídeos:
+    //   - prefers-reduced-motion: reduce → pausamos todos los <video> y se queda el poster.
+    //   - IntersectionObserver → solo se reproducen los que están cerca de la viewport.
+    //   Esto evita descargar y decodificar 15 streams 1080p a la vez.
+    // ------------------------------------------------------------
+    const videos = document.querySelectorAll('.bolsos-v2_video');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function applyReducedMotion() {
+      videos.forEach(v => {
+        if (reduceMotion.matches) {
+          v.pause();
+          v.removeAttribute('autoplay');
+        } else {
+          // .play() puede ser bloqueado en algunos navegadores si el doc no tiene
+          // user activation; no pasa nada, el atributo autoplay vuelve a intentarlo.
+          v.play().catch(() => {});
+        }
+      });
+    }
+
+    applyReducedMotion();
+    reduceMotion.addEventListener?.('change', applyReducedMotion);
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const video = entry.target;
+          if (reduceMotion.matches) return;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { rootMargin: '100px 0px', threshold: 0.1 });
+
+      videos.forEach(v => io.observe(v));
+    }
+
+    // ------------------------------------------------------------
+    // Hover/foco cruzado entre tiles del grid y la lista de captions.
+    // Hover sobre un tile → el caption con el mismo data-idx queda al 100%,
+    // el resto bajan a 0.3 (lo lleva el CSS al ver .is-tile-hovering en el wrap).
+    // ------------------------------------------------------------
     const wrap  = document.querySelector('.bolsos-v2_wrap');
     const tiles = document.querySelectorAll('.bolsos-v2_tile-link');
     if (!wrap || !tiles.length) return;
