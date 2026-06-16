@@ -1,0 +1,498 @@
+/* ─── Tokens globales ──────────────────────────────────────────────── */
+:root {
+  --hg-color-foreground-neutral: var(--hg-color-primary);
+  --hg-color-foreground-neutral-dark: var(--hg-color-dark-grey);
+  --hg-color-background-neutral: var(--hg-color-bg-cream);
+
+  --hg-page-inset: var(--hg-spacing-20);
+}
+
+/* ─── Tokens del Assistant ──────────────────────────────────────────────── */
+:root {
+  /* Assistant Wrapper */
+  --hg-assistant-color-foreground: var(--hg-color-foreground-neutral);
+  --hg-assistant-color-background: var(--hg-color-background-neutral);
+  --hg-assistant-inset-block-start: auto;
+  --hg-assistant-inset-block-end: 0;
+  --hg-assistant-inset-inline-start: auto;
+  --hg-assistant-inset-inline-end: 0;
+  --hg-assistant-inset: var(--hg-page-inset);
+  --hg-assistant-width: 100%;
+  --hg-assistant-max-width: 100%;
+  --hg-assistant-height: 100%;
+  --hg-assistant-min-height: auto;
+  --hg-assistant-max-height: 100%;
+  --hg-assistant-transition: all 0.4s cubic-bezier(0.25, 0, 0, 1);
+  --hg-assistant-z-index: 1999;
+
+  /* Assistant Wrapper welcome */
+  --hg-assistant-welcome-inset-block-start: auto;
+  --hg-assistant-welcome-inset-block-end: var(--hg-assistant-inset);
+  --hg-assistant-welcome-inset-inline-start: var(--hg-assistant-inset);
+  --hg-assistant-welcome-inset-inline-end: 0;
+  --hg-assistant-welcome-height: auto;
+  --hg-assistant-welcome-width: auto;
+
+  /* Assistant Body */
+  --hg-assistant-body-padding-block: var(--hg-spacing-40) 0;
+
+  /* Assistant Footer */
+  --hg-assistant-footer-padding-block: var(--hg-spacing-24);
+
+  /* Assistant Avatar */
+  --hg-assistant-avatar-size: var(--hg-spacing-12);
+
+  /* Assistant Messages */
+  --hg-assistant-messages-row-gap: var(--hg-spacing-40);
+  
+  /* Assistant Message */
+  --hg-assistant-message-min-height: var(--hg-spacing-40);
+  --hg-assistant-message-gap: var(--hg-spacing-16);
+
+  /* Assistant Actions */
+  --hg-assistant-actions-gap: var(--hg-spacing-24);
+
+  /* Assistant Toggle Button */
+  --hg-assistant-toggle-btn-size: var(--hg-spacing-48);
+  
+  /* Assistant Backdrop */
+  --hg-assistant-backdrop-background: transparent;
+  
+}
+
+/* ––– Tokens para pantallas >= 992px ––––––––––––––––––––––––––––––– */
+@media (min-width: 62rem) {
+  :root {
+    --hg-assistant-inset-block-start: auto;
+    --hg-assistant-inset-block-end: var(--hg-spacing-40);
+    --hg-assistant-inset-inline-start: auto;
+    --hg-assistant-inset-inline-end: 0;
+    --hg-assistant-width: 30.625rem; /* 490px */
+    --hg-assistant-max-width: calc(100% - var(--hg-assistant-inset-inline-end));
+    --hg-assistant-height: auto;
+    --hg-assistant-min-height: 80vh;
+    --hg-assistant-max-height: calc(100% - var(--hg-assistant-inset-block-end) - 5rem);
+
+
+    --hg-assistant-welcome-inset-block-start: auto;
+    --hg-assistant-welcome-inset-block-end: var(--hg-assistant-inset);
+    --hg-assistant-welcome-inset-inline-start: auto;
+    --hg-assistant-welcome-inset-inline-end: 0;
+    --hg-assistant-welcome-height: auto;
+    --hg-assistant-welcome-min-height: auto;
+    --hg-assistant-welcome-width: 30.625rem; /* 490px */
+  }
+}
+
+/**
+ * hg-assistant.css — Panel del asistente de IA (templates 2026).
+ * Panel fijo anclado al borde derecho, oculto por defecto.
+ * Se abre con .is-open en el panel o .hg-assistant-open en body.
+ * En mobile ocupa el 100% del ancho. En desktop se limita a 490px.
+ * Usa variables --hg-* de HolyGrail5.
+ */
+
+ /* ###########################################################################
+   .hg-assistant-toggle-btn: botón flotante para abrir el asistente.
+   ########################################################################### */
+ .hg-assistant-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: var(--hg-assistant-color-background);
+  min-height: var(--hg-assistant-toggle-btn-size);
+  min-width: var(--hg-assistant-toggle-btn-size);
+}
+
+/* ###########################################################################
+   .hg-assistant-open: clase que se añade al body al abrir el asistente.
+   ########################################################################### */
+
+body.hg-assistant-open {
+  overflow: hidden !important;
+  overscroll-behavior: contain;
+}
+
+body.hg-assistant-open .hg-assistant.is-open,
+.hg-assistant.is-open {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+body.hg-assistant-open .hg-assistant-backdrop,
+.hg-assistant-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ##########################################################################
+   .hg-assistant-backdrop: fondo semitransparente detrás del panel.
+   ########################################################################## */
+.hg-assistant-backdrop {
+  background-color: var(--hg-assistant-backdrop-background);
+  inset: 0;
+  opacity: 0;
+  position: fixed;
+  visibility: hidden;
+  z-index: calc(var(--hg-assistant-z-index) - 1);
+}
+
+/* ###########################################################################
+   .hg-assistant: panel principal
+   ########################################################################### */
+.hg-assistant {
+  align-items: stretch;
+  background-color: var(--hg-assistant-color-background);
+  color: var(--hg-assistant-color-foreground);
+  display: flex;
+  flex-flow: column nowrap;
+  height: var(--hg-assistant-height);
+  inset-block: var(--hg-assistant-inset-block-start) var(--hg-assistant-inset-block-end);
+  inset-inline: var(--hg-assistant-inset-inline-start) var(--hg-assistant-inset-inline-end);
+  justify-content: flex-start;
+  max-height: var(--hg-assistant-max-height);
+  max-width: var(--hg-assistant-max-width);
+  min-height: var(--hg-assistant-min-height);
+  opacity: 0;
+  position: fixed;
+  transform: scale(0.95);
+  transform-origin: bottom right;
+  transition: var(--hg-assistant-transition);
+  visibility: hidden;
+  width: var(--hg-assistant-width);
+  z-index: var(--hg-assistant-z-index);
+}
+
+/* ###########################################################################
+   Zona 1 — Header
+   ########################################################################### */
+.hg-assistant__header {
+  align-items: center;
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  height: 0;
+  justify-content: flex-start;
+  overflow: visible;
+  padding-inline: var(--hg-assistant-inset);
+}
+
+.hg-assistant__close.btn {
+  align-items: center;
+  background: none;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentColor;
+  justify-content: center;
+  margin-block-start: var(--hg-assistant-inset);
+  margin-inline-start: auto;
+  min-height: var(--hg-spacing-24);
+  min-width: var(--hg-spacing-24);
+  padding: 0;
+}
+
+
+/* ###########################################################################
+   Zona 2 — Body (scrollable)
+   ########################################################################### */
+.hg-assistant__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-y: auto;
+}
+
+/* ###########################################################################
+   Zona 3 — Footer
+   ########################################################################### */
+.hg-assistant__footer {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  padding-block: var(--hg-assistant-footer-padding-block);
+  padding-inline: var(--hg-assistant-inset);
+}
+
+/* ###########################################################################
+   Assistant input: textarea con estilo de input, sin redimensionar, con placeholder.
+   ########################################################################### */
+
+.hg-assistant-field {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  transition: var(--hg-assistant-transition);
+}
+
+.hg-assistant-field__handler {
+  align-items: center;
+  background-color: transparent;
+  border-color: var(--hg-color-foreground-neutral);
+  border-style: solid;
+  border-width: 0 0 var(--line-width) 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.hg-assistant-field__prepend,
+.hg-assistant-field__append {
+  flex: 0 0 auto;
+}
+
+.hg-assistant-field__prepend:empty,
+.hg-assistant-field__append:empty {
+  display: none;
+}
+
+.hg-assistant-field__prepend:not(:empty) {
+  margin-inline-end: var(--hg-spacing-8);
+}
+
+.hg-assistant-field__append:not(:empty) {
+  margin-inline-start: var(--hg-spacing-8);
+}
+
+.hg-assistant-field__main {
+  align-items: center;
+  column-gap: var(--hg-spacing-8);
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+
+.hg-assistant-field__main .hg-assistant-field__input {
+  flex: 1 1 auto;
+}
+
+.hg-assistant-field__main .hg-assistant-field__label {
+  order: -1;
+}
+
+.hg-assistant-input {
+  appearance: none;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  box-shadow: none;
+  color: currentColor;
+  display: inline-block;
+  min-height: var(--hg-spacing-32);
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  resize: none;
+}
+
+.hg-assistant-input:focus {
+  outline: none;
+}
+
+.hg-assistant-input::placeholder,
+.hg-assistant-input::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.6;
+}
+
+/* ###########################################################################
+   Circle: animación de puntos suspensivos para el asistente
+   ########################################################################### */
+
+@keyframes hg-assistant-circle-icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hg-assistant-circle-icon {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--hg-assistant-avatar-size);
+  height: var(--hg-assistant-avatar-size);
+}
+.hg-assistant-circle-icon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hg-assistant-circle-icon-circle {
+  transform-origin: center;
+}
+
+.hg-assistant-circle-icon.hg-assistant-circle-icon--spinning .hg-assistant-circle-icon-circle {
+  animation: hg-assistant-circle-icon-spin 1s linear infinite;
+  stroke-dasharray: 3 8.78;
+}
+
+/* ###########################################################################
+   Lista de mensajes
+   ########################################################################### */
+.hg-assistant-messages {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: var(--hg-assistant-messages-row-gap) 0;
+  row-gap: var(--hg-assistant-messages-row-gap);
+}
+
+.hg-assistant-message {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: var(--hg-assistant-message-min-height);
+  padding-inline: var(--hg-assistant-inset);
+  gap: var(--hg-assistant-message-gap);
+}
+
+/* ###########################################################################
+   Tipos de mensajes: usuario y asistente
+   ########################################################################### */
+
+.hg-assistant-message--user {
+  align-items: flex-end;
+}
+
+.hg-assistant-message--assistant {
+  align-items: flex-start;
+}
+
+/* ###########################################################################
+   Anatomía de un mensaje: texto, acciones, loading
+   ########################################################################### */
+
+.hg-assistant-message-text {
+  margin: 0;
+}
+
+.hg-assistant-message-loading {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--hg-spacing-16);
+}
+
+.hg-assistant-message-loading .hg-assistant-circle-icon {
+  flex: 0 0 auto;
+}
+
+.hg-assistant-message-loading .hg-assistant-message-text {
+  flex: 1 1 auto;
+}
+
+.hg-assistant-actions {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--hg-assistant-actions-gap);
+}
+
+.hg-assistant-action.btn {
+  background-color: var(--hg-assistant-color-background);
+  color: var(--hg-assistant-color-foreground);
+  border: var(--line-width) solid var(--hg-assistant-color-foreground);
+}
+
+/* ###########################################################################
+   Welcome state: mensaje de bienvenida al abrir el asistente por primera vez.
+    Se muestra solo en la primera apertura, luego se oculta y no vuelve a aparecer.
+   ########################################################################### */
+.hg-assistant--welcome.hg-assistant {
+  width: var(--hg-assistant-welcome-width);
+  height: var(--hg-assistant-welcome-height);
+  min-height: var(--hg-assistant-welcome-min-height);
+  inset-block-start: var(--hg-assistant-welcome-inset-block-start);
+  inset-block-end: var(--hg-assistant-welcome-inset-block-end);
+  inset-inline-start: var(--hg-assistant-welcome-inset-inline-start);
+  inset-inline-end: var(--hg-assistant-welcome-inset-inline-end);
+}
+
+.hg-assistant-welcome {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--hg-assistant-message-gap);
+  justify-content: center;
+  text-align: center;
+}
+
+/* ###########################################################################
+   Greeting state
+   ########################################################################### */
+.hg-assistant-greeting {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-inline: var(--hg-assistant-inset);
+  transition: var(--hg-assistant-transition);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hg-assistant-greeting-text {
+  position: absolute;
+  inset-block-start: 15%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hg-assistant-greeting-icon {
+  position: absolute;
+  inset-block-start: 36%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hg-assistant-legal {
+  color: var(--hg-color-foreground-neutral-dark);
+  inset-block-end: var(--hg-spacing-32);
+  inset-inline-end: 0;
+  inset-inline-start: 0;
+  opacity: 0;
+  padding-inline: var(--hg-assistant-inset);
+  position: absolute;
+  text-align: center;
+  transform-origin: bottom center;
+  transition: var(--hg-assistant-transition);
+  visibility: hidden;
+}
+
+.hg-assistant-legal a {
+  color: var(--hg-color-foreground-neutral-dark);
+}
+
+.hg-assistant--greeting.hg-assistant .hg-assistant-messages {
+  display: none;
+}
+
+.hg-assistant--greeting.hg-assistant .hg-assistant-field {
+  transform: translateY(calc(var(--hg-assistant-current-height) * -0.45 + var(--hg-spacing-16)));
+}
+
+.hg-assistant--greeting.hg-assistant .hg-assistant-greeting,
+.hg-assistant--greeting.hg-assistant .hg-assistant-legal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

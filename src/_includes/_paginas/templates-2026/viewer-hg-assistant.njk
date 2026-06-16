@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="templates-2026-home">
+  <div class="container-fluid">
+    {% include '_website/hero.njk' %}
+  </div>
+
+  <section class="row mb-32 mt-32">
+    <div class="col-xs-12">
+      {% call insert.template('_tokens/preview-2026/','token-hg-assistant', '300px','https://www.figma.com/design/WgWyDMWRPocwFdjUT2Pd0L/Mi-Asistente-2026?node-id=3010-55&p=f&t=CKYlmyNBhKsfwvEx-0', '', 'hg-assistant.css') %} {% endcall %}
+    </div>
+  </section>
+
+  <section class="row mb-32 mt-32 p-16">
+    <div class="col-xs-12">
+      <div class="main-content innermarkdown">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</div>

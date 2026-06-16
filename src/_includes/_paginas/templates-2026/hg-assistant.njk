@@ -1,0 +1,256 @@
+{% from "_macros/_icon.njk" import icon %}
+<div class="hg-overlay-launcher">
+  <button
+    type="button"
+    class="hg-assistant-toggle-btn btn hidden"
+    aria-controls="hg-assistant-panel"
+    aria-expanded="false"
+    aria-label="Abrir asistente"
+  >
+    {{ icon("assistant") }}
+  </button>
+</div>
+<span class="hg-assistant-backdrop" aria-hidden="true"></span>
+<aside
+  class="hg-assistant hg-assistant--welcome"
+  id="hg-assistant-panel-welcome"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Asistente de moda"
+  aria-hidden="true"
+>
+
+  {# Zona 2 — Cuerpo (scrollable) #}
+  <div class="hg-assistant__body" role="log" aria-live="polite" aria-label="Conversación">
+
+    {# Lista de mensajes #}
+    <ol class="hg-assistant-messages" aria-label="Mensajes de la conversación">
+      <li class="hg-assistant-message hg-assistant-message--assistant">
+        <div class="hg-assistant-message-loading">
+          <span class="hg-assistant-circle-icon" aria-hidden="true">
+            {{ icon("assistant") }}
+          </span>
+          <div class="hg-assistant-message-text hg-body-l">Hola Adrian. ¿Tienes algún plan esta semana? Te ayudo con un look</div>
+        </div>
+      </li>
+      <li class="hg-assistant-message hg-assistant-message--assistant hg-assistant-message--actions">
+        <div class="hg-assistant-actions">
+          <button type="button" class="btn btn-secondary hg-assistant-action hg-body-l">Cena el Viernes</button>
+          <button type="button" class="btn btn-secondary hg-assistant-action hg-body-l">Boda informal</button>
+          <button type="button" class="btn btn-secondary hg-assistant-action hg-body-l">Pedir mi propio look</button>
+        </div>
+      </li>
+    </ol>
+
+  </div>
+</aside>
+
+<aside
+  class="hg-assistant hg-assistant--greeting"
+  id="hg-assistant-panel"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Asistente de moda"
+  aria-hidden="true"
+>
+
+  {# Zona 1 — Cabecera #}
+  <header class="hg-assistant__header">
+    <button
+      type="button"
+      class="hg-assistant__close btn"
+      aria-label="Cerrar asistente"
+    >
+      {{ icon("close") }}
+    </button>
+  </header>
+
+  {# Zona 2 — Cuerpo (scrollable) #}
+  <div class="hg-assistant__body" role="log" aria-live="polite" aria-label="Conversación">
+
+    {# Intro #}
+    <div class="hg-assistant-greeting">
+      <p class="hg-assistant-greeting-text hg-body-l ttu">Hola Pablo</p>
+      <span class="hg-assistant-greeting-icon" aria-hidden="true">
+        {{ icon("assistant") }}
+      </span>
+    </div>
+
+    {# Lista de mensajes #}
+    <ol class="hg-assistant-messages hidden" aria-label="Mensajes de la conversación">
+
+      <li class="hg-assistant-message hg-assistant-message--user">
+        <div class="hg-assistant-message-text hg-body-l-b">¿Donde está mi pedido?</div>
+      </li>
+
+      <li class="hg-assistant-message hg-assistant-message--assistant">
+        <div class="hg-assistant-message-text hg-body-l">Veo que tienes un pedido con Nº 12345678 ¿Que quieres hacer con tu pedido?</div>
+      </li>
+
+      <li class="hg-assistant-message hg-assistant-message--user">
+        <div class="hg-assistant-message-text hg-body-l-b">Ver el estado de mi pedido</div>
+      </li>
+
+      <li class="hg-assistant-message hg-assistant-message--assistant hg-assistant-message--actions">
+        <div class="hg-assistant-message-text hg-body-l">Tu pedido ha sido enviado y se entregará el Mié 22 Abr. 2026</div>
+        <div class="hg-assistant-actions">
+          <button type="button" class="btn btn-secondary hg-assistant-action hg-body-l">Ver mis pedidos</button>
+        </div>
+      </li>
+
+      <li class="hg-assistant-message hg-assistant-message--user">
+        <div class="hg-assistant-message-text hg-body-l-b">Quiero devolver un pedido</div>
+      </li>
+
+      <li class="hg-assistant-message hg-assistant-message--assistant hg-assistant-message--loading">
+        <div class="hg-assistant-message-loading">
+          <span class="hg-assistant-circle-icon hg-assistant-circle-icon--spinning" aria-hidden="true">
+            {{ icon("assistant") }}
+          </span>
+          <div class="hg-assistant-message-text hg-body-l">Creando respuesta</div>
+        </div>
+      </li>
+
+    </ol>
+
+  </div>
+
+  {# Zona 3 — Footer (fijo en el fondo) #}
+  <footer class="hg-assistant__footer">
+    <div class="hg-assistant-field">
+      <div class="hg-assistant-field__handler">
+        <div class="hg-assistant-field__main">
+          <input
+            type="text"
+            id="hg-assistant-input"
+            name="hg-assistant-input"
+            class="hg-assistant-input hg-assistant-field__input hg-body-m"
+            placeholder="PREGUNTA LO QUE QUIERAS"
+            aria-label="Escribe tu pregunta al asistente"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </div>
+    <p class="hg-assistant-legal hg-body-l hidden-">
+      Estás interactuando con una tecnología de IA generativa. Al continuar, confirmas que aceptas y entiendes el
+      <a href="#" class="hg-assistant-legal-link">Aviso legal</a> y la
+      <a href="#" class="hg-assistant-legal-link">Política de privacidad y cookies</a>.
+    </p>
+  </footer>
+
+</aside>
+
+<script>
+(() => {
+  const WELCOME_DURATION = 5000;
+
+  const openButton = document.querySelector('.hg-assistant-toggle-btn');
+  const panel = document.getElementById('hg-assistant-panel');
+  const closeButton = panel?.querySelector('.hg-assistant__close');
+  const backdrop = document.querySelector('.hg-assistant-backdrop');
+  const welcome = document.getElementById('hg-assistant-panel-welcome');
+  const welcomeStart = welcome?.querySelector('.hg-assistant-welcome__start');
+  const input = panel?.querySelector('#hg-assistant-input');
+  const messages = panel?.querySelector('.hg-assistant-messages');
+
+  if (!openButton || !panel || !closeButton || !backdrop) {
+    return;
+  }
+
+  let lastFocusedElement = null;
+  let welcomeTimer = null;
+
+  const updatePanelHeight = (height) => {
+    panel.style.setProperty('--hg-assistant-current-height', `${Math.round(height)}px`);
+  };
+
+  const panelResizeObserver = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+      updatePanelHeight(entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height);
+    }
+  });
+
+  panelResizeObserver.observe(panel);
+
+  const openAssistant = () => {
+    lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    document.body.classList.add('hg-assistant-open');
+    panel.classList.add('is-open');
+    backdrop.classList.add('is-open');
+    panel.setAttribute('aria-hidden', 'false');
+    openButton.classList.add('hidden');
+    openButton.setAttribute('aria-expanded', 'true');
+    closeButton.focus();
+  };
+
+  const closeAssistant = () => {
+    document.body.classList.remove('hg-assistant-open');
+    panel.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    panel.setAttribute('aria-hidden', 'true');
+    openButton.classList.remove('hidden');
+    openButton.setAttribute('aria-expanded', 'false');
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      return;
+    }
+
+    openButton.focus();
+  };
+
+  const closeWelcome = () => {
+    if (!welcome) {
+      return;
+    }
+
+    window.clearTimeout(welcomeTimer);
+    welcome.classList.remove('is-open');
+    welcome.setAttribute('aria-hidden', 'true');
+    openButton.classList.remove('hidden');
+  };
+
+  const showWelcome = () => {
+    if (!welcome) {
+      return;
+    }
+
+    welcome.classList.add('is-open');
+    welcome.setAttribute('aria-hidden', 'false');
+    welcomeTimer = window.setTimeout(closeWelcome, WELCOME_DURATION);
+  };
+
+  openButton.addEventListener('click', openAssistant);
+  closeButton.addEventListener('click', closeAssistant);
+  backdrop.addEventListener('click', closeAssistant);
+
+  input?.addEventListener('input', () => {
+    if (!input.value.trim()) {
+      return;
+    }
+
+    panel.classList.remove('hg-assistant--greeting');
+    messages?.classList.remove('hidden');
+  });
+
+  welcomeStart?.addEventListener('click', () => {
+    closeWelcome();
+    openAssistant();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') {
+      return;
+    }
+
+    if (!panel.classList.contains('is-open')) {
+      return;
+    }
+
+    closeAssistant();
+  });
+
+  showWelcome();
+})();
+</script>

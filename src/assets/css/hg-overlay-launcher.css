@@ -1,0 +1,17 @@
+:root {
+  --hg-launcher-overlay-z-index: 1900;
+  --hg-launcher-inset-block: auto var(--hg-spacing-40);
+  --hg-launcher-inset-inline: auto 0;
+}
+
+.hg-overlay-launcher {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-spacing-16);
+  inset-block: var(--hg-launcher-inset-block);
+  inset-inline: var(--hg-launcher-inset-inline);
+  justify-content: flex-start;
+  position: fixed;
+  z-index: var(--hg-launcher-overlay-z-index);
+}
