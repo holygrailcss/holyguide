@@ -1,4 +1,3 @@
-@use "../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
 @import "abstract/_all";
 
 .md-breadcrumb.md-breadcrumb--microsite {
@@ -18,14 +17,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   inset-inline-end: 0;
   inset-inline-start: 0;
-  min-height: to-rem(48);
+  min-height: 3rem;
   position: sticky;
   top: 0;
   z-index: 2;
   background-color: var(--hg-color-white);
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    min-height: to-rem(64);
+  @media (min-width: 48rem ) {
+    min-height: 4rem;
   }
 }
 
@@ -34,14 +33,14 @@
 }
 
 .md-microsite-header-logo {
-  width: to-rem(150);
+  width: 9.375rem;
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    width: to-rem(175);
+  @media (min-width: 48rem ) {
+    width: 10.9375rem;
   }
 
-  @media (min-width: #{map-get($hg-breakpoints, xl)} ) {
-    width: to-rem(250);
+  @media (min-width: 90rem ) {
+    width: 15.625rem;
   }
 }
 

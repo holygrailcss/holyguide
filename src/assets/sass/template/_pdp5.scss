@@ -1,5 +1,4 @@
 
-@use "../../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
 @import "../abstract/_all";
 
 
@@ -20,12 +19,12 @@
   align-self: center;
   display: flex;
   flex-flow: row nowrap;
-  gap: $hg-spacer-50;
+  gap: var(--hg-spacing-4);
   justify-content: center;
-  padding: $hg-spacer-250;
+  padding: var(--hg-spacing-20);
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    padding-block: $hg-spacer-500;
+  @media (min-width: 48rem ) {
+    padding-block: var(--hg-spacing-40);
   }
 }
 
@@ -35,7 +34,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin: 0 $hg-spacer-50;
+  margin: 0 var(--hg-spacing-4);
 }
 
 .md-pagination-action {
@@ -47,8 +46,8 @@
   height: auto;
   justify-content: center;
   margin: 0;
-  min-height: $hg-spacer-300;
-  min-width: $hg-spacer-300;
+  min-height: var(--hg-spacing-24);
+  min-width: var(--hg-spacing-24);
   overflow: visible;
   padding: 0;
   width: auto;
@@ -68,7 +67,7 @@
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  gap: $hg-spacer-50 $hg-spacer-100;
+  gap: var(--hg-spacing-4) var(--hg-spacing-8);
   justify-content: flex-start;
 }
 
@@ -77,9 +76,9 @@
 .md-breadcrumb {
   display: grid;
   grid-template-rows: 1fr;
-  margin-block-start: $hg-spacer-600;
+  margin-block-start: var(--hg-spacing-48);
   position: sticky;
-  top: $hg-spacer-600;
+  top: var(--hg-spacing-48);
   transition: grid-template-rows .1s ease-in-out;
   z-index: 1000;
 
@@ -91,14 +90,14 @@
     flex-flow: row nowrap;
     list-style: none;
     margin: 0;
-    padding-inline: $hg-spacer-250;
+    padding-inline: var(--hg-spacing-20);
     transition: grid-template-rows .1s ease-in-out;
 
     > li {
 
       &:not(:last-child)::after {
         content: ">";
-        margin-inline-start: $hg-spacer-50;
+        margin-inline-start: var(--hg-spacing-4);
       }
     }
   }
@@ -117,9 +116,9 @@
 }
 
 .md-breadcrumb-link {
-  min-height: $hg-spacer-500;
+  min-height: var(--hg-spacing-40);
   align-items: center;
-  column-gap: $hg-spacer-150;
+  column-gap: var(--hg-spacing-12);
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -138,7 +137,7 @@
 // Componente global precio
 .md-product-prices {
   align-items: center;
-  gap: $hg-spacer-50 $hg-spacer-150;
+  gap: var(--hg-spacing-4) var(--hg-spacing-12);
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -148,13 +147,13 @@
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  gap: $hg-spacer-50 $hg-spacer-150;
+  gap: var(--hg-spacing-4) var(--hg-spacing-12);
   justify-content: flex-start;
 }
 
 .md-product-pricebox {
   align-items: center;
-  column-gap: $hg-spacer-100;
+  column-gap: var(--hg-spacing-8);
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -165,7 +164,7 @@
     > .md-product-pricebox-amount,
     > .md-product-pricebox-label {
       background-color: $c-sale;
-      padding: ($hg-spacer-50 + 1) $hg-spacer-50 ($hg-spacer-50 - 1);
+      padding: (var(--hg-spacing-4) + 1) var(--hg-spacing-4) (var(--hg-spacing-4) - 1);
     }
   }
 
@@ -186,7 +185,7 @@
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  gap: $hg-spacer-100;
+  gap: var(--hg-spacing-8);
   justify-content: flex-start;
 }
 
@@ -211,7 +210,7 @@
 
 // Componente global opciones de producto
 .md-product-options-title {
-  margin-block-end: $hg-spacer-100;
+  margin-block-end: var(--hg-spacing-8);
 }
 
 .md-product-options-list {
@@ -226,7 +225,7 @@
     display: inline-flex;
     justify-content: center;
     margin: 0;
-    padding: $hg-spacer-100;
+    padding: var(--hg-spacing-8);
   }
 }
 
@@ -235,17 +234,17 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  column-gap: $hg-spacer-200;
+  column-gap: var(--hg-spacing-16);
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
   }
 
   .btn.btn--wishlist {
-    min-height: $hg-spacer-250;
-    min-width: $hg-spacer-250;
+    min-height: var(--hg-spacing-20);
+    min-width: var(--hg-spacing-20);
     padding: 0;
     text-align: center;
   }
@@ -264,19 +263,19 @@
   align-items: flex-start;  
   display: flex;
   flex-flow: row nowrap;
-  gap: 0 $hg-spacer-50;
+  gap: 0 var(--hg-spacing-4);
   justify-content: flex-start;
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    margin-block-end: $hg-spacer-100;
+  @media (min-width: 48rem ) {
+    margin-block-end: var(--hg-spacing-8);
   }
 }
 
 .md-product-heading-title-txt {
   flex: 0 1 auto;
-  margin-block-start: to-rem(6);
+  margin-block-start: 0.375rem;
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     flex-grow: 1;
   }
 }
@@ -291,10 +290,10 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
-  row-gap: $hg-spacer-50;
+  row-gap: var(--hg-spacing-4);
   
   &:not(:empty) {
-    margin-top: $hg-spacer-50;
+    margin-top: var(--hg-spacing-4);
   }
 
   &:empty {
@@ -307,8 +306,8 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  margin-block-start: $hg-spacer-250;
-  row-gap: $hg-spacer-200;
+  margin-block-start: var(--hg-spacing-20);
+  row-gap: var(--hg-spacing-16);
 }
 
 .md-product-cta-main-action {
@@ -333,17 +332,17 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  row-gap: $hg-spacer-200;
+  row-gap: var(--hg-spacing-16);
 }
 
 .md-color-selector-list {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  gap: $hg-spacer-200;
+  gap: var(--hg-spacing-16);
   justify-content: flex-start;
   list-style: none;
-  margin: 0 0 $hg-spacer-200;
+  margin: 0 0 var(--hg-spacing-16);
   padding: 0;
 }
 
@@ -354,13 +353,13 @@
   justify-content: flex-start;
 
   &.md-color-selector-item--more {
-    margin-inline-end: $hg-spacer-100;
+    margin-inline-end: var(--hg-spacing-8);
 
     &:nth-child(-n+3) {
       display: none;
     }
 
-    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    @media (min-width: 48rem ) {
       display: none;
     }
   }
@@ -385,7 +384,7 @@
     background: $c-black;
     content: '';
     display: block;
-    height: to-rem(1);
+    height: 0.0625rem;
     left: 0;
     opacity: 0;
     position: absolute;
@@ -400,7 +399,7 @@
     display: block;
     height: auto;
     position: relative;
-    width: to-rem(18);
+    width: 1.125rem;
     z-index: 2;
   }
 
@@ -457,7 +456,7 @@
       opacity: 0;
     }
 
-    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    @media (min-width: 48rem ) {
       display: none;
     }
   }
@@ -484,7 +483,7 @@
   }
   
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     border: solid var(--line-width) $c-black;
     bottom: auto;
     left: 0;
@@ -501,16 +500,16 @@
 
 .md-bottom-sheet-sizes-header {
   align-items: center;
-  column-gap: $hg-spacer-200;
+  column-gap: var(--hg-spacing-16);
   display: flex;
   flex-flow: row nowrap;
   flex: 0 0 auto;
   justify-content: space-between;
-  min-height: ($hg-spacer-600 + $hg-spacer-50);
-  padding: $hg-spacer-100 $hg-spacer-250;
+  min-height: (var(--hg-spacing-48) + var(--hg-spacing-4));
+  padding: var(--hg-spacing-8) var(--hg-spacing-20);
   
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    padding: $hg-spacer-100 $hg-spacer-200;
+  @media (min-width: 48rem ) {
+    padding: var(--hg-spacing-8) var(--hg-spacing-16);
   }
 }
 
@@ -526,10 +525,10 @@
 .md-bottom-sheet-sizes-body {
   flex: 1 1 auto;
   overflow: auto;
-  padding: $hg-spacer-200 $hg-spacer-250;
+  padding: var(--hg-spacing-16) var(--hg-spacing-20);
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    padding: $hg-spacer-100 $hg-spacer-200;
+  @media (min-width: 48rem ) {
+    padding: var(--hg-spacing-8) var(--hg-spacing-16);
   }
 }
 
@@ -542,12 +541,12 @@
 }
 
 .md-bottom-sheet-sizes-divider {
-  margin: $hg-spacer-200 -#{$hg-spacer-250};
+  margin: var(--hg-spacing-16) calc(-1 * var(--hg-spacing-20));
   width: auto;
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-    margin-inline-end: -#{$hg-spacer-200};
-    margin-inline-start: -#{$hg-spacer-200};
+  @media (min-width: 48rem ) {
+    margin-inline-end: calc(-1 * var(--hg-spacing-16));
+    margin-inline-start: calc(-1 * var(--hg-spacing-16));
   }
 
   &.transparent {
@@ -558,8 +557,8 @@
 
 .md-bottom-sheet-sizes-actions {
   &:last-child {
-    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
-      margin-block-end: $hg-spacer-100;
+    @media (min-width: 48rem ) {
+      margin-block-end: var(--hg-spacing-8);
     }
   }
 }
@@ -575,7 +574,7 @@
     transform: translateY(100%);
     opacity: 0;
     
-    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    @media (min-width: 48rem ) {
       transform: translateY(-100%);
     }
   }
@@ -587,7 +586,7 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  row-gap: $hg-spacer-100;
+  row-gap: var(--hg-spacing-8);
 
   > li {
     align-items: stretch;
@@ -601,12 +600,12 @@
   text-align: start;
   white-space: normal;
   align-items: center;
-  column-gap: $hg-spacer-100;
+  column-gap: var(--hg-spacing-8);
   display: flex;
   flex-flow: row nowrap;
   height: auto;
   justify-content: space-between;
-  min-height: $hg-spacer-300;
+  min-height: var(--hg-spacing-24);
   padding: 0;
 }
 
@@ -617,7 +616,7 @@
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
-  gap: $hg-spacer-100;
+  gap: var(--hg-spacing-8);
   justify-content: flex-start;
   list-style: none;
   margin: 0;
@@ -634,13 +633,13 @@
   align-items: center;
   border: none;
   box-shadow: none;
-  column-gap: $hg-spacer-100;
+  column-gap: var(--hg-spacing-8);
   display: inline-flex;
   flex-flow: row wrap;
   height: auto;
   justify-content: flex-start;
   margin: 0;
-  min-height: $hg-spacer-300;
+  min-height: var(--hg-spacing-24);
   min-width: 0;
   overflow: visible;
   padding: 0;
@@ -652,7 +651,7 @@
 
 .md-size-selector-btn-main {
   align-self: center;
-  column-gap: $hg-spacer-100;
+  column-gap: var(--hg-spacing-8);
   display: inline-flex;
   flex-flow: row wrap;
   flex: 1 1 auto;
@@ -670,19 +669,19 @@
   
 .btn.btn-look {
   background-color: transparent;
-  padding: ($hg-spacer-50 + 1) $hg-spacer-200 ($hg-spacer-50 - 1);
-  min-height: $hg-spacer-300;
+  padding: (var(--hg-spacing-4) + 1) var(--hg-spacing-16) (var(--hg-spacing-4) - 1);
+  min-height: var(--hg-spacing-24);
 }
 
 .btn.btn-3d-view {
   align-items: center;
   background-color: transparent;
   border: 0;
-  row-gap: $hg-spacer-100;
+  row-gap: var(--hg-spacing-8);
   display: inline-flex;
   flex-flow: column nowrap;
   justify-content: center;
-  padding: ($hg-spacer-50 + 1) $hg-spacer-200 ($hg-spacer-50 - 1);
+  padding: (var(--hg-spacing-4) + 1) var(--hg-spacing-16) (var(--hg-spacing-4) - 1);
   text-align: center;
 }
 
@@ -697,7 +696,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    row-gap: $hg-spacer-200;
+    row-gap: var(--hg-spacing-16);
   }
 }
 
@@ -706,40 +705,40 @@
   z-index: 2;
 
   &--bottom {
-    inset-block-end: $hg-spacer-250;
+    inset-block-end: var(--hg-spacing-20);
     left: 50%;
     transform: translateX(-50%);
   }
 
   &--inline-start {
-    inset-inline-start: $hg-spacer-250;
+    inset-inline-start: var(--hg-spacing-20);
   }
 
   &--inline-end {
-    inset-inline-end: $hg-spacer-250;
+    inset-inline-end: var(--hg-spacing-20);
   }
 
   &--block-end {
-    inset-block-end: $hg-spacer-250;
+    inset-block-end: var(--hg-spacing-20);
   }
 
   &--block-start {
-    inset-block-start: $hg-spacer-250;
+    inset-block-start: var(--hg-spacing-20);
   }
 
   .btn.btn-3d-view {
-    margin-block-end: $hg-spacer-300;
+    margin-block-end: var(--hg-spacing-24);
   }
 }
 
 // Estilos PDP5 MOBILE
-@media (max-width: #{map-get($hg-breakpoints, sm) - 1px} ) {
+@media (max-width: 47.9375rem ) {
   .md-pdp5-main {
     align-items: stretch;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    margin-inline: $hg-spacer-250;
+    margin-inline: var(--hg-spacing-20);
   }
 
   .md-pdp5-column {
@@ -748,57 +747,57 @@
 
   .md-pdp5-box {
     &.md-pdp5-box--img {
-      margin-block-start: $hg-spacer-200;
+      margin-block-start: var(--hg-spacing-16);
     }
     
     &.md-pdp5-box--info {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
     }
 
     &.md-pdp5-box--media-img-model-1 {
       margin-block-start: 0;
-      margin-inline-end: -#{$hg-spacer-250};
-      margin-inline-start: -#{$hg-spacer-250};
+      margin-inline-end: calc(-1 * var(--hg-spacing-20));
+      margin-inline-start: calc(-1 * var(--hg-spacing-20));
       order: -110;
     }
     
     &.md-pdp5-box--info-sku {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
       order: -100;
     }
     
     &.md-pdp5-box--info-hint {
-      margin-block-start: $hg-spacer-200;
+      margin-block-start: var(--hg-spacing-16);
       order: -90;
     }
     
     &.md-pdp5-box--info-short {
-      margin-block-start: $hg-spacer-200;
+      margin-block-start: var(--hg-spacing-16);
       order: -80;
     }
     
     &.md-pdp5-box--media-img-model-2 {
-      margin-block-start: $hg-spacer-700;
+      margin-block-start: var(--hg-spacing-56);
       order: -70;
     }
     
     &.md-pdp5-box--info-shipping {
       order: -60;
-      margin-block-start: $hg-spacer-700;
+      margin-block-start: var(--hg-spacing-56);
     }
 
     &.md-pdp5-box--info-related-links {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
       order: -50;
     }
     
     &.md-pdp5-box--info-excerpt {
-      margin-block-start: $hg-spacer-700;
+      margin-block-start: var(--hg-spacing-56);
       order: -40;
     }
     
     &.md-pdp5-box--info-special-returns {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
       order: -30;
     }
   
@@ -806,30 +805,30 @@
       background-color: $c-white;
       bottom: 0;
       margin-block-start: 0;
-      margin-left: -#{$hg-spacer-250};
-      margin-right: -#{$hg-spacer-250};
+      margin-left: calc(-1 * var(--hg-spacing-20));
+      margin-right: calc(-1 * var(--hg-spacing-20));
       max-height: calc(90dvh - (48px + 40px));
       order: 100;
       overflow: auto;
-      padding-block-end: $hg-spacer-150;
-      padding-block-start: $hg-spacer-150;
-      padding-inline: $hg-spacer-250;
+      padding-block-end: var(--hg-spacing-12);
+      padding-block-start: var(--hg-spacing-12);
+      padding-inline: var(--hg-spacing-20);
       position: sticky;
       z-index: 999;
     }
 
     &.md-pdp5-box--media-img-model-3 {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
     }
   }
 }
 
 // Estilos PDP5 DESKTOP
-@media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+@media (min-width: 48rem ) {
   .md-pdp5-main {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    margin-inline: $hg-spacer-200;
+    margin-inline: var(--hg-spacing-16);
   }
 
   .md-pdp5-column {
@@ -852,7 +851,7 @@
 
   .md-pdp5-box {
     &.md-pdp5-box--img {
-      margin-block-start: $hg-spacer-1000;
+      margin-block-start: var(--hg-spacing-80);
     }
 
     &.md-pdp5-box--media-img-model-1 {
@@ -874,11 +873,11 @@
       
       .md-product-heading-append {
         order: -180;
-        margin-block-start: $hg-spacer-200;
+        margin-block-start: var(--hg-spacing-16);
       }
 
       .md-product-cta {
-        margin-block-start: $hg-spacer-300;
+        margin-block-start: var(--hg-spacing-24);
         order: -160;
       }
       
@@ -889,11 +888,11 @@
     
     &.md-pdp5-box--info-shipping {
       order: -90;
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
     }
     
     &.md-pdp5-box--info-hint {
-      margin-block-start: $hg-spacer-200;
+      margin-block-start: var(--hg-spacing-16);
       order: -80;
     }
     
@@ -903,26 +902,26 @@
     }
     
     &.md-pdp5-box--info-sku {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
       order: -190;
     }
 
     &.md-pdp5-box--info-short {
-      margin-block-start: $hg-spacer-1000;
+      margin-block-start: var(--hg-spacing-80);
       order: -60;
     }
     
     &.md-pdp5-box--info-related-links {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
       order: -50;
     }
     
     &.md-pdp5-box--info-excerpt {
-      margin-block-start: $hg-spacer-1000;
+      margin-block-start: var(--hg-spacing-80);
     }
 
     &.md-pdp5-box--info-special-returns {
-      margin-block-start: $hg-spacer-500;
+      margin-block-start: var(--hg-spacing-40);
     }
   }
 }

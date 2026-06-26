@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-@use "../../../../node_modules/holygrail2/scss/hg-lite/abstract/_index.scss" as *;
 @import "../abstract/_all";
 
 html {
@@ -12,10 +11,10 @@ html {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: baseline;
-  gap: $hg-spacer-100;
+  gap: var(--hg-spacing-8);
   overflow: hidden;
 
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+  @media (min-width: 80rem ) {
     display: flex;
   }
 
@@ -31,9 +30,9 @@ html {
 }
 
 .md-timeline2-point-media-txt {
-  font-size: to-rem(13);
+  font-size: 0.8125rem;
 
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+  @media (min-width: 80rem ) {
     flex: 0 0 2.5em;
   }
 }
@@ -53,11 +52,11 @@ html {
   height: 100%;
   overflow: auto;
   
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     padding-block: 16.6666vh;
   }
 
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+  @media (min-width: 80rem ) {
     padding-block: 9vh;
   }
 }
@@ -69,7 +68,7 @@ html {
   justify-content: flex-start;
   padding: 0;
 
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     padding-inline-end: 8%;
     margin-top: 0;
   }
@@ -83,14 +82,14 @@ html {
   inset-inline-start: 0;
   justify-content: flex-start;
   order: -100;
-  padding-block-start: to-rem(106);
-  padding-inline-start: $hg-spacer-200;
+  padding-block-start: 6.625rem;
+  padding-inline-start: var(--hg-spacing-16);
   position: fixed;
   width: 40%;
   
-  @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+  @media (min-width: 48rem ) {
     width: 26%;
-    padding-inline-start: $hg-spacer-500;
+    padding-inline-start: var(--hg-spacing-40);
     inset-block-start: auto;
     inset-block-end: 0;
   }
@@ -98,14 +97,14 @@ html {
 
 .md-timeline2-point-title {
   font-family: 'massimo-daily-regular';
-  font-size: to-rem(26);
+  font-size: 1.625rem;
   line-height: 1;
   
-  @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
-    font-size: to-rem(64);
+  @media (min-width: 80rem ) {
+    font-size: 4rem;
     line-height: .75;
-    padding-block-end: $hg-spacer-800;
-    padding-inline-start: $hg-spacer-600;
+    padding-block-end: var(--hg-spacing-64);
+    padding-inline-start: var(--hg-spacing-48);
     position: fixed;
     inset-block: auto 0;
     inset-inline: 26% auto;
@@ -113,25 +112,25 @@ html {
 }
 
 .md-timeline2-point-content-text {
-  margin-block-start: $hg-spacer-200;
+  margin-block-start: var(--hg-spacing-16);
   
-  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
-    padding-block-end: $hg-spacer-800;
+  @media (min-width: 62rem ) {
+    padding-block-end: var(--hg-spacing-64);
   }
 }
 
 .md-timeline2-point-media {
   flex: 0 0 auto;
   align-items: flex-end;
-  column-gap: $hg-spacer-100;
+  column-gap: var(--hg-spacing-8);
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   margin-inline-start: auto;
   transform-origin: right center;
 
-  @media (min-width: #{map-get($hg-breakpoints, md)} ) {
-    column-gap: $hg-spacer-250;
+  @media (min-width: 62rem ) {
+    column-gap: var(--hg-spacing-20);
   }
 }
 
@@ -145,17 +144,17 @@ html {
     position: relative;
     overflow: hidden;
     height: 66.6666vh;
-    border-width: $hg-spacer-50 0 $hg-spacer-50 0;
+    border-width: var(--hg-spacing-4) 0 var(--hg-spacing-4) 0;
     border-width: 0;
     border-style: solid;
     border-color: $c-white transparent $c-white transparent;
     
-    @media (min-width: #{map-get($hg-breakpoints, sm)} ) {
+    @media (min-width: 48rem ) {
       aspect-ratio: 3 / 4;
       height: 66.6666vh;
     }
 
-    @media (min-width: #{map-get($hg-breakpoints, lg)} ) {
+    @media (min-width: 80rem ) {
       transform-origin: left center;
       height: 82vh;
     }
