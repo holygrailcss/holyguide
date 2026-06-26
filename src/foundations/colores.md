@@ -110,10 +110,10 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
     </div>
   </div>
   <div class="color-swatch">
-    <div class="color-swatch__preview" style="background:#f0f0f0"></div>
+    <div class="color-swatch__preview" style="background:#f9f9f9"></div>
     <div class="color-swatch__info">
       <span class="color-swatch__name">$c-light-grey</span>
-      <span class="color-swatch__hex">#f0f0f0</span>
+      <span class="color-swatch__hex">#f9f9f9</span>
       <span class="color-swatch__class">.c-light-grey</span>
     </div>
   </div>
@@ -163,10 +163,10 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
     </div>
   </div>
   <div class="color-swatch">
-    <div class="color-swatch__preview" style="background:#ffc700"></div>
+    <div class="color-swatch__preview" style="background:#ffce4e"></div>
     <div class="color-swatch__info">
       <span class="color-swatch__name">$c-warning</span>
-      <span class="color-swatch__hex">#ffc700</span>
+      <span class="color-swatch__hex">#ffce4e</span>
       <span class="color-swatch__class">.c-warning</span>
     </div>
   </div>
@@ -192,10 +192,10 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
     </div>
   </div>
   <div class="color-swatch">
-    <div class="color-swatch__preview" style="background:#b99d6b"></div>
+    <div class="color-swatch__preview" style="background:#a38a6b"></div>
     <div class="color-swatch__info">
       <span class="color-swatch__name">$c-special</span>
-      <span class="color-swatch__hex">#b99d6b</span>
+      <span class="color-swatch__hex">#a38a6b</span>
       <span class="color-swatch__class">— gold</span>
     </div>
   </div>
@@ -286,16 +286,16 @@ imageAlt: Paleta de colores del sistema de diseño Dutti
 | `$c-black` | `#000000` | `.c-black` | Negro puro |
 | `$c-dark-grey` | `#737373` | `.c-dark-grey` | Texto secundario |
 | `$c-middle-grey` | `#a9a9a9` | `.c-middle-grey` | Texto deshabilitado / placeholder |
-| `$c-light-grey` | `#f0f0f0` | `.c-light-grey` | Fondo / texto sobre oscuro |
+| `$c-light-grey` | `#f9f9f9` | `.c-light-grey` | Fondo / texto sobre oscuro |
 | `$c-white` | `#ffffff` | `.c-white` | Blanco |
 | `$c-sk-grey` | `#e3e3e3` | — | Skeleton loader |
 | `$c-error` | `#b40016` | `.c-error` | Error, destructivo |
 | `$c-success` | `#12882c` | `.c-success` | Éxito / validación |
 | `$c-info` | `#1a32a4` | `.c-info` | Información |
-| `$c-warning` | `#ffc700` | `.c-warning` | Advertencia |
+| `$c-warning` | `#ffce4e` | `.c-warning` | Advertencia |
 | `$c-feel` | `#fb9962` | `.c-feel` | Programa Feel |
 | `$c-feel-dark` | `#c94c07` | `.c-feel-dark` | Feel oscuro |
-| `$c-special` | `#b99d6b` | — | Dorado / especial |
+| `$c-special` | `#a38a6b` | — | Dorado / especial |
 | `$bg-light` | `#f0f0f0` | `.bg-light` | Fondo claro |
 | `$c-bg-cream` | `#f4f2ed` | `.bg-cream` | Fondo crema |
 

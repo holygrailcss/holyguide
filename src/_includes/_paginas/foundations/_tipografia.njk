@@ -280,45 +280,43 @@ code {
     <div class="col-xs-12 mb-32">
       <p class="tf-section-title">Sistema tipográfico</p>
       <h2 class="tf-section-h2">Familias de fuentes</h2>
-      <p class="tf-section-desc">Tres familias cargadas por <code>@font-face</code> en <code>base/_fonts.scss</code>. Se acceden a través de variables SCSS del tipo <code>$font-family-{letra}-{peso}</code>.</p>
+      <p class="tf-section-desc">Familias del sistema cargadas por holygrail5. Se acceden a través de los tokens CSS <code>--hg-typo-font-family-*</code>. La primaria es <strong>Suisse Intl</strong> (thin/light/regular/semibold), la secundaria <strong>Suisse Medium</strong> y la monoespaciada <strong>Suisse Intl Mono</strong>.</p>
     </div>
     <div class="col-xs-12">
       <div class="tf-families">
 
         <div class="tf-family-card">
-          <div class="tf-family-card__name">Familia A — Sans-serif</div>
-          <div class="tf-family-card__specimen font-light">Aa</div>
-          <div class="tf-family-card__glyphs font-light">ABCDEFGHIJKLM abcdefghijklm 0123456789</div>
+          <div class="tf-family-card__name">Primary — Suisse Intl</div>
+          <div class="tf-family-card__specimen" style="font-family:var(--hg-typo-font-family-primary-regular)">Aa</div>
+          <div class="tf-family-card__glyphs" style="font-family:var(--hg-typo-font-family-primary-regular)">ABCDEFGHIJKLM abcdefghijklm 0123456789</div>
           <div class="tf-family-card__weights">
-            <span class="tf-family-card__weight-pill font-light">Light</span>
-            <span class="tf-family-card__weight-pill">Regular</span>
-            <span class="tf-family-card__weight-pill bold">Medium</span>
-            <span class="tf-family-card__weight-pill semibold">SemiBold</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-primary-thin)">Thin 100</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-primary-light)">Light 300</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-primary-regular)">Regular 400</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-primary-bold)">SemiBold 600</span>
           </div>
-          <div class="tf-family-card__var">$font-family-a-l / a-r / a-m / a-sb</div>
+          <div class="tf-family-card__var">--hg-typo-font-family-primary-thin / -light / -regular / -bold</div>
         </div>
 
         <div class="tf-family-card">
-          <div class="tf-family-card__name">Familia B — Display</div>
-          <div class="tf-family-card__specimen bold3">Aa</div>
-          <div class="tf-family-card__glyphs bold3">ABCDEFGHIJKLM abcdefghijklm</div>
+          <div class="tf-family-card__name">Secondary — Suisse Medium</div>
+          <div class="tf-family-card__specimen" style="font-family:var(--hg-typo-font-family-secondary)">Aa</div>
+          <div class="tf-family-card__glyphs" style="font-family:var(--hg-typo-font-family-secondary)">ABCDEFGHIJKLM abcdefghijklm</div>
           <div class="tf-family-card__weights">
-            <span class="tf-family-card__weight-pill bold3">Bold</span>
-            <span class="tf-family-card__weight-pill" style="font-family:'dutti-extended-extrabold',sans-serif">ExtraBold</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-secondary)">Medium 500</span>
           </div>
-          <div class="tf-family-card__var">$font-family-b-m / b-b</div>
+          <div class="tf-family-card__var">--hg-typo-font-family-secondary</div>
         </div>
 
         <div class="tf-family-card">
-          <div class="tf-family-card__name">Familia C — Serif</div>
-          <div class="tf-family-card__specimen regular3">Aa</div>
-          <div class="tf-family-card__glyphs regular3">ABCDEFGHIJKLM abcdefghijklm</div>
+          <div class="tf-family-card__name">Mono — Suisse Intl Mono</div>
+          <div class="tf-family-card__specimen" style="font-family:var(--hg-typo-font-family-mono-regular)">Aa</div>
+          <div class="tf-family-card__glyphs" style="font-family:var(--hg-typo-font-family-mono-regular)">ABCDEFGHIJKLM abcdefghijklm</div>
           <div class="tf-family-card__weights">
-            <span class="tf-family-card__weight-pill regular3">Regular</span>
-            <span class="tf-family-card__weight-pill" style="font-family:'massimo-daily-light','ms-serif',serif">Light</span>
-            <span class="tf-family-card__weight-pill" style="font-family:'massimo-daily-bold','ms-serif',serif">Bold</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-mono-regular)">Regular 400</span>
+            <span class="tf-family-card__weight-pill" style="font-family:var(--hg-typo-font-family-mono-bold)">Bold 700</span>
           </div>
-          <div class="tf-family-card__var">$font-family-c-r / c-m / c-b</div>
+          <div class="tf-family-card__var">--hg-typo-font-family-mono-regular / -mono-bold</div>
         </div>
 
       </div>
@@ -461,63 +459,72 @@ code {
     <div class="col-xs-12 mb-32">
       <p class="tf-section-title">Font weights</p>
       <h2 class="tf-section-h2">Grosores</h2>
-      <p class="tf-section-desc">Clases helper que aplican la familia de fuente correcta para cada peso. Nota: <code>.bold</code> mapea a <code>suisse-medium</code> (no a un bold real).</p>
+      <p class="tf-section-desc">Cada peso es una familia <code>@font-face</code> independiente, expuesta como token <code>--hg-typo-font-family-*</code>. El "bold" del sistema (<code>primary-bold</code>) es <strong>suisse-semibold (600)</strong>; <code>secondary</code> es suisse-medium (500).</p>
     </div>
     <div class="col-xs-12">
       <div class="tf-weights">
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.font-light</span>
+            <span class="tf-weight-row__name">primary-thin</span>
+            <span class="tf-weight-row__face">suisse-thin</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-primary-thin · 100</span>
+          </div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-primary-thin)">Massimo Dutti — The Art of Elegance</div>
+        </div>
+
+        <div class="tf-weight-row">
+          <div class="tf-weight-row__meta">
+            <span class="tf-weight-row__name">primary-light</span>
             <span class="tf-weight-row__face">suisse-light</span>
-            <span class="tf-weight-row__var">$font-family-a-l · 100</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-primary-light · 300</span>
           </div>
-          <div class="tf-weight-row__text font-light">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-primary-light)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.font-regular</span>
+            <span class="tf-weight-row__name">primary-regular</span>
             <span class="tf-weight-row__face">suisse-regular</span>
-            <span class="tf-weight-row__var">$font-family-a-r · 400</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-primary-regular · 400</span>
           </div>
-          <div class="tf-weight-row__text font-regular">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-primary-regular)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.bold</span>
+            <span class="tf-weight-row__name">secondary</span>
             <span class="tf-weight-row__face">suisse-medium</span>
-            <span class="tf-weight-row__var">$font-family-a-b · 500 ⚠</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-secondary · 500</span>
           </div>
-          <div class="tf-weight-row__text bold">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-secondary)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.semibold</span>
+            <span class="tf-weight-row__name">primary-bold</span>
             <span class="tf-weight-row__face">suisse-semibold</span>
-            <span class="tf-weight-row__var">$font-family-a-sb · 600</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-primary-bold · 600</span>
           </div>
-          <div class="tf-weight-row__text semibold">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-primary-bold)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.bold3</span>
-            <span class="tf-weight-row__face">dutti-extended-bold</span>
-            <span class="tf-weight-row__var">$font-family-b-m · display</span>
+            <span class="tf-weight-row__name">mono-regular</span>
+            <span class="tf-weight-row__face">suisse-mono-regular</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-mono-regular · 400</span>
           </div>
-          <div class="tf-weight-row__text bold3">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-mono-regular)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
         <div class="tf-weight-row">
           <div class="tf-weight-row__meta">
-            <span class="tf-weight-row__name">.regular3</span>
-            <span class="tf-weight-row__face">massimo-daily-regular</span>
-            <span class="tf-weight-row__var">$font-family-c-r · serif</span>
+            <span class="tf-weight-row__name">mono-bold</span>
+            <span class="tf-weight-row__face">suisse-mono-bold</span>
+            <span class="tf-weight-row__var">--hg-typo-font-family-mono-bold · 700</span>
           </div>
-          <div class="tf-weight-row__text regular3">Massimo Dutti — The Art of Elegance</div>
+          <div class="tf-weight-row__text" style="font-family:var(--hg-typo-font-family-mono-bold)">Massimo Dutti — The Art of Elegance</div>
         </div>
 
       </div>

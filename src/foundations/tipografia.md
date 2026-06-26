@@ -183,83 +183,79 @@ imageAlt: Escala tipográfica del sistema de diseño Dutti
 
 ## Familias de fuentes
 
-El proyecto usa tres familias tipográficas con variantes de peso, mapeadas a variables SCSS del tipo `$font-family-{letra}-{peso}`.
+El sistema usa la familia **Suisse Intl** en sus distintos cortes, expuestos como tokens CSS `--hg-typo-font-family-*` definidos por holygrail5. Hay tres grupos: primaria (thin/light/regular/semibold), secundaria (medium) y monoespaciada (regular/bold).
 
 <div class="font-families">
   <div class="font-family-card">
-    <div class="font-family-card__preview" style="font-family:'suisse-regular',Helvetica,sans-serif">Aa Bb Cc</div>
+    <div class="font-family-card__preview" style="font-family:var(--hg-typo-font-family-primary-regular)">Aa Bb Cc</div>
     <div class="font-family-card__info">
-      <span class="font-family-card__name">Suisse Int'l (familia A)</span>
-      <span class="font-family-card__meta">suisse-light / regular / medium / semibold</span>
-      <span class="font-family-card__vars">$font-family-a-l / a-r / a-m / a-b / a-sb</span>
+      <span class="font-family-card__name">Primary — Suisse Intl</span>
+      <span class="font-family-card__meta">thin · light · regular · semibold</span>
+      <span class="font-family-card__vars">--hg-typo-font-family-primary-thin / -light / -regular / -bold</span>
     </div>
   </div>
   <div class="font-family-card">
-    <div class="font-family-card__preview" style="font-family:'dutti-extended-bold',arial-black,sans-serif;letter-spacing:-.02em">Aa Bb</div>
+    <div class="font-family-card__preview" style="font-family:var(--hg-typo-font-family-secondary)">Aa Bb</div>
     <div class="font-family-card__info">
-      <span class="font-family-card__name">Dutti Extended (familia B)</span>
-      <span class="font-family-card__meta">dutti-extended-bold / extrabold</span>
-      <span class="font-family-card__vars">$font-family-b-m / b-b</span>
+      <span class="font-family-card__name">Secondary — Suisse Medium</span>
+      <span class="font-family-card__meta">medium (500)</span>
+      <span class="font-family-card__vars">--hg-typo-font-family-secondary</span>
     </div>
   </div>
   <div class="font-family-card">
-    <div class="font-family-card__preview" style="font-family:Georgia,serif;font-style:italic">Aa Bb Cc</div>
+    <div class="font-family-card__preview" style="font-family:var(--hg-typo-font-family-mono-regular)">Aa Bb Cc</div>
     <div class="font-family-card__info">
-      <span class="font-family-card__name">Massimo Daily (familia C)</span>
-      <span class="font-family-card__meta">massimo-daily-light / regular / bold</span>
-      <span class="font-family-card__vars">$font-family-c-r / c-m / c-b</span>
+      <span class="font-family-card__name">Mono — Suisse Intl Mono</span>
+      <span class="font-family-card__meta">mono-regular / mono-bold</span>
+      <span class="font-family-card__vars">--hg-typo-font-family-mono-regular / -mono-bold</span>
     </div>
   </div>
 </div>
 
-### Variables SCSS de fuentes
+### Tokens de familia
 
-| Variable | Fuente CSS | Archivo `.woff2` | Uso |
-|---|---|---|---|
-| `$font-family-a-l` | `suisse-light` | `SuisseIntl-Light.woff2` | Texto fino, body |
-| `$font-family-a-r` | `suisse-regular` | `SuisseIntl-Regular.woff2` | Texto principal |
-| `$font-family-a-m` | `suisse-medium` | `SuisseIntl-Medium.woff2` | Énfasis medio |
-| `$font-family-a-b` | `suisse-medium` | `SuisseIntl-Medium.woff2` | "Bold" → mapea a medium |
-| `$font-family-a-sb` | `suisse-semibold` | `SuisseIntl-SemiBold.woff2` | Semi-negrita real |
-| `$font-family-b-m` | `dutti-extended-bold` | `dutti-daily-bold.woff2` | Display negrita |
-| `$font-family-b-b` | `dutti-extended-extrabold` | `dutti-daily-bold.woff2` | Display extra negrita |
-| `$font-family-c-r` | `massimo-daily-regular` | `SuisseWorks-Regular-WebXL.woff2` | Serif regular |
-| `$font-family-c-m` | `massimo-daily-light` | `massimo-daily-light.woff2` | Serif ligero |
-| `$font-family-c-b` | `massimo-daily-bold` | `massimo-daily-bold.woff2` | Serif negrita |
-| `$font-family-form` | `suisse-light` | `SuisseIntl-Light.woff2` | Inputs y formularios |
+| Token CSS | Fuente CSS | Archivo `.woff2` | Peso | Uso |
+|---|---|---|---|---|
+| `--hg-typo-font-family-primary-thin` | `suisse-thin` | `suisse-intl-thin.woff2` | 100 | Display fino |
+| `--hg-typo-font-family-primary-light` | `suisse-light` | `SuisseIntl-Light.woff2` | 300 | Texto fino, body |
+| `--hg-typo-font-family-primary-regular` | `suisse-regular` | `SuisseIntl-Regular.woff2` | 400 | Texto principal |
+| `--hg-typo-font-family-primary-bold` | `suisse-semibold` | `SuisseIntl-SemiBold.woff2` | 600 | Negrita del sistema (semibold real) |
+| `--hg-typo-font-family-secondary` | `suisse-medium` | `SuisseIntl-Medium.woff2` | 500 | Énfasis medio |
+| `--hg-typo-font-family-mono-regular` | `suisse-mono-regular` | `SuisseIntlMono-Regular-WebS.woff2` | 400 | Monoespaciada |
+| `--hg-typo-font-family-mono-bold` | `suisse-mono-bold` | `SuisseIntlMono-Bold-WebS.woff2` | 700 | Monoespaciada negrita |
 
 
 ### Pesos de fuente
 
 <div class="weights-grid">
   <div class="weight-card">
-    <span class="weight-card__sample" style="font-weight:100">Aa</span>
-    <span class="weight-card__name">$font-weight-light</span>
+    <span class="weight-card__sample" style="font-family:var(--hg-typo-font-family-primary-thin)">Aa</span>
+    <span class="weight-card__name">primary-thin</span>
     <span class="weight-card__val">100</span>
   </div>
   <div class="weight-card">
-    <span class="weight-card__sample" style="font-weight:400">Aa</span>
-    <span class="weight-card__name">$font-weight-regular</span>
+    <span class="weight-card__sample" style="font-family:var(--hg-typo-font-family-primary-light)">Aa</span>
+    <span class="weight-card__name">primary-light</span>
+    <span class="weight-card__val">300</span>
+  </div>
+  <div class="weight-card">
+    <span class="weight-card__sample" style="font-family:var(--hg-typo-font-family-primary-regular)">Aa</span>
+    <span class="weight-card__name">primary-regular</span>
     <span class="weight-card__val">400</span>
   </div>
   <div class="weight-card">
-    <span class="weight-card__sample" style="font-weight:500">Aa</span>
-    <span class="weight-card__name">$font-weight-medium</span>
+    <span class="weight-card__sample" style="font-family:var(--hg-typo-font-family-secondary)">Aa</span>
+    <span class="weight-card__name">secondary</span>
     <span class="weight-card__val">500</span>
   </div>
   <div class="weight-card">
-    <span class="weight-card__sample" style="font-weight:600">Aa</span>
-    <span class="weight-card__name">$font-weight-semibold</span>
+    <span class="weight-card__sample" style="font-family:var(--hg-typo-font-family-primary-bold)">Aa</span>
+    <span class="weight-card__name">primary-bold</span>
     <span class="weight-card__val">600</span>
-  </div>
-  <div class="weight-card">
-    <span class="weight-card__sample" style="font-weight:500">Aa</span>
-    <span class="weight-card__name">$font-weight-bold</span>
-    <span class="weight-card__val">500 ⚠️</span>
   </div>
 </div>
 
-> **Nota**: `$font-weight-bold` tiene valor `500` (igual que medium). Para negrita real usa `$font-weight-semibold: 600` o la clase `.font-sb`.
+> **Nota**: la negrita del sistema (`--hg-typo-font-family-primary-bold`) es **suisse-semibold (600)**. El corte `secondary` es suisse-medium (500). Los tokens de peso disponibles en holygrail5 son `--hg-typo-font-weight-100/300/400/500/600/700`.
 
 
 ## Escala tipográfica — `$minheaders`
@@ -278,32 +274,26 @@ Clases generadas a partir del mapa `$minheaders` del proyecto. Formato: `(tamañ
   </div>
   <div class="type-row">
     <span class="type-row__class">.h2</span>
-    <span>18px</span><span>24px</span><span>1.2</span><span>bold</span>
+    <span>18px</span><span>24px</span><span>1.2</span><span>semibold</span>
     <span><span class="tracking-badge tracking-badge--0">—</span></span>
     <span>Subtítulo semántico</span>
   </div>
   <div class="type-row">
-    <span class="type-row__class">.suisse-1</span>
-    <span>16px</span><span>20px</span><span>1.5</span><span>regular3</span>
+    <span class="type-row__class">.title-thin</span>
+    <span>24px</span><span>24px</span><span>1</span><span>thin</span>
     <span><span class="tracking-badge tracking-badge--0">—</span></span>
-    <span>Suisse grande</span>
+    <span>Display fino</span>
   </div>
   <div class="type-row">
-    <span class="type-row__class">.suisse-2</span>
-    <span>13px</span><span>14px</span><span>1.1</span><span>regular3</span>
+    <span class="type-row__class">.title-xxl</span>
+    <span>24px</span><span>24px</span><span>1</span><span>regular</span>
     <span><span class="tracking-badge tracking-badge--0">—</span></span>
-    <span>Suisse pequeño</span>
-  </div>
-  <div class="type-row">
-    <span class="type-row__class">.suisse-body</span>
-    <span>10px</span><span>12px</span><span>1.1</span><span>regular3</span>
-    <span><span class="tracking-badge tracking-badge--0">—</span></span>
-    <span>Body Suisse compacto</span>
+    <span>Display grande</span>
   </div>
   <div class="type-row">
     <span class="type-row__class">.p-tag</span>
     <span>9px</span><span>10px</span><span>1</span><span>light</span>
-    <span><span class="tracking-badge tracking-badge--4">0.04em</span></span>
+    <span><span class="tracking-badge tracking-badge--16">0.16em</span></span>
     <span>Tags / chips — TTU</span>
   </div>
   <div class="type-row">
@@ -315,7 +305,7 @@ Clases generadas a partir del mapa `$minheaders` del proyecto. Formato: `(tamañ
   <div class="type-row">
     <span class="type-row__class">.title-l</span>
     <span>12px</span><span>13px</span><span>1.4</span><span>light</span>
-    <span><span class="tracking-badge tracking-badge--4">0.04em</span></span>
+    <span><span class="tracking-badge tracking-badge--16">0.16em</span></span>
     <span>Título ligero — TTU</span>
   </div>
   <div class="type-row">
@@ -327,7 +317,7 @@ Clases generadas a partir del mapa `$minheaders` del proyecto. Formato: `(tamañ
   <div class="type-row">
     <span class="type-row__class">.title-s</span>
     <span>10px</span><span>10px</span><span>1.4</span><span>light</span>
-    <span><span class="tracking-badge tracking-badge--4">0.04em</span></span>
+    <span><span class="tracking-badge tracking-badge--16">0.16em</span></span>
     <span>Título pequeño — TTU</span>
   </div>
   <div class="type-row">
@@ -341,12 +331,6 @@ Clases generadas a partir del mapa `$minheaders` del proyecto. Formato: `(tamañ
     <span>12px</span><span>13px</span><span>1.5</span><span>light</span>
     <span><span class="tracking-badge tracking-badge--4">0.04em</span></span>
     <span>Alias de hg-body-l</span>
-  </div>
-  <div class="type-row">
-    <span class="type-row__class">.semantic</span>
-    <span>12px</span><span>12px</span><span>1</span><span>light</span>
-    <span><span class="tracking-badge tracking-badge--16">0.16em</span></span>
-    <span>Texto semántico TTU amplio</span>
   </div>
   <div class="type-row">
     <span class="type-row__class">.hg-body-l</span>
@@ -401,7 +385,7 @@ Clases con tamaño de fuente fijo (no responsive) y line-height estándar.
 
 ## Interletrado — `letter-spacing`
 
-El sistema define **dos valores de tracking** aplicados globalmente a grupos de clases en `style.scss`. No son opcionales ni heredados: están forzados en cada clase.
+El sistema define **tres valores de tracking** (0.04em para cuerpo, 0.16em para títulos/labels en mayúsculas y 0.06em para labels pequeños/mono), incrustados en cada clase tipográfica por holygrail5.
 
 <style>
 .tracking-demo-grid {
@@ -456,13 +440,9 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
       <span class="tracking-demo-card__desc">Tracking ajustado — texto de cuerpo</span>
     </div>
     <div class="tracking-demo-card__classes">
-      .p-tag<br>
-      .title-l<br>
-      .text-m · .text-l<br>
-      .title-s<br>
-      .input<br>
-      .hg-body-m · .hg-body-m-b<br>
-      .form-input-label-2 label
+      .text-l · .text-m<br>
+      .hg-body-l · .hg-body-l-b<br>
+      .hg-body-m · .hg-body-m-b
     </div>
     <div class="tracking-demo-card__sample" style="letter-spacing:0.04em">
       Massimo Dutti — texto de cuerpo a 0.04em
@@ -471,12 +451,12 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
   <div class="tracking-demo-card tracking-demo-card--16">
     <div class="tracking-demo-card__header">
       <span class="tracking-demo-card__val">0.16em</span>
-      <span class="tracking-demo-card__desc">Tracking amplio — etiquetas TTU</span>
+      <span class="tracking-demo-card__desc">Tracking amplio — títulos y labels TTU</span>
     </div>
     <div class="tracking-demo-card__classes">
-      .title-m<br>
-      .label-m<br>
-      .semantic
+      .title-l · .title-m · .title-s · .title-s-b<br>
+      .p-tag<br>
+      .label-m · .label-m-b
     </div>
     <div class="tracking-demo-card__sample" style="letter-spacing:0.16em;text-transform:uppercase">
       Massimo Dutti — etiqueta a 0.16em
@@ -485,42 +465,40 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
 </div>
 
 ```scss
-// style.scss — interletrado forzado por grupo de clase
+// holygrail5 — letter-spacing incrustado en cada clase tipográfica
 
-// 0.04em — cuerpo de texto, inputs, tags
-.p-tag,
-.title-l,
-.text-m,
-.text-l,
-.title-s,
-.input,
-.hg-body-m,
-.hg-body-m-b,
-.form-input-label-2 label {
+// 0.04em — cuerpo de texto
+.text-l, .text-m,
+.hg-body-l, .hg-body-l-b,
+.hg-body-m, .hg-body-m-b {
   letter-spacing: 0.04em;
 }
 
-// 0.16em — etiquetas TTU, labels semánticos
-.semantic,
-.title-m,
-.label-m {
+// 0.16em — títulos y labels en mayúsculas
+.title-l, .title-m, .title-s, .title-s-b,
+.p-tag, .label-m, .label-m-b {
   letter-spacing: 0.16em;
+}
+
+// 0.06em — labels pequeños y monoespaciados
+.label-s, .label-s-b,
+.label-mono, .label-mono-b {
+  letter-spacing: 0.06em;
 }
 ```
 
-> **Importante**: El resto de clases (`.hg-body-l`, `.hg-body-l-b`, `.title-l-b`, `.suisse-*`, `.h2`) **no tienen tracking explícito** — heredan el valor por defecto del navegador (`0`).
+> **Importante**: El resto de clases (`.title-thin`, `.title-xxl`, `.title-l-b`, `.h2`) **no tienen tracking explícito** — usan el valor por defecto (`0`).
 
 
 ## Clases helper de texto
 
 | Clase | CSS | Descripción |
 |---|---|---|
-| `.bold` | `font-family: $font-family-a-b` | Negrita (→ suisse-medium) |
-| `.semibold` | `font-family: $font-family-a-sb` | Semi-negrita (→ suisse-semibold) |
-| `.font-l` | `font-family: $font-family-a-l` | Ligero |
-| `.font-r` | `font-family: $font-family-a-r` | Regular |
-| `.font-m` | `font-family: $font-family-a-m` | Medium |
-| `.font-sb` | `font-family: $font-family-a-sb` | SemiBold |
+| `.semibold` | `--hg-typo-font-family-primary-bold` | Semi-negrita real (suisse-semibold 600) |
+| `.font-l` | `--hg-typo-font-family-primary-light` | Ligero (suisse-light 300) |
+| `.font-r` | `--hg-typo-font-family-primary-regular` | Regular (suisse-regular 400) |
+| `.font-m` | `--hg-typo-font-family-secondary` | Medium (suisse-medium 500) |
+| `.font-sb` | `--hg-typo-font-family-primary-bold` | SemiBold (suisse-semibold 600) |
 | `.ttu` | `text-transform: uppercase` | Mayúsculas |
 | `.has-ellipsis` | trunca 1 línea | Elipsis en 1 línea |
 | `.has-ellipsis-3` | trunca 3 líneas | Elipsis a 3 líneas |
@@ -538,22 +516,22 @@ El sistema define **dos valores de tracking** aplicados globalmente a grupos de 
 <span class="label-m ttu">Categoría</span>
 
 <!-- Título con negrita semibold real -->
-<h3 class="title-l bold ttu">Título de sección</h3>
+<h3 class="title-l semibold ttu">Título de sección</h3>
 
 <!-- Body en negrita -->
 <p class="hg-body-m-b">Descripción importante destacada.</p>
 ```
 
 ```scss
-// Usando variables en SCSS
+// Usando tokens CSS
 .mi-elemento {
-  font-family: $font-family-a-r;
+  font-family: var(--hg-typo-font-family-primary-regular);
   font-size: 12px;
   line-height: 1.5;
 }
 
 .mi-titulo {
-  font-family: $font-family-a-sb;  // semibold real
+  font-family: var(--hg-typo-font-family-primary-bold);  // semibold real (600)
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: .16em;
