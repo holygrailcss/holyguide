@@ -15,7 +15,7 @@ imageAlt: Cards component
 
 <h2 id="cards">Cards</h2>
 
-Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones, pago). El **layout usa utilidades de HG5** a modo Tailwind (`hg-d-flex`, `hg-flex-column`, `hg-justify-between`, `hg-items-start`, `hg-flex-1`, `hg-gap-*`, `hg-px-16`, `hg-py-16`, `hg-text-right`). El `<style>` solo lleva lo que HG5 aún no cubre: el **recuadro del selector**, el **borde** de la tarjeta y el **badge** (y el gris de texto, hasta que se publique `.hg-c-dark-grey`).
+Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones, pago). El **layout y los colores usan utilidades de HG5** a modo Tailwind (`hg-d-flex`, `hg-flex-column`, `hg-justify-between`, `hg-items-start`, `hg-flex-1`, `hg-gap-*`, `hg-px-16`, `hg-py-16`, `hg-text-right`, `hg-c-dark-grey`, `hg-bg-light-grey`). El `<style>` solo lleva lo que HG5 no cubre: el **recuadro del selector**, el **borde** de la tarjeta y el **badge** (padding + mayúsculas).
 
 <style>
   .hg-cards-demo { max-width: 640px; }
@@ -28,9 +28,7 @@ Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones
   .hg-card-select label:has(input:checked) .hg-card--border { border-color: var(--hg-color-primary); }
   .hg-card-select label:has(input:focus-visible) .hg-card { outline: 2px solid var(--hg-color-primary); outline-offset: 2px; }
 
-  /* Hasta publicar HG5: sustituibles por .hg-c-dark-grey / .hg-bg-light-grey */
-  .hg-card__muted { color: var(--hg-color-dark-grey); }
-  .hg-card__badge { align-self: flex-start; padding: 4px 8px; background: var(--hg-color-light-grey); font-size: var(--hg-typo-font-size-10); letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; }
+  .hg-card__badge { align-self: flex-start; padding: 4px 8px; font-size: var(--hg-typo-font-size-10); letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; }
   .hg-card__edit { border: 0; background: none; padding: 0; cursor: pointer; font-size: var(--hg-typo-font-size-10); letter-spacing: .16em; text-transform: uppercase; color: var(--hg-color-primary); }
   .hg-card__logo { max-width: 60px; height: auto; }
 
@@ -54,8 +52,8 @@ Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones
       <div class="hg-card hg-card--border hg-d-flex hg-justify-between hg-items-start hg-px-16 hg-py-16">
         <div class="hg-card__content hg-flex-1 hg-d-flex hg-flex-column hg-justify-center hg-gap-4">
           <div class="hg-body-l">Entrega a domicilio</div>
-          <div class="hg-body-l hg-card__muted">Mañana, 15.03.25 – martes, 18.03.25</div>
-          <span class="hg-card__badge">Envío express · entrega garantizada</span>
+          <div class="hg-body-l hg-c-dark-grey">Mañana, 15.03.25 – martes, 18.03.25</div>
+          <span class="hg-card__badge hg-bg-light-grey">Envío express · entrega garantizada</span>
         </div>
         <div class="hg-text-right"><div class="hg-body-l">3,95 € – 4,95 €</div></div>
       </div>
@@ -68,7 +66,7 @@ Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones
       <div class="hg-card hg-d-flex hg-justify-between hg-items-start">
         <div class="hg-card__content hg-flex-1 hg-d-flex hg-flex-column hg-justify-center hg-gap-4">
           <div class="hg-body-l">.hg-card-select--top</div>
-          <div class="hg-body-l hg-card__muted">Selector arriba, sin borde. Útil en listas de tarjetas con contenido de altura variable.</div>
+          <div class="hg-body-l hg-c-dark-grey">Selector arriba, sin borde. Útil en listas de tarjetas con contenido de altura variable.</div>
         </div>
       </div>
     </label>
@@ -80,8 +78,8 @@ Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones
       <div class="hg-card hg-card--border hg-d-flex hg-justify-between hg-items-start hg-px-16 hg-py-16">
         <div class="hg-card__content hg-flex-1 hg-d-flex hg-flex-column hg-justify-center hg-gap-4">
           <div class="hg-body-l">Nombre completo</div>
-          <div class="hg-body-l hg-card__muted">Carrer Violeta Parra Sandoval 8, 1º1ª</div>
-          <div class="hg-body-l hg-card__muted">08960 Sant Just Desvern · Barcelona</div>
+          <div class="hg-body-l hg-c-dark-grey">Carrer Violeta Parra Sandoval 8, 1º1ª</div>
+          <div class="hg-body-l hg-c-dark-grey">08960 Sant Just Desvern · Barcelona</div>
         </div>
         <div class="hg-d-flex hg-flex-column hg-items-end"><button type="button" class="hg-card__edit">Editar</button></div>
       </div>
@@ -102,18 +100,13 @@ Tarjetas seleccionables con `input[type="radio"]` (checkout: envío, direcciones
 ## Qué usa cada cosa
 
 - **Layout → utilidades HG5** (a modo Tailwind): `hg-d-flex`, `hg-flex-column`, `hg-justify-between`, `hg-justify-center`, `hg-items-start` / `hg-items-center` / `hg-items-end`, `hg-flex-1`, `hg-gap-4` / `hg-gap-16`, `hg-px-16`, `hg-py-16`, `hg-text-right`.
-- **Tipografía → HG5**: `.hg-body-l`.
-- **CSS propio (mínimo)** solo para lo que el DS no cubre: `.hg-card` (posición + min-height), `.hg-card--border`, `.hg-card__check` (recuadro selector), `.hg-card__badge`, `.hg-card__edit`, `.hg-card__muted`.
+- **Tipografía y color → HG5**: `.hg-body-l`, `.hg-c-dark-grey`, `.hg-bg-light-grey`.
+- **CSS propio (mínimo)** solo para lo que el DS no cubre: `.hg-card` (posición + min-height), `.hg-card--border`, `.hg-card__check` (recuadro selector), `.hg-card__badge` (padding + mayúsculas), `.hg-card__edit`.
 
 ### Variantes del selector
 - `.hg-card-select--center` — recuadro a la izquierda, centrado (contenido con `padding-left:30px`).
 - `.hg-card-select--top` — recuadro arriba-derecha.
 - `.hg-card-select--none` — sin recuadro; selección solo por el borde negro (`check-no`).
-
-## Pendiente cuando se publique HG5
-Ya añadidos al DS `.hg-c-*` (texto) y `.hg-bg-*` (fondo). Al publicar, se sustituyen y se elimina más CSS:
-- `.hg-card__muted` → `hg-c-dark-grey`
-- fondo de `.hg-card__badge` → `hg-bg-light-grey`
 
 ## Equivalencia HolyGrail2 → HolyGrail5
 
@@ -127,8 +120,8 @@ Ya añadidos al DS `.hg-c-*` (texto) y `.hg-bg-*` (fondo). Al publicar, se susti
 | `check-center` / `check-top` / `check-no` | `--center` / `--top` / `--none` |
 | `border-1-grey` | `.hg-card--border` (`--hg-color-middle-grey` → `--hg-color-primary` al seleccionar) |
 | `text-l` | `.hg-body-l` |
-| `c-dark-grey` | `.hg-card__muted` (futuro `hg-c-dark-grey`) |
-| `bg-light-grey` | `.hg-card__badge` (futuro `hg-bg-light-grey`) |
+| `c-dark-grey` | `hg-c-dark-grey` |
+| `bg-light-grey` | `hg-bg-light-grey` |
 | `btn-tertiary` | `.hg-card__edit` |
 
 ## Notas
