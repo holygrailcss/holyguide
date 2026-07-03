@@ -52,8 +52,8 @@ Replican el `box3` + `checkbox-radio` de HolyGrail2 pero maquetadas con **HolyGr
 
   /* Indicador (recuadro + punto), como ico-radio */
   .hg-card__check { position: absolute; z-index: 1; width: 14px; height: 14px; box-sizing: border-box; border: 1px solid var(--hg-color-primary); pointer-events: none; }
-  .hg-card__check::after { content: ""; position: absolute; top: 3px; left: 3px; width: 4px; height: 4px; background: var(--hg-color-primary); opacity: 0; transform: scale(0); transition: all .15s ease; }
-  .hg-card-select label:has(input:checked) .hg-card__check::after { opacity: 1; transform: scale(1); }
+  .hg-card__check::after { content: ""; position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; background: var(--hg-color-primary); opacity: 0; transform: translate(-50%, -50%) scale(0); transition: all .15s ease; }
+  .hg-card-select label:has(input:checked) .hg-card__check::after { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
   /* Posición del check + hueco en el contenido */
   .hg-card-select--center .hg-card__check { top: 50%; left: 16px; transform: translateY(-50%); }
