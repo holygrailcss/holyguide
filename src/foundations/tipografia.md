@@ -658,32 +658,75 @@ Principios que persigue:
 
 En resumen: **misma sensación tipográfica (palo seco, neutra, brutalista) en todos los idiomas, con las fuentes que cada cultura ya tiene, y sin coste de descarga.**
 
+> **Limitación en Android.** El hack depende de `local()` para alcanzar las fuentes del sistema, pero **Chrome en Android restringe** el acceso por `local()` a la mayoría de fuentes del sistema (por privacidad). Si ninguna de las candidatas resuelve, el `@font-face` *companion* no se aplica y el texto **cae a la fuente por defecto a 100 %**: no se ve el `size-adjust` ni el anclaje a Regular (esto explica que en árabe/CJK no se aprecie cambio ni aumento de tamaño en Android). Se incluye `Noto Naskh Arabic` y las variantes `Noto Sans *` — las que Android sí suele exponer — como último recurso; si aun así no resuelven, la única forma de garantizar el escalado en Android sería **cargar un webfont** para ese script, a costa del *peso cero*.
+
+> **Firefox (todos los SO).** Firefox resuelve `local()` **solo por nombre completo o PostScript**, no por nombre de familia. Por eso cada `src` incluye también los nombres PostScript (`PingFangSC-Regular`, `HiraginoSans-W4`, `AppleSDGothicNeo-Regular`, `SFArabic-Regular`, `NotoSansSC-Regular`…) además del nombre de familia: así resuelve tanto en Chrome/Safari (por familia) como en Firefox (por PostScript).
+
+### Nombres PostScript y compatibilidad con Firefox
+
+Cada fuente instalada se puede referenciar por **varios nombres**, y `local()` busca una fuente del sistema que coincida con el nombre indicado:
+
+- **Nombre de familia** (family name): `PingFang SC`, `Hiragino Sans`, `SF Arabic` — el que aparece en el menú de fuentes; apunta a **toda la familia**.
+- **Nombre completo** (full name): `PingFang SC Regular`, `Hiragino Sans W4`.
+- **Nombre PostScript**: `PingFangSC-Regular`, `HiraginoSans-W4`, `SFArabic-Medium` — identificador **único y sin espacios** que apunta a **un corte concreto** (peso/estilo exacto), no a la familia entera.
+
+El problema es que **cada navegador resuelve `local()` con nombres distintos**:
+
+| Navegador | Resuelve `local()` por… |
+|---|---|
+| Chrome · Edge · Safari | nombre de familia **y** PostScript |
+| **Firefox** | **solo** nombre completo o **PostScript** (no por familia) |
+
+Como este hack depende por completo de `local()` para alcanzar fuentes del sistema, en Firefox `local("PingFang SC")` (familia) **no resolvía**, el `@font-face` *companion* no se aplicaba y el texto caía a la fuente por defecto **sin `size-adjust`** (más pequeño y con otra forma). La solución es añadir el **nombre PostScript delante**, dejando la familia como *fallback*:
+
+```css
+/* Solo familia — falla en Firefox */
+src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC");
+
+/* PostScript + familia — resuelve en todos los navegadores */
+src: local("PingFangSC-Medium"),   /* Firefox lo encuentra por PostScript */
+     local("PingFang SC Medium"),
+     local("PingFang SC"),          /* Chrome/Safari fallback por familia */
+     local("Microsoft YaHei"),
+     local("NotoSansSC-Medium"),
+     local("Noto Sans SC");
+```
+
+El navegador recorre la lista **en orden** y usa la **primera que exista** en ese sistema; si un nombre PostScript no está instalado, lo salta y continúa, así que añadirlos no tiene riesgo.
+
+Además de arreglar Firefox, el PostScript **fija el corte exacto**:
+
+- En **thin / light** se ancla al corte **`-Regular`** del sistema (`PingFangSC-Regular`, `AppleSDGothicNeo-Regular`…) porque esos scripts no tienen cortes ultrafinos legibles: así se evita un peso 100/300 sintético que se vería roto.
+- En **medium / semibold** se usa el corte real por peso: `PingFangSC-Medium` (500) / `PingFangSC-Semibold` (600), `HiraginoSans-W5` / `HiraginoSans-W6`, `AppleSDGothicNeo-Medium` / `-SemiBold`, `SFArabic-Medium` / `-Semibold`, con sus equivalentes Noto (`NotoSansSC-Medium`, `NotoSansKR-SemiBold`…). Así el grosor del árabe/CJK coincide con el del texto latino Suisse a ese mismo peso.
+
+En resumen, el nombre PostScript indica al navegador **«esta fuente exacta, este peso exacto»**, lo que (1) hace que Firefox encuentre la fuente y (2) garantiza el corte correcto en lugar de un peso sintético.
+
 <style>
 /* --- Hack trasladado desde web-duttinodefront/_fonts.scss --- */
 /* Hangul / coreano */
-@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
-@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
-@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
-@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("Apple SD Gothic Neo"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
-@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("Apple SD Gothic Neo"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("MalgunGothic"), local("NotoSansKR-Regular"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("MalgunGothic"), local("NotoSansKR-Regular"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("MalgunGothic"), local("NotoSansKR-Regular"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("AppleSDGothicNeo-Medium"), local("Apple SD Gothic Neo Medium"), local("Apple SD Gothic Neo"), local("Malgun Gothic"), local("MalgunGothic"), local("NotoSansKR-Medium"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("AppleSDGothicNeo-SemiBold"), local("Apple SD Gothic Neo SemiBold"), local("AppleSDGothicNeo-Bold"), local("Apple SD Gothic Neo"), local("MalgunGothicBold"), local("Malgun Gothic"), local("NotoSansKR-SemiBold"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
 /* Kana / japonés */
-@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
-@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
-@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
-@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
-@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("YuGothicUI-Regular"), local("Yu Gothic UI"), local("Meiryo"), local("NotoSansJP-Regular"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("YuGothicUI-Regular"), local("Yu Gothic UI"), local("Meiryo"), local("NotoSansJP-Regular"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("YuGothicUI-Regular"), local("Yu Gothic UI"), local("Meiryo"), local("NotoSansJP-Regular"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("HiraginoSans-W5"), local("Hiragino Sans W5"), local("Hiragino Sans"), local("YuGothicUI-Semibold"), local("Yu Gothic UI"), local("Meiryo"), local("NotoSansJP-Medium"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("HiraginoSans-W6"), local("Hiragino Sans W6"), local("Hiragino Sans"), local("YuGothicUI-Semibold"), local("Yu Gothic UI"), local("Meiryo"), local("NotoSansJP-SemiBold"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
 /* Han / chino */
-@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
-@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
-@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
-@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
-@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("MicrosoftYaHei"), local("NotoSansSC-Regular"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("MicrosoftYaHei"), local("NotoSansSC-Regular"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("MicrosoftYaHei"), local("NotoSansSC-Regular"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("PingFangSC-Medium"), local("PingFang SC Medium"), local("PingFang SC"), local("Microsoft YaHei"), local("MicrosoftYaHei"), local("NotoSansSC-Medium"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("PingFangSC-Semibold"), local("PingFang SC Semibold"), local("PingFang SC"), local("MicrosoftYaHei-Bold"), local("Microsoft YaHei"), local("NotoSansSC-SemiBold"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
 /* Árabe */
-@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
-@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
-@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
-@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
-@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("NotoSansArabic-Regular"), local("Noto Sans Arabic"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic UI"), local("NotoNaskhArabic-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic UI"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("NotoSansArabic-Regular"), local("Noto Sans Arabic"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic UI"), local("NotoNaskhArabic-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic UI"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("NotoSansArabic-Regular"), local("Noto Sans Arabic"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic UI"), local("NotoNaskhArabic-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic UI"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("SFArabic-Medium"), local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("GeezaPro"), local("Geeza Pro"), local("NotoSansArabic-Medium"), local("Noto Sans Arabic"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic UI"), local("NotoNaskhArabic-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic UI"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("SFArabic-Semibold"), local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("GeezaPro-Bold"), local("Geeza Pro"), local("NotoSansArabic-SemiBold"), local("Noto Sans Arabic"), local("NotoSansArabicUI-Regular"), local("Noto Sans Arabic UI"), local("NotoNaskhArabic-Regular"), local("Noto Naskh Arabic"), local("NotoNaskhArabicUI-Regular"), local("Noto Naskh Arabic UI"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
 
 /* --- Demo --- */
 .nl-demo__toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
@@ -725,7 +768,7 @@ Cada ejemplo compara, **al mismo `font-size` (14px)**, el glifo **sin el hack** 
 
 | Script | Sin hack · Con hack | Rango Unicode | `size-adjust` | Candidatas del sistema — orden de prioridad (macOS·iOS → Windows → Android·web) |
 |---|---|---|---|---|
-| Árabe | <span lang="ar" dir="rtl" style="font-family:'SF Arabic','Segoe UI','Tahoma',sans-serif;font-size:14px">مرحبا</span> &nbsp;·&nbsp; <span lang="ar" dir="rtl" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">مرحبا</span> | `0600–06FF` · `0750–077F` · `08A0–08FF` · `FB50–FDFF` · `FE70–FEFF` | 130% | SF Arabic → Segoe UI · Tahoma · Geeza Pro → Noto Sans Arabic |
+| Árabe | <span lang="ar" dir="rtl" style="font-family:'SF Arabic','Segoe UI','Tahoma',sans-serif;font-size:14px">مرحبا</span> &nbsp;·&nbsp; <span lang="ar" dir="rtl" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">مرحبا</span> | `0600–06FF` · `0750–077F` · `08A0–08FF` · `FB50–FDFF` · `FE70–FEFF` | 130% | SF Arabic → Segoe UI · Tahoma · Geeza Pro → Noto Sans Arabic · Noto Naskh Arabic |
 | Hangul (coreano) | <span lang="ko" style="font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:14px">한국어</span> &nbsp;·&nbsp; <span lang="ko" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">한국어</span> | `1100–11FF` · `3130–318F` · `A960–A97F` · `AC00–D7FF` | 120% | Apple SD Gothic Neo → Malgun Gothic → Noto Sans KR · Noto Sans CJK KR |
 | Kana (japonés) | <span lang="ja" style="font-family:'Hiragino Sans','Yu Gothic UI','Meiryo',sans-serif;font-size:14px">ひらがな</span> &nbsp;·&nbsp; <span lang="ja" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">ひらがな</span> | `3040–309F` · `30A0–30FF` · `31F0–31FF` · `FF00–FFEF` | 120% | Hiragino Sans · Hiragino Kaku Gothic ProN → Yu Gothic UI · Meiryo → Noto Sans JP · Noto Sans CJK JP |
 | Han (chino) | <span lang="zh" style="font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;font-size:14px">汉字</span> &nbsp;·&nbsp; <span lang="zh" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">汉字</span> | `3000–303F` · `3400–4DBF` · `4E00–9FFF` · `F900–FAFF` | 120% | PingFang SC → Microsoft YaHei → Noto Sans SC · Noto Sans CJK SC |
@@ -740,7 +783,7 @@ Alterna entre el *fallback* con el hack (tokens Suisse + `size-adjust`) y sin el
 </div>
 
 <div class="nl-demo__grid" id="nl-demo-grid">
-  <article class="nl-card" data-adjust="130" data-fonts="SF Arabic,Segoe UI,Tahoma,Geeza Pro,Noto Sans Arabic">
+  <article class="nl-card" data-adjust="130" data-fonts="SF Arabic,Segoe UI,Tahoma,Geeza Pro,Noto Sans Arabic,Noto Naskh Arabic">
     <div class="nl-card__head">
       <span class="nl-card__title">Árabe</span>
       <span class="nl-card__adjust">size-adjust 130%</span>
