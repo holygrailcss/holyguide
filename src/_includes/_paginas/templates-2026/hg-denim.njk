@@ -5,9 +5,9 @@
 {% set fits = ['01. Tapered Fit', '02. Slim Fit', '03. Straight Fit', '04. Relaxed Fit', '05. Cropped Fit', '06. Wide Fit', '07. Selvedge Fit', '08. Made In Italy'] %}
 {% set lorem = 'Duis at nisl scelerisque, tristique tortor quis, blandit velit. Morbi pellentesque elit nec enim porta, in euismod nunc vestibulum. Quisque ac pretium augue, nec eleifend libero. Duis efficitur non metus pulvinar dictum. Ut lacinia congue dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' %}
 {% set blocks = [
-  { image: 'block-1', count: '2/8', title: 'The Tapered Fit', cta: 'View all the tapered fits' },
-  { image: 'block-2', count: '3/8', title: 'The Straight Fit', cta: 'View all the straight fits' },
-  { image: 'block-3', count: '4/8', title: 'The Relaxed Fit', cta: 'View all the relaxed fits' }
+  { title: 'The Tapered Fit', cta: 'View all the tapered fits' },
+  { title: 'The Straight Fit', cta: 'View all the straight fits' },
+  { title: 'The Relaxed Fit', cta: 'View all the relaxed fits' }
 ] %}
 
 {# Lienzo y separación entre secciones, todo con HG5: el fondo es el token
@@ -31,11 +31,11 @@
 
   {# ── Aperturas — desktop: dos imágenes; mobile: solo la primera ── #}
   <section class="hg-d-flex hg-gap-20 hg-px-20">
-    <div class="hg-aspect-3-4 hg-flex-1">
-      <img class="hg-aspect-image" src="/assets/static/templates/denim/hero-1.jpg" alt="">
+    <div class="hg-aspect-2-3 hg-flex-1">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
     </div>
-    <div class="hg-aspect-3-4 hg-flex-1 hg-d-none md:hg-d-block">
-      <img class="hg-aspect-image" src="/assets/static/templates/denim/hero-2.jpg" alt="">
+    <div class="hg-aspect-2-3 hg-flex-1 hg-d-none md:hg-d-block">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
     </div>
   </section>
 
@@ -44,7 +44,7 @@
     <div class="hg-d-flex hg-items-start hg-gap-8 hg-overflow-x-auto md:hg-overflow-x-visible">
       {% for fit in fits %}
       <figure class="hg-denim__fit hg-d-flex hg-flex-column hg-items-center hg-gap-20 hg-flex-none md:hg-flex-1">
-        <div class="hg-aspect-3-4">
+        <div class="hg-aspect-2-3">
           <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
         </div>
         <figcaption class="label-m hg-text-center">{{ fit }}</figcaption>
@@ -81,8 +81,8 @@
      Mobile: imagen, contador, galería en scroll y texto debajo (via order). #}
   {% for block in blocks %}
   <section class="hg-denim__block hg-d-flex hg-gap-20 hg-px-20 md:hg-pr-0 hg-flex-column md:hg-flex-row hg-items-stretch md:hg-items-end">
-    <div class="hg-denim__block-img hg-aspect-3-4 hg-flex-none">
-      <img class="hg-aspect-image" src="/assets/static/templates/denim/{{ block.image }}.jpg" alt="">
+    <div class="hg-denim__block-img hg-aspect-2-3 hg-flex-none">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
       <button type="button" class="hg-denim__plus hg-position-absolute hg-z-10 hg-d-flex hg-items-center hg-justify-center hg-c-white hg-cursor-pointer" aria-label="Ver más">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 8.5V15H7.5V8.5H1V7.5H7.5V1H8.5V7.5H15V8.5H8.5Z" fill="currentColor"/>
@@ -105,7 +105,7 @@
         <div class="swiper-wrapper">
           {% for n in [1, 2, 3, 4, 5, 6] %}
           <a href="#" class="swiper-slide hg-aspect-2-3">
-            <img class="hg-aspect-image" src="/assets/static/templates/denim/gal-{{ n }}.jpg" alt="">
+            <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
           </a>
           {% endfor %}
         </div>
@@ -116,8 +116,8 @@
 
   {# ── Cierre ─────────────────────────────────────────────#}
   <section class="hg-px-20">
-    <div class="hg-aspect-3-4">
-      <img class="hg-aspect-image" src="/assets/static/templates/denim/closing.jpg" alt="">
+    <div class="hg-aspect-2-3">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
     </div>
   </section>
 

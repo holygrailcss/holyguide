@@ -20,8 +20,8 @@ Origen en Figma: [desktop `523:2642`](https://www.figma.com/design/cRZIzvtolmCfA
 ## Estructura
 
 1. **Header** — el componente de la sección, incluido tal cual con {% raw %}`{% include '_paginas/templates-2026/hg-header.njk' %}`{% endraw %}: ya trae el menú (Women / Men / MD World), el logo y los accesos, con hamburguesa e iconos en mobile. Solo hay que cargar `/assets/css/hg-header.css`.
-2. **Subheader** — desktop: solo categorías (`Denim Silhouettes` activa + `Ver todo`). Mobile: añade `Filtros` y el selector de densidad de rejilla (1 / 2 / 3).
-3. **Aperturas** — desktop: dos imágenes a ratio 375/500. Mobile: solo la primera.
+2. **Subheader** — solo las categorías (`Denim Silhouettes` activa + `Ver todo`) en los dos breakpoints. El Figma mobile trae además `Filtros` y un selector de densidad (1 / 2 / 3), pero se han dejado fuera de esta maqueta.
+3. **Aperturas** — desktop: dos imágenes a 2:3. Mobile: solo la primera.
 4. **Silhouettes** — los 8 fits: en una fila en desktop, con scroll horizontal en mobile.
 5. **Bloque editorial** — título, texto y `View all` en un contenedor de 900px.
 6. **Antetítulo + imagen editorial** — van agrupados y separados 20px entre sí (el título presenta a la imagen), en lugar de heredar el hueco de 32px que hay entre secciones.
@@ -32,7 +32,7 @@ Origen en Figma: [desktop `523:2642`](https://www.figma.com/design/cRZIzvtolmCfA
 
 - **Layout → utilidades HG5**: `hg-d-flex`, `hg-flex-column`, `hg-flex-1`, `hg-items-*`, `hg-justify-*`, `hg-gap-8/16/20/24/32`, `hg-px-20`, `hg-text-center`.
 - **Tipografía → HG5**: `label-m` para navegación, CTAs y labels — **ya trae el `text-transform: uppercase`** del token (es el `label-m-ttu` de Figma), así que las mayúsculas no se maquetan a mano; `label-m-b` (regular) para títulos de sección y estado activo; `title-m` para los textos largos.
-- **Ratios → HG5**: `hg-aspect-3-4` (aperturas, fits, bloques y cierre — es el 375/500 exacto del diseño), `hg-aspect-16-9` (imagen editorial) y `hg-aspect-2-3` (galería), con `hg-aspect-image` en cada `<img>`.
+- **Ratios → HG5**: `hg-aspect-2-3` en todo lo vertical (aperturas, fits, bloques, galería y cierre) y `hg-aspect-16-9` en la imagen editorial, con `hg-aspect-image` en cada `<img>`.
 - **Espaciado responsive → HG5**: HG5 tiene variantes por breakpoint con el prefijo **`md:`** (corta en 992px). El espaciado entre secciones es `hg-gap-20 md:hg-gap-32` y el de los bloques `hg-py-80 md:hg-py-160`, sin CSS propio.
 - **Color → HG5**: el lienzo es el token **`bg-cream`** (`hg-bg-bg-cream`) y el texto `hg-c-primary`; `hg-c-dark-grey` en los estados inactivos. No queda ningún color a pelo en el CSS.
 - **Botones → la guía**: el `hg-btn` del diseño (botón de texto, sin caja) es el **`btn btn-tertiary`** de `style.css` — transparente, sin borde y sin padding lateral. HG5 no publica componente de botón.
@@ -53,3 +53,4 @@ Origen en Figma: [desktop `523:2642`](https://www.figma.com/design/cRZIzvtolmCfA
 - **La galería es un slider en los dos breakpoints**: en el diseño desktop la 4ª imagen entra recortada (267px frente a 330px), que es la pista de que el carrusel continúa.
 - **Bloques de fit**: el diseño repite el bloque una vez por fit (8 en total). Aquí se renderizan **3** desde un array de Nunjucks — el patrón es el mismo y se amplía añadiendo entradas.
 - **Assets**: descargados de Figma (sus URLs caducan a los 7 días) y optimizados a JPG. Logo e iconos van en SVG.
+- **Solo `fit.jpg` es 2:3 real** (1200x1800), así que se usa en todos los huecos verticales: encaja sin recorte. El resto de lo que sirvió Figma vino a 1024x768 (4:3 apaisado) y al meterlo en vertical se recortaba a la mitad. `editorial.jpg` es la excepción: es 4:3 en un hueco 16:9, con un 33% de recorte lateral.
