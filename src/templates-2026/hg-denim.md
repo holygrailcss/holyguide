@@ -32,55 +32,47 @@ Es una sola maqueta responsive: el contenido es el mismo y cambian el header, el
 
 # Traspaso al Angular de Massimo Dutti
 
-Esta maqueta **no se copia y pega**. Lo que sigue es el estado real del proyecto a día de hoy y lo que hay que hacer.
+Buenas noticias: **dutti ya carga HolyGrail5**, así que el 78% de esta maqueta funciona tal cual. Lo que sigue es el estado real del proyecto y lo que falta.
 
-## El problema de partida
+## El punto de partida
 
-`holygrail5` está en el `package.json` de `apps/frontend` (**1.0.23**) pero **no se importa en ningún sitio**. Está instalado y sin usar. Lo único que entra en el build es HolyGrail2:
+HG5 entra por `angular.json`, en `apps/frontend` (y también en `tools/storybook`):
 
-```scss
-/* apps/frontend/src/assets/styles/styles.scss */
-@import "holygrail2/scss/style";
+```json
+{ "input": "./src/assets/styles/styles.scss",              "bundleName": "styles" },
+{ "input": "../../node_modules/holygrail5/dist/output.css", "bundleName": "styles" },
+{ "input": "./src/assets/styles/dutti-theme.css",           "bundleName": "styles" }
 ```
 
-Los tokens `--hg-*` que sí existen en dutti **no vienen del paquete**: los mantiene a mano `dutti-theme.css`, que se carga desde `angular.json`. Consecuencia directa: **las utilidades de HG5 no existen en dutti**.
+Ese orden importa y está bien: HG2 (dentro de `styles.scss`) → **HG5** → los overrides de dutti al final. Los dos HolyGrail conviven ya hoy en producción; no es un riesgo nuevo que haya que introducir.
 
-### Qué existe y qué no
+La versión instalada es la **1.0.23**.
 
-**HolyGrail5 tiene todo lo que necesita esta maqueta.** El problema no es el DS: es que dutti no lo carga. De las 36 clases que usa, esto es lo que hay hoy en el proyecto:
+### Qué funciona ya y qué falta
 
-| Estado en dutti | Clases | De dónde salen |
+De las 50 clases que usa esta maqueta, medido contra el `output.css` que dutti carga:
+
+| Estado | Nº | Clases |
 |---|---|---|
-| ✅ **Disponibles** (5) | `hg-aspect-2-3`, `hg-aspect-16-9` | **Copiadas a mano** de HG5 en `_hg-home.scss` |
-| | `label-m`, `title-m` | A mano en `dutti-theme.css` |
-| | `btn-tertiary` | HolyGrail2 |
-| ❌ **Faltan** (31) | Todo el layout (`hg-d-flex`, `hg-flex-*`, `hg-items-*`, `hg-justify-*`, `hg-order-*`, `hg-overflow-x-*`, `hg-position-*`, `hg-z-*`, `hg-w-*`, `hg-d-none/block`), todo el espaciado (`hg-gap-*`, `hg-px-*`, `hg-py-*`, `hg-pt-*`, `hg-pb-*`, `hg-mt-auto` y sus variantes `md:`), los colores (`hg-c-*`, `hg-bg-*`), `label-m-b` y `hg-aspect-image` | — |
+| ✅ **Funcionan hoy** | **39** | Todo el layout (`hg-d-flex`, `hg-flex-*`, `hg-items-*`, `hg-justify-*`, `hg-order-*`, `hg-overflow-x-*`, `hg-position-*`, `hg-z-*`, `hg-w-*`, `hg-cursor-*`, `hg-d-none/block`), los gaps (`hg-gap-8/16/20/32`), `hg-px-20`, `hg-py-80`, la tipografía (`label-m`, `label-m-b`, `title-m`), los ratios (`hg-aspect-2-3`, `hg-aspect-16-9`, `hg-aspect-image`) y **9 variantes `md:`** (la 1.0.23 ya trae 720) |
+| ❌ **Faltan** | **11** | `hg-c-dark-grey`, `hg-c-white`, `hg-c-primary`, `hg-bg-bg-cream`, `hg-pt-24`, `hg-pb-4`, `hg-mt-auto`, `md:hg-pt-64`, `md:hg-pt-128`, `md:hg-pr-0`, `md:hg-mt-auto` |
 
-Ojo con la primera fila: **`hg-aspect-2-3` y `hg-aspect-16-9` están en HG5**. Dutti las tiene solo porque alguien las copió a mano en `src/assets/styles/partials/_hg-home.scss` (518 líneas, importado en `styles.scss:49`) al portar la maqueta de home. No es una capacidad de dutti: es el DS duplicado.
+**Las 11 que faltan se arreglan con una sola cosa: subir `holygrail5` de `1.0.23` a `1.0.29`.**
 
-Y se mide: de los **9 ratios** que copia ese partial, **6 ya están en HG5** (`1-1`, `16-9`, `2-1`, `2-3`, `3-4`, `4-3`) — duplicación pura. Los otros **3 no existen en HG5** (`1-2`, `3-2`, `9-16`): esos no hay que borrarlos, hay que **subirlos al DS**.
+Son exactamente los helpers que se añadieron al DS mientras se maquetaba esto:
 
-Ese es el patrón que conviene cortar: cada maqueta que llega duplica un trozo de HolyGrail5 en un partial de dutti.
+- **1.0.28** — los helpers de color: `hg-c-*` y `hg-bg-*`.
+- **1.0.29** — los `hg-pt/pb/pl/pr` y `hg-mt/mb/ml/mr` con prefijo `hg-` (antes solo existían sin prefijo), más `hg-mt-auto`, todos con sus variantes `md:`.
 
-## Las dos rutas
+No hay "rutas alternativas" ni que copiar nada a mano: es un bump de versión.
 
-### Ruta A — cargar HolyGrail5 (recomendada)
+### De paso: `_hg-home.scss` duplica el DS
 
-Es la dirección estratégica (ver el Jira de *SCSS → CSS / HG2 → HG5*) y la que evita seguir duplicando.
+`src/assets/styles/partials/_hg-home.scss` (518 líneas, importado en `styles.scss:49`) copia a mano **9 `hg-aspect-*`**. De esos, **6 ya están en HG5** (`1-1`, `16-9`, `2-1`, `2-3`, `3-4`, `4-3`): duplicación pura, se pueden borrar.
 
-1. Subir `holygrail5` de `1.0.23` a **`1.0.29`** o superior. Las versiones intermedias añaden cosas que esta maqueta usa: los helpers de color (`hg-c-*` / `hg-bg-*`), y los `hg-pt/pb/pl/pr` y `hg-mt-auto` con sus variantes `md:`.
-2. Cargar su CSS en `angular.json`, junto a `dutti-theme.css`:
-   ```json
-   { "input": "./node_modules/holygrail5/dist/output.css" }
-   ```
-   **Antes que `dutti-theme.css`**, para que los overrides de dutti sigan mandando.
-3. Borrar de `_hg-home.scss` los 6 `hg-aspect-*` que ya están en HG5: pasan a venir del paquete. Antes, subir al DS los 3 que faltan (`1-2`, `3-2`, `9-16`) para no perderlos.
+Los otros **3 no existen en HG5** (`1-2`, `3-2`, `9-16`). Esos no se borran: hay que **subirlos al DS** primero, o la home los pierde.
 
-Riesgo a medir antes: HG5 y HG2 comparten nombres de clase (`label-m`, `title-m`, `hg-body-*`). Cargar los dos a la vez puede mover tipografías en páginas que hoy funcionan. Conviene hacerlo detrás de un feature flag o validando pantalla por pantalla.
-
-### Ruta B — copiar a mano, como `_hg-home.scss`
-
-Crear `partials/_hg-denim.scss` con las 31 clases que faltan e importarlo en `styles.scss`. Es lo que ya se hizo con home. Funciona hoy y no toca nada global, pero **duplica el sistema de diseño otra vez** y hay que mantenerlo a mano. Solo si la Ruta A no entra en el sprint.
+No bloquea este traspaso, pero es deuda que conviene cortar: cada maqueta que llega tiende a duplicar un trozo de HolyGrail5 en un partial.
 
 ## Equivalencias en dutti
 
@@ -90,7 +82,8 @@ Crear `partials/_hg-denim.scss` con las 31 clases que faltan e importarlo en `st
 | Swiper 9 + `new Swiper()` a mano | **`<md-swiper>`** (`src/app/ui/md-swiper/`), que envuelve Swiper 12 |
 | Script del contador | `swiperActiveIndexChange` o `swiperInit` de `md-swiper` |
 | `btn btn-tertiary label-m` | Igual: ya existen las dos |
-| Las clases `hg-denim__*` | CSS del componente. Son 9 reglas: medidas de este diseño, no del DS. |
+| `ttu` (mayúsculas sobre `title-m`) | Existe en dutti vía **holygrail2**. Ojo: **no está en HG5**, es de las clases que atan a HG2. |
+| Las clases `hg-denim__*` | Al `.component.scss`. Son 9 reglas: medidas de este diseño, no del DS. |
 
 ### md-swiper
 
@@ -117,10 +110,13 @@ El contador marca **el último elemento visible** (arranca en `3/6` y llega a `6
 
 ## Orden sugerido
 
-1. Decidir Ruta A o B. Si es la A, subir a 1.0.29 y cargar el CSS **en una rama aislada**, y medir el impacto de la colisión HG2/HG5 en las pantallas que ya existen.
+1. **Subir `holygrail5` a 1.0.29.** Es lo único que bloquea. Con eso, las 50 clases de la maqueta funcionan.
 2. Montar el componente con la estructura de la maqueta (el botón **CODE** de arriba da el HTML final ya renderizado).
 3. Sustituir el Swiper a mano por `<md-swiper>`.
-4. Validar con diseño los dos desvíos de token (bold y 13px) antes de dar la pantalla por buena.
+4. Copiar las 9 reglas de `hg-denim.css` al `.component.scss`: son medidas de este diseño, no del DS.
+5. Validar con diseño los dos desvíos de token (bold y 13px) antes de dar la pantalla por buena.
+
+El bump de versión solo añade helpers nuevos; no cambia ninguno existente. Aun así, conviene mirar que ninguna pantalla dependa de la ausencia de `hg-c-*` / `hg-bg-*` (poco probable: son clases nuevas).
 
 ---
 
