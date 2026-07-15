@@ -112,33 +112,13 @@ imageAlt: Escala tipográfica del sistema de diseño Dutti
   font-size: 10px; color: #999; font-family: monospace;
 }
 
-.uppercase-languages-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  overflow: hidden;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-}
-.uppercase-languages-table thead tr {
-  background: #111827;
-  color: #ffffff;
-}
-.uppercase-languages-table th {
-  padding: 12px 14px;
-  text-align: left;
-  font-weight: 700;
-  border-bottom: 1px solid #374151;
-}
-.uppercase-languages-table td {
-  padding: 10px 14px;
-  border-bottom: 1px solid #e5e7eb;
-}
-.uppercase-languages-table tbody tr:nth-child(even) {
+.guide table tbody tr:nth-child(even) {
   background: #f9fafb;
+}
+.guide table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
 }
 .uppercase-languages-table .is-ttu {
   text-transform: uppercase;
@@ -659,4 +639,257 @@ El sistema define **tres valores de tracking** (0.04em para cuerpo, 0.16em para 
       });
     });
   });
+</script>
+
+## Scripts no latinos — fallback tipográfico
+
+Las familias **Suisse Intl** no incluyen glifos de árabe ni CJK (chino, japonés, coreano). Para esos idiomas se declaran `@font-face` *companion*: reutilizan el **mismo nombre de familia** (`suisse-thin`, `suisse-light`, `suisse-regular`, `suisse-medium`, `suisse-semibold`) pero acotados por `unicode-range` a cada script y apuntando a **fuentes del sistema** neutras por SO. El navegador elige la primera que exista y `size-adjust` la agranda para igualar el tamaño visual de la Suisse latina. En los cortes **thin** y **light** se ancla el corte **Regular** del sistema (por su nombre PostScript, p. ej. `PingFangSC-Regular`), para que el texto CJK/árabe no salga demasiado fino.
+
+### Intención del hack
+
+El objetivo es dar a los textos de **árabe y CJK** un equivalente **cultural y estilístico** al rol que cumple la **Suisse Intl** (una grotesca de corte brutalista) y sus *fallbacks* occidentales **Arial / Helvetica**: una tipografía de **palo seco**, neutra y sin serifas, nativa de cada sistema de escritura.
+
+Principios que persigue:
+
+- **Peso cero de descarga.** No se cargan webfonts para estos scripts; se usan **únicamente fuentes ya instaladas** en cada SO (macOS·iOS, Windows, Android/web). Cada `local()` es una fuente del sistema, nunca un archivo `.woff2` remoto.
+- **Equivalencia cultural por script.** Se elige en cada idioma la grotesca de referencia del sistema — coherente con el carácter brutalista/neutro de la Suisse: **PingFang SC** (chino), **Hiragino Sans** (japonés), **Apple SD Gothic Neo** (coreano), **SF Arabic** (árabe), con sus equivalentes en Windows/Android.
+- **Coherencia de tamaño.** `size-adjust` (120 % en CJK, 130 % en árabe) normaliza el tamaño visual para que estos scripts convivan con la Suisse latina sin verse más pequeños.
+- **Sin cortes finos artificiales.** Como esos scripts no tienen cortes *thin/light* equiparables, los roles finos se **anclan al Regular** del sistema para no forzar pesos que se ven rotos o excesivamente delgados.
+
+En resumen: **misma sensación tipográfica (palo seco, neutra, brutalista) en todos los idiomas, con las fuentes que cada cultura ya tiene, y sin coste de descarga.**
+
+<style>
+/* --- Hack trasladado desde web-duttinodefront/_fonts.scss --- */
+/* Hangul / coreano */
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("AppleSDGothicNeo-Regular"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("Apple SD Gothic Neo"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("Apple SD Gothic Neo"), local("Apple SD Gothic Neo Regular"), local("Malgun Gothic"), local("Noto Sans KR"), local("Noto Sans CJK KR"); unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7AF, U+D7B0-D7FF; size-adjust: 120%; }
+/* Kana / japonés */
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("HiraginoSans-W4"), local("Hiragino Sans W4"), local("Hiragino Sans"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("Hiragino Sans"), local("Hiragino Kaku Gothic ProN"), local("Yu Gothic UI"), local("Meiryo"), local("Noto Sans JP"), local("Noto Sans CJK JP"); unicode-range: U+3040-309F, U+30A0-30FF, U+31F0-31FF, U+FF00-FFEF; size-adjust: 120%; }
+/* Han / chino */
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("PingFangSC-Regular"), local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("PingFang SC"), local("Microsoft YaHei"), local("Noto Sans SC"), local("Noto Sans CJK SC"); unicode-range: U+3000-303F, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF; size-adjust: 120%; }
+/* Árabe */
+@font-face { font-family: "suisse-thin"; font-weight: 100; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-light"; font-weight: 300; font-display: swap; src: local("SFArabic-Regular"), local("SF Arabic"), local("GeezaPro"), local("Geeza Pro"), local("Segoe UI"), local("Tahoma"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-regular"; font-weight: 400; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-medium"; font-weight: 500; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+@font-face { font-family: "suisse-semibold"; font-weight: 600; font-display: swap; src: local("SF Arabic"), local("Segoe UI"), local("Tahoma"), local("Geeza Pro"), local("Noto Sans Arabic"); unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; size-adjust: 130%; }
+
+/* --- Demo --- */
+.nl-demo__toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
+.nl-demo__mode {
+  appearance: none; border: 1px solid #d1d5db; border-radius: 999px;
+  background: #fff; color: #111827; cursor: pointer;
+  font-size: 12px; line-height: 1; padding: 10px 14px;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.nl-demo__mode[aria-pressed="true"] { background: #111827; border-color: #111827; color: #fff; }
+.nl-demo__mode:focus-visible { outline: 2px solid #111827; outline-offset: 2px; }
+.nl-demo__grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px; margin: 16px 0 32px;
+}
+.nl-card { border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; }
+.nl-card__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 12px 16px; background: #fafafa; border-bottom: 1px solid #eee;
+}
+.nl-card__title { font-size: 12px; font-weight: 700; }
+.nl-card__adjust {
+  font-family: monospace; font-size: 10px; font-weight: 700;
+  background: #f0fdf4; color: #1a7a3c; padding: 2px 6px; border-radius: 4px;
+}
+.nl-card__body { padding: 16px; }
+.nl-card__sample { margin: 0; }
+.nl-demo__grid--raw .nl-card__sample { font-family: sans-serif !important; }
+.nl-card__meta {
+  margin-top: 12px; padding-top: 12px; border-top: 1px dashed #e5e7eb;
+  font-size: 11px; color: #777; font-family: monospace; line-height: 1.8;
+}
+.nl-card__active-value { color: #1a5e99; font-weight: 700; }
+</style>
+
+### Tabla comparativa
+
+Cada ejemplo compara, **al mismo `font-size` (14px)**, el glifo **sin el hack** (fuente del sistema a 100%) con el glifo **con el hack** (token Suisse → regular del sistema + `size-adjust`). La versión con hack se ve más grande: ese es el escalado que iguala el tamaño visual con la Suisse latina. En CJK la *forma* apenas cambia (el sistema ya usa un corte regular), así que **lo que cambia es la escala**. La última columna lista las **fuentes candidatas por orden de prioridad** (`local()`), no la que realmente se aplica; el navegador usa la primera disponible en tu SO. La fuente **realmente aplicada** se detecta en la *Demo en vivo*.
+
+| Script | Sin hack · Con hack | Rango Unicode | `size-adjust` | Candidatas del sistema — orden de prioridad (macOS·iOS → Windows → Android·web) |
+|---|---|---|---|---|
+| Árabe | <span lang="ar" dir="rtl" style="font-family:'SF Arabic','Segoe UI','Tahoma',sans-serif;font-size:14px">مرحبا</span> &nbsp;·&nbsp; <span lang="ar" dir="rtl" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">مرحبا</span> | `0600–06FF` · `0750–077F` · `08A0–08FF` · `FB50–FDFF` · `FE70–FEFF` | 130% | SF Arabic → Segoe UI · Tahoma · Geeza Pro → Noto Sans Arabic |
+| Hangul (coreano) | <span lang="ko" style="font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:14px">한국어</span> &nbsp;·&nbsp; <span lang="ko" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">한국어</span> | `1100–11FF` · `3130–318F` · `A960–A97F` · `AC00–D7FF` | 120% | Apple SD Gothic Neo → Malgun Gothic → Noto Sans KR · Noto Sans CJK KR |
+| Kana (japonés) | <span lang="ja" style="font-family:'Hiragino Sans','Yu Gothic UI','Meiryo',sans-serif;font-size:14px">ひらがな</span> &nbsp;·&nbsp; <span lang="ja" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">ひらがな</span> | `3040–309F` · `30A0–30FF` · `31F0–31FF` · `FF00–FFEF` | 120% | Hiragino Sans · Hiragino Kaku Gothic ProN → Yu Gothic UI · Meiryo → Noto Sans JP · Noto Sans CJK JP |
+| Han (chino) | <span lang="zh" style="font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;font-size:14px">汉字</span> &nbsp;·&nbsp; <span lang="zh" style="font-family:var(--hg-typo-font-family-primary-light);font-size:14px">汉字</span> | `3000–303F` · `3400–4DBF` · `4E00–9FFF` · `F900–FAFF` | 120% | PingFang SC → Microsoft YaHei → Noto Sans SC · Noto Sans CJK SC |
+
+### Demo en vivo
+
+Alterna entre el *fallback* con el hack (tokens Suisse + `size-adjust`) y sin el hack (sans-serif del sistema, sin escalado) para ver el cambio de forma y de escala. **Fuente activa** se detecta en tu propio equipo.
+
+<div class="nl-demo__toolbar" role="group" aria-label="Modo de la demo tipográfica">
+  <button type="button" class="nl-demo__mode" data-mode="hack" aria-pressed="true">Con hack (tokens + size-adjust)</button>
+  <button type="button" class="nl-demo__mode" data-mode="raw" aria-pressed="false">Sin hack (sans-serif del sistema)</button>
+</div>
+
+<div class="nl-demo__grid" id="nl-demo-grid">
+  <article class="nl-card" data-adjust="130" data-fonts="SF Arabic,Segoe UI,Tahoma,Geeza Pro,Noto Sans Arabic">
+    <div class="nl-card__head">
+      <span class="nl-card__title">Árabe</span>
+      <span class="nl-card__adjust">size-adjust 130%</span>
+    </div>
+    <div class="nl-card__body">
+      <div class="nl-card__sample hg-body-m" lang="ar" dir="rtl">مرحبا بكم في ماسيمو دوتي</div>
+      <div class="nl-card__meta">
+        rango: U+0600–06FF …<br>
+        peso: <span class="nl-card__weight-value">…</span><br>
+        escala: <span class="nl-card__scale-value">…</span><br>
+        fuente activa: <span class="nl-card__active-value">detectando…</span>
+      </div>
+    </div>
+  </article>
+  <article class="nl-card" data-adjust="120" data-fonts="Apple SD Gothic Neo,Malgun Gothic,Noto Sans KR,Noto Sans CJK KR">
+    <div class="nl-card__head">
+      <span class="nl-card__title">Hangul (coreano)</span>
+      <span class="nl-card__adjust">size-adjust 120%</span>
+    </div>
+    <div class="nl-card__body">
+      <div class="nl-card__sample hg-body-m" lang="ko">마시모 두띠에 오신 것을 환영합니다</div>
+      <div class="nl-card__meta">
+        rango: U+AC00–D7FF …<br>
+        peso: <span class="nl-card__weight-value">…</span><br>
+        escala: <span class="nl-card__scale-value">…</span><br>
+        fuente activa: <span class="nl-card__active-value">detectando…</span>
+      </div>
+    </div>
+  </article>
+  <article class="nl-card" data-adjust="120" data-fonts="Hiragino Sans,Hiragino Kaku Gothic ProN,Yu Gothic UI,Meiryo,Noto Sans JP,Noto Sans CJK JP">
+    <div class="nl-card__head">
+      <span class="nl-card__title">Kana (japonés)</span>
+      <span class="nl-card__adjust">size-adjust 120%</span>
+    </div>
+    <div class="nl-card__body">
+      <div class="nl-card__sample hg-body-m" lang="ja">マッシモ・ドゥッティへようこそ</div>
+      <div class="nl-card__meta">
+        rango: U+3040–30FF …<br>
+        peso: <span class="nl-card__weight-value">…</span><br>
+        escala: <span class="nl-card__scale-value">…</span><br>
+        fuente activa: <span class="nl-card__active-value">detectando…</span>
+      </div>
+    </div>
+  </article>
+  <article class="nl-card" data-adjust="120" data-fonts="PingFang SC,Microsoft YaHei,Noto Sans SC,Noto Sans CJK SC">
+    <div class="nl-card__head">
+      <span class="nl-card__title">Han (chino)</span>
+      <span class="nl-card__adjust">size-adjust 120%</span>
+    </div>
+    <div class="nl-card__body">
+      <div class="nl-card__sample hg-body-m" lang="zh">欢迎光临马西莫·杜蒂</div>
+      <div class="nl-card__meta">
+        rango: U+4E00–9FFF …<br>
+        peso: <span class="nl-card__weight-value">…</span><br>
+        escala: <span class="nl-card__scale-value">…</span><br>
+        fuente activa: <span class="nl-card__active-value">detectando…</span>
+      </div>
+    </div>
+  </article>
+</div>
+
+<script>
+  (function () {
+    const grid = document.getElementById('nl-demo-grid');
+
+    if (!grid) {
+      return;
+    }
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const BASE_FONTS = ['monospace', 'serif', 'sans-serif'];
+    const PROBE_SIZE = '48px';
+
+    const measure = (text, family) => {
+      ctx.font = `${PROBE_SIZE} ${family}`;
+      return ctx.measureText(text).width;
+    };
+
+    const isAvailable = (font, text) => BASE_FONTS.some((base) => {
+      const baseWidth = measure(text, base);
+      const testWidth = measure(text, `"${font}", ${base}`);
+      return Math.abs(testWidth - baseWidth) > 0.5;
+    });
+
+    const detect = (fonts, text) => fonts.find((font) => isAvailable(font, text)) || null;
+
+    // Los glifos CJK son de ancho fijo (full-width): la medición por canvas no
+    // puede distinguir la fuente. En ese caso mostramos la fuente por defecto
+    // del sistema operativo detectado (la que el navegador usa de facto).
+    const ua = navigator.userAgent || '';
+    const platform = /Mac|iPhone|iPad|iPod/.test(navigator.platform || ua) ? 'mac'
+      : /Win/.test(navigator.platform || ua) ? 'win' : 'other';
+    const OS_DEFAULT = {
+      ar: { mac: 'SF Arabic', win: 'Segoe UI', other: 'Noto Sans Arabic' },
+      ko: { mac: 'Apple SD Gothic Neo', win: 'Malgun Gothic', other: 'Noto Sans KR' },
+      ja: { mac: 'Hiragino Sans', win: 'Yu Gothic UI', other: 'Noto Sans JP' },
+      zh: { mac: 'PingFang SC', win: 'Microsoft YaHei', other: 'Noto Sans SC' }
+    };
+
+    const setActive = (mode) => {
+      grid.querySelectorAll('.nl-card').forEach((card) => {
+        const fonts = (card.dataset.fonts || '').split(',').map((font) => font.trim()).filter(Boolean);
+        const sample = card.querySelector('.nl-card__sample');
+        const output = card.querySelector('.nl-card__active-value');
+        const weightOut = card.querySelector('.nl-card__weight-value');
+        const scaleOut = card.querySelector('.nl-card__scale-value');
+
+        if (!sample || !output) {
+          return;
+        }
+
+        const lang = sample.getAttribute('lang');
+        const adjust = card.dataset.adjust || '120';
+
+        if (mode === 'raw') {
+          if (weightOut) weightOut.textContent = 'Light (300)';
+          if (scaleOut) scaleOut.textContent = '100%';
+          const fallback = OS_DEFAULT[lang] && OS_DEFAULT[lang][platform];
+          output.textContent = fallback ? `${fallback} (sans-serif del sistema)` : 'sans-serif del sistema';
+          return;
+        }
+
+        if (weightOut) weightOut.textContent = 'Regular (thin/light → regular)';
+        if (scaleOut) scaleOut.textContent = `${adjust}% (size-adjust)`;
+
+        const active = detect(fonts, sample.textContent.trim());
+
+        if (active) {
+          output.textContent = active;
+          return;
+        }
+
+        const guess = OS_DEFAULT[lang] && OS_DEFAULT[lang][platform];
+        output.textContent = guess || 'fuente por defecto del sistema';
+      });
+    };
+
+    setActive('hack');
+
+    const buttons = Array.from(document.querySelectorAll('.nl-demo__mode'));
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const mode = button.dataset.mode;
+        grid.classList.toggle('nl-demo__grid--raw', mode === 'raw');
+        buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        setActive(mode);
+      });
+    });
+  })();
 </script>
