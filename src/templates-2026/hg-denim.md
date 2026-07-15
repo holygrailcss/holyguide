@@ -35,7 +35,7 @@ Origen en Figma: [desktop `523:2642`](https://www.figma.com/design/cRZIzvtolmCfA
 - **Ratios → HG5**: `hg-aspect-3-4` (aperturas, fits, bloques y cierre — es el 375/500 exacto del diseño), `hg-aspect-16-9` (imagen editorial) y `hg-aspect-2-3` (galería), con `hg-aspect-image` en cada `<img>`.
 - **Espaciado responsive → HG5**: HG5 tiene variantes por breakpoint con el prefijo **`md:`** (corta en 992px). El espaciado entre secciones es `hg-gap-20 md:hg-gap-32` y el de los bloques `hg-py-80 md:hg-py-160`, sin CSS propio.
 - **Color → HG5**: el lienzo es el token **`bg-cream`** (`hg-bg-bg-cream`) y el texto `hg-c-primary`; `hg-c-dark-grey` en los estados inactivos. No queda ningún color a pelo en el CSS.
-- **Botones → la guía**: el `hg-btn` del diseño (botón de texto, sin caja) es el **`btn btn-tertiary`** de `style.css` — transparente, sin borde y sin padding lateral. HG5 no publica componente de botón. El subrayado de las CTAs lo pone `hg-text-underline`, que `btn-tertiary` no trae.
+- **Botones → la guía**: el `hg-btn` del diseño (botón de texto, sin caja) es el **`btn btn-tertiary`** de `style.css` — transparente, sin borde y sin padding lateral. HG5 no publica componente de botón.
 - **Visibilidad por breakpoint → HG5**: `hg-d-none md:hg-d-block` (solo desktop) y `hg-d-flex md:hg-d-none` (solo mobile), sin clases propias.
 - **CSS propio** (`/assets/css/hg-denim.css`), solo lo que el DS no cubre: medidas del diseño (header 64px, contenedor 900px, proporción 933/967 de los bloques) y los cambios de breakpoint. **El `@media` corta en 992px, el mismo punto que el `md:` de HG5** — mezclar dos breakpoints dejaría una franja incoherente entre ambos.
 
@@ -45,7 +45,10 @@ Origen en Figma: [desktop `523:2642`](https://www.figma.com/design/cRZIzvtolmCfA
 
 ## Notas de implementación
 
-- **El slider usa Swiper** y se arrastra con ratón y con el dedo (`grabCursor`, drag por defecto). El JS de Swiper (v9) lo carga ya `base-clean.njk`, así que el token solo añade su CSS; el script de la maqueta inicializa dentro de `DOMContentLoaded` para no depender del orden de carga. `slidesPerView` sigue la proporción del diseño: 2.2 en mobile y 967/(330+20) ≈ 2.76 en desktop.
+- **El slider usa Swiper** y se arrastra con ratón y con el dedo (`grabCursor`, drag por defecto). El JS de Swiper (v9) lo carga ya `base-clean.njk`, así que el token solo añade su CSS; el script de la maqueta inicializa dentro de `DOMContentLoaded` para no depender del orden de carga.
+- **Slides visibles**: 2,5 en mobile · 5,5 en tablet · 967/(330+8) ≈ 2,86 en desktop. La fila de fits sigue los mismos cortes (con `calc()`, porque no hay helper de anchura fraccionada) y en desktop pasa a `md:hg-flex-1` para que quepan los 8.
+- **El tramo tablet (768–991px) es un `@media` propio**: HG5 solo define `mobile: 1px` y `desktop: 992px`, así que no hay breakpoint intermedio que reutilizar.
+- **`.hg-denim__gallery { height: auto }` es obligatorio**: `style.css` impone `.swiper { height: 400px }` a todos los sliders de la guía, y esa altura fija rompe el `aspect-ratio` de los slides. El helper `hg-h-auto` no vale aquí, porque HG5 carga antes que `style.css` y pierde por especificidad.
 - **El contador marca el último elemento visible**: arranca en `3/6` (las que se ven de entrada) y llega a `6/6` cuando la última está en pantalla. Sale de `visibleSlidesIndexes` de Swiper (que incluye las parcialmente visibles, o sea lo que realmente se está mostrando), con `watchSlidesProgress: true`. El valor del markup es solo el estado inicial.
 - **La galería es un slider en los dos breakpoints**: en el diseño desktop la 4ª imagen entra recortada (267px frente a 330px), que es la pista de que el carrusel continúa.
 - **Bloques de fit**: el diseño repite el bloque una vez por fit (8 en total). Aquí se renderizan **3** desde un array de Nunjucks — el patrón es el mismo y se amplía añadiendo entradas.

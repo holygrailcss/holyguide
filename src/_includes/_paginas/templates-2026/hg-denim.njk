@@ -21,19 +21,8 @@
   {% set hgHeaderMaxilogo = false %}
   {% include '_paginas/templates-2026/hg-header.njk' %}
 
-  {# ── Subheader ──────────────────────────────────────────
-     Mobile añade Filtros + densidad de rejilla; desktop solo las categorías. #}
-  <div class="hg-denim__subheader hg-px-20 hg-pb-4 md:hg-pt-128 hg-d-flex hg-flex-column hg-gap-16">
-    <div class="hg-d-flex md:hg-d-none hg-items-center hg-justify-between">
-      <button type="button" class="btn btn-tertiary label-m">Filtros</button>
-      <div class="hg-d-flex hg-items-center hg-gap-8">
-        <span class="label-m hg-c-dark-grey">Vista</span>
-        <button type="button" class="hg-denim__view btn btn-tertiary label-m is-active">1</button>
-        <button type="button" class="hg-denim__view btn btn-tertiary label-m hg-c-dark-grey">2</button>
-        <button type="button" class="hg-denim__view btn btn-tertiary label-m hg-c-dark-grey">3</button>
-      </div>
-    </div>
-
+  {# ── Subheader: categorías ────────────────────────────── #}
+  <div class="hg-denim__subheader hg-px-20 hg-pb-4 hg-pt-64 md:hg-pt-128 hg-d-flex hg-flex-column hg-gap-16">
     <div class="hg-d-flex hg-items-center hg-gap-32">
       <a href="#" class="label-m-b">Denim Silhouettes</a>
       <a href="#" class="label-m hg-c-dark-grey">Ver todo</a>
@@ -69,7 +58,7 @@
     <div class="hg-denim__container hg-d-flex hg-flex-column hg-items-center hg-gap-32">
       <p class="label-m-b hg-text-center">Denim Silhouettes</p>
       <p class="title-m hg-text-center">{{ lorem }}</p>
-      <a href="#" class="btn btn-tertiary label-m hg-text-underline">View all</a>
+      <a href="#" class="btn btn-tertiary label-m">View all</a>
     </div>
   </section>
 
@@ -105,7 +94,7 @@
       <div class="hg-denim__block-text hg-d-flex hg-flex-column hg-items-center hg-gap-32 hg-pt-24 md:hg-pt-64 hg-order-3 md:hg-order-0">
         <p class="label-m-b hg-text-center">{{ block.title }}</p>
         <p class="title-m hg-text-center">{{ lorem }}</p>
-        <a href="#" class="btn btn-tertiary label-m hg-text-underline">{{ block.cta }}</a>
+        <a href="#" class="btn btn-tertiary label-m">{{ block.cta }}</a>
       </div>
 
       {# El contador lo actualiza el script del final según el scroll del slider #}
@@ -136,7 +125,7 @@
     <div class="hg-denim__container hg-d-flex hg-flex-column hg-items-center hg-gap-32">
       <p class="label-m-b hg-text-center">Denim Silhouettes</p>
       <p class="title-m hg-text-center">{{ lorem }}</p>
-      <a href="#" class="btn btn-tertiary label-m hg-text-underline">View all</a>
+      <a href="#" class="btn btn-tertiary label-m">View all</a>
     </div>
   </section>
 
@@ -150,7 +139,7 @@
 <script>
   // Slider de cada bloque: arrastrable (ratón y táctil) y con el contador de
   // qué imagen se está viendo. slidesPerView sigue la proporción del diseño:
-  // ~2.2 en mobile y 967/(330+8) ≈ 2.86 en desktop.
+  // 2.5 en mobile, 5.5 en tablet y 967/(330+8) ≈ 2.86 en desktop.
   // Espera a DOMContentLoaded para no depender de dónde se cargue Swiper.
   document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hg-denim__block').forEach((block) => {
@@ -167,11 +156,12 @@
     };
 
     new Swiper(block.querySelector('.hg-denim__gallery'), {
-      slidesPerView: 2.2,
+      slidesPerView: 2.5,
       spaceBetween: 8,
       grabCursor: true,
       watchSlidesProgress: true,
       breakpoints: {
+        768: { slidesPerView: 5.5 },
         992: { slidesPerView: 2.86 }
       },
       on: {
