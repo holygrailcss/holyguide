@@ -47,14 +47,20 @@ Los tokens `--hg-*` que sí existen en dutti **no vienen del paquete**: los mant
 
 ### Qué existe y qué no
 
-De las 36 clases que usa esta maqueta:
+**HolyGrail5 tiene todo lo que necesita esta maqueta.** El problema no es el DS: es que dutti no lo carga. De las 36 clases que usa, esto es lo que hay hoy en el proyecto:
 
-| Estado | Clases |
-|---|---|
-| ✅ **Ya existen** (5) | `hg-aspect-2-3`, `hg-aspect-16-9`, `label-m`, `title-m`, `btn-tertiary` |
-| ❌ **Faltan** (31) | Todo el layout (`hg-d-flex`, `hg-flex-*`, `hg-items-*`, `hg-justify-*`, `hg-order-*`, `hg-overflow-x-*`, `hg-position-*`, `hg-z-*`, `hg-w-*`, `hg-d-none/block`), todo el espaciado (`hg-gap-*`, `hg-px-*`, `hg-py-*`, `hg-pt-*`, `hg-pb-*`, `hg-mt-auto` y sus variantes `md:`), los colores (`hg-c-*`, `hg-bg-*`), `label-m-b` y `hg-aspect-image` |
+| Estado en dutti | Clases | De dónde salen |
+|---|---|---|
+| ✅ **Disponibles** (5) | `hg-aspect-2-3`, `hg-aspect-16-9` | **Copiadas a mano** de HG5 en `_hg-home.scss` |
+| | `label-m`, `title-m` | A mano en `dutti-theme.css` |
+| | `btn-tertiary` | HolyGrail2 |
+| ❌ **Faltan** (31) | Todo el layout (`hg-d-flex`, `hg-flex-*`, `hg-items-*`, `hg-justify-*`, `hg-order-*`, `hg-overflow-x-*`, `hg-position-*`, `hg-z-*`, `hg-w-*`, `hg-d-none/block`), todo el espaciado (`hg-gap-*`, `hg-px-*`, `hg-py-*`, `hg-pt-*`, `hg-pb-*`, `hg-mt-auto` y sus variantes `md:`), los colores (`hg-c-*`, `hg-bg-*`), `label-m-b` y `hg-aspect-image` | — |
 
-Los `hg-aspect-*` existen porque alguien **ya los copió a mano** en `src/assets/styles/partials/_hg-home.scss` (518 líneas, importado en `styles.scss:49`) al portar la maqueta de home. Ese es el precedente, y también el síntoma: cada maqueta que llega duplica un trozo de HG5 en un partial.
+Ojo con la primera fila: **`hg-aspect-2-3` y `hg-aspect-16-9` están en HG5**. Dutti las tiene solo porque alguien las copió a mano en `src/assets/styles/partials/_hg-home.scss` (518 líneas, importado en `styles.scss:49`) al portar la maqueta de home. No es una capacidad de dutti: es el DS duplicado.
+
+Y se mide: de los **9 ratios** que copia ese partial, **6 ya están en HG5** (`1-1`, `16-9`, `2-1`, `2-3`, `3-4`, `4-3`) — duplicación pura. Los otros **3 no existen en HG5** (`1-2`, `3-2`, `9-16`): esos no hay que borrarlos, hay que **subirlos al DS**.
+
+Ese es el patrón que conviene cortar: cada maqueta que llega duplica un trozo de HolyGrail5 en un partial de dutti.
 
 ## Las dos rutas
 
@@ -68,7 +74,7 @@ Es la dirección estratégica (ver el Jira de *SCSS → CSS / HG2 → HG5*) y la
    { "input": "./node_modules/holygrail5/dist/output.css" }
    ```
    **Antes que `dutti-theme.css`**, para que los overrides de dutti sigan mandando.
-3. Borrar de `_hg-home.scss` los `hg-aspect-*` copiados a mano: pasan a venir del paquete.
+3. Borrar de `_hg-home.scss` los 6 `hg-aspect-*` que ya están en HG5: pasan a venir del paquete. Antes, subir al DS los 3 que faltan (`1-2`, `3-2`, `9-16`) para no perderlos.
 
 Riesgo a medir antes: HG5 y HG2 comparten nombres de clase (`label-m`, `title-m`, `hg-body-*`). Cargar los dos a la vez puede mover tipografías en páginas que hoy funcionan. Conviene hacerlo detrás de un feature flag o validando pantalla por pantalla.
 
