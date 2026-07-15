@@ -237,6 +237,19 @@ body.is-reduced .hg-header .hg-header-logo {
 }
 
 /**
+  * hg-header--reduced: variante del propio componente, sin maxilogo.
+  * El logo ya está arriba y no hay animación, así que no depende del scroll.
+  * Es lo mismo que hace is-reduced, pero decidido por el componente y no por
+  * la página: el maxilogo solo tiene sentido en la home.
+  * Se activa con `{% set hgHeaderMaxilogo = false %}` antes del include.
+  */
+
+.hg-header--reduced .hg-header-logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/**
   * is-compact: clase que se añade al body cuando
   * el header muestra el maxilogo y ocupa espacio físico.
   */

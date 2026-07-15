@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+{% import "_macros/_insert.njk" as insert %}
+
+<div class="templates-2026-home">
+  <div class="container-fluid">
+    {% include '_website/hero.njk' %}
+  </div>
+
+  <section class="row mb-32 mt-32">
+    <div class="col-xs-12">
+      {% call insert.template('_tokens/preview-2026/','token-hg-denim', '900px','https://www.figma.com/design/cRZIzvtolmCfARaNQnI1SH/-IT--DESARROLLOS?node-id=523-2642&m=dev', '', 'hg-denim.css') %} {% endcall %}
+    </div>
+  </section>
+
+  <section class="row mb-32 mt-32 p-16">
+    <div class="col-xs-12">
+      <div class="main-content innermarkdown">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</div>

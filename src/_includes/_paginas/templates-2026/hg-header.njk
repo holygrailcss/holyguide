@@ -1,5 +1,14 @@
 {% from "_macros/_icon.njk" import icon %}
-<header class="hg-header-layout hg-header">
+{#
+  Dos variantes que conviven:
+
+  · Con maxilogo (por defecto) — solo para la HOME: el logo grande se muestra
+    encima del contenido y, al hacer scroll, cede el sitio al logo de la barra.
+  · Sin maxilogo — para el resto de páginas: el logo ya está arriba, sin animación.
+    Se activa poniendo `{% set hgHeaderMaxilogo = false %}` antes del include.
+#}
+{% set hgHeaderMaxilogo = hgHeaderMaxilogo | default(true) %}
+<header class="hg-header-layout hg-header{% if not hgHeaderMaxilogo %} hg-header--reduced{% endif %}">
   <div class="hg-header__handler">
     <div class="hg-header__prepend">
       <button type="button"
@@ -26,7 +35,7 @@
     </div>
     <div class="hg-header__main">
       <a href="/" class="js-hg-header-logo hg-header-logo" aria-label="Ir a inicio">
-        <div class="js-hg-header-logo-icon hg-header-logo-icon hg-header-logo-icon--home-animation hg-icon"
+        <div class="js-hg-header-logo-icon hg-header-logo-icon{% if hgHeaderMaxilogo %} hg-header-logo-icon--home-animation{% endif %} hg-icon"
           aria-hidden="true">
           {{ icon('md-logo') }}
         </div>
@@ -65,10 +74,12 @@
       </ul>
     </div>
   </div>
+  {% if hgHeaderMaxilogo %}
   <div class="js-hg-header-maxilogo hg-header-maxilogo">
     <span class="js-hg-header-maxilogo-icon hg-header-maxilogo-icon hg-icon" aria-hidden="true">
       {{ icon('md-logo') }}
     </span>
   </div>
+  {% endif %}
 </header>
 

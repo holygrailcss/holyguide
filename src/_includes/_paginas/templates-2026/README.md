@@ -23,6 +23,19 @@ Contiene **layouts de página** (usados por los `.md` de `src/templates-2026`) y
 
 Se usan con `{% include '_paginas/templates-2026/hg-footer.njk' %}` (y análogo para header y menu).
 
+#### Variantes del header
+
+Conviven dos, y se eligen con la variable `hgHeaderMaxilogo`:
+
+| Variante | Cuándo | Cómo |
+|----------|--------|------|
+| **Con maxilogo** (por defecto) | Solo la **home**: el logo grande se muestra sobre el contenido y, al hacer scroll, cede el sitio al logo de la barra. | `{% include '_paginas/templates-2026/hg-header.njk' %}` |
+| **Sin maxilogo** | El resto de páginas: el logo ya está arriba, sin animación. | `{% set hgHeaderMaxilogo = false %}` antes del include |
+
+La variante sin maxilogo no renderiza el bloque del logo grande ni la clase `--home-animation`, y añade `hg-header--reduced` al `<header>`, que es lo que hace visible el logo de la barra sin depender del scroll. Ejemplo de uso: `hg-denim.njk`.
+
+> `hg-header.css` ya traía las variantes de página `is-reduced` / `is-compact` (clases en el `body`), pero nadie las usa. `hg-header--reduced` hace lo mismo desde el componente, que es quien sabe si es la home o no.
+
 ### Otros
 
 - `_templates-2026.njk` – Layout del índice de Templates 2026.

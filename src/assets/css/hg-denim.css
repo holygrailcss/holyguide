@@ -1,0 +1,19 @@
+.hg-denim__view.is-active { text-decoration: underline; text-underline-offset: 3px; }
+
+.hg-denim__fit { width: 62%; min-width: 0; }
+
+.hg-denim__container { max-width: 900px; }
+
+.hg-denim__plus {
+  right: 8px; bottom: 8px;
+  width: 32px; height: 32px;
+  padding: 0; border: 0; background: none;
+}
+
+@media (min-width: 992px) {
+  .hg-denim__plus { right: 16px; bottom: 16px; }
+
+  .hg-denim__block-img { flex: 933 1 0; min-width: 0; }
+  .hg-denim__block-side { flex: 967 1 0; min-width: 0; align-self: stretch; }
+
+}

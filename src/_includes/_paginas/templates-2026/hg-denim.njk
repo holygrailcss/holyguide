@@ -1,0 +1,187 @@
+{# hg-denim — landing DENIM. Desktop: Figma 523:2642 (1920-DENIM) · Mobile: 523:2469 (393-DENIM).
+   Maquetada con HolyGrail5: el layout va con utilidades (hg-d-flex, hg-gap-*, hg-px-20…)
+   y la tipografía con label-m / label-m-b / title-m. #}
+
+{% set fits = ['01. Tapered Fit', '02. Slim Fit', '03. Straight Fit', '04. Relaxed Fit', '05. Cropped Fit', '06. Wide Fit', '07. Selvedge Fit', '08. Made In Italy'] %}
+{% set lorem = 'Duis at nisl scelerisque, tristique tortor quis, blandit velit. Morbi pellentesque elit nec enim porta, in euismod nunc vestibulum. Quisque ac pretium augue, nec eleifend libero. Duis efficitur non metus pulvinar dictum. Ut lacinia congue dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' %}
+{% set blocks = [
+  { image: 'block-1', count: '2/8', title: 'The Tapered Fit', cta: 'View all the tapered fits' },
+  { image: 'block-2', count: '3/8', title: 'The Straight Fit', cta: 'View all the straight fits' },
+  { image: 'block-3', count: '4/8', title: 'The Relaxed Fit', cta: 'View all the relaxed fits' }
+] %}
+
+{# Lienzo y separación entre secciones, todo con HG5: el fondo es el token
+   bg-cream y el hueco entre secciones 20px, o 32px desde el breakpoint md (992px). #}
+<div class="hg-denim hg-bg-bg-cream hg-c-primary hg-d-flex hg-flex-column hg-gap-20 md:hg-gap-32">
+
+  {# ── Header ─────────────────────────────────────────────
+     El de templates-2026, en su variante sin maxilogo: el logo ya está arriba
+     y no hay animación, porque el logo grande solo es para la home.
+     Necesita /assets/css/hg-header.css. #}
+  {% set hgHeaderMaxilogo = false %}
+  {% include '_paginas/templates-2026/hg-header.njk' %}
+
+  {# ── Subheader ──────────────────────────────────────────
+     Mobile añade Filtros + densidad de rejilla; desktop solo las categorías. #}
+  <div class="hg-denim__subheader hg-px-20 hg-pb-4 md:hg-pt-128 hg-d-flex hg-flex-column hg-gap-16">
+    <div class="hg-d-flex md:hg-d-none hg-items-center hg-justify-between">
+      <button type="button" class="btn btn-tertiary label-m">Filtros</button>
+      <div class="hg-d-flex hg-items-center hg-gap-8">
+        <span class="label-m hg-c-dark-grey">Vista</span>
+        <button type="button" class="hg-denim__view btn btn-tertiary label-m is-active">1</button>
+        <button type="button" class="hg-denim__view btn btn-tertiary label-m hg-c-dark-grey">2</button>
+        <button type="button" class="hg-denim__view btn btn-tertiary label-m hg-c-dark-grey">3</button>
+      </div>
+    </div>
+
+    <div class="hg-d-flex hg-items-center hg-gap-32">
+      <a href="#" class="label-m-b">Denim Silhouettes</a>
+      <a href="#" class="label-m hg-c-dark-grey">Ver todo</a>
+    </div>
+  </div>
+
+  {# ── Aperturas — desktop: dos imágenes; mobile: solo la primera ── #}
+  <section class="hg-d-flex hg-gap-20 hg-px-20">
+    <div class="hg-aspect-3-4 hg-flex-1">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/hero-1.jpg" alt="">
+    </div>
+    <div class="hg-aspect-3-4 hg-flex-1 hg-d-none md:hg-d-block">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/hero-2.jpg" alt="">
+    </div>
+  </section>
+
+  {# ── Silhouettes — desktop: los 8 en fila; mobile: scroll horizontal ── #}
+  <section class="hg-px-20">
+    <div class="hg-d-flex hg-items-start hg-gap-8 hg-overflow-x-auto md:hg-overflow-x-visible">
+      {% for fit in fits %}
+      <figure class="hg-denim__fit hg-d-flex hg-flex-column hg-items-center hg-gap-20 hg-flex-none md:hg-flex-1">
+        <div class="hg-aspect-3-4">
+          <img class="hg-aspect-image" src="/assets/static/templates/denim/fit.jpg" alt="">
+        </div>
+        <figcaption class="label-m hg-text-center">{{ fit }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  {# ── Bloque editorial ───────────────────────────────────#}
+  <section class="hg-px-20 hg-py-80 md:hg-py-160 hg-d-flex hg-flex-column hg-items-center">
+    <div class="hg-denim__container hg-d-flex hg-flex-column hg-items-center hg-gap-32">
+      <p class="label-m-b hg-text-center">Denim Silhouettes</p>
+      <p class="title-m hg-text-center">{{ lorem }}</p>
+      <a href="#" class="btn btn-tertiary label-m hg-text-underline">View all</a>
+    </div>
+  </section>
+
+  {# ── Antetítulo + imagen editorial ──────────────────────
+     Van juntos: el título presenta a la imagen, así que se agrupan y se separan
+     20px entre sí, en vez de heredar el hueco de 32px que hay entre secciones. #}
+  <section class="hg-d-flex hg-flex-column hg-gap-20">
+    <div class="hg-px-20">
+      <p class="label-m-b">The silhouette of <u>the Relaxed Fit.</u></p>
+    </div>
+    <div class="hg-px-20">
+      <div class="hg-aspect-16-9">
+        <img class="hg-aspect-image" src="/assets/static/templates/denim/editorial.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  {# ── Bloques de fit: imagen + detalle + galería ─────────
+     Desktop: imagen a la izquierda, columna a la derecha.
+     Mobile: imagen, contador, galería en scroll y texto debajo (via order). #}
+  {% for block in blocks %}
+  <section class="hg-denim__block hg-d-flex hg-gap-20 hg-px-20 md:hg-pr-0 hg-flex-column md:hg-flex-row hg-items-stretch md:hg-items-end">
+    <div class="hg-denim__block-img hg-aspect-3-4 hg-flex-none">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/{{ block.image }}.jpg" alt="">
+      <button type="button" class="hg-denim__plus hg-position-absolute hg-z-10 hg-d-flex hg-items-center hg-justify-center hg-c-white hg-cursor-pointer" aria-label="Ver más">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 8.5V15H7.5V8.5H1V7.5H7.5V1H8.5V7.5H15V8.5H8.5Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="hg-denim__block-side hg-d-flex hg-flex-column hg-gap-20 hg-flex-none">
+      <div class="hg-denim__block-text hg-d-flex hg-flex-column hg-items-center hg-gap-32 hg-pt-24 md:hg-pt-64 hg-order-3 md:hg-order-0">
+        <p class="label-m-b hg-text-center">{{ block.title }}</p>
+        <p class="title-m hg-text-center">{{ lorem }}</p>
+        <a href="#" class="btn btn-tertiary label-m hg-text-underline">{{ block.cta }}</a>
+      </div>
+
+      {# El contador lo actualiza el script del final según el scroll del slider #}
+      <p class="hg-denim__count label-m md:hg-mt-auto hg-order-1 md:hg-order-0">3/6</p>
+
+      {# Slider con Swiper: se arrastra con ratón y con el dedo #}
+      <div class="hg-denim__gallery swiper hg-order-2 md:hg-order-0 hg-w-100-percent">
+        <div class="swiper-wrapper">
+          {% for n in [1, 2, 3, 4, 5, 6] %}
+          <a href="#" class="swiper-slide hg-aspect-2-3">
+            <img class="hg-aspect-image" src="/assets/static/templates/denim/gal-{{ n }}.jpg" alt="">
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+
+  {# ── Cierre ─────────────────────────────────────────────#}
+  <section class="hg-px-20">
+    <div class="hg-aspect-3-4">
+      <img class="hg-aspect-image" src="/assets/static/templates/denim/closing.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="hg-px-20 hg-py-80 md:hg-py-160 hg-d-flex hg-flex-column hg-items-center">
+    <div class="hg-denim__container hg-d-flex hg-flex-column hg-items-center hg-gap-32">
+      <p class="label-m-b hg-text-center">Denim Silhouettes</p>
+      <p class="title-m hg-text-center">{{ lorem }}</p>
+      <a href="#" class="btn btn-tertiary label-m hg-text-underline">View all</a>
+    </div>
+  </section>
+
+  {# ── Footer ─────────────────────────────────────────────
+     El de templates-2026, tal cual: ya trae los menús, el cambio de mercado,
+     los idiomas, el logo y la newsletter. Necesita /assets/css/hg-footer.css. #}
+  {% include '_paginas/templates-2026/hg-footer.njk' %}
+
+</div>
+
+<script>
+  // Slider de cada bloque: arrastrable (ratón y táctil) y con el contador de
+  // qué imagen se está viendo. slidesPerView sigue la proporción del diseño:
+  // ~2.2 en mobile y 967/(330+8) ≈ 2.86 en desktop.
+  // Espera a DOMContentLoaded para no depender de dónde se cargue Swiper.
+  document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.hg-denim__block').forEach((block) => {
+    const counter = block.querySelector('.hg-denim__count');
+    const total = block.querySelectorAll('.swiper-slide').length;
+
+    // El contador marca el ÚLTIMO elemento visible: arranca en 3/6 (los que se
+    // ven de entrada) y llega a 6/6 al final. visibleSlidesIndexes incluye los
+    // parcialmente visibles, que es justo lo que se está mostrando.
+    const update = (swiper) => {
+      const visibles = swiper.visibleSlidesIndexes || [];
+      if (!visibles.length) return;
+      counter.textContent = (Math.max.apply(null, visibles) + 1) + '/' + total;
+    };
+
+    new Swiper(block.querySelector('.hg-denim__gallery'), {
+      slidesPerView: 2.2,
+      spaceBetween: 8,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        992: { slidesPerView: 2.86 }
+      },
+      on: {
+        init: update,
+        slideChange: update,
+        transitionEnd: update,
+        breakpoint: update,
+        resize: update
+      }
+    });
+  });
+  });
+</script>
