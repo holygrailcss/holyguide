@@ -679,4 +679,4 @@ Ahora que conoces la configuración básica, puedes:
 1. Revisar los [Componentes](/components/) disponibles
 2. Explorar los [Templates](/templates/) predefinidos
 3. Consultar las [Fundaciones](/foundations/) del sistema
-4. Leer las [Buenas Prácticas](/develop/practices/) de desarrollo
+4. Leer las [Buenas Prácticas](/practices/) de desarrollo

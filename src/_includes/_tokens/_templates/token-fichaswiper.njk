@@ -124,8 +124,9 @@ layout: base-clean.njk
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{# El JS de Swiper (v9) ya lo carga base-clean.njk #}
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper(".mySwiper", {
         direction: "horizontal",
         slidesPerView: 'auto',
@@ -177,4 +178,5 @@ layout: base-clean.njk
             },
         },
     });
+  });
 </script>

@@ -663,5 +663,5 @@ Ahora que conoces los principios y la estructura del sistema de diseño, puedes:
 
 1. Revisar los [Componentes](/components/) disponibles
 2. Explorar las [Fundaciones](/foundations/) del sistema
-3. Consultar las [Buenas Prácticas](/develop/practices/) de diseño
+3. Consultar las [Buenas Prácticas](/practices/) de diseño
 4. Comenzar a crear tus propios elementos siguiendo esta guía
