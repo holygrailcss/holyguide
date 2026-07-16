@@ -98,8 +98,9 @@ No bloquea este traspaso, pero es deuda que conviene cortar: cada maqueta que ll
 `options` acepta un preset (`basic`, `carousel`, `autoplay`, `thumbs`, `vertical`, `coverflow`, `infinite`, `productGrid`) o un `MdSwiperConfig`. Para este slider hace falta config propia, por los `slidesPerView` fraccionados y los breakpoints:
 
 ```ts
-{ slidesPerView: 2.5, spaceBetween: 8, grabCursor: true, watchSlidesProgress: true,
-  breakpoints: { 768: { slidesPerView: 5.5 }, 992: { slidesPerView: 2.86 } } }
+{ slidesPerView: 2.5, spaceBetween: 8, slidesOffsetBefore: 20, grabCursor: true,
+  watchSlidesProgress: true,
+  breakpoints: { 768: { slidesPerView: 5.5 }, 992: { slidesPerView: 2.86, slidesOffsetBefore: 0 } } }
 ```
 
 El contador marca **el último elemento visible** (arranca en `3/6` y llega a `6/6`). Sale de `visibleSlidesIndexes`, que necesita `watchSlidesProgress: true`.
