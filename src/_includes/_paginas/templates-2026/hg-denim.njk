@@ -41,7 +41,7 @@
 
   {# ── Silhouettes — desktop: los 8 en fila; mobile: scroll horizontal ── #}
   <section class="hg-px-20">
-    <div class="hg-d-flex hg-items-start hg-gap-8 hg-overflow-x-auto md:hg-overflow-x-visible">
+    <div class="hg-denim__fits hg-d-flex hg-items-start hg-gap-8 hg-overflow-x-auto md:hg-overflow-x-visible">
       {% for fit in fits %}
       <figure class="hg-denim__fit hg-d-flex hg-flex-column hg-items-center hg-gap-20 hg-flex-none md:hg-flex-1">
         <div class="hg-aspect-2-3">
@@ -158,11 +158,12 @@
     new Swiper(block.querySelector('.hg-denim__gallery'), {
       slidesPerView: 2.5,
       spaceBetween: 8,
+      slidesOffsetBefore: 20,
       grabCursor: true,
       watchSlidesProgress: true,
       breakpoints: {
         768: { slidesPerView: 5.5 },
-        992: { slidesPerView: 2.86 }
+        992: { slidesPerView: 2.86, slidesOffsetBefore: 0 }
       },
       on: {
         init: update,

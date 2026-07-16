@@ -28,15 +28,19 @@ Es una sola maqueta responsive: el contenido es el mismo y cambian el header, el
 
 **Slides visibles**: 2,5 en mobile · 5,5 en tablet · 2,86 en desktop (= 967/(330+8), la proporción del diseño).
 
+**Los sliders van a sangre en mobile y tablet**: el contenedor llega a los bordes de la pantalla, pero el primer elemento sigue alineado con el texto (20px). En el de Swiper se hace con `slidesOffsetBefore`, no con padding, porque el padding le descuadra el cálculo de `slidesPerView`.
+
 ---
 
-# Traspaso al Angular de Massimo Dutti
+## Traspaso al Angular de Massimo Dutti
 
-Buenas noticias: **dutti ya carga HolyGrail5**, así que el 78% de esta maqueta funciona tal cual. Lo que sigue es el estado real del proyecto y lo que falta.
+Buenas noticias: **dutti ya carga HolyGrail5**, así que el 78% de esta maqueta funciona tal cual.
+
+**El objetivo es quedarse solo con `output.css`**: ni `dutti-theme.css` ni la copia de HG2. Este documento mide qué falta para llegar ahí.
 
 ## El punto de partida
 
-HG5 entra por `angular.json`, en `apps/frontend` (y también en `tools/storybook`):
+Hoy se cargan tres capas de CSS, por `angular.json` en `apps/frontend` (y en `tools/storybook`):
 
 ```json
 { "input": "./src/assets/styles/styles.scss",              "bundleName": "styles" },
@@ -44,9 +48,9 @@ HG5 entra por `angular.json`, en `apps/frontend` (y también en `tools/storybook
 { "input": "./src/assets/styles/dutti-theme.css",           "bundleName": "styles" }
 ```
 
-Ese orden importa y está bien: HG2 (dentro de `styles.scss`) → **HG5** → los overrides de dutti al final. Los dos HolyGrail conviven ya hoy en producción; no es un riesgo nuevo que haya que introducir.
-
-La versión instalada es la **1.0.23**.
+- `styles.scss` → arrastra **HolyGrail2** (`@import "holygrail2/scss/style"`).
+- `output.css` → **HolyGrail5**, versión **1.0.23**. Es la única que debería quedar.
+- `dutti-theme.css` → 150 líneas que **pisan a HG5** por ir las últimas.
 
 ### Qué funciona ya y qué falta
 
@@ -100,23 +104,52 @@ No bloquea este traspaso, pero es deuda que conviene cortar: cada maqueta que ll
 
 El contador marca **el último elemento visible** (arranca en `3/6` y llega a `6/6`). Sale de `visibleSlidesIndexes`, que necesita `watchSlidesProgress: true`.
 
-## Tres avisos que te van a morder
+## Quitar `dutti-theme.css`
 
-**1. Los bold se ven más finos en dutti.** `dutti-theme.css` define `--hg-typo-font-family-primary-bold: 'suisse-medium'`, mientras HG5 usa `suisse-semibold`. Lo que en la maqueta se ve semibold, en dutti sale medium.
+Son **150 líneas**, y no es un tema: es una **capa de parches** entre HG2 y HG5. Esto es todo lo que hace:
 
-**2. El texto no mide 12px, mide 13px.** `dutti-theme.css` sube `.title-m`, `.label-m` y `.hg-body-m` a `13px` desde 992px. El diseño de Figma pide 12. No es un bug de la maqueta: es una decisión de dutti que hay que respetar o revisar con diseño.
+| Qué | Cuántas líneas | ¿Lo cubre HG5? |
+|---|---|---|
+| Pisa 3 tokens de fuente en `:root` | 3 | Sí — HG5 ya los define |
+| Sube a `13px` `.title-m`, `.label-m`, `.hg-body-m` | 8 | Es un override, no algo que falte |
+| `letter-spacing: .04em` en `.text-*` / `.hg-body-*` | 3 | Igual: override |
+| **Una copia de `.hg-btn-badge` sacada de HG2** | ~70 | **No. HG5 no tiene botones.** |
+| Parches de app (`.btn-primary`, `.text-badge`, `.font-m`, `.slot--selected`, `.md-display-filter-cycle`) | ~25 | No son del DS |
 
-**3. Cuidado con las alturas fijas sobre `.swiper`.** En la guía, `style.css` tiene `.swiper { height: 400px }` y eso rompe el `aspect-ratio` de los slides: se estiran un 41%. Si en dutti hay una regla global equivalente, aparecerá el mismo problema. Aquí se neutraliza con `.hg-denim__gallery { height: auto }`.
+El propio archivo lo dice en sus comentarios: *"copiado desde holygrail2/scss/elements/_buttons.scss"*, *"trasladado aquí para anclarlo a la capa de tema y que no dependa del orden frente a HG5"*.
+
+### Lo que se gana al quitarlo
+
+Los dos overrides tipográficos son justo los que separan a dutti del diseño:
+
+- **`--hg-typo-font-family-primary-bold: 'suisse-medium'`** → HG5 usa **`suisse-semibold`**. Con dutti-theme, los bold salen más finos de lo que pide Figma. Quitándolo, se corrige solo.
+- **`font-size: 13px`** cuando Figma pide 12. Ojo al media query: `(min-width: 992px) and (max-resolution: 1dppx)` — **solo aplica en pantallas no-retina**. Es un parche de legibilidad para monitores de baja densidad, no una decisión de diseño global.
+
+### Lo que bloquea
+
+**`.hg-btn-badge` no existe en HG5** — ni `.hg-btn`, aunque el diseño de Figma llame así al componente. Por eso dutti-theme tiene que llevarse una copia de HG2. Mientras HG5 no publique los botones, `dutti-theme.css` no se puede borrar del todo.
+
+Ruta: **subir `hg-btn` y `hg-btn-badge` al DS**, y entonces las ~70 líneas de copia se van. Los parches de app no van al tema: van al CSS de sus componentes.
+
+## Un aviso que te va a morder
+
+**Cuidado con las reglas globales sobre `.swiper`.** En la guía, `style.css` tiene `.swiper { height: 400px; max-width: 100% }`. La altura fija rompe el `aspect-ratio` de los slides (se estiran un 41%) y el `max-width` impide sacarlos a sangre. Si en dutti hay una regla global equivalente, aparecerá el mismo problema. Aquí se neutralizan con `height: auto` y `max-width: none`.
 
 ## Orden sugerido
 
-1. **Subir `holygrail5` a 1.0.29.** Es lo único que bloquea. Con eso, las 50 clases de la maqueta funcionan.
+**Para montar esta pantalla:**
+
+1. **Subir `holygrail5` a 1.0.29.** Es lo único que bloquea. Con eso, las 50 clases de la maqueta funcionan. El bump solo añade helpers nuevos, no cambia ninguno existente.
 2. Montar el componente con la estructura de la maqueta (el botón **CODE** de arriba da el HTML final ya renderizado).
 3. Sustituir el Swiper a mano por `<md-swiper>`.
-4. Copiar las 9 reglas de `hg-denim.css` al `.component.scss`: son medidas de este diseño, no del DS.
-5. Validar con diseño los dos desvíos de token (bold y 13px) antes de dar la pantalla por buena.
+4. Copiar las reglas de `hg-denim.css` al `.component.scss`: son medidas de este diseño, no del DS.
 
-El bump de versión solo añade helpers nuevos; no cambia ninguno existente. Aun así, conviene mirar que ninguna pantalla dependa de la ausencia de `hg-c-*` / `hg-bg-*` (poco probable: son clases nuevas).
+**Para llegar a solo `output.css`** (no bloquea lo anterior, pero es la dirección):
+
+5. Subir `hg-btn` y `hg-btn-badge` al DS. Es lo único que obliga a mantener `dutti-theme.css`.
+6. Mover los parches de app (`.btn-primary`, `.text-badge`, `.slot--selected`…) al CSS de sus componentes.
+7. Quitar los 3 overrides de token y el `13px`: con eso, dutti renderiza lo que dice el diseño.
+8. Sacar HolyGrail2 de `styles.scss` — es el paso grande, y tiene su propio Jira.
 
 ---
 

@@ -8,6 +8,16 @@
 
 .hg-denim__container { max-width: 900px; }
 
+@media (max-width: 991px) {
+  .hg-denim__fits,
+  .hg-denim__gallery {
+    margin-inline: -20px;
+    width: calc(100% + 40px);
+    max-width: none;
+  }
+  .hg-denim__fits { padding-inline-start: 20px; }
+}
+
 .hg-denim__gallery { height: auto; }
 
 .hg-denim__plus {
